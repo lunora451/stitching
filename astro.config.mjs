@@ -5,7 +5,7 @@ export default defineConfig({
   prefetch: {
     prefetchAll: true,
   },
-  experimental: {
-    responsiveImages: true,
+  image: {
+    responsiveStyles: true,
   },
 });
