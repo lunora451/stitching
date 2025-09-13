@@ -4,8 +4,8 @@ on:
   # Trigger the workflow every time you push to the `main` branch
   # Using a different branch name? Replace `main` with your branch’s name
   push:
-    # branches: [main]
-    branches: [none]
+    branches: [main]
+    # branches: [none]
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
@@ -22,9 +22,9 @@ jobs:
       - name: Install, build, and upload your site output
         uses: radenpioneer/astro-ftp-deploy@v0.1.0
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          server: 147.93.92.245
+          username: u995161080.lunorastart.eu
+          password: Fz8gC>L7S&TNu*V2
           directory: ./ # The path to upload to, on your FTP server, relative to your FTP root. Must end with trailing slash. (optional)
           # protocol: ftp # The protocol to use on your FTP server. (optional)
           port: "21" # The port of your FTP server. (optional)
