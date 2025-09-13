@@ -1,0 +1,412 @@
+---
+title: "Page 43";
+---
+
+<!-- ============================================ --><!--                  Services                    --><!-- ============================================ -->
+<section id="services-366">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our Services</span>
+      <h2 class="cs-title">Provide Worldwide Service For Good Customers</h2>
+      <p class="cs-text">
+        At Stitch Cleaning Service, let us help you solve problems so that you
+        can focus on your mission. We support businesses through periods of
+        expansion, succession.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <div class="cs-icon-wrapper">
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Services/kitchen-blue.svg"
+              alt="icon"
+              width="48"
+              height="48"
+            />
+            <!--Create a span to make more bubbles with pesudo elements-->
+            <span class="cs-bubble" aria-hidden="true"></span>
+          </div>
+          <h3 class="cs-h3">Kitchen Cleaning</h3>
+          <p class="cs-item-text">
+            We’ve helped thousands of organizations transform to become relevant
+            of helped thousands.
+          </p>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <div class="cs-icon-wrapper">
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Services/rug-blue.svg"
+              alt="icon"
+              width="48"
+              height="48"
+            />
+            <!--Create a span to make more bubbles with pesudo elements-->
+            <span class="cs-bubble" aria-hidden="true"></span>
+          </div>
+          <h3 class="cs-h3">Carpet Cleaning</h3>
+          <p class="cs-item-text">
+            We’ve helped thousands of organizations transform to become relevant
+            of helped thousands.
+          </p>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <div class="cs-icon-wrapper">
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Services/house-blue.svg"
+              alt="icon"
+              width="48"
+              height="48"
+            />
+            <!--Create a span to make more bubbles with pesudo elements-->
+            <span class="cs-bubble" aria-hidden="true"></span>
+          </div>
+          <h3 class="cs-h3">House Cleaning</h3>
+          <p class="cs-item-text">
+            We’ve helped thousands of organizations transform to become relevant
+            of helped thousands.
+          </p>
+        </a>
+      </li>
+    </ul>
+    <a href="" class="cs-button-solid">Contact Us</a>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-366 {
+      padding: var(--sectionPadding);
+
+      @keyframes floatAnimation2 {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-4px);
+        }
+        70% {
+          transform: translateY(4px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes InAndOut {
+        0% {
+          transform: translateY(calc(60 / 16 * 1rem)) scale(1);
+          opacity: 1;
+        }
+        30% {
+          transform: translateY(calc(30 / 16 * 1rem)) scale(0.8);
+          opacity: 1;
+        }
+        60% {
+          transform: translateY(calc(10 / 16 * 1rem)) scale(0.5);
+          opacity: 0.2;
+        }
+        100% {
+          transform: translateY(calc(0 / 16 * 1rem)) scale(0.2);
+          opacity: 0;
+        }
+      }
+
+      @keyframes InAndOut2 {
+        0% {
+          transform: translateY(calc(70 / 16 * 1rem)) scale(1);
+          opacity: 1;
+        }
+        30% {
+          transform: translateY(calc(40 / 16 * 1rem)) scale(0.8);
+          opacity: 1;
+        }
+        60% {
+          transform: translateY(calc(20 / 16 * 1rem)) scale(0.6);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(calc(0 / 16 * 1rem)) scale(0.4);
+          opacity: 0;
+        }
+      }
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        /* 16px - 20px */
+        column-gap: clamp(1rem, 2vw, 1.25rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        max-width: calc(500 / 16 * 1rem);
+        /* 20px - 40px top & bottom */
+        /* 16px - 32px left & right */
+        padding: clamp(1.25rem, 3.5vw, 2.5rem) clamp(1rem, 2.5vw, 2rem);
+        border-radius: calc(16 / 16 * 1rem);
+        border: 1px solid #e8e8e8;
+        box-sizing: border-box;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: var(--primary);
+
+          .cs-icon-wrapper,
+          .cs-bubble {
+            &:before,
+            &:after {
+              background-color: #449ffc;
+            }
+          }
+
+          .cs-icon {
+            /* makes it white on hover */
+            filter: grayscale(1) brightness(1000%);
+          }
+
+          .cs-h3 {
+            color: #fff;
+          }
+
+          .cs-item-text {
+            color: #fff;
+          }
+        }
+      }
+
+      .cs-link {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .cs-icon-wrapper {
+        width: calc(98 / 16 * 1rem);
+        height: calc(120 / 16 * 1rem);
+        margin-bottom: calc(24 / 16 * 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+
+        &:before {
+          /* Small Bubble */
+          content: "";
+          width: calc(27 / 16 * 1rem);
+          height: calc(27 / 16 * 1rem);
+          border-radius: 50%;
+          background: #e5f2ff;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: calc(3 / 16 * 1rem);
+          animation-name: InAndOut;
+          animation-duration: 1.6s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          transition: background-color 0.3s;
+        }
+
+        &:after {
+          /* Small Bubble */
+          content: "";
+          width: calc(27 / 16 * 1rem);
+          height: calc(27 / 16 * 1rem);
+          border-radius: 50%;
+          background: #e5f2ff;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: calc(11 / 16 * 1rem);
+          right: calc(5 / 16 * 1rem);
+          animation-name: InAndOut2;
+          animation-duration: 2s;
+          animation-delay: 0.3s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          transition: background-color 0.3s;
+        }
+      }
+
+      .cs-bubble {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        &:before {
+          /* Big Bubble */
+          content: "";
+          width: calc(63 / 16 * 1rem);
+          height: calc(63 / 16 * 1rem);
+          border-radius: 50%;
+          background: #e5f2ff;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          bottom: calc(4 / 16 * 1rem);
+          left: calc(0 / 16 * 1rem);
+          animation-name: floatAnimation2;
+          animation-duration: 12s;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+          animation-iteration-count: infinite;
+          transition: background-color 0.3s;
+        }
+
+        &:after {
+          /* Big Bubble */
+          content: "";
+          width: calc(50 / 16 * 1rem);
+          height: calc(50 / 16 * 1rem);
+          border-radius: 50%;
+          background: #e5f2ff;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          bottom: calc(-4 / 16 * 1rem);
+          right: calc(0 / 16 * 1rem);
+          animation-name: floatAnimation2;
+          animation-duration: 10s;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+          animation-iteration-count: infinite;
+          transition: background-color 0.3s;
+        }
+      }
+
+      .cs-icon {
+        width: calc(72 / 16 * 1rem);
+        height: auto;
+        position: relative;
+        z-index: 10;
+      }
+
+      .cs-h3 {
+        font-size: calc(20 / 16 * 1rem);
+        font-weight: 900;
+        text-align: center;
+        line-height: 1.2em;
+        margin: 0;
+        margin-bottom: calc(12 / 16 * 1rem);
+        color: var(--headerColor);
+        transition: color 0.3s;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        text-align: center;
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+        transition: color 0.3s;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-366 {
+      .cs-card-group {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+      }
+    }
+  }
+</style>

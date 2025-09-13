@@ -1,0 +1,295 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Subscribe                  --><!-- ============================================ -->
+<section id="subscribe-2143">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <!--Main Image-->
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/bride.png"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/bride.png"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/bride.png"
+          alt="wedding bride"
+          width="396"
+          height="570"
+        />
+      </picture>
+      <!--Color Wheel-->
+      <img
+        class="cs-wheel"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/color-wheel.png"
+        alt="color wheel"
+        width="542"
+        height="542"
+        aria-hidden="true"
+      />
+    </div>
+    <div class="cs-content">
+      <span class="cs-topper">Subscribe Us</span>
+      <h2 class="cs-title">Subscribe Your Email for Newsletter & Promotion</h2>
+      <p class="cs-text">
+        "We're not just photographers, we're dream weavers, transforming your
+        visions into tangible memories you'll cherish forever."
+      </p>
+      <form class="cs-form" name="Contact Form" method="post">
+        <input
+          class="cs-input"
+          type="email"
+          id="cs-email-2143"
+          name="find-us"
+          placeholder="Enter your email"
+          required
+        />
+        <button class="cs-button-solid cs-submit" type="submit"
+          >Subscribe</button
+        >
+      </form>
+    </div>
+  </div>
+  <!--Flower-->
+  <img
+    class="cs-flower"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/wedding-flower3.png"
+    alt="flower"
+    width="284"
+    height="583"
+    aria-hidden="true"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Subscribe         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #subscribe-2143 {
+      padding: var(--sectionPadding);
+      padding-bottom: 0;
+      background-color: #fbf5f1;
+      /* clips anything overflowing */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(544 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(48 / 16 * 1rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-title {
+        /* 31px - 49px */
+        font-size: clamp(1.9375rem, 3.3vw, 3.0625rem);
+        max-width: 30ch;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* 8px to 20px */
+        gap: clamp(0.5rem, 1.5vw, 1.25rem);
+      }
+
+      .cs-input {
+        font-size: calc(16 / 16 * 1rem);
+        width: 100%;
+        /* 46px - 56px */
+        height: clamp(2.875rem, 5.5vw, 3.5rem);
+        margin: 0;
+        /* prevents padding from adding to width and height */
+        box-sizing: border-box;
+        padding: 0;
+        padding-left: calc(20 / 16 * 1rem);
+        border: none;
+        display: block;
+
+        &::placeholder {
+          color: #767676;
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-align: center;
+        text-decoration: none;
+        min-width: calc(150 / 16 * 1rem);
+        margin: 0;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        color: #fff;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #000;
+          opacity: 1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-submit {
+        width: 100%;
+        color: var(--bodyTextColorWhite);
+        border: none;
+      }
+
+      .cs-image-group {
+        /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
+        font-size: min(2.7vw, 0.7rem);
+        /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+        width: calc(542 / 16 * 1em);
+        height: calc(570 / 16 * 1em);
+        order: 2;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-picture {
+        width: calc(431 / 16 * 1em);
+        height: calc(570 / 16 * 1em);
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        img {
+          width: auto;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .cs-wheel {
+        width: calc(542 / 16 * 1em);
+        height: calc(542 / 16 * 1em);
+        object-fit: cover;
+        position: absolute;
+        top: calc(55 / 16 * 1em);
+        right: 0;
+        z-index: -2;
+      }
+
+      .cs-flower {
+        width: calc(284 / 16 * 1rem);
+        height: auto;
+        display: none;
+        position: absolute;
+        z-index: -1;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #subscribe-2143 {
+      .cs-image-group {
+        /* set to inherit at Large Desktop */
+        font-size: min(1.32vw, 1rem);
+      }
+
+      .cs-form {
+        flex-direction: row;
+      }
+
+      .cs-button-solid {
+        width: auto;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #subscribe-2143 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: center;
+        gap: calc(100 / 16 * 1rem);
+      }
+
+      .cs-content {
+        text-align: left;
+        max-width: 45%;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  /* Large Desktop - 1440px */
+  @media only screen and (min-width: 90rem) {
+    #subscribe-2143 {
+      .cs-flower {
+        display: block;
+        top: calc(16 / 16 * 1rem);
+        left: 0;
+      }
+    }
+  }
+</style>

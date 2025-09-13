@@ -1,0 +1,356 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Content Page                 --><!-- ============================================ --><!-- ============================================ 
+    This Stitch is used for content heavy interior pages
+    that have no design or layout.  Often times these are 
+    content silos where you talk extensively about a topic
+    to educate your visitors and rank on Google for the 
+    content.  These are great for pages that have a TON
+    of content.  Design isn't important here, it's all 
+    about making the content accessible and easy to read.
+================================================= -->
+<section id="content-page-1533">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <!--Flower-->
+      <img
+        class="cs-flower"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/flower-graphic.svg"
+        alt="flower"
+        loading="lazy"
+        decoding="async"
+        height="148"
+        width="153"
+      />
+      <picture class="cs-background">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/interior-kid.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/interior-kid.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/interior-kid.jpg"
+          alt="kid"
+          width="522"
+          height="540"
+        />
+      </picture>
+      <!--Floating Blob-->
+      <img
+        class="cs-floater"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/day-care-events-left.svg"
+        alt="graphic"
+        loading="lazy"
+        decoding="async"
+        height="710"
+        width="690"
+      />
+    </div>
+    <div class="cs-content">
+      <h1 class="cs-title">
+        h1 - A Personalized Approach To Your <span class="cs-color"
+          >Well-Being</span>
+      </h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4-6</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+        laboriosam eum quae in temporibus cumque tempora expedita mollitia
+        nostrum adipisci, ipsum commodi, cupiditate, sequi quos enim! Quaerat
+        esse non sunt! Lorem ipsum dolor sit amet <a href="">link example</a>.
+        Est, quis!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+        laboriosam eum quae in temporibus cumque tempora expedita mollitia
+        nostrum <strong>adipisci, ipsum commodi</strong>, cupiditate, sequi quos
+        enim!
+      </p>
+      <h3>Heading 3</h3>
+      <ol>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+      </ol>
+      <h4>Heading 4-6</h4>
+      <ul>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="cs-bubbles" aria-hidden="true"></div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---        Content Page        -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    @keyframes floatAnimation {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-2rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floatAnimation2 {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-3rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    #content-page-1533 {
+      padding: var(--sectionPadding);
+      background-color: #fff;
+      /* clips the wave background from causing overflow issues when it goes off screen */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 40px - 64px */
+        gap: clamp(2.5rem, 4vw, 4rem);
+        position: relative;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(738 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        font-size: var(--headerFontSize);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: inherit;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+        color: var(--headerColor);
+        position: relative;
+      }
+
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: 700;
+        text-align: inherit;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      h2 {
+        font-size: calc(32 / 16 * 1rem);
+        margin-top: calc(32 / 16 * 1rem);
+      }
+
+      h3 {
+        font-size: calc(24 / 16 * 1rem);
+        color: var(--primary);
+      }
+
+      h4,
+      h5,
+      h6 {
+        font-size: calc(20 / 16 * 1rem);
+      }
+
+      .cs-button-solid {
+        margin-bottom: calc(32 / 16 * 1rem);
+      }
+
+      .cs-no-margin {
+        margin: 0;
+      }
+
+      .cs-color {
+        color: var(--primary);
+      }
+
+      p {
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+        color: var(--bodyTextColor);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+
+        a {
+          font-size: inherit;
+          line-height: inherit;
+          text-decoration: underline;
+          color: var(--primary);
+          filter: brightness(120%);
+        }
+      }
+
+      ol,
+      ul {
+        padding-left: calc(24 / 16 * 1rem);
+        margin: 0 0 calc(32 / 16 * 1rem) 0;
+        color: var(--bodyTextColor);
+        display: flex;
+        flex-direction: column;
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      ul {
+        li {
+          list-style: none;
+          color: inherit;
+          position: relative;
+
+          &:before {
+            /* custom list bullet */
+            content: "";
+            width: 3px;
+            height: 3px;
+            background: currentColor;
+            opacity: 1;
+            border-radius: 50%;
+            position: absolute;
+            display: block;
+            top: calc(10 / 16 * 1rem);
+            left: calc(-12 / 16 * 1rem);
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .cs-image-group {
+        width: calc(522 / 16 * 1em);
+        height: calc(540 / 16 * 1em);
+        display: none;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        border-radius: calc(40 / 16 * 1em);
+        /* clips the corners of the children around the border radius */
+        overflow: hidden;
+        /* makes it cover the parent dimensions */
+        object-fit: cover;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          /* makes it cover the parent like a backgorund image */
+          object-fit: cover;
+          display: block;
+        }
+      }
+
+      .cs-flower {
+        width: calc(153 / 16 * 1em);
+        height: auto;
+        position: absolute;
+        right: calc(-32 / 16 * 1em);
+        top: calc(-36 / 16 * 1em);
+        z-index: 10;
+      }
+
+      .cs-floater {
+        width: calc(710 / 16 * 1em);
+        height: auto;
+        position: absolute;
+        left: calc(150 / 16 * 1em);
+        top: calc(400 / 16 * 1em);
+        z-index: -1;
+        animation-name: floatAnimation2;
+        animation-duration: 14s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #content-page-1533 {
+      .cs-container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+
+      .cs-content {
+        width: 60%;
+        max-width: calc(694 / 16 * 1rem);
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-image-group {
+        font-size: min(1.3vw, 1em);
+        display: block;
+        /* sends it to the right in the 2nd position */
+        order: 2;
+      }
+    }
+  }
+
+  /* Desktop - 1200px */
+  @media only screen and (min-width: 75rem) {
+    #content-page-1533 {
+      .cs-content {
+        width: 53%;
+      }
+    }
+  }
+</style>

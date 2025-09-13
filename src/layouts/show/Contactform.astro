@@ -1,0 +1,169 @@
+---
+import ContactForm1 from "../contactform/1.astro";
+import ContactForm2 from "../contactform/2.astro";
+import ContactForm3 from "../contactform/3.astro";
+import ContactForm4 from "../contactform/4.astro";
+import ContactForm5 from "../contactform/5.astro";
+import ContactForm6 from "../contactform/6.astro";
+import ContactForm7 from "../contactform/7.astro";
+import ContactForm8 from "../contactform/8.astro";
+import ContactForm9 from "../contactform/9.astro";
+import ContactForm10 from "../contactform/10.astro";
+import ContactForm11 from "../contactform/11.astro";
+import ContactForm12 from "../contactform/12.astro";
+import ContactForm13 from "../contactform/13.astro";
+import ContactForm14 from "../contactform/14.astro";
+import ContactForm15 from "../contactform/15.astro";
+import ContactForm16 from "../contactform/16.astro";
+import ContactForm17 from "../contactform/17.astro";
+import ContactForm18 from "../contactform/18.astro";
+import ContactForm19 from "../contactform/19.astro";
+import ContactForm20 from "../contactform/20.astro";
+import ContactForm21 from "../contactform/21.astro";
+import ContactForm22 from "../contactform/22.astro";
+import ContactForm23 from "../contactform/23.astro";
+import ContactForm24 from "../contactform/24.astro";
+import ContactForm25 from "../contactform/25.astro";
+import ContactForm26 from "../contactform/26.astro";
+import ContactForm27 from "../contactform/27.astro";
+import ContactForm28 from "../contactform/28.astro";
+import ContactForm29 from "../contactform/29.astro";
+import ContactForm30 from "../contactform/30.astro";
+import ContactForm31 from "../contactform/31.astro";
+import ContactForm32 from "../contactform/32.astro";
+import ContactForm33 from "../contactform/33.astro";
+---
+
+<div class="c-collection">
+  <div class="c-contactform" data-value-contactform="1"><ContactForm1 /></div>
+  <div class="c-contactform" data-value-contactform="2"><ContactForm2 /></div>
+  <div class="c-contactform" data-value-contactform="3"><ContactForm3 /></div>
+  <div class="c-contactform" data-value-contactform="4"><ContactForm4 /></div>
+  <div class="c-contactform" data-value-contactform="5"><ContactForm5 /></div>
+  <div class="c-contactform" data-value-contactform="6"><ContactForm6 /></div>
+  <div class="c-contactform" data-value-contactform="7"><ContactForm7 /></div>
+  <div class="c-contactform" data-value-contactform="8"><ContactForm8 /></div>
+  <div class="c-contactform" data-value-contactform="9"><ContactForm9 /></div>
+  <div class="c-contactform" data-value-contactform="10"><ContactForm10 /></div>
+  <div class="c-contactform" data-value-contactform="11"><ContactForm11 /></div>
+  <div class="c-contactform" data-value-contactform="12"><ContactForm12 /></div>
+  <div class="c-contactform" data-value-contactform="13"><ContactForm13 /></div>
+  <div class="c-contactform" data-value-contactform="14"><ContactForm14 /></div>
+  <div class="c-contactform" data-value-contactform="15"><ContactForm15 /></div>
+  <div class="c-contactform" data-value-contactform="16"><ContactForm16 /></div>
+  <div class="c-contactform" data-value-contactform="17"><ContactForm17 /></div>
+  <div class="c-contactform" data-value-contactform="18"><ContactForm18 /></div>
+  <div class="c-contactform" data-value-contactform="19"><ContactForm19 /></div>
+  <div class="c-contactform" data-value-contactform="20"><ContactForm20 /></div>
+  <div class="c-contactform" data-value-contactform="21"><ContactForm21 /></div>
+  <div class="c-contactform" data-value-contactform="22"><ContactForm22 /></div>
+  <div class="c-contactform" data-value-contactform="23"><ContactForm23 /></div>
+  <div class="c-contactform" data-value-contactform="24"><ContactForm24 /></div>
+  <div class="c-contactform" data-value-contactform="25"><ContactForm25 /></div>
+  <div class="c-contactform" data-value-contactform="26"><ContactForm26 /></div>
+  <div class="c-contactform" data-value-contactform="27"><ContactForm27 /></div>
+  <div class="c-contactform" data-value-contactform="28"><ContactForm28 /></div>
+  <div class="c-contactform" data-value-contactform="29"><ContactForm29 /></div>
+  <div class="c-contactform" data-value-contactform="30"><ContactForm30 /></div>
+  <div class="c-contactform" data-value-contactform="31"><ContactForm31 /></div>
+  <div class="c-contactform" data-value-contactform="32"><ContactForm32 /></div>
+  <div class="c-contactform" data-value-contactform="33"><ContactForm33 /></div>
+</div>
+
+<style lang="scss">
+  .c-collection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .c-contactform {
+    display: none;
+  }
+  .active {
+    width: 100%;
+    display: block;
+  }
+</style>
+
+<script>
+  function changeCollection(selectedValue) {
+    const collections = document.querySelectorAll(".c-contactform");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none" est sélectionné, ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection sélectionnée
+    const targetCollection = document.querySelector(
+      `[data-value-contactform="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  // Fonction pour le hover des options
+  function previewOnHover(selectedValue) {
+    const collections = document.querySelectorAll(".c-contactform");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none", ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection en preview
+    const targetCollection = document.querySelector(
+      `[data-value-contactform="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const select = document.getElementById("template-select-contactform");
+    const collections = document.querySelectorAll(".c-contactform");
+
+    if (!select) return;
+
+    select.addEventListener("change", function () {
+      const selectedValue = this.value;
+      changeCollection(selectedValue);
+    });
+
+    // Alternative pour navigateur qui ne supportent pas mouseover sur option
+    let isSelectOpen = false;
+
+    select.addEventListener("focus", function () {
+      isSelectOpen = true;
+    });
+
+    select.addEventListener("blur", function () {
+      isSelectOpen = false;
+      // Revenir à la valeur sélectionnée quand on ferme
+      changeCollection(this.value);
+    });
+
+    // Navigation avec les flèches
+    select.addEventListener("keydown", function (e) {
+      if (isSelectOpen && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
+        setTimeout(() => {
+          // Simuler le hover sur l'option "focusée"
+          const currentValue = this.value;
+          previewOnHover(currentValue);
+        }, 10);
+      }
+    });
+  });
+</script>

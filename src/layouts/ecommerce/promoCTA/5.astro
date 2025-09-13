@@ -1,0 +1,371 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Promotions                   --><!-- ============================================ -->
+<section id="promotions-1555">
+  <div class="cs-container">
+    <div class="cs-promotion">
+      <div class="cs-flex">
+        <!--Limited Offer-->
+        <img
+          class="cs-offer"
+          aria-hidden="true"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/limited-offer.png"
+          decoding="async"
+          alt="quote icon"
+          width="189"
+          height="90"
+        />
+        <h3 class="cs-h3-offer">The Beginners Guide To Camping</h3>
+        <a href="" class="cs-link">Explore Now</a>
+      </div>
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hoodies.png"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hoodies.png"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hoodies.png"
+          alt="kids"
+          width="220"
+          height="220"
+          aria-hidden="true"
+        />
+      </picture>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <div class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/ecomm-truck.svg"
+            alt="icon"
+            width="48"
+            height="48"
+          />
+        </div>
+        <div class="cs-info">
+          <h3 class="cs-h3">Free Delivery</h3>
+          <p class="cs-item-text">
+            Enjoy free delivery on all orders, making shopping seamless and
+            convenient.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <div class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/ecomm-headset.svg"
+            alt="icon"
+            width="48"
+            height="48"
+          />
+        </div>
+        <div class="cs-info">
+          <h3 class="cs-h3">Online Support</h3>
+          <p class="cs-item-text">
+            Experience 24/7 online support, ensuring all your concerns are
+            addressed promptly.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---        Promotions          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #promotions-1555 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(900 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+        position: relative;
+      }
+
+      .cs-promotion {
+        text-align: left;
+        list-style: none;
+        width: 100%;
+        /* 16px - 24px */
+        padding: calc(24 / 16 * 1rem) clamp(1rem, 2.4vw, 1.5rem);
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        border: 1px solid #e8e8e8;
+        /* 40px - 60px */
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        position: relative;
+        gap: calc(16 / 16 * 1rem);
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            180deg,
+            #fdf7eb 0%,
+            #fefaee 48.36%,
+            #faeddd 100%
+          );
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+      }
+
+      .cs-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: center;
+      }
+
+      .cs-offer {
+        width: 85%;
+        max-width: calc(189 / 16 * 1rem);
+        height: auto;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+      }
+
+      .cs-picture {
+        width: 50%;
+        height: auto;
+        max-height: calc(300 / 16 * 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-items: center;
+        max-width: calc(320 / 16 * 1rem);
+
+        img {
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+          max-height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .cs-card-group {
+        margin: 0;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        /* 16px - 20px */
+        gap: calc(16 / 16 * 1rem);
+        justify-content: stretch;
+      }
+
+      .cs-item {
+        text-align: left;
+        list-style: none;
+        height: 100%;
+        /* 16px - 24px top & Bottom, changes to 62px at large desktop, left and right changes to 24px */
+        padding: clamp(1rem, 2vw, 1.5rem) calc(16 / 16 * 1rem);
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        background-color: #fff;
+        border: 1px solid #e8e8e8;
+        /* 40px - 60px */
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        position: relative;
+        z-index: 1;
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-icon-wrapper {
+        /* 60px - 80px */
+        width: clamp(3.75rem, 8vw, 5rem);
+        height: clamp(3.75rem, 8vw, 5rem);
+        border: 1px solid var(--primary);
+        background: #fff;
+        box-sizing: border-box;
+        border-radius: calc(100 / 16 * 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: var(--primary);
+          opacity: 0.1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-icon {
+        /* 24px - 36px */
+        width: clamp(1.5rem, 3vw, 2.25rem);
+        height: auto;
+        box-sizing: content-box;
+      }
+
+      .cs-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        text-align: inherit;
+        line-height: 1.5em;
+        font-weight: 700;
+        width: 100%;
+        margin: 0 0 calc(8 / 16 * 1rem) 0;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        color: var(--headerColor);
+        max-width: 17ch;
+      }
+
+      .cs-h3-offer {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.3vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 calc(24 / 16 * 1rem) 0;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        color: var(--headerColor);
+        max-width: 17ch;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        text-align: inherit;
+        line-height: 1.5em;
+        max-width: 50ch;
+        margin: 0;
+        width: 100%;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-link {
+        font-size: calc(16 / 16 * 1rem);
+        text-decoration: none;
+        text-align: inherit;
+        line-height: 1.2em;
+        font-weight: 700;
+        color: var(--primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 1px;
+          background: var(--primary);
+          opacity: 1;
+          position: absolute;
+          display: block;
+          bottom: 0;
+          left: 0;
+          transition: width 0.3s;
+        }
+      }
+    }
+  }
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #promotions-1555 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        align-items: stretch;
+      }
+    }
+  }
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #promotions-1555 {
+      .cs-promotion {
+        width: 60%;
+        max-width: calc(630 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        flex-direction: row;
+        gap: calc(20 / 16 * 1rem);
+        width: 66%;
+      }
+
+      .cs-item {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .cs-info {
+        align-items: center;
+      }
+    }
+  }
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #promotions-1555 {
+      .cs-item {
+        padding: calc(62 / 16 * 1rem) calc(24 / 16 * 1rem);
+      }
+    }
+  }
+</style>

@@ -1,0 +1,370 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Why Choose Us                --><!-- ============================================ -->
+<section id="why-choose-1904">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Why Choose Us</span>
+      <h2 class="cs-title">Why Choose Stitch Gym</h2>
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym3.png"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym3.png"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym3.png"
+          alt="body builder"
+          width="562"
+          height="568"
+        />
+      </picture>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white-house.svg"
+            alt="white house"
+            width="32"
+            height="32"
+          />
+        </picture>
+        <div class="cs-flex">
+          <h3 class="cs-h3">22,000 Square Feet Modern Gym</h3>
+          <p class="cs-item-text">
+            Take advantage of our spacious gym equipped with a wide range of gym
+            fitness machines so you can achieve the maximum benefits.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white-layer.svg"
+            alt="white layers"
+            width="32"
+            height="32"
+          />
+        </picture>
+        <div class="cs-flex">
+          <h3 class="cs-h3">State of The Art Equipment</h3>
+          <p class="cs-item-text">
+            We are well equipped with the most up-to-date equipment & sound
+            systems to enhance your class experience and high-intensity classes.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white-hourglass.svg"
+            alt="white hourglass"
+            width="32"
+            height="32"
+          />
+        </picture>
+        <div class="cs-flex">
+          <h3 class="cs-h3">Programs for Proper Weight Loss</h3>
+          <p class="cs-item-text">
+            We have special & high priority program for who want to loose
+            weight. We consult with physician & dieticians to provide proper
+            training.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white-layer.svg"
+            alt="white layers"
+            width="32"
+            height="32"
+          />
+        </picture>
+        <div class="cs-flex">
+          <h3 class="cs-h3">State of The Art Equipment</h3>
+          <p class="cs-item-text">
+            We are well equipped with the most up-to-date equipment & sound
+            systems to enhance your class experience and high-intensity classes.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---        Why Choose Us       -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #why-choose-1904 {
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1920 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-content {
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding: var(--sectionPadding);
+        background-color: var(--primary);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-topper {
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-title {
+        max-width: 13ch;
+        margin: 0 0 calc(48 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-picture {
+        width: 100%;
+        max-width: calc(586 / 16 * 1rem);
+        height: auto;
+        display: block;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+      }
+
+      .cs-item {
+        text-align: left;
+        list-style: none;
+        width: 100%;
+        height: clamp(18.75rem, 55vw, 26.25rem);
+        margin: 0;
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        padding: clamp(2rem, 4.5vw, 3.75rem) clamp(1rem, 3.1vw, 2.5rem);
+        background-color: #767676;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        grid-column: span 12;
+        /* 24px - 40px */
+        gap: clamp(1.5rem, 4vw, 2.5rem);
+        position: relative;
+        z-index: 1;
+
+        &:nth-last-of-type(odd) {
+          background-color: #5f5f5f;
+        }
+      }
+
+      .cs-icon-wrapper {
+        width: calc(80 / 16 * 1rem);
+        height: calc(80 / 16 * 1rem);
+        background-color: var(--primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .cs-icon {
+        width: calc(32 / 16 * 1rem);
+        height: auto;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-align: inherit;
+        /* 12px - 16px */
+        margin: 0 0 clamp(0.75rem, 1.8vw, 1rem) 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        padding: 0;
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+      }
+    }
+  }
+
+  /* Tablet - 600px */
+  @media only screen and (min-width: 37.5rem) {
+    #why-choose-1904 {
+      .cs-item {
+        grid-column: span 6;
+
+        &:nth-of-type(1),
+        &:nth-of-type(4) {
+          background-color: #767676;
+        }
+
+        &:nth-of-type(2),
+        &:nth-of-type(3) {
+          background-color: #5f5f5f;
+        }
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #why-choose-1904 {
+      .cs-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+      }
+
+      .cs-content {
+        text-align: left;
+        width: 100%;
+        align-items: flex-start;
+
+        &:before {
+          /* background color, moves to the section parent at desktop */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: var(--primary);
+          opacity: 1;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+      }
+
+      .cs-picture {
+        max-width: 100%;
+        margin-left: auto;
+      }
+
+      .cs-card-group {
+        width: 65%;
+        max-width: 100%;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-item {
+        grid-column: span 6;
+      }
+    }
+  }
+
+  /* Desktop - 1600px */
+  @media only screen and (min-width: 100rem) {
+    #why-choose-1904 {
+      &:before {
+        /* background color */
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: var(--primary);
+        opacity: 1;
+        display: block;
+        position: absolute;
+        right: 50%;
+        left: auto;
+        z-index: -1;
+      }
+
+      .cs-content {
+        width: 50%;
+
+        /* 16px - 100px */
+        padding-left: clamp(1rem, 5vw, 6.25rem);
+
+        &:before {
+          margin-right: calc(10 / 16 * 1rem);
+          right: 50%;
+          left: auto;
+        }
+      }
+
+      .cs-picture {
+        width: 80%;
+        height: 80%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        position: absolute;
+        right: calc(40 / 16 * 1rem);
+        bottom: calc(0 / 16 * 1rem);
+        z-index: -1;
+
+        img {
+          width: auto;
+          height: auto;
+          max-height: calc(760 / 16 * 1rem);
+          object-fit: contain;
+        }
+      }
+
+      .cs-card-group {
+        width: 50%;
+      }
+    }
+  }
+</style>

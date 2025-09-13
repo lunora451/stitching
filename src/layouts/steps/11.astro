@@ -1,0 +1,247 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Steps                      --><!-- ============================================ -->
+<section id="steps-1713">
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting-women.jpeg"
+    />
+    <!--Tablet and above Image-->
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting-women.jpeg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting-women.jpeg"
+      alt="busines meeting"
+      width="522"
+      height="609"
+      aria-hidden="true"
+    />
+  </picture>
+  <div class="cs-container">
+    <div class="cs-wrapper">
+      <div class="cs-content">
+        <span class="cs-topper">Our Steps</span>
+        <h2 class="cs-title">How To Get Started</h2>
+      </div>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <span class="cs-number">01</span>
+          <div class="cs-flex">
+            <h3 class="cs-h3">Connect With Us</h3>
+            <p class="cs-item-text">
+              We provide some of the finest quality, most responsive and
+              reliable, and cost effective services and solutions.
+            </p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <span class="cs-number">02</span>
+          <div class="cs-flex">
+            <h3 class="cs-h3">Make A schedule</h3>
+            <p class="cs-item-text">
+              Fortune 500 companies to smaller and medium-sized companies to
+              help manage risks to as low as reasonably practical.
+            </p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <span class="cs-number">03</span>
+          <div class="cs-flex">
+            <h3 class="cs-h3">Describe Your Problem</h3>
+            <p class="cs-item-text">
+              Highly experienced staff of more than 100 professionals averaging
+              29+ years in industry and hands-on knowledge.
+            </p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <span class="cs-number">04</span>
+          <div class="cs-flex">
+            <h3 class="cs-h3">Get Expert Consultation</h3>
+            <p class="cs-item-text">
+              Highly experienced staff of more than 100 professionals averaging
+              29+ years in industry and hands-on knowledge.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Steps             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #steps-1713 {
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cs-wrapper {
+        /* changes to 630px on tablet */
+        max-width: calc(500 / 16 * 1rem);
+        margin: auto;
+        padding: var(--sectionPadding);
+        display: flex;
+        flex-direction: column;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to center if content needs to be centrally aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* aligns content to the left, set to center to centrally align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        margin: 0;
+      }
+
+      .cs-card-group {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        justify-items: center;
+        align-items: stretch;
+        /* 24px - 32px */
+        gap: clamp(1.5rem, 3vw, 2rem);
+        grid-auto-flow: row;
+      }
+
+      .cs-item {
+        list-style: none;
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+      }
+
+      .cs-number {
+        /* 80px - 100px */
+        font-size: clamp(5rem, 9vw, 6.25rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        letter-spacing: -2px;
+        margin-right: calc(-20 / 16 * 1rem);
+        color: var(--primary);
+        opacity: 0.12;
+        display: block;
+      }
+
+      .cs-h3 {
+        font-size: calc(25 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 2vw, 1rem);
+        line-height: 1.5em;
+        text-align: left;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-background {
+        width: 100%;
+        height: calc(360 / 16 * 1rem);
+        display: block;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #steps-1713 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        padding: 0;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+
+      .cs-title {
+        margin: 0;
+      }
+
+      .cs-wrapper {
+        width: 65vw;
+        max-width: calc(630 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+      }
+
+      .cs-card-group {
+        /* 16px - 32px */
+        gap: clamp(1rem, 3vw, 2rem);
+      }
+
+      .cs-item {
+        flex-direction: row;
+      }
+
+      .cs-picture {
+        width: calc(180 / 16 * 1rem);
+        height: calc(180 / 16 * 1rem);
+      }
+
+      .cs-background {
+        width: 30%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #steps-1713 {
+      .cs-wrapper {
+        width: 50vw;
+      }
+
+      .cs-background {
+        width: 50vw;
+        right: 50%;
+        left: auto;
+        margin-right: calc(128 / 16 * 1rem);
+      }
+    }
+  }
+</style>

@@ -1,0 +1,459 @@
+---
+
+---
+
+<!-- ============================================ --><!--                     Hero                     --><!-- ============================================ -->
+<section id="hero-1956">
+  <div class="cs-container">
+    <div class="cs-card-container">
+      <h2 class="cs-title">Innovative Technologies and Professional Eyecare</h2>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <picture class="cs-item-background">
+            <source
+              media="(max-width: 600px)"
+              srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/optometrist2.jpg"
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/optometrist2.jpg"
+            />
+            <img
+              decoding="async"
+              src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/optometrist2.jpg"
+              alt="optometrist"
+              width="448"
+              height="320"
+            />
+          </picture>
+        </li>
+        <li class="cs-item">
+          <picture class="cs-item-background">
+            <source
+              media="(max-width: 600px)"
+              srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/optometrist-machine.jpg"
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/optometrist-machine.jpg"
+            />
+            <img
+              decoding="async"
+              src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/optometrist-machine.jpg"
+              alt="optometrist machine"
+              width="448"
+              height="320"
+            />
+          </picture>
+        </li>
+        <li class="cs-item-content">
+          <span class="cs-topper">Consultation</span>
+          <div class="cs-item-flex">
+            <h3 class="cs-h3">Eye Care Services for Children and Adults</h3>
+            <a href="" class="cs-button-solid">Book Now</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="cs-wrapper">
+      <ul class="cs-card-group2">
+        <li class="cs-item2">
+          <a href="" class="cs-link">
+            <h4 class="cs-h4">The Process of Installing Implants</h4>
+            <picture class="cs-icon-wrapper">
+              <img
+                class="cs-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/arrow-right3.svg"
+                alt="arrow"
+                width="32"
+                height="32"
+              />
+            </picture>
+          </a>
+        </li>
+        <li class="cs-item2">
+          <a href="" class="cs-link">
+            <h4 class="cs-h4">Caring for Dental Implants</h4>
+            <picture class="cs-icon-wrapper">
+              <img
+                class="cs-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/arrow-right3.svg"
+                alt="arrow"
+                width="32"
+                height="32"
+              />
+            </picture>
+          </a>
+        </li>
+      </ul>
+      <picture class="cs-picture">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/optometrist.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/optometrist.jpg"
+        />
+        <img
+          aria-hidden="true"
+          decoding="async"
+          src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/optometrist.jpg"
+          alt="optometrist with glasses"
+          width="924"
+          height="793"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---            Hero            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-1956 {
+      padding: var(--sectionPadding);
+      /* 100px - 200px */
+      padding-top: clamp(6.25rem, 8vw, 12.5rem);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1880 / 16 * 1rem);
+        margin: auto;
+        padding: var(--sectionPadding);
+        /* 12px - 80px */
+        padding-left: clamp(0.75rem, 3vw, 5rem);
+        padding-right: clamp(0.75rem, 3vw, 5rem);
+        background-color: #f7f7f7;
+        border-radius: calc(20 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+      }
+
+      .cs-card-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cs-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 5vw, 3.8125rem);
+        max-width: none;
+        margin-bottom: calc(20 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: calc(8 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        /* 272px - 320px */
+        height: clamp(17rem, 34vw, 20rem);
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+        border-radius: calc(20 / 16 * 1rem);
+        grid-column: span 12;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+          border-color: var(--primary);
+
+          .cs-h3 {
+            color: var(--primary);
+          }
+
+          .cs-icon {
+            transform: rotateY(360deg);
+          }
+        }
+
+        &:nth-of-type(3) {
+          max-height: calc(288 / 16 * 1rem);
+          /* 16px - 32px */
+          padding: clamp(1rem, 2vw, 2rem);
+          background-color: #fff;
+          justify-content: space-between;
+          grid-column: span 12;
+        }
+      }
+      .cs-item-content {
+        text-align: left;
+        list-style: none;
+        width: 100%;
+        /* 16px - 32px */
+        padding: clamp(1rem, 4vw, 2rem);
+        background-color: #fff;
+        border-radius: calc(20 / 16 * 1rem);
+        grid-column: span 12;
+        display: flex;
+        /* 60px - 110px */
+        gap: clamp(3.75rem, 12vw, 8.875rem);
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .cs-item-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: calc(20 / 16 * 1rem);
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-item-flex {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(28 / 16 * 1rem);
+      }
+
+      .cs-h3,
+      .cs-h4 {
+        /* 31px - 39px */
+        font-size: clamp(1.9375rem, 2vw, 2.4375rem);
+        line-height: 1.2em;
+        margin: 0;
+        max-width: calc(478 / 16 * 1rem);
+        color: var(--headerColor);
+        z-index: 3;
+        transition: color 0.3s;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-align: center;
+        text-decoration: none;
+        min-width: calc(146 / 16 * 1rem);
+        margin: 0;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        /* 16px - 32px */
+        padding: 0 clamp(1rem, 1.5vw, 2rem);
+        background-color: var(--primary);
+        color: var(--bodyTextColorWhite);
+        border-radius: calc(24 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #000;
+          color: #fff;
+        }
+      }
+
+      .cs-wrapper {
+        width: 100%;
+        /* 304px - 400px top */
+        /* 12px - 20px left and right */
+        padding: clamp(19rem, 30vw, 25rem) clamp(0.75rem, 2vw, 1.25rem)
+          calc(20 / 16 * 1rem);
+        box-sizing: border-box;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-card-group2 {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: calc(8 / 16 * 1rem);
+        z-index: 2;
+      }
+
+      .cs-item2 {
+        text-align: left;
+        list-style: none;
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+        /* 20px - 32px */
+        padding: clamp(1.25rem, 2.5vw, 2rem);
+        box-sizing: border-box;
+        background-color: #fff;
+        border-radius: calc(20 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        grid-column: span 12;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+          .cs-icon-wrapper {
+            background-color: var(--primary);
+            border-color: var(--primary) !important;
+          }
+
+          .cs-icon {
+            filter: grayscale(1) brightness(1000%);
+          }
+        }
+
+        &:nth-of-type(2) {
+          background: rgba(255, 255, 255, 0.36);
+          backdrop-filter: blur(16px);
+
+          .cs-h4 {
+            color: #fff;
+          }
+
+          .cs-icon-wrapper {
+            border: 1px solid #fff;
+          }
+
+          .cs-icon {
+            /* turns it white */
+            filter: grayscale(1) brightness(1000%);
+          }
+        }
+      }
+
+      .cs-link {
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        /* 40px - 110px */
+        gap: clamp(2.5rem, 12vw, 6.875rem);
+      }
+
+      .cs-icon-wrapper {
+        /* 32px - 48px */
+        width: calc(56 / 16 * 1rem);
+        height: calc(56 / 16 * 1rem);
+        margin-left: auto;
+        /* making this element content-box so padding doesn't apply to the height/width dimensions */
+        box-sizing: content-box;
+        border: 1px solid #000;
+        border-radius: calc(20 / 16 * 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition:
+          color 0.3s,
+          border-color 0.3s,
+          background-color 0.3s;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-icon {
+        width: calc(32 / 16 * 1rem);
+        height: auto;
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: calc(20 / 16 * 1rem);
+        overflow: hidden;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-1956 {
+      .cs-item {
+        text-align: left;
+        max-height: calc(331 / 16 * 1rem);
+        grid-column: span 6;
+      }
+
+      .cs-item-flex {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+
+      .cs-item2 {
+        grid-column: span 6;
+      }
+    }
+  }
+
+  /* Large Desktop 1200px */
+  @media only screen and (min-width: 75rem) {
+    #hero-1956 {
+      .cs-container {
+        max-width: calc(1880 / 16 * 1rem);
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      .cs-wrapper {
+        max-width: calc(924 / 16 * 1rem);
+        padding-top: 0;
+        height: auto;
+        justify-content: flex-end;
+      }
+    }
+  }
+</style>

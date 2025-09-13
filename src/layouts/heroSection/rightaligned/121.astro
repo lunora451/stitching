@@ -1,0 +1,206 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Hero                      --><!-- ============================================ -->
+<section id="hero-540">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h2 class="cs-title">Lorem Ipsum Dolor Sit Amet Cupidatat</h2>
+      <p class="cs-text">
+        Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco
+        cillum dolor. Voluptate exercitation incididunt aliquip deserunt.
+      </p>
+      <a href="" class="cs-button-solid">Consult Now</a>
+    </div>
+  </div>
+  <!--Background Color-->
+  <picture class="cs-background">
+    <source
+      media="(min-width: 1024px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/hero.jpg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/hero-t.jpg"
+    />
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/hero-m.jpg"
+    />
+    <img
+      aria-hidden="true"
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/hero.jpg"
+      alt="meeting"
+      width="275"
+      height="132"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-540 {
+      /* 144px - 300px - leaving extra space for the navigation */
+      padding: clamp(9rem, 25.95vw, 18.75em) calc(16 / 16 * 1rem) 0;
+      /* 130px - 175px */
+      padding-bottom: clamp(8.125rem, 12.5vw, 10.9375em);
+      /* prevents padding and border from affecting height and width */
+      box-sizing: border-box;
+      /* clips the color overlay so it doesn't cause an overflow */
+      overflow: hidden;
+      position: relative;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        text-align: left;
+        /* changed to at tablet */
+        width: 90%;
+        max-width: calc(545 / 16 * 1rem);
+        /* 100px - 150px, changes to 0 at tablet */
+        margin-top: clamp(6.25rem, 28vw, 9.375rem);
+      }
+
+      .cs-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.7vw, 3.8125rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: inherit;
+        max-width: calc(700 / 16 * 1rem);
+        /* 16px - 32px */
+        margin: 0 0 clamp(1rem, 4vw, 2rem) 0;
+        color: var(--bodyTextColorWhite);
+        position: relative;
+      }
+
+      .cs-text {
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        max-width: calc(650 / 16 * 1rem);
+        /* 40px - 64px */
+        margin: 0 0 clamp(2.5rem, 6.3vw, 4rem);
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: auto;
+        color: #1a1a1a;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--secondary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #fff;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        &:before {
+          /* background color overlay */
+          content: "";
+          position: absolute;
+          display: block;
+          height: calc(2000 / 16 * 1rem);
+          width: calc(3000 / 16 * 1rem);
+          background: rgba(12, 12, 12, 0.7);
+          -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+          top: calc(-610 / 16 * 1rem);
+          left: 50%;
+          z-index: 1;
+          transform: rotate(-30deg) translateX(-50%);
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes img tag act as a background image */
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-540 {
+      .cs-container {
+        align-items: flex-end;
+      }
+
+      .cs-content {
+        width: 48%;
+        margin-top: calc(0 / 16 * 1rem);
+      }
+
+      .cs-background {
+        &:before {
+          top: calc(-1220 / 16 * 1rem);
+          transform: rotate(-55deg) translateX(-50%);
+        }
+      }
+    }
+  }
+</style>

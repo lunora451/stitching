@@ -1,0 +1,215 @@
+---
+import Gallery1 from "../gallery/1.astro";
+import Gallery2 from "../gallery/2.astro";
+import Gallery3 from "../gallery/3.astro";
+import Gallery4 from "../gallery/4.astro";
+import Gallery5 from "../gallery/5.astro";
+import Gallery6 from "../gallery/6.astro";
+import Gallery7 from "../gallery/7.astro";
+import Gallery8 from "../gallery/8.astro";
+import Gallery9 from "../gallery/9.astro";
+import Gallery10 from "../gallery/10.astro";
+import Gallery11 from "../gallery/11.astro";
+import Gallery12 from "../gallery/12.astro";
+import Gallery13 from "../gallery/13.astro";
+import Gallery14 from "../gallery/14.astro";
+import Gallery15 from "../gallery/15.astro";
+import Gallery16 from "../gallery/16.astro";
+import Gallery17 from "../gallery/17.astro";
+import Gallery18 from "../gallery/18.astro";
+import Gallery19 from "../gallery/19.astro";
+import Gallery20 from "../gallery/20.astro";
+import Gallery21 from "../gallery/21.astro";
+import Gallery22 from "../gallery/22.astro";
+import Gallery23 from "../gallery/23.astro";
+import Gallery24 from "../gallery/24.astro";
+import Gallery25 from "../gallery/25.astro";
+import Gallery26 from "../gallery/26.astro";
+import Gallery27 from "../gallery/27.astro";
+import Gallery28 from "../gallery/28.astro";
+---
+
+<div class="c-collection">
+  <div class="c-gallery" data-value-gallery="1">
+    <Gallery1 />
+  </div>
+  <div class="c-gallery" data-value-gallery="2">
+    <Gallery2 />
+  </div>
+  <div class="c-gallery" data-value-gallery="3">
+    <Gallery3 />
+  </div>
+  <div class="c-gallery" data-value-gallery="4">
+    <Gallery4 />
+  </div>
+  <div class="c-gallery" data-value-gallery="5">
+    <Gallery5 />
+  </div>
+  <div class="c-gallery" data-value-gallery="6">
+    <Gallery6 />
+  </div>
+  <div class="c-gallery" data-value-gallery="7">
+    <Gallery7 />
+  </div>
+  <div class="c-gallery" data-value-gallery="8">
+    <Gallery8 />
+  </div>
+  <div class="c-gallery" data-value-gallery="9">
+    <Gallery9 />
+  </div>
+  <div class="c-gallery" data-value-gallery="10">
+    <Gallery10 />
+  </div>
+  <div class="c-gallery" data-value-gallery="11">
+    <Gallery11 />
+  </div>
+  <div class="c-gallery" data-value-gallery="12">
+    <Gallery12 />
+  </div>
+  <div class="c-gallery" data-value-gallery="13">
+    <Gallery13 />
+  </div>
+  <div class="c-gallery" data-value-gallery="14">
+    <Gallery14 />
+  </div>
+  <div class="c-gallery" data-value-gallery="15">
+    <Gallery15 />
+  </div>
+  <div class="c-gallery" data-value-gallery="16">
+    <Gallery16 />
+  </div>
+  <div class="c-gallery" data-value-gallery="17">
+    <Gallery17 />
+  </div>
+  <div class="c-gallery" data-value-gallery="18">
+    <Gallery18 />
+  </div>
+  <div class="c-gallery" data-value-gallery="19">
+    <Gallery19 />
+  </div>
+  <div class="c-gallery" data-value-gallery="20">
+    <Gallery20 />
+  </div>
+  <div class="c-gallery" data-value-gallery="21">
+    <Gallery21 />
+  </div>
+  <div class="c-gallery" data-value-gallery="22">
+    <Gallery22 />
+  </div>
+  <div class="c-gallery" data-value-gallery="23">
+    <Gallery23 />
+  </div>
+  <div class="c-gallery" data-value-gallery="24">
+    <Gallery24 />
+  </div>
+  <div class="c-gallery" data-value-gallery="25">
+    <Gallery25 />
+  </div>
+  <div class="c-gallery" data-value-gallery="26">
+    <Gallery26 />
+  </div>
+  <div class="c-gallery" data-value-gallery="27">
+    <Gallery27 />
+  </div>
+  <div class="c-gallery" data-value-gallery="28">
+    <Gallery28 />
+  </div>
+</div>
+
+<style lang="scss">
+  .c-collection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .c-gallery {
+    display: none;
+  }
+  .active {
+    width: 100%;
+    display: block;
+  }
+</style>
+
+<script>
+  function changeCollection(selectedValue) {
+    const collections = document.querySelectorAll(".c-gallery");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none" est sélectionné, ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection sélectionnée
+    const targetCollection = document.querySelector(
+      `[data-value-gallery="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  // Fonction pour le hover des options
+  function previewOnHover(selectedValue) {
+    const collections = document.querySelectorAll(".c-gallery");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none", ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection en preview
+    const targetCollection = document.querySelector(
+      `[data-value-gallery="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const select = document.getElementById("template-select-gallery");
+    const collections = document.querySelectorAll(".c-gallery");
+
+    if (!select) return;
+
+    select.addEventListener("change", function () {
+      const selectedValue = this.value;
+      changeCollection(selectedValue);
+    });
+
+    // Alternative pour navigateur qui ne supportent pas mouseover sur option
+    let isSelectOpen = false;
+
+    select.addEventListener("focus", function () {
+      isSelectOpen = true;
+    });
+
+    select.addEventListener("blur", function () {
+      isSelectOpen = false;
+      // Revenir à la valeur sélectionnée quand on ferme
+      changeCollection(this.value);
+    });
+
+    // Navigation avec les flèches
+    select.addEventListener("keydown", function (e) {
+      if (isSelectOpen && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
+        setTimeout(() => {
+          // Simuler le hover sur l'option "focusée"
+          const currentValue = this.value;
+          previewOnHover(currentValue);
+        }, 10);
+      }
+    });
+  });
+</script>

@@ -1,0 +1,374 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Events                     --><!-- ============================================ -->
+<section id="events-2053">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Events</span>
+      <h2 class="cs-title">Dentistry for The Whole Family</h2>
+      <p class="cs-text">
+        Orci eu lobortis elementum nibh tellus. Vulputate eu scelerisque felis
+        imperdiet proin fermentum leo vel. Luctus accumsan tortor posuere ac ut
+        consequat semper. Et pharetra pharetra massa massa ultricies mi quis.
+      </p>
+    </div>
+    <div class="cs-wrapper">
+      <div class="cs-left">
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist9.jpeg"
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist9.jpeg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist9.jpeg"
+            alt="dentist patient"
+            width="522"
+            height="609"
+            aria-hidden="true"
+          />
+        </picture>
+        <ul class="cs-card-group">
+          <li class="cs-item">
+            <span class="cs-date">
+              <strong>16th</strong>
+              June, 2024
+            </span>
+            <div class="cs-info">
+              <h3 class="cs-h3">1st Visit</h3>
+              <p class="cs-item-text">
+                Dentitch provides the best service and has won many awards. Our
+                mission is to make everyone’s smile confidently.
+              </p>
+              <a href="" class="cs-link">Learn More</a>
+            </div>
+          </li>
+          <li class="cs-item">
+            <span class="cs-date">
+              <strong>16th</strong>
+              June, 2024
+            </span>
+            <div class="cs-info">
+              <h3 class="cs-h3">2nd Visit</h3>
+              <p class="cs-item-text">
+                Dentitch provides the best service and has won many awards. Our
+                mission is to make everyone’s smile confidently.
+              </p>
+              <a href="" class="cs-link">Learn More</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="cs-right">
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist6.jpg"
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist6.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist6.jpg"
+            alt="dentist patient"
+            width="522"
+            height="609"
+            aria-hidden="true"
+          />
+        </picture>
+        <ul class="cs-card-group">
+          <li class="cs-item">
+            <span class="cs-date">
+              <strong>16th</strong>
+              June, 2024
+            </span>
+            <div class="cs-info">
+              <h3 class="cs-h3">3rd Visit</h3>
+              <p class="cs-item-text">
+                Dentitch provides the best service and has won many awards. Our
+                mission is to make everyone’s smile confidently.
+              </p>
+              <a href="" class="cs-link">Read More</a>
+            </div>
+          </li>
+          <li class="cs-item">
+            <span class="cs-date">
+              <strong>16th</strong>
+              June, 2024
+            </span>
+            <div class="cs-info">
+              <h3 class="cs-h3">4th Visit</h3>
+              <p class="cs-item-text">
+                Dentitch provides the best service and has won many awards. Our
+                mission is to make everyone’s smile confidently.
+              </p>
+              <a href="" class="cs-link">Read More</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Events            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #events-2053 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1440px at desktop */
+        max-width: calc(1080 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title {
+        max-width: none;
+      }
+
+      .cs-text {
+        max-width: calc(944 / 16 * 1rem);
+      }
+
+      .cs-wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: calc(32 / 16 * 1rem);
+      }
+
+      .cs-left,
+      .cs-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(32 / 16 * 1rem);
+        grid-column: span 12;
+      }
+
+      .cs-picture {
+        width: 100%;
+        min-height: calc(440 / 16 * 1rem);
+        /* clips the corners of the img tags */
+        overflow: hidden;
+        border-radius: calc(8 / 16 * 1rem);
+        display: block;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        padding: calc(40 / 16 * 1rem) 0;
+        overflow: hidden;
+        border-bottom: 1px solid #e8e8e8;
+        display: flex;
+        align-items: flex-start;
+        gap: calc(24 / 16 * 1rem);
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+          .cs-h3 {
+            color: var(--primary);
+          }
+        }
+
+        &:first-of-type {
+          padding-top: 0;
+        }
+
+        &:last-of-type {
+          padding-bottom: 0;
+          border-bottom: 0;
+        }
+      }
+
+      .cs-date {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        padding: calc(24 / 16 * 1rem) calc(12 / 16 * 1rem);
+        /* clips the pseudo to remove the corners */
+        overflow: hidden;
+        color: var(--headerColor);
+        border-radius: calc(8 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 1;
+        transition: border-color 0.3s;
+
+        &:before {
+          /* background color */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background-color: var(--primary);
+          opacity: 0.1;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: background-color 0.3s;
+        }
+
+        strong {
+          font-size: calc(20 / 16 * 1rem);
+          font-weight: 700;
+          line-height: 1.2em;
+          color: #000;
+        }
+      }
+
+      .cs-h3 {
+        font-size: calc(25 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--headerColor);
+        transition: color 0.3s;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-link {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-decoration: none;
+        width: auto;
+        margin: 0;
+        margin-top: calc(24 / 16 * 1rem);
+        padding: 0;
+        color: var(--primary);
+        color: var(--primary);
+        display: inline-block;
+        position: relative;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: currentColor;
+          opacity: 1;
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #events-2053 {
+      .cs-picture {
+        max-width: calc(250 / 16 * 1rem);
+        height: auto;
+      }
+
+      .cs-left,
+      .cs-right {
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      .cs-card-group {
+        padding: calc(24 / 16 * 1rem) 0;
+        align-items: center;
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #events-2053 {
+      .cs-container {
+        max-width: calc(1440 / 16 * 1rem);
+      }
+
+      .cs-left,
+      .cs-right {
+        grid-column: span 6;
+      }
+
+      .cs-wrapper {
+        flex-direction: row;
+      }
+    }
+  }
+</style>

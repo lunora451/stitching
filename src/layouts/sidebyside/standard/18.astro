@@ -1,0 +1,409 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Side By Side                  --><!-- ============================================ -->
+<section id="sbs-2170">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">WHY CHOOSE US</span>
+      <h2 class="cs-title">Your Wedding Memory will be More Memorable</h2>
+      <div class="cs-image-group">
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding7.jpg"
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding7.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding7.jpg"
+            alt="people"
+            width="738"
+            height="617"
+          />
+        </picture>
+        <img
+          class="cs-leaf"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/leaf3.png"
+          alt="people"
+          width="364"
+          height="380"
+          aria-hidden="true"
+        />
+      </div>
+    </div>
+    <div class="cs-wrapper">
+      <div class="cs-flex">
+        <p class="cs-text">
+          Our expert instructors give you the skills and knowledge to manage
+          process risks and show you how to continuously make your facilities
+          and operations more safe and reliable. PSRG training courses are
+          available online. We have courses on-demand and live instructors for
+          workshops and support. We also provide LIVE instructor-led training
+          courses and onsite training.
+        </p>
+        <p class="cs-text">
+          We have courses on-demand and live instructors for workshops and
+          support. We also provide LIVE instructor-led training courses and
+          onsite training.
+        </p>
+        <ul class="cs-ul">
+          <li class="cs-li">
+            <span class="cs-number">01</span>
+            <span class="cs-li-text">Formal Style</span>
+          </li>
+          <li class="cs-li">
+            <span class="cs-number">02</span>
+            <span class="cs-li-text">Formal Style</span>
+          </li>
+        </ul>
+        <a href="" class="cs-button-solid">Learn More</a>
+      </div>
+      <ul class="cs-stats-group">
+        <li class="cs-stat">
+          <span class="cs-stat-number">25</span>
+          <span class="cs-desc">Years</span>
+        </li>
+        <li class="cs-stat">
+          <span class="cs-stat-number">98</span>
+          <span class="cs-desc">Guests</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <img
+    class="cs-floater"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/flower-bg.png"
+    alt="flower"
+    width="320"
+    height="378"
+    aria-hidden="true"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---        Side By Side        -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-2170 {
+      padding: var(--sectionPadding);
+      background-color: #fbf5f1;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(584 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(738 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+        position: relative;
+        z-index: 10;
+      }
+
+      .cs-flex {
+        padding-left: calc(48 / 16 * 1rem);
+      }
+
+      .cs-title {
+        margin: 0 0 calc(40 / 16 * 1rem) 0;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: calc(56 / 16 * 1rem);
+        text-decoration: none;
+        font-weight: 700;
+        overflow: hidden;
+        margin: 0;
+        color: #fff;
+        padding: 0 calc(48 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 0%;
+          background: #1a1a1a;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: var(--primary);
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-ul {
+        width: 100%;
+        /* 32px - 64px */
+        margin: 0 0 calc(32 / 16 * 1rem);
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cs-li {
+        list-style: none;
+        padding: calc(16 / 16 * 1rem) 0;
+        border-bottom: 1px solid #e8e8e8;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: calc(24 / 16 * 1rem);
+        position: relative;
+        z-index: 1;
+
+        &:first-of-type {
+          padding-top: 0;
+        }
+
+        &:last-of-type {
+          border: none;
+          padding-bottom: 0;
+        }
+      }
+
+      .cs-number {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        color: var(--headerColor);
+      }
+
+      .cs-li-text {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-stats-group {
+        width: 100%;
+        /* 32px - 64px */
+        margin: clamp(2rem, 6vw, 4rem) 0 0;
+        /* 24px - 100px */
+        padding: calc(8 / 16 * 1rem) clamp(1.5rem, 7vw, 7.52rem);
+        background-color: var(--secondary);
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(4rem, 14vw, 9.25rem);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-stat {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-stat-number {
+        list-style: none;
+        /* 100px - 120px */
+        font-size: clamp(6.25rem, 13vw, 7.5rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        color: #fff;
+        opacity: 0.2;
+      }
+
+      .cs-desc {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .cs-image-group {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: 100vw;
+        border: clamp(4px, 2vw, 9px) solid #fff;
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-leaf {
+        width: clamp(6.25rem, 25vw, 22.75rem);
+        height: auto;
+        position: absolute;
+        bottom: calc(clamp(3.125rem, 19vw, 10.25rem) * -1);
+        left: calc(clamp(3.125rem, 12vw, 8.25rem) * -1);
+        z-index: -1;
+      }
+
+      .cs-floater {
+        width: 17%;
+        max-width: calc(320 / 16 * 1rem);
+        height: auto;
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbs-2170 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: stretch;
+        gap: 0;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-content {
+        width: 45vw;
+        height: auto;
+      }
+
+      .cs-wrapper {
+        width: 60%;
+        max-width: calc(546 / 16 * 1rem);
+        height: auto;
+        position: relative;
+        z-index: 10;
+      }
+
+      .cs-flex {
+        /* 48px - 70px */
+        padding-left: clamp(3rem, 6vw, 4.375rem);
+      }
+
+      .cs-image-group {
+        height: 100%;
+        margin-bottom: calc(80 / 16 * 1rem);
+      }
+
+      .cs-stats-group {
+        max-width: calc(522 / 16 * 1rem);
+        padding-left: 0;
+        justify-content: flex-start;
+
+        &:before {
+          /* extended box */
+          content: "";
+          width: clamp(5rem, 12vw, 6.875rem);
+          height: 100%;
+          background: var(--secondary);
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          right: 99.5%;
+        }
+      }
+
+      .cs-picture {
+        height: 100%;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #sbs-2170 {
+      .cs-wrapper {
+        /* 168px - 240px */
+        padding-top: clamp(10.5rem, 18vw, 14rem);
+      }
+
+      .cs-content {
+        width: clamp(47vw, 48vw, 55vw);
+      }
+
+      .cs-floater {
+        display: block;
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #sbs-2170 {
+      .cs-leaf {
+        z-index: 10;
+        left: calc(-206 / 16 * 1rem);
+      }
+    }
+  }
+</style>

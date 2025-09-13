@@ -1,0 +1,273 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Reviews                   --><!-- ============================================ -->
+<section id="reviews-1641">
+  <div class="cs-container">
+    <picture class="cs-picture">
+      <!--Mobile Image-->
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/models.jpg"
+      />
+      <!--Tablet and above Image-->
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/models.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/models.jpg"
+        alt="models"
+        width="586"
+        height="690"
+      />
+    </picture>
+    <div class="cs-content">
+      <span class="cs-topper">Reviews</span>
+      <h2 class="cs-title">What Our Clients Say</h2>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <picture class="cs-profile">
+            <img
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-headshot1.jpeg"
+              alt="profile"
+              width="35"
+              height="40"
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
+            />
+          </picture>
+          <div class="cs-flex-group">
+            <span class="cs-review"
+              >The fashion shop has a diverse range of sizes and styles, which
+              is great for all body types and tastes.</span
+            >
+            <span class="cs-name">Katrin McWell, Forbes</span>
+          </div>
+        </li>
+        <li class="cs-item">
+          <picture class="cs-profile">
+            <img
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-headshot2.jpeg"
+              alt="profile"
+              width="35"
+              height="40"
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
+            />
+          </picture>
+          <div class="cs-flex-group">
+            <span class="cs-review"
+              >I am a regular at this fashion shop - their stylish clothes and
+              accessories always keep me ahead of the trend.</span
+            >
+            <span class="cs-name">Madelyn George, ELLE</span>
+          </div>
+        </li>
+        <li class="cs-item">
+          <picture class="cs-profile">
+            <img
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-headshot3.jpeg"
+              alt="profile"
+              width="35"
+              height="40"
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
+            />
+          </picture>
+          <div class="cs-flex-group">
+            <span class="cs-review"
+              >The prices are reasonable for the high-quality products and the
+              customer service is outstanding.</span
+            >
+            <span class="cs-name">Monica Johns, Cosmopolitan</span>
+          </div>
+        </li>
+        <li class="cs-item">
+          <picture class="cs-profile">
+            <img
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-headshot1.jpeg"
+              alt="profile"
+              width="35"
+              height="40"
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
+            />
+          </picture>
+          <div class="cs-flex-group">
+            <span class="cs-review"
+              >The fashion shop has a diverse range of sizes and styles, which
+              is great for all body types and tastes.</span
+            >
+            <span class="cs-name">Katrin McWell, Forbes</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Reviews          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #reviews-1641 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(2.5rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(694 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+        justify-content: center;
+      }
+
+      .cs-title {
+        /* 26 characters wide including spaces */
+        max-width: 26ch;
+        /* 28px - 64px */
+        margin: 0 0 clamp(1.75rem, 5vw, 4rem);
+      }
+
+      .cs-card-group {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        /* 28px - 48px */
+        gap: clamp(1.75rem, 4vw, 3rem);
+      }
+
+      .cs-item {
+        width: 1005;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        /* 16px - 24px */
+        gap: clamp(1rem, 2.5vw, 1.5rem);
+      }
+
+      .cs-profile {
+        /* 60px - 116px */
+        width: clamp(3.75rem, 8vw, 7.25rem);
+        height: clamp(3.75rem, 8vw, 7.25rem);
+        border-radius: 50%;
+        overflow: hidden;
+        display: block;
+        /* prevents flexbox from squishing it */
+        flex: none;
+        position: relative;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-flex-group {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        /* 16px - 24px */
+        gap: clamp(1rem, 2.5vw, 1.5rem);
+      }
+
+      .cs-review {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        color: var(--bodyTextColor);
+        line-height: 1.5em;
+        display: block;
+      }
+
+      .cs-name {
+        font-size: var(--bodyFontSize);
+        color: var(--headerColor);
+        font-weight: 700;
+        line-height: 1.2em;
+        display: block;
+      }
+
+      .cs-picture {
+        width: 100%;
+        /* 400px - 752px, set to auto on tablet */
+        height: clamp(25rem, 120vw, 47rem);
+        display: block;
+        position: relative;
+        order: 2;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #reviews-1641 {
+      .cs-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+
+      .cs-content {
+        width: 57%;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-picture {
+        min-height: calc(700 / 16 * 1rem);
+        height: auto;
+        /* sends it to the right in the 2nd position */
+        order: 2;
+      }
+    }
+  }
+</style>

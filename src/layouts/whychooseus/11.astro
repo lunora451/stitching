@@ -1,0 +1,331 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Why Choose Us                --><!-- ============================================ -->
+<section id="why-choose-1821">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Why Choose Us</span>
+      <h2 class="cs-title">Why Choose Stitch Gym</h2>
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym3.png"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym3.png"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym3.png"
+          alt="body builder"
+          width="562"
+          height="568"
+        />
+      </picture>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/red-house.svg"
+          alt="icon"
+          width="32"
+          height="32"
+        />
+        <div class="cs-item-wrapper">
+          <h3 class="cs-h3">22,000 Square Feet Modern Gym</h3>
+          <p class="cs-item-text">
+            Take advantage of our spacious gym equipped with a wide range of gym
+            fitness machines so you can achieve.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/red-layer.svg"
+          alt="icon"
+          width="32"
+          height="32"
+        />
+        <div class="cs-item-wrapper">
+          <h3 class="cs-h3">State of The Art Equipment</h3>
+          <p class="cs-item-text">
+            Take advantage of our spacious gym equipped with a wide range of gym
+            fitness machines so you can achieve.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/red-hourglass.svg"
+          alt="icon"
+          width="32"
+          height="32"
+        />
+        <div class="cs-item-wrapper">
+          <h3 class="cs-h3">Programs for Proper Weight Loss</h3>
+          <p class="cs-item-text">
+            Take advantage of our spacious gym equipped with a wide range of gym
+            fitness machines so you can achieve.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/red-flower.svg"
+          alt="icon"
+          width="32"
+          height="32"
+        />
+        <div class="cs-item-wrapper">
+          <h3 class="cs-h3">Free Fitness Training for New</h3>
+          <p class="cs-item-text">
+            Take advantage of our spacious gym equipped with a wide range of gym
+            fitness machines so you can achieve.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---        Why Choose Us       -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #why-choose-1821 {
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1700 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-content {
+        text-align: center;
+        width: 100%;
+        padding: var(--sectionPadding);
+        background-color: var(--primary);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-topper {
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-title {
+        margin: 0 0 calc(48 / 16 * 1rem);
+        max-width: 13ch;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-picture {
+        width: 100%;
+        max-width: calc(586 / 16 * 1rem);
+        height: auto;
+        display: block;
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        max-width: calc(586 / 16 * 1rem);
+        padding: var(--sectionPadding);
+        /* 16px - 44px */
+        padding-left: clamp(1rem, 4vw, 2.75rem);
+        /* 16px - 64px */
+        padding-right: clamp(1rem, 4vw, 4rem);
+        box-sizing: border-box;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        /* 32px - 40px */
+        gap: clamp(2rem, 0.5vw, 2.5rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        max-width: calc(586 / 16 * 1rem);
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-item-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-icon {
+        width: calc(32 / 16 * 1rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--headerColor);
+      }
+
+      .cs-item-text {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #why-choose-1821 {
+      .cs-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+      }
+
+      .cs-content {
+        text-align: left;
+        width: 100%;
+        align-items: flex-start;
+        background-color: transparent;
+
+        &:before {
+          /* background color, moves to the section parent at desktop */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: var(--primary);
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+      }
+
+      .cs-picture {
+        margin-left: auto;
+        max-width: 100%;
+      }
+
+      .cs-card-group {
+        width: 65%;
+        max-width: 100%;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-item {
+        flex-direction: row;
+      }
+    }
+  }
+
+  /* Desktop - 1400px */
+  @media only screen and (min-width: 87.5rem) {
+    #why-choose-1821 {
+      &:before {
+        /* background color */
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: var(--primary);
+        opacity: 1;
+        display: block;
+        position: absolute;
+        left: auto;
+        right: 50%;
+        margin-right: calc(10 / 16 * 1rem);
+        z-index: -1;
+      }
+
+      .cs-content {
+        width: 50%;
+        padding-left: 0;
+        padding-right: 0;
+
+        &:before {
+          left: auto;
+          right: 50%;
+          margin-right: calc(10 / 16 * 1rem);
+        }
+      }
+
+      .cs-picture {
+        width: auto;
+        height: 80%;
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        bottom: calc(40 / 16 * 1rem);
+        right: calc(40 / 16 * 1rem);
+        z-index: -1;
+
+        img {
+          width: auto;
+          height: 100%;
+          max-height: calc(760 / 16 * 1rem);
+          object-fit: contain;
+        }
+      }
+
+      .cs-card-group {
+        width: 50%;
+      }
+    }
+  }
+</style>

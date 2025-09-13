@@ -1,0 +1,569 @@
+---
+
+---
+
+<!-- Usage Notes:
+We made this stitch to overlap the section below it, so if there's a patterned texture or image background on the next section below, it will overlap on top of it. Other Stitches like this would have a white gap between the cards and the next section. In order to make Stitches like this work, we need to add a padding top on the section below it to counteract the overlap. Here's the padding top you need to add to the section below this one and all the breakpoints to add them so this design will work with whatever comes after it:
+
+ON MOBILE (360px): add padding-top: (750/16rem); using LESS, or padding-top: calc(750 / 16 * 1rem); if you're using SCSS, or padding-top: 46.875rem; if you're just using vanilla CSS.
+
+ON TABLET (768px): Reset to padding-top: (500/16rem); using LESS, padding-top: calc(500 / 16 * 1rem) for SCSS or padding-top: 31.25rem; for CSS.
+
+ON DESKTOP (1024px): Reset to padding-top: (250/16rem); using LESS, padding-top: calc(250 / 16 * 1rem) for SCSS or padding-top: 15.625rem; for CSS.
+
+Doing this will complete the overlapping "breaking the container" look.
+--><!-- ============================================ --><!--                    Hero                      --><!-- ============================================ -->
+<section id="hero-1299">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Welcome to Invetex</span>
+      <h1 class="cs-title">
+        Expert Accountants and Tax Advisors for Your Business
+      </h1>
+      <p class="cs-text">
+        Highly qualified tax consultants with many years of experience in the
+        field offer a full range of services to help you build a financial
+        future.
+      </p>
+      <a href="" class="cs-button-solid">Free Consultation</a>
+    </div>
+    <!--To make your own background crops of people use https://www.remove.bg/-->
+    <div class="cs-picture-wrapper">
+      <picture class="cs-picture">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant15.png"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant15.png"
+        />
+        <img
+          aria-hidden="true"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant15.png"
+          alt="accountant"
+          width="468"
+          height="658"
+        />
+      </picture>
+    </div>
+  </div>
+  <div class="cs-container">
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/brain.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="40"
+            height="40"
+            aria-hidden="true"
+          />
+          <h3 class="cs-h3">Creative Solutions</h3>
+          <p class="cs-item-text">
+            We will go ahead that extra mile to ensure our clients welfare, our
+            working hours convenient to our Client's from contact.
+          </p>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/users.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="40"
+            height="40"
+            aria-hidden="true"
+          />
+          <h3 class="cs-h3">Professional Team</h3>
+          <p class="cs-item-text">
+            We will go ahead that extra mile to ensure our clients welfare, our
+            working hours convenient to our Client's from contact.
+          </p>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/Layer.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="40"
+            height="40"
+            aria-hidden="true"
+          />
+          <h3 class="cs-h3">Diverse Approach</h3>
+          <p class="cs-item-text">
+            We will go ahead that extra mile to ensure our clients welfare, our
+            working hours convenient to our Client's from contact.
+          </p>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/Layer.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="40"
+            height="40"
+            aria-hidden="true"
+          />
+          <h3 class="cs-h3">Diverse Approach</h3>
+          <p class="cs-item-text">
+            We will go ahead that extra mile to ensure our clients welfare, our
+            working hours convenient to our Client's from contact.
+          </p>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!--Floating Arrow-->
+  <!--We wrap it in a picture element wrapper so we can use the wrapper as a box for it to live inside of instead of the section wrapper. This allows us to add overflow:hidden to the wrapper to cut off the graphic at the edge of the screen. If we added overflow:hidden to the section container it would clip the overlapping service cards. So we add this wrapper to allow us to clip only the graphic. -->
+  <picture class="cs-floater-wrapper">
+    <img
+      class="cs-floater"
+      aria-hidden="true"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-arrow-reversed.svg"
+      alt="graphic"
+      width="956"
+      height="708"
+    />
+  </picture>
+  <!--Background Image, background image added in CSS at 1600px wide for parallax effect-->
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source
+      media="(max-width: 1023px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/buildings-t-reversed2.jpg"
+    />
+    <!--Tablet and above Image-->
+    <source
+      media="(min-width: 1024px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/buildings-reversed2.jpg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/buildings-reversed2.jpg"
+      alt="buildings"
+      width="1280"
+      height="568"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-1299 {
+      /* 150px - 350px */
+      padding: clamp(9rem, 30.95vw, 21.875rem) calc(16 / 16 * 1rem);
+      padding-bottom: 0;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 7vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+        position: relative;
+        z-index: 10;
+      }
+
+      .cs-topper {
+        font-size: var(--topperFontSize);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: calc(4 / 16 * 1rem);
+        display: block;
+      }
+
+      .cs-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        width: 100%;
+        max-width: 17ch;
+        margin: 0 0 calc(16 / 16 * 1rem);
+        color: var(--headerColor);
+        position: relative;
+      }
+
+      .cs-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        line-height: 1.5em;
+        width: 100%;
+        max-width: calc(700 / 16 * 1rem);
+        /* 28px - 40px */
+        margin: 0 0 clamp(1.75rem, 4vw, 2.5rem);
+        color: var(--bodyTextColor);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        text-align: center;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        width: calc(180 / 16 * 1rem);
+        text-decoration: none;
+        font-weight: 700;
+        /* clips corners of the before element */
+        overflow: hidden;
+        margin: 0;
+        color: #1a1a1a;
+        padding: 0;
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #fff;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-picture {
+        width: 100%;
+        /* 427px - 468px */
+        max-width: clamp(26.6875rem, 50vw, 29.25rem);
+        height: auto;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        z-index: 7;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        /* changes to -550px at tablet */
+        margin: 0 0 calc(-650 / 16 * 1rem) 0;
+        padding: 0 calc(16 / 16 * 1rem);
+        /* prevents padding and border from affecting height and width */
+        background-color: #fff;
+        box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        position: relative;
+        z-index: 15;
+      }
+
+      .cs-item {
+        text-align: left;
+        list-style: none;
+        width: 100%;
+        border-bottom: 1px solid #e8e8e8;
+        box-sizing: border-box;
+        grid-column: span 12;
+        transition:
+          background-color 0.3s,
+          border-color 0.3s;
+
+        &:last-of-type {
+          border-bottom: none;
+        }
+      }
+
+      .cs-link {
+        text-decoration: none;
+        /* 24px - 60px top & Bottom */
+        /* 24px - 16px top & Bottom */
+        padding: clamp(1.5rem, 5.3vw, 3.75rem) clamp(1rem, 2.7vw, 2.5rem);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .cs-icon {
+        /* 32px - 40px */
+        height: clamp(2rem, 4vw, 2.5rem);
+        width: auto;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2vw, 1.5625rem);
+        font-weight: 700;
+        text-align: inherit;
+        line-height: 1.2em;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--headerColor);
+        transition: color 0.3s;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        text-align: inherit;
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+        transition:
+          color 0.3s,
+          opacity 0.3s;
+      }
+
+      .cs-floater-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .cs-floater {
+        width: calc(1090 / 16 * 1rem);
+        height: auto;
+        opacity: 0.1;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        &:before {
+          /* background color overlay */
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 100%;
+          background: #fff;
+          opacity: 0.84;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes img tag act as a background image */
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-1299 {
+      padding-bottom: calc(150 / 16 * 1rem);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* 50px - 90px */
+      gap: clamp(3.125rem, 10vw, 5.625rem);
+
+      .cs-container {
+        justify-content: flex-end;
+        flex-direction: row;
+      }
+
+      .cs-content {
+        text-align: left;
+        width: 60%;
+        align-items: flex-start;
+      }
+
+      .cs-picture-wrapper {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .cs-picture {
+        width: 56%;
+        /* 50px - 170px */
+        margin-right: clamp(3.125rem, 12vw, 10.625rem);
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        z-index: 10;
+      }
+
+      .cs-card-group {
+        /* changes to -300px at tablet */
+        margin: 0 0 calc(-500 / 16 * 1rem) 0;
+      }
+
+      .cs-item {
+        grid-column: span 6;
+
+        &:nth-of-type(3) {
+          border-bottom: none;
+        }
+      }
+
+      .cs-floater-wrapper {
+        display: block;
+      }
+
+      .cs-background {
+        overflow: hidden;
+
+        &:before {
+          opacity: 1;
+          background: linear-gradient(
+            270deg,
+            rgba(255, 255, 255, 0.96) 47.66%,
+            rgba(255, 255, 255, 0) 71.43%
+          );
+        }
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #hero-1299 {
+      .cs-card-group {
+        margin: 0 0 calc(-300 / 16 * 1rem) 0;
+        padding: 0;
+      }
+
+      .cs-item {
+        grid-column: span 3;
+        border-bottom: 0;
+        border-right: 1px solid #e8e8e8;
+
+        &:hover {
+          background-color: #1a1a1a;
+          border-color: #1a1a1a;
+
+          .cs-h3,
+          .cs-item-text {
+            color: var(--bodyTextColorWhite);
+          }
+
+          .cs-item-text {
+            opacity: 0.8;
+          }
+        }
+
+        &:last-of-type {
+          border: none;
+        }
+      }
+
+      .cs-floater {
+        left: 40%;
+        right: auto;
+        top: auto;
+        bottom: 0;
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #hero-1299 {
+      .cs-picture {
+        bottom: calc(100 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Large Desktop - 1600px (Parallax Effect) */
+  @media only screen and (min-width: 100rem) {
+    #hero-1299 {
+      .cs-background {
+        background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/buildings-reversed2.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+</style>

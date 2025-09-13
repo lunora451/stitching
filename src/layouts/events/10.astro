@@ -1,0 +1,460 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Events                    --><!-- ============================================ -->
+<section id="events-2048">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Events</span>
+      <h2 class="cs-title">Dentistry for The Whole Family</h2>
+      <p class="cs-text">
+        Orci eu lobortis elementum nibh tellus. Vulputate eu scelerisque felis
+        imperdiet proin fermentum leo vel. Luctus accumsan tortor posuere ac ut
+        consequat semper. Et pharetra pharetra massa massa ultricies mi quis.
+      </p>
+      <a href="" class="cs-button-solid">Get Started</a>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <div class="cs-text-box">
+          <span class="cs-date">
+            16th<br />June, 2024
+          </span>
+          <span class="cs-dot" aria-hidden="true"></span>
+          <div class="cs-wrapper">
+            <div class="cs-flex">
+              <h3 class="cs-h3">1st Visit</h3>
+              <p class="cs-item-text">
+                Dentitch provides the best service and has won many awards. Our
+                mission is to make everyone confident to give their best smile.
+              </p>
+            </div>
+            <picture class="cs-picture">
+              <!--Mobile Image-->
+              <source
+                media="(max-width: 600px)"
+                srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist9.jpeg"
+              />
+              <!--Tablet and above Image-->
+              <source
+                media="(min-width: 601px)"
+                srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist9.jpeg"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist9.jpeg"
+                alt="person"
+                width="500"
+                height="750"
+              />
+            </picture>
+          </div>
+        </div>
+      </li>
+      <li class="cs-item">
+        <div class="cs-text-box">
+          <span class="cs-date">
+            24th<br />June, 2024
+          </span>
+          <span class="cs-dot" aria-hidden="true"></span>
+          <div class="cs-wrapper">
+            <div class="cs-flex">
+              <h3 class="cs-h3">2nd Visit</h3>
+              <p class="cs-item-text">
+                Dentitch provides the best service and has won many awards. Our
+                mission is to make everyone confident to give their best smile.
+              </p>
+            </div>
+            <picture class="cs-picture">
+              <!--Mobile Image-->
+              <source
+                media="(max-width: 600px)"
+                srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist6.jpg"
+              />
+              <!--Tablet and above Image-->
+              <source
+                media="(min-width: 601px)"
+                srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist6.jpg"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist6.jpg"
+                alt="person"
+                width="500"
+                height="750"
+              />
+            </picture>
+          </div>
+        </div>
+      </li>
+      <li class="cs-item">
+        <div class="cs-text-box">
+          <span class="cs-date">
+            8th<br />July, 2024
+          </span>
+          <span class="cs-dot" aria-hidden="true"></span>
+          <div class="cs-wrapper">
+            <div class="cs-flex">
+              <h3 class="cs-h3">3rd Visit</h3>
+              <p class="cs-item-text">
+                Dentitch provides the best service and has won many awards. Our
+                mission is to make everyone confident to give their best smile.
+              </p>
+            </div>
+            <picture class="cs-picture">
+              <!--Mobile Image-->
+              <source
+                media="(max-width: 600px)"
+                srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist7.jpeg"
+              />
+              <!--Tablet and above Image-->
+              <source
+                media="(min-width: 601px)"
+                srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist7.jpeg"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist7.jpeg"
+                alt="person"
+                width="500"
+                height="750"
+              />
+            </picture>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Events           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #events-2048 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+      position: relative;
+
+      &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: var(--primary);
+        opacity: 0.1;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(704 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+        z-index: 1;
+      }
+
+      .cs-text {
+        margin-bottom: calc(32 / 16 * 1rem);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: calc(56 / 16 * 1rem);
+        text-decoration: none;
+        font-weight: 700;
+        overflow: hidden;
+        margin: 0;
+        color: #fff;
+        padding: 0 calc(48 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 0%;
+          background: #1a1a1a;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: var(--primary);
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        border-radius: calc(8 / 16 * 1rem);
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        grid-column: span 12;
+        /* 32px - 48px */
+        gap: clamp(2rem, 3vw, 3rem);
+
+        &:hover {
+          .cs-picture {
+            img {
+              transform: scale(1.1);
+            }
+          }
+
+          .cs-h3 {
+            color: var(--primary);
+          }
+        }
+
+        &:first-of-type {
+          .cs-dot {
+            &:before {
+              top: calc(0 / 16 * 1rem);
+            }
+          }
+        }
+
+        &:last-of-type {
+          .cs-text-box {
+            &:before {
+              /* this covers the bottom of the last card to mask the line from the cs-dot :after element */
+              content: "";
+              width: 100%;
+              /* 16px - 32px - matchs the padding of the cs-text-box */
+              height: clamp(1rem, 4vw, 2rem);
+              background: #fff;
+              opacity: 1;
+              position: absolute;
+              display: block;
+              bottom: 0;
+              left: 0;
+              z-index: 10;
+            }
+          }
+        }
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: calc(180 / 16 * 1rem);
+        box-sizing: border-box;
+        background-color: #dab692;
+        /* clips img tag from overflowing it on hover */
+        overflow: hidden;
+        border-radius: calc(8 / 16 * 1rem);
+        display: block;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: transform 0.3s;
+        }
+      }
+
+      .cs-text-box {
+        text-align: left;
+        width: 100%;
+        /* 16px - 32px */
+        padding: clamp(1rem, 4vw, 2rem);
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        z-index: 1;
+        position: relative;
+      }
+
+      .cs-wrapper {
+        /* 16px - 48px */
+        margin-left: clamp(1rem, 5vw, 3rem);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cs-flex {
+        display: flex;
+        flex-direction: column;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        font-weight: 700;
+        line-height: 120%;
+        width: 100%;
+        margin: 0;
+        color: var(--headerColor);
+        transition: color 0.3s;
+      }
+
+      .cs-date {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        width: 100%;
+        max-width: calc(80 / 16 * 1rem);
+        /* 16px - 48px */
+        margin-right: clamp(1rem, 5vw, 3rem);
+        color: var(--bodyTextColor);
+        display: flex;
+        gap: calc(8 / 16 * 1rem);
+      }
+
+      .cs-icon {
+        width: calc(20 / 16 * 1rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        margin-bottom: calc(32 / 16 * 1rem);
+        color: var(--bodyTextColor);
+      }
+
+      .cs-dot {
+        width: calc(16 / 16 * 1rem);
+        height: calc(16 / 16 * 1rem);
+        flex: none;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          /* actual line for the timeline */
+          content: "";
+          width: 2px;
+          height: 500vw;
+          background-color: #e0e0e0; /* Grey color */
+          position: absolute;
+          top: calc(-300 / 16 * 1rem);
+          z-index: -10;
+        }
+
+        &:after {
+          /* primary color dot for the timeline */
+          content: "";
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background: var(--primary);
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #events-2048 {
+      .cs-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        /* 32px - 48px */
+        gap: clamp(2rem, 4vw, 3rem);
+      }
+
+      .cs-flex {
+        width: 95%;
+        max-width: calc(304 / 16 * 1rem);
+        align-items: center;
+        justify-content: center;
+      }
+
+      .cs-text-box {
+        align-items: center;
+      }
+
+      .cs-item-text {
+        margin-bottom: 0;
+      }
+
+      .cs-picture {
+        min-height: calc(180 / 16 * 1rem);
+        height: auto;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #events-2048 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      .cs-content {
+        text-align: left;
+        max-width: calc(305 / 16 * 1rem);
+        align-items: flex-start;
+      }
+    }
+  }
+</style>

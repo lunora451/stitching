@@ -1,0 +1,386 @@
+---
+
+---
+
+<!-- ============================================ --><!--                     Hero                     --><!-- ============================================ -->
+<section id="hero-1969">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h2 class="cs-title">
+        Innovative Technology And Professional Dental Services
+      </h2>
+      <div class="cs-flex">
+        <p class="cs-text">
+          At our dental clinic, we are committed to providing the highest
+          quality dental care to our patients. Our experienced team of dental
+          professionals utilizes the latest technology and techniques to ensure
+          that each patient receives personalized and effective treatment.
+        </p>
+      </div>
+    </div>
+    <div class="cs-wrapper">
+      <picture class="cs-picture">
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist.jpeg"
+        />
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist.jpeg"
+        />
+        <img
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist.jpeg"
+          alt="dentist"
+          width="1880"
+          height="683"
+        />
+      </picture>
+      <div class="cs-form-wrapper">
+        <form class="cs-form" name="Contact Form" method="post">
+          <picture class="cs-form-picture">
+            <source
+              media="(min-width: 601px)"
+              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist-model.png"
+            />
+            <source
+              media="(max-width: 600px)"
+              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist-model.png"
+            />
+            <img
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist-model.png"
+              alt="woman smiling"
+              width="350"
+              height="235"
+            />
+          </picture>
+          <label class="cs-label">
+            <input
+              class="cs-input"
+              required
+              type="text"
+              id="name-1969"
+              name="name"
+              placeholder="Name"
+            />
+          </label>
+          <label class="cs-label">
+            <input
+              class="cs-input"
+              required
+              type="email"
+              id="email-1969"
+              name="email"
+              placeholder="Email"
+            />
+          </label>
+          <label class="cs-label">
+            <input
+              class="cs-input"
+              required
+              type="date"
+              id="date-1969"
+              name="date"
+              placeholder="Select Date"
+            />
+          </label>
+          <button class="cs-button-solid cs-submit" type="submit"
+            >Book Appointment</button
+          >
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---            Hero            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-1969 {
+      padding: var(--sectionPadding);
+      /* 160px - 200px */
+      padding-top: clamp(10rem, 20vw, 12.5rem);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-content {
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-title {
+        /* 39px - 80px */
+        font-size: clamp(2.438rem, 4.876vw, 5rem);
+        max-width: 25ch;
+      }
+
+      .cs-flex {
+        /* changes to 455px at large desktop */
+        max-width: calc(960 / 16 * 1rem);
+      }
+
+      .cs-text {
+        max-width: 100%;
+      }
+
+      .cs-wrapper {
+        width: 100%;
+        box-sizing: border-box;
+        padding: calc(16 / 16 * 1rem);
+        padding-top: calc(402 / 16 * 1rem);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: calc(20 / 16 * 1rem);
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+      }
+
+      .cs-form-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cs-form {
+        width: 100%;
+        box-sizing: border-box;
+        /* 24px - 48px top and bottom */
+        /* 16px - 48px left and right */
+        padding: calc(12 / 16 * 1rem);
+        background-color: #fff;
+        /* prevents flexbox from affecting height and width */
+        border-radius: calc(24 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        gap: calc(8 / 16 * 1rem);
+      }
+
+      .cs-form-picture {
+        width: 100%;
+        /* 180px - 235px */
+        height: clamp(11.25rem, 28vw, 14.6875rem);
+        box-sizing: border-box;
+        background-color: #dab692;
+        /* clips img tag from overflowing it on hover */
+        overflow: hidden;
+        /* 100px - 220px */
+        border-radius: calc(16 / 16 * 1rem);
+        display: block;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: transform 0.7s;
+        }
+      }
+
+      .cs-label {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        width: 100%;
+        color: var(--headerColor);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        grid-column: span 12;
+        gap: calc(4 / 16 * 1rem);
+      }
+
+      .cs-input {
+        font-size: calc(16 / 16 * 1rem);
+        width: 100%;
+        height: calc(56 / 16 * 1rem);
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+        padding: 0 calc(16 / 16 * 1rem);
+        background-color: #f7f7f7;
+        color: var(--bodyTextColor);
+        border: none;
+        border-radius: calc(16 / 16 * 1rem);
+
+        &::placeholder {
+          color: var(--bodyTextColor);
+        }
+      }
+
+      .cs-textarea {
+        font-family: inherit;
+        min-height: calc(120 / 16 * 1rem);
+        margin: 0;
+        padding-top: calc(24 / 16 * 1rem);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        line-height: calc(56 / 16 * 1rem);
+        text-decoration: none;
+        margin: 0;
+        padding: 0 calc(48 / 16 * 1rem);
+        background-color: var(--secondary);
+        overflow: hidden;
+        color: #fff;
+        border-radius: calc(16 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #1a1a1a;
+          opacity: 1;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: var(--primary);
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-align: center;
+        text-decoration: none;
+        min-width: calc(150 / 16 * 1rem);
+        margin: 0;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        /* 32px - 48px */
+        padding: 0 clamp(2rem, 4vw, 3rem);
+        background-color: var(--primary);
+        color: var(--bodyTextColorWhite);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #000;
+          color: #fff;
+        }
+      }
+
+      .cs-submit {
+        width: 100%;
+        min-width: calc(200 / 16 * 1rem);
+        /* 16px - 36px */
+        margin-top: calc(8 / 16 * 1rem);
+        border: none;
+
+        &:hover {
+          cursor: pointer;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-1969 {
+      .cs-wrapper {
+        padding: calc(80 / 16 * 1rem) calc(28 / 16 * 1rem);
+        align-items: flex-end;
+      }
+
+      .cs-form-wrapper {
+        max-width: calc(374 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #hero-1969 {
+      .cs-title {
+        margin: 0;
+      }
+
+      .cs-container {
+        max-width: calc(1880 / 16 * 1rem);
+      }
+
+      .cs-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: calc(64 / 16 * 1rem);
+      }
+
+      .cs-flex {
+        width: 50%;
+        max-width: calc(455 / 16 * 1rem);
+      }
+
+      .cs-wrapper {
+        padding: calc(80 / 16 * 1rem);
+      }
+    }
+  }
+</style>

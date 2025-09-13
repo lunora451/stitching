@@ -1,0 +1,261 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Services                   --><!-- ============================================ -->
+<section id="services-883">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Classes</span>
+      <h2 class="cs-title">Our Class Schedules</h2>
+      <p class="cs-text">
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat duis enim velit mollit. Amet minim mollit
+        non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+        consequat duis enim velit mollit.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <h3 class="cs-h3">Group Class 1</h3>
+        <p class="cs-item-p">
+          <!--The br tag forces a break, making the rest of the text start on a new line. Use this to seperate date and times from the rest of the text-->
+          Tues & Thurs 12pm<br /> Lorem ipsum dolor sit, amet consectetur adipisicing
+          elit. Dolores, quae quidem. Expedita repellat, culpa exercitationem minus
+          recusandae.
+        </p>
+        <a href="" class="cs-link">
+          Register Now
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Forange-arrow-right.svg"
+            loading="lazy"
+            decoding="async"
+            alt="arrow"
+            width="24"
+            height="24"
+          />
+        </a>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Group Class 2</h3>
+        <p class="cs-item-p">
+          MS Group Fitness (Virtual Options Available) Tuesday 10am<br />
+          MS Yoga Class (Virtual Options Available) Friday 9:00 am
+        </p>
+        <a href="" class="cs-link">
+          Register Now
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Forange-arrow-right.svg"
+            loading="lazy"
+            decoding="async"
+            alt="arrow"
+            width="24"
+            height="24"
+          />
+        </a>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Group Class 3</h3>
+        <p class="cs-item-p">
+          Wednesday's 10am-11am<br /> Balance Boot Camp is an 8 week program aimed
+          to help you feel more confident and reduce risk of falls.
+        </p>
+        <a href="" class="cs-link">
+          Register Now
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Forange-arrow-right.svg"
+            loading="lazy"
+            decoding="async"
+            alt="arrow"
+            width="24"
+            height="24"
+          />
+        </a>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Group Class 4</h3>
+        <p class="cs-item-p">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores,
+          quae quidem. Expedita repellat, culpa exercitationem minus recusandae.
+        </p>
+        <a href="" class="cs-link">
+          Register Now
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Forange-arrow-right.svg"
+            loading="lazy"
+            decoding="async"
+            alt="arrow"
+            width="24"
+            height="24"
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
+  <img
+    class="cs-floater"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Forange-arrow.svg"
+    alt="arrow"
+    loading="lazy"
+    decoding="async"
+    aria-hidden="true"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-883 {
+      padding: var(--sectionPadding);
+      /* clips floating arrow from overflowing */
+      overflow: hidden;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(413 / 16 * 1rem);
+        /* pushes away to the left side of the container */
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-card-group {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        text-align: left;
+        margin: 0;
+        /* 24px - 32px left & right */
+        padding: calc(32 / 16 * 1rem) clamp(1.5rem, 2vw, 2rem);
+        border-radius: calc(16 / 16 * 1rem);
+        background-color: #f7f7f7;
+        grid-column: span 4;
+      }
+
+      .cs-h3 {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-item-p {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        margin: 0 0 calc(20 / 16 * 1rem) 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-link {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        text-align: inherit;
+        text-decoration: none;
+        font-weight: 700;
+        margin: 0;
+        color: var(--primary);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: calc(4 / 16 * 1rem);
+
+        &:hover {
+          .cs-icon {
+            transform: translateX(calc(10 / 16 * 1rem));
+          }
+        }
+      }
+
+      .cs-icon {
+        width: calc(24 / 16 * 1rem);
+        height: auto;
+        transition: transform 0.3s;
+      }
+
+      .cs-floater {
+        width: calc(351 / 16 * 1rem);
+        height: auto;
+        display: none;
+        position: absolute;
+        top: 0;
+        left: calc(-30 / 16 * 1rem);
+        transform: rotate(66deg) scaleX(-1);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-883 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        /* pushes down the same amount the cs-items are translated from their position */
+        margin-bottom: calc(80 / 16 * 1rem);
+      }
+
+      .cs-item {
+        grid-column: span 2;
+
+        &:nth-of-type(2),
+        &:nth-of-type(4) {
+          transform: translateY(calc(80 / 16 * 1rem));
+        }
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #services-883 {
+      .cs-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .cs-floater {
+        display: block;
+      }
+    }
+  }
+</style>

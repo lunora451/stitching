@@ -1,0 +1,369 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Stats                     --><!-- ============================================ -->
+<section id="stats-1229">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex">
+        <span class="cs-topper">YOU'RE IN GOOD COMPANY</span>
+        <h2 class="cs-title">2,000+ Company Taking Investment from Us</h2>
+        <p class="cs-text">
+          In the new era of technology we look in the future with certainty and
+          pride for our company and business. consider all the drivers of change
+          gives you the blocks & pride for our components you need to change to
+          create a truly professional website era.
+        </p>
+      </div>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <img
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/transparency.svg"
+            alt="icon"
+            class="cs-icon"
+            aria-hidden="true"
+            decoding="async"
+            width="60"
+            height="60"
+          />
+          <h3 class="cs-h3">Transparency</h3>
+        </li>
+        <li class="cs-item">
+          <img
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/empowerment.svg"
+            alt="icon"
+            class="cs-icon"
+            aria-hidden="true"
+            decoding="async"
+            width="60"
+            height="60"
+          />
+          <h3 class="cs-h3">Empowerment</h3>
+        </li>
+        <li class="cs-item">
+          <img
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/growth.svg"
+            alt="icon"
+            class="cs-icon"
+            aria-hidden="true"
+            decoding="async"
+            width="60"
+            height="60"
+          />
+          <h3 class="cs-h3">Growth</h3>
+        </li>
+        <li class="cs-item">
+          <img
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/partnership.svg"
+            alt="icon"
+            class="cs-icon"
+            aria-hidden="true"
+            decoding="async"
+            width="60"
+            height="60"
+          />
+          <h3 class="cs-h3">Partnership</h3>
+        </li>
+      </ul>
+    </div>
+    <ul class="cs-stat-group">
+      <li class="cs-stat">
+        <span class="cs-desc">Individual Offices</span>
+        <span class="cs-number">15+</span>
+      </li>
+      <li class="cs-stat">
+        <span class="cs-desc">Years of Experiences</span>
+        <span class="cs-number">12+</span>
+      </li>
+      <li class="cs-stat">
+        <span class="cs-desc">Professional Team</span>
+        <span class="cs-number">350</span>
+      </li>
+      <li class="cs-stat">
+        <span class="cs-desc">Projects Completed</span>
+        <span class="cs-number">375</span>
+      </li>
+      <li class="cs-stat">
+        <span class="cs-desc">Happy Clients</span>
+        <span class="cs-number">2.5k+</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #stats-1229 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/chevron-pattern-light3.svg");
+        background-position: center;
+        background-size: auto;
+        background-repeat: repeat;
+        opacity: 0.3;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .cs-container {
+        /* changes to 1280px at desktop */
+        max-width: calc(584 / 16 * 1rem);
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(32 / 16 * 1rem);
+      }
+
+      .cs-flex {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        text-align: inherit;
+        max-width: calc(650 / 16 * 1rem);
+        width: 100%;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-title {
+        max-width: 20ch;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        /* 16px - 40px top & bottom */
+        /* 16px - 32px left & right */
+        padding: clamp(1rem, 3vw, 2.5rem) clamp(1rem, 2.5vw, 2rem);
+        box-sizing: border-box;
+        background: #f7f7f7;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        gap: calc(12 / 16 * 1rem);
+        /* clips cs-icon overflowing */
+        overflow: hidden;
+        grid-column: span 6;
+      }
+
+      .cs-icon {
+        /* 32px - 40px */
+        width: clamp(2rem, 3vw, 2.5rem);
+        height: auto;
+        margin: 0;
+        flex: none;
+      }
+
+      .cs-h3 {
+        /* 16px - 25px */
+        font-size: clamp(1rem, 2vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 900;
+        width: 100%;
+        margin: 0;
+        color: var(--headerColor);
+        /* wraps longer words on the smallest screen sizes */
+        overflow-wrap: break-word;
+      }
+
+      .cs-stat-group {
+        width: 100%;
+        margin: auto;
+        padding: 0;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(6, 1fr);
+      }
+
+      .cs-stat {
+        list-style: none;
+        margin: 0;
+        /* 16px - 40px */
+        padding: clamp(1rem, 3vw, 2.5rem) calc(16 / 16 * 1rem);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        grid-column: span 2;
+
+        /* border code */
+        &:before {
+          content: "";
+          width: 2px;
+          height: 100%;
+          background: linear-gradient(
+            0deg,
+            rgba(72, 72, 72, 0) 0%,
+            rgba(72, 72, 72, 1) 50%,
+            rgba(72, 72, 72, 0) 100%
+          );
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+
+        /* remove the border on the far-right elements */
+        &:nth-of-type(3),
+        &:nth-of-type(5) {
+          &:before {
+            content: none;
+          }
+        }
+
+        /* makes the last two items span across multiple columns. changes at desktop to one line */
+        &:nth-of-type(4),
+        &:nth-of-type(5) {
+          grid-column: span 3;
+        }
+      }
+
+      .cs-desc {
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        text-align: center;
+        /* keeps the width of the stat description from overflowing onto the border */
+        /* 88px - 176px */
+        width: clamp(5.5rem, 20vw, 11rem);
+        margin-bottom: calc(8 / 16 * 1rem);
+        color: #858585;
+        display: block;
+      }
+
+      .cs-number {
+        /* 25px - 49px */
+        font-size: clamp(1.5625rem, 3vw, 3.0625rem);
+        line-height: 1.2em;
+        font-weight: 900;
+        margin: 0;
+        color: var(--headerColor);
+        display: block;
+      }
+    }
+  }
+
+  /* Tablet - 650px */
+  @media only screen and (min-width: 40.625rem) {
+    #stats-1229 {
+      .cs-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .cs-card-group {
+        display: grid;
+        /* makes all grid items stretch to have the same height if their content isn't all the same height */
+        align-items: stretch;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cs-item {
+        grid-column: span 1;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .cs-stat-group {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #stats-1229 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cs-content {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .cs-title,
+      .cs-text {
+        max-width: none;
+      }
+
+      .cs-card-group {
+        width: 50%;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-stat-group {
+        max-width: calc(1280 / 16 * 1rem);
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      .cs-stat {
+        grid-column: span 1;
+
+        &:nth-of-type(4),
+        &:nth-of-type(5) {
+          grid-column: span 1;
+        }
+
+        &:nth-of-type(3) {
+          &:before {
+            content: "";
+          }
+        }
+      }
+    }
+  }
+</style>

@@ -1,0 +1,247 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Promotions                   --><!-- ============================================ -->
+<section id="promotions-1559">
+  <div class="cs-container">
+    <div class="cs-promotion1">
+      <div class="cs-flex">
+        <!--Limited Offer-->
+        <img
+          class="cs-offer"
+          aria-hidden="true"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/limited-offer.png"
+          decoding="async"
+          alt="quote icon"
+          width="189"
+          height="90"
+        />
+        <h3 class="cs-h3-offer">Check Out Our Fall Collection</h3>
+        <a href="" class="cs-link">Explore Now</a>
+      </div>
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hoodies.png"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hoodies.png"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hoodies.png"
+          alt="kids"
+          width="220"
+          height="220"
+          aria-hidden="true"
+        />
+      </picture>
+    </div>
+    <div class="cs-promotion2">
+      <div class="cs-flex">
+        <!--Limited Offer-->
+        <img
+          class="cs-offer"
+          aria-hidden="true"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/limited-offer.png"
+          decoding="async"
+          alt="quote icon"
+          width="189"
+          height="90"
+        />
+        <h3 class="cs-h3-offer">Find Your Perfect Shoes</h3>
+        <a href="" class="cs-link">Explore Now</a>
+      </div>
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shoe.png"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shoe.png"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shoe.png"
+          alt="kids"
+          width="220"
+          height="220"
+          aria-hidden="true"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---        Promotions          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #promotions-1559 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(900 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+
+      .cs-promotion1,
+      .cs-promotion2 {
+        text-align: left;
+        list-style: none;
+        width: 100%;
+        /* 16px - 24px */
+        padding: calc(24 / 16 * 1rem) clamp(1rem, 2.4vw, 1.5rem);
+        box-sizing: border-box;
+        /* 40px - 60px */
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        position: relative;
+        gap: calc(16 / 16 * 1rem);
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            180deg,
+            #fdf7eb 0%,
+            #fefaee 48.36%,
+            #faeddd 100%
+          );
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+      }
+
+      .cs-promotion2 {
+        &:before {
+          background: linear-gradient(
+            180deg,
+            #f1f0eb 0%,
+            #f8f7f5 28.69%,
+            #f5f5f3 65.04%,
+            #f2f2f0 80.92%,
+            #dde1e0 100%
+          );
+        }
+      }
+
+      .cs-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: center;
+      }
+
+      .cs-offer {
+        width: 85%;
+        max-width: calc(189 / 16 * 1rem);
+        height: auto;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+      }
+
+      .cs-picture {
+        width: 50%;
+        height: auto;
+        max-height: calc(300 / 16 * 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-items: center;
+        max-width: calc(320 / 16 * 1rem);
+
+        img {
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+          max-height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .cs-h3-offer {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.3vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 calc(24 / 16 * 1rem) 0;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        color: var(--headerColor);
+        max-width: 17ch;
+      }
+
+      .cs-link {
+        font-size: calc(16 / 16 * 1rem);
+        text-decoration: none;
+        text-align: inherit;
+        line-height: 1.2em;
+        font-weight: 700;
+        color: var(--primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 1px;
+          background: var(--primary);
+          opacity: 1;
+          position: absolute;
+          display: block;
+          bottom: 0;
+          left: 0;
+          transition: width 0.3s;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #promotions-1559 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        align-items: stretch;
+      }
+    }
+  }
+</style>

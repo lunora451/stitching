@@ -1,0 +1,366 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Steps                     --><!-- ============================================ -->
+<section id="steps-1886">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">How To Get Started</span>
+      <h2 class="cs-title">Simple Steps to Get Our Services</h2>
+    </div>
+    <div class="cs-card-group">
+      <div class="cs-item">
+        <div class="cs-image-group">
+          <span class="cs-number">01</span>
+          <img
+            class="cs-graphic1"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/brown-swirl.svg"
+            alt="graphic"
+            loading="lazy"
+            decoding="async"
+            width="102"
+            height="55"
+          />
+          <img
+            class="cs-graphic2"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-blob.svg"
+            alt="graphic"
+            loading="lazy"
+            decoding="async"
+            height="78"
+            width="40"
+          />
+        </div>
+        <span class="cs-step">Book an Appointment</span>
+      </div>
+      <div class="cs-item">
+        <div class="cs-image-group">
+          <span class="cs-number">02</span>
+          <img
+            class="cs-graphic1"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/brown-swirl.svg"
+            alt="graphic"
+            loading="lazy"
+            decoding="async"
+            width="102"
+            height="55"
+          />
+          <img
+            class="cs-graphic2"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-blob.svg"
+            alt="graphic"
+            loading="lazy"
+            decoding="async"
+            height="78"
+            width="40"
+          />
+        </div>
+        <span class="cs-step">Prepare for your first appointment</span>
+      </div>
+      <div class="cs-item">
+        <div class="cs-image-group">
+          <span class="cs-number">03</span>
+          <img
+            class="cs-graphic1"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/brown-swirl.svg"
+            alt="graphic"
+            loading="lazy"
+            decoding="async"
+            width="102"
+            height="55"
+          />
+          <img
+            class="cs-graphic2"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-blob.svg"
+            alt="graphic"
+            loading="lazy"
+            decoding="async"
+            width="78"
+            height="40"
+          />
+        </div>
+        <span class="cs-step">Attend your appointment</span>
+      </div>
+      <div class="cs-item">
+        <div class="cs-image-group">
+          <span class="cs-number">04</span>
+          <img
+            class="cs-graphic1"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/brown-swirl.svg"
+            alt="graphic"
+            loading="lazy"
+            decoding="async"
+            width="102"
+            height="55"
+          />
+          <img
+            class="cs-graphic2"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-blob.svg"
+            alt="graphic"
+            loading="lazy"
+            decoding="async"
+            width="78"
+            height="40"
+          />
+        </div>
+        <span class="cs-step">Follow your treatment plan</span>
+      </div>
+    </div>
+  </div>
+  <img
+    class="cs-graphic3"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/faces-graphic.svg"
+    alt="graphic"
+    loading="lazy"
+    decoding="async"
+    width="492"
+    height="537"
+  />
+  <img
+    class="cs-graphic4"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/faces-graphic-flipped.svg"
+    alt="graphic"
+    loading="lazy"
+    decoding="async"
+    width="614"
+    height="671"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Steps             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #steps-1886 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: var(--primary);
+        opacity: 0.05;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+      }
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-topper {
+        color: var(--secondary);
+      }
+
+      .cs-title {
+        max-width: none;
+        margin: 0;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0 0 calc(56 / 16 * 1rem);
+        padding: 0;
+        display: flex;
+        flex-flow: wrap row;
+        justify-content: center;
+        /* 8px - 20px */
+        gap: clamp(0.5rem, 2.1vw, 1.25rem);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-item {
+        text-align: center;
+        width: 48%;
+        max-width: calc(413 / 16 * 1rem);
+        margin: 0;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        /* 60px - 80px top & bottom */
+        /* 32px - 40px left & right */
+        padding: clamp(3.75rem, 8vw, 5rem) clamp(1.5rem, 3vw, 2.5rem);
+        overflow: hidden;
+        border-radius: calc(260 / 16 * 1rem);
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        /* 48px - 134px */
+        gap: clamp(3rem, 10vw, 8.375rem);
+        position: relative;
+        z-index: 1;
+
+        &:nth-of-type(even) {
+          flex-direction: column-reverse;
+          transform: translateY(3.5rem);
+        }
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: var(--primary);
+          opacity: 0.1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+        }
+
+        &:after {
+          /* border color */
+          content: "";
+          box-sizing: border-box;
+          /* keeps mouse from interacting with it */
+          pointer-events: none;
+          opacity: 0.3;
+          border: 4px solid var(--primary);
+          border-radius: calc(260 / 16 * 1rem);
+          display: block;
+          position: absolute;
+          top: -1px;
+          right: -1px;
+          bottom: -1px;
+          left: -1px;
+        }
+      }
+
+      .cs-step {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        font-weight: 700;
+        line-height: calc(20 / 16 * 1em);
+        text-align: inherit;
+        margin: 0;
+        color: var(--headerColor);
+      }
+
+      .cs-number {
+        /* 49px - 72px */
+        font-size: clamp(3.0625rem, 6vw, 4.5rem);
+        font-weight: 900;
+        line-height: calc(20 / 16 * 1em);
+        text-align: inherit;
+        margin: 0;
+        color: var(--headerColor);
+      }
+
+      .cs-image-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-graphic1 {
+        /* 78.08px - 157px */
+        width: clamp(4.88rem, 10vw, 9.8125rem);
+        height: auto;
+        position: absolute;
+        top: calc(56 / 16 * 1rem);
+        z-index: 1;
+      }
+
+      .cs-graphic2 {
+        width: calc(78 / 16 * 1rem);
+        height: auto;
+        position: absolute;
+        /* 40px - 60px */
+        top: clamp(2.5rem, 5vw, 3.75rem);
+      }
+
+      .cs-graphic3 {
+        /* 385.6px - 835.2px */
+        width: clamp(24.1rem, 48vw, 52.2rem);
+        height: auto;
+        opacity: 0.3;
+        display: none;
+        position: absolute;
+        top: calc(0 / 16 * 1rem);
+        right: calc(-88 / 16 * 1rem);
+        z-index: 0;
+      }
+
+      .cs-graphic4 {
+        /* 484px - 835.2px */
+        width: clamp(30.25rem, 60vw, 52.2rem);
+        height: auto;
+        opacity: 0.3;
+        display: none;
+        position: absolute;
+        top: calc(85 / 16 * 1rem);
+        left: calc(-152 / 16 * 1rem);
+        z-index: 0;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #steps-1886 {
+      .cs-card-group {
+        flex-wrap: nowrap;
+      }
+
+      .cs-graphic3 {
+        display: block;
+      }
+
+      .cs-graphic4 {
+        display: block;
+      }
+    }
+  }
+
+  /* Larger Desktop - 1920px */
+  @media only screen and (min-width: 120rem) {
+    #steps-1886 {
+      .cs-graphic3 {
+        width: calc(835 / 16 * 1rem);
+        margin-left: calc(142 / 16 * 1rem);
+        right: auto;
+        left: 50%;
+      }
+
+      .cs-graphic4 {
+        width: calc(835 / 16 * 1rem);
+        margin-right: calc(329 / 16 * 1rem);
+        top: calc(124 / 16 * 1rem);
+        right: 50%;
+        left: auto;
+      }
+    }
+  }
+</style>

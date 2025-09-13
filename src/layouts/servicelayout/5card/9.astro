@@ -1,0 +1,194 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Services                    --><!-- ============================================ -->
+<section id="services-468">
+  <div class="cs-container">
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/geen1.svg"
+          loading="lazy"
+          decoding="async"
+          alt="icon"
+          width="90"
+          height="90"
+        />
+        <h3 class="cs-h3">Service 1</h3>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/green2.svg"
+          loading="lazy"
+          decoding="async"
+          alt="icon"
+          width="90"
+          height="90"
+        />
+        <h3 class="cs-h3">Service 2</h3>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/green3.svg"
+          loading="lazy"
+          decoding="async"
+          alt="icon"
+          width="90"
+          height="90"
+        />
+        <h3 class="cs-h3">Service 3</h3>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/green4.svg"
+          loading="lazy"
+          decoding="async"
+          alt="icon"
+          width="90"
+          height="90"
+        />
+        <h3 class="cs-h3">Service 4</h3>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/green5.svg"
+          loading="lazy"
+          decoding="async"
+          alt="icon"
+          width="90"
+          height="90"
+        />
+        <h3 class="cs-h3">Service 5</h3>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-468 {
+      padding: var(--sectionPadding);
+      position: relative;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1440px at 768px */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+      }
+
+      .cs-card-group {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+        /* 8px - 20px */
+        column-gap: clamp(0.5rem, 1.5vw, 1.25rem);
+        row-gap: calc(20 / 16 * 1rem);
+      }
+
+      .cs-item {
+        width: 48.5%;
+        list-style: none;
+        /* 24px - 48px top and bottom */
+        padding: clamp(1.5rem, 4vw, 3rem) calc(24 / 16 * 1rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        border-radius: calc(12 / 16 * 1rem);
+        background-color: #fff;
+        border: 1px solid #b4b2c7;
+        box-shadow: 0px 24px 54px rgba(87, 107, 147, 0.12);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 12px - 24px */
+        gap: clamp(0.875rem, 2vw, 2rem);
+        position: relative;
+        transition: border-color 0.3s;
+
+        &:before {
+          /* green border on hover */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: transparent;
+          /* prevents mouse from interacting with it */
+          pointer-events: none;
+          border: 4px solid var(--primaryLight);
+          box-sizing: border-box;
+          /* prevents border from affecting height and width */
+          border-radius: calc(10 / 16 * 1rem);
+          opacity: 0;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          transition: opacity 0.3s;
+        }
+
+        &:hover {
+          border-color: var(--primaryLight);
+
+          &:before {
+            opacity: 1;
+          }
+        }
+
+        &:nth-of-type(5) {
+          width: 100%;
+        }
+      }
+
+      .cs-icon {
+        /* 44px - 90px */
+        width: clamp(2.75rem, 6vw, 5.625rem);
+        height: auto;
+      }
+
+      .cs-h3 {
+        /* 16px - 25px */
+        font-size: clamp(1rem, 2vw, 1.5625rem);
+        line-height: 1.2em;
+        text-align: center;
+        margin: 0;
+        color: var(--headerColor);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-468 {
+      .cs-container {
+        max-width: calc(1440 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        flex-wrap: nowrap;
+        flex-direction: row;
+      }
+
+      .cs-item {
+        width: 100%;
+      }
+    }
+  }
+</style>

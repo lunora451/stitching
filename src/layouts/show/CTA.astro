@@ -1,0 +1,179 @@
+---
+import CTA1 from "../cta/1.astro";
+import CTA2 from "../cta/2.astro";
+import CTA3 from "../cta/3.astro";
+import CTA4 from "../cta/4.astro";
+import CTA5 from "../cta/5.astro";
+import CTA6 from "../cta/6.astro";
+import CTA7 from "../cta/7.astro";
+import CTA8 from "../cta/8.astro";
+import CTA9 from "../cta/9.astro";
+import CTA10 from "../cta/10.astro";
+import CTA11 from "../cta/11.astro";
+import CTA12 from "../cta/12.astro";
+import CTA13 from "../cta/13.astro";
+import CTA14 from "../cta/14.astro";
+import CTA15 from "../cta/15.astro";
+import CTA16 from "../cta/16.astro";
+import CTA17 from "../cta/17.astro";
+import CTA18 from "../cta/18.astro";
+import CTA19 from "../cta/19.astro";
+---
+
+<div class="c-collection">
+  <div class="c-cta" data-value-cta="1">
+    <CTA1 />
+  </div>
+  <div class="c-cta" data-value-cta="2">
+    <CTA2 />
+  </div>
+  <div class="c-cta" data-value-cta="3">
+    <CTA3 />
+  </div>
+  <div class="c-cta" data-value-cta="4">
+    <CTA4 />
+  </div>
+  <div class="c-cta" data-value-cta="5">
+    <CTA5 />
+  </div>
+  <div class="c-cta" data-value-cta="6">
+    <CTA6 />
+  </div>
+  <div class="c-cta" data-value-cta="7">
+    <CTA7 />
+  </div>
+  <div class="c-cta" data-value-cta="8">
+    <CTA8 />
+  </div>
+  <div class="c-cta" data-value-cta="9">
+    <CTA9 />
+  </div>
+  <div class="c-cta" data-value-cta="10">
+    <CTA10 />
+  </div>
+  <div class="c-cta" data-value-cta="11">
+    <CTA11 />
+  </div>
+  <div class="c-cta" data-value-cta="12">
+    <CTA12 />
+  </div>
+  <div class="c-cta" data-value-cta="13">
+    <CTA13 />
+  </div>
+  <div class="c-cta" data-value-cta="14">
+    <CTA14 />
+  </div>
+  <div class="c-cta" data-value-cta="15">
+    <CTA15 />
+  </div>
+  <div class="c-cta" data-value-cta="16">
+    <CTA16 />
+  </div>
+  <div class="c-cta" data-value-cta="17">
+    <CTA17 />
+  </div>
+  <div class="c-cta" data-value-cta="18">
+    <CTA18 />
+  </div>
+  <div class="c-cta" data-value-cta="19">
+    <CTA19 />
+  </div>
+</div>
+
+<style lang="scss">
+  .c-collection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .c-cta {
+    display: none;
+  }
+  .active {
+    width: 100%;
+    display: block;
+  }
+</style>
+
+<script>
+  function changeCollection(selectedValue) {
+    const collections = document.querySelectorAll(".c-cta");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none" est sélectionné, ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection sélectionnée
+    const targetCollection = document.querySelector(
+      `[data-value-cta="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  // Fonction pour le hover des options
+  function previewOnHover(selectedValue) {
+    const collections = document.querySelectorAll(".c-cta");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none", ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection en preview
+    const targetCollection = document.querySelector(
+      `[data-value-cta="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const select = document.getElementById("template-select-cta");
+    const collections = document.querySelectorAll(".c-cta");
+
+    if (!select) return;
+
+    select.addEventListener("change", function () {
+      const selectedValue = this.value;
+      changeCollection(selectedValue);
+    });
+
+    // Alternative pour navigateur qui ne supportent pas mouseover sur option
+    let isSelectOpen = false;
+
+    select.addEventListener("focus", function () {
+      isSelectOpen = true;
+    });
+
+    select.addEventListener("blur", function () {
+      isSelectOpen = false;
+      // Revenir à la valeur sélectionnée quand on ferme
+      changeCollection(this.value);
+    });
+
+    // Navigation avec les flèches
+    select.addEventListener("keydown", function (e) {
+      if (isSelectOpen && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
+        setTimeout(() => {
+          // Simuler le hover sur l'option "focusée"
+          const currentValue = this.value;
+          previewOnHover(currentValue);
+        }, 10);
+      }
+    });
+  });
+</script>

@@ -1,0 +1,165 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Video                     --><!-- ============================================ -->
+<section id="video-2284">
+  <div class="cs-container">
+    <!-- Left Content Section-->
+    <div class="cs-content">
+      <h2 class="cs-title">
+        Our Mission is to Develop the Strongest Building & Shaping the Future of
+        Construction
+      </h2>
+      <!--Add youtube link to play-->
+      <a href="" class="cs-link">
+        <span class="cs-cs-link-text">
+          Watch Our<br />
+          Intro Video
+        </span>
+        <picture class="cs-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-play.svg"
+            alt="play icon"
+            width="24"
+            height="24"
+            aria-hidden="true"
+          />
+        </picture>
+      </a>
+    </div>
+  </div>
+  <!--Waves Background-->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction9.jpg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction9.jpg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction9.jpg"
+      alt="construction"
+      width="1920"
+      height="742"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Video            -->
+<--- -------------------------- -*/
+
+  /* Mobile */
+  @media only screen and (min-width: 0rem) {
+    #video-2284 {
+      padding: var(--sectionPadding);
+      /* 60px - 256px */
+      padding-top: clamp(3.75rem, 15vw + 3rem, 16rem);
+      padding-bottom: clamp(3.75rem, 15vw + 3rem, 16rem);
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+      }
+
+      .cs-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(32 / 16 * 1rem);
+      }
+
+      .cs-title {
+        max-width: 100%;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-link {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 700;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: calc(16 / 16 * 1rem);
+
+        &:hover {
+          .cs-wrapper {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      .cs-wrapper {
+        width: calc(80 / 16 * 1rem);
+        height: calc(80 / 16 * 1rem);
+        background-color: var(--secondary);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: -1;
+        transition: transform 0.3s;
+      }
+
+      .cs-icon {
+        width: calc(24 / 16 * 1rem);
+        height: auto;
+        display: block;
+        transform: translateX((4px));
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        &:before {
+          /* background color overlay */
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 100%;
+          background: #000;
+          opacity: 0.72;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes img tag act as a background image */
+          object-fit: cover;
+        }
+      }
+    }
+  }
+</style>

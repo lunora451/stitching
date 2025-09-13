@@ -1,0 +1,315 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Side By Side                  --><!-- ============================================ -->
+<section id="RPsbs-1593">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <!--Top left image-->
+      <picture class="cs-picture cs-picture1">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/models1.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/models1.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/models1.jpg"
+          alt="mechanic"
+          width="413"
+          height="500"
+        />
+      </picture>
+      <!--Top Right image-->
+      <picture class="cs-picture cs-picture2">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shoes2.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shoes2.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shoes2.jpg"
+          alt="mechanic"
+          width="413"
+          height="280"
+        />
+      </picture>
+    </div>
+    <div class="cs-content">
+      <span class="cs-topper">About us</span>
+      <h2 class="cs-title">
+        Accessible Wardrobe That Women Can Wear and Curate Over Time
+      </h2>
+      <p class="cs-text">
+        Dive into the exhilarating world of fishing with Gill Rush, a dynamic
+        and electrifying apparel brand designed exclusively for those who live
+        for the rush of the catch. For avid anglers who feel the pulse quicken
+        at the mere tug on their line, Gill Rush captures the essence of that
+        heart-pounding moment when fish and fisherman lock in a fierce dance of
+        skill and strategy.
+      </p>
+      <a href="" class="cs-button-solid">View All Collections</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="RPsbsr-1593">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <!--Top left image-->
+      <picture class="cs-picture cs-picture1">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/models1.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/models1.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/models1.jpg"
+          alt="mechanic"
+          width="413"
+          height="500"
+        />
+      </picture>
+      <!--Top Right image-->
+      <picture class="cs-picture cs-picture2">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shoes2.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shoes2.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shoes2.jpg"
+          alt="mechanic"
+          width="413"
+          height="280"
+        />
+      </picture>
+    </div>
+    <div class="cs-content">
+      <span class="cs-topper">About us</span>
+      <h2 class="cs-title">
+        Accessible Wardrobe That Women Can Wear and Curate Over Time
+      </h2>
+      <p class="cs-text">
+        Dive into the exhilarating world of fishing with Gill Rush, a dynamic
+        and electrifying apparel brand designed exclusively for those who live
+        for the rush of the catch. For avid anglers who feel the pulse quicken
+        at the mere tug on their line, Gill Rush captures the essence of that
+        heart-pounding moment when fish and fisherman lock in a fierce dance of
+        skill and strategy.
+      </p>
+      <a href="" class="cs-button-solid">View All Collections</a>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #RPsbs-1593,
+    #RPsbsr-1593 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(48 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-image-group {
+        /* scales the whole group based on the view width size and stop when that vales equals .745em, resets at desktop */
+        font-size: min(1.959vw, 0.745em);
+        width: calc(630 / 16 * 1em);
+        /* we set a minimum height so it never gets smaller than this value */
+        min-height: calc(628 / 16 * 1em);
+        display: block;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-picture {
+        position: absolute;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-picture1 {
+        /* the percentage heights allow them to be responsive to the height of the parent cs-image-group. On desktop, when the felxbox is set to aling-items: stretch, the cs-image group will stretch to fill the height of the parent container. So when you add more content to the cs-content group and make it taller, the cs-image group will get taller with it and every image will stretch with the parent, making this entire group responsive to the changing amounts of content next to it */
+        width: calc(413 / 16 * 1em);
+        height: 79.617834%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .cs-picture2 {
+        width: calc(413 / 16 * 1em);
+        height: 44.585987%;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #RPsbs-1593,
+    #RPsbsr-1593 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+
+      .cs-content {
+        /* this padding sets a minimum gap between the top and bottom of the content div and the top and bottom of the cs-image-group */
+        padding: calc(60 / 16 * 1rem) 0;
+        /* while the cs-image-group will stretch to fill the height of the parent, this property will ensure that the cs-content group aligns itse;f in the center of the parent div instead of stretching */
+        align-self: center;
+      }
+
+      .cs-image-group {
+        font-size: min(1.2vw, 1em);
+        flex: none;
+      }
+    }
+  }
+
+  /*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #RPsbsr-1593 {
+      background-color: #f7f7f7;
+
+      .cs-picture1 {
+        left: auto;
+        right: 0;
+      }
+
+      .cs-picture2 {
+        right: auto;
+        left: 0;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #RPsbsr-1593 {
+      .cs-image-group {
+        /* sends it to the right in the 2nd position */
+        order: 2;
+      }
+    }
+  }
+</style>

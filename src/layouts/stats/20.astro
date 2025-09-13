@@ -1,0 +1,274 @@
+---
+
+---
+
+<!-- ============================================ -->
+<section id="stats-696">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Featured Service</span>
+      <h2 class="cs-title">
+        We Strive to Provide <span class="cs-color">High Quality</span> Services
+      </h2>
+      <p class="cs-text">
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat duis enim velit mollit. Amet minim mollit
+        non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+        consequat duis enim velit mollit.
+      </p>
+      <p class="cs-text">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi eos
+        eum amet atque deserunt ut quibusdam quam qui quidem quae.
+      </p>
+      <a href="" class="cs-button-solid">Book Appointment</a>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <span class="cs-number">25%</span>
+        <h3 class="cs-h3">Successful Weight Loss</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet consectetur elit. Quis, dignissimos?
+        </p>
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fcloud2.svg"
+          alt="icon"
+          width="90"
+          height="90"
+          loading="lazy"
+          decoding="async"
+          aria-hidden="true"
+        />
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">32+</span>
+        <h3 class="cs-h3">Different Services We Provide</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet consectetur elit. Quis, dignissimos?
+        </p>
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fcloud2.svg"
+          alt="icon"
+          width="90"
+          height="90"
+          loading="lazy"
+          decoding="async"
+          aria-hidden="true"
+        />
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">20K+</span>
+        <h3 class="cs-h3">Patients Served Successfully</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet consectetur elit. Quis, dignissimos?
+        </p>
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fcloud2.svg"
+          alt="icon"
+          width="90"
+          height="90"
+          loading="lazy"
+          decoding="async"
+          aria-hidden="true"
+        />
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">15</span>
+        <h3 class="cs-h3">Global Aesthetic Awards Won</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet consectetur elit. Quis, dignissimos?
+        </p>
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fcloud2.svg"
+          alt="icon"
+          width="90"
+          height="90"
+          loading="lazy"
+          decoding="async"
+          aria-hidden="true"
+        />
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #stats-696 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        max-width: calc(522 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(1rem, 2vw, 1.25rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        /*chages at small desktop then again at large desktop */
+        width: 100%;
+        padding: calc(40 / 16 * 1rem) calc(32 / 16 * 1rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        background-color: #fdfaf8;
+        /* clips cs-icon overflowing */
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+      }
+
+      .cs-number {
+        /* 31px - 39px */
+        font-size: clamp(1.9375rem, 6vw, 2.4375rem);
+        line-height: 1.2em;
+        font-weight: 900;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--primary);
+      }
+
+      .cs-h3 {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 900;
+        margin: 0 0 calc(8 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        font-weight: 400;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-icon {
+        width: calc(90 / 16 * 1rem);
+        height: auto;
+        position: absolute;
+        top: calc(-10 / 16 * 1rem);
+        right: calc(-20 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Tablet - 650px */
+  @media only screen and (min-width: 40.625rem) {
+    #stats-696 {
+      .cs-card-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* makes all grid items stretch to have the same height if their content isnt all the same height */
+        align-items: stretch;
+      }
+
+      .cs-item {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #stats-696 {
+      .cs-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cs-card-group {
+        width: 50%;
+        /* prevents flexbox from squishing it */
+        flex: none;
+        /* sends it to the left in the first position */
+        order: -1;
+      }
+    }
+  }
+</style>

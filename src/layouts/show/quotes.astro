@@ -1,0 +1,139 @@
+---
+import Quotes1 from "../quotes/1.astro";
+import Quotes2 from "../quotes/2.astro";
+import Quotes3 from "../quotes/3.astro";
+import Quotes4 from "../quotes/4.astro";
+import Quotes5 from "../quotes/5.astro";
+import Quotes6 from "../quotes/6.astro";
+import Quotes7 from "../quotes/7.astro";
+import Quotes8 from "../quotes/8.astro";
+import Quotes9 from "../quotes/9.astro";
+---
+
+<div class="c-collection">
+  <div class="c-quotes" data-value-quotes="1">
+    <Quotes1 />
+  </div>
+  <div class="c-quotes" data-value-quotes="2">
+    <Quotes2 />
+  </div>
+  <div class="c-quotes" data-value-quotes="3">
+    <Quotes3 />
+  </div>
+  <div class="c-quotes" data-value-quotes="4">
+    <Quotes4 />
+  </div>
+  <div class="c-quotes" data-value-quotes="5">
+    <Quotes5 />
+  </div>
+  <div class="c-quotes" data-value-quotes="6">
+    <Quotes6 />
+  </div>
+  <div class="c-quotes" data-value-quotes="7">
+    <Quotes7 />
+  </div>
+  <div class="c-quotes" data-value-quotes="8">
+    <Quotes8 />
+  </div>
+  <div class="c-quotes" data-value-quotes="9">
+    <Quotes9 />
+  </div>
+</div>
+
+<style lang="scss">
+  .c-collection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .c-quotes {
+    display: none;
+  }
+  .active {
+    width: 100%;
+    display: block;
+  }
+</style>
+
+<script>
+  function changeCollection(selectedValue) {
+    const collections = document.querySelectorAll(".c-quotes");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none" est sélectionné, ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection sélectionnée
+    const targetCollection = document.querySelector(
+      `[data-value-quotes="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  // Fonction pour le hover des options
+  function previewOnHover(selectedValue) {
+    const collections = document.querySelectorAll(".c-quotes");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none", ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection en preview
+    const targetCollection = document.querySelector(
+      `[data-value-quotes="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const select = document.getElementById("template-select-quotes");
+    const collections = document.querySelectorAll(".c-quotes");
+
+    if (!select) return;
+
+    select.addEventListener("change", function () {
+      const selectedValue = this.value;
+      changeCollection(selectedValue);
+    });
+
+    // Alternative pour navigateur qui ne supportent pas mouseover sur option
+    let isSelectOpen = false;
+
+    select.addEventListener("focus", function () {
+      isSelectOpen = true;
+    });
+
+    select.addEventListener("blur", function () {
+      isSelectOpen = false;
+      // Revenir à la valeur sélectionnée quand on ferme
+      changeCollection(this.value);
+    });
+
+    // Navigation avec les flèches
+    select.addEventListener("keydown", function (e) {
+      if (isSelectOpen && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
+        setTimeout(() => {
+          // Simuler le hover sur l'option "focusée"
+          const currentValue = this.value;
+          previewOnHover(currentValue);
+        }, 10);
+      }
+    });
+  });
+</script>

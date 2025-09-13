@@ -1,0 +1,329 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Hero                      --><!-- ============================================ -->
+<section id="hero-2041">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Dental Care for Everyone</span>
+      <h1 class="cs-title">We Provide Dental Services & Surgery</h1>
+      <p class="cs-text">
+        From preventative care to restorative dentistry, our team is dedicated
+        to providing the best possible dental care for you.
+      </p>
+      <a href="" class="cs-button-solid">Get Started</a>
+      <!--Bottom Corners-->
+    </div>
+    <form class="cs-form" id="cs-form-2041" name="Landing Form">
+      <label class="cs-label">
+        <div class="cs-flex">
+          Email <span class="span cs-color">*</span>
+        </div>
+        <input
+          class="cs-input"
+          required
+          type="text"
+          id="email-2041"
+          name="email"
+          placeholder="Your email"
+        />
+      </label>
+      <label class="cs-label">
+        <div class="cs-flex">
+          Phone <span class="span cs-color">*</span>
+        </div>
+        <input
+          class="cs-input"
+          required
+          type="tel"
+          id="phone-2041"
+          name="phone"
+          placeholder="Phone number"
+        />
+      </label>
+      <label class="cs-label">
+        <div class="cs-flex">
+          Date <span class="span cs-color">*</span>
+        </div>
+        <input
+          class="cs-input"
+          required
+          type="date"
+          id="date-2041"
+          name="date"
+          placeholder="Choose a date"
+        />
+      </label>
+      <button class="cs-button-solid cs-submit">Get Started</button>
+    </form>
+  </div>
+
+  <!-- Background Image -->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/dental-hero.jpg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/dental-hero.jpg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/dental-hero.jpg"
+      alt="meeting"
+      width="1920"
+      height="1200"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-2041 {
+      /* 200px - 300px - top leaving extra space for the navigation */
+      /* 60px - 100px bottom */
+      padding: clamp(12.5rem, 25.95vw, 18.75em) calc(16 / 16 * 1rem)
+        clamp(3.75rem, 7.82vw, 6.25rem);
+      /* prevents the topper line from causing an overflow */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        /* 60px - 180px */
+        gap: clamp(3.75rem, 13vw, 11.25rem);
+      }
+
+      .cs-content {
+        text-align: center;
+        width: 100%;
+        max-width: calc(850 / 16 * 1rem);
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-topper {
+        line-height: 1em;
+        padding: calc(4 / 16 * 1rem) calc(16 / 16 * 1rem);
+        background-color: #fff;
+        color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: var(--primary);
+          opacity: 0.1;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-title {
+        /* 39px - 80px */
+        font-size: clamp(2.4375rem, 6vw, 5rem);
+        max-width: 20ch;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-text {
+        max-width: calc(564 / 16 * 1rem);
+        margin-bottom: calc(32 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-align: center;
+        text-decoration: none;
+        max-width: calc(180 / 16 * 1rem);
+        margin: 0;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        padding: 0 calc(32 / 16 * 1rem);
+        background-color: var(--primary);
+        overflow: hidden;
+        color: var(--bodyTextColorWhite);
+        border: none;
+        border-radius: calc(8 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #1a1a1a;
+          opacity: 1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-form {
+        width: 100%;
+        margin: 0;
+        padding: calc(16 / 16 * 1rem);
+        background-color: #fff;
+        box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.08);
+        border-radius: calc(8 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* 16px - 20px */
+        gap: clamp(1rem, 2.3vw, 1.25rem);
+      }
+
+      .cs-label {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        color: var(--headerColor);
+        display: flex;
+        flex-direction: column;
+        gap: calc(8 / 16 * 1rem);
+      }
+
+      .cs-flex {
+        display: inline-flex;
+        justify-content: flex-start;
+        gap: 0;
+      }
+
+      .cs-color {
+        color: #ff4747;
+      }
+
+      .cs-input {
+        font-size: calc(14 / 16 * 1rem);
+        font-weight: 400;
+        line-height: 1.5em;
+        padding: calc(16 / 16 * 1rem);
+        background-color: #f7f7f7;
+        color: #767676;
+        border: none;
+        border-radius: calc(8 / 16 * 1rem);
+      }
+
+      .cs-submit {
+        width: max-content;
+        align-self: center;
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 66%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+
+        &:before {
+          /* Overlay */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: #000;
+          /* prevents the cursor from interacting with it */
+          pointer-events: none;
+          opacity: 0.48;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-2041 {
+      .cs-form {
+        flex-direction: row;
+        align-items: flex-end;
+      }
+
+      .cs-submit {
+        /* causes the submit button to grow to it's "auto" width and shrinks the inputs. this makes everything fit within cs-form */
+        flex: 1 0 auto;
+        align-self: flex-end;
+      }
+
+      .cs-label {
+        width: 100%;
+        min-width: 0;
+      }
+
+      .cs-background {
+        height: 84%;
+      }
+    }
+  }
+
+  /* Large Desktop - Parallax Effect - 1600px */
+  @media only screen and (min-width: 100rem) {
+    #hero-2041 {
+      .cs-background {
+        background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/dental-hero.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+</style>

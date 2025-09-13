@@ -1,0 +1,273 @@
+---
+
+---
+
+<!-- ============================================ --><!--                      Stats                   --><!-- ============================================ -->
+<section id="stats-2428">
+  <div class="cs-container">
+    <div class="cs-wrapper">
+      <div class="cs-content">
+        <span class="cs-topper">What The Numbers Say</span>
+        <h2 class="cs-title">Not Just a Studio, A Space for Transformation</h2>
+        <p class="cs-text">
+          Our space is intimate, immersive, and designed for focused artistic
+          collaboration. Whether you’re preparing for a photoshoot, festival,
+          performance, or simply want to express yourself in a new way, our team
+          delivers glowing, high-impact body designs that tell a story — your
+          story.
+        </p>
+        <p class="cs-text">
+          We also share our process with others through body art workshops and
+          creative mentorship.
+        </p>
+      </div>
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tatoo7b.png"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(max-width: 1023px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tatoo7b.png"
+        />
+        <!--Desktop and above Image-->
+        <source
+          media="(min-width: 1024px)"
+          srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo7.png"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo7.png"
+          alt="person with tattoo"
+          width="608"
+          height="862"
+        />
+      </picture>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <span class="cs-number">10K+</span>
+        <h3 class="cs-h3">Body Art Sessions Completed</h3>
+        <p class="cs-item-text">
+          From UV painting to spiritual art, our artists transform clients into
+          masterpieces in Portland and beyond.
+        </p>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">1.2M+</span>
+        <h3 class="cs-h3">Social Media Views</h3>
+        <p class="cs-item-text">
+          Our creations shine on Instagram and TikTok, building a vibrant
+          community of body art lovers.
+        </p>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">22 Years</span>
+        <h3 class="cs-h3">Combined Artistic Experience</h3>
+        <p class="cs-item-text">
+          With years of ing experience, our team infuses creativity into every
+          body we paint.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #stats-2428 {
+      padding: var(--sectionPadding);
+      background-color: #010104;
+      padding-bottom: 0;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(576 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 128px */
+        gap: clamp(3rem, 7vw, 8rem);
+      }
+
+      .cs-wrapper {
+        max-width: calc(576 / 16 * 1rem);
+        display: contents;
+      }
+
+      .cs-content {
+        /* set text align to center if content needs to be center aligned */
+        text-align: left;
+        width: 100%;
+        flex: none;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cs-topper {
+        color: var(--secondary);
+      }
+
+      .cs-title,
+      .cs-text {
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-text {
+        opacity: 0.8;
+        margin-bottom: calc(16 / 16 * 1rem);
+
+        &:last-of-type {
+          /* change to 32px if you add a button to this section */
+          margin-bottom: 0;
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        max-width: calc(576 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        /* 16px - 20px */
+        gap: clamp(1rem, 2.4vw, 1.25rem);
+        position: relative;
+        z-index: 10;
+      }
+
+      .cs-item {
+        width: 100%;
+        text-align: left;
+        list-style: none;
+        margin: 0;
+        /* 20px - 60px top & bottom, 16px - 48px left & right */
+        padding: clamp(1.25rem, 4.5vw, 3.75rem) clamp(1rem, 3.5vw, 3rem);
+        background-color: #030711;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: relative;
+        z-index: 0;
+      }
+
+      .cs-number {
+        /* 39px - 72px */
+        font-size: clamp(2.4375rem, 6.5vw, 4.5rem);
+        line-height: 1.2em;
+        text-align: inherit;
+        font-weight: 700;
+        /* 24px - 64px */
+        margin: 0 0 clamp(1.5rem, 5vw, 4rem) 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-h3 {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        text-align: inherit;
+        font-weight: bold;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-item-text {
+        line-height: 1.5em;
+        max-width: calc(450 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        order: 2;
+        position: relative;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #stats-2428 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+      }
+
+      .cs-wrapper {
+        width: 48vw;
+        flex: none;
+        display: flex;
+        flex-direction: column;
+        gap: calc(48 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        padding: var(--sectionPadding);
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: 100%;
+        max-height: none;
+        margin: 0;
+
+        img {
+          width: auto;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          /* remove the right:0 and uncomment the left if you have a thinner image and want it oriented to the left more instead of on the right side of its parent container */
+          /* left: 0; */
+          right: 0;
+        }
+      }
+    }
+  }
+
+  /* Large Desktop - 1800px */
+  @media only screen and (min-width: 1800px) {
+    #stats-2428 {
+      .cs-picture {
+        img {
+          right: 45%;
+          /* offsetting any possible left value added in tablet, remove the right: 45% and left: auto if you dont need this stylingg */
+          left: auto;
+        }
+      }
+    }
+  }
+</style>

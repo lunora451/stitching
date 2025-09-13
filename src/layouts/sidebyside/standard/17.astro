@@ -1,0 +1,338 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Side By Side                  --><!-- ============================================ -->
+<section id="sbs-2171">
+  <div class="cs-container">
+    <picture class="cs-picture">
+      <!--Mobile Image-->
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding9.jpg"
+      />
+      <!--Tablet and above Image-->
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding9.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding9.jpg"
+        alt="room"
+        width="960"
+        height="796"
+      />
+    </picture>
+    <div class="cs-content">
+      <span class="cs-topper">Classes</span>
+      <h2 class="cs-title">Our Workshops</h2>
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <h3 class="cs-h3">Bridal Workshop: Sophisticated Wedding</h3>
+          <p class="cs-li-text">
+            We welcome and celebrate different perspectives to help our firm,
+            our clients and our people adip iscing elit achieve.
+          </p>
+          <div class="cs-info">
+            <span class="cs-flex">
+              <img
+                class="cs-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/cal.svg"
+                alt="icon"
+                width="20"
+                height="20"
+              />
+              Sep 29
+            </span>
+            <span class="cs-flex">
+              <img
+                class="cs-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/clock7.svg"
+                alt="icon"
+                width="20"
+                height="20"
+              />
+              6:00 pm
+            </span>
+            <span class="cs-flex">
+              <img
+                class="cs-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/cost.svg"
+                alt="icon"
+                width="20"
+                height="20"
+              />
+              Free
+            </span>
+          </div>
+        </li>
+        <li class="cs-li">
+          <h3 class="cs-h3">Wedding Photography Masterclass</h3>
+          <p class="cs-li-text">
+            We welcome and celebrate different perspectives to help our firm,
+            our clients and our people adip iscing elit achieve.
+          </p>
+          <div class="cs-info">
+            <span class="cs-flex">
+              <img
+                class="cs-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/cal.svg"
+                alt="icon"
+                width="20"
+                height="20"
+              />
+              Sep 29
+            </span>
+            <span class="cs-flex">
+              <img
+                class="cs-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/clock7.svg"
+                alt="icon"
+                width="20"
+                height="20"
+              />
+              6:00 pm
+            </span>
+            <span class="cs-flex">
+              <img
+                class="cs-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/cost.svg"
+                alt="icon"
+                width="20"
+                height="20"
+              />
+              Free
+            </span>
+          </div>
+        </li>
+      </ul>
+      <a href="" class="cs-button-solid">Contact Us</a>
+    </div>
+  </div>
+  <img
+    class="cs-floater"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/flower5.png"
+    alt="flower"
+    width="295"
+    height="225"
+    aria-hidden="true"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-2171 {
+      background-color: #fbf5f1;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(522 / 16 * 1rem);
+        /* moved section padding to cs-content so the cs-background can be full width */
+        padding: var(--sectionPadding);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-ul {
+        margin: 0 0 calc(32 / 16 * 1rem);
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(32 / 16 * 1rem);
+      }
+
+      .cs-li {
+        list-style: none;
+      }
+
+      .cs-h3 {
+        font-size: calc(20 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        margin: 0 0 calc(8 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-li-text {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        margin: 0 0 calc(16 / 16 * 1rem);
+        color: var(--bodyTextColor);
+      }
+
+      .cs-info {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: calc(40 / 16 * 1rem);
+      }
+
+      .cs-flex {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+        display: flex;
+        align-items: center;
+        gap: calc(8 / 16 * 1rem);
+      }
+
+      .cs-icon {
+        width: calc(20 / 16 * 1rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-picture {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: calc(560 / 16 * 1rem);
+        z-index: 1;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .cs-floater {
+        width: 24%;
+        max-width: calc(295 / 16 * 1rem);
+        height: auto;
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbs-2171 {
+      /* 90px - 150px */
+      /* returned section padding to the section container, this Stitch has 1.5X padding top and bottom than the normal Stitch */
+      padding: clamp(5.625rem, 9vw, 9.375rem) calc(16 / 16 * 1rem);
+
+      .cs-container {
+        flex-direction: row;
+        justify-content: flex-end;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-content {
+        width: 48%;
+        max-width: calc(563 / 16 * 1rem);
+        /* 32px - 90px */
+        padding: clamp(2rem, 5vw, 5.625rem) 0;
+      }
+
+      .cs-picture {
+        width: 50vw;
+        height: auto;
+        margin-right: calc(40 / 16 * 1rem);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 50%;
+      }
+
+      .cs-floater {
+        display: block;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,472 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Contact                    --><!-- ============================================ -->
+<section id="contact-1601">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Contact Us</span>
+      <h2 class="cs-title">Get In Touch</h2>
+      <!--Form-->
+      <form class="cs-form" id="cs-form-1601" name="Contact Form" method="post">
+        <label class="cs-label">
+          Name
+          <input
+            class="cs-input"
+            required
+            type="text"
+            id="name-1601"
+            name="name"
+            placeholder="Name"
+          />
+        </label>
+        <label class="cs-label cs-email">
+          Email
+          <input
+            class="cs-input"
+            required
+            type="email"
+            id="email-1601"
+            name="email"
+            placeholder="Email"
+          />
+        </label>
+        <label class="cs-label cs-phone">
+          Phone
+          <input
+            class="cs-input"
+            required
+            type="phone"
+            id="phone-1601"
+            name="phone"
+            placeholder="Phone"
+          />
+        </label>
+        <label class="cs-label">
+          Message
+          <textarea
+            class="cs-input cs-textarea"
+            required
+            name="Message"
+            id="message-1601"
+            placeholder="Write message..."></textarea>
+        </label>
+        <button class="cs-button-solid cs-submit" type="submit"
+          >Submit Now</button
+        >
+      </form>
+    </div>
+    <div class="cs-wrapper">
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <span class="cs-header">Our Support</span>
+          <p class="cs-item-text">
+            We are available for your 24/7 support.<br />
+            <a class="cs-link" href="tell:555-555-5555">(555) 555-5555</a>
+          </p>
+        </li>
+        <li class="cs-item">
+          <span class="cs-header">Email Us</span>
+          <p class="cs-item-text">
+            Email your questions at
+            <a class="cs-link" href="mailto:info@invetexfinance.com"
+              >info@invetexfinance.com</a
+            >
+          </p>
+        </li>
+        <li class="cs-item">
+          <span class="cs-header">Reviews</span>
+          <p class="cs-item-text">
+            See Our reviews on Google or leave a review
+            <a href="" class="cs-link">
+              <img
+                class="cs-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/google-1a.svg"
+                alt="icon"
+                loading="lazy"
+                decoding="async"
+                width="16"
+                height="16"
+                aria-hidden="true"
+              />
+              Google Reviews
+            </a>
+          </p>
+        </li>
+      </ul>
+      <picture class="cs-background">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model5.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model5.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model5.jpg"
+          alt="people"
+          width="522"
+          height="771"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #contact-1601 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: column;
+        /* 48px - 80px */
+        gap: clamp(3rem, 6vw, 5rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(600 / 16 * 1rem);
+        /* resets to 0 at tablet */
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        margin: 0 0 calc(32 / 16 * 1rem) 0;
+      }
+
+      .cs-form {
+        width: 100%;
+        padding: 0;
+        /* prevents flexbox from affecting height and width */
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-label {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        width: 100%;
+        color: var(--headerColor);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: calc(4 / 16 * 1rem);
+
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-input {
+        font-size: calc(16 / 16 * 1rem);
+        width: 100%;
+        /* 46px - 56px */
+        height: clamp(2.875rem, 4vw, 3.5rem);
+        padding: 0;
+        padding-left: calc(24 / 16 * 1rem);
+        color: var(--headerColor);
+        background-color: #f7f7f7;
+        border: none;
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+        &::placeholder {
+          color: #7d799c;
+          opacity: 0.6;
+        }
+      }
+
+      .cs-textarea {
+        min-height: calc(120 / 16 * 1rem);
+        padding-top: calc(24 / 16 * 1rem);
+        font-family: inherit;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        border: none;
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #fff;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-submit {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .cs-wrapper {
+        /* 32px - 108px */
+        padding: clamp(2rem, 8vw, 6.75rem) 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-card-group {
+        width: 75%;
+        max-width: calc(413 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 16px - 20px */
+        gap: clamp(1rem, 2.3vw, 1.25rem);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-item {
+        text-align: left;
+        list-style: none;
+        width: 100%;
+        margin: 0;
+        /* 16px - 40px top & Bottom */
+        /* 24px - 40px left & right */
+        padding: clamp(1rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 2.5rem);
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        border: 1px solid #e8e8e8;
+        background-color: #fff;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+          &:before {
+            opacity: 1;
+          }
+
+          .cs-header {
+            color: var(--primary);
+          }
+
+          .cs-item-text,
+          .cs-link {
+            color: var(--bodyTextColorWhite);
+          }
+
+          .cs-text,
+          .cs-link {
+            opacity: 0.8;
+          }
+
+          .cs-link {
+            &:hover {
+              color: var(--primary);
+            }
+          }
+
+          .cs-icon {
+            filter: grayscale(1) brightness(1000%);
+          }
+        }
+
+        &:before {
+          /* hover border and background */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: #1a1a1a;
+          opacity: 0;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: opacity 0.3s;
+        }
+      }
+
+      .cs-header {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        text-align: inherit;
+        font-weight: 700;
+        /* 12px - 16px */
+        margin: 0 0 clamp(0.75rem, 1.6vw, 1rem);
+        display: block;
+        transition: color 0.3s;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        margin: 0;
+        color: var(--bodyTextColor);
+        display: block;
+        transition: color 0.3s;
+      }
+
+      .cs-link {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        margin: 0;
+        color: var(--bodyTextColor);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: calc(4 / 16 * 1rem);
+        transition: color 0.3s;
+      }
+
+      .cs-icon {
+        width: calc(16 / 16 * 1rem);
+        height: auto;
+      }
+
+      .cs-background {
+        height: 100%;
+        width: 100%;
+        max-width: calc(522 / 16 * 1rem);
+        position: absolute;
+        /* 60px - 188px */
+        right: clamp(3.75rem, 9vw, 11.75rem);
+        top: 0;
+        z-index: -1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #contact-1601 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        /* removed at large desktop. This is to clip the cs-background */
+        overflow: hidden;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .cs-content {
+        text-align: left;
+        width: 42%;
+        margin: 0;
+        padding: 0;
+        align-items: flex-start;
+        /* sends it to the right in the 2nd position */
+        order: 2;
+      }
+
+      .cs-form {
+        padding: 0;
+      }
+
+      .cs-submit {
+        margin-left: 0;
+      }
+
+      .cs-wrapper {
+        width: 50%;
+        max-width: calc(630 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        padding: 0;
+      }
+
+      .cs-card-background {
+        display: none;
+      }
+
+      .cs-background {
+        display: block;
+      }
+    }
+  }
+
+  /* Large Desktop - 1500px */
+  @media only screen and (min-width: 93.75rem) {
+    #contact-1601 {
+      .cs-container {
+        overflow: visible;
+      }
+
+      .cs-background {
+        right: calc(188 / 16 * 1rem);
+      }
+    }
+  }
+</style>

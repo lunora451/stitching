@@ -1,0 +1,257 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Why Choose                  --><!-- ============================================ -->
+<section id="why-choose-507">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex">
+        <span class="cs-topper">Sustainable Overhead</span>
+        <h2 class="cs-title">Why Choose Us</h2>
+      </div>
+      <p class="cs-text">
+        Elementum sagittis vitae et leo duis ut diam. In nibh mauris cursus
+        mattis molestie a iaculis at
+      </p>
+    </div>
+    <div class="cs-flex-group">
+      <!--Stats List-->
+      <ul class="cs-card-group">
+        <li class="cs-stats-item">
+          <span class="cs-number">200+</span>
+          <span class="cs-desc">Lorem Ipsum Dolor Sit Amert</span>
+        </li>
+        <li class="cs-stats-item">
+          <span class="cs-number">5/5</span>
+          <span class="cs-desc">Lorem Ipsum Dolor Sit Amert</span>
+        </li>
+        <li class="cs-stats-item">
+          <span class="cs-number">100%</span>
+          <span class="cs-desc">Lorem Ipsum Dolor Sit Amert</span>
+        </li>
+        <li class="cs-stats-item">
+          <span class="cs-number">100%</span>
+          <span class="cs-desc">Lorem Ipsum Dolor Sit Amert</span>
+        </li>
+      </ul>
+      <!--Qualities List-->
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <span class="cs-li-number">01</span>
+          <div class="cs-li-flex">
+            <h3 class="cs-h3">Lorem Ipsum Dolor</h3>
+            <p class="cs-li-text">
+              Senectus et netus et malesuada. Nunc pulvinar sapien et ligula
+              ullam corper malesuada proin
+            </p>
+          </div>
+        </li>
+        <li class="cs-li">
+          <span class="cs-li-number">02</span>
+          <div class="cs-li-flex">
+            <h3 class="cs-h3">Lorem Ipsum Dolor</h3>
+            <p class="cs-li-text">
+              Senectus et netus et malesuada. Nunc pulvinar sapien et ligula
+              ullam corper malesuada proin
+            </p>
+          </div>
+        </li>
+        <li class="cs-li">
+          <span class="cs-li-number">03</span>
+          <div class="cs-li-flex">
+            <h3 class="cs-h3">Lorem Ipsum Dolor</h3>
+            <p class="cs-li-text">
+              Senectus et netus et malesuada. Nunc pulvinar sapien et ligula
+              ullam corper malesuada proin
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---        Why Choose          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #why-choose-507 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1em);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        max-width: calc(480 / 16 * 1rem);
+      }
+
+      .cs-flex-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        /* changes to 20px at tablet */
+        gap: calc(48 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        width: 100%;
+        max-width: calc(450 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        /* 36px - 96px */
+        column-gap: clamp(2.25rem, 8vw, 6rem);
+        /* 24px - 48px */
+        row-gap: clamp(1.5rem, 5vw, 3rem);
+      }
+
+      .cs-stats-item {
+        list-style: none;
+        width: 40%;
+        max-width: calc(160 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cs-number {
+        font-size: var(--headerFontSize);
+        font-weight: 700;
+        line-height: 1.2em;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+        color: var(--primary);
+        display: block;
+      }
+
+      .cs-desc {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        line-height: 1.5em;
+        max-width: calc(168 / 16 * 1rem);
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-ul {
+        max-width: calc(630 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: calc(28 / 16 * 1rem);
+      }
+
+      .cs-li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2vw, 1.5625rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        /* 16px - 20px */
+        margin: 0 0 clamp(1rem, 1.5vw, 1.25rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-li-number {
+        font-size: calc(25 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 900;
+        color: #dad9e3;
+      }
+
+      .cs-li-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.7vw, 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #why-choose-507 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+
+      .cs-title {
+        margin: 0;
+      }
+
+      .cs-text {
+        width: 50%;
+        margin: 0;
+      }
+
+      .cs-flex-group {
+        justify-content: space-between;
+        flex-direction: row;
+        /* 44px - 84px */
+        padding-left: clamp(2.75rem, 6.2vw, 5.25rem);
+        box-sizing: border-box;
+        gap: calc(20 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        width: 47%;
+        /* prevent flexbox from squishing it */
+        flex: none;
+      }
+    }
+  }
+
+  /* Large Desktop 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #why-choose-507 {
+      .cs-text {
+        /* makes the left edge of the cs-text line up with the left edge of the numbers underneath it */
+        margin-right: calc(150 / 16 * 1rem);
+      }
+    }
+  }
+</style>

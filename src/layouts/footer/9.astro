@@ -1,0 +1,305 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Footer                     --><!-- ============================================ -->
+<footer id="cs-footer-1761">
+  <div class="cs-container">
+    <!-- Logo Group -->
+    <div class="cs-logo-group">
+      <img
+        class="cs-logomark"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-logomark.svg"
+        alt="logo"
+        loading="lazy"
+        decoding="async"
+        height="100"
+        width="122"
+      />
+      <h2 class="cs-title">Achieve <br />Wellbeing</h2>
+      <span class="cs-outline">Core Strength</span>
+    </div>
+    <div class="cs-ul-wrapper">
+      <!-- Contact Info -->
+      <img
+        class="cs-logo"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-logo-horizontal.png"
+        alt="logo"
+        loading="lazy"
+        decoding="async"
+        height="48"
+        width="217"
+      />
+      <p class="cs-text">
+        Welcome to Stitch Fitness! We believe that true wellness encompasses the
+        mind, body & soul.
+      </p>
+      <ul class="cs-ul cs-ul-contact">
+        <li class="cs-li">
+          <span class="cs-topper">Call us anytime</span>
+          <a class="cs-contact" href="">+123 458 789412</a>
+        </li>
+        <li class="cs-li">
+          <span class="cs-topper">Visit our location</span>
+          <a class="cs-contact" href=""
+            >17110 116th Ave SE Unit <br />Renton, WA 38058-5005</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- Links -->
+    <div class="cs-ul-wrapper">
+      <span class="cs-header">Our Services</span>
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <a class="cs-link" href="">Personal Training</a>
+        </li>
+        <li class="cs-li">
+          <a class="cs-link" href="">Group Workout</a>
+        </li>
+        <li class="cs-li">
+          <a class="cs-link" href="">Muscle Building</a>
+        </li>
+        <li class="cs-li">
+          <a class="cs-link" href="">Virtual Gym Training</a>
+        </li>
+        <li class="cs-li">
+          <a class="cs-link" href="">Weightloss Training</a>
+        </li>
+        <li class="cs-li">
+          <a class="cs-link" href="">Body Stretching</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="cs-bottom">
+    <span class="cs-credit">
+      © Copyright 2024 <a href="" class="cs-credit-link" target="_blank"
+        >Stitch Gym</a
+      >
+    </span>
+    <div class="cs-bottom-links">
+      <a href="" class="cs-bottom-link">Terms & Conditions</a>
+      <a href="" class="cs-bottom-link">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Footer            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #cs-footer-1761 {
+      padding: var(--sectionPadding);
+      /* 30px - 50px */
+      padding-bottom: clamp(1.875rem, 5vw, 3.125rem);
+      position: relative;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        column-gap: calc(68 / 16 * 1rem);
+      }
+
+      .cs-logo-group {
+        /* takes up all the space, lets the other ul's wrap below it */
+        width: 100%;
+        /* 40px - 60px */
+        margin: 0 0 clamp(2.5rem, 7vw, 3.75rem);
+        position: relative;
+      }
+
+      .cs-logomark {
+        width: auto;
+        height: calc(100 / 16 * 1rem);
+        opacity: 0.12;
+      }
+
+      .cs-title {
+        /* 31px - 39px */
+        font-size: clamp(1.9375rem, 7vw, 3.0625rem);
+        max-width: 23ch;
+        margin: calc(48 / 16 * 1rem) 0 calc(8 / 16 * 1rem);
+      }
+
+      .cs-outline {
+        /* 31px - 39px */
+        font-size: clamp(1.9375rem, 1vw, 2.4375rem);
+        text-transform: uppercase;
+        font-weight: 900;
+        line-height: 1.2em;
+        color: #fff;
+        /* text outline styles */
+        -webkit-text-stroke: 1px var(--primary);
+      }
+
+      .cs-header {
+        font-size: calc(25 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.5em;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+        color: var(--headerColor);
+        display: block;
+        position: relative;
+      }
+
+      .cs-logo {
+        width: calc(217 / 16 * 1rem);
+        height: auto;
+      }
+
+      .cs-text {
+        max-width: calc(412 / 16 * 1rem);
+        margin: calc(16 / 16 * 1rem) 0 0;
+      }
+
+      .cs-ul-wrapper {
+        margin: 0 0 calc(60 / 16 * 1rem);
+      }
+
+      .cs-ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-ul-contact {
+        /* 32px - 40px */
+        margin: clamp(2rem, 5vw, 2.5rem) 0 0;
+        gap: calc(32 / 16 * 1rem);
+      }
+
+      .cs-li {
+        list-style: none;
+      }
+
+      .cs-contact {
+        font-size: calc(20 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-decoration: none;
+        color: var(--headerColor);
+      }
+
+      .cs-link {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-align: left;
+        text-decoration: none;
+        color: var(--bodyTextColor);
+        display: inline-flex;
+        align-items: flex-start;
+        gap: calc(8 / 16 * 1rem);
+        transition: color 0.3s;
+
+        &:hover {
+          color: var(--primaryLight);
+        }
+      }
+
+      .cs-bottom {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem); /* 28px - 40px */
+        margin: 0 auto;
+        padding-top: clamp(1.75rem, 3vw, 2.5rem);
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-credit,
+      .cs-bottom-link,
+      .cs-credit-link {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-decoration: none;
+        width: auto;
+        margin: 0;
+        color: var(--bodyTextColor);
+        display: inline-block;
+        position: relative;
+        transition: color 0.3s;
+      }
+
+      .cs-credit-link {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-decoration: none;
+        width: auto;
+        margin: 0;
+        color: inherit;
+        display: inline-block;
+        position: relative;
+
+        &:hover {
+          color: var(--primary);
+        }
+      }
+
+      .cs-bottom-links {
+        display: flex;
+      }
+
+      .cs-bottom-link {
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          color: var(--primary);
+        }
+
+        &:last-of-type {
+          &:before {
+            /* separator */
+            content: "";
+            width: 1px;
+            height: calc(14 / 16 * 1rem);
+            margin: 0 calc(12 / 16 * 1rem);
+            background: currentColor;
+            opacity: 1;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #cs-footer-1761 {
+      .cs-container {
+        justify-content: flex-end;
+      }
+
+      .cs-logo-group {
+        width: fit-content;
+        margin: 0;
+        margin-right: auto;
+      }
+
+      .cs-ul-wrapper {
+        margin: 0;
+      }
+
+      .cs-bottom {
+        /* 60px - 80px */
+        margin-top: clamp(3.75rem, 6vw, 5rem);
+      }
+    }
+  }
+</style>

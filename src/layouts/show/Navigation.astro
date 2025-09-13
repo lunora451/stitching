@@ -1,0 +1,147 @@
+---
+import Navigation1 from "../navigation/1.astro";
+import Navigation2 from "../navigation/2.astro";
+import Navigation3 from "../navigation/3.astro";
+import Navigation4 from "../navigation/4.astro";
+import Navigation5 from "../navigation/5.astro";
+import Navigation6 from "../navigation/6.astro";
+import Navigation7 from "../navigation/7.astro";
+import Navigation8 from "../navigation/8.astro";
+import Navigation9 from "../navigation/9.astro";
+import Navigation10 from "../navigation/10.astro";
+import Navigation11 from "../navigation/11.astro";
+import Navigation12 from "../navigation/12.astro";
+import Navigation13 from "../navigation/13.astro";
+import Navigation14 from "../navigation/14.astro";
+import Navigation15 from "../navigation/15.astro";
+import Navigation16 from "../navigation/16.astro";
+import Navigation17 from "../navigation/17.astro";
+import Navigation18 from "../navigation/18.astro";
+import Navigation19 from "../navigation/19.astro";
+import Navigation20 from "../navigation/20.astro";
+import Navigation21 from "../navigation/21.astro";
+import Navigation22 from "../navigation/22.astro";
+---
+
+<div class="c-collection">
+  <div class="c-navigation" data-value-navigation="1"><Navigation1 /></div>
+  <div class="c-navigation" data-value-navigation="2"><Navigation2 /></div>
+  <div class="c-navigation" data-value-navigation="3"><Navigation3 /></div>
+  <div class="c-navigation" data-value-navigation="4"><Navigation4 /></div>
+  <div class="c-navigation" data-value-navigation="5"><Navigation5 /></div>
+  <div class="c-navigation" data-value-navigation="6"><Navigation6 /></div>
+  <div class="c-navigation" data-value-navigation="7"><Navigation7 /></div>
+  <div class="c-navigation" data-value-navigation="8"><Navigation8 /></div>
+  <div class="c-navigation" data-value-navigation="9"><Navigation9 /></div>
+  <div class="c-navigation" data-value-navigation="10"><Navigation10 /></div>
+  <div class="c-navigation" data-value-navigation="11"><Navigation11 /></div>
+  <div class="c-navigation" data-value-navigation="12"><Navigation12 /></div>
+  <div class="c-navigation" data-value-navigation="13"><Navigation13 /></div>
+  <div class="c-navigation" data-value-navigation="14"><Navigation14 /></div>
+  <div class="c-navigation" data-value-navigation="15"><Navigation15 /></div>
+  <div class="c-navigation" data-value-navigation="16"><Navigation16 /></div>
+  <div class="c-navigation" data-value-navigation="17"><Navigation17 /></div>
+  <div class="c-navigation" data-value-navigation="18"><Navigation18 /></div>
+  <div class="c-navigation" data-value-navigation="19"><Navigation19 /></div>
+  <div class="c-navigation" data-value-navigation="20"><Navigation20 /></div>
+  <div class="c-navigation" data-value-navigation="21"><Navigation21 /></div>
+  <div class="c-navigation" data-value-navigation="22"><Navigation22 /></div>
+</div>
+
+<style lang="scss">
+  .c-collection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .c-navigation {
+    display: none;
+  }
+  .active {
+    width: 100%;
+    display: block;
+  }
+</style>
+
+<script>
+  function changeCollection(selectedValue) {
+    const collections = document.querySelectorAll(".c-navigation");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none" est sélectionné, ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection sélectionnée
+    const targetCollection = document.querySelector(
+      `[data-value-navigation="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  // Fonction pour le hover des options
+  function previewOnHover(selectedValue) {
+    const collections = document.querySelectorAll(".c-navigation");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none", ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection en preview
+    const targetCollection = document.querySelector(
+      `[data-value-navigation="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const select = document.getElementById("template-select-navigation");
+    const collections = document.querySelectorAll(".c-navigation");
+
+    if (!select) return;
+
+    select.addEventListener("change", function () {
+      const selectedValue = this.value;
+      changeCollection(selectedValue);
+    });
+
+    // Alternative pour navigateur qui ne supportent pas mouseover sur option
+    let isSelectOpen = false;
+
+    select.addEventListener("focus", function () {
+      isSelectOpen = true;
+    });
+
+    select.addEventListener("blur", function () {
+      isSelectOpen = false;
+      // Revenir à la valeur sélectionnée quand on ferme
+      changeCollection(this.value);
+    });
+
+    // Navigation avec les flèches
+    select.addEventListener("keydown", function (e) {
+      if (isSelectOpen && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
+        setTimeout(() => {
+          // Simuler le hover sur l'option "focusée"
+          const currentValue = this.value;
+          previewOnHover(currentValue);
+        }, 10);
+      }
+    });
+  });
+</script>

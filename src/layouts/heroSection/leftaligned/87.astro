@@ -1,0 +1,470 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Hero                      --><!-- ============================================ -->
+<section id="hero-1352">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Welcome To Stitch Agency</span>
+      <h1 class="cs-title">Small Business Web Design & Development</h1>
+      <p class="cs-text">
+        No page builders or WordPress - We offer superior 100% hand-coded
+        websites with starting at $150/mo.
+      </p>
+      <a href="" class="cs-button-solid">Free Consultation</a>
+    </div>
+    <!--To make your own background crops of people use https://www.remove.bg/-->
+    <picture class="cs-picture">
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/designer.png"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/designer.png"
+      />
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/designer.png"
+        alt="accountant"
+        width="468"
+        height="658"
+      />
+    </picture>
+  </div>
+  <!--Bubble Groups-->
+  <div class="cs-bubbles cs-bubbles1" aria-hidden="true"></div>
+  <div class="cs-bubbles cs-bubbles2" aria-hidden="true"></div>
+  <!-- Background Image, background image added in the css at 1600px for parallax effect -->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/abstract-m.jpg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/abstract.jpg"
+    />
+    <img
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/abstract.jpg"
+      alt="abstract background"
+      width="2250"
+      height="1500"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    @keyframes floatAnimation {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-2rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floatAnimation2 {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-3rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    #hero-1352 {
+      /* 250px - 500px - leaving extra space for the navigation */
+      padding: clamp(15.625rem, 35.95vw, 25rem) calc(16 / 16 * 1rem) 0;
+      padding-bottom: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        /* Overlay */
+        content: "";
+        width: 100%;
+        height: 30%;
+        background: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          from(rgba(0, 0, 0, 1)),
+          to(rgba(0, 0, 0, 0))
+        );
+        background: -o-linear-gradient(
+          top,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        opacity: 1;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        /* prevents the cursor from interacting with it */
+        pointer-events: none;
+      }
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-topper {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        text-align: inherit;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        color: #e8e8e8;
+        margin-bottom: calc(8 / 16 * 1rem);
+        display: block;
+      }
+
+      .cs-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-align: inherit;
+        max-width: 20ch;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+        color: #fff;
+        position: relative;
+      }
+
+      .cs-text {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        /* 464px - 622px */
+        max-width: clamp(29rem, 60vw, 38.785rem);
+        margin: 0 0 calc(40 / 16 * 1rem) 0;
+        color: #e8e8e8;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: calc(56 / 16 * 1rem);
+        text-decoration: none;
+        font-weight: 700;
+        overflow: hidden;
+        margin: 0;
+        color: #fff;
+        padding: 0 calc(48 / 16 * 1rem);
+        border-radius: calc(30 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 0%;
+          background: #fff;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: var(--primary);
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-picture {
+        width: 100%;
+        /* 427px - 621px */
+        max-width: clamp(26.6875rem, 75vw, 38.8125rem);
+        height: auto;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        z-index: 7;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .cs-bubbles {
+        /* this scales the children inside of it down. They're all in ems so they pull from the parent font size for their value of em, in this case, the value of em is tied to the viewwidth size and stops growing when the font size is equal to 1em, which it pulls from the nearst parent with a declred font size (which is the html tag, and that tag is 16px by default) */
+        font-size: min(2.9vw, 0.9em);
+        position: absolute;
+        z-index: -1;
+      }
+
+      .cs-bubbles1 {
+        width: calc(680 / 16 * 1em);
+        height: calc(724 / 16 * 1em);
+        right: calc(-190 / 16 * 1rem);
+        /* changes to 172 at large desktop */
+        bottom: calc(-100 / 16 * 1em);
+
+        &:before {
+          /* white border bubble */
+          content: "";
+          width: calc(622 / 16 * 1em);
+          height: calc(622 / 16 * 1em);
+          background: transparent;
+          border: 1px solid #fff;
+          border-radius: 50%;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          animation-name: floatAnimation;
+          animation-duration: 7s;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+          animation-iteration-count: infinite;
+        }
+
+        &:after {
+          /* orange bubble */
+          content: "";
+          width: calc(546 / 16 * 1em);
+          height: calc(546 / 16 * 1em);
+          background: var(--primary);
+          opacity: 0.8;
+          border-radius: 50%;
+          display: block;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          z-index: -1;
+          animation-name: floatAnimation2;
+          animation-duration: 10s;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+          animation-iteration-count: infinite;
+        }
+      }
+
+      .cs-bubbles2 {
+        width: calc(330 / 16 * 1rem);
+        height: calc(476 / 16 * 1rem);
+        /* changes to 160px at larger desktop */
+        left: calc(-260 / 16 * 1rem);
+        /* removed at larger desktop */
+        top: calc(60 / 16 * 1rem);
+
+        &:before {
+          /* white border bubble */
+          content: "";
+          width: calc(330 / 16 * 1rem);
+          height: calc(330 / 16 * 1rem);
+          background: transparent;
+          border: 1px solid #fff;
+          border-radius: 50%;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          bottom: 0;
+          right: 0;
+          animation-name: floatAnimation;
+          animation-duration: 5s;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+          animation-iteration-count: infinite;
+        }
+
+        &:after {
+          /* orange bubble */
+          content: "";
+          width: calc(260 / 16 * 1rem);
+          height: calc(260 / 16 * 1rem);
+          background: var(--primary);
+          opacity: 0.8;
+          border-radius: 50%;
+          display: block;
+          position: absolute;
+          top: 0;
+          right: calc(40 / 16 * 1rem);
+          z-index: -1;
+          animation-name: floatAnimation2;
+          animation-duration: 14s;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+          animation-iteration-count: infinite;
+        }
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          /* makes the top of the image start at the top of the parent */
+          object-position: top;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-1352 {
+      /* 180px - 250px */
+      padding-bottom: clamp(11.25rem, 16.5vw, 15.625rem);
+
+      .cs-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .cs-content {
+        text-align: left;
+        width: 53%;
+        align-items: flex-start;
+      }
+
+      .cs-picture {
+        width: 100%;
+        position: absolute;
+        bottom: calc(-400 / 16 * 1rem);
+        right: calc(-160 / 16 * 1rem);
+      }
+
+      .cs-bubbles {
+        font-size: 1em;
+      }
+
+      .cs-bubbles1 {
+        /* changes to auto at large desktop */
+        right: calc(-300 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 48rem) {
+    #hero-1352 {
+      .cs-picture {
+        bottom: calc(-230 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #hero-1352 {
+      .cs-container {
+        position: initial;
+      }
+
+      .cs-picture {
+        margin-left: calc(70 / 16 * 1rem);
+        left: 50%;
+        right: auto;
+        bottom: -1px;
+      }
+
+      .cs-bubbles1 {
+        /* 200px - 450px */
+        margin-left: clamp(12.5rem, 20vw, 28.125rem);
+        top: calc(172 / 16 * 1rem);
+        right: auto;
+        bottom: auto;
+        left: 50%;
+      }
+    }
+  }
+
+  /* Large Desktop Parallax Effect - 1600px */
+  @media only screen and (min-width: 100rem) {
+    #hero-1352 {
+      .cs-background {
+        background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/abstract.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+
+  /* Larger Desktop - 1800px */
+  @media only screen and (min-width: 112.5rem) {
+    #hero-1352 {
+      .cs-bubbles2 {
+        margin-right: calc(800 / 16 * 1rem);
+        right: 50%;
+        left: auto;
+        top: calc(210 / 16 * 1rem);
+        bottom: auto;
+      }
+    }
+  }
+</style>

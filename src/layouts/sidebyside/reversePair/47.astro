@@ -1,0 +1,266 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Side By Side                  --><!-- ============================================ -->
+<section id="RPsbs-600">
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/room3-m.jpg"
+    />
+    <!--Tablet and above Image-->
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/room3.jpg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/room3.jpg"
+      alt="room"
+      width="960"
+      height="796"
+    />
+  </picture>
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Who We Are</span>
+      <h2 class="cs-title">House Painting Contractors For Oak Harbor</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+      <p class="cs-text">
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      </p>
+      <a href="" class="cs-button-solid">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--              Side By Side Reverse            -->
+<!-- ============================================ -->
+
+<section id="RPsbsr-600">
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/room3-m.jpg"
+    />
+    <!--Tablet and above Image-->
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/room3.jpg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/room3.jpg"
+      alt="room"
+      width="960"
+      height="796"
+    />
+  </picture>
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Who We Are</span>
+      <h2 class="cs-title">House Painting Contractors For Oak Harbor</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+      <p class="cs-text">
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      </p>
+      <a href="" class="cs-button-solid">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #RPsbs-600,
+    #RPsbsr-600 {
+      position: relative;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(522 / 16 * 1rem);
+        /* moved section padding to cs-content so the cs-background can be full width */
+        padding: var(--sectionPadding);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-background {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: calc(256 / 16 * 1rem);
+        z-index: 1;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #RPsbs-600,
+    #RPsbsr-600 {
+      /* 90px - 150px */
+      /* returned section padding to the section container, this Stitch has 1.5X padding top and bottom than the normal Stitch */
+      padding: clamp(5.625rem, 9vw, 9.375rem) calc(16 / 16 * 1rem);
+      .cs-container {
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+
+      .cs-background {
+        width: 50%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 50%;
+      }
+
+      .cs-content {
+        width: 45%;
+        padding: 0;
+      }
+    }
+  }
+
+  /*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #RPsbsr-600 {
+      background-color: var(--primary);
+
+      .cs-topper,
+      .cs-title,
+      .cs-text {
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-text {
+        opacity: 0.8;
+      }
+
+      .cs-button-solid {
+        background-color: #fff;
+        color: var(--headerColor);
+        transition: color 0.3s;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  /* Mobile - 768px */
+  @media only screen and (min-width: 48rem) {
+    #RPsbsr-600 {
+      .cs-container {
+        justify-content: flex-start;
+      }
+
+      .cs-background {
+        left: 50%;
+        right: auto;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,276 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Services                    --><!-- ============================================ -->
+<section id="services-2413">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex">
+        <span class="cs-topper">Main services</span>
+        <h2 class="cs-title">A Glance At Our Top Requested Offerings</h2>
+      </div>
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-dog.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-dog.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-dog.jpg"
+          alt="man with dog"
+          width="413"
+          height="501"
+        />
+      </picture>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/house.svg"
+          alt="icon"
+          width="120"
+          height="120"
+        />
+        <h3 class="cs-h3">Residential Waste Pickup</h3>
+        <p class="cs-item-text">
+          Regular yard cleanups to keep your outdoor space spotless.
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/buildings.svg"
+          alt="icon"
+          width="120"
+          height="120"
+        />
+        <h3 class="cs-h3">Commercial Property Cleanup</h3>
+        <p class="cs-item-text">
+          Professional services for HOAs, parks, and shared spaces.
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/spray.svg"
+          alt="icon"
+          width="120"
+          height="120"
+        />
+        <h3 class="cs-h3">Sanitizing Spray Treatment</h3>
+        <p class="cs-item-text">
+          Eco-friendly disinfectant spray to eliminate germs and odors.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-2413 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(738 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+        gap: calc(32 / 16 * 1rem);
+      }
+
+      .cs-title {
+        margin: 0;
+      }
+
+      .cs-card-group {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: calc(20 / 16 * 1rem);
+      }
+
+      .cs-item {
+        width: 100%;
+        text-align: left;
+        list-style: none;
+        margin: 0;
+        /* 24px - 40px */
+        padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 4vw, 2.5rem);
+        border-radius: calc(12 / 16 * 1rem);
+        background-color: #fff;
+        overflow: hidden;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        grid-column: span 12;
+        grid-row: span 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: var(--primary);
+          opacity: 0.05;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+      }
+
+      .cs-icon {
+        /* 72px - 100px */
+        width: clamp(4.5rem, 9vw, 6.25rem);
+        height: auto;
+        /* 24px - 40px */
+        margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+      }
+
+      .cs-h3 {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: bold;
+        text-align: inherit;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        max-width: calc(450 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: 59vw;
+        max-height: calc(350 / 16 * 1rem);
+        box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: calc(16 / 16 * 1rem);
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 700px */
+  @media only screen and (min-width: 43.75rem) {
+    #services-2413 {
+      .cs-content {
+        flex-direction: row;
+        align-items: stretch;
+        gap: calc(80 / 16 * 1rem);
+      }
+
+      .cs-flex {
+        padding-bottom: calc(80 / 16 * 1rem);
+        align-self: flex-start;
+      }
+
+      .cs-item {
+        grid-column: span 4;
+      }
+
+      .cs-picture {
+        height: auto;
+        min-height: calc(212 / 16 * 1rem);
+        max-height: 100%;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #services-2413 {
+      .cs-container {
+        align-items: flex-end;
+      }
+
+      .cs-content {
+        width: 53vw;
+        /* 80px - 160px */
+        padding-right: clamp(5rem, 10vw, 10rem);
+        box-sizing: border-box;
+      }
+
+      .cs-flex {
+        padding-bottom: 0;
+      }
+
+      .cs-card-group {
+        /* 200px - 325px */
+        padding-left: clamp(12.5rem, 20vw + 1rem, 20.3125rem);
+      }
+
+      .cs-picture {
+        width: 29.4vw;
+        max-width: calc(413 / 16 * 1rem);
+        height: auto;
+        position: absolute;
+        left: 0;
+        top: calc(20 / 16 * 1rem);
+        bottom: calc(80 / 16 * 1rem);
+      }
+    }
+  }
+</style>

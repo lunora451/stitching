@@ -1,0 +1,280 @@
+---
+title: "Page 49";
+---
+
+<!-- ============================================ --><!--                  Services                    --><!-- ============================================ -->
+<section id="services-264">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Services</span>
+      <h2 class="cs-title">What We Do</h2>
+      <p class="cs-text">
+        We are a full service construction company offering everything from
+        residential and commercial painting to full home remodels and new home
+        additions.
+      </p>
+      <a href="/portfolio.html" class="cs-button-solid">View Portfolio</a>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <h3 class="cs-h3">New Home Construction</h3>
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Services/s1.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Services/s1.jpg"
+          />
+          <img
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimages2.nyc3.digitaloceanspaces.com/Services/s1.jpg"
+            alt="house"
+            width="275"
+            height="132"
+          />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Renovations</h3>
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Services/s2.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Services/s2.jpg"
+          />
+          <img
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimages2.nyc3.digitaloceanspaces.com/Services/s2.jpg"
+            alt="stairs"
+            width="275"
+            height="132"
+          />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Additions</h3>
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Services/s3.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Services/s3.jpg"
+          />
+          <img
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimages2.nyc3.digitaloceanspaces.com/Services/s3.jpg"
+            alt="bathroom"
+            width="275"
+            height="132"
+          />
+        </picture>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-264 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #000;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--secondaryLight);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #fff;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: calc(8 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 60vw;
+        max-height: calc(250 / 16 * 1rem);
+        font-size: clamp(1rem, 1.7vw, 1.5rem);
+        color: #fff;
+        /* 16px - 20px top & bottom */
+        /* 20px - 24px left & right */
+        padding: clamp(1rem, 2vw, 1.25rem) clamp(1.25rem, 2vw, 1.5rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+      }
+
+      .cs-h3 {
+        /* 16px - 25px */
+        font-size: clamp(1rem, 2vw, 1.5625rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        display: block;
+      }
+
+      .cs-picture {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+
+        &:before {
+          /* top right box */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: #000;
+          opacity: 0.4;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          transition: opacity 0.3s;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          transition: transform 0.3s;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-264 {
+      .cs-container {
+        flex-direction: row;
+      }
+
+      .cs-card-group {
+        width: 64%;
+        max-width: calc(867 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+        /* 16px - 20px */
+        gap: clamp(1rem, 1.5vw, 1.25rem);
+        flex: none;
+      }
+
+      .cs-item {
+        width: 100%;
+        height: 50vw;
+        max-width: calc(275 / 16 * 1rem);
+        max-height: calc(460 / 16 * 1rem);
+
+        &:hover {
+          .cs-picture {
+            &:before {
+              opacity: 0.7;
+            }
+            img {
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+    }
+  }
+</style>

@@ -1,0 +1,155 @@
+---
+import Blog1 from "../blog/1.astro";
+import Blog2 from "../blog/2.astro";
+import Blog3 from "../blog/3.astro";
+import Blog4 from "../blog/4.astro";
+import Blog5 from "../blog/5.astro";
+import Blog6 from "../blog/6.astro";
+import Blog7 from "../blog/7.astro";
+import Blog8 from "../blog/8.astro";
+import Blog9 from "../blog/9.astro";
+import Blog10 from "../blog/10.astro";
+import Blog11 from "../blog/11.astro";
+import Blog12 from "../blog/12.astro";
+import Blog13 from "../blog/13.astro";
+---
+
+<div class="c-collection">
+  <div class="c-blog" data-value-blog="1">
+    <Blog1 />
+  </div>
+  <div class="c-blog" data-value-blog="2">
+    <Blog2 />
+  </div>
+  <div class="c-blog" data-value-blog="3">
+    <Blog3 />
+  </div>
+  <div class="c-blog" data-value-blog="4">
+    <Blog4 />
+  </div>
+  <div class="c-blog" data-value-blog="5">
+    <Blog5 />
+  </div>
+  <div class="c-blog" data-value-blog="6">
+    <Blog6 />
+  </div>
+  <div class="c-blog" data-value-blog="7">
+    <Blog7 />
+  </div>
+  <div class="c-blog" data-value-blog="8">
+    <Blog8 />
+  </div>
+  <div class="c-blog" data-value-blog="9">
+    <Blog9 />
+  </div>
+  <div class="c-blog" data-value-blog="10">
+    <Blog10 />
+  </div>
+  <div class="c-blog" data-value-blog="11">
+    <Blog11 />
+  </div>
+  <div class="c-blog" data-value-blog="12">
+    <Blog12 />
+  </div>
+  <div class="c-blog" data-value-blog="13">
+    <Blog13 />
+  </div>
+</div>
+
+<style lang="scss">
+  .c-collection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .c-blog {
+    display: none;
+  }
+  .active {
+    width: 100%;
+    display: block;
+  }
+</style>
+
+<script>
+  function changeCollection(selectedValue) {
+    const collections = document.querySelectorAll(".c-blog");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none" est sélectionné, ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection sélectionnée
+    const targetCollection = document.querySelector(
+      `[data-value-blog="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  // Fonction pour le hover des options
+  function previewOnHover(selectedValue) {
+    const collections = document.querySelectorAll(".c-blog");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none", ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection en preview
+    const targetCollection = document.querySelector(
+      `[data-value-blog="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const select = document.getElementById("template-select-blog");
+    const collections = document.querySelectorAll(".c-blog");
+
+    if (!select) return;
+
+    select.addEventListener("change", function () {
+      const selectedValue = this.value;
+      changeCollection(selectedValue);
+    });
+
+    // Alternative pour navigateur qui ne supportent pas mouseover sur option
+    let isSelectOpen = false;
+
+    select.addEventListener("focus", function () {
+      isSelectOpen = true;
+    });
+
+    select.addEventListener("blur", function () {
+      isSelectOpen = false;
+      // Revenir à la valeur sélectionnée quand on ferme
+      changeCollection(this.value);
+    });
+
+    // Navigation avec les flèches
+    select.addEventListener("keydown", function (e) {
+      if (isSelectOpen && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
+        setTimeout(() => {
+          // Simuler le hover sur l'option "focusée"
+          const currentValue = this.value;
+          previewOnHover(currentValue);
+        }, 10);
+      }
+    });
+  });
+</script>

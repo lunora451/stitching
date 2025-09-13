@@ -1,0 +1,314 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Services                   --><!-- ============================================ -->
+<section id="services-1330">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our services</span>
+      <h2 class="cs-title">
+        We Provide High-Quality Accounting & Tax Services
+      </h2>
+      <p class="cs-text">
+        In the new era of technology we look in the future with certainty and
+        for any post types, or just they are so much great of all to a program.
+      </p>
+      <a href="" class="cs-button-solid">View All</a>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/money.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="33"
+            height="38"
+            aria-hidden="true"
+          />
+        </picture>
+        <!-- Text Grouped For Flexbox-->
+        <div class="cs-text-group">
+          <h3 class="cs-h3">Financial Planning</h3>
+          <p class="cs-item-text">
+            The ability for the integrating them elit to a marketing team to see
+            all orchi in velit officia consequat duis enim save.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/fist.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="33"
+            height="38"
+            aria-hidden="true"
+          />
+        </picture>
+        <!-- Text Grouped For Flexbox-->
+        <div class="cs-text-group">
+          <h3 class="cs-h3">Legal Support</h3>
+          <p class="cs-item-text">
+            The ability for the integrating them elit to a marketing team to see
+            all orchi in velit officia consequat duis enim save.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/percent-drop.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="33"
+            height="38"
+            aria-hidden="true"
+          />
+        </picture>
+        <!-- Text Grouped For Flexbox-->
+        <div class="cs-text-group">
+          <h3 class="cs-h3">Tax Disputes</h3>
+          <p class="cs-item-text">
+            The ability for the integrating them elit to a marketing team to see
+            all orchi in velit officia consequat duis enim molit.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/clipboard.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="33"
+            height="38"
+            aria-hidden="true"
+          />
+        </picture>
+        <!-- Text Grouped For Flexbox-->
+        <div class="cs-text-group">
+          <h3 class="cs-h3">Zero Reporting</h3>
+          <p class="cs-item-text">
+            The ability for the integrating them elit to a marketing team to see
+            all orchi in velit officia consequat duis enim molit.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-1330 {
+      padding: var(--sectionPadding);
+      background-color: #1a1a1a;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+      }
+
+      .cs-title {
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        text-align: center;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        font-weight: 700;
+        text-decoration: none;
+        min-width: calc(150 / 16 * 1rem);
+        margin: 0;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 calc(24 / 16 * 1rem);
+        color: var(--headerColor);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #000;
+          opacity: 1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #fff;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        max-width: calc(847 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        justify-content: center;
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        /* .cs-h3 and .cs-item-text both use text-align: inherit, so change the below to affect the whole item */
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+        /* 20px - 48px */
+        padding: clamp(1.25rem, 2.2vw + 1rem, 3rem);
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        grid-column: span 12;
+        flex-direction: column;
+        transition: border-color 0.3s;
+
+        &:hover {
+          border-color: var(--primary);
+
+          .cs-h3 {
+            color: var(--primary);
+          }
+
+          .cs-item-text {
+            color: #fff;
+          }
+
+          .cs-icon {
+            transform: rotateY(360deg) translateY(-0.25rem);
+          }
+        }
+      }
+
+      .cs-picture {
+        margin-bottom: calc(20 / 16 * 1rem);
+        border-radius: 50%;
+        position: relative;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-icon {
+        width: calc(30 / 16 * 1rem);
+        height: auto;
+        display: block;
+        transition: transform 0.5s;
+      }
+
+      .cs-h3 {
+        font-size: calc(20 / 16 * 1rem);
+        text-align: inherit;
+        line-height: 1.5em;
+        margin: 0;
+        margin-bottom: calc(12 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+        transition: color 0.3s;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        text-align: inherit;
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-1330 {
+      .cs-item {
+        grid-column: span 6;
+        margin: 0;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #services-1330 {
+      .cs-container {
+        flex-direction: row;
+      }
+
+      .cs-content {
+        max-width: calc(350 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .cs-title {
+        max-width: calc(750 / 16 * 1rem);
+      }
+
+      .cs-item {
+        max-width: none;
+      }
+    }
+  }
+</style>

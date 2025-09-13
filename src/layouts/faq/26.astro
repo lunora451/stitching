@@ -1,0 +1,305 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    FAQ                       --><!-- ============================================ -->
+<section id="faq-993">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">FAQ’s</span>
+      <h2 class="cs-title">Frequently Asked Questions</h2>
+      <p class="cs-text">
+        At Stitch Salon, we believe in only giving quality service and
+        experience you cannot find in many other places. Stitch Salon is here
+        when you’re ready for a transformation!
+      </p>
+    </div>
+    <div class="cs-flex-group">
+      <ul class="cs-faq-group">
+        <!-- Active class added as default -->
+        <li class="cs-faq-item active">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              What is the difference between a lawyer and an attorney?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            In the U.S., the terms lawyer and attorney are often used
+            interchangeably. A lawyer provides legal services such as giving
+            legal advice, writing legal documents and providing policy counsel
+            to governments. An attorney, on top of these things also holds a
+            state or regional license to represent clients in a law court.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text"> How do I get started? </span>
+          </button>
+          <p class="cs-item-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              I'm New to the United States and Need an Attorney. Can I Hire a
+              Stitch Lawyer Instead?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              What Do Lawyers Do? Do They Spend Most of Their Time Arguing Cases
+              in Court?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              May a Lawyer Who Is Licensed in One State Practice Law in Another
+              State?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <img
+    class="cs-floater1"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hands1.png"
+    alt="hands"
+    width="397"
+    height="559"
+  />
+  <img
+    class="cs-floater2"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hands2.png"
+    alt="hands"
+    width="322"
+    height="354"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---            FAQ             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #faq-993 {
+      padding: var(--sectionPadding);
+      position: relative;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1064 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-faq-group {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-faq-item {
+        list-style: none;
+        width: 100%;
+        background-color: #f7f7f7;
+        /* clips all corners of the button that overlap the rounded border */
+        overflow: hidden;
+        transition: border-bottom 0.3s;
+
+        &.active {
+          background-color: var(--headerColor);
+          .cs-button {
+            background-color: #1a1a1a;
+            color: var(--primary);
+            border-bottom: 1px solid #484848;
+            &:before {
+              background-color: var(--primary);
+              transform: rotate(315deg);
+            }
+            &:after {
+              background-color: var(--primary);
+              transform: rotate(-315deg);
+            }
+          }
+          .cs-item-p {
+            height: auto;
+            /* 20px - 24px top & bottom */
+            /* 16px - 24px left & right */
+            padding: clamp(1.25rem, 1.3vw, 1.5rem) clamp(1rem, 2vw, 1.5rem);
+            opacity: 1;
+            color: var(--bodyTextColorWhite);
+          }
+        }
+      }
+
+      .cs-button {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        line-height: 1.2em;
+        text-align: left;
+        font-weight: bold;
+        /* 20px - 24px */
+        padding: clamp(1.25rem, 2vw, 1.5rem);
+        background-color: #f7f7f7;
+        border: none;
+        color: var(--headerColor);
+        display: block;
+        width: 100%;
+        position: relative;
+        transition:
+          background-color 0.3s,
+          color 0.3s;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:before {
+          /* left line */
+          content: "";
+          width: calc(8 / 16 * 1rem);
+          height: calc(2 / 16 * 1rem);
+          background-color: var(--headerColor);
+          opacity: 1;
+          border-radius: 50%;
+          position: absolute;
+          display: block;
+          top: 50%;
+          right: calc(24 / 16 * 1rem);
+          transform: rotate(45deg);
+          /* animate the transform from the left side of the x axis, and the center of the y */
+          transform-origin: left center;
+          transition: transform 0.5s;
+        }
+
+        &:after {
+          /* right line */
+          content: "";
+          width: calc(8 / 16 * 1rem);
+          height: calc(2 / 16 * 1rem);
+          background-color: var(--headerColor);
+          opacity: 1;
+          border-radius: 50%;
+          position: absolute;
+          display: block;
+          top: 50%;
+          right: calc(21 / 16 * 1rem);
+          transform: rotate(-45deg);
+          /* animate the transform from the right side of the x axis, and the center of the y */
+          transform-origin: right center;
+          transition: transform 0.5s;
+        }
+      }
+
+      .cs-button-text {
+        width: 80%;
+        display: block;
+      }
+
+      .cs-item-p {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        width: 90%;
+        height: 0;
+        margin: 0;
+        /* 16px - 24px */
+        padding: 0 clamp(1rem, 2vw, 1.5rem);
+        opacity: 0;
+        color: var(--bodyTextColor);
+        /* clips the text so it doesn't show up */
+        overflow: hidden;
+        transition:
+          opacity 0.3s,
+          padding-bottom 0.3s;
+      }
+
+      .cs-floater1,
+      .cs-floater2 {
+        display: none;
+      }
+    }
+  }
+
+  /* Large Desktop - 1800px */
+  @media only screen and (min-width: 112.5rem) {
+    #faq-993 {
+      .cs-floater1 {
+        width: calc(397 / 16 * 1rem);
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .cs-floater2 {
+        width: calc(322 / 16 * 1rem);
+        height: auto;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+</style><script>
+  const faqItems = Array.from(document.querySelectorAll(".cs-faq-item"));
+  for (const item of faqItems) {
+    const onClick = () => {
+      item.classList.toggle("active");
+    };
+    item.addEventListener("click", onClick);
+  }
+</script>

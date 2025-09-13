@@ -1,0 +1,325 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Steps                      --><!-- ============================================ -->
+<section id="steps-2014">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">How It Works</span>
+      <h2 class="cs-title">Dentistry for The Whole Family</h2>
+      <p class="cs-text">
+        Orci eu lobortis elementum nibh tellus. Vulputate eu scelerisque felis
+        imperdiet proin fermentum leo vel. Luctus accumsan tortor posuere ac ut
+        consequat semper. Et pharetra pharetra massa massa ultricies mi quis.
+      </p>
+      <a class="cs-button-solid" href="">Our Menu</a>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <h3 class="cs-h3">Book Appointment</h3>
+        <p class="cs-item-text">
+          Dentitch provides the best service and has won many awards. Our
+          mission is to make everyone confident to give their best smile.
+        </p>
+        <div class="cs-number-wrapper">
+          <span class="cs-number">01</span>
+        </div>
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/calendar.jpg"
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/calendar.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/calendar.jpg"
+            alt="number"
+            width="48"
+            height="48"
+          />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Visit Your Doctor</h3>
+        <p class="cs-item-text">
+          Dentitch provides the best service and has won many awards. Our
+          mission is to make everyone confident to give their best smile.
+        </p>
+        <div class="cs-number-wrapper">
+          <span class="cs-number">02</span>
+        </div>
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist10.jpeg"
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist10.jpeg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist10.jpeg"
+            alt="number"
+            width="48"
+            height="48"
+          />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Take Suggested Medicine</h3>
+        <p class="cs-item-text">
+          Dentitch provides the best service and has won many awards. Our
+          mission is to make everyone confident to give their best smile.
+        </p>
+        <div class="cs-number-wrapper">
+          <span class="cs-number">03</span>
+        </div>
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/invisalign.jpg"
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/invisalign.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/invisalign.jpg"
+            alt="number"
+            width="48"
+            height="48"
+          />
+        </picture>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Steps            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #steps-2014 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: var(--primary);
+        opacity: 0.05;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(704 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-text {
+        max-width: calc(900 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+        position: relative;
+      }
+
+      .cs-item {
+        text-align: left;
+        list-style: none;
+        width: 100%;
+        /* 16px - 32px */
+        padding: clamp(1.5rem, 3.1vw, 2rem) clamp(1rem, 2.3vw, 2rem);
+        background-color: #fff;
+        border: 1px solid transparent;
+        border-radius: calc(8 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-column: span 12;
+        position: relative;
+        transition: border 0.3s;
+
+        &:hover {
+          border: 1px solid var(--primary);
+
+          .cs-h3 {
+            color: var(--primary);
+          }
+        }
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2vw, 1.5625rem);
+        line-height: 1.2em;
+        text-align: left;
+        width: 100%;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+        color: var(--headerColor);
+        transition: color 0.3s;
+      }
+
+      .cs-item-text {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        margin: 0 0 calc(24 / 16 * 1rem) 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-number-wrapper {
+        width: calc(48 / 16 * 1rem);
+        height: calc(48 / 16 * 1rem);
+        margin-top: auto;
+        margin-bottom: calc(-24 / 16 * 1rem);
+        padding: calc(10 / 16 * 1rem);
+        background-color: var(--headerColor);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+      }
+
+      .cs-number {
+        font-size: calc(20 / 16 * 1rem);
+        font-weight: 700;
+        color: #fff;
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: calc(180 / 16 * 1rem);
+        display: block;
+        flex: none;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: calc(8 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-align: center;
+        text-decoration: none;
+        min-width: calc(150 / 16 * 1rem);
+        margin: calc(32 / 16 * 1rem) 0 0 0;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        /* 32px - 48px */
+        padding: 0 clamp(2rem, 4vw, 3rem);
+        background-color: var(--primary);
+        overflow: hidden;
+        color: #fff;
+        border: none;
+        border-radius: calc(8 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #000;
+          opacity: 1;
+          border-radius: calc(4 / 16 * 1rem);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #steps-2014 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-item {
+        grid-column: span 4;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 75rem) {
+    #steps-2014 {
+      .cs-container {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      .cs-content {
+        text-align: left;
+        /* 221x - 305px */
+        max-width: clamp(13.8125rem, 21vw, 19.0625rem);
+        align-items: flex-start;
+      }
+    }
+  }
+</style>

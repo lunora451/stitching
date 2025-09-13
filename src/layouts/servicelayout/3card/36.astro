@@ -1,0 +1,309 @@
+---
+title: "Page 36";
+---
+
+<!-- ============================================ --><!--                   Services                   --><!-- ============================================ -->
+<section id="services-877">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Services</span>
+      <h2 class="cs-title">Here to Help You Find a Path Forward</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, minus
+        temporibus debitis quo nulla molestias quibusdam quisquam dicta eligendi
+        nam. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Voluptatibus, eum.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <picture class="cs-picture" aria-hidden="true">
+            <source
+              media="(max-width: 600px)"
+              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy3.jpg"
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy3.jpg"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy3.jpg"
+              alt="therapy"
+              width="305"
+              height="200"
+            />
+          </picture>
+          <h3 class="cs-h3">Door Cleaning</h3>
+          <p class="cs-item-text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus
+            beatae placeat!
+          </p>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <picture class="cs-picture" aria-hidden="true">
+            <source
+              media="(max-width: 600px)"
+              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy4.jpg"
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy4.jpg"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy4.jpg"
+              alt="therapy"
+              width="305"
+              height="200"
+            />
+          </picture>
+          <h3 class="cs-h3">Door Cleaning</h3>
+          <p class="cs-item-text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus
+            beatae placeat!
+          </p>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <picture class="cs-picture" aria-hidden="true">
+            <source
+              media="(max-width: 600px)"
+              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy5.jpg"
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy5.jpg"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy5.jpg"
+              alt="therapy"
+              width="305"
+              height="200"
+            />
+          </picture>
+          <h3 class="cs-h3">Door Cleaning</h3>
+          <p class="cs-item-text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus
+            beatae placeat!
+          </p>
+        </a>
+      </li>
+    </ul>
+    <a href="" class="cs-button-solid">View All</a>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-877 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at Tablet */
+        max-width: calc(784 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title {
+        /* max width of 22 characters, includes spaces between words */
+        max-width: 39ch;
+      }
+
+      .cs-text {
+        max-width: calc(1064 / 16 * 1rem);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: calc(20 / 16 * 1rem);
+      }
+
+      .cs-item {
+        text-align: center;
+        list-style: none;
+        width: 100%;
+        max-width: calc(500 / 16 * 1rem);
+        border-radius: calc(16 / 16 * 1rem);
+        background-color: #fff;
+        overflow: hidden;
+        grid-column: span 3;
+        position: relative;
+        z-index: 1;
+        transition:
+          box-shadow 0.3s,
+          transform 0.3s;
+
+        &:hover {
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          transform: translateY(calc(-7 / 16 * 1rem));
+          .cs-picture {
+            img {
+              opacity: 0.3;
+              transform: scale(1.1);
+            }
+          }
+          .cs-h3 {
+            color: var(--primaryLight);
+          }
+        }
+
+        &:before {
+          /* border, done in pseudo so it can sit under the picture */
+          content: "";
+          width: 100%;
+          height: 100%;
+          border-radius: calc(16 / 16 * 1rem);
+          border: 1px solid #e8e8e8;
+          /* prevents border from affecting height and width */
+          box-sizing: border-box;
+          background: transparent;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+      }
+
+      .cs-link {
+        text-decoration: none;
+        padding: 0 0 calc(20 / 16 * 1rem) 0;
+        display: block;
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: calc(200 / 16 * 1rem);
+        margin-bottom: calc(20 / 16 * 1rem);
+        background-color: var(--primaryLight);
+        /* clips the img tag corners */
+        overflow: hidden;
+        display: block;
+        position: relative;
+        z-index: 10;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          transition:
+            transform 0.6s,
+            opacity 0.3s;
+        }
+      }
+
+      .cs-h3 {
+        font-size: calc(20 / 16 * 1rem);
+        text-align: inherit;
+        line-height: 1.2em;
+        font-weight: 700;
+        color: var(--headerColor);
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        /* 16px - 24px */
+        padding: 0 clamp(1rem, 2vw, 1.5rem);
+        transition: color 0.3s;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px  */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        text-align: inherit;
+        line-height: 1.5em;
+        color: var(--bodyTextColor);
+        margin: 0;
+        padding: 0 calc(20 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-877 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+      .cs-item {
+        grid-column: span 1;
+        max-width: calc(462 / 16 * 1rem);
+      }
+    }
+  }
+</style>

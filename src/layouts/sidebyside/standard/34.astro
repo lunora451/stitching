@@ -1,0 +1,303 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Side By Side                  --><!-- ============================================ -->
+<section id="sbs-1487">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <!--Top left image-->
+      <picture class="cs-picture cs-picture1">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/child6.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/child6.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/child6.jpg"
+          alt="kid"
+          width="647"
+          height="600"
+        />
+      </picture>
+      <!--Middle image-->
+      <picture class="cs-picture cs-picture2">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kids5.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kids5.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kids5.jpg"
+          alt="kid"
+          width="320"
+          height="320"
+        />
+      </picture>
+      <!--Flower-->
+      <img
+        class="cs-flower"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/flower3.svg"
+        alt="graphic"
+        width="153"
+        height="148"
+        aria-hidden="true"
+      />
+      <!--Sqiggle-->
+      <img
+        class="cs-squiggle"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/squiggle4.svg"
+        alt="graphic"
+        width="215"
+        height="61"
+        aria-hidden="true"
+      />
+      <!--SVG Mask-->
+      <svg
+        class="cs-mask"
+        width="647"
+        height="600"
+        viewBox="0 0 647 600"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          class="cs-outer-mask"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M0 0H647V600H0V0ZM38 110C64.0297 75.766 102.579 52.0824 143 37C144.788 36.3365 146.555 35.5378 148.324 34.7378C150.529 33.7407 152.738 32.7417 155 32C251.273 0.380304 364.071 -8.26436 457 38C514.621 66.6831 553.453 118.152 591.339 168.368C596.562 175.29 601.767 182.188 607 189C657.382 254.558 650.888 352.089 614 422C585.347 476.308 539.036 519.481 487 552C403.358 604.274 320.729 610.296 236 554C116.994 474.921 -74.8032 258.339 38 110Z"
+          fill="#ffffff"></path>
+        <!--Svg Border-->
+        <path
+          class="cs-mask-border"
+          d="M609.578 419.667L614 422L609.578 419.667C645.882 350.863 651.85 255.566 603.035 192.047L603.035 192.046C597.763 185.184 592.537 178.261 587.308 171.335C549.335 121.032 511.26 70.5951 454.772 42.4761L454.772 42.476C363.478 -2.9739 252.173 5.34746 156.56 36.7504L156.558 36.7511C154.801 37.3273 153.023 38.1029 151.033 39.0003C150.82 39.0965 150.603 39.1945 150.384 39.2937C148.637 40.0841 146.708 40.9569 144.748 41.6845C104.889 56.5573 67.259 79.7797 41.9802 113.026L38 110L41.98 113.027C-12.5389 184.72 5.99713 273.442 54.3776 355.432C102.668 437.269 179.806 510.656 238.767 549.836C280.403 577.499 321.25 589.69 361.787 588.715C402.372 587.739 443.075 573.556 484.35 547.76C535.868 515.565 581.448 472.984 609.578 419.667Z"
+          stroke="#FFD3C6"
+          stroke-width="10"></path>
+      </svg>
+    </div>
+    <div class="cs-content">
+      <span class="cs-topper">About Stitch Day Care</span>
+      <h2 class="cs-title">We’re Passionate About Early Education</h2>
+      <p class="cs-text">
+        Stitch day care is a place where you can keep your baby with peace in
+        your mind when you are working in your office for the better future of
+        your child. We promise to take care of your child’s social, emotional,
+        intellectual and physical needs with sensitive care and we also ensure
+        you their security with our life.
+      </p>
+      <a href="" class="cs-button-solid">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-1487 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(584 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        /* changes to 433px at desktop */
+        max-width: calc(542 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        max-width: 20ch;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        margin: 0;
+        padding: 0 calc(48 / 16 * 1rem);
+        background-color: var(--primary);
+        overflow: hidden;
+        color: #fff;
+        border-radius: calc(30 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: var(--secondary);
+          opacity: 1;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-image-group {
+        /* scales the whole group based on the view width size and stop when that vales equals .745em, resets at desktop */
+        font-size: min(2.24vw, 0.9em);
+        width: calc(651 / 16 * 1em);
+        height: calc(679 / 16 * 1em);
+        display: block;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-picture {
+        box-sizing: border-box;
+        overflow: hidden;
+        position: absolute;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-picture1 {
+        width: calc(647 / 16 * 1em);
+        height: calc(600 / 16 * 1em);
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .cs-picture2 {
+        width: calc(320 / 16 * 1em);
+        height: calc(320 / 16 * 1em);
+        background-color: #fff;
+        border: calc(10 / 16 * 1em) solid #ffffff;
+        border-radius: 50%;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+      }
+
+      .cs-flower {
+        width: calc(153 / 16 * 1em);
+        height: auto;
+        position: absolute;
+        top: calc(43 / 16 * 1em);
+        right: calc(12 / 16 * 1em);
+        z-index: 1;
+      }
+
+      .cs-squiggle {
+        width: calc(215 / 16 * 1em);
+        height: auto;
+        position: absolute;
+        bottom: calc(145 / 16 * 1em);
+        left: calc(50 / 16 * 1em);
+      }
+
+      .cs-mask {
+        width: calc(649 / 16 * 1em);
+        height: calc(602 / 16 * 1em);
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        z-index: -1;
+      }
+
+      .cs-top {
+        width: 100%;
+        min-width: calc(1920 / 16 * 1rem);
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .cs-bottom {
+        width: 100%;
+        min-width: calc(1920 / 16 * 1rem);
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #sbs-1487 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cs-image-group {
+        font-size: min(1.2vw, 1em);
+        flex: none;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,352 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Events                     --><!-- ============================================ -->
+<section id="events-1652">
+  <div class="cs-container">
+    <div class="cs-image">
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting-women.jpeg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting-women.jpeg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting-women.jpeg"
+          alt="busines meeting"
+          width="522"
+          height="609"
+          aria-hidden="true"
+        />
+      </picture>
+    </div>
+    <div class="cs-events">
+      <div class="cs-content">
+        <span class="cs-topper">Our Events</span>
+        <h2 class="cs-title">Upcoming Events</h2>
+      </div>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <span class="cs-date">
+            <strong>26</strong>
+            Oct
+          </span>
+          <div class="cs-info-wrapper">
+            <div class="cs-info">
+              <h3 class="cs-h3">Business Transformation Summit</h3>
+              <span class="cs-location">1250 23rd Street NW, DC 20037</span>
+              <span class="cs-time">
+                <img
+                  class="cs-icon"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-clock.svg"
+                  alt="icon"
+                  width="24"
+                  height="24"
+                  loading="lazy"
+                  decoding="async"
+                  aria-hidden="true"
+                />
+                12:00AM - 02:00PM
+              </span>
+            </div>
+            <div class="cs-button-wrapper">
+              <a href="" class="cs-button-solid">Buy Ticket</a>
+            </div>
+          </div>
+        </li>
+        <li class="cs-item">
+          <span class="cs-date">
+            <strong>22</strong>
+            Oct
+          </span>
+          <div class="cs-info-wrapper">
+            <div class="cs-info">
+              <h3 class="cs-h3">Consulting Excellence Conference</h3>
+              <span class="cs-location">700 Broadway, New York, NY 1000</span>
+              <span class="cs-time">
+                <img
+                  class="cs-icon"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-clock.svg"
+                  alt="icon"
+                  width="24"
+                  height="24"
+                  loading="lazy"
+                  decoding="async"
+                  aria-hidden="true"
+                />
+                02:00AM - 4:00PM
+              </span>
+            </div>
+            <div class="cs-button-wrapper">
+              <a href="" class="cs-button-solid">Buy Ticket</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Events            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #events-1652 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .cs-image {
+        display: flex;
+        position: relative;
+        width: 100%;
+      }
+
+      .cs-picture {
+        width: 100%;
+        /* 328px - 752px */
+        height: clamp(20.5rem, 80vw, 47rem);
+        display: block;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-events {
+        width: 100%;
+        max-width: calc(738 / 16 * 1rem);
+        background-color: #f7f7f7;
+        display: flex;
+        /* 40px - 48px top */
+
+        padding: clamp(2.5rem, 4vw, 3rem) clamp(1rem, 5vw, 3rem)
+          clamp(1rem, 5vw, 3rem);
+        flex-direction: column;
+        align-items: center;
+        gap: calc(40 / 16 * 1rem);
+      }
+
+      .cs-content {
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        color: var(--headerColor);
+        margin: 0;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        /* 16px - 20px */
+        gap: clamp(1rem, 3vw, 1.25rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        background-color: #fff;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        text-decoration: none;
+        width: 100%;
+        /* 16px - 32px */
+        padding: clamp(1rem, 2vw, 2rem);
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        display: flex;
+        align-items: flex-start;
+        /* 16px - 24px */
+        gap: clamp(1rem, 2vw, 1.5rem);
+      }
+
+      .cs-date {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        /* 80px - 100px */
+        width: clamp(5rem, 10vw, 6.25rem);
+        height: clamp(5rem, 10vw, 6.25rem);
+        color: var(--primary);
+        background-color: #111926;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+        flex: none;
+
+        strong {
+          font-size: calc(31 / 16 * 1rem);
+          line-height: 1.2em;
+          color: #fff;
+        }
+      }
+
+      .cs-info-wrapper {
+        display: flex;
+        flex-direction: column;
+        /* 24px - 48px */
+        gap: clamp(1.5rem, 3vw, 3rem);
+      }
+
+      .cs-info {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cs-h3 {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 calc(8 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-location {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.6vw, 1rem);
+        line-height: 1.5em;
+        /* 8px -k 24px */
+        margin: 0 0 clamp(0.5rem, 2vw, 1.5rem);
+        color: var(--bodyTextColor);
+      }
+
+      .cs-time {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.6vw, 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+        display: flex;
+        gap: calc(8 / 16 * 1rem);
+        align-items: center;
+      }
+
+      .cs-icon {
+        width: calc(24 / 16 * 1rem);
+        height: auto;
+      }
+
+      .cs-button-wrapper {
+        display: flex;
+        position: relative;
+        align-items: center;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #events-1652 {
+      .cs-container {
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      .cs-image {
+        width: 45%;
+        max-width: calc(542 / 16 * 1rem);
+        height: auto;
+        padding-top: calc(120 / 16 * 1rem);
+        /* sends it to the right in the 2nd position */
+        order: 2;
+      }
+
+      .cs-picture {
+        max-height: none;
+        height: auto;
+      }
+
+      .cs-events {
+        min-width: calc(420 / 16 * 1rem);
+        /* 420px - 738px */
+        width: clamp(26.25rem, 52.8vw, 46.125rem);
+        /* 24px - 48px */
+        padding: clamp(1.5rem, 3vw, 3rem);
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #events-1652 {
+      .cs-info-wrapper {
+        flex-direction: row;
+      }
+    }
+  }
+</style>

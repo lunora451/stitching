@@ -1,0 +1,347 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Contact                    --><!-- ============================================ -->
+<section id="contact-1091">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <!--Top left image-->
+      <picture class="cs-picture cs-picture1">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic14.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic14.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic14.jpg"
+          alt="appliance"
+          width="364"
+          height="375"
+        />
+      </picture>
+      <!--Bottom right image-->
+      <picture class="cs-picture cs-picture2">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic15.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic15.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic15.jpg"
+          alt="appliance"
+          width="388"
+          height="388"
+        />
+      </picture>
+      <!--Stripe background-->
+      <img
+        class="cs-stripes"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/stripes.svg"
+        alt="stripes"
+        width="509"
+        height="535"
+        aria-hidden="true"
+      />
+      <!--Eclipses-->
+      <img
+        class="cs-graphic"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/eclipses.svg"
+        alt="stripes"
+        width="140"
+        height="140"
+        aria-hidden="true"
+      />
+    </div>
+    <div class="cs-content">
+      <span class="cs-topper">Contact Us</span>
+      <h2 class="cs-title">Get in Touch</h2>
+      <p class="cs-text">
+        In consequat tincidunt turpis sit amet imperdiet. Praesent Class
+        officelan nonatoureanor mauris laoreet, iaculis libero quis.
+      </p>
+      <!--Form-->
+      <form class="cs-form" id="cs-form-1091" name="Contact Form" method="post">
+        <label class="cs-label">
+          Name
+          <input
+            class="cs-input"
+            required
+            type="text"
+            id="name-1091"
+            name="name"
+            placeholder="Name"
+          />
+        </label>
+        <label class="cs-label cs-email">
+          Email
+          <input
+            class="cs-input"
+            required
+            type="email"
+            id="email-1091"
+            name="email"
+            placeholder="Email"
+          />
+        </label>
+        <label class="cs-label cs-phone">
+          Phone
+          <input
+            class="cs-input"
+            required
+            type="phone"
+            id="phone-1091"
+            name="phone"
+            placeholder="Phone"
+          />
+        </label>
+        <label class="cs-label">
+          Message
+          <textarea
+            class="cs-input cs-textarea"
+            required
+            name="Message"
+            id="message-1091"
+            placeholder="Write message..."></textarea>
+        </label>
+        <button class="cs-button-solid cs-submit" type="submit"
+          >Make an Appointment</button
+        >
+      </form>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #contact-1091-1091 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(630 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: calc(52 / 16 * 1rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(542 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin: 0 0 calc(32 / 16 * 1rem) 0;
+      }
+
+      .cs-form {
+        /* 24px - 48px top and bottom */
+        /* 20px - 32px left and right */
+        padding: clamp(1.25rem, 4.18vw, 3rem) clamp(1.25rem, 4.18vw, 2rem);
+        background-color: #f7f8f8;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-label {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        width: 100%;
+        color: var(--headerColor);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: calc(4 / 16 * 1rem);
+      }
+
+      .cs-input {
+        font-size: calc(16 / 16 * 1rem);
+        width: 100%;
+        height: calc(56 / 16 * 1rem);
+        padding: 0;
+        padding-left: calc(24 / 16 * 1rem);
+        color: var(--headerColor);
+        background-color: #fff;
+        border: none;
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+        &::placeholder {
+          color: #7d799c;
+          opacity: 0.6;
+        }
+      }
+
+      .cs-textarea {
+        min-height: calc(120 / 16 * 1rem);
+        padding-top: calc(24 / 16 * 1rem);
+        margin-bottom: calc(12 / 16 * 1rem);
+        font-family: inherit;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        border: none;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #fff;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-submit {
+        min-width: calc(283 / 16 * 1rem);
+        border-radius: 0;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .cs-image-group {
+        /* scales the whole group based on the view width size and stop when that vales equals .8em, resets at desktop */
+        font-size: min(2.235vw, 0.8em);
+        width: calc(650 / 16 * 1em);
+        height: calc(741 / 16 * 1em);
+        display: block;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-picture {
+        position: absolute;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-picture1 {
+        width: calc(413 / 16 * 1em);
+        height: calc(426 / 16 * 1em);
+        top: 0;
+        right: 0;
+        z-index: 10;
+      }
+
+      .cs-picture2 {
+        width: calc(443 / 16 * 1em);
+        height: calc(395 / 16 * 1em);
+        bottom: 0;
+        left: calc(20 / 16 * 1em);
+      }
+
+      .cs-stripes {
+        width: calc(570 / 16 * 1em);
+        height: auto;
+        display: block;
+        position: absolute;
+        top: calc(80 / 16 * 1em);
+        left: 0;
+        z-index: -1;
+      }
+
+      .cs-graphic {
+        width: calc(182 / 16 * 1em);
+        height: auto;
+        position: absolute;
+        top: calc(120 / 16 * 1em);
+        left: calc(20 / 16 * 1em);
+      }
+    }
+  }
+
+  /* Large Desktop - 1200px */
+  @media only screen and (min-width: 75rem) {
+    #contact-1091-1091 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+        gap: calc(52 / 16 * 1rem);
+      }
+
+      .cs-image-group {
+        font-size: min(1.2vw, 1em);
+        flex: none;
+        /* sends it to the right in the 2nd position */
+        order: 2;
+      }
+    }
+  }
+</style>

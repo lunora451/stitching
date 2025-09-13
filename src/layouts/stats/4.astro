@@ -1,0 +1,296 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Stats                     --><!-- ============================================ -->
+<section id="stats-2252">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <!--Main Image-->
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/bride.png"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/bride.png"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/bride.png"
+          alt="wedding bride"
+          width="565"
+          height="814"
+        />
+      </picture>
+      <!--Color Wheel-->
+      <img
+        class="cs-wheel"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/color-wheel.png"
+        alt="color wheel"
+        width="572"
+        height="572"
+        aria-hidden="true"
+      />
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <span class="cs-number">12+</span>
+        <span class="cs-header">Years of experience</span>
+        <p class="cs-text">
+          Our expert instructors give you the skills and knowledge to manage
+          process risks and show you how to continuously make your facilities
+          and operations more safe and reliable.
+        </p>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">12+</span>
+        <span class="cs-header">Years of experience</span>
+        <p class="cs-text">
+          Our expert instructors give you the skills and knowledge to manage
+          process risks and show you how to continuously make your facilities
+          and operations more safe and reliable.
+        </p>
+      </li>
+    </ul>
+  </div>
+  <!--Floating Flower-->
+  <img
+    class="cs-flower cs-flower1"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/flower15.png"
+    alt="flower"
+    width="281"
+    height="228"
+    aria-hidden="true"
+  />
+  <img
+    class="cs-flower cs-flower2"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/flower16.png"
+    alt="flower"
+    width="281"
+    height="227"
+    aria-hidden="true"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #stats-2252 {
+      padding: var(--sectionPadding);
+      padding-top: 0;
+      padding-bottom: 0;
+      background-color: #fbf5f1;
+      /* clips anything overflowing */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(584 / 16 * 1rem);
+        margin: auto;
+        padding: var(--sectionPadding);
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(32 / 16 * 1rem);
+      }
+
+      .cs-content {
+        /* set text align to center if content needs to be centered */
+        text-align: left;
+        width: 100%;
+        max-width: calc(539 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* left aligns content, set to center to align content horizontally */
+        align-items: flex-start;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(32 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cs-number {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 5vw, 3.8125rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 calc(4 / 16 * 1rem);
+        color: var(--primary);
+      }
+
+      .cs-header {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 calc(16 / 16 * 1rem);
+        color: var(--headerColor);
+      }
+
+      .cs-text {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-image-group {
+        /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
+        font-size: min(3.6vw, 1rem);
+        /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+        width: calc(400 / 16 * 1em);
+        height: calc(496 / 16 * 1em);
+        order: 2;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-picture {
+        width: auto;
+        height: calc(494 / 16 * 1em);
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: rotateY(180deg);
+
+        img {
+          width: auto;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .cs-wheel {
+        width: calc(364 / 16 * 1em);
+        height: auto;
+        object-fit: cover;
+        position: absolute;
+        top: calc(68 / 16 * 1em);
+        left: 0;
+        z-index: -2;
+      }
+
+      .cs-flower {
+        /* 136px - 211px */
+        width: clamp(8.5rem, 17vw, 13.2rem);
+        height: auto;
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #stats-2252 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        padding: var(--sectionPadding);
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .cs-card-group {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        column-gap: calc(290 / 16 * 1rem);
+        row-gap: calc(48 / 16 * 1rem);
+      }
+
+      .cs-item {
+        width: 25%;
+        max-width: calc(375 / 16 * 1rem);
+      }
+
+      .cs-image-group {
+        /* set to inherit at Large Desktop */
+        font-size: min(1.2vw, 1rem);
+        margin-top: auto;
+        order: -1;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+
+  /* Desktop - 1-24px */
+  @media only screen and (min-width: 64rem) {
+    #stats-2252 {
+      .cs-container {
+        padding-bottom: 0;
+      }
+
+      .cs-card-group {
+        padding-bottom: clamp(7.375rem, 10vw, 8.75rem);
+        column-gap: calc(500 / 16 * 1rem);
+      }
+
+      .cs-item {
+        /* in case you add another row of stats */
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+          /* 118px - 140px */
+          padding-top: clamp(7.375rem, 10vw, 8.75rem);
+        }
+      }
+
+      .cs-image-group {
+        font-size: 1rem;
+      }
+
+      .cs-flower {
+        width: 13vw;
+        max-width: max-content;
+        display: block;
+        position: absolute;
+        top: clamp(2rem, 3vw, 7rem);
+        z-index: -1;
+      }
+
+      .cs-flower1 {
+        left: 0;
+      }
+
+      .cs-flower2 {
+        right: 0;
+      }
+    }
+  }
+</style>

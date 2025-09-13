@@ -1,0 +1,348 @@
+---
+title: "Page 1";
+---
+
+<!-- ============================================ --><!--                  Services                    --><!-- ============================================ -->
+<section id="services-2426">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Main Services</span>
+      <h2 class="cs-title">Our Signature Body Art Services</h2>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <h3 class="cs-h3">Custom UV Body Painting</h3>
+          <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source
+              media="(max-width: 600px)"
+              srcset="https://nyc3.digitaloceanspaces.com/csimages2/Services/tattoo1.jpg"
+            />
+            <!--Tablet and above Image-->
+            <source
+              media="(min-width: 601px)"
+              srcset="https://nyc3.digitaloceanspaces.com/csimages2/Services/tattoo1.jpg"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://nyc3.digitaloceanspaces.com/csimages2/Services/tattoo1.jpg"
+              alt="tattoo"
+              width="373"
+              height="420"
+            />
+          </picture>
+          <p class="cs-item-text">
+            High-definition, blacklight-reactive designs for events, portraits,
+            or personal expression.
+          </p>
+          <div class="cs-border cs-border1" aria-hidden="true"></div>
+          <div class="cs-border cs-border2" aria-hidden="true"></div>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <h3 class="cs-h3">Spiritual & Symbolic Art</h3>
+          <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source
+              media="(max-width: 600px)"
+              srcset="https://nyc3.digitaloceanspaces.com/csimages2/Services/tattoo2.jpg"
+            />
+            <!--Tablet and above Image-->
+            <source
+              media="(min-width: 601px)"
+              srcset="https://nyc3.digitaloceanspaces.com/csimages2/Services/tattoo2.jpg"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://nyc3.digitaloceanspaces.com/csimages2/Services/tattoo2.jpg"
+              alt="room"
+              width="373"
+              height="420"
+            />
+          </picture>
+          <p class="cs-item-text">
+            Sacred geometry, mythic creatures, abstract motifs, and personal
+            symbols
+          </p>
+          <div class="cs-border cs-border1" aria-hidden="true"></div>
+          <div class="cs-border cs-border2" aria-hidden="true"></div>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <h3 class="cs-h3">Workshops & Education</h3>
+          <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source
+              media="(max-width: 600px)"
+              srcset="https://nyc3.digitaloceanspaces.com/csimages2/Services/tattoo3.jpg"
+            />
+            <!--Tablet and above Image-->
+            <source
+              media="(min-width: 601px)"
+              srcset="https://nyc3.digitaloceanspaces.com/csimages2/Services/tattoo3.jpg"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://nyc3.digitaloceanspaces.com/csimages2/Services/tattoo3.jpg"
+              alt="tattoo"
+              width="373"
+              height="420"
+            />
+          </picture>
+          <p class="cs-item-text">
+            Beginner-friendly body art training and creative process sharing
+          </p>
+          <div class="cs-border cs-border1" aria-hidden="true"></div>
+          <div class="cs-border cs-border2" aria-hidden="true"></div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-2426 {
+      padding: var(--sectionPadding);
+      background-color: #030711;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(420 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-text {
+        margin-top: calc(16 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 1.9vw, 1.25rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        grid-column: span 12;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+          .cs-border {
+            opacity: 1;
+          }
+        }
+      }
+
+      .cs-link {
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        padding: calc(24 / 16 * 1rem) calc(16 / 16 * 1rem);
+        background-color: #010104;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(20 / 16 * 1rem);
+        position: relative;
+        z-index: 2;
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: 100vw;
+        max-height: calc(420 / 16 * 1rem);
+        display: block;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-h3 {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        text-align: center;
+        font-weight: 700;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        transition: color 0.3s;
+      }
+
+      .cs-item-text {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        text-align: center;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+      }
+
+      .cs-border {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: opacity 0.3s;
+
+        &:before {
+          content: "";
+          opacity: 1;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+
+        &:after {
+          content: "";
+          opacity: 1;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+      }
+
+      .cs-border1 {
+        /* top left border */
+        &:before {
+          width: 100%;
+          height: 1px;
+          background: linear-gradient(
+            to right,
+            var(--primary) 0%,
+            rgba(0, 0, 0, 0) 78%
+          );
+        }
+
+        &:after {
+          width: 1px;
+          height: 100%;
+          background: linear-gradient(
+            to bottom,
+            var(--primary) 0%,
+            rgba(0, 0, 0, 0) 78%
+          );
+        }
+      }
+
+      .cs-border2 {
+        &:before {
+          width: 100%;
+          height: 1px;
+          background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0) 22%,
+            var(--primary) 100%
+          );
+          top: auto;
+          bottom: 0;
+        }
+
+        &:after {
+          width: 1px;
+          height: 100%;
+          background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 22%,
+            var(--primary) 100%
+          );
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-2426 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-item {
+        grid-column: span 4;
+      }
+
+      .cs-link {
+        /* 12px - 20px */
+        padding: clamp(0.75rem, 1.5vw, 1.25rem);
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #services-2426 {
+      .cs-item {
+        &:hover {
+          &:before {
+            opacity: 1;
+          }
+
+          .cs-h3 {
+            color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+</style>

@@ -1,0 +1,466 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Services                   --><!-- ============================================ -->
+<section id="services-476">
+  <div class="cs-container">
+    <div class="cs-left-section">
+      <!--Need to have in a wrapper so it's easier to arrange their position at the bottom-->
+      <a class="cs-cta" href="">
+        <picture class="cs-arrow-wrap">
+          <img
+            class="cs-arrow"
+            aria-hidden="true"
+            src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/arrow.svg"
+            loading="lazy"
+            decoding="async"
+            alt="arrow"
+            width="70"
+            height="70"
+          />
+        </picture>
+        <div class="cs-info">
+          <span class="cs-tag">See Our Reviews</span>
+          <span class="cs-desc">5/5 on Google</span>
+        </div>
+      </a>
+      <!--Background Image-->
+      <picture class="cs-background">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/tall-grass.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/tall-grass.jpg"
+        />
+        <img
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/tall-grass.jpg"
+          alt="grass"
+          width="625"
+          height="842"
+        />
+      </picture>
+    </div>
+    <!--We need to wrap these two in a wrapper so they can be positioned more accurately and easily -->
+    <div class="cs-right-section">
+      <div class="cs-content">
+        <span class="cs-topper">Features</span>
+        <h2 class="cs-title">Side by Side Section Example Right</h2>
+        <p class="cs-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <picture class="cs-picture">
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/geen1.svg"
+              loading="lazy"
+              decoding="async"
+              alt="moon"
+              width="30"
+              height="30"
+            />
+          </picture>
+          <h3 class="cs-h3">Service 1</h3>
+          <p class="cs-item-text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis,
+            sapiente.
+          </p>
+          <a href="" class="cs-link">Read More</a>
+        </li>
+        <li class="cs-item">
+          <picture class="cs-picture">
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/geen1.svg"
+              loading="lazy"
+              decoding="async"
+              alt="moon"
+              width="30"
+              height="30"
+            />
+          </picture>
+          <h3 class="cs-h3">Service 1</h3>
+          <p class="cs-item-text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis,
+            sapiente.
+          </p>
+          <a href="" class="cs-link">Read More</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-476 {
+      padding: var(--sectionPadding);
+      /* 60px - 200px */
+      padding-top: clamp(3.75rem, 11vw, 12.5rem);
+      /* clips the cs-background section so it doesn't cause any overflow issues when it breaks the container */
+      overflow: hidden;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1em);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cs-right-section {
+        max-width: calc(844 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* 88px - 118px */
+        gap: clamp(5.5rem, 10vw, 7.375rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title {
+        max-width: 20ch;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* resets to a clamp at tablet */
+        gap: calc(58 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        /* 24px - 60px left & right */
+        padding: 0 clamp(1.5rem, 2vw, 3.75rem) calc(40 / 16 * 1rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        border: 1px solid #b4b2c7;
+        border-radius: calc(12 / 16 * 1rem);
+        box-shadow: 0px 24px 54px rgba(87, 107, 147, 0.12);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        transition: border-color 0.3s;
+
+        &:hover {
+          border-color: var(--primaryLight);
+          .cs-picture {
+            transform: scale(1.1);
+          }
+          &:before {
+            opacity: 1;
+          }
+        }
+
+        &:before {
+          /* green border box on hover */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: transparent;
+          /* prevent border from affecting height and width */
+          box-sizing: border-box;
+          border: 3px solid var(--primaryLight);
+          border-radius: calc(10 / 16 * 1rem);
+          /* prevents the mouse from interacting with it */
+          pointer-events: none;
+          opacity: 0;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          transition: opacity 0.3s;
+        }
+      }
+
+      .cs-picture {
+        /* 60px - 110px */
+        width: clamp(3.75rem, 7vw, 6.875rem);
+        height: clamp(3.75rem, 7vw, 6.875rem);
+        /* wrapped in a calc function to multiple the clamp by a negative number to make its value negative, and multiple it by .5 so it pulls itself by half the height of itself. We copy and pasted the same height clamp. These must be equal every time */
+        margin-top: calc(clamp(3.75rem, 7vw, 6.875rem) * -0.5);
+        /* 30px - 40px */
+        margin-bottom: clamp(1.875rem, 5vw, 2.5rem);
+        background-color: #fff;
+        border: 2px solid var(--primaryLight);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        /* places it above the hover border box */
+        z-index: 10;
+        transition: transform 0.3s;
+      }
+
+      .cs-icon {
+        /* 32px - 56px */
+        width: clamp(2rem, 5vw, 3.5rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-h3 {
+        /* 20px - 31px */
+        font-size: clamp(1.25rem, 2vw, 1.9375rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        font-weight: 400;
+        text-align: center;
+        /* 12px - 32px */
+        margin: 0 0 clamp(0.75rem, 3vw, 2rem);
+        color: var(--bodyTextColor);
+      }
+
+      .cs-link {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        line-height: 1.5em;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: auto 0 0 0;
+        color: var(--primary);
+        position: relative;
+        display: block;
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+
+        &:before {
+          /* green underline on hover */
+          content: "";
+          width: 0%;
+          height: 2px;
+          background: currentColor;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          bottom: -2px;
+          left: 0;
+          transition: width 0.3s;
+        }
+      }
+
+      .cs-left-section {
+        /* changes at tablet */
+        width: 100%;
+        /* 48px - 64px, removed at tablet */
+        margin-bottom: clamp(3rem, 6vw, 4rem);
+        /* removed at tablet */
+        padding-top: calc(204 / 16 * 1rem);
+        /* 24px - 40px */
+        padding-bottom: clamp(1.5rem, 7vw, 2.5rem);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        position: relative;
+      }
+
+      .cs-background {
+        /* width and height set in vw units so the grow as the screen grows.  We go over 100vw so they are long enough push outside the cs-container, passed the section padding, and off screen to mimic the lok in the design, they are reset at tablet */
+        width: 120vw;
+        height: 150vw;
+        border-radius: 0 0 calc(100 / 16 * 1rem) 0;
+        /* clips the gradient pseudo and img tag corner */
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+
+        &:before {
+          /* green gradient at the bottom */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            360deg,
+            #073506 0%,
+            rgba(7, 53, 6, 0) 67.27%
+          );
+          -webkit-filter: drop-shadow(0px 24px 54px rgba(87, 107, 147, 0.12));
+          filter: drop-shadow(0px 24px 54px rgba(87, 107, 147, 0.12));
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: 10;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* makes image act like a background image */
+          object-fit: cover;
+        }
+      }
+
+      .cs-cta {
+        text-decoration: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        /* 12px - 24px */
+        gap: clamp(0.75rem, 2vw, 1.5rem);
+
+        &:hover {
+          .cs-arrow-wrap {
+            transform: scale(1.2);
+          }
+        }
+      }
+
+      .cs-arrow-wrap {
+        /* 40px - 70px */
+        width: clamp(2.5rem, 6vw, 4.375rem);
+        height: clamp(2.5rem, 6vw, 4.375rem);
+        background: rgba(217, 217, 217, 0.3);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s;
+      }
+
+      .cs-arrow {
+        width: calc(18 / 16 * 1rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .cs-tag {
+        /* 20px - 31px */
+        font-size: clamp(1.25rem, 3vw, 1.9375rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        text-align: left;
+        margin: 0 0 calc(4 / 16 * 1rem) 0;
+        color: #fff;
+        display: block;
+      }
+
+      .cs-desc {
+        /* 14px - 25px */
+        font-size: clamp(0.875rem, 2vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 400;
+        text-align: left;
+        margin: 0 0 calc(4 / 16 * 1rem) 0;
+        color: #fff;
+        display: block;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-476 {
+      .cs-container {
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+        /* 60px - 130px */
+        gap: clamp(3.75rem, 9vw, 8.125rem);
+      }
+
+      .cs-left-section {
+        width: 80%;
+        margin: 0;
+        padding-top: 0;
+        justify-content: flex-end;
+      }
+
+      .cs-background {
+        width: 40vw;
+        height: calc(100% + 35vw);
+      }
+
+      .cs-right-section {
+        width: 55vw;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-cta {
+        /* we need this link to break outside the cs-container, so we set a negative clamp value to translate left on the x axis as the screen grows, slowly pulling it farther and farther left outside the cs-container to match the designs position */
+        /* 24px - 100px */
+        transform: translateX(calc(clamp(1.5rem, 6vw, 6.25rem) * -1));
+      }
+
+      .cs-info {
+        /* prevents flex-box from squishing it */
+        flex: none;
+      }
+
+      .cs-arrow-wrap {
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-card-group {
+        flex-direction: row;
+        /* 16px - 20px */
+        gap: clamp(1rem, 1.3vw, 1.25rem);
+      }
+    }
+  }
+</style>

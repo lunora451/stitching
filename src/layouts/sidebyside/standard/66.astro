@@ -1,0 +1,443 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Side By Side                  --><!-- ============================================ -->
+<section id="sbs-949">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <!--Long Left Image-->
+      <picture class="cs-picture cs-picture1">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hair5.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hair5.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hair5.jpg"
+          alt="hair salon"
+          width="349"
+          height="590"
+        />
+      </picture>
+      <!--Top right image-->
+      <picture class="cs-picture cs-picture2">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hair6.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hair6.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hair6.jpg"
+          alt="hair salon"
+          width="281"
+          height="387"
+        />
+      </picture>
+      <!--Bottom right image-->
+      <picture class="cs-picture cs-picture3">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hair7.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hair7.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hair7.jpg"
+          alt="hair salon"
+          width="281"
+          height="280"
+        />
+      </picture>
+      <!--Seal-->
+      <img
+        class="cs-seal"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/seal.svg"
+        alt="seal"
+        width="150"
+        height="150"
+      />
+    </div>
+    <div class="cs-content">
+      <span class="cs-topper">Hair Salon Services</span>
+      <h2 class="cs-title">
+        Life Is More Beautiful When You Meet The Right Hairdresser
+      </h2>
+      <p class="cs-text">
+        The Hair salon Stitch pack is designed specifically for a hairdressers,
+        salons, and beauty centers, with a modern high end feel to match the
+        expectations for design in this industry. These Stitches are great for
+        anything and everything hair and beauty but can also be repurposed for
+        anything high end or luxury.
+      </p>
+      <div class="cs-contact-group">
+        <a class="cs-link" href="mailto:Info@health&wellness.com">
+          <picture class="cs-wrapper">
+            <img
+              class="cs-icon"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pin-hair.svg"
+              alt="icon"
+              width="24"
+              height="24"
+            />
+          </picture>
+          <div class="cs-info">
+            <span class="cs-header">Send A Message</span>
+            <span class="cs-link-content">Info@hairstyle.com</span>
+          </div>
+        </a>
+        <a class="cs-link" href="">
+          <picture class="cs-wrapper">
+            <img
+              class="cs-icon"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mail-hair.svg"
+              alt="icon"
+              width="24"
+              height="24"
+            />
+          </picture>
+          <div class="cs-info">
+            <span class="cs-header">Visit Us At</span>
+            <span class="cs-link-content">123 Fake St, Highland, IN</span>
+          </div>
+        </a>
+      </div>
+      <a href="" class="cs-button-solid" aria-label="learn more about us"
+        >Learn More</a
+      >
+    </div>
+  </div>
+  <!--Zen Leaf Group-->
+  <img
+    class="cs-floater"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hair-tools.png"
+    alt="hair tools"
+    width="445"
+    height="310"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-949 {
+      padding: var(--sectionPadding);
+      background-color: #1a1a1a;
+      position: relative;
+      /* clips anything overflowing */
+      overflow: hidden;
+
+      .cs-container {
+        /* changes to 1280px at desktop */
+        max-width: calc(550 / 16 * 1rem);
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        max-width: calc(542 / 16 * 1rem);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        font-weight: 700;
+        text-align: center;
+        min-width: calc(150 / 16 * 1rem);
+        margin: 0;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        padding: 0 calc(32 / 16 * 1rem);
+        color: #fff;
+        background-color: var(--primary);
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #000;
+          opacity: 1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-button-solid {
+        /* button override styles */
+        color: #1a1a1a;
+        &:before {
+          /* button override styles */
+          background-color: #fff;
+        }
+      }
+
+      .cs-contact-group {
+        width: 100%;
+        margin-bottom: calc(32 / 16 * 1rem);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-link {
+        padding-right: calc(30 / 16 * 1rem);
+        text-decoration: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        gap: calc(16 / 16 * 1rem);
+
+        &:hover {
+          &:before {
+            width: 100%;
+            height: calc(56 / 16 * 1rem);
+          }
+          .cs-wrapper {
+            transform: scale(1.2);
+          }
+
+          .cs-icon {
+            transform: translateX(0.4375rem);
+          }
+        }
+
+        &:before {
+          /* light green circle that animates on hover */
+          content: "";
+          width: calc(48 / 16 * 1rem);
+          height: calc(48 / 16 * 1rem);
+          background: #484848;
+          opacity: 1;
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          z-index: -1;
+          transform: translateY(-50%);
+          transition:
+            width 0.3s,
+            height 0.3s,
+            border-radius 0.3s;
+        }
+      }
+
+      .cs-wrapper {
+        width: calc(48 / 16 * 1rem);
+        height: calc(48 / 16 * 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-icon {
+        width: calc(24 / 16 * 1rem);
+        height: auto;
+        display: block;
+        transition: transform 0.3s;
+      }
+
+      .cs-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(4 / 16 * 1rem);
+      }
+
+      .cs-header {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        display: block;
+      }
+
+      .cs-link-content {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 400;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+        display: block;
+      }
+
+      .cs-image-group {
+        /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
+        font-size: min(2.24vw, 0.844em);
+        /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+        width: calc(650 / 16 * 1em);
+        height: calc(687 / 16 * 1em);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-picture {
+        display: block;
+        position: absolute;
+        /* clips the image to match the border radius of the cs-picture */
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          /* makes it act like a background image */
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-picture1 {
+        width: calc(349 / 16 * 1em);
+        height: calc(590 / 16 * 1em);
+        top: calc(49 / 16 * 1em);
+        left: 0;
+      }
+
+      .cs-picture2 {
+        width: calc(281 / 16 * 1em);
+        height: calc(387 / 16 * 1em);
+        top: 0;
+        right: 0;
+      }
+
+      .cs-picture3 {
+        width: calc(281 / 16 * 1em);
+        height: calc(280 / 16 * 1em);
+        right: 0;
+        bottom: 0;
+      }
+
+      .cs-seal {
+        width: calc(150 / 16 * 1em);
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-30%, -40%);
+      }
+
+      .cs-floater {
+        display: none;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #sbs-949 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cs-image-group {
+        /* set to inherit at Large Desktop */
+        font-size: min(1.15vw, 1em);
+        margin: 0;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-content {
+        width: 51%;
+      }
+    }
+  }
+
+  /* Large Desktop - 1800px */
+  @media only screen and (min-width: 112.5rem) {
+    #sbs-949 {
+      .cs-floater {
+        width: calc(445 / 16 * 1rem);
+        height: auto;
+        display: block;
+        position: absolute;
+        top: calc(20 / 16 * 1rem);
+        right: 0;
+      }
+    }
+  }
+</style>

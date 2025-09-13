@@ -1,0 +1,235 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Services                    --><!-- ============================================ -->
+<section id="services-23">
+  <div class="cs-container">
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <a class="cs-link" href="">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Services/pinwheel.svg"
+            alt="icon"
+            width="82"
+            height="82"
+          />
+          <h3 class="cs-h3">Gardens</h3>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a class="cs-link" href="">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Services/ring.svg"
+            alt="icon"
+            width="82"
+            height="82"
+          />
+          <h3 class="cs-h3">Urban</h3>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Services/leaf.svg"
+            alt="icon"
+            width="82"
+            height="83"
+          />
+          <h3 class="cs-h3">Maintenance</h3>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Services/bubble-wheel.svg"
+            alt="icon"
+            width="82"
+            height="82"
+          />
+          <h3 class="cs-h3">Events</h3>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-23 {
+      /* Centers the button */
+      text-align: center;
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-card-group {
+        width: 100%;
+        /* changes to 100% at tablet */
+        max-width: calc(500 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        border: 1px solid #a0a3bd;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cs-item {
+        width: 100%;
+        margin: auto;
+        list-style: none;
+        background-color: #fff;
+        border-bottom: 1px solid #a0a3bd;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: var(--primary);
+
+          .cs-icon {
+            /* turns it white */
+            filter: grayscale(1) brightness(1000%);
+          }
+
+          .cs-h3 {
+            color: #fff;
+          }
+        }
+      }
+
+      .cs-link {
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        padding-top: calc(56 / 16 * 1rem);
+        padding-bottom: calc(52 / 16 * 1rem);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        /* Prevents padding from affecting height */
+        box-sizing: border-box;
+      }
+
+      .cs-icon {
+        margin-bottom: calc(18 / 16 * 1rem);
+      }
+
+      .cs-hover {
+        display: none;
+      }
+
+      .cs-h3 {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 400;
+        text-align: center;
+        margin: 0;
+        color: var(--headerColor);
+        transition: color 0.3s;
+      }
+    }
+  }
+
+  /* In Between - 500px */
+  @media only screen and (min-width: 31.25em) {
+    #services-23 {
+      .cs-card-group {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .cs-item {
+        width: 50%;
+        border-bottom: none;
+        /* Makes borders not affect widths */
+        box-sizing: border-box;
+
+        &:nth-of-type(1) {
+          border-right: 1px solid #a0a3bd;
+          border-bottom: 1px solid #a0a3bd;
+        }
+        &:nth-of-type(2) {
+          border-bottom: 1px solid #a0a3bd;
+        }
+        &:nth-of-type(3) {
+          border-right: 1px solid #a0a3bd;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48em) {
+    #services-23 {
+      .cs-card-group {
+        max-width: calc(1080 / 16 * 1rem);
+        border: none;
+      }
+
+      .cs-item {
+        height: calc(210 / 16 * 1rem);
+        width: 25%;
+
+        &:nth-of-type(1) {
+          border: none;
+          border: 1px solid #a0a3bd;
+        }
+        &:nth-of-type(2) {
+          border: none;
+          border-top: 1px solid #a0a3bd;
+          border-bottom: 1px solid #a0a3bd;
+          border-right: 1px solid #a0a3bd;
+        }
+        &:nth-of-type(3) {
+          border: none;
+          border-top: 1px solid #a0a3bd;
+          border-bottom: 1px solid #a0a3bd;
+        }
+
+        &:nth-of-type(4) {
+          border: 1px solid #a0a3bd;
+        }
+      }
+
+      .cs-link {
+        padding: calc(37 / 16 * 1rem) 0;
+      }
+
+      .cs-icon {
+        margin-bottom: calc(28 / 16 * 1rem);
+      }
+    }
+  }
+</style>

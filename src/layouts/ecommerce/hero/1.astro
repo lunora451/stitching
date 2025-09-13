@@ -1,0 +1,409 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Promotions                   --><!-- ============================================ -->
+<section id="hero-1590">
+  <div class="cs-container">
+    <ul class="cs-card-group">
+      <li class="cs-item cs-item1">
+        <div class="cs-content">
+          <h1 class="cs-title">Stitch Smart Watches Collection</h1>
+          <p class="cs-text">
+            Explore our exquisite watch collection, where timepieces become
+            timeless treasures. From classic elegance to modern innovation, our
+            curated selection offers something for every style and occasion.
+          </p>
+          <a href="" class="cs-button-solid">Shop Now</a>
+        </div>
+        <picture class="cs-background">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/watch-m.png"
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/watch.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/watch.jpg"
+            alt="kids"
+            width="220"
+            height="220"
+            aria-hidden="true"
+          />
+        </picture>
+      </li>
+      <li class="cs-item cs-item2">
+        <div class="cs-flex">
+          <h3 class="cs-h3">Up to 70% Off on Furniture & Decor</h3>
+          <a href="" class="cs-button-solid">Shop Now</a>
+        </div>
+        <div class="cs-image-group">
+          <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source
+              media="(max-width: 600px)"
+              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/table.png"
+            />
+            <!--Tablet and above Image-->
+            <source
+              media="(min-width: 601px)"
+              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/table.png"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/table.png"
+              alt="kids"
+              width="220"
+              height="220"
+              aria-hidden="true"
+            />
+          </picture>
+        </div>
+      </li>
+      <li class="cs-item cs-item3">
+        <div class="cs-flex">
+          <h3 class="cs-h3">Up to 45% Off on All Tablewear</h3>
+          <a href="" class="cs-button-solid">Shop Now</a>
+        </div>
+        <div class="cs-image-group">
+          <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source
+              media="(max-width: 600px)"
+              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/stool.png"
+            />
+            <!--Tablet and above Image-->
+            <source
+              media="(min-width: 601px)"
+              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/stool.png"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/stool.png"
+              alt="kids"
+              width="220"
+              height="220"
+              aria-hidden="true"
+            />
+          </picture>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-1590 {
+      padding: var(--sectionPadding);
+      /* 150px - 250px - leaving extra space for the navigation */
+      padding-top: clamp(9.375rem, 25.95vw, 15.625rem);
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1720px at desktop */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+        position: relative;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        max-width: calc(590 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-item1 {
+        list-style: none;
+        /* 60px - 120px top */
+        /* 16px - 48px left & right */
+        padding: clamp(3.75rem, 7vw, 7.5rem) clamp(1rem, 3vw, 3rem)
+          calc(165 / 16 * 1rem);
+        box-sizing: border-box;
+        grid-column: span 12;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: inherit;
+        max-width: 20ch;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+        color: var(--headerColor);
+        position: relative;
+      }
+
+      .cs-text {
+        /* 16px - 24px */
+        font-size: clamp(1rem, 2.3vw, 1.25rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        /* 28px - 40px */
+        margin: 0 0 clamp(1.75rem, 4vw, 2.5rem) 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        overflow: hidden;
+        margin: 0;
+        color: #fff;
+        padding: 0 calc(32 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 0%;
+          background: #fff;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: var(--primary);
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-item2,
+      .cs-item3 {
+        text-align: left;
+        list-style: none;
+        overflow: hidden;
+        /* 24px - 100px top & Bottom */
+        /* 24px - 60px left & right */
+        padding: clamp(1.5rem, 10vw, 6.25rem) clamp(1.5rem, 4vw, 3.75rem);
+        box-sizing: border-box;
+        display: flex;
+        grid-column: span 12;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: #fef0d7;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+      }
+
+      .cs-item3 {
+        &:before {
+          background-color: linear-gradient(
+            180deg,
+            #dce1e4 0.21%,
+            #d5dade 99.93%
+          );
+        }
+
+        .cs-flex {
+          width: 50%;
+          margin-left: auto;
+        }
+
+        .cs-image-group {
+          font-size: min(3vw, 1em);
+          justify-content: flex-start;
+          right: auto;
+          left: 0;
+
+          .cs-picture {
+            justify-content: flex-start;
+          }
+        }
+      }
+
+      .cs-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: center;
+      }
+
+      .cs-offer {
+        width: 85%;
+        max-width: calc(189 / 16 * 1rem);
+        height: auto;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+      }
+
+      .cs-image-group {
+        font-size: min(1.4vw, 1em);
+        width: 45%;
+        height: 90%;
+        max-width: calc(321 / 16 * 1rem);
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+      }
+
+      .cs-picture {
+        width: 100%;
+        max-width: calc(361 / 16 * 1em);
+        height: 100%;
+        max-height: calc(321 / 16 * 1em);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        img {
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+          max-height: calc(321 / 16 * 1em);
+          object-fit: contain;
+        }
+      }
+
+      .cs-h3 {
+        /* 31px - 39px */
+        font-size: clamp(1.9375rem, 2.3vw, 2.4375rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        max-width: 16ch;
+        margin: 0 0 calc(28 / 16 * 1rem) 0;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        color: var(--headerColor);
+      }
+
+      .cs-link {
+        font-size: calc(16 / 16 * 1rem);
+        text-decoration: none;
+        text-align: inherit;
+        line-height: 1.2em;
+        font-weight: 700;
+        color: var(--primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        &:hover:before {
+          width: 100%;
+        }
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 1px;
+          background: var(--primary);
+          opacity: 1;
+          position: absolute;
+          display: block;
+          bottom: calc(-2 / 16 * 1rem);
+          left: 0;
+          transition: width 0.3s;
+        }
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes img tag act as a background image */
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-1590 {
+      .cs-container {
+        max-width: calc(1720 / 16 * 1rem);
+      }
+
+      .cs-image-group {
+        font-size: inherit;
+      }
+
+      .cs-item {
+        grid-column: span 6;
+      }
+
+      .cs-item1 {
+        grid-column: 7 / span 6;
+        grid-row: 1 / span 2;
+      }
+    }
+  }
+</style>

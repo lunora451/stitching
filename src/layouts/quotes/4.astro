@@ -1,0 +1,155 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Quote                      --><!-- ============================================ -->
+<div id="quote-2185">
+  <div class="cs-container">
+    <div class="cs-content">
+      <p class="cs-quote">
+        "We're not just photographers, we're dream weavers, transforming your
+        visions into tangible memories you'll cherish forever."
+      </p>
+      <span class="cs-name">Elisa Morgan</span>
+      <span class="cs-job">CEO of Stitchography</span>
+    </div>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding17.jpg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding17.jpg"
+    />
+    <img
+      aria-hidden="true"
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding17.jpg"
+      alt="wedding"
+      width="360"
+      height="316"
+    />
+  </picture>
+</div>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Quote            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #quote-2185 {
+      padding: var(--sectionPadding);
+      /* 120px - 300px */
+      padding-top: clamp(7.5rem, 25vw, 18.75rem);
+      padding-bottom: 0;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1312 / 16 * 1rem);
+        margin: auto;
+        padding-bottom: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+      }
+
+      .cs-content {
+        /* set text align to center if content needs to be centrally aligned */
+        text-align: left;
+        width: 90%;
+        max-width: calc(738 / 16 * 1rem);
+        /* 32px - 48px top & bottom */
+        padding: clamp(2rem, 6vw, 2.5rem);
+        box-sizing: border-box;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* aligns content to the left, set to center to centrally align */
+        align-items: flex-start;
+        position: relative;
+        z-index: 10;
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: #1a1a1a;
+          opacity: 0.84;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+      }
+
+      .cs-quote {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2vw, 1.5625rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        max-width: calc(1000 / 16 * 1rem);
+        /* 32px - 48px */
+        margin: 0 0 clamp(2rem, 6vw, 3rem);
+        color: #fff;
+      }
+
+      .cs-name {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 calc(8 / 16 * 1rem);
+        color: var(--primary);
+        display: block;
+      }
+
+      .cs-job {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: #bababa;
+        display: block;
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #quote-2185 {
+      .cs-content {
+        width: 80%;
+      }
+    }
+  }
+</style>

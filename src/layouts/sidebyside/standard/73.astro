@@ -1,0 +1,398 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Side By Side                  --><!-- ============================================ -->
+<section id="sbs-677">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <!--Main Image-->
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FLandscapes%2Flandscape1-m.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FLandscapes%2Flandscape1.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FLandscapes%2Flandscape1.jpg"
+          alt="landscape"
+          width="562"
+          height="568"
+        />
+      </picture>
+      <!--Pink Blob-->
+      <img
+        class="cs-graphic1"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fpink-blob.svg"
+        alt="pink graphic"
+        width="441"
+        height="478"
+      />
+      <!--Flower Graphic-->
+      <img
+        class="cs-graphic2"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fabstract-flower.svg"
+        alt="abstract flower"
+        width="267"
+        height="130"
+      />
+    </div>
+    <div class="cs-content">
+      <span class="cs-topper">About Us</span>
+      <h2 class="cs-title">
+        A Personalized Approach To Your <span class="cs-color">Well-Being</span>
+      </h2>
+      <p class="cs-text">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus sunt
+        nemo accusamus atque id tempore facere facilis perferendis?
+        Necessitatibus pariatur eligendi corporis cupiditate ipsa consequatur et
+        nam quod fugiat blanditiis. Lorem ipsum dolor sit amet, consectetur
+        adipisicing.
+      </p>
+      <p class="cs-text">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus sunt
+        nemo accusamus atque id tempore facere facilis perferendis?
+        Necessitatibus pariatur eligendi corporis cupiditate ipsa consequatur et
+        nam quod fugiat blanditiis.
+      </p>
+      <div class="cs-contact-group">
+        <a class="cs-link" href="tel:555-555-0234">
+          <picture class="cs-wrapper">
+            <img
+              class="cs-icon"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fphone.svg"
+              alt="icon"
+              width="24"
+              height="24"
+            />
+          </picture>
+          <div class="cs-info">
+            <span class="cs-header">Call Now</span>
+            <span class="cs-link-content">(555) 555-0234</span>
+          </div>
+        </a>
+        <a class="cs-link" href="mailto:Info@health&wellness.com">
+          <picture class="cs-wrapper">
+            <img
+              class="cs-icon"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fmail.svg"
+              alt="icon"
+              width="24"
+              height="24"
+            />
+          </picture>
+          <div class="cs-info">
+            <span class="cs-header">Send A Message</span>
+            <span class="cs-link-content">Info@health&wellness.com</span>
+          </div>
+        </a>
+      </div>
+      <a href="" class="cs-button-solid" aria-label="learn more about us"
+        >Learn More</a
+      >
+    </div>
+  </div>
+  <!--Zen Leaf Group-->
+  <img
+    class="cs-floater"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fzen.png"
+    alt="leaf and bowl"
+    width="292"
+    height="422"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-677 {
+      padding: var(--sectionPadding);
+      /* clips anything overflowing */
+      overflow: hidden;
+      position: relative;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(542 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-contact-group {
+        width: 100%;
+        margin-bottom: calc(32 / 16 * 1rem);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: calc(24 / 16 * 1rem);
+      }
+
+      .cs-link {
+        text-decoration: none;
+        padding-right: calc(30 / 16 * 1rem);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: calc(16 / 16 * 1rem);
+        position: relative;
+
+        &:hover {
+          &:before {
+            width: 100%;
+            height: calc(56 / 16 * 1em);
+            border-radius: calc(30 / 16 * 1rem);
+          }
+          .cs-wrapper {
+            transform: scale(1.2);
+          }
+
+          .cs-icon {
+            transform: translateX(calc(7 / 16 * 1rem));
+          }
+        }
+
+        &:before {
+          /* light green circle that animates on hover */
+          content: "";
+          width: calc(48 / 16 * 1rem);
+          height: calc(48 / 16 * 1rem);
+          background: #eff1f0;
+          border-radius: calc(24 / 16 * 1rem);
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 50%;
+          left: 0;
+          z-index: -1;
+          transform: translateY(-50%);
+          transition:
+            width 0.3s,
+            height 0.3s,
+            border-radius 0.3s;
+        }
+      }
+
+      .cs-wrapper {
+        width: calc(48 / 16 * 1rem);
+        height: calc(48 / 16 * 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* prevents flexbox from squishing it */
+        flex: none;
+        transition: transform 0.3s;
+      }
+
+      .cs-icon {
+        width: calc(24 / 16 * 1rem);
+        height: auto;
+        display: block;
+        transition: transform 0.3s;
+      }
+
+      .cs-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(4 / 16 * 1rem);
+      }
+
+      .cs-header {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--headerColor);
+        display: block;
+      }
+
+      .cs-link-content {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 400;
+        margin: 0;
+        color: var(--bodyTextColor);
+        display: block;
+      }
+
+      .cs-image-group {
+        /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
+        font-size: min(2vw, 0.75em);
+        /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+        width: calc(665 / 16 * 1em);
+        height: calc(842 / 16 * 1em);
+        margin-left: auto;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-picture {
+        width: calc(562 / 16 * 1em);
+        height: calc(680 / 16 * 1em);
+        border-radius: calc(285 / 16 * 1em);
+        /* clips the image to match the border radius of the cs-picture */
+        overflow: hidden;
+        display: block;
+        position: absolute;
+        right: calc(15 / 16 * 1em);
+        bottom: calc(32 / 16 * 1em);
+
+        img {
+          width: 100%;
+          height: 100%;
+          /* makes it act like a background image */
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-graphic1 {
+        width: calc(650 / 16 * 1em);
+        height: auto;
+        display: block;
+        position: absolute;
+        left: calc(-205 / 16 * 1em);
+        top: calc(-125 / 16 * 1em);
+        z-index: -1;
+      }
+
+      .cs-graphic2 {
+        width: calc(267 / 16 * 1em);
+        height: auto;
+        display: block;
+        position: absolute;
+        transform: rotate(137deg);
+        right: calc(-45 / 16 * 1em);
+        bottom: calc(33 / 16 * 1em);
+        z-index: -1;
+      }
+
+      .cs-floater {
+        display: none;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #sbs-677 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cs-image-group {
+        /* set to inherit at Large Desktop */
+        font-size: min(1.2vw, 1em);
+        margin: 0;
+      }
+
+      .cs-content {
+        width: 51%;
+      }
+    }
+  }
+
+  /* Large Desktop - 1900px */
+  @media only screen and (min-width: 118.75rem) {
+    #sbs-677 {
+      .cs-floater {
+        width: calc(292 / 16 * 1rem);
+        height: auto;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: calc(20 / 16 * 1rem);
+      }
+    }
+  }
+</style>

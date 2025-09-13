@@ -1,0 +1,324 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Side By Side                  --><!-- ============================================ -->
+<section id="sbs-2291">
+  <div class="cs-container">
+    <!-- Left Content Section-->
+    <div class="cs-content">
+      <span class="cs-topper">Featured service</span>
+      <h2 class="cs-title">Creating Elegant Outdoor Living Spaces</h2>
+      <p class="cs-text">
+        Transform your outdoor spaces with our hardscaping services. We design
+        stunning patios, walkways, retaining walls, and outdoor kitchens,
+        combining creativity and expertise to enhance your relaxation and
+        entertainment areas.
+      </p>
+      <div class="cs-features">
+        <h3 class="cs-h3">Key Features:</h3>
+        <ul class="cs-ul">
+          <li class="cs-li">Custom design tailored to your outdoor space</li>
+          <li class="cs-li">Durable and aesthetically pleasing materials</li>
+          <li class="cs-li">
+            Seamless integration with your home's architecture
+          </li>
+        </ul>
+      </div>
+      <a
+        class="cs-button-solid"
+        aria-label="learn more about our programs"
+        href="">Read More</a
+      >
+    </div>
+    <!-- Right Image Section -->
+    <div class="cs-image-group">
+      <!--Floating Box-->
+      <div class="cs-box">
+        <span class="cs-number">12K+</span>
+        <div class="cs-flex">
+          <h3 class="cs-heading">Square Meters Paved</h3>
+          <span class="cs-desc"
+            >Hardscaping projects that combine beauty and functionality.</span
+          >
+        </div>
+      </div>
+      <!--Image-->
+      <picture class="cs-picture">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction3.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction3.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction3.jpg"
+          alt="meeting"
+          width="630"
+          height="630"
+          aria-hidden="true"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-2291 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(584 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: calc(48 / 16 * 1rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+        position: relative;
+        z-index: 10;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-features {
+        width: 100%;
+        margin: 0 0 calc(32 / 16 * 1rem);
+        /* 24px - 32px */
+        padding: clamp(1.5rem, 4vw, 2rem);
+        background-color: #fef5f4;
+        border-left: calc(4 / 16 * 1rem) solid var(--secondary);
+      }
+
+      .cs-h3 {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.5em;
+        margin: 0 0 calc(12 / 16 * 1rem);
+        color: var(--headerColor);
+      }
+
+      .cs-ul {
+        font-size: calc(12 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-li {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        list-style: none;
+        /* 20px - 24px */
+        padding-left: clamp(1.25rem, 3vw, 1.5rem);
+        color: var(--bodyTextColor);
+        position: relative;
+
+        &::before {
+          content: "";
+          width: calc(8 / 16 * 1rem);
+          height: calc(8 / 16 * 1rem);
+          margin-top: calc(8 / 16 * 1rem);
+          background-color: var(--secondary);
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: rotate(45deg);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-align: center;
+        text-decoration: none;
+        min-width: calc(150 / 16 * 1rem);
+        margin: 0;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        color: #1a1a1a;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #000;
+          opacity: 1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #fff;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-image-group {
+        width: 100%;
+        height: 126vw;
+        max-height: calc(626 / 16 * 1rem);
+        display: block;
+        order: -1;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-picture {
+        /* big background image */
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: calc(95 / 16 * 1rem);
+        left: 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-box {
+        text-align: left;
+        width: 91%;
+        max-width: calc(450 / 16 * 1rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        /* 24px - 32px */
+        padding: clamp(1.5rem, 3vw, 2rem);
+        background-color: #fffcf3;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        column-gap: calc(24 / 16 * 1rem);
+        row-gap: calc(8 / 16 * 1rem);
+        position: absolute;
+        right: 50%;
+        bottom: 0;
+        z-index: 10;
+        transform: translate(50%);
+      }
+
+      .cs-number {
+        /* 31px - 49px */
+        font-size: clamp(1.9375rem, 4vw, 3.0625rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-transform: uppercase;
+        margin: 0;
+        color: var(--General-Secondary, #ffc219);
+      }
+
+      .cs-heading {
+        font-size: calc(20 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        margin: 0 0 calc(8 / 16 * 1rem);
+        color: var(--headerColor);
+      }
+
+      .cs-desc {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-graphic {
+        width: 150%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbs-2291 {
+      .cs-box {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #sbs-2291 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        align-items: stretch;
+        gap: calc(20 / 16 * 1rem);
+      }
+
+      .cs-content {
+        padding-left: calc(52 / 16 * 1rem);
+        padding-bottom: calc(108 / 16 * 1rem);
+      }
+
+      .cs-image-group {
+        height: auto;
+        min-height: calc(642 / 16 * 1rem);
+        max-height: 100%;
+      }
+
+      .cs-picture {
+        bottom: calc(64 / 16 * 1rem);
+      }
+    }
+  }
+</style>

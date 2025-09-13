@@ -1,0 +1,239 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Hero                      --><!-- ============================================ -->
+<section id="hero-998">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Welcome to</span>
+      <!--Logo-->
+      <picture class="cs-logo">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/food-logo.svg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/food-logo.svg"
+        />
+        <img
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/food-logo.svg"
+          alt="Stitch House Restaurant"
+          width="614"
+          height="166"
+        />
+      </picture>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut.
+      </p>
+      <a href="" class="cs-button-solid">Reserve Your Table</a>
+    </div>
+  </div>
+  <!--Background Image-->
+  <!--Image is also set as background image in CSS at 1400px for parallax effect-->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/table-m.jpg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/table.jpg"
+    />
+    <img
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/table.jpg"
+      alt="logo"
+      width="1920"
+      height="1000"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-998 {
+      min-height: 100vh;
+      /* 144px - 280px */
+      padding: clamp(9rem, 25.95vw, 17.5rem) calc(16 / 16 * 1rem);
+      /* prevents padding and border from affecting height and width */
+      box-sizing: border-box;
+      position: relative;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+      }
+
+      .cs-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cs-topper {
+        /* 16px - 31px */
+        font-size: clamp(1rem, 4.3vw, 1.9375rem);
+        white-space: nowrap;
+        line-height: 1.2em;
+        width: 100%;
+        /* 12px - 24px */
+        margin: 0 0 clamp(0.75rem, 3vw, 1.5rem);
+        color: var(--bodyTextColorWhite);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        gap: calc(16 / 16 * 1rem);
+
+        &:before {
+          /* left line */
+          content: "";
+          width: 100%;
+          max-width: calc(100 / 16 * 1rem);
+          height: 2px;
+          background: var(--primary);
+          opacity: 1;
+          position: relative;
+          display: block;
+        }
+
+        &:after {
+          /* right line */
+          content: "";
+          width: 100%;
+          max-width: calc(100 / 16 * 1rem);
+          height: 2px;
+          background: var(--primary);
+          opacity: 1;
+          position: relative;
+          display: block;
+        }
+      }
+
+      .cs-logo {
+        width: 100%;
+        max-width: calc(614 / 16 * 1rem);
+        margin: 0 0 calc(24 / 16 * 1rem) 0;
+        display: block;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .cs-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 1vw, 1.25rem);
+        line-height: 1.5em;
+        text-align: center;
+        max-width: calc(518 / 16 * 1rem);
+        /* 24px - 48px */
+        margin: 0 0 clamp(1.5rem, 3vw, 3rem) 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: auto;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(16 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #fff;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #1a1a1a;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        &:before {
+          /* background color overlay */
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 100%;
+          background: #000;
+          opacity: 0.8;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes img tag act as a background image */
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Desktop Parallax - 1400px */
+  @media only screen and (min-width: 87.5rem) {
+    #hero-998 {
+      .cs-background {
+        background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/table.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        /* makes parallax effect */
+        background-attachment: fixed;
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+</style>

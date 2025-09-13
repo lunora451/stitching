@@ -1,0 +1,255 @@
+---
+title: "Page 18";
+---
+
+<!-- ============================================ --><!--                    Services                  --><!-- ============================================ -->
+<section id="services-1302">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex-group">
+        <span class="cs-topper">Our Services</span>
+        <h2 class="cs-title">Professional Tax & Accounting Services</h2>
+      </div>
+      <p class="cs-text">
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat duis enim velit mollit. Amet minim mollit
+        non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+        consequat duis enim velit mollit.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/brain.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="40"
+            height="40"
+            aria-hidden="true"
+          />
+          <h3 class="cs-h3">Creative Solutions</h3>
+          <p class="cs-item-text">
+            We will go ahead that extra mile to ensure our clients welfare, our
+            working hours convenient to our Client's from contact.
+          </p>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/users.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="40"
+            height="40"
+            aria-hidden="true"
+          />
+          <h3 class="cs-h3">Professional Team</h3>
+          <p class="cs-item-text">
+            We will go ahead that extra mile to ensure our clients welfare, our
+            working hours convenient to our Client's from contact.
+          </p>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/Layer.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="40"
+            height="40"
+            aria-hidden="true"
+          />
+          <h3 class="cs-h3">Diverse Approach</h3>
+          <p class="cs-item-text">
+            We will go ahead that extra mile to ensure our clients welfare, our
+            working hours convenient to our Client's from contact.
+          </p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-1302 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 10;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        max-width: 20ch;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: 0;
+        padding: 0 calc(16 / 16 * 1rem);
+        /* prevents padding and border from affecting height and width */
+        background-color: #fff;
+        box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.05);
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        position: relative;
+        z-index: 15;
+      }
+
+      .cs-item {
+        text-align: left;
+        list-style: none;
+        width: 100%;
+        border-bottom: 1px solid #e8e8e8;
+        box-sizing: border-box;
+        grid-column: span 12;
+        transition:
+          background-color 0.3s,
+          border-color 0.3s;
+
+        &:last-of-type {
+          border-bottom: none;
+        }
+      }
+
+      .cs-link {
+        text-decoration: none;
+        /* 24px - 60px top & Bottom */
+        /* 24px - 16px top & Bottom */
+        padding: clamp(1.5rem, 5.3vw, 3.75rem) clamp(1rem, 2.7vw, 2.5rem);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .cs-icon {
+        /* 32px - 40px */
+        height: clamp(2rem, 4vw, 2.5rem);
+        width: auto;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2vw, 1.5625rem);
+        font-weight: 700;
+        text-align: inherit;
+        line-height: 1.2em;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--headerColor);
+        transition: color 0.3s;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        text-align: inherit;
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+        transition:
+          color 0.3s,
+          opacity 0.3s;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-1302 {
+      .cs-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: calc(48 / 16 * 1rem);
+      }
+
+      .cs-title {
+        margin: 0;
+      }
+
+      .cs-flex-group {
+        width: 50%;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-item {
+        grid-column: span 4;
+        border-bottom: none;
+        border-right: 1px solid #e8e8e8;
+
+        &:nth-of-type(3) {
+          border-bottom: none;
+          border-right: none;
+        }
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #services-1302 {
+      .cs-card-group {
+        padding: 0;
+      }
+
+      .cs-item {
+        &:hover {
+          background-color: #1a1a1a;
+          border-color: #1a1a1a;
+
+          .cs-h3,
+          .cs-item-text {
+            color: var(--bodyTextColorWhite);
+          }
+
+          .cs-item-text {
+            opacity: 0.8;
+          }
+        }
+
+        &:last-of-type {
+          border: none;
+        }
+      }
+    }
+  }
+</style>

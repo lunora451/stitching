@@ -1,0 +1,274 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Steps                     --><!-- ============================================ -->
+<section id="steps-2330">
+  <div class="cs-container">
+    <div class="cs-wrapper">
+      <div class="cs-content">
+        <span class="cs-topper">Process</span>
+        <h2 class="cs-title">A custom process just for you!</h2>
+      </div>
+      <!--Preferrably use an image that is a horizontal image-->
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/truck3.png"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/truck3.png"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/truck3.png"
+          alt="truck"
+          width="748"
+          height="420"
+        />
+      </picture>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <span class="cs-number">01</span>
+        <div class="cs-flex">
+          <h3 class="cs-h3">Consultation</h3>
+          <p class="cs-item-text">
+            We understand your vision, discuss requirements, and provide expert
+            guidance to ensure a clear and collaborative start.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">02</span>
+        <div class="cs-flex">
+          <h3 class="cs-h3">Planning & Design</h3>
+          <p class="cs-item-text">
+            A tailored plan and design are created, blending your ideas with our
+            expertise for a flawless project roadmap.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">03</span>
+        <div class="cs-flex">
+          <h3 class="cs-h3">Construction</h3>
+          <p class="cs-item-text">
+            Our dedicated team transforms your vision into reality with
+            exceptional precision and outstanding quality.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">04</span>
+        <div class="cs-flex">
+          <h3 class="cs-h3">Completion</h3>
+          <p class="cs-item-text">
+            We complete the project with a walkthrough to guarantee your
+            complete satisfaction.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <span class="cs-floater">Process</span>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #steps-2330 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(584 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: calc(32 / 16 * 1rem);
+      }
+
+      .cs-wrapper {
+        display: contents;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-topper {
+        color: var(--secondary);
+      }
+
+      .cs-title {
+        margin: 0;
+        max-width: (20ch);
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        /* 32px - 60px */
+        gap: clamp(2rem, 6vw, 3.75rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        display: flex;
+        align-items: flex-start;
+        /* 16px - 24px */
+        gap: clamp(1rem, 2vw, 1.5rem);
+        position: relative;
+
+        &:last-of-type {
+          border-bottom: none;
+        }
+      }
+
+      .cs-number {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 7vw, 3.8125rem);
+        font-weight: 900;
+        line-height: calc(19 / 16 * 1em);
+        color: #e7e7e8;
+        display: block;
+      }
+
+      .cs-h3 {
+        font-size: calc(20 / 16 * 1rem);
+        font-weight: 700;
+        line-height: calc(18 / 16 * 1em);
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-item-text {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: calc(24 / 16 * 1em);
+        text-align: left;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: auto;
+        order: 3;
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+
+      .cs-floater {
+        display: none;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #steps-2330 {
+      .cs-floater {
+        font-size: calc(180 / 16 * 1rem);
+        text-transform: uppercase;
+        line-height: 1.2em;
+        font-weight: 900;
+        color: #f3f3f3;
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: calc(-350 / 16 * 1rem);
+        z-index: -2;
+        transform: translateY(-50%) rotate(-90deg);
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #steps-2330 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      .cs-wrapper {
+        max-width: calc(748 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: calc(32 / 16 * 1rem);
+      }
+
+      .cs-title {
+        width: 80%;
+      }
+
+      .cs-card-group {
+        max-width: calc(578 / 16 * 1rem);
+        align-items: flex-end;
+      }
+
+      .cs-item {
+        position: relative;
+        z-index: 1;
+
+        &:nth-of-type(1) {
+        }
+
+        &:nth-of-type(2) {
+          width: calc(538 / 16 * 1rem);
+        }
+
+        &:nth-of-type(3) {
+          width: calc(498 / 16 * 1rem);
+        }
+
+        &:nth-of-type(4) {
+          width: calc(458 / 16 * 1rem);
+        }
+      }
+
+      .cs-picture {
+        width: 120%;
+        max-height: calc(420 / 16 * 1rem);
+        max-width: calc(685 / 16 * 1rem);
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+</style>

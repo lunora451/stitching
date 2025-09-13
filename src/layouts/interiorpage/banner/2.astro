@@ -1,0 +1,124 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Banner                     --><!-- ============================================ -->
+<div id="banner-558">
+  <div class="cs-container">
+    <span class="cs-int-topper">Building Communities</span>
+    <span class="cs-int-title">About</span>
+    <div class="cs-breadcrumbs">
+      <a href="" class="cs-link">Home</a>
+      <a href="" class="cs-link cs-active">About</a>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Banner            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #banner-558 {
+      padding: var(--sectionPadding);
+      /* 137px - 212px */
+      padding-top: clamp(8.5625rem, 25vw, 13.25rem);
+      background-color: var(--primary);
+      /* clips the line from causing overflow issues for going off screen */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        text-align: center;
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-int-topper {
+        font-size: var(--topperFontSize);
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        margin: 0;
+        padding: 0 0 0 calc(20 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+        display: block;
+        position: relative;
+
+        &:before {
+          /* yellow line */
+          content: "";
+          width: 50vw;
+          height: 2px;
+          background: var(--secondary);
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 50%;
+          right: 100%;
+          transform: translateY(-50%);
+        }
+      }
+
+      .cs-int-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: inherit;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        position: relative;
+      }
+
+      .cs-breadcrumbs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cs-link {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 1.5vw, 1.25rem);
+        line-height: 1.2em;
+        text-decoration: none;
+        color: var(--bodyTextColorWhite);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:last-of-type {
+          /* remove the chevron on the last list item */
+          &::after {
+            display: none;
+          }
+        }
+
+        &:after {
+          /* chevron - added as pseudo to make adding and removing them easier */
+          content: "";
+          width: calc(30 / 16 * 1rem);
+          height: calc(2 / 16 * 1rem);
+          /* 12px - 24px */
+          margin: 0 clamp(0.75rem, 2vw, 1.5rem);
+          background-color: #fff;
+        }
+
+        &.cs-active {
+          color: var(--secondary);
+        }
+      }
+    }
+  }
+</style>

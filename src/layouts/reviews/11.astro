@@ -1,0 +1,236 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Reviews                      --><!-- ============================================ -->
+<section id="reviews-1335">
+  <div class="cs-container">
+    <div class="cs-content">
+      <img
+        class="cs-icon"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/yellow-quote.svg"
+        alt="quote"
+        width="97"
+        height="80"
+      />
+      <p class="cs-review">
+        We are very happy with our decision to take consultation from
+        Transformative Health & Wellness. The results are beyond our
+        expectations and, as a result, we are confident. When you think about
+        collecting customer feed back, it’s easy to get overwhelmed by the sheer
+        volume of . With so many more customers and so many ways to connect with
+        their feedback it’s hard to know to where to start.
+      </p>
+      <span class="cs-name">Cameron Williamson</span>
+      <span class="cs-desc">Founder Of Yokoloko</span>
+      <img
+        class="cs-floater"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/arrow-3.svg"
+        alt="arrow"
+        width="587"
+        height="587"
+      />
+    </div>
+    <picture class="cs-background">
+      <!--Mobile Image-->
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/on-phone.jpg"
+      />
+      <!--Tablet and above Image-->
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/on-phone.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/on-phone.jpg"
+        alt="group at a table"
+        width="950"
+        height="720"
+      />
+    </picture>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #reviews-1335 {
+      background-color: #1a1a1a;
+      /* prevents padding and border from affecting height and width */
+      box-sizing: border-box;
+      padding: var(--sectionPadding);
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(542 / 16 * 1rem);
+        display: flex;
+        padding: var(--sectionPadding);
+        padding-top: 0;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-icon {
+        /* 60px - 96px */
+        width: clamp(3.75rem, 7vw, 5rem);
+        height: auto;
+        /* 28px - 48px */
+        margin: 0 0 clamp(1.75rem, 4vw, 2.5rem);
+      }
+
+      .cs-review {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        margin: 0 0 calc(28 / 16 * 1rem) 0;
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+      }
+
+      .cs-name {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2vw, 1.5625rem);
+        line-height: 1.2em;
+        text-align: inherit;
+        font-weight: 700;
+        margin: 0 0 calc(8 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+        display: block;
+      }
+
+      .cs-desc {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+        display: block;
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        max-height: calc(300 / 16 * 1rem);
+        display: block;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes img tag act as a background image */
+          object-fit: cover;
+        }
+      }
+
+      .cs-floater {
+        width: 100vw;
+        max-width: calc(1110 / 16 * 1rem);
+        height: auto;
+        opacity: 0.04;
+        /* prevents the mouse from interacting with it */
+        pointer-events: none;
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #reviews-1335 {
+      /* moved section padding back to the section */
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+
+      .cs-content {
+        text-align: left;
+        width: 45%;
+        padding: 0;
+        align-items: flex-start;
+      }
+
+      .cs-floater {
+        bottom: calc(-60 / 16 * 1rem);
+      }
+
+      .cs-background {
+        height: auto;
+        max-height: 100%;
+        width: 50vw;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 50%;
+        margin: 0 0 0 calc(10 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Desktop - 1200px */
+  @media only screen and (min-width: 75rem) {
+    #reviews-1335 {
+      min-height: calc(720 / 16 * 1rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .cs-background {
+        width: 60vw;
+      }
+    }
+  }
+
+  /* Large Desktop - 2000px */
+  @media only screen and (min-width: 125rem) {
+    #reviews-1335 {
+      .cs-floater {
+        margin-left: calc(-180 / 16 * 1rem);
+        right: auto;
+        left: 50%;
+      }
+    }
+  }
+</style>

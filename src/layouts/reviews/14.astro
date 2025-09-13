@@ -1,0 +1,297 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Reviews                     --><!-- ============================================ -->
+<section id="reviews-704">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Testimonials</span>
+      <h2 class="cs-title">
+        Happy <span class="cs-color">Customer Feedback</span> About Our Service
+      </h2>
+    </div>
+    <div class="cs-flex-group">
+      <div class="cs-image-group">
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fperson7.jpg"
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fperson7.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fperson7.jpg"
+            alt="person"
+            width="570"
+            height="680"
+          />
+        </picture>
+
+        <!--Flower Graphic-->
+        <img
+          class="cs-flower"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fbig-abstract-flower.svg"
+          alt="flower graphic"
+          width="261"
+          height="130"
+          aria-hidden="true"
+        />
+
+        <!--Spidey Sense Graphic-->
+        <img
+          class="cs-sense"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fspider-sense.svg"
+          alt="spidey sense graphic"
+          width="80"
+          height="89"
+          aria-hidden="true"
+        />
+      </div>
+      <div class="cs-review-group">
+        <!--Quote Block-->
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fpink-quote.svg"
+          alt="spidey sense graphic"
+          width="97"
+          height="80"
+          aria-hidden="true"
+        />
+        <p class="cs-review-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo totam
+          impedit quaerat omnis officia. Tempora, error ipsum sequi inventore
+          rerum ab totam assumenda corporis asperiores sint nulla modi mollitia
+          fugiat. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Animi sapiente ipsum asperiores quaerat reiciendis odio? Sint atque
+          neque reprehenderit cupiditate.
+        </p>
+        <span class="cs-name">Cameron Williamson</span>
+        <span class="cs-job">Founder of Yokoloko</span>
+      </div>
+    </div>
+  </div>
+  <!--Ripple Graphic-->
+  <picture class="cs-waves">
+    <!--Mobile Image-->
+    <source
+      media="(max-width: 1023px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fripple3-m.svg"
+    />
+    <!--Tablet and above Image-->
+    <source
+      media="(min-width: 1024px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fripple3.svg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fripple3.svg"
+      alt="person"
+      width="566"
+      height="309"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #reviews-704 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+      position: relative;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title {
+        max-width: 26ch;
+        margin: 0;
+      }
+
+      .cs-color {
+        color: var(--primary);
+      }
+
+      .cs-flex-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(40 / 16 * 1rem);
+      }
+
+      .cs-image-group {
+        /* scales the whole section down and ties the font size to the vw and stops at 70% of the vale of 1em, changes at desktop */
+        font-size: min(2.22vw, 0.7em);
+        /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+        width: calc(657 / 16 * 1em);
+        height: calc(680 / 16 * 1em);
+        position: relative;
+        z-index: -1;
+      }
+
+      .cs-picture {
+        width: calc(570 / 16 * 1em);
+        height: calc(680 / 16 * 1em);
+        border-radius: calc(285 / 16 * 1em);
+        /* clips img tag corners */
+        overflow: hidden;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        img {
+          width: 100%;
+          height: 100%;
+          /* makes it act like a background image */
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          /* flips the image to its original orientation */
+          transform: scaleX(-1);
+        }
+      }
+
+      .cs-flower {
+        width: calc(267 / 16 * 1em);
+        height: auto;
+        display: block;
+        position: absolute;
+        bottom: calc(20 / 16 * 1em);
+        right: calc(-48 / 16 * 1em);
+        z-index: -1;
+        transform: rotate(115deg);
+      }
+
+      .cs-sense {
+        width: calc(80 / 16 * 1em);
+        height: auto;
+        position: absolute;
+        top: calc(-4 / 16 * 1em);
+        left: calc(4 / 16 * 1em);
+        transform: rotate(90deg);
+      }
+
+      .cs-review-group {
+        max-width: calc(541 / 16 * 1rem);
+      }
+
+      .cs-icon {
+        /* 56px - 96px */
+        width: clamp(3.5rem, 7vw, 6rem);
+        height: auto;
+        margin: 0 0 calc(24 / 16 * 1rem) 0;
+        display: block;
+      }
+
+      .cs-review-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        line-height: 1.5em;
+        text-align: left;
+        margin: 0 0 calc(24 / 16 * 1rem) 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-name {
+        /* 20px - 23px */
+        font-size: clamp(1.25rem, 3vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 calc(8 / 16 * 1rem) 0;
+        color: var(--headerColor);
+        display: block;
+      }
+
+      .cs-job {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        text-align: left;
+        margin: 0;
+        color: var(--bodyTextColor);
+        display: block;
+      }
+
+      .cs-waves {
+        width: 55vw;
+        /* 400px - 566px */
+        max-width: clamp(25rem, 40vw, 35.375rem);
+        height: auto;
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        /* 100px - 160px */
+        right: calc(clamp(6.25rem, 17vw, 10rem) * -1);
+        z-index: -1;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #reviews-704 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-flex-group {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .cs-image-group {
+        font-size: min(1.18vw, 1em);
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-review-group {
+        width: 54%;
+      }
+    }
+  }
+</style>

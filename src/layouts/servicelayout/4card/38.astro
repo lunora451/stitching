@@ -1,0 +1,289 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Services                    --><!-- ============================================ -->
+<section id="services-1120">
+  <div class="cs-container">
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <div class="cs-image-group">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/charity-white1.svg"
+            alt="icon"
+            width="48"
+            height="48"
+          />
+          <img
+            class="cs-graphic"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/green-shape.svg"
+            alt="shape"
+            width="48"
+            height="48"
+          />
+        </div>
+        <div class="cs-flex">
+          <h2 class="cs-h2">Volunteer</h2>
+          <p class="cs-item-text">
+            We help companies develop powerful corporate social responsibility
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <div class="cs-image-group">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/charity-white2.svg"
+            alt="icon"
+            width="48"
+            height="48"
+          />
+          <img
+            class="cs-graphic"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/green-shape.svg"
+            alt="shape"
+            width="48"
+            height="48"
+          />
+        </div>
+        <div class="cs-flex">
+          <h2 class="cs-h2">Quick Fundraise</h2>
+          <p class="cs-item-text">
+            We help companies develop powerful corporate social responsibility
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <div class="cs-image-group">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/charity-white3.svg"
+            alt="icon"
+            width="48"
+            height="48"
+          />
+          <img
+            class="cs-graphic"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/green-shape.svg"
+            alt="shape"
+            width="48"
+            height="48"
+          />
+        </div>
+        <div class="cs-flex">
+          <h2 class="cs-h2">Start Donating</h2>
+          <p class="cs-item-text">
+            We help companies develop powerful corporate social responsibility
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <div class="cs-image-group">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/charity-white3.svg"
+            alt="icon"
+            width="48"
+            height="48"
+          />
+          <img
+            class="cs-graphic"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/green-shape.svg"
+            alt="shape"
+            width="48"
+            height="48"
+          />
+        </div>
+        <div class="cs-flex">
+          <h2 class="cs-h2">Start Donating</h2>
+          <p class="cs-item-text">
+            We help companies develop powerful corporate social responsibility
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!--SVG Waves-->
+  <img
+    class="cs-waves"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/charity-waves.svg"
+    alt="waves"
+    aria-hidden="true"
+    loading="lazy"
+    decoding="async"
+    width="1920"
+    height="616"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-1120 {
+      padding: var(--sectionPadding);
+      background-color: var(--primary);
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* chnages to 1440px at small desktop */
+        max-width: calc(584 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-card-group {
+        width: 100%;
+        /* changes to 994px at tablet */
+        max-width: calc(413 / 16 * 1rem);
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 16px - 20px */
+        gap: clamp(1rem, 2.5vw, 1.25rem);
+        row-gap: calc(40 / 16 * 1rem);
+      }
+
+      .cs-item {
+        text-align: center;
+        list-style: none;
+        width: 100%;
+        max-width: calc(456 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* 16px - 24px */
+        gap: clamp(1rem, 3vw, 1.5rem);
+      }
+
+      .cs-image-group {
+        /* 80px - 100px */
+        width: clamp(5rem, 8vw, 6.25rem);
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* prevents flexbox from squishing it */
+        flex: none;
+        position: relative;
+      }
+
+      .cs-icon {
+        /* 36px - 48px */
+        width: clamp(2.25rem, 4vw, 3rem);
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .cs-graphic {
+        width: 100%;
+        height: auto;
+      }
+
+      .cs-h2 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        text-align: inherit;
+        margin: 0 0 calc(12 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-item-text {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-waves {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        /* makes it act like a background image */
+        object-fit: cover;
+        position: absolute;
+        z-index: -1;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-1120 {
+      .cs-card-group {
+        /* changes to 1440px at large desktop */
+        max-width: calc(994 / 16 * 1rem);
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+      }
+
+      .cs-item {
+        width: 48%;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #services-1120 {
+      .cs-container {
+        max-width: calc(1440 / 16 * 1rem);
+      }
+
+      .cs-item {
+        text-align: left;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  /* Large Desktop - 1500px */
+  @media only screen and (min-width: 93.75rem) {
+    #services-1120 {
+      .cs-card-group {
+        max-width: 100%;
+        flex-wrap: nowrap;
+      }
+    }
+  }
+</style>

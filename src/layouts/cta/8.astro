@@ -1,0 +1,244 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Subscribe                   --><!-- ============================================ -->
+<section id="subscribe-1721">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Subscribe Us</span>
+      <h2 class="cs-title">Subscribe Your Email for Newsletter & Promotion</h2>
+      <p class="cs-text">
+        Nulla dig nissimmi quis neque interdum. An Ohio man allegedly punched
+        his lawyer in the face in court Tuesday upon finding out he was
+        sentenced.
+      </p>
+      <form class="cs-form" name="Contact Form" method="post">
+        <input
+          class="cs-input"
+          type="email"
+          id="cs-email-301-1718-1721"
+          name="find-us"
+          placeholder="Email Address"
+          required
+        />
+        <button class="cs-button-solid cs-submit" type="submit"
+          >Subscribe</button
+        >
+      </form>
+      <!--Graphic-->
+      <img
+        class="cs-floater"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-spiral.svg"
+        alt="graphic"
+        width="1920"
+        height="486"
+        aria-hidden="true"
+      />
+    </div>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting13.jpg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting13.jpg"
+    />
+    <img
+      aria-hidden="true"
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting13.jpg"
+      alt="meeting"
+      width="360"
+      height="316"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Subscribe          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #subscribe-1721 {
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1312 / 16 * 1rem);
+        margin: auto;
+        padding: var(--sectionPadding);
+        padding-bottom: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+      }
+
+      .cs-content {
+        /* set text align to center if content needs to be centrally aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(1078 / 16 * 1rem);
+        /* -88px top -150px */
+        margin-bottom: calc(clamp(5.5rem, 13vw, 9.375rem) * -1);
+        /* 60px - 80px top & bottom */
+        /* 16px - 128px left & right */
+        padding: clamp(3.75rem, 9vw, 5rem) clamp(1rem, 8vw, 8rem);
+        box-sizing: border-box;
+        background-color: #111926;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* aligns content to the left, set to center to centrally align */
+        align-items: flex-start;
+        z-index: 10;
+      }
+
+      .cs-title {
+        max-width: 20ch;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-form {
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-input {
+        font-size: calc(16 / 16 * 1rem);
+        width: 100%;
+        height: clamp(2.875rem, 5.5vw, 3.5rem);
+        margin: 0;
+        padding: 0;
+        padding-left: calc(20 / 16 * 1rem);
+        border: none;
+        /* prevents padding from adding to width and height */
+        box-sizing: border-box;
+        display: block;
+        &::placeholder {
+          color: #767676;
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-submit {
+        width: 100%;
+        border: none;
+        color: var(--bodyTextColorWhite);
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .cs-background {
+        width: 100%;
+        /* 340px - 620px */
+        height: clamp(21.25rem, 47vw, 38.75rem);
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-floater {
+        width: calc(451 / 16 * 1rem);
+        height: auto;
+        opacity: 0.04;
+        position: absolute;
+        right: calc(-220 / 16 * 1rem);
+        top: 50%;
+        z-index: -1;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #subscribe-1721 {
+      .cs-content {
+        width: 80vw;
+      }
+
+      .cs-form {
+        flex-direction: row;
+      }
+
+      .cs-button-solid {
+        width: auto;
+      }
+    }
+  }
+</style>

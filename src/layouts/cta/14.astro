@@ -1,0 +1,326 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    CTA                       --><!-- ============================================ -->
+<section id="cta-461">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Contact</span>
+      <h2 class="cs-title">Give Us A Call!</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor.
+      </p>
+    </div>
+    <a href="" class="cs-cta">
+      <!--Arrow Right-->
+      <svg
+        class="cs-arrow"
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        ><path
+          fill="#FAFBFC"
+          d="M24.55 31.367c-.317 0-.633-.117-.883-.367a1.258 1.258 0 0 1 0-1.767L32.9 20l-9.233-9.233a1.258 1.258 0 0 1 0-1.767 1.258 1.258 0 0 1 1.766 0L35.55 19.117a1.258 1.258 0 0 1 0 1.766L25.433 31c-.25.25-.566.367-.883.367Z"
+        ></path><path
+          fill="#FAFBFC"
+          d="M34.383 21.25H6.333A1.26 1.26 0 0 1 5.083 20c0-.683.567-1.25 1.25-1.25h28.05c.684 0 1.25.567 1.25 1.25a1.26 1.26 0 0 1-1.25 1.25Z"
+        ></path></svg
+      >
+      <!--Wrapped in a span so it can be animated-->
+      <span class="cs-cta-text">Get Free<br /> Quote</span>
+    </a>
+  </div>
+  <!--Leaf Decoration-->
+  <img
+    class="cs-decoration"
+    aria-hidden="true"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/FAQ/leaf.png"
+    loading="lazy"
+    decoding="async"
+    alt="moon"
+    width="735"
+    height="803"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #cta-461 {
+      /* padding-top changes at 768px */
+      padding: var(--sectionPadding);
+      position: relative;
+      /* clips the background shape */
+      overflow: hidden;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at 768px */
+        max-width: calc(500 / 16 * 1rem);
+        margin: auto;
+      }
+
+      .cs-swoosh {
+        display: none;
+      }
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(500 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(581 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-title,
+      .cs-text {
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-text {
+        opacity: 0.8;
+      }
+
+      .cs-decoration {
+        display: none;
+      }
+
+      .cs-cta {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1.25rem);
+        text-decoration: none;
+        /* 16px - 20px */
+        text-align: center;
+        /* 141px - 224px */
+        width: clamp(8.8125rem, 17vw, 14rem);
+        height: clamp(8.8125rem, 17vw, 14rem);
+        margin: 0 calc(36 / 16 * 1rem) calc(16 / 16 * 1rem) auto;
+        background-color: var(--primaryLight);
+        color: var(--bodyTextColorWhite);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        align-self: flex-end;
+        position: relative;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #14142b;
+          .cs-arrow {
+            transform: translateX(3.75rem);
+            opacity: 0;
+          }
+          .cs-cta-text {
+            transform: translateY(-0.9375rem);
+          }
+        }
+
+        &:before {
+          /* backgorund shape on mobile, removed at 768px. We attach it to the cta button so its position is relative to the position of the button and they move together when the button moves as the screen gets bigger */
+          content: "";
+          width: calc(1500 / 16 * 1rem);
+          height: calc(1000 / 16 * 1rem);
+          background: #14142b;
+          border-radius: 0 0 calc(100 / 16 * 1rem) 0;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          bottom: calc(-76 / 16 * 1rem);
+          right: calc(32 / 16 * 1rem);
+          transform: rotate(30deg);
+          transform-origin: bottom right;
+          z-index: -1;
+        }
+      }
+
+      .cs-arrow {
+        width: calc(40 / 16 * 1rem);
+        height: auto;
+        transition:
+          transform 0.3s,
+          opacity 0.3s;
+      }
+
+      .cs-cta-text {
+        transition: transform 0.3s;
+      }
+    }
+  }
+
+  /* Inbetween - 500px */
+  @media only screen and (min-width: 31.25rem) {
+    #cta-461 {
+      /* clips the .swoosh so it doesn't cause overflow */
+      overflow: hidden;
+      /* pushes down proportional to the viewwidth size, so as the swoosh img grows wider it's growing height doesn't make it creep closer and closer to the cta button, resets to 0 at 768px */
+      padding-bottom: 12vw;
+
+      .cs-container {
+        align-items: flex-start;
+      }
+
+      .cs-cta {
+        &:before {
+          border-radius: calc(150 / 16 * 1rem);
+          bottom: calc(-100 / 16 * 1rem);
+          right: calc(20 / 16 * 1rem);
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #cta-461 {
+      margin-bottom: calc(60 / 16 * 1rem);
+      padding-bottom: 0;
+      background-color: #14142b;
+      position: relative;
+      &:before {
+        content: "";
+        /* changes to 824px at large desktop */
+        width: calc(604 / 16 * 1rem);
+        height: calc(604 / 16 * 1rem);
+        border-radius: 50%;
+        background: #333142;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        /* changes at 1300px */
+        top: calc(-100 / 16 * 1rem);
+        /* changes at 1300px */
+        right: calc(-300 / 16 * 1rem);
+        z-index: -2;
+      }
+
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        position: relative;
+
+        &:before {
+          /* left white slant */
+          content: "";
+          width: calc(6000 / 16 * 1rem);
+          height: calc(1000 / 16 * 1rem);
+          margin-right: calc(-1500 / 16 * 1rem);
+          background: #fff;
+          /* prevents the mouse from interacting with it */
+          pointer-events: none;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 50%;
+          right: 50%;
+          transform: rotate(5deg);
+        }
+
+        &:after {
+          /* right white slant */
+          content: "";
+          width: calc(6000 / 16 * 1rem);
+          height: calc(3000 / 16 * 1rem);
+          margin-right: calc(-3500 / 16 * 1rem);
+          background: #fff;
+          /* prevents the mouse from interacting with it */
+          pointer-events: none;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 100%;
+          right: 50%;
+          transform: rotate(-25deg);
+          z-index: -1;
+        }
+      }
+
+      .cs-text {
+        width: 55%;
+      }
+
+      .cs-cta {
+        /* prevents border from affecting height and width */
+        box-sizing: border-box;
+        border: 12px solid #fff;
+        /* 100px - 100px */
+        margin-right: clamp(6.25rem, 15vw, 6.25rem);
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  /* Large Desktop 1200px */
+  @media only screen and (min-width: 75rem) {
+    #cta-461 {
+      padding-top: calc(160 / 16 * 1rem);
+      &:before {
+        width: calc(824 / 16 * 1rem);
+        height: calc(824 / 16 * 1rem);
+        margin-left: calc(380 / 16 * 1rem);
+        right: auto;
+        left: 50%;
+        top: calc(-50 / 16 * 1rem);
+        transform: none;
+      }
+
+      &:after {
+        /* floating white blurry orb */
+        content: "";
+        width: calc(629 / 16 * 1rem);
+        height: calc(459 / 16 * 1rem);
+        margin-right: 338/16rem;
+        background: #f1f1f4;
+        opacity: 0.16;
+        -webkit-filter: blur(182px);
+        filter: blur(182px);
+        position: absolute;
+        display: block;
+        top: calc(-263 / 16 * 1rem);
+        right: 50%;
+      }
+
+      .cs-text {
+        margin-bottom: calc(200 / 16 * 1rem);
+      }
+
+      .cs-decoration {
+        height: calc(803 / 16 * 1rem);
+        width: auto;
+        margin-left: calc(140 / 16 * 1rem);
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        z-index: -2;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,210 @@
+---
+
+---
+
+<!-- ============================================ --><!--                      Hero                    --><!-- ============================================ -->
+<section id="hero-2203">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex">
+        <span class="cs-topper">Perfect Photography at Your Doorstep</span>
+        <h2 class="cs-title">
+          Chris Brown
+          <img
+            class="cs-img cs-img-1"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/photography-hero-image-one.png"
+            alt="posing"
+            width="220"
+            height="96"
+            loading="eager"
+            decoding="async"
+          />
+          the World Class
+          <img
+            class="cs-img cs-img-2"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/photography-hero-image-two.png"
+            alt="posing"
+            width="220"
+            height="96"
+            loading="eager"
+            decoding="async"
+          />
+          Wedding Photographer
+        </h2>
+      </div>
+      <div class="cs-flex">
+        <p class="cs-text">
+          Authentic wedding photography emphasizes candid shots that capture
+          real emotions, reactions, and interactions among the couple, their
+          families, and guests. These moments are often spontaneous and
+          heartfelt.
+        </p>
+        <a class="cs-button-solid" href="">Book An Appointment</a>
+      </div>
+    </div>
+    <img
+      class="cs-floater"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/photography-hero-floater.png"
+      alt="floating leaf"
+      class="cs-floater"
+      width="373"
+      height="268"
+      loading="eager"
+      decoding="async"
+    />
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-2203 {
+      padding: var(--sectionPadding);
+      background-color: #1a1a1a;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1720 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* 48px - 56px */
+        gap: clamp(3rem, 3vw, 3.5rem);
+      }
+
+      .cs-flex {
+        width: 100%;
+      }
+
+      .cs-content {
+        /* set text align to center if content needs to be centrally aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* aligns content to the left. set to center to align centrally */
+        align-items: flex-start;
+        gap: calc(32 / 16 * 1rem);
+      }
+
+      .cs-topper {
+        color: var(--secondary);
+      }
+
+      .cs-title {
+        /* 39px - 120px */
+        font-size: clamp(2.4375rem, 11vw, 7.5rem);
+        text-transform: uppercase;
+        letter-spacing: -2px;
+        line-height: 1.1em;
+        width: 100%;
+        max-width: calc(1045 / 16 * 1rem);
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        margin-bottom: calc(32 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-img-1 {
+        /* 94px - 220px */
+        width: clamp(5.875rem, 22vw, 13.75rem);
+        /* 40px - 96px */
+        height: clamp(2.5rem, 10vw, 6rem);
+        object-fit: cover;
+      }
+
+      .cs-img-2 {
+        /* 195px - 361px */
+        width: clamp(12.1875rem, 48vw, 22.5625rem);
+        /* 40px - 96px */
+        height: clamp(2.5rem, 10vw, 6rem);
+        object-fit: cover;
+      }
+
+      .cs-floater {
+        /* 126px - 268px */
+        width: clamp(7.875rem, 19vw, 16.75rem);
+        height: auto;
+        object-fit: contain;
+        position: absolute;
+        right: calc(-34 / 16 * 1rem);
+        bottom: calc(-17 / 16 * 1rem);
+        z-index: -1;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: bold;
+        line-height: calc(50 / 16 * 1em);
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        width: auto;
+        padding: 0 calc(30 / 16 * 1rem);
+        background-color: var(--primary);
+
+        // Transition Properties
+        color: #000;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+        transition-delay: 0.1s;
+
+        &:hover {
+          color: #fff;
+          &:before {
+            width: 100%;
+          }
+        }
+
+        &:before {
+          content: "";
+
+          //Transition properties
+          width: 0;
+          height: 100%;
+          background-color: #000;
+          opacity: 1;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+      }
+    }
+  }
+
+  /* Large Desktop - 1400px */
+  @media only screen and (min-width: 87.5rem) {
+    #hero-2203 {
+      .cs-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: calc(100 / 16 * 1rem);
+      }
+
+      .cs-floater {
+        right: 0;
+        top: calc(5 / 16 * 1rem);
+      }
+    }
+  }
+</style>

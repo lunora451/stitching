@@ -1,0 +1,433 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Why Choose                  --><!-- ============================================ -->
+<section id="why-2360">
+  <div class="cs-container">
+    <div class="cs-content">
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
+        accusantium quasi amet voluptatum laboriosam, eveniet iusto fugiat
+        repellat voluptatem! Corporis perspiciatis quod voluptatem veniam porro!
+      </p>
+      <a href="" class="cs-button-solid">Get A Quote</a>
+    </div>
+    <div class="cs-flex">
+      <div class="cs-image-group">
+        <picture class="cs-picture cs-picture1">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building16.jpg"
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building16.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building16.jpg"
+            alt="nice house"
+            width="517"
+            height="650"
+          />
+        </picture>
+        <div class="cs-wrapper">
+          <picture class="cs-picture cs-picture2">
+            <!--Mobile Image-->
+            <source
+              media="(max-width: 600px)"
+              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building25.jpg"
+            />
+            <!--Tablet and above Image-->
+            <source
+              media="(min-width: 601px)"
+              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building25.jpg"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building25.jpg"
+              alt="nice house"
+              width="517"
+              height="650"
+            />
+          </picture>
+          <h2 class="cs-title">Why Choose ArchiStitch</h2>
+        </div>
+      </div>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <h3 class="cs-h3">
+            30+ years in the industry
+            <img
+              class="cs-icon"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-right.svg"
+              alt="icon"
+              width="24"
+              height="24"
+            />
+          </h3>
+          <p class="cs-item-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+            enim doloremque sunt laborum id quis cum quod officia, officiis
+            iste.
+          </p>
+        </li>
+        <li class="cs-item">
+          <h3 class="cs-h3">
+            Professional post-production
+            <img
+              class="cs-icon"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-right.svg"
+              alt="icon"
+              width="24"
+              height="24"
+            />
+          </h3>
+          <p class="cs-item-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+            enim doloremque sunt laborum id quis cum quod officia, officiis
+            iste.
+          </p>
+        </li>
+        <li class="cs-item">
+          <h3 class="cs-h3">
+            Multi-city service coverage
+            <img
+              class="cs-icon"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-right.svg"
+              alt="icon"
+              width="24"
+              height="24"
+            />
+          </h3>
+          <p class="cs-item-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+            enim doloremque sunt laborum id quis cum quod officia, officiis
+            iste.
+          </p>
+        </li>
+        <li class="cs-item">
+          <h3 class="cs-h3">
+            Extensive online portfolio
+            <img
+              class="cs-icon"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-right.svg"
+              alt="icon"
+              width="24"
+              height="24"
+            />
+          </h3>
+          <p class="cs-item-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+            enim doloremque sunt laborum id quis cum quod officia, officiis
+            iste.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Why Choose         -->
+<--- -------------------------- -*/
+
+  /* Mobile */
+  @media only screen and (min-width: 0rem) {
+    #why-2360 {
+      padding: var(--sectionPadding);
+      background-color: #fbf7f2;
+      overflow: hidden;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(584 / 16 * 1rem);
+        margin: auto;
+      }
+
+      .cs-content {
+        width: 100%;
+        margin: auto;
+        /* 48px - 64px */
+        margin-bottom: clamp(3rem, 7vw, 4rem);
+      }
+
+      .cs-flex {
+        /* lets the children of this div act as though this div doesnt exist and are free to arrange themselves with the elements outside of its parent div */
+        display: contents;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(584 / 16 * 1rem);
+        margin: auto;
+      }
+
+      .cs-title {
+        max-width: calc(944 / 16 * 1rem);
+      }
+
+      .cs-text {
+        max-width: calc(944 / 16 * 1rem);
+        margin-bottom: calc(16 / 16 * 1rem);
+
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-card-group {
+        margin: 0 auto;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        column-gap: clamp(1rem, 2.5vw, 1.25rem);
+        /* 32px - 40px */
+        row-gap: clamp(2rem, 2.5vw, 2.5rem);
+      }
+
+      .cs-item {
+        text-align: left;
+        list-style: none;
+        display: flex;
+        grid-column: span 12;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cs-icon {
+        width: calc(24 / 16 * 1rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.4vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        width: 100%;
+        margin: 0 0 calc(16 / 16 * 1rem);
+        padding-bottom: calc(16 / 16 * 1rem);
+        color: var(--headerColor);
+        border-bottom: 1px solid #e3ddd9;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .cs-item-text {
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5vw, 3.5rem);
+        font-weight: 700;
+        text-decoration: none;
+        text-align: center;
+        margin: 0;
+        padding: 0 calc(48 / 16 * 1rem);
+        background-color: var(--primary);
+        color: var(--bodyTextColorWhite);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #000;
+          opacity: 1;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+      }
+
+      .cs-image-group {
+        width: 100%;
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: 90vw;
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-picture1 {
+        margin-bottom: calc(16 / 16 * 1rem);
+      }
+
+      .cs-picture2 {
+        height: 66vw;
+        margin-bottom: calc(48 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* In-between - 600px */
+  @media only screen and (min-width: 37.5rem) {
+    #why-2360 {
+      .cs-image-group {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        column-gap: clamp(1rem, 2.5vw, 1.25rem);
+      }
+
+      .cs-wrapper {
+        /* lets the children of this div act as though this div doesnt exist and are free to arrange themselves with the elements outside of its parent div */
+        display: contents;
+      }
+
+      .cs-picture {
+        height: 50vw;
+        margin-bottom: calc(48 / 16 * 1rem);
+        grid-column: span 6;
+      }
+
+      .cs-picture2 {
+        height: 50vw;
+      }
+
+      .cs-title {
+        grid-column: span 12;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #why-2360 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: calc(48 / 16 * 1rem);
+      }
+
+      .cs-text {
+        margin: 0;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      .cs-button-solid {
+        flex: none;
+      }
+
+      .cs-card-group {
+        max-width: calc(400 / 16 * 1rem);
+      }
+
+      .cs-h3 {
+        height: 100%;
+      }
+
+      .cs-image-group {
+        width: 55%;
+        max-width: calc(743 / 16 * 1rem);
+        display: flex;
+        flex: none;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cs-flex {
+        display: flex;
+        align-items: flex-start;
+        /* 32px - 64px */
+        gap: clamp(2rem, 7vw, 4rem);
+      }
+
+      .cs-title {
+        text-align: right;
+        margin-bottom: calc(140 / 16 * 1rem);
+        order: -1;
+      }
+
+      .cs-picture1 {
+        width: 55%;
+        height: auto;
+        /* 80px - 120px */
+        margin-bottom: clamp(5rem, 6vw, 7.5rem);
+        flex: none;
+      }
+
+      .cs-picture2 {
+        margin: 0;
+        height: auto;
+        /* 238px - 400px */
+        min-height: clamp(14.875rem, 35vw, 25rem);
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #why-2360 {
+      .cs-card-group {
+        padding-bottom: calc(40 / 16 * 1rem);
+      }
+
+      .cs-flex {
+        align-items: stretch;
+      }
+
+      .cs-image-group {
+        height: auto;
+      }
+
+      .cs-picture2 {
+        height: 100%;
+      }
+    }
+  }
+</style>

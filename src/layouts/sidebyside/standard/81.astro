@@ -1,0 +1,256 @@
+---
+
+---
+
+<!-- ============================================ --><!--               Side By Side                   --><!-- ============================================ -->
+<section id="sbs-499">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Service</span>
+      <h2 class="cs-title">Laboratory Testing Services</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum commodi
+        ipsam, nulla nihil exercitationem saepe itaque officiis sed tenetur
+        esse, libero ducimus nesciunt numquam vero, facilis beatae recusandae
+        deserunt quos?
+      </p>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+        pariatur maiores architecto voluptates aliquid harum odio velit earum
+        dolores consectetur.
+      </p>
+      <a href="" class="cs-button-solid">Learn More</a>
+    </div>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 767px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/people.jpg"
+    />
+    <source
+      media="(min-width: 768px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/people.jpg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/people.jpg"
+      alt="people"
+      width="275"
+      height="132"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---        Side By Side        -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-499 {
+      /* we use margin here instead of padding because we want to create the space OUTSIDE the section.  The overflow on the section clips the boxes we made to make the slanted designs, so we need to push from the outside of the section with margin to create space between it and the next section.  If the section above this Stitch has a white background, add margin-top: 0. If it has a white section below it, add margin-bottom: 0. This will allow more proper spacing and not have too much empty space.  If both sections above and below this Stitch have white backgrounds, you can just remove this margin all together */
+      margin: var(--sectionPadding);
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0 calc(16 / 16 * 1rem);
+      /* prevents overflow from the slant shape */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        /* section background */
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: var(--primary);
+        opacity: 1;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        /* 60px - 100px top and bottom */
+        padding: clamp(3.75rem, 6.82vw, 6.25rem) 0;
+        /* maintains proportional margin top as screen size grows */
+        margin-top: 56vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+        /* places it on top of the cs-background */
+        z-index: 10;
+
+        &:before {
+          /* section slant on mobile */
+          content: "";
+          width: calc(1000 / 16 * 1rem);
+          height: calc(2000 / 16 * 1rem);
+          background: var(--primary);
+          /* prevents mouse from interacting with it */
+          pointer-events: none;
+          opacity: 1;
+          position: absolute;
+          z-index: -1;
+          display: block;
+          top: calc(-460 / 16 * 1rem);
+          /* these last two center it horizontally and rotate -65deg */
+          left: 50%;
+          transform: translateX(-50%) rotate(65deg);
+        }
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: right;
+        width: 100%;
+        max-width: calc(522 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-end;
+      }
+
+      .cs-topper,
+      .cs-title {
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-title {
+        /* changes to 100% at tablet */
+        max-width: 80%;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #1a1a1a;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--secondary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #fff;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-background {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbs-499 {
+      &:before {
+        /* remove the pseudo for the section background */
+        display: none;
+      }
+      .cs-background {
+        /* reset height to let top and bottom properties create the height */
+        height: auto;
+        aspect-ratio: initial;
+        position: absolute;
+        /* creates the gap between the image and the blue section */
+        top: calc(60 / 16 * 1rem);
+        bottom: 0;
+
+        img {
+          width: 60%;
+          object-position: 80% top;
+        }
+      }
+
+      .cs-container {
+        margin-top: 0;
+
+        &:before {
+          /* make really tall so it always covers top to bottom, even when you add more list items */
+          height: calc(4000 / 16 * 1rem);
+          /* make really really wide so it covers the left side at large scree sizes */
+          width: calc(4000 / 16 * 1rem);
+          /* push X amount from the center line to the right.  If after you added content and the slant is not covering everything, make this negative number even more negative to pull it more to the right */
+          margin-left: calc(-1100 / 16 * 1rem);
+          top: 50%;
+          left: auto;
+          /* pushes the left edge of the element to the center line of the parent */
+          left: 50%;
+          transform: rotate(35deg) translateY(-50%);
+        }
+      }
+
+      .cs-content {
+        width: 50%;
+      }
+
+      .cs-title {
+        max-width: 100%;
+      }
+    }
+  }
+</style>

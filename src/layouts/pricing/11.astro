@@ -1,0 +1,233 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Pricing                   --><!-- ============================================ -->
+<section id="pricing-1754">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Pricing</span>
+      <h2 class="cs-title">Choose Pricing Plans</h2>
+    </div>
+    <div class="cs-wrapper">
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <h3 class="cs-h3">Group Fitness Classes</h3>
+          <div class="cs-item-wrapper">
+            <span class="cs-package">Single Session (Drop In) Options</span>
+            <p class="cs-item-text">Single Class: $25</p>
+            <p class="cs-item-text">10 Class Punch Card: $200</p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <div class="cs-item-wrapper">
+            <span class="cs-package">Monthly Membership Package*</span>
+            <p class="cs-item-text">
+              Monthly Unlimited Classes + Open Gym: $180
+            </p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <div class="cs-item-wrapper">
+            <span class="cs-package">Yearly Membership Package</span>
+            <p class="cs-item-text">
+              One Year of Unlimited Classes + Open Gym: $1,800
+            </p>
+          </div>
+        </li>
+      </ul>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <h3 class="cs-h3">Personal Training</h3>
+          <div class="cs-item-wrapper">
+            <span class="cs-package">Single Session (Drop-In) Options</span>
+            <p class="cs-item-text">30 Minute Session: $550</p>
+            <p class="cs-item-text">60 Minute Session: $90</p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <div class="cs-item-wrapper">
+            <span class="cs-package">Monthly Membership Packages</span>
+            <p class="cs-item-text">
+              1 Month of 9-30 Minute Private Lessons + Open Gym: $300
+            </p>
+            <p class="cs-item-text">
+              1 Month of 8-60 Minute Private Lessons + Open Gym: $550
+            </p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <div class="cs-item-wrapper">
+            <span class="cs-package">Flexible Package (Valid For 1 Year)</span>
+            <p class="cs-item-text">10 30 Minute Lessons: $400</p>
+            <p class="cs-item-text">10 60 Minute Lessons: $600</p>
+          </div>
+        </li>
+      </ul>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <h3 class="cs-h3">Open Gym</h3>
+          <div class="cs-item-wrapper">
+            <span class="cs-package">Single Session (Drop-In) Option</span>
+            <p class="cs-item-text">Drop in (Daily) $25</p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <div class="cs-item-wrapper">
+            <span class="cs-package">Monthly Membership Package*</span>
+            <p class="cs-item-text">Monthly Open Gym: 380</p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <div class="cs-item-wrapper">
+            <span class="cs-package">Yearly Membership Package</span>
+            <p class="cs-item-text">One Year of Open Gym: $800</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- SVG Graphic -->
+  <img
+    class="cs-graphic"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/black-splatter.svg"
+    alt="graphic"
+    height="1920"
+    width="483"
+    loading="lazy"
+    decoding="async"
+    aria-hidden="true"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Pricing          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #pricing-1754 {
+      padding: var(--sectionPadding);
+      /* 100px - 250px */
+      padding-bottom: clamp(6.25rem, 13vw, 15.625rem);
+      background-color: #1a1a1a;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cs-title {
+        color: var(--bodyTextColorWhite);
+        margin: 0;
+        max-width: 23ch;
+      }
+
+      .cs-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: calc(48 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        text-align: center;
+        width: 100%;
+        padding: calc(0 / 16 * 1rem) clamp(1rem, 2vw, 2rem);
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: calc(24 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: calc(24 / 16 * 1rem);
+      }
+
+      .cs-item-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: calc(8 / 16 * 1rem);
+      }
+
+      .cs-h3 {
+        font-size: calc(25 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-package {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-item-text {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+      }
+
+      .cs-graphic {
+        width: 100%;
+        min-width: calc(1920 / 16 * 1rem);
+        height: auto;
+        position: absolute;
+        bottom: calc(-2 / 16 * 1rem);
+        left: calc(0 / 16 * 1rem);
+        z-index: -1;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #pricing-1754 {
+      .cs-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+        /* 16px - 20px */
+        gap: clamp(1rem, 3vw, 1.25rem);
+      }
+    }
+  }
+</style>

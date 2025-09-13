@@ -1,0 +1,371 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Side By Side                 --><!-- ============================================ -->
+<section id="sbs-1474">
+  <div class="cs-container">
+    <!-- Left Image Section -->
+    <div class="cs-image-group">
+      <!--Floating Box-->
+      <div class="cs-box">
+        <!--Blob-->
+        <img
+          class="cs-blob"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/blob-shape3.svg"
+          alt="blob"
+          width="254"
+          height="238"
+          aria-hidden="true"
+        />
+        <span class="cs-number">100%</span>
+        <span class="cs-desc">Satisfaction Rating</span>
+      </div>
+      <!--Big Background Image-->
+      <picture class="cs-picture">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/girl.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/girl.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/girl.jpg"
+          alt="girl"
+          width="542"
+          height="720"
+          aria-hidden="true"
+        />
+      </picture>
+      <!--Oval-->
+      <img
+        class="cs-oval"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/oval.svg"
+        alt="oval"
+        width="727"
+        height="480"
+        aria-hidden="true"
+      />
+    </div>
+    <!-- Right Content Section-->
+    <div class="cs-content">
+      <span class="cs-topper">About Stitch Day Care</span>
+      <h2 class="cs-title">Welcome To Baby Care and Kindergarten</h2>
+      <p class="cs-text">
+        Stitch day care is a place where you can keep your baby with peace in
+        your mind when you are working in your office for the better future of
+        your child. We promise to take care of your child’s social, emotional,
+        intellectual and physical needs with sensitive care and we also ensure
+        you their security with our life.
+      </p>
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg"
+            alt="checkmark"
+            width="24"
+            height="24"
+          />
+          Our job is to make your life easier.
+        </li>
+        <li class="cs-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg"
+            alt="checkmark"
+            width="24"
+            height="24"
+          />
+          Experience childcare as it should be.
+        </li>
+        <li class="cs-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg"
+            alt="checkmark"
+            width="24"
+            height="24"
+          />
+          We are childcare professionals.
+        </li>
+        <li class="cs-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg"
+            alt="checkmark"
+            width="24"
+            height="24"
+          />
+          Digital Clean Checklist Prepared New Year
+        </li>
+        <li class="cs-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg"
+            alt="checkmark"
+            width="24"
+            height="24"
+          />
+          Babysitting with immense love and care.
+        </li>
+      </ul>
+      <a
+        class="cs-button-solid"
+        aria-label="learn more about our programs"
+        href="">Learn More</a
+      >
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-1474 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: clamp(3rem, 4vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(542 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+        position: relative;
+        z-index: 10;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-ul {
+        width: 100%;
+        margin: 0 0 calc(32 / 16 * 1rem) 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        column-gap: calc(40 / 16 * 1rem);
+        row-gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-li {
+        font-size: var(--bodyFontSize);
+        list-style: none;
+        line-height: 1.5em;
+        width: 100%;
+        color: var(--bodyTextColor);
+        display: flex;
+        justify-content: flex-start;
+        /* push icon top the top so if the list item goes to two lines the icon stays at the top */
+        align-items: flex-start;
+        gap: calc(8 / 16 * 1rem);
+      }
+
+      .cs-icon {
+        width: calc(24 / 16 * 1rem);
+        height: auto;
+        /* adds extra space between the icon and top of parent so it's more centered */
+        margin-top: 1px;
+        display: block;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        overflow: hidden;
+        margin: 0;
+        color: #fff;
+        padding: 0 calc(48 / 16 * 1rem);
+        border-radius: calc(30 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 0%;
+          background: var(--secondary);
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-image-group {
+        /* font size scaling. Everything inside the group is in ems so they pull their value for em from the parent (this group div) and when the font is set to a vw, it scales the whole section down and grows proportionally with the screen width, stopping at the final em value declared in the second slot for the min function. */
+        font-size: min(2.25vw, 0.83em);
+        width: calc(652 / 16 * 1em);
+        min-height: calc(720 / 16 * 1em);
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-picture {
+        width: calc(542 / 16 * 1em);
+        height: auto;
+        border-radius: calc(250 / 16 * 1em);
+        border: calc(10 / 16 * 1em) solid #ffd3c6;
+        background-color: #ffd3c6;
+        overflow: hidden;
+        display: block;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-oval {
+        width: calc(727 / 16 * 1em);
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%) rotate(-38deg);
+      }
+
+      .cs-box {
+        text-align: center;
+        width: auto;
+        /* 16px - 40px */
+        padding: clamp(1em, 3vw, 2.5em) clamp(2.5em, 5vw, 4em);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        bottom: calc(60 / 16 * 1em);
+        z-index: 10;
+      }
+
+      .cs-blob {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .cs-number {
+        /* 24px - 49px */
+        font-size: clamp(1.25rem, 4.3vw, 3.0625rem);
+        line-height: 1.2em;
+        font-weight: 900;
+        margin: 0;
+        color: var(--secondary);
+        display: block;
+        z-index: 10;
+      }
+
+      .cs-desc {
+        /* 12px - 16px */
+        font-size: clamp(0.75rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        font-weight: bold;
+        width: 100%;
+        max-width: 20ch;
+        color: var(--bodyTextColor);
+        position: relative;
+        z-index: 10;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #sbs-1474 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        /* set to horizontal arrangement */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+
+      .cs-content {
+        width: 47%;
+        padding: calc(70 / 16 * 1rem) 0;
+        align-self: center;
+      }
+
+      .cs-image-group {
+        font-size: min(1.2vw, 1em);
+      }
+    }
+  }
+</style>

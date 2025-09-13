@@ -1,0 +1,124 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Footer                     --><!-- ============================================ -->
+<footer id="cs-footer-103">
+  <div class="cs-container">
+    <ul class="cs-ul">
+      <li class="cs-li cs-copyright">© 2022 Copyright</li>
+      <li class="cs-li">
+        <a href="" class="cs-link">Home</a>
+      </li>
+      <li class="cs-li">
+        <a href="" class="cs-link">About</a>
+      </li>
+      <li class="cs-li">
+        <a href="" class="cs-link">Services</a>
+      </li>
+      <li class="cs-li">
+        <a href="" class="cs-link">Gallery</a>
+      </li>
+      <li class="cs-li">
+        <a href="" class="cs-link">Contact</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Footer           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px - Contains hover state */
+  @media only screen and (min-width: 0rem) {
+    #cs-footer-103 {
+      padding: calc(40 / 16 * 1rem) calc(16 / 16 * 1rem);
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+      }
+
+      .cs-ul {
+        padding: 0;
+        margin: auto;
+        display: flex;
+        /* make flexbox arrange top to bottom */
+        flex-direction: column;
+        align-items: center;
+        gap: calc(20 / 16 * 1rem);
+      }
+
+      .cs-li {
+        list-style: none;
+        text-align: center;
+        margin: 0;
+      }
+
+      .cs-copyright {
+        font-size: calc(15 / 16 * 1rem);
+        line-height: 1.5em;
+        margin-top: calc(20 / 16 * 1rem);
+        color: #a0a3bd;
+        display: block;
+        /* send to first position at the bottom */
+        order: 1;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-link {
+        /* 15px - 17px */
+        font-size: clamp(0.9375rem, 2vw, 1.0625rem);
+        line-height: 1.5em;
+        text-decoration: none;
+        font-weight: 700;
+        color: var(--headerColor);
+        position: relative;
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+
+        &:before {
+          /* top right box */
+          content: "";
+          width: 0%;
+          height: calc(3 / 16 * 1rem);
+          background: var(--headerColor);
+          opacity: 1;
+          position: absolute;
+          display: block;
+          bottom: calc(-2 / 16 * 1rem);
+          left: 0;
+          transition: width 0.3s;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 700px */
+  @media only screen and (min-width: 43.75rem) {
+    #cs-footer-103 {
+      .cs-ul {
+        flex-direction: row;
+        /* push everything to the left */
+        justify-content: flex-start;
+        /* 44px - 88px */
+        gap: clamp(2.75rem, 7vw, 5.5rem);
+      }
+
+      .cs-copyright {
+        /* marign auto on the right pushes away from the rest of the flex children */
+        margin: 0 auto 0 0;
+        /* send to the left most position */
+        order: -1;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,294 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Hero                      --><!-- ============================================ -->
+<section id="hero-1949">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h1 class="cs-title">Building Your Home Accommodation</h1>
+      <p class="cs-text">
+        We successfully cope with tasks of varying complexity, provide long-term
+        guarantees and regularly master new technologies.
+      </p>
+      <a href="" class="cs-button-solid">Read More</a>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <h3 class="cs-h3">Construction</h3>
+        <p class="cs-item-text">
+          Designing and Building The Most Beautiful Custom Homes.
+        </p>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Project Development</h3>
+        <p class="cs-item-text">
+          Designing and Building The Most Beautiful Custom Homes.
+        </p>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Interior Design</h3>
+        <p class="cs-item-text">
+          Designing and Building The Most Beautiful Custom Homes.
+        </p>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Architecture</h3>
+        <p class="cs-item-text">
+          Designing and Building The Most Beautiful Custom Homes.
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Background Image, there's a background image in the CSS for the parallax effect you'll need to change as well if you swap out our images -->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/architect.jpeg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/architect.jpeg"
+    />
+    <img
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/architect.jpeg"
+      alt="architect"
+      width="2250"
+      height="1500"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-1949 {
+      padding: var(--sectionPadding);
+      /* 160px - 220px - leaving extra space for the navigation */
+      padding-top: clamp(10rem, 26.95vw, 13.75rem);
+      padding-bottom: calc(100 / 16 * 1rem);
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        /* 60px - 180px */
+        gap: clamp(3.75rem, 13vw, 11.25rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-title,
+      .cs-text {
+        margin-bottom: calc(20 / 16 * 1rem);
+      }
+
+      .cs-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 5vw, 3.8125rem);
+      }
+
+      .cs-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2vw, 1.25rem);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        margin: 0;
+        /* 32px - 48px */
+        padding: 0 clamp(2rem, 4vw, 3rem);
+        background-color: var(--primary);
+        color: #fff;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #000;
+          opacity: 1;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 2.3vw, 1.25rem);
+      }
+
+      .cs-item {
+        text-align: left;
+        list-style: none;
+        width: 100%;
+        margin: 0;
+        margin-bottom: auto;
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        padding: calc(32 / 16 * 1rem) 0;
+        background-color: transparent;
+        border-top: var(--headerColor) 1px solid;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        grid-column: span 12;
+        grid-row: span 1;
+        position: relative;
+        z-index: 1;
+        align-self: stretch;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        font-weight: bold;
+        line-height: 1.2em;
+        text-align: inherit;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-item-text {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        max-width: calc(450 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+
+        &:before {
+          /* Overlay */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: #f7f7f7;
+          /* prevents the cursor from interacting with it */
+          pointer-events: none;
+          opacity: 0.9;
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          /* makes the top of the image start at the top of the parent */
+          object-position: top;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-1949 {
+      .cs-container {
+        align-items: flex-start;
+      }
+
+      .cs-content {
+        text-align: left;
+        margin-left: 0;
+        width: 50%;
+        align-items: flex-start;
+      }
+
+      .cs-item {
+        grid-column: span 3;
+      }
+
+      .cs-background {
+        height: 100%;
+
+        &:before {
+          height: 100%;
+          background: linear-gradient(
+            0deg,
+            rgba(247, 247, 247, 0.95) 26%,
+            rgba(247, 247, 247, 0) 70.26%
+          );
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  /* Large Desktop Parallax Effect - 100px */
+  @media only screen and (min-width: 100rem) {
+    #hero-1949 {
+      .cs-background {
+        background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/architect.jpeg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* creates the parallax effect */
+        background-attachment: fixed;
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+</style>

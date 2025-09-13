@@ -1,0 +1,350 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Side By Side                  --><!-- ============================================ -->
+<section id="RPsbs-871">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <picture class="cs-background">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy.jpg"
+          alt="therapy"
+          width="1280"
+          height="568"
+        />
+      </picture>
+      <div class="cs-box">
+        <span class="cs-number">2500+</span>
+        <span class="cs-desc"> Patients served successfully </span>
+      </div>
+    </div>
+    <div class="cs-content">
+      <span class="cs-topper">Small Group Training</span>
+      <h2 class="cs-title">Specializing In Patient’s Complex Rehabilitation</h2>
+      <p class="cs-text">
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat duis enim velit mollit. Amet minim mollit
+        non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+        consequat duis enim velit mollit.
+      </p>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
+        voluptas quisquam! Facilis, distinctio. Molestiae ipsam dolorum
+        repudiandae sint veritatis? Sapiente consectetur eaque vitae obcaecati
+        voluptates impedit quae tempore commodi? Eos, quia! Atque optio quos
+        voluptates earum impedit rem, necessitatibus omnis.
+      </p>
+      <a href="" class="cs-button-solid">Learn More</a>
+    </div>
+  </div>
+  <!--Floating Arrow-->
+  <img
+    class="cs-floater"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Forange-arrow.svg"
+    alt="orange arrow"
+    width="351"
+    height="378"
+  />
+</section>
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="RPsbsr-871">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <picture class="cs-background">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy.jpg"
+          alt="therapy"
+          width="1280"
+          height="568"
+        />
+      </picture>
+      <div class="cs-box">
+        <span class="cs-number">2500+</span>
+        <span class="cs-desc"> Patients served successfully </span>
+      </div>
+    </div>
+    <div class="cs-content">
+      <span class="cs-topper">Small Group Training</span>
+      <h2 class="cs-title">Specializing In Patient’s Complex Rehabilitation</h2>
+      <p class="cs-text">
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat duis enim velit mollit. Amet minim mollit
+        non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+        consequat duis enim velit mollit.
+      </p>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
+        voluptas quisquam! Facilis, distinctio. Molestiae ipsam dolorum
+        repudiandae sint veritatis? Sapiente consectetur eaque vitae obcaecati
+        voluptates impedit quae tempore commodi? Eos, quia! Atque optio quos
+        voluptates earum impedit rem, necessitatibus omnis.
+      </p>
+      <a href="" class="cs-button-solid">Learn More</a>
+    </div>
+  </div>
+  <!--Floating Arrow-->
+  <img
+    class="cs-floater"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Forange-arrow.svg"
+    alt="orange arrow"
+    width="351"
+    height="378"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #RPsbs-871,
+    #RPsbsr-871 {
+      padding: var(--sectionPadding);
+      position: relative;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(570 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        /* 23 characters wide including spaces */
+        max-width: 23ch;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-image-group {
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        /* 400px - 775px */
+        height: clamp(25rem, 69vw, 48.4375rem);
+        /* 100px - 200px */
+        border-radius: 0 clamp(6.25rem, 17vw, 12.5rem) 0
+          clamp(6.25rem, 17vw, 12.5rem);
+        box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.16);
+        /* clips the corners of the children around the border radius */
+        overflow: hidden;
+        position: relative;
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        /* makes it cover the parent dimensions */
+        object-fit: cover;
+        display: block;
+
+        img {
+          width: 100%;
+          height: 100%;
+          /* makes it cover the parent like a background image */
+          object-fit: cover;
+          display: block;
+        }
+      }
+
+      .cs-box {
+        text-align: center;
+        /* 40px - 67px top & bottom */
+        /* 20px - 28px left & right */
+        padding: clamp(2.5rem, 5vw, 4.1875rem) clamp(1.25rem, 2vw, 1.75rem);
+        background-color: #fff;
+        /* 48px - 80px */
+        border-radius: 0 clamp(3rem, 4vw, 5rem) 0 clamp(3rem, 4vw, 5rem);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(8 / 16 * 1rem);
+        position: absolute;
+        /* 16px - 20px */
+        right: clamp(1rem, 2vw, 1.25rem);
+        /* 16px - 20px */
+        bottom: clamp(1rem, 2vw, 1.25rem);
+      }
+
+      .cs-number {
+        /* 31px - 39px */
+        font-size: clamp(1.9375rem, 3vw, 2.4375rem);
+        line-height: 1.2em;
+        font-weight: 900;
+        text-align: inherit;
+        margin: 0;
+        color: var(--primary);
+      }
+
+      .cs-desc {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        text-align: inherit;
+        font-weight: 700;
+        width: calc(123 / 16 * 1rem);
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-floater {
+        /* 231px - 351px */
+        width: clamp(14.375rem, 27vw, 21.9375rem);
+        height: auto;
+        display: none;
+        position: absolute;
+        top: calc(0 / 16 * 1rem);
+        right: calc(50 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #RPsbs-871,
+    #RPsbsr-871 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .cs-floater {
+        display: block;
+      }
+    }
+  }
+
+  /*-- -------------------------- -->
+<---    Side By Side Reverse    -->
+<--- -------------------------- -*/
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #RPsbsr-871 {
+      background-color: #f7f7f7;
+      .cs-image-group {
+        /* 100px - 200px */
+        border-radius: clamp(6.25rem, 17vw, 12.5rem) 0
+          clamp(6.25rem, 17vw, 12.5rem) 0;
+      }
+
+      .cs-content {
+        /* sends it to the left in the first position */
+        order: -1;
+      }
+
+      .cs-box {
+        right: auto;
+        left: calc(20 / 16 * 1rem);
+        /* 48px - 80px */
+        border-radius: clamp(3rem, 4vw, 5rem) 0 clamp(3rem, 4vw, 5rem) 0;
+      }
+
+      .cs-floater {
+        /* 231px - 351px */
+        width: clamp(14.375rem, 27vw, 21.9375rem);
+        height: auto;
+        position: absolute;
+        top: calc(0 / 16 * 1rem);
+        left: calc(50 / 16 * 1rem);
+        /* flips it horizontally */
+        transform: scaleX(-1);
+      }
+    }
+  }
+</style>

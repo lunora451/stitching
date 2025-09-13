@@ -1,0 +1,233 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Reviews                    --><!-- ============================================ -->
+<section id="reviews-63">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our Reviews</span>
+      <h2 class="cs-title">Words From Our Customers</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor
+        volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida
+        viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo,
+        ornare. Lorem ipsum dolor sit amet.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <img
+          class="cs-img"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile1.png"
+          alt="profile"
+          width="68"
+          height="68"
+        />
+        <span class="cs-name">John Doe</span>
+        <span class="cs-desc">Texas</span>
+        <p class="cs-card-p">
+          Proin massa eros, quis fringilla sagittis. Euismod scelerisque varius
+          sed nec consequat, turpis.
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-img"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile2.png"
+          alt="profile"
+          width="68"
+          height="68"
+        />
+        <span class="cs-name">Jane Smith</span>
+        <span class="cs-desc">California</span>
+        <p class="cs-card-p">
+          Proin massa eros, quis fringilla sagittis. Euismod scelerisque varius
+          sed nec consequat, turpis.
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-img"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile3.png"
+          alt="profile"
+          width="68"
+          height="68"
+        />
+        <span class="cs-name">Thomas Madden</span>
+        <span class="cs-desc">Texas</span>
+        <p class="cs-card-p">
+          Proin massa eros, quis fringilla sagittis. Euismod scelerisque varius
+          sed nec consequat, turpis.
+        </p>
+      </li>
+    </ul>
+    <a aria-label="read more reviews" href="" class="cs-button-solid"
+      >Read More</a
+    >
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #reviews-63 {
+      padding: var(--sectionPadding);
+      background: #f1f1f4;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        margin-bottom: calc(20 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* changes to 20px at tablet */
+        gap: calc(46 / 16 * 1rem);
+      }
+
+      .cs-item {
+        text-align: center;
+        list-style: none;
+        width: 100%;
+        max-width: calc(354 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem) calc(24 / 16 * 1rem);
+        margin: 0;
+        background: #fff;
+        /* prevent padding from adding to the height and width */
+        box-sizing: border-box;
+      }
+
+      .cs-img {
+        margin: 0 auto calc(16 / 16 * 1rem);
+        width: calc(68 / 16 * 1rem);
+        height: calc(68 / 16 * 1rem);
+        border-radius: 50%;
+        display: block;
+        transform: translateY(calc(-28 / 16 * 1rem));
+      }
+
+      .cs-name {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        text-align: center;
+        font-weight: 700;
+        margin: 0;
+        color: var(--headerColor);
+        display: block;
+      }
+
+      .cs-desc {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        text-align: center;
+        margin: 0 0 calc(16 / 16 * 1rem);
+        color: var(--label);
+        display: block;
+      }
+
+      .cs-card-p {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        max-width: calc(280 / 16 * 1rem);
+        margin: auto;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: auto;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #reviews-63 {
+      .cs-card-group {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+        /* 16px - 20px */
+        column-gap: clamp(1rem, 1.5vw, 1.15rem);
+        row-gap: calc(46 / 16 * 1rem);
+      }
+
+      .cs-item {
+        width: clamp(31.5%, 30vw, 32.3%);
+      }
+    }
+  }
+</style>

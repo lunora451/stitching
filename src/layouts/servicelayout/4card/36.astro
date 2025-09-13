@@ -1,0 +1,277 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Services                    --><!-- ============================================ -->
+<section id="services-1130">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our Services</span>
+      <h2 class="cs-title">We Are Here to Help Them</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quia
+        odit omnis eligendi libero porro quisquam delectus, dolore maiores qui
+        minus suscipit optio.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <div class="cs-image-group">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/charity4.svg"
+            alt="icon"
+            width="48"
+            height="48"
+          />
+          <img
+            class="cs-graphic"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/charity-shape.svg"
+            alt="graphic"
+            width="100"
+            height="103"
+          />
+        </div>
+        <h3 class="cs-h3">Healthy Food</h3>
+        <p class="cs-item-text">
+          We help companies develop powerful corporate social responsibility,
+          grantmaking, and employee engagement strategies.
+        </p>
+      </li>
+      <li class="cs-item">
+        <div class="cs-image-group">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/charity5.svg"
+            alt="icon"
+            width="48"
+            height="48"
+          />
+          <img
+            class="cs-graphic"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/charity-shape.svg"
+            alt="graphic"
+            width="100"
+            height="103"
+          />
+        </div>
+        <h3 class="cs-h3">Kids Education</h3>
+        <p class="cs-item-text">
+          We help companies develop powerful corporate social responsibility,
+          grantmaking, and employee engagement strategies.
+        </p>
+      </li>
+      <li class="cs-item">
+        <div class="cs-image-group">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/charity6.svg"
+            alt="icon"
+            width="48"
+            height="48"
+          />
+          <img
+            class="cs-graphic"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/charity-shape.svg"
+            alt="graphic"
+            width="100"
+            height="103"
+          />
+        </div>
+        <h3 class="cs-h3">Medical Care</h3>
+        <p class="cs-item-text">
+          We help companies develop powerful corporate social responsibility,
+          grantmaking, and employee engagement strategies.
+        </p>
+      </li>
+      <li class="cs-item">
+        <div class="cs-image-group">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/charity7.svg"
+            alt="icon"
+            width="48"
+            height="48"
+          />
+          <img
+            class="cs-graphic"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/charity-shape.svg"
+            alt="graphic"
+            width="100"
+            height="103"
+          />
+        </div>
+        <h3 class="cs-h3">Medical Care</h3>
+        <p class="cs-item-text">
+          We help companies develop powerful corporate social responsibility,
+          grantmaking, and employee engagement strategies.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-1130 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-topper {
+        color: #767676;
+      }
+
+      .cs-card-group {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 2.3vw, 1.25rem);
+      }
+
+      .cs-item {
+        width: 100%;
+        text-align: center;
+        list-style: none;
+        margin: 0;
+        /* 24px - 32px */
+        padding: clamp(1.5rem, 3vw, 2rem);
+        background-color: #fff;
+        border: 1px solid #e8e8e8;
+        border-radius: calc(16 / 16 * 1rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        grid-column: span 12;
+        grid-row: span 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        transition:
+          box-shadow 0.3s,
+          border-color 0.3s;
+
+        &:hover {
+          box-shadow: 0px 4px 120px 0px rgba(0, 0, 0, 0.12);
+          border-color: transparent;
+          .cs-h3 {
+            color: var(--primary);
+          }
+        }
+      }
+
+      .cs-image-group {
+        width: calc(100 / 16 * 1rem);
+        height: auto;
+        /* 20px - 24px */
+        margin: 0 0 clamp(1.25rem, 2.5vw, 1.5rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* prevents flexbox from squishing it */
+        flex: none;
+        position: relative;
+      }
+
+      .cs-icon {
+        width: calc(48 / 16 * 1rem);
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .cs-graphic {
+        width: 100%;
+        height: auto;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: bold;
+        text-align: inherit;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--headerColor);
+        transition: color 0.3s;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        max-width: calc(450 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-1130 {
+      .cs-item {
+        text-align: left;
+        align-items: flex-start;
+        grid-column: span 6;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #services-1130 {
+      .cs-item {
+        grid-column: span 3;
+      }
+    }
+  }
+</style>

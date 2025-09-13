@@ -1,0 +1,263 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Collection                  --><!-- ============================================ -->
+<section id="collection-1579">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Categories</span>
+      <h2 class="cs-title">Shop by Categories</h2>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <picture class="cs-picture" aria-hidden="true">
+            <source
+              media="(max-width: 600px)"
+              srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-tshirts.jpg"
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-tshirts.jpg"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-tshirts.jpg"
+              width="365"
+              height="201"
+              alt="t-shirt"
+            />
+          </picture>
+          <div class="cs-info">
+            <span class="cs-category">T-Shirts</span>
+            <span class="cs-quantity">250+ Products Available</span>
+          </div>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <picture class="cs-picture" aria-hidden="true">
+            <source
+              media="(max-width: 600px)"
+              srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-bags.jpg"
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-bags.jpg"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-bags.jpg"
+              width="365"
+              height="201"
+              alt="purse"
+            />
+          </picture>
+          <div class="cs-info">
+            <span class="cs-category">Bags</span>
+            <span class="cs-quantity">250+ Products Available</span>
+          </div>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <picture class="cs-picture" aria-hidden="true">
+            <source
+              media="(max-width: 600px)"
+              srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-shoes.jpg"
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-shoes.jpg"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-shoes.jpg"
+              width="365"
+              height="201"
+              alt="shoes"
+            />
+          </picture>
+          <div class="cs-info">
+            <span class="cs-category">Shoes</span>
+            <span class="cs-quantity">250+ Products Available</span>
+          </div>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <picture class="cs-picture" aria-hidden="true">
+            <source
+              media="(max-width: 600px)"
+              srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-accessories.jpg"
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-accessories.jpg"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-accessories.jpg"
+              width="365"
+              height="201"
+              alt="perfume"
+            />
+          </picture>
+          <div class="cs-info">
+            <span class="cs-category">Accessories</span>
+            <span class="cs-quantity">250+ Products Available</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Collection         -->
+<--- -------------------------- -*/
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #collection-1579 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px on tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title {
+        margin: 0;
+      }
+
+      .cs-topper {
+        color: var(--secondary);
+      }
+
+      .cs-card-group {
+        list-style: none;
+        width: 100%;
+        margin: auto;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: clamp(1rem, 3vw, 1.25rem);
+      }
+
+      .cs-item {
+        text-align: center;
+        max-width: 100%;
+        grid-column: span 12;
+        position: relative;
+
+        &:hover {
+          .cs-picture {
+            img {
+              opacity: 0.5;
+              transform: scale(1.3);
+            }
+          }
+
+          .cs-category {
+            color: var(--primary);
+          }
+        }
+      }
+
+      .cs-link {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: 62vw;
+        max-height: calc(348 / 16 * 1rem);
+        /* 16px - 20px */
+        margin: 0 0 clamp(1rem, 2.3vw, 1.25rem);
+        background-color: #000;
+        overflow: hidden;
+        display: block;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition:
+            opacity 0.3s,
+            transform 0.6s;
+        }
+      }
+
+      .cs-category {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-align: center;
+        text-decoration: none;
+        margin-bottom: calc(8 / 16 * 1rem);
+        color: var(--headerColor);
+        display: flex;
+        justify-content: center;
+        position: relative;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: var(--primary);
+        }
+      }
+
+      .cs-quantity {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        color: var(--bodyTextColor);
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #collection-1579 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+      .cs-item {
+        grid-column: span 3;
+      }
+
+      .cs-picture {
+        /* 180px - 348px */
+        height: clamp(11.75rem, 25vw, 21.75rem);
+      }
+    }
+  }
+</style>

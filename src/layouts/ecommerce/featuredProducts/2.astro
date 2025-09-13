@@ -1,0 +1,292 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Collection                   --><!-- ============================================ -->
+<section id="collection-1595">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-tag">Only $20</span>
+      <h2 class="cs-title">Featured Products</h2>
+      <p class="cs-text">
+        Dive into the exhilarating world of fishing with Gill Rush, a dynamic
+        and electrifying apparel brand designed exclusively for those who live
+        for the rush of the catch.
+      </p>
+      <a href="" class="cs-button-solid">Shop Now</a>
+    </div>
+    <div class="cs-card-group">
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source
+              media="(max-width: 600px)"
+              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shirt4.png"
+            />
+            <!--Tablet and above Image-->
+            <source
+              media="(min-width: 601px)"
+              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shirt4.png"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shirt4.png"
+              alt="hats"
+              width="1280"
+              height="568"
+            />
+          </picture>
+          <h3 class="cs-product-name">Crossback Halter Dress</h3>
+          <span class="cs-price">$7.00</span>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source
+              media="(max-width: 600px)"
+              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shirt5.png"
+            />
+            <!--Tablet and above Image-->
+            <source
+              media="(min-width: 601px)"
+              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shirt5.png"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shirt5.png"
+              alt="hats"
+              width="1280"
+              height="568"
+            />
+          </picture>
+          <h3 class="cs-product-name">Diesel V1 Hoodie</h3>
+          <span class="cs-price">$7.00</span>
+        </a>
+      </li>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---        Collection          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #collection-1595 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(500 / 16 * 1rem);
+        /* pushes it to the left */
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-tag {
+        font-size: calc(13 / 16 * 1rem);
+        line-height: calc(24 / 16 * 1rem);
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+        padding: 0 calc(8 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+        background-color: var(--secondary);
+        display: block;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 16px - 20px */
+        column-gap: clamp(1rem, 3vw, 1.25rem);
+        /* 16px - 40px */
+        row-gap: clamp(1rem, 3vw, 2.5rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        &:hover {
+          .cs-picture {
+            background-color: rgba(0, 0, 0, 0.1);
+            img {
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
+
+      .cs-link {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: 100vw;
+        min-height: calc(240 / 16 * 1rem);
+        max-height: calc(400 / 16 * 1rem);
+        /* 12px - 20px */
+        margin: 0 0 clamp(0.75rem, 2vw, 1.25rem);
+        background-color: #f9f9f9;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        transition: background-color 0.3s;
+
+        img {
+          width: 100%;
+          max-width: calc(250 / 16 * 1rem);
+          height: auto;
+          max-height: 80%;
+          object-fit: contain;
+          transition: transform 0.3s;
+        }
+      }
+
+      .cs-product-name {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 calc(4 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-price {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--primary);
+        display: block;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #collection-1595 {
+      .cs-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cs-card-group {
+        width: 56%;
+        flex-direction: row;
+        align-items: stretch;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-item {
+        &:last-of-type {
+          .cs-picture {
+            /* 160px - 320px */
+            height: clamp(10rem, 26vw, 20rem);
+            min-height: calc(160 / 16 * 1rem);
+
+            img {
+              width: 80%;
+            }
+          }
+        }
+      }
+
+      .cs-link {
+        height: 100%;
+        justify-content: center;
+      }
+
+      .cs-picture {
+        /* 400px - 520px */
+        height: clamp(25rem, 50vw, 32.5rem);
+        min-height: auto;
+        max-height: 100%;
+      }
+    }
+  }
+</style>

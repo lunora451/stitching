@@ -1,0 +1,382 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Side By Side                  --><!-- ============================================ -->
+<section id="sbs-1189">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <!--Stat Group-->
+      <div class="cs-stat">
+        <picture class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/why-icon.svg"
+            alt="icon"
+            width="48"
+            height="48"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-flex">
+          <span class="cs-number">2534+</span>
+          <span class="cs-desc">Satisfied Clients</span>
+        </div>
+      </div>
+
+      <!--Car-->
+      <picture class="cs-picture cs-picture1">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/car.png"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/car.png"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/car.png"
+          alt="appliance"
+          width="858"
+          height="477"
+        />
+      </picture>
+
+      <!--Person, to make your own crop of a person, use https://www.remove.bg/ to remove the background of any image -->
+      <picture class="cs-picture cs-picture2">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic27.png"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic27.png"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic27.png"
+          alt="appliance"
+          width="438"
+          height="588"
+        />
+      </picture>
+
+      <!--Stripe background-->
+      <div class="cs-graphic-wrapper">
+        <img
+          class="cs-graphic"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/tire-mark.svg"
+          alt="tire mark"
+          width="1469"
+          height="626"
+          aria-hidden="true"
+        />
+      </div>
+    </div>
+    <div class="cs-content">
+      <span class="cs-topper">About Us</span>
+      <h2 class="cs-title">Best Service Mechanics In Town</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
+        voluptas repellat, ullam enim ad ratione delectus. Possimus dolores
+        impedit perspiciatis ea alias, ex ab deserunt Qui. Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Quisquam voluptas repellat, ullam
+        enim ad ratione delectus. Possimus dolores impedit perspiciatis ea
+        alias, ex ab deserunt Qui.
+      </p>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
+        voluptas repellat, ullam enim ad ratione delectus. Possimus dolores
+        impedit perspiciatis ea alias, ex ab deserunt Qui.
+      </p>
+      <a href="" class="cs-button-solid">Read More</a>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Why Choose         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-1189 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+      position: relative;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(522 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-image-group {
+        /* scales the whole group based on the view width size and stop when that vales equals .8em, resets at desktop */
+        font-size: min(1.7vw, 0.7em);
+        width: calc(858 / 16 * 1em);
+        height: auto;
+        /* 60px - 80px */
+        padding-top: clamp(3.75rem, 6vw, 5rem);
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        /* 48px - 64px, changes to 36px at large desktop */
+        row-gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-graphic-wrapper {
+        width: 100vw;
+        height: 85%;
+        background-color: #1a1a1a;
+        overflow: hidden;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        z-index: -1;
+        transform: translateX(-50%);
+      }
+
+      .cs-graphic {
+        /* changes at tablet */
+        width: 250vw;
+        height: auto;
+        opacity: 0.04;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-10deg);
+      }
+
+      .cs-stat {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-icon-wrapper {
+        /* 72px - 96px */
+        width: clamp(4.5rem, 12vw, 6rem);
+        height: clamp(4.5rem, 12vw, 6rem);
+        background-color: #484848;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cs-icon {
+        /* 32px - 48px */
+        width: clamp(2rem, 6vw, 3rem);
+      }
+
+      .cs-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cs-number {
+        font-size: clamp(1.9375rem, 5.9vw, 3.0625rem);
+        line-height: 1.2em;
+        font-weight: 900;
+        text-align: left;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        display: block;
+      }
+
+      .cs-desc {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        text-align: left;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        display: block;
+      }
+
+      .cs-picture1 {
+        width: auto;
+        height: calc(477 / 16 * 1em);
+        display: block;
+        position: absolute;
+        bottom: calc(20 / 16 * 1em);
+        left: 0;
+        z-index: 10;
+
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+
+      .cs-picture2 {
+        width: auto;
+        height: calc(538 / 16 * 1em);
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        margin: 0 auto;
+        z-index: 10;
+
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #sbs-1189 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      .cs-content {
+        width: 47%;
+      }
+
+      .cs-image-group {
+        font-size: min(1vw, 1em);
+        width: calc(522 / 16 * 1em);
+        height: 100%;
+        padding: 0;
+        flex: none;
+        position: absolute;
+        top: 0;
+        right: 50%;
+        margin-right: calc(150 / 16 * 1em);
+      }
+
+      .cs-graphic-wrapper {
+        width: calc(522 / 16 * 1em);
+        height: 87%;
+      }
+
+      .cs-graphic {
+        /* changes at large desktop */
+        width: calc(1958 / 16 * 1em);
+        top: 0;
+        transform: translateX(-50%) rotate(-10deg);
+      }
+
+      .cs-picture1 {
+        height: 62%;
+        max-height: calc(477 / 16 * 1em);
+        right: auto;
+        left: 50%;
+        transform: translateX(-54%);
+      }
+
+      .cs-picture2 {
+        height: 67%;
+        max-height: calc(538 / 16 * 1em);
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #sbs-1189 {
+      .cs-image-group {
+        margin-right: calc(50 / 16 * 1em);
+        gap: calc(36 / 16 * 1em);
+      }
+
+      .cs-graphic-wrapper {
+        height: 83%;
+      }
+
+      .cs-graphic {
+        width: calc(1496 / 16 * 1em);
+        right: calc(-20 / 16 * 1em);
+        top: calc(110 / 16 * 1em);
+        left: auto;
+        transform: rotate(-10deg);
+      }
+    }
+  }
+</style>

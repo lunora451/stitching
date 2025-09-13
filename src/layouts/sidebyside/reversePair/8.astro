@@ -1,0 +1,345 @@
+---
+
+---
+
+<!-- ============================================ --><!--               Side By Side Pair              --><!-- ============================================ -->
+<section id="RPsbs-2140">
+  <div class="cs-container">
+    <div class="cs-section1">
+      <div class="cs-content">
+        <span class="cs-topper">Why Choose Us</span>
+        <h2 class="cs-title">
+          Capture the Perfect Moments that will Make Memories. Lorem ipsum dolor
+          sit amet consectetur adipisicing.
+        </h2>
+      </div>
+      <picture class="cs-picture1">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/wedding-sign.jpeg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/wedding-sign.jpeg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/wedding-sign.jpeg"
+          alt="wedding"
+          width="688"
+          height="464"
+          aria-hidden="true"
+        />
+      </picture>
+    </div>
+    <div class="cs-section2">
+      <picture class="cs-picture2">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/wedding-table.jpeg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/wedding-table.jpeg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/wedding-table.jpeg"
+          alt="wedding"
+          width="674"
+          height="504"
+          aria-hidden="true"
+        />
+      </picture>
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <h3 class="cs-h3">Professional Approach</h3>
+          <p class="cs-li-text">
+            We welcome and celebrate different perspectives to help our firm,
+            our clients and our people adip iscing elit achieve.
+          </p>
+        </li>
+        <li class="cs-li">
+          <h3 class="cs-h3">Team of Wedding Experts</h3>
+          <p class="cs-li-text">
+            We welcome and celebrate different perspectives to help our firm,
+            our clients and our people adip iscing elit achieve.
+          </p>
+        </li>
+        <li class="cs-li">
+          <h3 class="cs-h3">Acceptable Prices</h3>
+          <p class="cs-li-text">
+            We welcome and celebrate different perspectives to help our firm,
+            our clients and our people adip iscing elit achieve.
+          </p>
+        </li>
+        <li class="cs-li">
+          <h3 class="cs-h3">Acceptable Prices</h3>
+          <p class="cs-li-text">
+            We welcome and celebrate different perspectives to help our firm,
+            our clients and our people adip iscing elit achieve.
+          </p>
+        </li>
+        <li class="cs-li">
+          <h3 class="cs-h3">Acceptable Prices</h3>
+          <p class="cs-li-text">
+            We welcome and celebrate different perspectives to help our firm,
+            our clients and our people adip iscing elit achieve.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <img
+    class="cs-flower"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/flower-tilted.png"
+    alt="flower"
+    width="269"
+    height="325"
+    aria-hidden="true"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---      Side By Side Pair     -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #RPsbs-2140 {
+      padding: var(--sectionPadding);
+      background-color: #fbf5f1;
+      overflow: hidden;
+      position: relative;
+
+      .cs-container {
+        width: 100%;
+        /* changed to 1280px at tablet */
+        max-width: calc(544 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+        z-index: 1;
+
+        &::before {
+          content: "";
+          width: 100vw;
+          background-color: #f6ebe3;
+          opacity: 1;
+          position: absolute;
+          top: calc(105 / 16 * 1rem);
+          bottom: calc(200 / 16 * 1rem);
+          z-index: -1;
+        }
+      }
+
+      .cs-section1,
+      .cs-section2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to center if content needs to be centrally aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(617 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* aligns content to the left, set to center to centrally align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        max-width: 20ch;
+        margin: 0;
+      }
+
+      .cs-ul {
+        width: 100%;
+        max-width: calc(526 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(24 / 16 * 1rem);
+      }
+
+      .cs-li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cs-h3 {
+        font-size: calc(20 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        margin: 0 0 calc(8 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-li-text {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-picture1 {
+        width: 100%;
+        height: calc(280 / 16 * 1rem);
+        /* clips img tag corners */
+        overflow: hidden;
+        border: 8px solid #ffffff;
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-picture2 {
+        width: 100%;
+        height: calc(320 / 16 * 1rem);
+        /* clips img tag corners */
+        overflow: hidden;
+        border: 8px solid #ffffff;
+        display: block;
+        order: 2;
+        position: relative;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: bottom;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-flower {
+        width: clamp(8.3125rem, 28vw, 18.2rem);
+        height: auto;
+        display: block;
+        position: absolute;
+        top: calc(-8 / 16 * 1rem);
+        right: calc(-24 / 16 * 1rem);
+        z-index: 1;
+        transform: rotate(-80deg);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #RPsbs-2140 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+
+        &::before {
+          top: calc(70 / 16 * 1rem);
+          /* -70px to -200px */
+          bottom: clamp(4.375rem, 16vw, 12.5rem);
+        }
+      }
+
+      .cs-section1,
+      .cs-section2 {
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      .cs-section1 {
+        .cs-content {
+          padding: calc(100 / 16 * 1rem) 0;
+        }
+      }
+
+      .cs-section2 {
+        .cs-ul {
+          /* 28px - 100px */
+          padding: clamp(1.75rem, 7vw, 6.25rem) 0;
+          justify-content: center;
+        }
+      }
+
+      .cs-title {
+        max-width: 20ch;
+      }
+
+      .cs-content {
+        width: 40%;
+        flex: none;
+        justify-content: center;
+      }
+
+      .cs-picture1 {
+        /* 332px - 480px */
+        min-height: clamp(20.75rem, 40vw, 30rem);
+        height: auto;
+      }
+
+      .cs-picture2 {
+        height: auto;
+        /* 440px - 520px */
+        min-height: clamp(27.5rem, 40vw, 32.5rem);
+        order: -1;
+      }
+
+      .cs-flower {
+        top: calc(-60 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #RPsbs-2140 {
+      .cs-flower {
+        top: calc(-80 / 16 * 1rem);
+        right: calc(-16 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Large Desktop - 1440px */
+  @media only screen and (min-width: 90rem) {
+    #RPsbs-2140 {
+      .cs-flower {
+        top: 0;
+      }
+    }
+  }
+</style>

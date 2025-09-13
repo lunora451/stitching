@@ -1,0 +1,373 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Side By Side                 --><!-- ============================================ -->
+<section id="sbs-1216">
+  <div class="cs-container">
+    <!-- Left Image Section -->
+    <div class="cs-image-group">
+      <!--Floating Box-->
+      <div class="cs-box">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/medal.svg"
+          alt="icon"
+          width="521"
+          height="60"
+          aria-hidden="true"
+        />
+        <span class="cs-number">12+</span>
+        <span class="cs-desc">Years of Experience</span>
+      </div>
+      <!--Big Background Image-->
+      <picture class="cs-picture">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting.jpg"
+          alt="meeting"
+          width="522"
+          height="560"
+          aria-hidden="true"
+        />
+      </picture>
+      <!--Swirl-->
+      <img
+        class="cs-graphic"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/swirl.svg"
+        alt="icon"
+        width="715"
+        height="715"
+        aria-hidden="true"
+      />
+    </div>
+    <!-- Right Content Section-->
+    <div class="cs-content">
+      <span class="cs-topper">Our Mission & Vision</span>
+      <h2 class="cs-title">We Are The Champion Of The Finance Industry</h2>
+      <p class="cs-text">
+        Highly qualified tax consultants with many years of experience in the
+        field offer a full range of services to help you build a sound financial
+        future. Tax advice received in time allows you to avoid many problems
+        with the tax authorities. We will help you as efficiently as possible
+        and in a short time.
+      </p>
+      <div class="cs-content-flair">
+        <div class="cs-bar">
+          <h3 class="cs-h3">
+            Savings Strategies
+            <span class="cs-percentage">83%</span>
+          </h3>
+          <!--change the --progress number to match the percentage in cs-number-->
+          <div class="cs-progress" aria-hidden="true">
+            <span class="cs-progress-bar" style="--progress: 83%"></span>
+          </div>
+        </div>
+        <div class="cs-bar">
+          <h3 class="cs-h3">
+            Tax Planning
+            <span class="cs-percentage">72%</span>
+          </h3>
+          <!--change the --progress number to match the percentage in cs-number-->
+          <div class="cs-progress" aria-hidden="true">
+            <span class="cs-progress-bar" style="--progress: 72%"></span>
+          </div>
+        </div>
+        <div class="cs-bar">
+          <h3 class="cs-h3">
+            Trusted Company
+            <span class="cs-percentage">96%</span>
+          </h3>
+          <!--change the --progress number to match the percentage in cs-number-->
+          <div class="cs-progress" aria-hidden="true">
+            <span class="cs-progress-bar" style="--progress: 96%"></span>
+          </div>
+        </div>
+      </div>
+      <a
+        class="cs-button-solid"
+        aria-label="learn more about our programs"
+        href="">Learn More</a
+      >
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-1216 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+      background-color: #fefbf3;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: clamp(3rem, 4vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(542 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #1a1a1a;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #fff;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-content-flair {
+        width: 100%;
+        margin: 0 0 calc(32 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        gap: calc(20 / 16 * 1rem);
+      }
+
+      .cs-bar {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: calc(8 / 16 * 1rem);
+      }
+
+      .cs-h3 {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        width: 100%;
+        color: var(--headerColor);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cs-progress {
+        width: 100%;
+        height: 8px;
+        overflow: hidden;
+        background-color: #e8e8e8;
+      }
+
+      .cs-progress-bar {
+        width: var(--progress);
+        height: 100%;
+        background-color: var(--primary);
+        display: block;
+      }
+
+      .cs-percentage {
+        font-size: calc(14 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--headerColor);
+        display: block;
+      }
+
+      .cs-image-group {
+        width: 100%;
+        max-width: calc(550 / 16 * 1rem);
+        position: relative;
+        display: block;
+        /* width divided by height */
+        aspect-ratio: 328/358;
+      }
+
+      .cs-picture {
+        /* big background image */
+        width: 93%;
+        height: 93%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .cs-box {
+        text-align: center;
+        width: auto;
+        /* 16px - 40px */
+        padding: clamp(1rem, 3vw, 2.5rem);
+        background-color: #1a1a1a;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: calc(8 / 16 * 1rem);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 10;
+      }
+
+      .cs-icon {
+        /* 40px - 60px */
+        width: clamp(2.5rem, 4vw, 3.75rem);
+        height: auto;
+        margin-right: 0;
+        display: block;
+      }
+
+      .cs-number {
+        /* 25px - 39px */
+        font-size: clamp(1.5625rem, 3vw, 2.4375rem);
+        line-height: 1.2em;
+        font-weight: 900;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        display: block;
+        z-index: 10;
+      }
+
+      .cs-desc {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        color: var(--bodyTextColorWhite);
+        position: relative;
+        z-index: 10;
+      }
+
+      .cs-graphic {
+        width: 150%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #sbs-1216 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        /* set to horizontal arrangement */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+
+      .cs-content {
+        width: 47%;
+        align-self: center;
+      }
+
+      .cs-image-group {
+        width: 43vw;
+        max-width: calc(560 / 16 * 1rem);
+        min-height: calc(400 / 16 * 1rem);
+        height: auto;
+        margin: 0 calc(72 / 16 * 1rem) 0 0;
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: 100%;
+      }
+
+      .cs-box {
+        bottom: calc(40 / 16 * 1rem);
+        left: auto;
+        /* -40px to -108px */
+        right: calc(clamp(2.5rem, 6vw + 1rem, 6.75rem) * -1);
+      }
+
+      .cs-graphic {
+        max-width: calc(715 / 16 * 1rem);
+        left: auto;
+        right: calc(130 / 16 * 1rem);
+        transform: translateY(-50%);
+      }
+    }
+  }
+</style>

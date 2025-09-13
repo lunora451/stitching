@@ -1,0 +1,347 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Side By Side                 --><!-- ============================================ -->
+<section id="sbs-290">
+  <div class="cs-container">
+    <!-- Left Image Section -->
+    <div class="cs-image-group">
+      <picture class="cs-picture cs-picture1">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/people1.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/people1.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/people1.jpg"
+          alt="people in a meeting"
+          width="398"
+          height="393"
+          aria-hidden="true"
+        />
+      </picture>
+      <picture class="cs-picture cs-picture2">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/people2.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/people2.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/people2.jpg"
+          alt="people in a meeting"
+          width="320"
+          height="318"
+          aria-hidden="true"
+        />
+      </picture>
+      <picture class="cs-picture cs-picture3">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/people3.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/people3.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/people3.jpg"
+          alt="people in a meeting"
+          width="325"
+          height="322"
+          aria-hidden="true"
+        />
+      </picture>
+      <picture class="cs-picture cs-picture4">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/people4.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/people4.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/people4.jpg"
+          alt="people in a meeting"
+          width="264"
+          height="262"
+          aria-hidden="true"
+        />
+      </picture>
+      <a href="" class="cs-play-link" aria-label="play link">
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/play.svg"
+          alt="play icon"
+          width="32"
+          height="32"
+          aria-hidden="true"
+        />
+      </a>
+    </div>
+    <!-- Right Content Section-->
+    <div class="cs-content">
+      <span class="cs-topper">About Us</span>
+      <h2 class="cs-title">Preserving A Good Relation Is the Key of Success</h2>
+      <p class="cs-text">
+        Decision Are A Professional Attorney & Lawyers Services Provider
+        Institutions. Suitable For Law Firm, Injury Law, Traffic Ticket
+        Attorney, Legacy And More. Lorem Ipsum is simply dummy text of the
+        printing and typesetting industry simply.
+      </p>
+      <ul class="cs-ul">
+        <li class="cs-li">Praesent feugiat sem mattis.</li>
+        <li class="cs-li">Praesent feugiat sem mattis.</li>
+        <li class="cs-li">Praesent feugiat sem mattis.</li>
+        <li class="cs-li">Praesent feugiat sem mattis.</li>
+      </ul>
+      <a
+        class="cs-button-solid"
+        aria-label="learn more about our programs"
+        href="">Learn More</a
+      >
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-290 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-ul {
+        width: 100%;
+        margin: 0 0 calc(32 / 16 * 1rem) 0;
+        padding-left: calc(20 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(8 / 16 * 1rem);
+      }
+
+      .cs-li {
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        list-style: none;
+        text-align: left;
+        width: 100%;
+        max-width: calc(450 / 16 * 1rem);
+        margin: 0;
+        color: var(--bodyTextColor);
+        position: relative;
+
+        &:before {
+          /* bullet */
+          content: "";
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background: currentColor;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: calc(10 / 16 * 1rem);
+          left: calc(-15 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-image-group {
+        /* scaling entire section down. font-size starts at a min in vw, and stops when that value reaches 1em (16px). Since we want the picture elements to base their font size on the parent and not the root, we use ems for this entire section  */
+        font-size: min(1.978vw, 0.791em);
+        width: calc(737 / 16 * 1em);
+        height: calc(735 / 16 * 1em);
+        position: relative;
+      }
+
+      .cs-picture {
+        border-radius: calc(16 / 16 * 1em);
+        /* clips the img tag corners */
+        overflow: hidden;
+        position: absolute;
+        display: block;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .cs-picture1 {
+        width: calc(398 / 16 * 1em);
+        height: calc(393 / 16 * 1em);
+        top: 0;
+        left: 0;
+      }
+      .cs-picture2 {
+        width: calc(320 / 16 * 1em);
+        height: calc(318 / 16 * 1em);
+        top: calc(75 / 16 * 1em);
+        right: 0;
+      }
+      .cs-picture3 {
+        width: calc(325 / 16 * 1em);
+        height: calc(322 / 16 * 1em);
+        bottom: 0;
+        left: calc(71 / 16 * 1em);
+      }
+      .cs-picture4 {
+        width: calc(264 / 16 * 1em);
+        height: calc(262 / 16 * 1em);
+        bottom: calc(60 / 16 * 1em);
+        right: calc(57 / 16 * 1em);
+      }
+
+      .cs-play-link {
+        width: calc(101 / 16 * 1em);
+        height: calc(101 / 16 * 1em);
+        border-radius: 50%;
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        border: 1px solid #fff;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-15%, -15%);
+        transition:
+          background-color 0.3s,
+          filter 0.3s,
+          box-shadow 0.3s,
+          transform 0.3s;
+
+        &:hover {
+          background-color: #fff;
+          box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+          transform: translate(-15%, -15%) scale(1.1);
+
+          img {
+            transform: rotate(120deg) translate(15%, 5%);
+          }
+        }
+
+        img {
+          width: calc(32 / 16 * 1em);
+          height: auto;
+          margin-left: calc(5 / 16 * 1em);
+          display: block;
+          transition: transform 0.3s;
+        }
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #sbs-290 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .cs-image-group {
+        /* reset the scale */
+        font-size: min(1.1vw, 1em);
+        /* prevent flexbox from squishing it */
+        flex: none;
+      }
+    }
+  }
+</style>

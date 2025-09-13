@@ -1,0 +1,215 @@
+---
+import InteriorPage1 from "../interiorpage/about/1.astro";
+import InteriorPage2 from "../interiorpage/about/2.astro";
+import InteriorPage3 from "../interiorpage/about/3.astro";
+import InteriorPage4 from "../interiorpage/about/4.astro";
+import InteriorPage5 from "../interiorpage/banner/1.astro";
+import InteriorPage6 from "../interiorpage/banner/2.astro";
+import InteriorPage7 from "../interiorpage/banner/3.astro";
+import InteriorPage8 from "../interiorpage/banner/4.astro";
+import InteriorPage9 from "../interiorpage/banner/5.astro";
+import InteriorPage10 from "../interiorpage/banner/6.astro";
+import InteriorPage11 from "../interiorpage/banner/7.astro";
+import InteriorPage12 from "../interiorpage/banner/8.astro";
+import InteriorPage13 from "../interiorpage/banner/9.astro";
+import InteriorPage14 from "../interiorpage/banner/10.astro";
+import InteriorPage15 from "../interiorpage/banner/11.astro";
+import InteriorPage16 from "../interiorpage/contact/1.astro";
+import InteriorPage17 from "../interiorpage/contact/2.astro";
+import InteriorPage18 from "../interiorpage/contact/3.astro";
+import InteriorPage19 from "../interiorpage/content/1.astro";
+import InteriorPage20 from "../interiorpage/content/2.astro";
+import InteriorPage21 from "../interiorpage/content/3.astro";
+import InteriorPage22 from "../interiorpage/content/4.astro";
+import InteriorPage23 from "../interiorpage/content/5.astro";
+import InteriorPage24 from "../interiorpage/content/6.astro";
+import InteriorPage25 from "../interiorpage/content/7.astro";
+import InteriorPage26 from "../interiorpage/faq/1.astro";
+import InteriorPage27 from "../interiorpage/menu/1.astro";
+import InteriorPage28 from "../interiorpage/menu/2.astro";
+---
+
+<div class="c-collection">
+  <div class="c-interiorpage" data-value-interiorpage="1">
+    <InteriorPage1 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="2">
+    <InteriorPage2 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="3">
+    <InteriorPage3 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="4">
+    <InteriorPage4 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="5">
+    <InteriorPage5 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="6">
+    <InteriorPage6 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="7">
+    <InteriorPage7 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="8">
+    <InteriorPage8 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="9">
+    <InteriorPage9 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="10">
+    <InteriorPage10 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="11">
+    <InteriorPage11 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="12">
+    <InteriorPage12 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="13">
+    <InteriorPage13 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="14">
+    <InteriorPage14 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="15">
+    <InteriorPage15 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="16">
+    <InteriorPage16 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="17">
+    <InteriorPage17 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="18">
+    <InteriorPage18 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="19">
+    <InteriorPage19 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="20">
+    <InteriorPage20 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="21">
+    <InteriorPage21 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="22">
+    <InteriorPage22 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="23">
+    <InteriorPage23 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="24">
+    <InteriorPage24 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="25">
+    <InteriorPage25 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="26">
+    <InteriorPage26 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="27">
+    <InteriorPage27 />
+  </div>
+  <div class="c-interiorpage" data-value-interiorpage="28">
+    <InteriorPage28 />
+  </div>
+</div>
+
+<style lang="scss">
+  .c-collection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .c-interiorpage {
+    display: none;
+  }
+  .active {
+    width: 100%;
+    display: block;
+  }
+</style>
+
+<script>
+  function changeCollection(selectedValue) {
+    const collections = document.querySelectorAll(".c-interiorpage");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none" est sélectionné, ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection sélectionnée
+    const targetCollection = document.querySelector(
+      `[data-value-interiorpage="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  // Fonction pour le hover des options
+  function previewOnHover(selectedValue) {
+    const collections = document.querySelectorAll(".c-interiorpage");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none", ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection en preview
+    const targetCollection = document.querySelector(
+      `[data-value-interiorpage="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const select = document.getElementById("template-select-interiorpage");
+    const collections = document.querySelectorAll(".c-interiorpage");
+
+    if (!select) return;
+
+    select.addEventListener("change", function () {
+      const selectedValue = this.value;
+      changeCollection(selectedValue);
+    });
+
+    // Alternative pour navigateur qui ne supportent pas mouseover sur option
+    let isSelectOpen = false;
+
+    select.addEventListener("focus", function () {
+      isSelectOpen = true;
+    });
+
+    select.addEventListener("blur", function () {
+      isSelectOpen = false;
+      // Revenir à la valeur sélectionnée quand on ferme
+      changeCollection(this.value);
+    });
+
+    // Navigation avec les flèches
+    select.addEventListener("keydown", function (e) {
+      if (isSelectOpen && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
+        setTimeout(() => {
+          // Simuler le hover sur l'option "focusée"
+          const currentValue = this.value;
+          previewOnHover(currentValue);
+        }, 10);
+      }
+    });
+  });
+</script>

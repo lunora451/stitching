@@ -1,0 +1,174 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Steps                      --><!-- ============================================ -->
+<section id="steps-584">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our Process</span>
+      <h2 class="cs-title">Simple easy steps to get started</h2>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <h3 class="cs-h3">Process 1</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit ameet. Don nisi ligula eget dolor quam et.
+          Aenean massa. Cum sociis
+        </p>
+        <span class="cs-number">01</span>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Process 1</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit ameet. Don nisi ligula eget dolor quam et.
+          Aenean massa. Cum sociis
+        </p>
+        <span class="cs-number">01</span>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Process 1</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit ameet. Don nisi ligula eget dolor quam et.
+          Aenean massa. Cum sociis
+        </p>
+        <span class="cs-number">01</span>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Process 1</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit ameet. Don nisi ligula eget dolor quam et.
+          Aenean massa. Cum sociis
+        </p>
+        <span class="cs-number">01</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Steps            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #steps-584 {
+      padding: var(--sectionPadding);
+      background-color: var(--primary);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-card-group {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: calc(20 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        min-height: calc(290 / 16 * 1rem);
+        /* 16px - 24px left & right */
+        padding: calc(16 / 16 * 1rem) clamp(1rem, 1.8vw, 1.5rem);
+        border-bottom: 1px solid var(--bodyTextColorWhite);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        &:last-of-type {
+          border: none;
+        }
+      }
+
+      .cs-h3 {
+        font-size: calc(24 / 16 * 1rem);
+        font-weight: 500;
+        line-height: 1.2em;
+        text-align: left;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--bodyTextColorWhite);
+        display: block;
+      }
+
+      .cs-item-text {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        text-align: left;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-number {
+        font-size: calc(61 / 16 * 1rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        /* auto pushes against other elements in a flexbox, this one forces it to be at the bottom of the flexbox */
+        margin: auto 0 0 0;
+        color: var(--bodyTextColorWhite);
+        display: block;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #steps-584 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .cs-item {
+        width: 48%;
+        &:nth-of-type(3) {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #steps-584 {
+      .cs-card-group {
+        flex-wrap: nowrap;
+      }
+
+      .cs-item {
+        border-bottom: none;
+        border-right: 1px solid var(--bodyTextColorWhite);
+      }
+    }
+  }
+</style>

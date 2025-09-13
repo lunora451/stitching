@@ -1,0 +1,298 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Side By Side                  --><!-- ============================================ -->
+<section id="RPsbs-464">
+  <div class="cs-container">
+    <picture class="cs-picture">
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/landscaping1.jpg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/landscaping1.jpg"
+      />
+      <img
+        aria-hidden="true"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/landscaping1.jpg"
+        alt="leaf"
+        width="522"
+        height="551"
+      />
+    </picture>
+    <div class="cs-content">
+      <span class="cs-topper">Small Group Training</span>
+      <h2 class="cs-title">Make your circle healthier Together</h2>
+      <p class="cs-text">
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat duis enim velit mollit. Amet minim mollit
+        non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+        consequat duis enim velit mollit. Lorem ipsum dolor sit, amet
+        consectetur adipisicing elit. Commodi, nam!
+      </p>
+      <a href="" class="cs-button-solid">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--            Side By Side Reverse              -->
+<!-- ============================================ -->
+
+<section id="RPsbsr-464">
+  <div class="cs-container">
+    <picture class="cs-picture">
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/landscaping1.jpg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/landscaping1.jpg"
+      />
+      <img
+        aria-hidden="true"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/landscaping1.jpg"
+        alt="leaf"
+        width="522"
+        height="551"
+      />
+    </picture>
+    <div class="cs-content">
+      <span class="cs-topper">Small Group Training</span>
+      <h2 class="cs-title">Make your circle healthier Together</h2>
+      <p class="cs-text">
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat duis enim velit mollit. Amet minim mollit
+        non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+        consequat duis enim velit mollit. Lorem ipsum dolor sit, amet
+        consectetur adipisicing elit. Commodi, nam!
+      </p>
+      <a href="" class="cs-button-solid">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #RPsbs-464-464,
+    #RPsbsr-464-464 {
+      padding: var(--sectionPadding);
+      /* clips the green box so it doesn't cause overflows */
+      overflow: hidden;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at 1024px */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-picture {
+        width: 100%;
+        max-width: calc(522 / 16 * 1rem);
+        height: auto;
+        /* same margin top as the top value for the :after to offset the amount it overlaps the container */
+        /* 56px - 100px */
+        margin: clamp(3.5rem, 7vw, 6.25rem) 0 0 0;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          /* green shape */
+          content: "";
+          /* 80px - 164px, changes at 1024px */
+          width: clamp(5rem, 20vw, 10.2rem);
+          height: clamp(5rem, 20vw, 10.2rem);
+          background: var(--primaryLight);
+          border: clamp(6px, 2vw, 12px) solid #fff;
+          border-radius: calc(32 / 16 * 1rem) calc(32 / 16 * 1rem) 100%
+            calc(32 / 16 * 1rem);
+          opacity: 1;
+          position: absolute;
+          display: block;
+          /* wrapped in a calc function to multiple the clamp value by -1 to get a negative number */
+          bottom: calc(clamp(6px, 2vw, 12px) * -1);
+          right: calc(clamp(6px, 2vw, 12px) * -1);
+          z-index: 10;
+        }
+
+        &:after {
+          content: "";
+          width: calc(500 / 16 * 1rem);
+          /* changes at 1024px */
+          height: 70%;
+          border-radius: calc(32 / 16 * 1rem);
+          background: var(--primaryLight);
+          opacity: 0.16;
+          position: absolute;
+          display: block;
+          /* 56px - 100px */
+          top: calc(clamp(3.5rem, 7vw, 6.25rem) * -1);
+          right: 50%;
+          z-index: -1;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #RPsbs-464-464,
+    #RPsbsr-464-464 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .cs-content {
+        width: clamp(46.6%, 45.7vw, 51%);
+      }
+
+      .cs-picture {
+        width: 41%;
+        &:before {
+          /* 125px - 164px */
+          width: clamp(7.8125rem, 13vw, 10.2rem);
+          height: clamp(7.8215rem, 13vw, 10.2rem);
+          border-radius: calc(32 / 16 * 1rem) calc(32 / 16 * 1rem) 50%
+            calc(32 / 16 * 1rem);
+          bottom: calc(-36 / 16 * 1rem);
+        }
+
+        &:after {
+          height: calc(500 / 16 * 1rem);
+        }
+      }
+    }
+  }
+
+  /*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #RPsbsr-464-464 {
+      background-color: #f7f7f7;
+      .cs-picture {
+        &:before {
+          border-radius: calc(32 / 16 * 1rem) calc(32 / 16 * 1rem)
+            calc(32 / 16 * 1rem) 100%;
+          right: auto;
+          left: calc(clamp(6px, 2vw, 12px) * -1);
+        }
+        &:after {
+          left: 50%;
+          right: auto;
+        }
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #RPsbsr-464-464 {
+      .cs-content {
+        /* sends it to the left side */
+        order: -1;
+      }
+
+      .cs-picture {
+        &:before {
+          border-radius: calc(32 / 16 * 1rem) calc(32 / 16 * 1rem)
+            calc(32 / 16 * 1rem) 50%;
+        }
+      }
+    }
+  }
+</style>

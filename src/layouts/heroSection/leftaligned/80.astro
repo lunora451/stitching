@@ -1,0 +1,267 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Hero                      --><!-- ============================================ -->
+<section id="hero-1856">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Best Gym Of The City For Fitness</span>
+      <h1 class="cs-title">You Can Boost Your Strength</h1>
+      <p class="cs-text">
+        Develop confidence, composure under pressure and the discipline needed
+        to be a champ. This is the club you’ve been looking for.
+      </p>
+      <a href="" class="cs-button-solid">Read More</a>
+      <img
+        class="cs-content-graphic"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-graphic.svg"
+        alt="graphic"
+        height="1075"
+        width="1135"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  </div>
+
+  <!-- Background Image -->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/Graphics/gym-hero-image-2.jpg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/Graphics/gym-hero-image-2.jpg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimages2.nyc3.digitaloceanspaces.com/Images/Graphics/gym-hero-image-2.jpg"
+      alt="field"
+      width="1920"
+      height="1200"
+      aria-hidden="true"
+    />
+  </picture>
+
+  <img
+    class="cs-graphic cs-graphic-light"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dark-splatter.svg"
+    alt="graphic"
+    height="161"
+    width="1920"
+    loading="lazy"
+    decoding="async"
+  />
+  <!--This is a dark version. Download the image and change the fill color to match the color of the section background below it-->
+  <img
+    class="cs-graphic cs-graphic-dark"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dark-mode-splatter2.svg"
+    alt="graphic"
+    height="161"
+    width="1920"
+    loading="lazy"
+    decoding="async"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-1856 {
+      /* 200px - 300px - leaving extra space for the navigation */
+      padding: clamp(12.5rem, 25.95vw, 18.75em) calc(16 / 16 * 1rem);
+      /* prevents the topper line from causing an overflow */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: calc(48 / 16 * 1rem);
+      }
+
+      .cs-content {
+        text-align: left;
+        width: 100%;
+        max-width: calc(750 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-title {
+        /* 49px - 84px */
+        font-size: clamp(3.0625rem, 6vw, 5.25rem);
+        max-width: 100%;
+        letter-spacing: -2px;
+      }
+
+      .cs-title,
+      .cs-text {
+        text-align: left;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-text {
+        margin-bottom: calc(32 / 16 * 1rem);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-align: center;
+        text-decoration: none;
+        min-width: calc(200 / 16 * 1rem);
+        margin: 0;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        color: var(--bodyTextColorWhite);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #000;
+          opacity: 1;
+          border-radius: calc(4 / 16 * 1rem);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-content-graphic {
+        height: 305%;
+        max-height: calc(1300 / 16 * 1rem);
+        filter: brightness(60%);
+        width: auto;
+        position: absolute;
+        top: 50%;
+        right: calc(-64 / 16 * 1rem);
+        left: auto;
+        z-index: -1;
+        transform: translateY(-50%);
+        z-index: -3;
+      }
+
+      .cs-graphic {
+        width: 100%;
+        min-width: calc(1920 / 16 * 1rem);
+        height: auto;
+        object-fit: cover;
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        z-index: 2;
+        transform: translateX(-50%);
+      }
+
+      .cs-graphic-dark {
+        display: none;
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+
+        /* Overlay on the background image that gets removed at tablet+, in favour of the svg graphic */
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: #000;
+          /* prevents the cursor from interacting with it */
+          pointer-events: none;
+          opacity: 0.4;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-1856 {
+      .cs-background {
+        &::before {
+          content: none;
+        }
+      }
+    }
+  }
+
+  /* Desktop Parallax - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #hero-1856 {
+      .cs-background {
+        background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-image-2.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        /* creates the parallax effect */
+        background-attachment: fixed;
+
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+
+  /* Large Desktop - 1920px */
+  @media only screen and (min-width: 120rem) {
+    #hero-1856 {
+      /* this ties the padding bottom value to the size of the screen width. The wider the image gets the taller it gets, meaning it will get closer and closer to the content. This makes the padding bottom value grow with the screen size so it accounts for the growing height of the svg graphic getting taller */
+      padding-bottom: 14vw;
+    }
+  }
+</style>

@@ -1,0 +1,297 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Gallery                    --><!-- ============================================ -->
+<section id="contact-2251">
+  <div class="cs-container">
+    <!--Copy and paste any iframe from Google Maps-->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172152.96028660645!2d-122.50460356806971!3d47.60882845859935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102c93e83355%3A0x102565466944d59a!2sSeattle%2C%20WA!5e0!3m2!1sen!2sus!4v1735605746621!5m2!1sen!2sus"
+      width="600"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="cs-wrapper">
+      <div class="cs-content">
+        <span class="cs-topper">Contact Us</span>
+        <h2 class="cs-title">Let’s Capture The Celebration of True Love</h2>
+        <p class="cs-text">
+          We have courses on-demand and live instructors for workshops and
+          support. We also provide LIVE instructor-led training courses and
+          onsite training.
+        </p>
+      </div>
+      <form class="cs-form" id="cs-form-2251" name="Contact Form" method="post">
+        <label class="cs-label">
+          <input
+            class="cs-input"
+            required
+            type="text"
+            id="name-2251"
+            name="name"
+            placeholder="Name"
+          />
+        </label>
+        <label class="cs-label">
+          <input
+            class="cs-input"
+            required
+            type="email"
+            id="email-2251"
+            name="email"
+            placeholder="Email"
+          />
+        </label>
+        <label class="cs-label">
+          <input
+            class="cs-input"
+            type="tel"
+            id="phone-2251"
+            name="phone"
+            placeholder="Phone"
+          />
+        </label>
+        <label class="cs-label">
+          <select class="cs-select" name="class" id="classes-2251">
+            <option value="Service 1">Services</option>
+            <option value="Service 2">Services</option>
+            <option value="Service 3">Services</option>
+            <option value="Service 4">Services</option>
+          </select>
+        </label>
+        <label class="cs-label cs-message">
+          <textarea
+            class="cs-input cs-textarea"
+            required
+            name="Message"
+            id="message-2251"
+            placeholder="Message"></textarea>
+        </label>
+        <div class="cs-button-wrapper">
+          <button class="cs-button-solid cs-submit" type="submit"
+            >Schedule Consultation</button
+          >
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #contact-2251 {
+      background-color: #fbf5f1;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cs-wrapper {
+        width: 100%;
+        /* removed at tablet */
+        max-width: calc(584 / 16 * 1rem);
+        padding: var(--sectionPadding);
+        /* 16px - 100px */
+        padding-left: clamp(1rem, 4.5vw, 6.25rem);
+        padding-right: clamp(1rem, 4.5vw, 6.25rem);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        max-width: calc(770 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      iframe {
+        width: 100%;
+        height: calc(320 / 16 * 1rem);
+      }
+
+      .cs-title {
+        max-width: 24ch;
+      }
+
+      .cs-form {
+        width: 100%;
+        max-width: calc(770 / 16 * 1rem);
+        /* prevents flexbox from affecting height and width */
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: calc(12 / 16 * 1rem);
+        position: relative;
+      }
+
+      .cs-form-content {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .cs-form-title {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--bodyTextColor);
+        display: block;
+      }
+
+      .cs-label {
+        font-size: calc(16 / 16 * 1rem);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        grid-column: span 12;
+        align-items: flex-start;
+        gap: calc(4 / 16 * 1rem);
+      }
+
+      .cs-input,
+      .cs-select {
+        font-size: calc(16 / 16 * 1rem);
+        width: 100%;
+        /* 46px - 56px */
+        height: clamp(2.875rem, 5.5vw, 3.5rem);
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: #fff;
+        color: #767676;
+        border: none;
+
+        &::placeholder {
+          color: #767676;
+        }
+      }
+
+      .cs-textarea {
+        font-family: inherit;
+        min-height: calc(120 / 16 * 1rem);
+        margin: 0 0 calc(20 / 16 * 1rem) 0;
+        padding-top: calc(24 / 16 * 1rem);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        text-align: center;
+        text-decoration: none;
+        min-width: calc(150 / 16 * 1rem);
+        margin: 0;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        /* 32px - 48px */
+        padding: 0 clamp(2rem, 4vw, 3rem);
+        background-color: var(--primary);
+        overflow: hidden;
+        color: #fff;
+        border: none;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #000;
+          opacity: 1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-submit {
+        width: 100%;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .cs-button-wrapper {
+        display: flex;
+        justify-content: center;
+        grid-column: span 12;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 600px) {
+    #contact-2251 {
+      .cs-container {
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      iframe {
+        width: 50%;
+        height: auto;
+      }
+
+      .cs-wrapper {
+        width: 50%;
+        max-width: 100%;
+      }
+
+      .cs-button-solid {
+        width: auto;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #contact-2251 {
+      .cs-label {
+        grid-column: span 6;
+
+        &.cs-message {
+          grid-column: span 12;
+        }
+      }
+    }
+  }
+</style>

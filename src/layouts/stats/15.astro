@@ -1,0 +1,239 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Timeline                    --><!-- ============================================ -->
+<section id="timeline-971">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Better Process</span>
+      <h2 class="cs-title">How To Get Started</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
+        nesciunt autem quas expedita soluta quasi.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <img
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-salon.svg"
+          alt="icon"
+          class="cs-icon"
+          aria-hidden="true"
+          decoding="async"
+          width="60"
+          height="60"
+        />
+        <h3 class="cs-h3">Contact Us</h3>
+        <p class="cs-item-text">
+          In arcu cursus euismod quis viverra nibh cras pulvinar mattis. Cras
+          adipiscing enim eu turpis
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/chat-salon.svg"
+          alt="icon"
+          class="cs-icon"
+          aria-hidden="true"
+          decoding="async"
+          width="60"
+          height="60"
+        />
+        <h3 class="cs-h3">Set Up Appointment</h3>
+        <p class="cs-item-text">
+          In arcu cursus euismod quis viverra nibh cras pulvinar mattis. Cras
+          adipiscing enim eu turpis
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/flower-salon.svg"
+          alt="icon"
+          class="cs-icon"
+          aria-hidden="true"
+          decoding="async"
+          width="60"
+          height="60"
+        />
+        <h3 class="cs-h3">Get New Style!</h3>
+        <p class="cs-item-text">
+          In arcu cursus euismod quis viverra nibh cras pulvinar mattis. Cras
+          adipiscing enim eu turpis
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/clothes-salon.svg"
+          alt="icon"
+          class="cs-icon"
+          aria-hidden="true"
+          decoding="async"
+          width="60"
+          height="60"
+        />
+        <h3 class="cs-h3">Admire In Mirror</h3>
+        <p class="cs-item-text">
+          In arcu cursus euismod quis viverra nibh cras pulvinar mattis. Cras
+          adipiscing enim eu turpis
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Timeline          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #timeline-971 {
+      padding: var(--sectionPadding);
+      background-color: #fff;
+      /* clips the white line through the bullets */
+      overflow: hidden;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1440px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title {
+        max-width: 18ch;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        /* 40px - 80px */
+        gap: clamp(2.5rem, 6vw, 5rem);
+        position: relative;
+        &:before {
+          /* white line through the bullets */
+          content: "";
+          width: 1px;
+          background: #ddd;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          /* send it way down to reach the bottom of the section, and have some overlap so if you add content and the ul gets longer, it will still be at the bottom */
+          bottom: calc(-300 / 16 * 1rem);
+          /* half the width of the bullet */
+          left: calc(6 / 16 * 1rem);
+        }
+      }
+
+      .cs-item {
+        width: 100%;
+        max-width: calc(400 / 16 * 1rem);
+        list-style: none;
+        padding: 0 0 0 calc(52 / 16 * 1rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        position: relative;
+        &:before {
+          /* bullet circle */
+          content: "";
+          width: calc(12 / 16 * 1rem);
+          height: calc(12 / 16 * 1rem);
+          background: var(--primary);
+          border-radius: 50%;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-icon {
+        width: calc(60 / 16 * 1rem);
+        height: auto;
+        /* 32px - 40px */
+        margin: 0 0 clamp(2rem, 3vw, 2.5rem);
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        /* changes to 100% at tablet */
+        width: 80%;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+        color: var(--headerColor);
+        position: relative;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #timeline-971 {
+      .cs-container {
+        max-width: calc(1440 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        flex-direction: row;
+
+        &:before {
+          width: 100%;
+          height: 1px;
+          top: auto;
+          bottom: calc(6 / 16 * 1rem);
+          /* these next two properties center the line in the UL */
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      .cs-item {
+        padding: 0 0 calc(66 / 16 * 1rem) 0;
+        z-index: 1;
+
+        &::before {
+          top: auto;
+          bottom: 0;
+        }
+      }
+
+      .cs-h3 {
+        width: 100%;
+      }
+    }
+  }
+</style>

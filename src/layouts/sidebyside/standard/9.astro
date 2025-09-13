@@ -1,0 +1,317 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Side By Side                 --><!-- ============================================ -->
+<section id="sbs-2276">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <picture class="cs-picture cs-picture1">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction2.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction2.jpg"
+        />
+        <img
+          aria-hidden="true"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction2.jpg"
+          alt="construction site"
+          width="413"
+          height="492"
+          loading="lazy"
+        />
+      </picture>
+      <a href="" class="cs-button-solid">Read More</a>
+    </div>
+    <div class="cs-content">
+      <div class="cs-header">
+        <span class="cs-topper">About Us</span>
+        <h2 class="cs-title">
+          Creating Elegant Environments, One Detail At A Time
+        </h2>
+      </div>
+      <div class="cs-wrapper">
+        <div class="cs-flex">
+          <p class="cs-text">
+            At BuildStitch, we specialize in turning your dream projects into
+            reality. From bespoke custom homes to intricate hardscaping and
+            extensions, our expertise ensures a flawless journey from concept to
+            completion. Whether you're planning a renovation or a ground-up
+            build, our focus is on exceeding expectations every step of the way.
+          </p>
+          <img
+            class="cs-signature"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/signature.png"
+            decoding="async"
+            loading="lazy"
+            alt="signature"
+            width="170"
+            height="59"
+            aria-hidden="true"
+          />
+          <span class="cs-name">William John</span>
+          <span class="cs-desc">Founder of Build Stitch</span>
+          <!--if you change this button class name, change the class name to rename it as well in the css at small desktop media query-->
+          <a href="" class="cs-button-solid">Get Started Today</a>
+        </div>
+        <picture class="cs-picture cs-picture2">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction5.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction5.jpg"
+          />
+          <img
+            aria-hidden="true"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction5.jpg"
+            alt="construction site"
+            width="362"
+            height="400"
+            loading="lazy"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile */
+  @media only screen and (min-width: 0rem) {
+    #sbs-2276 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(584 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        max-width: 25ch;
+      }
+
+      .cs-text {
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-signature {
+        width: calc(170 / 16 * 1rem);
+        height: auto;
+        margin-bottom: calc(8 / 16 * 1rem);
+        display: block;
+      }
+
+      .cs-name {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 calc(4 / 16 * 1rem);
+        color: var(--headerColor);
+        display: block;
+      }
+
+      .cs-desc {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        margin: 0 0 calc(32 / 16 * 1rem) 0;
+        color: var(--bodyTextColor);
+        display: block;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        text-align: center;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        width: calc(180 / 16 * 1rem);
+        text-decoration: none;
+        font-weight: 700;
+        /* clips corners of the before element */
+        overflow: hidden;
+        margin: 0;
+        color: #fff;
+        padding: 0;
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #fff;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: calc(48 / 16 * 1rem);
+      }
+
+      .cs-image-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: calc(32 / 16 * 1rem);
+
+        a {
+          display: none;
+          flex: none;
+        }
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: 90vw;
+        max-height: calc(500 / 16 * 1rem);
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbs-2276 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-content {
+        /* 32px - 64px */
+        gap: clamp(2rem, 5vw, 4rem);
+      }
+
+      .cs-title {
+        margin: 0;
+      }
+
+      .cs-wrapper {
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      .cs-flex {
+        /* 12px to 40px */
+        padding: clamp(0.75rem, 3vw, 2.5rem) 0;
+        align-self: center;
+      }
+
+      .cs-picture1 {
+        height: calc(400 / 16 * 1rem);
+        max-height: initial;
+      }
+
+      .cs-picture2 {
+        width: 47vw;
+        max-width: calc(362 / 16 * 1rem);
+        height: auto;
+        max-height: 100%;
+        order: -1;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #sbs-2276 {
+      .cs-container {
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      .cs-desc {
+        margin: 0;
+      }
+
+      .cs-flex {
+        .cs-button-solid {
+          display: none;
+        }
+      }
+
+      .cs-image-group {
+        width: 50%;
+        max-width: calc(413 / 16 * 1rem);
+
+        a {
+          display: inline-block;
+        }
+      }
+
+      .cs-picture1 {
+        height: 100%;
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 75rem) {
+    #sbs-2276 {
+      .cs-image-group {
+        margin-bottom: calc(84 / 16 * 1rem);
+      }
+    }
+  }
+</style>

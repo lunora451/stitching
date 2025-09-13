@@ -1,0 +1,340 @@
+---
+title: "Page 21";
+---
+
+<!-- ============================================ --><!--                  Services                    --><!-- ============================================ -->
+<section id="services-1169">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our services</span>
+      <h2 class="cs-title">Together We Can Restore</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur hic
+        voluptatem quisquam deserunt temporibus dicta beatae rerum nobis esse
+        similique!
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic30.jpg"
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic30.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic30.jpg"
+            alt="mechanic"
+            width="413"
+            height="240"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-info">
+          <h3 class="cs-h3">Tire and wheel</h3>
+          <p class="cs-item-text">
+            What is Check Engine Light? There are many variations of passages of
+            Lorem Ipsum available, but the majority have...
+          </p>
+          <a href="" class="cs-link">
+            Read More
+            <img
+              class="cs-arrow"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/red-arrow-right.svg"
+              alt="icon"
+              width="20"
+              height="20"
+              aria-hidden="true"
+            />
+          </a>
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic33.jpg"
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic33.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic33.jpg"
+            alt="mechanic"
+            width="413"
+            height="240"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-info">
+          <h3 class="cs-h3">Electrical system</h3>
+          <p class="cs-item-text">
+            Our featured services Nemo enim ipsam voluptatem quia voluptas sit
+            aspernatur aut odit aut fugit, sed quia consequuntur...
+          </p>
+          <a href="" class="cs-link">
+            Read More
+            <img
+              class="cs-arrow"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/red-arrow-right.svg"
+              alt="icon"
+              width="20"
+              height="20"
+              aria-hidden="true"
+            />
+          </a>
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic32.jpg"
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic32.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic32.jpg"
+            alt="mechanic"
+            width="413"
+            height="240"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-info">
+          <h3 class="cs-h3">System service</h3>
+          <p class="cs-item-text">
+            Our services Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+            aut odit aut fugit, sed quia consequuntur magni...
+          </p>
+          <a href="" class="cs-link">
+            Read More
+            <img
+              class="cs-arrow"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/red-arrow-right.svg"
+              alt="icon"
+              width="20"
+              height="20"
+              aria-hidden="true"
+            />
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-1169 {
+      background-color: #fff;
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        /* changes to 1440px at large desktop */
+        max-width: calc(824 / 16 * 1rem);
+        width: 100%;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+        width: 100%;
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+      }
+
+      .cs-title {
+        max-width: 20ch;
+      }
+
+      .cs-card-group {
+        display: grid;
+        align-items: stretch;
+        grid-template-columns: repeat(12, 1fr);
+        margin: 0;
+        width: 100%;
+        padding: 0;
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+      }
+
+      .cs-item {
+        z-index: 1;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #f7f7f7;
+        width: 100%;
+        list-style: none;
+        text-align: left;
+        grid-column: span 12;
+        max-width: calc(400 / 16 * 1rem);
+        margin: 0 auto;
+
+        &:hover {
+          .cs-picture {
+            img {
+              transform: scale(1.2);
+            }
+          }
+
+          .cs-h3,
+          .cs-link {
+            color: var(--primary);
+          }
+
+          .cs-arrow {
+            filter: initial;
+          }
+        }
+      }
+
+      .cs-picture {
+        position: relative;
+        display: block;
+        /* 180px - 240px */
+        height: clamp(11.25rem, 24vw, 15rem);
+        width: 100%;
+        /* clips the image from overflowing parent on hover */
+        overflow: hidden;
+
+        img {
+          z-index: -1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          transition: transform 0.65s;
+        }
+      }
+
+      .cs-info {
+        display: flex;
+        flex-direction: column;
+        padding: calc(24 / 16 * 1rem);
+      }
+
+      .cs-h3 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        line-height: 1.5em;
+        font-weight: 700;
+        color: var(--headerColor);
+        transition: background-color 0.3s;
+        text-align: inherit;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        transition: color 0.3s;
+      }
+
+      .cs-item-text {
+        width: 100%;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        color: var(--bodyTextColor);
+        text-align: inherit;
+        margin: 0;
+      }
+
+      .cs-link {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-decoration: none;
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        color: var(--headerColor);
+        text-align: inherit;
+        margin-top: calc(20 / 16 * 1rem);
+        transition: color 0.3s;
+
+        &:hover {
+          .cs-arrow {
+            transform: translateX(0.25rem);
+          }
+        }
+      }
+
+      .cs-arrow {
+        filter: grayscale(1) brightness(0);
+        display: block;
+        height: auto;
+        width: calc(20 / 16 * 1rem);
+        transition:
+          filter 0.3s,
+          transform 0.3s;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-1169 {
+      .cs-container {
+        max-width: calc(944 / 16 * 1rem);
+      }
+      .cs-item {
+        grid-column: span 4;
+        max-width: initial;
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #services-1169 {
+      .cs-container {
+        max-width: calc(1440 / 16 * 1rem);
+      }
+    }
+  }
+</style>

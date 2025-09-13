@@ -1,0 +1,169 @@
+---
+title: "Page 39";
+---
+
+<!-- ============================================ --><!--                   Services                   --><!-- ============================================ -->
+<section id="services-597">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Services</span>
+      <h2 class="cs-title">House Painting Services in Sometown, USA</h2>
+      <p class="cs-text">
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat duis enim velit mollit. Amet minim mollit
+        non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+        consequat duis enim velit mollit.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/door-red.svg"
+          alt="icon"
+          width="61"
+          height="58"
+          loading="lazy"
+          decoding="async"
+        />
+        <h3 class="cs-h3">Exterior</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do
+          eiusmod tempor incididunt ut adi piscing.
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/door-red.svg"
+          alt="icon"
+          width="61"
+          height="58"
+          loading="lazy"
+          decoding="async"
+        />
+        <h3 class="cs-h3">Exterior</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do
+          eiusmod tempor incididunt ut adi piscing.
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/door-red.svg"
+          alt="icon"
+          width="61"
+          height="58"
+          loading="lazy"
+          decoding="async"
+        />
+        <h3 class="cs-h3">Exterior</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do
+          eiusmod tempor incididunt ut adi piscing.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-597 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(48 / 16 * 1rem);
+      }
+
+      .cs-content {
+        /* set text aling to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        /* 36px - 80px top & bottom */
+        /* 24px - 88px right & left */
+        padding: clamp(2.25rem, 6vw, 5rem) clamp(1.5rem, 6.4vw, 5.5rem);
+        background-color: #fff;
+        box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: calc(20 / 16 * 1rem);
+        /* 32px - 64px */
+        row-gap: clamp(2rem, 7vw, 4rem);
+      }
+
+      .cs-item {
+        text-align: left;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 3vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--headerColor);
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 3vw, 1rem);
+        line-height: 1.5em;
+        font-weight: 400;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* Inbetween - 550px */
+  @media only screen and (min-width: 34.375rem) {
+    #services-597 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* 48px - 64px */
+        row-gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-item {
+        width: 31%;
+      }
+    }
+  }
+</style>

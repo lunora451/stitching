@@ -1,0 +1,215 @@
+---
+import Faq1 from "../faq/1.astro";
+import Faq2 from "../faq/2.astro";
+import Faq3 from "../faq/3.astro";
+import Faq4 from "../faq/4.astro";
+import Faq5 from "../faq/5.astro";
+import Faq6 from "../faq/6.astro";
+import Faq7 from "../faq/7.astro";
+import Faq8 from "../faq/8.astro";
+import Faq9 from "../faq/9.astro";
+import Faq10 from "../faq/10.astro";
+import Faq11 from "../faq/11.astro";
+import Faq12 from "../faq/12.astro";
+import Faq13 from "../faq/13.astro";
+import Faq14 from "../faq/14.astro";
+import Faq15 from "../faq/15.astro";
+import Faq16 from "../faq/16.astro";
+import Faq17 from "../faq/17.astro";
+import Faq18 from "../faq/18.astro";
+import Faq19 from "../faq/19.astro";
+import Faq20 from "../faq/20.astro";
+import Faq21 from "../faq/21.astro";
+import Faq22 from "../faq/22.astro";
+import Faq23 from "../faq/23.astro";
+import Faq24 from "../faq/24.astro";
+import Faq25 from "../faq/25.astro";
+import Faq26 from "../faq/26.astro";
+import Faq27 from "../faq/27.astro";
+import Faq28 from "../faq/28.astro";
+---
+
+<div class="c-collection">
+  <div class="c-faq" data-value-faq="1">
+    <Faq1 />
+  </div>
+  <div class="c-faq" data-value-faq="2">
+    <Faq2 />
+  </div>
+  <div class="c-faq" data-value-faq="3">
+    <Faq3 />
+  </div>
+  <div class="c-faq" data-value-faq="4">
+    <Faq4 />
+  </div>
+  <div class="c-faq" data-value-faq="5">
+    <Faq5 />
+  </div>
+  <div class="c-faq" data-value-faq="6">
+    <Faq6 />
+  </div>
+  <div class="c-faq" data-value-faq="7">
+    <Faq7 />
+  </div>
+  <div class="c-faq" data-value-faq="8">
+    <Faq8 />
+  </div>
+  <div class="c-faq" data-value-faq="9">
+    <Faq9 />
+  </div>
+  <div class="c-faq" data-value-faq="10">
+    <Faq10 />
+  </div>
+  <div class="c-faq" data-value-faq="11">
+    <Faq11 />
+  </div>
+  <div class="c-faq" data-value-faq="12">
+    <Faq12 />
+  </div>
+  <div class="c-faq" data-value-faq="13">
+    <Faq13 />
+  </div>
+  <div class="c-faq" data-value-faq="14">
+    <Faq14 />
+  </div>
+  <div class="c-faq" data-value-faq="15">
+    <Faq15 />
+  </div>
+  <div class="c-faq" data-value-faq="16">
+    <Faq16 />
+  </div>
+  <div class="c-faq" data-value-faq="17">
+    <Faq17 />
+  </div>
+  <div class="c-faq" data-value-faq="18">
+    <Faq18 />
+  </div>
+  <div class="c-faq" data-value-faq="19">
+    <Faq19 />
+  </div>
+  <div class="c-faq" data-value-faq="20">
+    <Faq20 />
+  </div>
+  <div class="c-faq" data-value-faq="21">
+    <Faq21 />
+  </div>
+  <div class="c-faq" data-value-faq="22">
+    <Faq22 />
+  </div>
+  <div class="c-faq" data-value-faq="23">
+    <Faq23 />
+  </div>
+  <div class="c-faq" data-value-faq="24">
+    <Faq24 />
+  </div>
+  <div class="c-faq" data-value-faq="25">
+    <Faq25 />
+  </div>
+  <div class="c-faq" data-value-faq="26">
+    <Faq26 />
+  </div>
+  <div class="c-faq" data-value-faq="27">
+    <Faq27 />
+  </div>
+  <div class="c-faq" data-value-faq="28">
+    <Faq28 />
+  </div>
+</div>
+
+<style lang="scss">
+  .c-collection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .c-faq {
+    display: none;
+  }
+  .active {
+    width: 100%;
+    display: block;
+  }
+</style>
+
+<script>
+  function changeCollection(selectedValue) {
+    const collections = document.querySelectorAll(".c-faq");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none" est sélectionné, ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection sélectionnée
+    const targetCollection = document.querySelector(
+      `[data-value-faq="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  // Fonction pour le hover des options
+  function previewOnHover(selectedValue) {
+    const collections = document.querySelectorAll(".c-faq");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none", ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection en preview
+    const targetCollection = document.querySelector(
+      `[data-value-faq="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const select = document.getElementById("template-select-faq");
+    const collections = document.querySelectorAll(".c-faq");
+
+    if (!select) return;
+
+    select.addEventListener("change", function () {
+      const selectedValue = this.value;
+      changeCollection(selectedValue);
+    });
+
+    // Alternative pour navigateur qui ne supportent pas mouseover sur option
+    let isSelectOpen = false;
+
+    select.addEventListener("focus", function () {
+      isSelectOpen = true;
+    });
+
+    select.addEventListener("blur", function () {
+      isSelectOpen = false;
+      // Revenir à la valeur sélectionnée quand on ferme
+      changeCollection(this.value);
+    });
+
+    // Navigation avec les flèches
+    select.addEventListener("keydown", function (e) {
+      if (isSelectOpen && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
+        setTimeout(() => {
+          // Simuler le hover sur l'option "focusée"
+          const currentValue = this.value;
+          previewOnHover(currentValue);
+        }, 10);
+      }
+    });
+  });
+</script>

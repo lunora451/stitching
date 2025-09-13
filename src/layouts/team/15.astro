@@ -1,0 +1,332 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Meet Team                   --><!-- ============================================ -->
+<section id="meet-436">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our Team</span>
+      <h2 class="cs-title">Our Team Members</h2>
+      <p class="cs-text">
+        At Stitch Cleaning Service, let us help you solve problems so that you
+        can focus on your mission. We support businesses through periods of
+        expansion, succession.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/suit1.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/suit1.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/suit1.jpg"
+            alt="person"
+            width="305"
+            height="242"
+            aria-hidden="true"
+          />
+        </picture>
+        <span class="cs-name">Wahid Keito</span>
+        <span class="cs-job">Creative Director</span>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/suit2.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/suit2.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/suit2.jpg"
+            alt="person"
+            width="305"
+            height="242"
+            aria-hidden="true"
+          />
+        </picture>
+        <span class="cs-name">Claudio Arthur</span>
+        <span class="cs-job">Creative Director</span>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/suit3.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/suit3.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/suit3.jpg"
+            alt="person"
+            width="305"
+            height="242"
+            aria-hidden="true"
+          />
+        </picture>
+        <span class="cs-name">Thomas Castro</span>
+        <span class="cs-job">Creative Director</span>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/suit4.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/suit4.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/suit4.jpg"
+            alt="person"
+            width="305"
+            height="242"
+            aria-hidden="true"
+          />
+        </picture>
+        <span class="cs-name">Phillip Walker</span>
+        <span class="cs-job">Creative Director</span>
+      </li>
+    </ul>
+  </div>
+  <!--Leaves-->
+  <img
+    class="cs-leaves cs-leaf1"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Meet-Team/leaves5.png"
+    alt="leaf"
+    width="489"
+    height="358"
+  />
+  <img
+    class="cs-leaves cs-leaf2"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Meet-Team/leaves6.png"
+    alt="leaf"
+    width="713"
+    height="525"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Meet Team          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #meet-436 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        /* 24px - 40px, accounts for the translate amount on the list items */
+        margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        /* 8px - 20px */
+        column-gap: clamp(0.5rem, 1.5vw, 1.25rem);
+        row-gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-item {
+        text-align: center;
+        list-style: none;
+        width: 48%;
+        padding-bottom: calc(24 / 16 * 1rem);
+        border-radius: calc(12 / 16 * 1rem);
+        background-color: #fff;
+        box-shadow: 0px 24px 54px rgba(87, 107, 147, 0.12);
+        border: 1px solid #b4b2c7;
+        position: relative;
+        &:before {
+          /* hover box */
+          content: "";
+          width: 99%;
+          height: 99%;
+          border: 4px solid var(--primary);
+          border-radius: calc(12 / 16 * 1rem);
+          background: transparent;
+          pointer-events: none;
+          opacity: 0;
+          position: absolute;
+          display: block;
+          z-index: 10;
+          /* next three lines are old school way of centering something */
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition:
+            transform 0.3s,
+            width 0.3s,
+            height 0.3s,
+            opacity 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            opacity: 1;
+          }
+          .cs-picture {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+
+        &:nth-of-type(2),
+        &:nth-of-type(4) {
+          /* 24px - 40px */
+          transform: translateY(clamp(1.5rem, 4.2vw, 2.5rem));
+        }
+      }
+
+      .cs-picture {
+        width: 100%;
+        /* height divided by width */
+        aspect-ratio: calc(305 / 242);
+        margin-bottom: calc(24 / 16 * 1em);
+        /* clips corners of image */
+        overflow: hidden;
+        border-radius: calc(12 / 16 * 1rem) calc(12 / 16 * 1rem) 0 0;
+        border-bottom: 1px solid #b4b2c7;
+        position: relative;
+        display: block;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* makes it behave like a background image */
+          object-fit: cover;
+          /* places the top of the image at the top of the picture element */
+          object-position: top;
+          transition: transform 0.6s;
+        }
+      }
+
+      .cs-name {
+        /* 16px - 25px */
+        font-size: clamp(1rem, 2vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        width: 90%;
+        margin: 0 auto calc(4 / 16 * 1rem);
+        color: var(--headerColor);
+        display: block;
+      }
+
+      .cs-job {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        width: 90%;
+        margin: 0 auto;
+        color: var(--primary);
+        display: block;
+      }
+
+      .cs-leaves {
+        display: none;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #meet-436 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1em);
+      }
+
+      .cs-card-group {
+        flex-wrap: nowrap;
+      }
+
+      .cs-item {
+        width: 100%;
+      }
+    }
+  }
+
+  /* Large Desktop - 1600px */
+  @media only screen and (min-width: 93.75rem) {
+    #meet-436 {
+      /* prevents overflow issues from the leaves sitting outside the #meet container */
+      overflow: hidden;
+      position: relative;
+      .cs-leaves {
+        display: block;
+        position: absolute;
+        z-index: -1;
+      }
+
+      .cs-leaf1 {
+        width: calc(489 / 16 * 1em);
+        height: auto;
+        left: 0;
+        bottom: calc(120 / 16 * 1em);
+      }
+
+      .cs-leaf2 {
+        width: calc(713 / 16 * 1em);
+        height: auto;
+        bottom: 0;
+        /* makes the left edge of the img rest at the center line of the contsiner */
+        left: 50%;
+        /* push 500px away from the center line */
+        margin-left: calc(500 / 16 * 1em);
+      }
+    }
+  }
+</style>

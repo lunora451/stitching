@@ -1,0 +1,335 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Statistics                  --><!-- ============================================ -->
+<section id="stats-1941">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our Statistics</span>
+      <h2 class="cs-title">Stitch Skin in Numbers</h2>
+      <p class="cs-text">
+        Aside from seeing patients, Dr. Paul is dedicated to patient advocacy
+        and education on evidence-based medicine in dermatology, especially for
+        skin of color.
+      </p>
+    </div>
+    <div class="cs-content-wrapper">
+      <div class="cs-image-group">
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/faq-left.jpg"
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/faq-left.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/faq-left.jpg"
+            alt="dermatologist"
+            width="324"
+            height="467"
+          />
+        </picture>
+        <img
+          class="cs-graphic cs-twirl"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/twirl.svg"
+          alt="graphic"
+          width="208"
+          height="203"
+          aria-hidden="true"
+        />
+        <img
+          class="cs-graphic cs-peach"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/peach-blob.svg"
+          alt="graphic"
+          width="56"
+          height="42"
+          aria-hidden="true"
+        />
+        <img
+          class="cs-graphic cs-beige"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/beige-blob.svg"
+          alt="graphic"
+          width="379"
+          height="394"
+          aria-hidden="true"
+        />
+        <img
+          class="cs-graphic cs-leaf"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/leaf-2.svg"
+          alt="graphic"
+          width="179"
+          height="225"
+          aria-hidden="true"
+        />
+      </div>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <span class="cs-number">32+</span>
+          <span class="cs-stats">Years of experience</span>
+          <p class="cs-item-text">
+            Trained at top medical institutes, Dr Paul provides exceptional
+            patient care and is very approachable to her growing loyal
+            patient-base.
+          </p>
+        </li>
+        <li class="cs-item">
+          <span class="cs-number">956+</span>
+          <span class="cs-stats">Satisfied clients</span>
+          <p class="cs-item-text">
+            Trained at top medical institutes, Dr Paul provides exceptional
+            patient care and is very approachable to her growing loyal
+            patient-base.
+          </p>
+        </li>
+        <li class="cs-item">
+          <span class="cs-number">21+</span>
+          <span class="cs-stats">Skin treatments</span>
+          <p class="cs-item-text">
+            Trained at top medical institutes, Dr Paul provides exceptional
+            patient care and is very approachable to her growing loyal
+            patient-base.
+          </p>
+        </li>
+        <li class="cs-item">
+          <span class="cs-number">835+</span>
+          <span class="cs-stats">Successful procedures</span>
+          <p class="cs-item-text">
+            Trained at top medical institutes, Dr Paul provides exceptional
+            patient care and is very approachable to her growing loyal
+            patient-base.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---        Statistics          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #stats-1941 {
+      padding: var(--sectionPadding);
+      background-color: #faf6f2;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(584 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to center if content needs to be centrally aligned */
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 24px - 48px */
+        gap: clamp(1.5rem, 3vw, 3rem);
+      }
+
+      .cs-image-group {
+        font-size: min(3.7vw, 1rem);
+        width: calc(381 / 16 * 1em);
+        height: calc(608 / 16 * 1em);
+        display: block;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-picture {
+        width: calc(381 / 16 * 1em);
+        height: auto;
+        box-sizing: border-box;
+        background-color: #dab692;
+        overflow: hidden;
+        border: calc(8 / 16 * 1em) solid #dab692;
+        border-radius: calc(260 / 16 * 1rem);
+        position: absolute;
+        top: calc(10 / 16 * 1em);
+        bottom: calc(47 / 16 * 1em);
+        z-index: -1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: transform 0.7s;
+        }
+      }
+
+      .cs-graphic {
+        height: auto;
+        position: absolute;
+      }
+
+      .cs-twirl {
+        width: calc(177 / 16 * 1em);
+        height: auto;
+        top: calc(25 / 16 * 1em);
+        right: 0;
+        z-index: 1;
+      }
+
+      .cs-peach {
+        width: calc(86 / 16 * 1em);
+        height: auto;
+        top: 0;
+        right: calc(91 / 16 * 1em);
+      }
+
+      .cs-beige {
+        width: calc(380 / 16 * 1em);
+        height: auto;
+        bottom: 0;
+        left: 0;
+        z-index: -3;
+      }
+
+      .cs-leaf {
+        width: calc(175 / 16 * 1em);
+        height: auto;
+        bottom: calc(47 / 16 * 1em);
+        left: 0;
+        z-index: 1;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: auto 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: calc(32 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        margin-left: 0;
+        box-sizing: border-box;
+        border-radius: calc(16 / 16 * 1rem);
+        grid-column: span 12;
+      }
+
+      .cs-number {
+        /* 31px - 39px */
+        font-size: clamp(1.9375rem, 3vw, 2.4375rem);
+        font-weight: 700;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--primary);
+        display: block;
+      }
+
+      .cs-stats {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        margin-bottom: calc(8 / 16 * 1rem);
+        color: var(--headerColor);
+        display: block;
+      }
+
+      .cs-item-text {
+        font-size: calc(14 / 16 * 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+        display: block;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #stats-1941 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        align-items: center;
+      }
+
+      .cs-content-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        /* 48px - 80px */
+        gap: clamp(3rem, 6vw, 5rem);
+        align-self: stretch;
+      }
+
+      .cs-image-group {
+        font-size: min(1.54vw, 1rem);
+        height: auto;
+        min-height: calc(608 / 16 * 1em);
+      }
+
+      .cs-card-group {
+        width: 57%;
+        margin: 0;
+        padding: calc(48 / 16 * 1rem) 0;
+        align-self: center;
+      }
+
+      .cs-item {
+        grid-column: span 6;
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #stats-1941 {
+      .cs-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cs-content {
+        text-align: left;
+        max-width: calc(307 / 16 * 1rem);
+        align-items: flex-start;
+      }
+    }
+  }
+</style>

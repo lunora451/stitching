@@ -1,0 +1,196 @@
+---
+title: "Page 14";
+---
+
+<!-- ============================================ --><!--                  Services                    --><!-- ============================================ -->
+<section id="services-1557">
+  <div class="cs-container">
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/bag.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="33"
+            height="38"
+            aria-hidden="true"
+          />
+        </picture>
+        <!-- Text Grouped For Flexbox-->
+        <div class="cs-text-group">
+          <h3 class="cs-h3">Shipping & Return</h3>
+          <p class="cs-item-text">
+            If your glasses aren't perfect, return them within 30 days for a
+            full refund. We'll even pay shipping.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/sheild.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="33"
+            height="38"
+            aria-hidden="true"
+          />
+        </picture>
+        <!-- Text Grouped For Flexbox-->
+        <div class="cs-text-group">
+          <h3 class="cs-h3">Safe Payment</h3>
+          <p class="cs-item-text">
+            It’s no secret that one person alone cannot overcome the greatest
+            humanitarian crises. It truly takes all of us.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/bag.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="33"
+            height="38"
+            aria-hidden="true"
+          />
+        </picture>
+        <!-- Text Grouped For Flexbox-->
+        <div class="cs-text-group">
+          <h3 class="cs-h3">Shop with Confidence</h3>
+          <p class="cs-item-text">
+            It’s no secret that one person alone cannot overcome the greatest
+            humanitarian crises. It truly takes all of us.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-1557 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 2.5vw, 1.25rem);
+      }
+
+      .cs-item {
+        text-align: left;
+        list-style: none;
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+        /* 24px - 40px */
+        padding: clamp(1.5rem, 4vw, 2.5rem);
+        border: 1px solid #e8e8e8;
+        grid-column: span 12;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .cs-picture {
+        width: calc(80 / 16 * 1rem);
+        height: calc(80 / 16 * 1rem);
+        margin-bottom: calc(20 / 16 * 1rem);
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: 1px solid var(--primary);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        /* prevents flexbox from squishing it */
+        flex: none;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: var(--primary);
+          opacity: 0.1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-icon {
+        width: calc(36 / 16 * 1rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-h3 {
+        text-align: inherit;
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        margin-bottom: calc(8 / 16 * 1rem);
+        color: var(--headerColor);
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        text-align: inherit;
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-1557 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-item {
+        margin: 0;
+        grid-column: span 4;
+      }
+    }
+  }
+</style>

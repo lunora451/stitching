@@ -1,0 +1,293 @@
+---
+title: "Page 52";
+---
+
+<!-- ============================================ --><!--                   Services                   --><!-- ============================================ -->
+<section id="services-29">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Best-In-Class</span>
+      <h2 class="cs-title">Home Renovation Experts in Oak Harbor</h2>
+      <p class="cs-text">
+        Facilisis condimentum viverra scelerisque ac morbi sit sed. Turpis
+        sagittis in blandit eleifend tortor ullamcorper eu placerat. Et orci
+        felis volutpat, etiam vitae egestas volutpat pulvinar.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/living-room-m.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg"
+            alt="living room"
+            width="348"
+            height="433"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-box">
+          <h3 class="cs-h3">Foyer</h3>
+          <a
+            class="cs-button-transparent"
+            aria-label="read more about foyers"
+            href="">Read More</a
+          >
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/posh-bathroom-m.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/posh-bathroom.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/posh-bathroom.jpg"
+            alt="living room"
+            width="348"
+            height="433"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-box">
+          <h3 class="cs-h3">Bathrooms</h3>
+          <a
+            class="cs-button-transparent"
+            aria-label="read more about bathrooms"
+            href="">Read More</a
+          >
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/living-room-m.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg"
+            alt="living room"
+            width="348"
+            height="433"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-box">
+          <h3 class="cs-h3">Living Rooms</h3>
+          <a
+            class="cs-button-transparent"
+            aria-label="read more about living rooms"
+            href="">Read More</a
+          >
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px- Contains Hover State */
+  @media only screen and (min-width: 0rem) {
+    #services-29 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: calc(24 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        margin: 0;
+        width: 100%;
+
+        &:hover {
+          .cs-picture {
+            &:before {
+              height: 100%;
+            }
+
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+
+      .cs-picture {
+        /* height divided by width */
+        aspect-ratio: 328/220;
+        position: relative;
+        display: block;
+        /* Keeps image from bleeding outside the picture element */
+        overflow: hidden;
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 0%;
+          width: 100%;
+          background: var(--primary);
+          opacity: 0.8;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          transition: height 0.3s;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes img tag act like a background image */
+          object-fit: cover;
+          transition: transform 0.7s;
+        }
+      }
+
+      .cs-box {
+        /* Centers the button */
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+        /* -32px to 48px */
+        margin-top: clamp(-2rem, 7vw, -3rem);
+        /* 24px to 28px */
+        padding-top: clamp(1.5rem, 2.4vw, 1.75rem);
+        background: #fff;
+        position: relative;
+        z-index: 10;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2vw, 1.5625rem);
+        text-align: center;
+        line-height: 1.2em;
+        font-weight: bold;
+        color: var(--headerColor);
+        /* 24px to 28px */
+        margin: 0 0 clamp(1.5rem, 2.4vw, 1.75rem);
+      }
+
+      .cs-button-transparent {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: auto;
+        color: var(--primary);
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: transparent;
+        border: 1px solid var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: var(--primary);
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #fff;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-29 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .cs-item {
+        width: 32.3%;
+        max-width: calc(413 / 16 * 1rem);
+        margin: 0;
+      }
+
+      .cs-picture {
+        /* Reset aspect ratio, don't need it anymore */
+        aspect-ratio: initial;
+        /* 240px - 420px */
+        height: clamp(15rem, 31.5vw, 26.25rem);
+      }
+    }
+  }
+</style>

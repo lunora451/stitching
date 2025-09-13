@@ -1,0 +1,340 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Pricing                    --><!-- ============================================ -->
+<section id="pricing-1691">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Best deals</span>
+      <h2 class="cs-title">
+        Choose Your Package Today & Enjoy Our Special Prices
+      </h2>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <span class="cs-package">Basic</span>
+        <span class="cs-price">$250</span>
+        <ul class="cs-ul">
+          <li class="cs-li">All available starter feature</li>
+          <li class="cs-li">Home service 24/7</li>
+          <li class="cs-li">Customer agent service</li>
+          <li class="cs-li">Professional Service</li>
+          <li class="cs-li cs-disabled">2 dedicated mechanic</li>
+          <li class="cs-li cs-disabled">Remote Service mechanic</li>
+        </ul>
+        <a href="" class="cs-link">
+          <span class="cs-link-text">Get Started</span>
+          <img
+            class="cs-arrow"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+            alt="icon"
+            width="20"
+            height="20"
+            aria-hidden="true"
+          />
+        </a>
+      </li>
+      <li class="cs-item cs-popular">
+        <span class="cs-package">Standard</span>
+        <span class="cs-price">$300</span>
+        <ul class="cs-ul">
+          <li class="cs-li">All available starter feature</li>
+          <li class="cs-li">Home service 24/7</li>
+          <li class="cs-li">Customer agent service</li>
+          <li class="cs-li">Professional Service</li>
+          <li class="cs-li">2 dedicated mechanic</li>
+          <li class="cs-li cs-disabled">Remote Service mechanic</li>
+        </ul>
+        <a href="" class="cs-link">
+          <span class="cs-link-text">Get Started</span>
+          <img
+            class="cs-arrow"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+            alt="icon"
+            width="20"
+            height="20"
+            aria-hidden="true"
+          />
+        </a>
+      </li>
+      <li class="cs-item">
+        <span class="cs-package">Premium</span>
+        <span class="cs-price">$500</span>
+        <ul class="cs-ul">
+          <li class="cs-li">All available starter feature</li>
+          <li class="cs-li">Home service 24/7</li>
+          <li class="cs-li">Customer agent service</li>
+          <li class="cs-li">Professional Service</li>
+          <li class="cs-li">2 dedicated mechanic</li>
+          <li class="cs-li">Remote Service mechanic</li>
+        </ul>
+        <a href="" class="cs-link">
+          <span class="cs-link-text">Get Started</span>
+          <img
+            class="cs-arrow"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+            alt="icon"
+            width="20"
+            height="20"
+            aria-hidden="true"
+          />
+        </a>
+      </li>
+    </ul>
+    <img
+      class="cs-graphic"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/enterprise-pills.png"
+      alt="pills"
+      height="196"
+      width="582"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #pricing-1691 {
+      padding: var(--sectionPadding);
+      overflow-x: hidden;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1em);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+      }
+
+      .cs-content {
+        /* set text align to center if content needs to be centrally aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content to the left, set to center to centrally align */
+        align-items: center;
+      }
+
+      .cs-title {
+        margin: 0;
+        max-width: 25ch;
+      }
+
+      .cs-text {
+        max-width: calc(522 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        flex-flow: wrap row;
+        justify-content: center;
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.5rem);
+        transform-style: preserve-3d;
+        perspective: 700px;
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        max-width: calc(500 / 16 * 1rem);
+        margin: 0;
+        /* 56px - 80px */
+        padding: calc(40 / 16 * 1rem) clamp(3.5rem, 6vw, 5rem);
+        box-sizing: border-box;
+        background-color: #f7f7f7;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        position: relative;
+
+        &::before {
+          content: "";
+          width: 1px;
+          height: 80%;
+          background-color: #e8e8e8;
+          position: absolute;
+          top: 0;
+          left: calc(32 / 16 * 1rem);
+        }
+
+        &.cs-popular {
+          background-color: var(--primary);
+
+          .cs-package,
+          .cs-li {
+            color: var(--bodyTextColorWhite);
+          }
+
+          .cs-icon {
+            /* if icon is not black, this turns it white */
+            filter: grayscale(1) brightness(1000%);
+          }
+
+          .cs-price,
+          .cs-link {
+            color: var(--bodyTextColorWhite);
+          }
+
+          .cs-arrow {
+            filter: grayscale(1) brightness(100);
+          }
+        }
+      }
+
+      .cs-package {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-transform: uppercase;
+        letter-spacing: 1.6px;
+        margin-bottom: calc(8 / 16 * 1rem);
+        color: var(--headerColor);
+      }
+
+      .cs-price {
+        font-size: calc(49 / 16 * 1rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        /* 36px - 48px */
+        margin-bottom: clamp(2.25rem, 4vw, 3rem);
+        color: var(--headerColor);
+        display: flex;
+        align-items: baseline;
+        gap: calc(8 / 16 * 1rem);
+      }
+
+      .cs-ul {
+        margin: 0 0 auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(20 / 16 * 1rem);
+      }
+
+      .cs-li {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.2em;
+        list-style: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        color: var(--bodyTextColor);
+        display: flex;
+        justify-content: space-between;
+        /* push everything to the top so if the li goes to two lines the icon stays at the top */
+        align-items: flex-start;
+        gap: calc(16 / 16 * 1rem);
+
+        &.cs-disabled {
+          opacity: 0.5;
+        }
+      }
+
+      .cs-duration {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 400;
+        line-height: 1.5em;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-link {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-align: inherit;
+        text-decoration: none;
+        /* 36px - 48px */
+        margin-top: clamp(2.25rem, 4vw, 3rem);
+        color: var(--primary);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: calc(10 / 16 * 1rem);
+        transition: color 0.3s;
+
+        &:hover {
+          .cs-arrow {
+            transform: translateX(0.25rem);
+          }
+        }
+      }
+
+      .cs-link-text {
+        width: fit-content;
+      }
+
+      .cs-arrow {
+        width: calc(20 / 16 * 1rem);
+        height: auto;
+        display: block;
+        transition:
+          filter 0.3s,
+          transform 0.3s;
+      }
+
+      .cs-graphic {
+        width: calc(511 / 16 * 1rem);
+        height: calc(172 / 16 * 1rem);
+        position: absolute;
+        /* -60px - -100px, using a calc for negative clamp */
+        top: calc(clamp(3.75rem, 8vw, 6.25rem) * -1);
+        right: calc(-280 / 16 * 1rem);
+        z-index: -1;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #pricing-1691 {
+      .cs-item {
+        width: 48.9%;
+      }
+
+      .cs-graphic {
+        width: calc(582 / 16 * 1rem);
+        height: auto;
+        right: 0;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #pricing-1691 {
+      .cs-content {
+        text-align: left;
+        align-items: flex-start;
+      }
+
+      .cs-card-group {
+        flex-wrap: nowrap;
+      }
+    }
+  }
+</style>

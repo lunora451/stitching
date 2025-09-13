@@ -1,0 +1,360 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Hero                      --><!-- ============================================ -->
+<section id="hero-2219">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-author">
+        <span class="cs-name">Chris Brown</span>
+        <span class="cs-job">Wedding Photographer</span>
+      </div>
+      <h1 class="cs-title">Love to Capture Your Best Moments</h1>
+      <p class="cs-text">
+        Authentic wedding photography emphasises candid shots that capture real
+        emotions, reactions, and interactions among the couple, their families,
+        and guests.
+      </p>
+      <div class="cs-video-group">
+        <div class="cs-wrapper">
+          <!--Compress your video and upload it to a CDN like Digital Oceans Spaces so the video file doesn't cause load time issues. You can also remove the video tag and uncomment the picture tag to use a image instead of a video. Don't forget to remove the cs-play button!-->
+          <!-- <video loading="lazy" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Videos/gym.mp4" autoplay="false"></video> -->
+          <picture class="cs-picture">
+            <source
+              media="(max-width: 600px)"
+              srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/photography-video.jpg"
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/photography-video.jpg"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/photography-video.jpg"
+              alt="body builder"
+              width="630"
+              height="877"
+            />
+          </picture>
+          <button class="cs-play" aria-label="click to play video">
+            <img
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/photograph-play.svg"
+              alt="play icon"
+              class="cs-icon"
+              width="24"
+              height="24"
+              aria-hidden="true"
+              decoding="async"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <picture class="cs-background">
+      <!--Mobile Image-->
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/photography-hero.jpg"
+      />
+      <!--Tablet and above Image-->
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/photography-hero.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/photography-hero.jpg"
+        alt="photographer"
+        width="1280"
+        height="568"
+      />
+    </picture>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-2219 {
+      background-color: #1a1a1a;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1920 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 7vw, 4rem);
+        position: relative;
+      }
+
+      .cs-content {
+        /* top changes to 100px on tablet */
+        /* bottom 60px - 180px */
+        padding: calc(360 / 16 * 1rem) calc(16 / 16 * 1rem)
+          clamp(3.75rem, 12vw, 11.25rem);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+      }
+
+      .cs-author {
+        display: flex;
+        flex-direction: column;
+        gap: calc(4 / 16 * 1rem);
+      }
+
+      .cs-name {
+        font-size: calc(25 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        color: var(--bodyTextColorWhite);
+        display: block;
+      }
+
+      .cs-job {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        margin: 0 0 calc(16 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+        display: block;
+      }
+
+      .cs-title {
+        /* 49px - 61px */
+        font-size: clamp(3.0625rem, 6vw, 3.8125rem);
+        max-width: calc(554 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        max-width: calc(514 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-video-group {
+        width: 100%;
+        /* 180px - 320px */
+        height: clamp(11.25rem, 40vw, 20rem);
+        /* 48px - 80px */
+        margin-top: clamp(3rem, 11vw, 5rem);
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+
+        &:hover {
+          cursor: pointer;
+          .cs-play {
+            transform: translateY(-50%) scale(1.1);
+          }
+        }
+
+        video,
+        .cs-picture {
+          width: 100%;
+          height: 100%;
+          display: block;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .cs-wrapper {
+        width: 88%;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-play {
+        /* 80px - 120px */
+        width: clamp(5rem, 10vw, 7.5rem);
+        height: auto;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        left: calc(clamp(5rem, 10vw, 7.5rem) * -0.5);
+        transform: translateY(-50%);
+        transform-origin: center;
+        transition:
+          transform 0.3s,
+          opacity 0.3s;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &.cs-hide {
+          opacity: 0;
+          transform: translateY(-50%) scale(0);
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .cs-background {
+        width: 100%;
+        height: calc(625 / 16 * 1rem);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            0deg,
+            #1a1a1a 0%,
+            rgba(26, 26, 26, 0.83) 38.94%,
+            rgba(26, 26, 26, 0) 76.68%
+          );
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-2219 {
+      background: linear-gradient(
+          90deg,
+          #1a1a1a 66.48%,
+          rgba(26, 26, 26, 0) 66.82%
+        ),
+        #262525;
+      .cs-container {
+        align-items: flex-end;
+      }
+
+      .cs-content {
+        text-align: left;
+        width: 47%;
+        max-width: calc(646 / 16 * 1rem);
+        padding-top: calc(100 / 16 * 1rem);
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        max-width: calc(514 / 16 * 1rem);
+      }
+
+      .cs-author {
+        position: absolute;
+        /* 60px - 120px */
+        bottom: clamp(3.75rem, 12vw, 7.5rem);
+        left: calc(120 / 16 * 1rem);
+      }
+
+      .cs-job {
+        margin: 0;
+      }
+
+      .cs-background {
+        width: 73%;
+        height: 100%;
+
+        &::before {
+          background:
+            linear-gradient(
+              0deg,
+              #1a1a1a 0%,
+              rgba(26, 26, 26, 0.83) 17.39%,
+              rgba(26, 26, 26, 0) 34.24%
+            ),
+            linear-gradient(
+              270deg,
+              #1a1a1a 5.72%,
+              rgba(26, 26, 26, 0.83) 32.01%,
+              rgba(26, 26, 26, 0) 57.49%
+            ),
+            -556.663px -57.033px / 285.317% 115.906% no-repeat;
+        }
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #hero-2219 {
+      .cs-content {
+        width: 100%;
+        box-sizing: content-box;
+        /* 16px - 170px */
+        padding-right: clamp(1rem, 11vw, 10.625rem);
+      }
+    }
+  }
+</style>
+<script>
+  function togglePlayButton() {
+    // Select all elements with the .cs-picture class
+    const pictures = document.querySelectorAll("#hero-2219 .cs-video-group");
+
+    // Add a click event listener to each .cs-picture element
+    pictures.forEach((picture) => {
+      picture.addEventListener("click", () => {
+        // Select all elements with the .cs-play class
+        const playButtons = document.querySelectorAll("#hero-2219 .cs-play");
+
+        // Toggle the .cs-hide class on each .cs-play element
+        playButtons.forEach((button) => {
+          button.classList.toggle("cs-hide");
+        });
+      });
+    });
+  }
+
+  // Call the function to activate the event listeners
+  togglePlayButton();
+
+  function toggleVideoPlayback() {
+    // Select the video element
+    const video = document.querySelector("#hero-2219 video");
+
+    // Add a click event listener to the video
+    video.addEventListener("click", () => {
+      // Check if the video is paused
+      if (video.paused) {
+        video.play(); // Play the video if it is paused
+      } else {
+        video.pause(); // Pause the video if it is playing
+      }
+    });
+  }
+
+  // Call the function to activate the event listener
+  toggleVideoPlayback();
+</script>

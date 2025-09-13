@@ -1,0 +1,355 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Logos                      --><!-- ============================================ -->
+<section id="logos-2350">
+  <div class="cs-container">
+    <!--Ideally you want to use svg's for the file path image, which is why these aren't wrapped in picture elements for different screen sizes-->
+    <div class="cs-row">
+      <img
+        class="cs-logo logo1"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/logo7.png"
+        alt="logo"
+        width="287"
+        height="65"
+        loading="lazy"
+        decoding="async"
+      />
+      <img
+        class="cs-logo logo2"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/logo8.png"
+        alt="logo"
+        width="229"
+        height="55"
+        loading="lazy"
+        decoding="async"
+      />
+      <img
+        class="cs-logo logo3"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/logo9.png"
+        alt="logo"
+        width="235"
+        height="53"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+    <div class="cs-row">
+      <img
+        class="cs-logo logo4"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/logo10.png"
+        alt="logo"
+        width="228"
+        height="61"
+        loading="lazy"
+        decoding="async"
+      />
+      <img
+        class="cs-logo logo5"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/logo11.png"
+        alt="logo"
+        width="228"
+        height="61"
+        loading="lazy"
+        decoding="async"
+      />
+      <img
+        class="cs-logo logo6"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/logo12.png"
+        alt="logo"
+        width="228"
+        height="61"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Footer                      -->
+<!-- ============================================ -->
+
+<footer id="footer-2350">
+  <div class="cs-container">
+    <div class="cs-left">
+      <span class="cs-topper">Contact Us</span>
+      <h2 class="cs-title">
+        Building a Future with Our Help. Leave a message and our Agent will
+        contact You
+      </h2>
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <span class="cs-header">Studio Website</span>
+          <a href="" class="cs-contact">www.archistitch.com</a>
+        </li>
+        <li class="cs-li">
+          <span class="cs-header">Email Address</span>
+          <a href="" class="cs-contact">info@archistitch.com</a>
+        </li>
+        <li class="cs-li">
+          <span class="cs-header">Phone Number</span>
+          <a href="" class="cs-contact">+1 (888) 456 789</a>
+        </li>
+        <li class="cs-li">
+          <span class="cs-header">Office Address</span>
+          <a href="" class="cs-contact">1901 Thornridge Cir, Shiloh Hawaii</a>
+        </li>
+      </ul>
+    </div>
+    <div class="cs-right">
+      <a href="" class="cs-logo">
+        <img
+          class="cs-logo-img"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/archi-logo.svg"
+          alt="logo"
+          width="174"
+          height="28"
+          loading="lazy"
+          decoding="async"
+        />
+      </a>
+      <div class="cs-flex">
+        <div class="cs-wrapper">
+          <a href="" class="cs-link">Terms & Conditions</a>
+          <span class="cs-divider">|</span>
+          <a href="" class="cs-link">Privacy Policy</a>
+        </div>
+        <span class="cs-copyright"
+          >© Copyright 2025 - <a class="cs-link" href="">ArchiStitch</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Logos            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #logos-2350 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-row {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-logo {
+        /* adjust the clamps as needed for your logos to be arrnaged the way you want them */
+        height: auto;
+        margin: 0;
+        display: block;
+
+        &.logo1 {
+          width: clamp(104px, 13vw, 178px);
+        }
+
+        &.logo2 {
+          width: clamp(35px, 7vw, 62px);
+        }
+
+        &.logo3 {
+          width: clamp(86px, 15vw, 173px);
+        }
+
+        &.logo4 {
+          width: clamp(112px, 15vw, 187px);
+        }
+
+        &.logo5 {
+          width: clamp(58px, 10vw, 121px);
+        }
+
+        &.logo6 {
+          width: clamp(99px, 10vw, 133px);
+        }
+      }
+    }
+  }
+
+  /* In-between - 650px */
+  @media only screen and (min-width: 650px) {
+    #logos-2350 {
+      .cs-container {
+        flex-direction: row;
+      }
+      .cs-row {
+        /* makes the cs-row non-existent and elts the children interact with the children from outside the cs-row */
+        display: contents;
+      }
+    }
+  }
+
+  /*-- -------------------------- -->
+<---          Footer            -->
+<--- -------------------------- -*/
+
+  /* Mobile */
+  @media only screen and (min-width: 0rem) {
+    #footer-2350 {
+      padding: var(--sectionPadding);
+      padding-top: 0;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1800 / 16 * 1rem);
+        margin: auto;
+        /* 24px - 100px top & bottom */
+        /* 16px - 100px left & right */
+        padding: clamp(1.5rem, 8vw, 6.25rem) clamp(1rem, 4.5vw, 6.25rem);
+        display: flex;
+        flex-direction: column;
+        gap: calc(64 / 16 * 1rem);
+        background-color: #1a1a1a;
+      }
+
+      .cs-left {
+        width: 100%;
+        max-width: calc(854 / 16 * 1rem);
+      }
+
+      .cs-title {
+        margin-bottom: calc(48 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-ul {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 24px - 32px */
+        row-gap: clamp(1.5rem, 5vw, 2rem);
+        /* 24px - 64px */
+        column-gap: clamp(1.5rem, 5vw, 2rem);
+      }
+
+      .cs-li {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: calc(4 / 16 * 1rem);
+        grid-column: span 12;
+      }
+
+      .cs-header {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        color: #a3a3a3;
+        display: block;
+      }
+
+      .cs-contact {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        text-decoration: none;
+        font-weight: 700;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-right {
+        display: flex;
+        flex-direction: column;
+        gap: calc(48 / 16 * 1rem);
+      }
+
+      .cs-logo {
+        width: calc(174 / 16 * 1rem);
+        height: auto;
+        display: block;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-logo-img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .cs-flex {
+        width: 100%;
+        max-width: calc(283 / 16 * 1rem);
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: calc(16 / 16 * 1rem);
+        column-gap: calc(20 / 16 * 1rem);
+      }
+
+      .cs-wrapper {
+        width: 100%;
+        display: flex;
+      }
+
+      .cs-copyright,
+      .cs-link {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        text-decoration: none;
+        white-space: nowrap;
+        color: #a3a3a3;
+        display: inline-block;
+        transition: color 0.3s;
+      }
+
+      .cs-link {
+        &:hover {
+          color: var(--primary);
+        }
+      }
+
+      .cs-divider {
+        font-size: calc(16 / 16 * 1rem);
+        margin: 0 calc(20 / 16 * 1rem);
+        color: #a3a3a3;
+        display: inline-block;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #footer-2350 {
+      .cs-ul {
+        width: 80%;
+        max-width: calc(704 / 16 * 1rem);
+      }
+
+      .cs-li {
+        grid-column: span 6;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #footer-2350 {
+      .cs-container {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+    }
+  }
+</style>

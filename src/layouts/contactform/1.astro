@@ -1,0 +1,575 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Contact                    --><!-- ============================================ -->
+<section id="contact-2404">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-content-group">
+        <span class="cs-topper">Contact Us</span>
+        <h2 class="cs-title">Schedule Your First Service</h2>
+        <p class="cs-text">
+          Ready for a cleaner yard? Contact Poop Patrol Stitches today for your
+          free estimate and see why so many pet owners trust our team.
+        </p>
+      </div>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/orange-phone.svg"
+            alt="icon"
+            width="120"
+            height="120"
+          />
+          <div class="cs-flex-group">
+            <h3 class="cs-header">Phone</h3>
+            <a class="cs-link" href="tel:(123) 555-1234"> (123) 555-1234 </a>
+          </div>
+        </li>
+        <li class="cs-item">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/orange-pin.svg"
+            alt="icon"
+            width="120"
+            height="120"
+          />
+          <div class="cs-flex-group">
+            <h3 class="cs-header">Location</h3>
+            <a class="cs-link" href="" target="_blank"> San Jose, CA </a>
+          </div>
+        </li>
+        <li class="cs-item">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/orange-message.svg"
+            alt="icon"
+            width="120"
+            height="120"
+          />
+          <div class="cs-flex-group">
+            <h3 class="cs-header">Email</h3>
+            <a class="cs-link" href="mailto:hello@stitches.com">
+              hello@stitches.com
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="cs-group">
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/contact.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/contact.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/contact.jpg"
+          alt="people"
+          width="630"
+          height="300"
+        />
+      </picture>
+      <!--Form-->
+      <form class="cs-form" id="cs-form-2404" name="Contact Form" method="post">
+        <label class="cs-label">
+          <input
+            class="cs-input cs-name"
+            required
+            type="text"
+            id="name-2404"
+            name="name"
+            placeholder="Name"
+          />
+        </label>
+        <label class="cs-label cs-email">
+          <input
+            class="cs-input"
+            required
+            type="email"
+            id="email-2404"
+            name="email"
+            placeholder="Email"
+          />
+        </label>
+        <label class="cs-label">
+          <input
+            class="cs-input cs-name"
+            required
+            type="text"
+            id="name-2404"
+            name="name"
+            placeholder="Name"
+          />
+        </label>
+        <label class="cs-label cs-email">
+          <input
+            class="cs-input"
+            required
+            type="email"
+            id="email-2404"
+            name="email"
+            placeholder="Email"
+          />
+        </label>
+        <label class="cs-label cs-phone">
+          <input
+            class="cs-input"
+            required
+            type="number"
+            id="phone-2404"
+            name="phone"
+            placeholder="Phone"
+          />
+        </label>
+        <label class="cs-label">
+          <select class="cs-input" required id="services-2404" name="services">
+            <option value="" disabled selected>Services</option>
+            <option value="grooming">Grooming</option>
+            <option value="training">Training</option>
+            <option value="boarding">Boarding</option>
+            <option value="veterinary">Veterinary Care</option>
+            <option value="emergency">Emergency Care</option>
+          </select>
+        </label>
+        <label class="cs-label">
+          <textarea
+            class="cs-input cs-textarea"
+            required
+            name="Message"
+            id="message-2404"
+            placeholder="Write message..."></textarea>
+        </label>
+        <p class="cs-button-wrapper">
+          <button class="cs-button-solid cs-submit" type="submit">Submit</button
+          >
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #contact-2404 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(704 / 16 * 1rem);
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: column;
+        column-gap: calc(16 / 16 * 1rem);
+        /* chnages to 64px at desktop */
+        row-gap: calc(16 / 16 * 1rem);
+        position: relative;
+      }
+
+      .cs-content {
+        text-align: left;
+        width: 100%;
+        display: contents;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: calc(48 / 16 * 1rem);
+      }
+
+      .cs-group {
+        display: contents;
+      }
+
+      .cs-topper {
+        color: var(--secondary);
+      }
+
+      .cs-title {
+        max-width: 12ch;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      .cs-content-group,
+      .cs-card-group,
+      .cs-picture,
+      .cs-form {
+        grid-column: span 12;
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: 100vw;
+        /* temporary margin, removing at tablet */
+        margin: calc(32 / 16 * 1rem) 0;
+        border-radius: calc(16 / 16 * 1rem);
+        /* clips image corners */
+        overflow: hidden;
+        display: block;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-contact-text {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        text-align: left;
+        margin: 0 0 calc(24 / 16 * 1rem);
+        color: var(--bodyTextColor);
+      }
+
+      .cs-card-group {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-item {
+        width: 100%;
+        text-align: center;
+        list-style: none;
+        margin: 0;
+        /* 16px - 20px */
+        padding: clamp(1rem, 3vw, 1.25rem);
+        border-radius: calc(16 / 16 * 1rem);
+        gap: calc(24 / 16 * 1rem);
+        background-color: #fdf9f4;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        grid-column: span 12;
+        grid-row: span 1;
+        display: flex;
+        row-gap: calc(46 / 16 * 1rem);
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-icon {
+        /* 48px - 72px */
+        height: clamp(3rem, 6vw, 4.5rem);
+        width: auto;
+        display: block;
+      }
+
+      .cs-flex-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+
+      .cs-header {
+        font-weight: bold;
+        color: var(--headerColor);
+        margin: 0;
+      }
+
+      .cs-link {
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        max-width: calc(450 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        color: var(--bodyTextColor);
+        text-decoration: none;
+      }
+
+      .cs-form {
+        width: 100%;
+        /* 24px - 48px top and bottom */
+        /* 16px - 32px left and right */
+        padding: clamp(1.5rem, 5.18vw, 3rem) clamp(1rem, 4vw, 2rem);
+        /* prevents flexbox from affecting height and width */
+        box-sizing: border-box;
+        background-color: #fdf9f4;
+        border-radius: calc(16 / 16 * 1rem);
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-label {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        width: 100%;
+        color: var(--headerColor);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        grid-column: span 12;
+        gap: calc(4 / 16 * 1rem);
+      }
+
+      .cs-input {
+        font-size: calc(16 / 16 * 1rem);
+        width: 100%;
+        height: calc(56 / 16 * 1rem);
+        padding: 0;
+        padding-left: calc(24 / 16 * 1rem);
+        color: var(--headerColor);
+        background-color: #faf2e9;
+        border-radius: calc(8 / 16 * 1rem);
+        border: none;
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+        &::placeholder {
+          color: #4c4a48;
+        }
+      }
+
+      .cs-textarea {
+        min-height: calc(120 / 16 * 1rem);
+        padding-top: calc(24 / 16 * 1rem);
+        margin-bottom: calc(12 / 16 * 1rem);
+        font-family: inherit;
+      }
+
+      .cs-button-wrapper {
+        margin: 0;
+        grid-column: span 12;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #1a1a1a;
+        border: none;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--secondary);
+        border-radius: calc(4 / 16 * 1rem);
+        overflow: hidden;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #fff;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-submit {
+        width: auto;
+        border-radius: calc(8 / 16 * 1rem);
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #contact-2404 {
+      .cs-content {
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      .cs-content-group {
+        /* temporary padding bottom for tablet */
+        padding-bottom: calc(78 / 16 * 1rem);
+        align-self: flex-start;
+        grid-column: span 6;
+      }
+
+      .cs-card-group {
+        margin-top: calc(32 / 16 * 1rem);
+      }
+
+      .cs-item {
+        flex-direction: row;
+        grid-column: span 6;
+
+        &:last-of-type {
+          grid-column: span 12;
+        }
+      }
+
+      .cs-label {
+        grid-column: span 6;
+
+        &:last-of-type {
+          grid-column: span 12;
+        }
+      }
+
+      .cs-picture {
+        max-width: calc(522 / 16 * 1rem);
+        min-height: calc(260 / 16 * 1rem);
+        height: auto;
+        max-height: 100%;
+        margin: 0;
+        flex: none;
+        grid-column: 7 / span 6;
+        grid-row: 1;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #contact-2404 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: calc(64 / 16 * 1rem);
+      }
+
+      .cs-content {
+        width: 100%;
+        flex-direction: row;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        /* 40px - 64px */
+        gap: clamp(2.5rem, 5vw, 4rem);
+      }
+
+      .cs-content-group {
+        width: 100%;
+        max-width: calc(522 / 16 * 1rem);
+        padding-bottom: 0;
+      }
+
+      .cs-group {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+        /* 40px - 64px */
+        gap: clamp(2.5rem, 5vw, 4rem);
+      }
+
+      .cs-card-group {
+        width: 49vw;
+        max-width: calc(694 / 16 * 1rem);
+        margin: 0;
+        flex: none;
+      }
+
+      .cs-form {
+        width: 49vw;
+        max-width: calc(694 / 16 * 1rem);
+        flex: none;
+      }
+
+      .cs-label {
+        grid-column: span 6;
+
+        &:last-of-type {
+          grid-column: span 12;
+        }
+      }
+
+      .cs-submit {
+        width: auto;
+        grid-column: span 6;
+      }
+
+      .cs-picture {
+        width: 100%;
+        max-width: calc(522 / 16 * 1rem);
+        height: auto;
+        flex: auto;
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #contact-2404 {
+      .cs-card-group {
+        align-self: flex-end;
+      }
+      .cs-item {
+        grid-column: span 4;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        &:last-of-type {
+          grid-column: span 4;
+        }
+      }
+    }
+  }
+</style>

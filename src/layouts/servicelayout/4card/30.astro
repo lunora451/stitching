@@ -1,0 +1,217 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Services                    --><!-- ============================================ -->
+<section id="services-1305">
+  <div class="cs-container">
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <div class="cs-image-group">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/brain88.svg"
+            alt="icon"
+            width="48"
+            height="48"
+          />
+        </div>
+        <div class="cs-flex">
+          <h2 class="cs-h2">Creative Solutions</h2>
+          <p class="cs-item-text">
+            We will go ahead that extra mile to ensure our clients welfare, our
+            working hours convenient to our Client's from contact.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <div class="cs-image-group">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/people88.svg"
+            alt="icon"
+            width="48"
+            height="48"
+          />
+        </div>
+        <div class="cs-flex">
+          <h2 class="cs-h2">Professional Team</h2>
+          <p class="cs-item-text">
+            We have the most famous experts in reputable company providing great
+            advice on Wills, Lasting Power of Attorney.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <div class="cs-image-group">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/layers88.svg"
+            alt="icon"
+            width="48"
+            height="48"
+          />
+        </div>
+        <div class="cs-flex">
+          <h2 class="cs-h2">Diverse Approach</h2>
+          <p class="cs-item-text">
+            We don’t believe in the sales culture, but instead we believe in the
+            service culture. Yes, time is precious, but we decision. We don’t
+            believe in the sales culture, but instead we believe in the service
+            culture. Yes, time is precious, but we decision.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <div class="cs-image-group">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/paper88.svg"
+            alt="icon"
+            width="48"
+            height="48"
+          />
+        </div>
+        <div class="cs-flex">
+          <h2 class="cs-h2">Detailed Reports</h2>
+          <p class="cs-item-text">
+            Our experts are always available over the phone and online. Web chat
+            is available from 8am to 8pm or you can give free.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-1305 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        /* changes to 1920px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        box-sizing: border-box;
+        /* 24px - 60px and 16px - 40px */
+        padding: clamp(1.5rem, 7.3vw, 3.75rem) clamp(1rem, 2.5vw, 2.5rem);
+        border-bottom: 1px solid #e8e8e8;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-image-group {
+        position: relative;
+      }
+
+      .cs-picture {
+        width: calc(40 / 16 * 1rem);
+        height: calc(40 / 16 * 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-icon {
+        width: auto;
+        height: calc(32 / 16 * 1rem);
+      }
+
+      .cs-graphic {
+        width: 100%;
+        height: auto;
+      }
+
+      .cs-h2 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 calc(12 / 16 * 1rem);
+        color: var(--headerColor);
+        text-align: inherit;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.6vw, 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+        text-align: inherit;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-1305 {
+      padding: 0;
+      .cs-container {
+        max-width: calc(1920 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .cs-item {
+        border: none;
+        border-right: 1px solid #e8e8e8;
+
+        &:last-of-type {
+          border: none;
+        }
+      }
+    }
+  }
+
+  /* Large Desktop - 1600px */
+  @media only screen and (min-width: 100rem) {
+    #services-1305 {
+      .cs-item {
+        flex-direction: row;
+      }
+    }
+  }
+</style>

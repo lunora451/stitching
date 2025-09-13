@@ -1,0 +1,43 @@
+---
+
+---
+
+<a href="" class="cs-button-1" aria-label="read more about us">Read More</a>
+
+<style lang="scss">
+  .cs-button-1 {
+    font-size: calc(16 / 16 * 1rem);
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 8vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    margin: auto;
+    color: #fff;
+    padding: 0 calc(24 / 16 * 1rem);
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+      &:before {
+        width: 100%;
+      }
+    }
+
+    &:before {
+      /* hover box */
+      content: "";
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 0%;
+      background: #000;
+      opacity: 1;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: width 0.3s;
+    }
+  }
+</style>

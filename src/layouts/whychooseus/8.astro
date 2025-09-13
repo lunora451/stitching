@@ -1,0 +1,388 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Why Choose Us                --><!-- ============================================ -->
+<section id="why-choose-2058">
+  <div class="cs-container">
+    <div class="cs-flex1">
+      <div class="cs-content">
+        <span class="cs-topper">Why Choose Us</span>
+        <h2 class="cs-title">Smiles More Radiant and Healthy is Our Passion</h2>
+        <p class="cs-text">
+          Orci eu lobortis elementum nibh tellus. Vulputate eu scelerisque felis
+          imperdiet proin fermentum leo vel. Luctus accumsan tortor posuere ac
+          ut consequat semper. Et pharetra pharetra massa massa ultricies mi
+          quis.
+        </p>
+        <a class="cs-link" href="">Learn More</a>
+      </div>
+      <div class="cs-video-wrapper">
+        <!--Compress your video and upload it to a CDN like Digital Oceans Spaces so the video file doesn't cause load time issues. You can also remove the video tag and uncomment the picture tag to use a image instead of a video. Don't forget to remove the cs-play button!-->
+        <video
+          loading="lazy"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Videos/gym.mp4"
+          autoplay="false"></video>
+        <!-- <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dental-sbs-1.png">
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dental-sbs-1.png">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dental-sbs-1.png" alt="body builder" width="630" height="877">
+                    </picture> -->
+        <button class="cs-play" aria-label="click to play video">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/play-right.svg"
+            alt="play icon"
+            width="24"
+            height="24"
+            aria-hidden="true"
+            decoding="async"
+          />
+        </button>
+      </div>
+      <div class="cs-flex2">
+        <picture class="cs-small-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/patient1.png"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/patient1.png"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/patient1.png"
+            alt="body builder"
+            width="630"
+            height="877"
+          />
+        </picture>
+        <ul class="cs-services">
+          <li class="cs-item">
+            <h3 class="cs-h3">Gum Surgery</h3>
+            <p class="cs-item-text">
+              Dentitch provides the best service and has won many awards. Our
+              mission is to make everyone confident to give their best smile.
+            </p>
+          </li>
+          <li class="cs-item">
+            <h3 class="cs-h3">Dental Sealants</h3>
+            <p class="cs-item-text">
+              Dentitch provides the best service and has won many awards. Our
+              mission is to make everyone confident to give their best smile.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Why Choose Us        -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #why-choose-2058 {
+      background-color: #f5fcfb;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1920 / 16 * 1rem);
+        margin: auto;
+        display: grid;
+        grid-auto-flow: row;
+      }
+
+      .cs-flex1,
+      .cs-flex2 {
+        /* breaks up the container so its children can be children of the cs-container and arrange themselves with the other children of the cs-container */
+        display: contents;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-content {
+        width: 100%;
+        max-width: calc(700 / 16 * 1rem);
+        padding: var(--sectionPadding);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-self: center;
+      }
+
+      .cs-text {
+        margin: 0 0 calc(32 / 16 * 1rem);
+      }
+
+      .cs-link {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        width: max-content;
+        color: var(--secondary);
+        display: inline-block;
+      }
+
+      .cs-small-picture {
+        width: 100%;
+        /* 388px - 420px */
+        height: calc(388 / 16 * 1rem);
+        display: block;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-services {
+        margin: 0;
+        /* 32px - 100px top & bottom*/
+        /* 16px - 60px left & right */
+        padding: clamp(2rem, 6vw, 6.25rem) clamp(1rem, 3vw, 3.75rem);
+        background-color: #1a1a1a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(32 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        font-weight: 400;
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-h3 {
+        font-size: calc(20 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        margin: 0 0 calc(16 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-video-wrapper {
+        width: 100%;
+        height: 95vw;
+        max-height: calc(340 / 16 * 1rem);
+        display: block;
+        grid-row: 4;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+          cursor: pointer;
+
+          .cs-play {
+            transform: translate(-50%, -50%) scale(1.2);
+          }
+        }
+
+        video,
+        .cs-picture {
+          width: 100%;
+          height: 100%;
+          /* makes image act as a background image */
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          img {
+            width: 100%;
+            height: 100%;
+            /* makes image act as a background image */
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+
+      .cs-play {
+        /* 80px - 120px */
+        width: clamp(5rem, 10vw, 7.5rem);
+        height: clamp(5rem, 10vw, 7.5rem);
+        background-color: rgba(255, 255, 255, 0.2);
+        pointer-events: none;
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition:
+          transform 0.3s,
+          opacity 0.3s;
+        backdrop-filter: blur(8px);
+
+        &.cs-hide {
+          opacity: 0;
+          transform: translate(-50%, -50%) scale(0) !important;
+        }
+      }
+
+      .cs-icon {
+        width: calc(20 / 16 * 1rem);
+        height: auto;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #why-choose-2058 {
+      padding: var(--sectionPadding);
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+
+      .cs-container {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+      }
+
+      .cs-content {
+        /* 48px - 100px */
+        padding-top: clamp(3rem, 6vw, 6.25rem);
+        /* 60px - 80px */
+        padding-bottom: clamp(3.75rem, 5vw, 5rem);
+        grid-column: span 8;
+        grid-row: 1 / 1;
+      }
+
+      .cs-small-picture {
+        height: 100%;
+        grid-column: span 4;
+        grid-row: 2 / 2;
+      }
+
+      .cs-services {
+        justify-content: center;
+        grid-column: span 4;
+        grid-row: 2 / 2;
+      }
+
+      .cs-video-wrapper {
+        height: 100%;
+        max-height: none;
+        grid-column: span 4;
+        grid-row: span 2;
+      }
+    }
+  }
+
+  /* Large Desktop - 1920px */
+  @media only screen and (min-width: 120rem) {
+    #why-choose-2058 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        display: block;
+      }
+
+      .cs-content {
+        width: 100%;
+        max-width: calc(867 / 16 * 1rem);
+        padding-left: 0;
+        padding-right: 0;
+        flex: none;
+      }
+
+      .cs-flex2 {
+        width: 100%;
+        display: flex;
+        max-width: calc(650 / 16 * 1rem);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-small-picture {
+        position: absolute;
+        height: 100%;
+        width: 36vw;
+        right: 100%;
+        top: 0;
+      }
+
+      .cs-flex1 {
+        width: 100%;
+        max-width: calc(867 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .cs-video-wrapper {
+        position: absolute;
+        height: 100%;
+        left: 100%;
+        top: 0;
+        width: 43vw;
+      }
+    }
+  }
+</style><script>
+  function togglePlayButton() {
+    // Select all elements with the .cs-picture class
+    const picture = document.querySelector(
+      "#why-choose-2058 .cs-video-wrapper"
+    );
+    const playButton = document.querySelector("#why-choose .cs-play");
+
+    function togglePlayButton() {
+      playButton.classList.toggle("cs-hide");
+    }
+
+    picture.addEventListener("click", togglePlayButton);
+    playButton.addEventListener("click", togglePlayButton);
+  }
+
+  // Call the function to activate the event listeners
+  togglePlayButton();
+
+  function toggleVideoPlayback() {
+    // Select the video element
+    const video = document.querySelector("#why-choose video");
+    const playButton = document.querySelector("#why-choose .cs-play");
+
+    function togglePlay() {
+      // Check if the video is paused
+      if (video.paused) {
+        video.play(); // Play the video if it is paused
+      } else {
+        video.pause(); // Pause the video if it is playing
+      }
+    }
+
+    video.addEventListener("click", togglePlay);
+    playButton.addEventListener("click", togglePlay);
+  }
+
+  // Call the function to activate the event listener
+  toggleVideoPlayback();
+</script>

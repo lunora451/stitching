@@ -1,0 +1,343 @@
+---
+
+---
+
+<!-- ============================================ --><!--                     FAQ                      --><!-- ============================================ -->
+<section id="faq-708">
+  <div class="cs-container">
+    <picture class="cs-picture">
+      <!--Mobile Image-->
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FLandscapes%2Frocks-m.jpg"
+      />
+      <!--Tablet and above Image-->
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FLandscapes%2Frocks.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FLandscapes%2Frocks.jpg"
+        alt="rocks"
+        width="650"
+        height="740"
+        aria-hidden="true"
+      />
+    </picture>
+    <div class="cs-content">
+      <span class="cs-topper">Asked questions</span>
+      <h2 class="cs-title">Frequently Asked Questions</h2>
+      <ul class="cs-faq-group">
+        <!-- Active class added as default -->
+        <li class="cs-faq-item active">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              How much are house painting services?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Some cleaning plans require a minimum commitment term. Cancelling
+            your plan before the minimum term is complete will result in a $99
+            fee. If you want to learn more information about how to cancel,
+            please inbox us.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              What is your plan cancellation policy?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              How long should a house painting take?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              How much are house painting services?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              How much are house painting services?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <img
+    class="cs-graphic"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fswoosh.svg"
+    alt="swoosh"
+    width="361"
+    height="487"
+    aria-hidden="true"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---            FAQ             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #faq-708 {
+      position: relative;
+      overflow: hidden;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* 40px - 48px */
+        gap: clamp(2.5rem, 5vw, 3rem);
+      }
+
+      .cs-picture {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: calc(256 / 16 * 1rem);
+        z-index: 1;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .cs-content {
+        text-align: left;
+        max-width: calc(541 / 16 * 1rem);
+        /* move section padding to the cs-content so we can make the cs-picture full width */
+        padding: var(--sectionPadding);
+        padding-top: 0;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+      }
+
+      .cs-title {
+        /* 20 characters wide including spaces */
+        max-width: 20ch;
+        margin: 0 0 calc(24 / 16 * 1rem) 0;
+      }
+
+      .cs-faq-group {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .cs-faq-item {
+        list-style: none;
+        width: 100%;
+        border-bottom: 1px solid #e8e8e8;
+        transition: border-bottom 0.3s;
+
+        &.active {
+          border-color: var(--primaryLight);
+          .cs-button {
+            color: var(--primary);
+            &:before {
+              background-color: var(--primaryLight);
+              transform: rotate(315deg);
+            }
+            &:after {
+              background-color: var(--primaryLight);
+              transform: rotate(-315deg);
+            }
+          }
+          .cs-item-p {
+            height: auto;
+            /* 20px - 24px bottom */
+            padding: 0 0 clamp(1rem, 2vw, 1.5rem) 0;
+            opacity: 1;
+          }
+        }
+      }
+
+      .cs-button {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        line-height: 1.2em;
+        text-align: left;
+        font-weight: bold;
+        /* 16px - 24px */
+        padding: clamp(1rem, 2.3vw, 1.5rem) 0;
+        border: none;
+        background: transparent;
+        color: var(--headerColor);
+        display: block;
+        width: 100%;
+        position: relative;
+        transition:
+          background-color 0.3s,
+          color 0.3s;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:before {
+          /* left line */
+          content: "";
+          width: calc(8 / 16 * 1rem);
+          height: calc(2 / 16 * 1rem);
+          background-color: var(--headerColor);
+          opacity: 1;
+          border-radius: 50%;
+          position: absolute;
+          display: block;
+          top: 45%;
+          right: calc(4 / 16 * 1rem);
+          transform: rotate(45deg);
+          /* animate the transform from the left side of the x axis, and the center of the y */
+          transform-origin: left center;
+          transition: transform 0.5s;
+        }
+
+        &:after {
+          /* right line */
+          content: "";
+          width: calc(8 / 16 * 1rem);
+          height: calc(2 / 16 * 1rem);
+          background-color: var(--headerColor);
+          opacity: 1;
+          border-radius: 50%;
+          position: absolute;
+          display: block;
+          top: 45%;
+          right: calc(1 / 16 * 1rem);
+          transform: rotate(-45deg);
+          /* animate the transform from the right side of the x axis, and the center of the y */
+          transform-origin: right center;
+          transition: transform 0.5s;
+        }
+      }
+
+      .cs-button-text {
+        width: 90%;
+        display: block;
+      }
+
+      .cs-item-p {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        width: 90%;
+        max-width: calc(541 / 16 * 1rem);
+        height: 0;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        color: var(--bodyTextColor);
+        /* clips the text so it doesn't show up */
+        overflow: hidden;
+        transition:
+          opacity 0.3s,
+          padding-bottom 0.3s;
+      }
+
+      .cs-graphic {
+        width: calc(361 / 16 * 1rem);
+        height: auto;
+        opacity: 0.5;
+        display: none;
+        position: absolute;
+        right: calc(-180 / 16 * 1rem);
+        bottom: calc(30 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #faq-708 {
+      /* moved seciton padding back to the section */
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .cs-picture {
+        width: 50%;
+        max-width: calc(650 / 16 * 1rem);
+        /* 500px - 750px */
+        height: clamp(31.25rem, 68vw, 46.875rem);
+      }
+
+      .cs-content {
+        width: 55%;
+        padding: 0;
+      }
+    }
+  }
+
+  /* Desktop - 1600px */
+  @media only screen and (min-width: 100rem) {
+    #faq-708 {
+      .cs-graphic {
+        display: block;
+      }
+    }
+  }
+</style><script>
+  const faqItems = Array.from(document.querySelectorAll(".cs-faq-item"));
+  for (const item of faqItems) {
+    const onClick = () => {
+      item.classList.toggle("active");
+    };
+    item.addEventListener("click", onClick);
+  }
+</script>

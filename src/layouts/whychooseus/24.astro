@@ -1,0 +1,218 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Why Choose                   --><!-- ============================================ -->
+<section id="why-choose-12">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Experienced</span>
+      <h2 class="cs-title">Why Choose Us?</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam earum
+        rerum sunt officia quas adipisci. Nulla, dolor dignissimos qui
+        laboriosam, asperiores aliquam soluta voluptatum, dolorem dolores minima
+        delectus quas nam?
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/sheild.svg"
+            alt="heart icon"
+            width="42"
+            height="42"
+            aria-hidden="true"
+          />
+        </picture>
+        <h3 class="cs-h3">Experienced Staff</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempus,
+          dolor enim, elit.
+        </p>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/toolbox.svg"
+            alt="toolbox icon"
+            width="42"
+            height="42"
+            aria-hidden="true"
+          />
+        </picture>
+        <h3 class="cs-h3">Own Our Equipment</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempus,
+          dolor enim, elit.
+        </p>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/ribbon.svg"
+            alt="ribbon icon"
+            width="32"
+            height="42"
+            aria-hidden="true"
+          />
+        </picture>
+        <h3 class="cs-h3">Licensed & Insured</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempus,
+          dolor enim, elit.
+        </p>
+      </li>
+    </ul>
+    <a href="" class="cs-button-solid">Get Free Quote</a>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Why Choose Us        -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #why-choose-12 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: calc(60 / 16 * 1rem);
+      }
+
+      .cs-item {
+        text-align: center;
+        list-style: none;
+        width: 100%;
+        max-width: calc(360 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+      }
+
+      .cs-picture {
+        /* 68px - 88px */
+        width: clamp(4.25rem, 7vw, 5.5rem);
+        height: clamp(4.25rem, 7vw, 5.5rem);
+        margin: auto;
+        margin-bottom: calc(32 / 16 * 1rem);
+        border-radius: 50%;
+        background-color: var(--primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: auto;
+          height: calc(42 / 16 * 1rem);
+          display: block;
+        }
+      }
+
+      .cs-h3 {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        text-align: inherit;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0;
+        margin-bottom: calc(8 / 16 * 1rem);
+        color: var(--headerColor);
+      }
+
+      .cs-item-text {
+        font-size: calc(16 / 16 * 1rem);
+        text-align: inherit;
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #why-choose-12 {
+      .cs-card-group {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+</style>

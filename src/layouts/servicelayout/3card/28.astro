@@ -1,0 +1,191 @@
+---
+title: "Page 28";
+---
+
+<!-- ============================================ --><!--                  Services                    --><!-- ============================================ -->
+<section id="services-1062">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Service</span>
+      <h2 class="cs-title">Mechanic And Auto Body Services</h2>
+      <p class="cs-text">
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat duis enim velit mollit. Amet minim mollit
+        non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+        consequat duis enim velit mollit.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/car1.svg"
+            alt="car"
+            width="48"
+            height="48"
+          />
+        </picture>
+        <h3 class="cs-h3">Electrical System</h3>
+        <p class="cs-item-text">
+          Our designs come with the perfect look and feel of an auto body shop
+          or any car related industry. Use Stitch Mechanics for all car related
+          sites!
+        </p>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/car2.svg"
+            alt="car"
+            width="48"
+            height="48"
+          />
+        </picture>
+        <h3 class="cs-h3">System Service</h3>
+        <p class="cs-item-text">
+          Our designs come with the perfect look and feel of an auto body shop
+          or any car related industry. Use Stitch Mechanics for all car related
+          sites!
+        </p>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/car3.svg"
+            alt="car"
+            width="48"
+            height="48"
+          />
+        </picture>
+        <h3 class="cs-h3">Engine Diagnostics</h3>
+        <p class="cs-item-text">
+          Our designs come with the perfect look and feel of an auto body shop
+          or any car related industry. Use Stitch Mechanics for all car related
+          sites!
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-1062 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title {
+        max-width: 18ch;
+      }
+
+      .cs-card-group {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: calc(20 / 16 * 1rem);
+      }
+
+      .cs-item {
+        width: 100%;
+        text-align: left;
+        list-style: none;
+        margin: 0;
+        /* 24px - 32px */
+        padding: clamp(1.5rem, 3vw, 2rem);
+        background-color: #fff;
+        box-shadow: 0px 12px 80px 0px rgba(26, 26, 26, 0.08);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        grid-column: span 12;
+        grid-row: span 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-icon-wrapper {
+        width: calc(68 / 16 * 1rem);
+        height: calc(68 / 16 * 1rem);
+        margin: 0 0 calc(24 / 16 * 1rem) 0;
+        background-color: var(--primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .cs-icon {
+        width: calc(48 / 16 * 1rem);
+        height: auto;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: bold;
+        text-align: inherit;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        max-width: calc(450 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-1062 {
+      .cs-item {
+        grid-column: span 4;
+      }
+    }
+  }
+</style>

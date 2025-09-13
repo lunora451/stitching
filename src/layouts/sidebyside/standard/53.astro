@@ -1,0 +1,255 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Side By Side                  --><!-- ============================================ -->
+<section id="sbs-1099">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <!--Top left image-->
+      <picture class="cs-picture cs-picture1">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic18.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic18.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic18.jpg"
+          alt="appliance"
+          width="323"
+          height="447"
+        />
+      </picture>
+      <!--Bottom right image-->
+      <picture class="cs-picture cs-picture2">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic19.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic19.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic19.jpg"
+          alt="appliance"
+          width="305"
+          height="441"
+        />
+      </picture>
+      <!--Stripe background-->
+      <img
+        class="cs-stripes"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/stripes-short.svg"
+        alt="stripes"
+        width="548"
+        height="487"
+        aria-hidden="true"
+      />
+      <!--Eclipses-->
+      <img
+        class="cs-graphic"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/eclipses.svg"
+        alt="stripes"
+        width="140"
+        height="140"
+        aria-hidden="true"
+      />
+    </div>
+    <div class="cs-content">
+      <span class="cs-topper">Mission & Vision</span>
+      <h2 class="cs-title">Stitch Car Mechanics Mission & Vision</h2>
+      <p class="cs-text">
+        Our professionals will perform diagnostic tests, fluid flush and fills,
+        engine replacement, oil changes, and total vehicle overhauls. Busto
+        auctor lectus vitae conubia euismod nec rhoncus parturient convallis
+        parturient accumsan volutpat ligula and intege aenean facilisis.
+      </p>
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <h3 class="cs-h3">Mission Statement</h3>
+          <p class="cs-li-text">
+            Our Mission is to serve our customers and always deliver the highest
+            level of customer service; to develop our team and strive to
+            constantly improve; and to conduct ourselves in an environmentally
+            responsible manner.
+          </p>
+        </li>
+        <li class="cs-li">
+          <h3 class="cs-h3">Our Vision</h3>
+          <p class="cs-li-text">
+            To be the world’s most exciting leader in automotive business
+            intelligence solutions. We will generate excitement through
+            implementing pioneering ideas, problem solving & going beyond our
+            customers’ expectations.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-1099 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(522 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(24 / 16 * 1rem);
+      }
+
+      .cs-li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: 1.25rem, 3vw, 1.5625rem;
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 calc(12 / 16 * 1rem);
+      }
+
+      .cs-li-text {
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-image-group {
+        /* scales the whole group based on the view width size and stop when that vales equals .8em, resets at desktop */
+        font-size: min(2.235vw, 0.8em);
+        width: calc(648 / 16 * 1em);
+        height: calc(594 / 16 * 1em);
+        display: block;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-picture {
+        position: absolute;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-picture1 {
+        width: calc(323 / 16 * 1em);
+        height: calc(447 / 16 * 1em);
+        top: 0;
+        left: 0;
+        z-index: 10;
+      }
+
+      .cs-picture2 {
+        width: calc(305 / 16 * 1em);
+        height: calc(441 / 16 * 1em);
+        bottom: 0;
+        right: 0;
+      }
+
+      .cs-stripes {
+        width: calc(548 / 16 * 1em);
+        height: auto;
+        display: block;
+        position: absolute;
+        top: calc(80 / 16 * 1em);
+        right: calc(40 / 16 * 1em);
+        z-index: -1;
+      }
+
+      .cs-graphic {
+        width: calc(184 / 16 * 1em);
+        height: auto;
+        position: absolute;
+        bottom: calc(80 / 16 * 1em);
+        right: calc(222 / 16 * 1em);
+        z-index: 10;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #sbs-1099 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1em);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cs-image-group {
+        font-size: min(1.2vw, 1em);
+        flex: none;
+      }
+    }
+  }
+</style>

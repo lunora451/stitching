@@ -1,0 +1,190 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Steps                      --><!-- ============================================ -->
+<section id="steps-1661">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our Steps</span>
+      <h2 class="cs-title">How To Get Started</h2>
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/room.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/room.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/room.jpg"
+          alt="room"
+          width="1280"
+          height="603"
+        />
+      </picture>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <span class="cs-number">01</span>
+        <h3 class="cs-h3">Connect With Us</h3>
+        <p class="cs-item-text">
+          We provide some of the finest quality, most reliable, and cost
+          effective services and solutions.
+        </p>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">02</span>
+        <h3 class="cs-h3">Connect With Us</h3>
+        <p class="cs-item-text">
+          We provide some of the finest quality, most reliable, and cost
+          effective services and solutions.
+        </p>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">03</span>
+        <h3 class="cs-h3">Connect With Us</h3>
+        <p class="cs-item-text">
+          We provide some of the finest quality, most reliable, and cost
+          effective services and solutions.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Steps            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #steps-1661 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(584 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title {
+        /* 28px - 40px */
+        margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+      }
+
+      .cs-picture {
+        width: 100%;
+        /* 320px - 600px */
+        height: clamp(18.75rem, 43vw, 37.5rem);
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-card-group {
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+      }
+
+      .cs-item {
+        list-style: none;
+        text-align: left;
+        padding: 0 0 calc(24 / 16 * 1rem) 0;
+        margin: 0;
+        border-bottom: 1px solid var(--primary);
+        /* prevents border from affecting height and width */
+        box-sizing: border-box;
+        grid-column: span 12;
+
+        &:last-of-type {
+          padding: 0;
+          border: none;
+        }
+      }
+
+      .cs-number {
+        font-size: calc(61 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 900;
+        /* 16px - 24px */
+        margin: 0 0 clamp(1rem, 2.4vw, 1.5rem);
+        color: var(--primary);
+        opacity: 0.2;
+        display: block;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 3vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #steps-1661 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-item {
+        /* 24px - 32px */
+        padding: 0 clamp(1.5rem, 3vw, 2rem);
+        grid-column: span 4;
+        border-bottom: 0;
+        border-left: 1px solid var(--primary);
+
+        &:last-of-type {
+          padding: 0 clamp(1.5rem, 3vw, 2rem);
+          border-left: 1px solid var(--primary);
+        }
+      }
+    }
+  }
+</style>

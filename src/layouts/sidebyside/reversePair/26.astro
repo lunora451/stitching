@@ -1,0 +1,403 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Side By Side                 --><!-- ============================================ -->
+<section id="RPsbs-1310">
+  <div class="cs-container">
+    <!-- Left Image Section -->
+    <div class="cs-image-group">
+      <!--Floating Box-->
+      <div class="cs-box">
+        <span class="cs-desc">Accounting & support of your business</span>
+      </div>
+      <!--Image-->
+      <picture class="cs-picture">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg"
+          alt="meeting"
+          width="630"
+          height="630"
+          aria-hidden="true"
+        />
+      </picture>
+    </div>
+    <!-- Right Content Section-->
+    <div class="cs-content">
+      <span class="cs-topper">About Us</span>
+      <h2 class="cs-title">Get Help on Finance</h2>
+      <p class="cs-text">
+        In the new era of technology we look in the future with certainty and
+        pride for our company and business. consider all the drivers of change
+        gives you the blocks & pride for our components you need to change to
+        create a truly professional website In the new era.
+      </p>
+      <a
+        class="cs-button-solid"
+        aria-label="learn more about our programs"
+        href="">Learn More</a
+      >
+      <ul class="cs-ul">
+        <li class="cs-item">
+          <span class="cs-number">150 +</span>
+          <h3 class="cs-h3">Staff on three continents</h3>
+        </li>
+        <li class="cs-item">
+          <span class="cs-number">700 +</span>
+          <h3 class="cs-h3">Consulting engagements</h3>
+        </li>
+        <li class="cs-item">
+          <span class="cs-number">180 +</span>
+          <h3 class="cs-h3">Learning community members</h3>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--              Side By Side Reverse            -->
+<!-- ============================================ -->
+
+<section id="RPsbsr-1310">
+  <div class="cs-container">
+    <!-- Left Image Section -->
+    <div class="cs-image-group">
+      <!--Floating Box-->
+      <div class="cs-box">
+        <span class="cs-desc">Accounting & support of your business</span>
+      </div>
+      <!--Image-->
+      <picture class="cs-picture">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg"
+          alt="meeting"
+          width="630"
+          height="630"
+          aria-hidden="true"
+        />
+      </picture>
+    </div>
+    <!-- Right Content Section-->
+    <div class="cs-content">
+      <span class="cs-topper">About Us</span>
+      <h2 class="cs-title">Get Help on Finance</h2>
+      <p class="cs-text">
+        In the new era of technology we look in the future with certainty and
+        pride for our company and business. consider all the drivers of change
+        gives you the blocks & pride for our components you need to change to
+        create a truly professional website In the new era.
+      </p>
+      <p class="cs-text">
+        In the new era of technology we look in the future with certainty and
+        pride for our company and business. consider all the drivers of change
+        gives you the blocks & pride for our components you need to change to
+        create a truly professional website In the new era.
+      </p>
+      <a
+        class="cs-button-solid"
+        aria-label="learn more about our programs"
+        href="">Learn More</a
+      >
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #RPsbs-1310,
+    #RPsbsr-1310 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(584 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: clamp(3rem, 4vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(542 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+        position: relative;
+        z-index: 10;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16) * 1rem;
+        &:last-of-type {
+          margin-bottom: calc(32 / 16) * 1rem;
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #1a1a1a;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #fff;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-ul {
+        width: 100%;
+        padding: 0;
+        /* 32px - 48px */
+        margin: clamp(2rem, 5vw, 3rem) 0 0 0;
+        /* 32px - 48px */
+        padding: clamp(2rem, 5vw, 3rem) 0 0 0;
+        border-top: 1px solid #e8e8e8;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 32%;
+        /* making flex so we can align a heading with 1 line to the bottom */
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        align-content: space-between;
+      }
+
+      .cs-number {
+        font-size: calc(25 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        text-align: left;
+        color: var(--primary);
+        display: block;
+        margin: 0 0 calc(8 / 16 * 1rem) 0;
+      }
+
+      .cs-h3 {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        font-weight: 400;
+        text-align: left;
+        /* auto margin top will push text to bottom if there's only one line */
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-image-group {
+        width: 100%;
+        max-width: calc(670 / 16 * 1rem);
+        height: 100vw;
+        max-height: calc(630 / 16 * 1rem);
+        position: relative;
+        display: block;
+        z-index: 1;
+      }
+
+      .cs-picture {
+        /* big background image */
+        width: 93%;
+        height: 93%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .cs-box {
+        text-align: left;
+        width: 70%;
+        max-width: calc(304 / 16 * 1rem);
+        /* 20px - 40px */
+        padding: clamp(1.25rem, 4vw, 2.5rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        background-color: #1a1a1a;
+        display: inline-flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: calc(8 / 16 * 1rem);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+      }
+
+      .cs-desc {
+        /* 16px - 31px */
+        font-size: clamp(1rem, 2.5vw, 1.9375rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        text-align: inherit;
+        width: 100%;
+        color: var(--bodyTextColorWhite);
+        position: relative;
+        z-index: 10;
+      }
+
+      .cs-graphic {
+        width: 150%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #RPsbs-1310,
+    #RPsbsr-1310 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        /* set to horizontal arrangement */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+
+      .cs-content {
+        width: 48%;
+        padding: calc(48 / 16 * 1rem) 0;
+        align-self: center;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-image-group {
+        width: 55%;
+        max-width: calc(670 / 16 * 1rem);
+        min-height: calc(670 / 16 * 1rem);
+        max-height: 100%;
+        height: auto;
+        margin: 0;
+      }
+
+      .cs-picture {
+        width: 93%;
+        height: 94%;
+      }
+
+      .cs-box {
+        bottom: 0;
+      }
+
+      .cs-graphic {
+        max-width: calc(715 / 16 * 1rem);
+        left: auto;
+        right: calc(130 / 16 * 1rem);
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  /*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #RPsbsr-1310 {
+      background-color: #f7f7f7;
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #RPsbsr-1310 {
+      .cs-image-group {
+        /* sends it to the right in the 2nd position */
+        order: 2;
+      }
+
+      .cs-picture {
+        left: auto;
+        right: 0;
+      }
+
+      .cs-box {
+        left: 0;
+        right: auto;
+      }
+    }
+  }
+</style>

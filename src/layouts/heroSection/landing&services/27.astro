@@ -1,0 +1,327 @@
+---
+
+---
+
+<!-- ============================================ --><!--                     Hero                     --><!-- ============================================ -->
+<section id="hero-1954">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h2 class="cs-title">Satisfy Your Cravings with Our Delicious Cuisine</h2>
+      <div class="cs-flex">
+        <p class="cs-text">
+          Indulge in a culinary experience like no other at Futuer, where our
+          passion for exceptional food and service meets a warm and inviting
+          ambiance. Join us for a memorable dining experience that will leave
+          your taste buds singing.
+        </p>
+        <a href="" class="cs-button-solid">Check Menu</a>
+      </div>
+      <picture class="cs-picture">
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/charcuterie.jpg"
+        />
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/charcuterie.jpg"
+        />
+        <img
+          aria-hidden="true"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/charcuterie.jpg"
+          alt="charcuterie"
+          width="1280"
+          height="510"
+        />
+      </picture>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <picture class="cs-icon-picture">
+            <img
+              aria-hidden="true"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/nachos.png"
+              alt="nachos"
+              width="220"
+              height="80"
+            />
+          </picture>
+          <h3 class="cs-h3">Mexican Cuisine</h3>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <picture class="cs-icon-picture">
+            <img
+              aria-hidden="true"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/gyoza.png"
+              alt="gyoza"
+              width="220"
+              height="80"
+            />
+          </picture>
+          <h3 class="cs-h3">Chinese Cuisine</h3>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <picture class="cs-icon-picture">
+            <img
+              aria-hidden="true"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/noodles.png"
+              alt="noodles"
+              width="220"
+              height="80"
+            />
+          </picture>
+          <h3 class="cs-h3">Korean Cuisine</h3>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <picture class="cs-icon-picture">
+            <img
+              aria-hidden="true"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/appetizer.png"
+              alt="appetizer"
+              width="220"
+              height="80"
+            />
+          </picture>
+          <h3 class="cs-h3">Indian Cuisine</h3>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---            Hero            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-1954 {
+      padding: var(--sectionPadding);
+      /* 100px - 120px */
+      padding-top: clamp(6.25rem, 7vw, 7.5rem);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
+    #hero-1954 .cs-container {
+      width: 100%;
+      max-width: 107.5rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(1.5rem, 3vw, 3.75rem);
+    }
+    #hero-1954 .cs-content {
+      text-align: center;
+      width: 100%;
+      padding: 3.75rem 2.5rem;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+      /* 100px - 200px */
+      gap: clamp(6.25rem, 12.5vw, 12.5rem);
+      position: relative;
+      z-index: 2;
+    }
+    #hero-1954 .cs-title {
+      /* 39px - 61px */
+      font-size: clamp(2.438rem, 5vw, 3.813rem);
+      max-width: 56.125rem;
+      color: var(--bodyTextColorWhite);
+    }
+    #hero-1954 .cs-flex {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.75rem;
+    }
+    #hero-1954 .cs-title {
+      margin: 0;
+    }
+    #hero-1954 .cs-text {
+      /* 16px - 20px */
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      max-width: 50.875rem;
+      color: var(--bodyTextColorWhite);
+    }
+    #hero-1954 .cs-button-solid {
+      font-size: 1rem;
+      font-weight: 700;
+      /* 46px - 56px */
+      line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+      text-align: center;
+      text-decoration: none;
+      min-width: 9.125rem;
+      margin: 0;
+      /* prevents padding from adding to the width */
+      box-sizing: border-box;
+      /* 32px - 48px */
+      padding: 0 clamp(1rem, 2vw, 3rem);
+      background-color: var(--primary);
+      color: var(--bodyTextColorWhite);
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      transition: color 0.3s;
+      transition: background-color 0.3s;
+    }
+    #hero-1954 .cs-button-solid:hover {
+      background-color: #fff;
+      color: #000;
+    }
+    #hero-1954 .cs-card-group {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      padding-top: clamp(1.5rem, 3vw, 3.75rem);
+      border-top: #e8e8e8 1px solid;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(12, 1fr);
+      /* 24px - 70px */
+      gap: clamp(1.5rem, 3vw, 4.375rem);
+    }
+    #hero-1954 .cs-item {
+      text-align: center;
+      list-style: none;
+      width: 100%;
+      margin: 0;
+      box-sizing: border-box;
+      border-radius: 1.25rem;
+      grid-column: span 12;
+      position: relative;
+      z-index: 1;
+      transition: border-color 0.3s;
+    }
+    #hero-1954 .cs-item:hover {
+      border-color: var(--primary);
+    }
+    #hero-1954 .cs-item:hover .cs-h3 {
+      color: var(--primary);
+    }
+    #hero-1954 .cs-item:hover .cs-icon {
+      transform: rotateY(360deg);
+    }
+    #hero-1954 .cs-link {
+      text-decoration: none;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(0.75rem, 1.5vw, 1rem);
+    }
+    #hero-1954 .cs-icon-picture {
+      width: 100%;
+      height: 5rem;
+      overflow: hidden;
+      border-radius: 2.5rem;
+      display: block;
+      position: relative;
+      z-index: 1;
+    }
+    #hero-1954 .cs-icon-picture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform 0.3s;
+    }
+    #hero-1954 .cs-h3 {
+      font-size: 1.25rem;
+      line-height: 1.2em;
+      margin: 0;
+      color: #1a1a1a;
+      transition: color 0.3s;
+    }
+    #hero-1954 .cs-picture {
+      width: 100%;
+      height: 100%;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    #hero-1954 .cs-picture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    #hero-1954 .cs-picture:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      /* prevents the cursor from interacting with it */
+      pointer-events: none;
+      opacity: 0.48;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+  /* Inbetween - 570px */
+  @media only screen and (min-width: 35.625rem) {
+    #hero-1954 .cs-item {
+      grid-column: span 6;
+    }
+  }
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-1954 .cs-content {
+      text-align: left;
+      /* 578px - 778px */
+      min-height: clamp(578px, 60vw, 778px);
+    }
+    #hero-1954 .cs-flex {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 7.5rem;
+    }
+    #hero-1954 .cs-item {
+      grid-column: span 3;
+    }
+  }
+  /* Large Desktop 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #hero-1954 .cs-content {
+      padding: 3.75rem 8.75rem;
+    }
+    #hero-1954 .cs-item:hover .cs-icon-picture img {
+      transform: scale(1.1);
+    }
+    #hero-1954 .cs-link {
+      flex-direction: row;
+    }
+    #hero-1954 .cs-icon-picture {
+      width: 13.75rem;
+    }
+  }
+</style>

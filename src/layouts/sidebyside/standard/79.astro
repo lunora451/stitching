@@ -1,0 +1,308 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Side By Side                  --><!-- ============================================ -->
+<section id="sbs-515">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">The Future Is Here</span>
+      <h2 class="cs-title">
+        Bringing <span class="cs-color">Your Ideas</span> and Innovations to Life
+      </h2>
+      <p class="cs-text">
+        Vitae ultricies leo integer malesuada nunc vel. Molestie ac feugiat sed
+        lectus vestibulum mattis ullamcorper velit. Viverra aliquet eget sit
+        amet tellus cras adipiscing
+      </p>
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/sheild.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="40"
+            height="40"
+          />
+          Lorem Ipsum Dolor Sit Amet Consectectur
+        </li>
+        <li class="cs-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/pencil.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="40"
+            height="40"
+          />
+          Lorem Ipsum Dolor Sit Amet Consectectur
+        </li>
+        <li class="cs-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/hat.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="40"
+            height="40"
+          />
+          Lorem Ipsum Dolor Sit Amet Consectectur
+        </li>
+      </ul>
+      <a href="" class="cs-button-solid">More About Us</a>
+    </div>
+    <!--Image Group-->
+    <div class="cs-image-group">
+      <ul class="cs-stat-group">
+        <li class="cs-stat">
+          <span class="cs-number">200+</span>
+          <span class="cs-desc">Lorem Ipsum Dolor Sit Amet Consectetur</span>
+        </li>
+        <li class="cs-stat">
+          <span class="cs-number">99%</span>
+          <span class="cs-desc">Lorem Ipsum Dolor Sit Amet Consectetur</span>
+        </li>
+      </ul>
+      <!--Picture-->
+      <picture class="cs-picture">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/lightbulb.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/lightbulb.jpg"
+        />
+        <img
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/lightbulb.jpg"
+          alt="lightbulbs"
+          width="630"
+          height="461"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-515 {
+      padding: var(--sectionPadding);
+      background: #001f3f;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 60px */
+        gap: clamp(3rem, 10vw, 3.75rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-color {
+        color: var(--primary);
+      }
+
+      .cs-topper,
+      .cs-title {
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-ul {
+        width: 80%;
+        /* 32px - 36px */
+        margin: 0 0 clamp(2rem, 4vw, 2.25rem) 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* 24px - 32px */
+        row-gap: clamp(1.5rem, 4vw, 2rem);
+      }
+
+      .cs-li {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        list-style: none;
+        line-height: 1.5em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: calc(32 / 16 * 1rem);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-image-group {
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        /* 40px - 48px */
+        row-gap: clamp(2.5rem, 6vw, 3rem);
+        /* sends it to the top in the first position */
+        order: -1;
+      }
+
+      .cs-stat-group {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-stat {
+        list-style: none;
+        max-width: calc(230 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(8 / 16 * 1rem);
+      }
+
+      .cs-number {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 5vw, 3.8125rem);
+        line-height: 1.2em;
+        font-weight: 900;
+        color: var(--primary);
+      }
+
+      .cs-desc {
+        font-size: clamp(0.875rem, 1rem, 1.25rem);
+        line-height: 1.5em;
+        font-weight: 400;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-picture {
+        width: 100%;
+        /* 244px - 339px, changes clamp at tablet */
+        height: clamp(14rem, 62vw, 21.1875rem);
+        display: block;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbs-515 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      .cs-content {
+        width: 71%;
+        max-width: calc(540 / 16 * 1rem);
+      }
+
+      .cs-image-group {
+        width: 68%;
+      }
+
+      .cs-stat-group {
+        justify-content: flex-start;
+      }
+
+      .cs-picture {
+        /* 340px - 461px */
+        height: clamp(21.25rem, 35vw, 28.8125rem);
+      }
+    }
+  }
+</style>

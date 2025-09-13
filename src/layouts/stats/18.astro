@@ -1,0 +1,212 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Stats                     --><!-- ============================================ -->
+<section id="stats-888">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our Mission</span>
+      <h2 class="cs-title">Our Health & Wellness Statistics</h2>
+      <p class="cs-text">
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat duis enim velit mollit. Amet minim mollit
+        non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+        consequat duis enim velit mollit.
+      </p>
+      <p class="cs-text">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi eos
+        eum amet atque deserunt ut quibusdam quam qui quidem quae.
+      </p>
+      <a href="" class="cs-button-solid">Schedule An Appointment</a>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <span class="cs-number">25+</span>
+        <span class="cs-desc">Professional <br />Experts</span>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">4.8k</span>
+        <span class="cs-desc">Patients Served <br />Successfully</span>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">8+</span>
+        <span class="cs-desc">Innovative Special <br />Equipments</span>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">7</span>
+        <span class="cs-desc">Winning <br />Awwards</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #stats-888 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(542 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+      }
+
+      .cs-item {
+        text-align: center;
+        list-style: none;
+        /* changes at small desktop then again at large desktop */
+        width: 100%;
+        /* 44px - 60px */
+        padding: clamp(2.75rem, 5vw, 3.75rem) calc(32 / 16 * 1rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        /* clips cs-icon overflowing */
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-column: span 2;
+        position: relative;
+
+        &:nth-of-type(1) {
+          background-color: #fef7f4;
+          border-radius: 0 calc(80 / 16 * 1rem) 0 calc(80 / 16 * 1rem);
+        }
+        &:nth-of-type(2) {
+          background-color: #e8e8e8;
+          border-radius: calc(80 / 16 * 1rem) 0 calc(80 / 16 * 1rem) 0;
+        }
+        &:nth-of-type(3) {
+          background-color: #fbcebd;
+          border-radius: calc(80 / 16 * 1rem) 0 calc(80 / 16 * 1rem) 0;
+        }
+        &:nth-of-type(4) {
+          background-color: #f7f7f7;
+          border-radius: 0 calc(80 / 16 * 1rem) 0 calc(80 / 16 * 1rem);
+        }
+      }
+
+      .cs-number {
+        /* 39px - 49px */
+        font-size: clamp(2.4375rem, 6vw, 3.0625rem);
+        line-height: 1.2em;
+        text-align: inherit;
+        font-weight: 900;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-desc {
+        /* 16px -20px */
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        text-align: inherit;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* Tablet - 650px */
+  @media only screen and (min-width: 40.625rem) {
+    #stats-888 {
+      .cs-item {
+        grid-column: span 1;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #stats-888 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+</style>

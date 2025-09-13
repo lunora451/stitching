@@ -1,0 +1,457 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Hero                       --><!-- ============================================ -->
+<section id="hero-2349">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Plan for secure future</span>
+      <h2 class="cs-title">Guiding Your Path to a Modern Architecture</h2>
+      <p class="cs-text">
+        At ArchiStitch, we seamlessly blend innovative design with
+        functionality, creating spaces that inspire, elevate, and endure. From
+        visionary concepts to flawless execution, we craft architectural
+        masterpieces tailored to your lifestyle.
+      </p>
+      <a href="" class="cs-button-solid">Book A Call</a>
+    </div>
+  </div>
+  <ul class="cs-stats">
+    <li class="cs-item">
+      <span class="cs-number">
+        <span class="cs-color">+</span>
+        500K
+      </span>
+      <span class="cs-desc">Happy Users</span>
+    </li>
+    <li class="cs-item">
+      <span class="cs-number">
+        <span class="cs-color">+</span>
+        100K
+      </span>
+      <span class="cs-desc">Partners</span>
+    </li>
+    <li class="cs-item">
+      <span class="cs-number">
+        <span class="cs-color">+</span>
+        1.4K
+      </span>
+      <span class="cs-desc">Completed Projects</span>
+    </li>
+  </ul>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building28.jpg"
+    />
+    <!--Tablet and above Image-->
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building28.jpg"
+    />
+    <img
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building28.jpg"
+      alt="fancy modern architecture"
+      width="1800"
+      height="860"
+    />
+  </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                 Services                     -->
+<!-- ============================================ -->
+
+<section id="services-2349">
+  <ul class="cs-card-group">
+    <li class="cs-item">
+      <a href="" class="cs-link">
+        <img
+          class="cs-icon"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/arch7.svg"
+          alt="icon"
+          width="24"
+          height="24"
+        />
+        <h2 class="cs-h2">Expensive Living Spaces</h2>
+        <p class="cs-item-text">
+          Urban design draws together the many strands of place-making,
+          environmental stewardship.
+        </p>
+      </a>
+    </li>
+    <li class="cs-item">
+      <a href="" class="cs-link">
+        <img
+          class="cs-icon"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/arch8.svg"
+          alt="icon"
+          width="24"
+          height="24"
+        />
+        <h2 class="cs-h2">Smart Home Integration</h2>
+        <p class="cs-item-text">
+          Urban design draws together the many strands of place-making,
+          environmental stewardship.
+        </p>
+      </a>
+    </li>
+    <li class="cs-item">
+      <a href="" class="cs-link">
+        <img
+          class="cs-icon"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/arch9.svg"
+          alt="icon"
+          width="24"
+          height="24"
+        />
+        <h2 class="cs-h2">Home Security System</h2>
+        <p class="cs-item-text">
+          Urban design draws together the many strands of place-making,
+          environmental stewardship.
+        </p>
+      </a>
+    </li>
+    <li class="cs-item">
+      <a href="" class="cs-link">
+        <img
+          class="cs-icon"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/arch10.svg"
+          alt="icon"
+          width="24"
+          height="24"
+        />
+        <h2 class="cs-h2">Covered Parking</h2>
+        <p class="cs-item-text">
+          Urban design draws together the many strands of place-making,
+          environmental stewardship.
+        </p>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+  /* Mobile */
+  @media only screen and (min-width: 0rem) {
+    #hero-2349 {
+      display: flex;
+      flex-direction: column;
+      gap: calc(48 / 16 * 1rem);
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1800 / 16 * 1rem);
+        margin: auto;
+        /* 392px - 560px */
+        padding-top: clamp(350px, 58vw, 600px);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-content {
+        width: 100%;
+        max-width: calc(952 / 16 * 1rem);
+        padding: var(--sectionPadding);
+        padding-top: 0;
+        padding-bottom: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        row-gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-title {
+        /* 39px - 90px */
+        font-size: clamp(2.4375rem, 6vw, 5.625rem);
+        margin-bottom: 0;
+        max-width: 100%;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-text {
+        margin-bottom: calc(32 / 16 * 1rem);
+        max-width: calc(872 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-align: center;
+        text-decoration: none;
+        min-width: calc(150 / 16 * 1rem);
+        margin: 0;
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        color: var(--bodyTextColorWhite);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #000;
+          opacity: 1;
+          border-radius: calc(4 / 16 * 1rem);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-button-solid {
+        align-self: flex-start;
+      }
+
+      .cs-stats {
+        margin: 0;
+        /* 24px - 40px top & bottom */
+        /* 16px - 60px left & right */
+        padding: clamp(1.5rem, 5vw, 2.5rem) clamp(1rem, 5vw, 3.75rem);
+        box-sizing: border-box;
+        background-color: #f7f7f7;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: calc(30 / 16 * 1rem);
+        row-gap: calc(64 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        grid-column: span 4;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cs-number {
+        /* 25px - 49px */
+        font-size: clamp(1.5625rem, 5vw, 3.0625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--headerColor);
+      }
+
+      .cs-color {
+        color: var(--primary);
+        display: inline-block;
+        transform: translateX(5px);
+      }
+
+      .cs-desc {
+        /* 14px - 20px */
+        font-size: clamp(0.875rem, 2vw, 1.25rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        z-index: -2;
+
+        &:before {
+          /* gradient Overlay */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 1) 100%
+          ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          opacity: 1;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-2349 {
+      padding: var(--sectionPadding);
+      padding-top: 0;
+      /* 48px - 60px */
+      padding-bottom: clamp(3rem, 4vw, 3.75rem);
+
+      .cs-content {
+        width: 55%;
+        padding: 0;
+      }
+
+      .cs-stats {
+        width: auto;
+        background-color: #fff;
+        column-gap: 0;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+      }
+
+      .cs-item {
+        grid-column: span 12;
+      }
+    }
+  }
+
+  /* Large Desktop - 1600px */
+  @media only screen and (min-width: 100rem) {
+    #hero-2349 {
+      .cs-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: calc(72 / 16 * 1rem);
+      }
+
+      .cs-item {
+        grid-column: span 1;
+      }
+    }
+  }
+
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile */
+  @media only screen and (min-width: 0rem) {
+    #services-2349 {
+      padding: var(--sectionPadding);
+
+      .cs-card-group {
+        width: 100%;
+        max-width: calc(1800 / 16 * 1rem);
+        margin: 0 auto;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px, changes to 100px at large desktop 1300px */
+        column-gap: clamp(1rem, 3vw, 1.25rem);
+        row-gap: calc(32 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        grid-column: span 12;
+      }
+
+      .cs-link {
+        text-decoration: none;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cs-icon {
+        width: calc(24 / 16 * 1rem);
+        height: auto;
+        margin-bottom: calc(24 / 16 * 1rem);
+        display: block;
+      }
+
+      .cs-h2 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 3vw, 1.5625rem);
+        text-align: inherit;
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 calc(16 / 16 * 1rem);
+        padding-bottom: calc(16 / 16 * 1rem);
+        height: 100%;
+        color: var(--headerColor);
+        border-bottom: 1px solid #e3ddd9;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-item-text {
+        font-size: calc(16 / 16 * 1rem);
+        text-align: inherit;
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-2349 {
+      .cs-item {
+        grid-column: span 6;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #services-2349 {
+      .cs-item {
+        grid-column: span 3;
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #services-2349 {
+      .cs-card-group {
+        column-gap: calc(100 / 16 * 1rem);
+      }
+    }
+  }
+</style>

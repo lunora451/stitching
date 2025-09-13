@@ -1,0 +1,207 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Hero                      --><!-- ============================================ -->
+<section id="hero-1427">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper"> Save Our Earth, One Person at a Time</span>
+      <h1 class="cs-title">Let’s Go Green As It Makes Environment</h1>
+      <p class="cs-text">
+        We help companies develop powerful corporate social responsibility,
+        grantmaking, and employee engagement strategies.
+      </p>
+      <div class="cs-button-group">
+        <a href="" class="cs-button-solid cs-button1">Join Community</a>
+        <a href="" class="cs-button-solid cs-button2">Donate Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Image -->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/field-m.jpg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/field.jpg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/field.jpg"
+      alt="field"
+      width="1920"
+      height="1200"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-1427 {
+      /* Centers button */
+      text-align: center;
+      /* 200px - 300px - leaving extra space for the navigation */
+      padding: clamp(12.5rem, 25.95vw, 18.75em) calc(16 / 16 * 1rem);
+      /* prevents the topper line from causing an overflow */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+
+        &:before {
+          /* Overlay */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: #000;
+          opacity: 0.48;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          /* prevents the cursor from interacting with it */
+          pointer-events: none;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: calc(48 / 16 * 1rem);
+      }
+
+      .cs-content {
+        text-align: left;
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .cs-topper {
+        /* 13px - 16px */
+        font-size: clamp(0.8125rem, 1.5vw, 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-align: inherit;
+        text-transform: uppercase;
+        margin-bottom: calc(16 / 16 * 1rem);
+        color: var(--secondary);
+        display: inline-block;
+        position: relative;
+      }
+
+      .cs-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-align: inherit;
+        max-width: calc(829 / 16 * 1rem);
+        color: #fff;
+        position: relative;
+      }
+
+      .cs-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 1.95vw, 1.25rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        /* 464px - 622px */
+        max-width: clamp(29rem, 60vw, 38.785rem);
+        margin: 0;
+        margin-bottom: calc(32 / 16 * 1rem);
+        color: #fff;
+      }
+
+      .cs-button-group {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: calc(8 / 16 * 1rem);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #1a1a1a;
+        min-width: calc(200 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(8 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-button1 {
+        background-color: var(--secondary);
+      }
+    }
+  }
+</style>

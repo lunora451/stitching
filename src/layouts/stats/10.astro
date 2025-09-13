@@ -1,0 +1,147 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Stats                      --><!-- ============================================ -->
+<section id="stats-1668">
+  <div class="cs-container">
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <span class="cs-header">Projects Completed</span>
+        <span class="cs-number">886</span>
+      </li>
+      <li class="cs-item">
+        <span class="cs-header">Satisfied Customers</span>
+        <span class="cs-number">2k</span>
+      </li>
+      <li class="cs-item">
+        <span class="cs-header">Repeat Customers</span>
+        <span class="cs-number">475</span>
+      </li>
+      <li class="cs-item">
+        <span class="cs-header">Professional Team</span>
+        <span class="cs-number">37</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #stats-1668 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: calc(0 / 16 * 1rem);
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: calc(8 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        text-align: left;
+        /* 20px - 40px */
+        padding: clamp(1.25rem, 2vw, 2.5rem) calc(16 / 16 * 1rem);
+        grid-column: span 6;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: calc(16 / 16 * 1rem);
+        position: relative;
+
+        &:after {
+          /* grey lines */
+          content: "";
+          width: 1px;
+          height: 100%;
+          top: 0;
+          right: 0;
+          margin: 0;
+          background: #e8e8e8;
+          opacity: 1;
+          position: absolute;
+          display: block;
+        }
+
+        &:nth-of-type(2) {
+          &:after {
+            display: none;
+          }
+        }
+
+        &:last-of-type {
+          &:after {
+            display: none;
+          }
+        }
+      }
+
+      .cs-header {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--primary);
+        display: block;
+      }
+
+      .cs-number {
+        /* 60px - 400px */
+        font-size: clamp(3.75rem, 9.8vw, 6.25rem);
+        line-height: 1em;
+        font-weight: 300;
+        margin: 0;
+        color: var(--headerColor);
+        display: block;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #stats-1668 {
+      .cs-card-group {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .cs-item {
+        width: 100%;
+        max-width: calc(260 / 16 * 1rem);
+        padding-left: 0;
+
+        &:nth-of-type(1) {
+          padding-left: 0;
+        }
+
+        &:nth-of-type(2) {
+          &:after {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+</style>

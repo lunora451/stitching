@@ -1,0 +1,187 @@
+---
+import Reviews1 from "../reviews/1.astro";
+import Reviews2 from "../reviews/2.astro";
+import Reviews3 from "../reviews/3.astro";
+import Reviews4 from "../reviews/4.astro";
+import Reviews5 from "../reviews/5.astro";
+import Reviews6 from "../reviews/6.astro";
+import Reviews7 from "../reviews/7.astro";
+import Reviews8 from "../reviews/8.astro";
+import Reviews9 from "../reviews/9.astro";
+import Reviews10 from "../reviews/10.astro";
+import Reviews11 from "../reviews/11.astro";
+import Reviews12 from "../reviews/12.astro";
+import Reviews13 from "../reviews/13.astro";
+import Reviews14 from "../reviews/14.astro";
+import Reviews15 from "../reviews/15.astro";
+import Reviews16 from "../reviews/16.astro";
+import Reviews17 from "../reviews/17.astro";
+import Reviews18 from "../reviews/18.astro";
+import Reviews19 from "../reviews/19.astro";
+import Reviews20 from "../reviews/20.astro";
+import Reviews21 from "../reviews/21.astro";
+---
+
+<div class="c-collection">
+  <div class="c-reviews" data-value-reviews="1">
+    <Reviews1 />
+  </div>
+  <div class="c-reviews" data-value-reviews="2">
+    <Reviews2 />
+  </div>
+  <div class="c-reviews" data-value-reviews="3">
+    <Reviews3 />
+  </div>
+  <div class="c-reviews" data-value-reviews="4">
+    <Reviews4 />
+  </div>
+  <div class="c-reviews" data-value-reviews="5">
+    <Reviews5 />
+  </div>
+  <div class="c-reviews" data-value-reviews="6">
+    <Reviews6 />
+  </div>
+  <div class="c-reviews" data-value-reviews="7">
+    <Reviews7 />
+  </div>
+  <div class="c-reviews" data-value-reviews="8">
+    <Reviews8 />
+  </div>
+  <div class="c-reviews" data-value-reviews="9">
+    <Reviews9 />
+  </div>
+  <div class="c-reviews" data-value-reviews="10">
+    <Reviews10 />
+  </div>
+  <div class="c-reviews" data-value-reviews="11">
+    <Reviews11 />
+  </div>
+  <div class="c-reviews" data-value-reviews="12">
+    <Reviews12 />
+  </div>
+  <div class="c-reviews" data-value-reviews="13">
+    <Reviews13 />
+  </div>
+  <div class="c-reviews" data-value-reviews="14">
+    <Reviews14 />
+  </div>
+  <div class="c-reviews" data-value-reviews="15">
+    <Reviews15 />
+  </div>
+  <div class="c-reviews" data-value-reviews="16">
+    <Reviews16 />
+  </div>
+  <div class="c-reviews" data-value-reviews="17">
+    <Reviews17 />
+  </div>
+  <div class="c-reviews" data-value-reviews="18">
+    <Reviews18 />
+  </div>
+  <div class="c-reviews" data-value-reviews="19">
+    <Reviews19 />
+  </div>
+  <div class="c-reviews" data-value-reviews="20">
+    <Reviews20 />
+  </div>
+  <div class="c-reviews" data-value-reviews="21">
+    <Reviews21 />
+  </div>
+</div>
+
+<style lang="scss">
+  .c-collection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .c-reviews {
+    display: none;
+  }
+  .active {
+    width: 100%;
+    display: block;
+  }
+</style>
+
+<script>
+  function changeCollection(selectedValue) {
+    const collections = document.querySelectorAll(".c-reviews");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none" est sélectionné, ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection sélectionnée
+    const targetCollection = document.querySelector(
+      `[data-value-reviews="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  // Fonction pour le hover des options
+  function previewOnHover(selectedValue) {
+    const collections = document.querySelectorAll(".c-reviews");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none", ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection en preview
+    const targetCollection = document.querySelector(
+      `[data-value-reviews="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const select = document.getElementById("template-select-reviews");
+    const collections = document.querySelectorAll(".c-reviews");
+
+    if (!select) return;
+
+    select.addEventListener("change", function () {
+      const selectedValue = this.value;
+      changeCollection(selectedValue);
+    });
+
+    // Alternative pour navigateur qui ne supportent pas mouseover sur option
+    let isSelectOpen = false;
+
+    select.addEventListener("focus", function () {
+      isSelectOpen = true;
+    });
+
+    select.addEventListener("blur", function () {
+      isSelectOpen = false;
+      // Revenir à la valeur sélectionnée quand on ferme
+      changeCollection(this.value);
+    });
+
+    // Navigation avec les flèches
+    select.addEventListener("keydown", function (e) {
+      if (isSelectOpen && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
+        setTimeout(() => {
+          // Simuler le hover sur l'option "focusée"
+          const currentValue = this.value;
+          previewOnHover(currentValue);
+        }, 10);
+      }
+    });
+  });
+</script>

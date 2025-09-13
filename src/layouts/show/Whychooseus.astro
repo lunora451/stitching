@@ -1,0 +1,211 @@
+---
+import Whychooseus1 from "../whychooseus/1.astro";
+import Whychooseus2 from "../whychooseus/2.astro";
+import Whychooseus3 from "../whychooseus/3.astro";
+import Whychooseus4 from "../whychooseus/4.astro";
+import Whychooseus5 from "../whychooseus/5.astro";
+import Whychooseus6 from "../whychooseus/6.astro";
+import Whychooseus7 from "../whychooseus/7.astro";
+import Whychooseus8 from "../whychooseus/8.astro";
+import Whychooseus9 from "../whychooseus/9.astro";
+import Whychooseus10 from "../whychooseus/10.astro";
+import Whychooseus11 from "../whychooseus/11.astro";
+import Whychooseus12 from "../whychooseus/12.astro";
+import Whychooseus13 from "../whychooseus/13.astro";
+import Whychooseus14 from "../whychooseus/14.astro";
+import Whychooseus15 from "../whychooseus/15.astro";
+import Whychooseus16 from "../whychooseus/16.astro";
+import Whychooseus17 from "../whychooseus/17.astro";
+import Whychooseus18 from "../whychooseus/18.astro";
+import Whychooseus19 from "../whychooseus/19.astro";
+import Whychooseus20 from "../whychooseus/20.astro";
+import Whychooseus21 from "../whychooseus/21.astro";
+import Whychooseus22 from "../whychooseus/22.astro";
+import Whychooseus23 from "../whychooseus/23.astro";
+import Whychooseus24 from "../whychooseus/24.astro";
+import Whychooseus25 from "../whychooseus/25.astro";
+import Whychooseus26 from "../whychooseus/26.astro";
+import Whychooseus27 from "../whychooseus/27.astro";
+---
+
+<div class="c-collection">
+  <div class="c-chooseus" data-value-chooseus="1">
+    <Whychooseus1 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="2">
+    <Whychooseus2 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="3">
+    <Whychooseus3 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="4">
+    <Whychooseus4 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="5">
+    <Whychooseus5 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="6">
+    <Whychooseus6 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="7">
+    <Whychooseus7 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="8">
+    <Whychooseus8 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="9">
+    <Whychooseus9 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="10">
+    <Whychooseus10 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="11">
+    <Whychooseus11 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="12">
+    <Whychooseus12 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="13">
+    <Whychooseus13 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="14">
+    <Whychooseus14 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="15">
+    <Whychooseus15 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="16">
+    <Whychooseus16 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="17">
+    <Whychooseus17 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="18">
+    <Whychooseus18 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="19">
+    <Whychooseus19 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="20">
+    <Whychooseus20 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="21">
+    <Whychooseus21 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="22">
+    <Whychooseus22 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="23">
+    <Whychooseus23 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="24">
+    <Whychooseus24 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="25">
+    <Whychooseus25 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="26">
+    <Whychooseus26 />
+  </div>
+  <div class="c-chooseus" data-value-chooseus="27">
+    <Whychooseus27 />
+  </div>
+</div>
+
+<style lang="scss">
+  .c-collection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .c-chooseus {
+    display: none;
+  }
+  .active {
+    width: 100%;
+    display: block;
+  }
+</style>
+
+<script>
+  function changeCollection(selectedValue) {
+    const collections = document.querySelectorAll(".c-chooseus");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none" est sélectionné, ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection sélectionnée
+    const targetCollection = document.querySelector(
+      `[data-value-chooseus="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  // Fonction pour le hover des options
+  function previewOnHover(selectedValue) {
+    const collections = document.querySelectorAll(".c-chooseus");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none", ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection en preview
+    const targetCollection = document.querySelector(
+      `[data-value-chooseus="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const select = document.getElementById("template-select-chooseus");
+    const collections = document.querySelectorAll(".c-chooseus");
+
+    if (!select) return;
+
+    select.addEventListener("change", function () {
+      const selectedValue = this.value;
+      changeCollection(selectedValue);
+    });
+
+    // Alternative pour navigateur qui ne supportent pas mouseover sur option
+    let isSelectOpen = false;
+
+    select.addEventListener("focus", function () {
+      isSelectOpen = true;
+    });
+
+    select.addEventListener("blur", function () {
+      isSelectOpen = false;
+      // Revenir à la valeur sélectionnée quand on ferme
+      changeCollection(this.value);
+    });
+
+    // Navigation avec les flèches
+    select.addEventListener("keydown", function (e) {
+      if (isSelectOpen && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
+        setTimeout(() => {
+          // Simuler le hover sur l'option "focusée"
+          const currentValue = this.value;
+          previewOnHover(currentValue);
+        }, 10);
+      }
+    });
+  });
+</script>

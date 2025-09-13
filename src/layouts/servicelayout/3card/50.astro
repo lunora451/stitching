@@ -1,0 +1,271 @@
+---
+title: "Page 50";
+---
+
+<!-- ============================================ --><!--                  Services                    --><!-- ============================================ -->
+<section id="services-218">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Plumbing done right</span>
+      <h2 class="cs-title">Dedicated To Excellence And Service</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc massa ut
+        sed odio cursus. Malesuada scelerisque eget eu, sollicitudin tellus nibh
+        aenean enim sed. Ut vitae eget commodo consectetur felis augue.
+      </p>
+      <a href="/contact.html" class="cs-button-solid">Get Free Quote</a>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fpipes.svg"
+          alt="icon"
+          width="77"
+          height="77"
+        />
+        <h3 class="cs-h3">Whole House Repiping</h3>
+        <p class="cs-item-text">
+          Sed ultricies lectus non vulputate scelerisque. Morbi eu nisl quis
+          massa efficitur semper nec in massa.
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fpipes.svg"
+          alt="icon"
+          width="77"
+          height="77"
+        />
+        <h3 class="cs-h3">Tankless Water Heaters</h3>
+        <p class="cs-item-text">
+          Sed ultricies lectus non vulputate scelerisque. Morbi eu nisl quis
+          massa efficitur semper nec in massa.
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fpipes.svg"
+          alt="icon"
+          width="77"
+          height="77"
+        />
+        <h3 class="cs-h3">Leak Detection & Repair</h3>
+        <p class="cs-item-text">
+          Sed ultricies lectus non vulputate scelerisque. Morbi eu nisl quis
+          massa efficitur semper nec in massa.
+        </p>
+      </li>
+    </ul>
+    <!-- Floating Watermark -->
+    <img
+      class="cs-watermark"
+      aria-hidden="true"
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.digitaloceanspaces.com/Services/svg-graphic.svg"
+      alt="icon"
+      width="77"
+      height="77"
+    />
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+
+  /* Mobile */
+  @media only screen and (min-width: 0rem) {
+    #services-218 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(522 / 16 * 1rem);
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: calc(32 / 16 * 1rem);
+      }
+
+      .cs-item {
+        width: 100%;
+        list-style: none;
+        margin-right: calc(10 / 16 * 1rem);
+        /* padding left and right changes on tablet */
+        padding: calc(44 / 16 * 1rem) calc(32 / 16 * 1rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        background-color: #fafbfc;
+        border: 1px solid #dad9e3;
+        border-radius: calc(5 / 16 * 1rem);
+        position: relative;
+
+        &:before {
+          /* top right box */
+          content: "";
+          width: 45%;
+          max-width: calc(180 / 16 * 1rem);
+          height: 50%;
+          max-height: calc(144 / 16 * 1rem);
+          background: var(--primary);
+          border-radius: calc(16 / 16 * 1rem);
+          position: absolute;
+          display: block;
+          top: calc(10 / 16) * -1em;
+          right: calc(10 / 16) * -1em;
+          z-index: -1;
+        }
+      }
+
+      .cs-icon {
+        /* 60px - 77px */
+        width: clamp(3.75rem, 7.6vw, 4.8125rem);
+        height: auto;
+        margin-bottom: calc(10 / 16 * 1rem);
+        display: block;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 1.5vw, 1.5625rem);
+        line-height: 1.2em;
+        margin: 0;
+        margin-bottom: calc(16 / 16 * 1rem);
+        color: var(--headerColor);
+        font-weight: bold;
+      }
+
+      .cs-item-text {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-watermark {
+        display: none;
+      }
+    }
+  }
+
+  /* Tablet */
+  @media only screen and (min-width: 48rem) {
+    #services-218 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        position: relative;
+      }
+
+      .cs-content {
+        width: 50%;
+      }
+
+      .cs-card-group {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+      }
+
+      .cs-item {
+        grid-column: span 4;
+        grid-row: span 1;
+        margin: 0;
+        /* makes each card the same height if you add or remove lines of text */
+        align-self: stretch;
+      }
+
+      .cs-watermark {
+        width: 30%;
+        max-width: calc(224 / 16 * 1rem);
+        height: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+      }
+    }
+  }
+</style>

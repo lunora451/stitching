@@ -1,0 +1,285 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Pricing                     --><!-- ============================================ -->
+<section id="pricing-1027">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h2 class="cs-title">Steak</h2>
+      <!--Menu-->
+      <ul class="cs-menu-group">
+        <li class="cs-menu-item">
+          <h3 class="cs-h3">
+            <span class="cs-header">Purple Corn Tostada</span>
+            <span class="cs-price">$29</span>
+          </h3>
+          <p class="cs-menu-text">
+            Creative way to paint, decorate, enhance, and embellish.
+          </p>
+        </li>
+        <li class="cs-menu-item">
+          <h3 class="cs-h3">
+            <span class="cs-header">Purple Corn Tostada</span>
+            <span class="cs-price">$29</span>
+          </h3>
+          <p class="cs-menu-text">
+            Creative way to paint, decorate, enhance, and embellish.
+          </p>
+        </li>
+        <li class="cs-menu-item">
+          <h3 class="cs-h3">
+            <span class="cs-header">Purple Corn Tostada</span>
+            <span class="cs-price">$29</span>
+          </h3>
+          <p class="cs-menu-text">
+            Creative way to paint, decorate, enhance, and embellish.
+          </p>
+        </li>
+        <li class="cs-menu-item">
+          <h3 class="cs-h3">
+            <span class="cs-header">Purple Corn Tostada</span>
+            <span class="cs-price">$29</span>
+          </h3>
+          <p class="cs-menu-text">
+            Creative way to paint, decorate, enhance, and embellish.
+          </p>
+        </li>
+        <li class="cs-menu-item">
+          <h3 class="cs-h3">
+            <span class="cs-header">Purple Corn Tostada</span>
+            <span class="cs-price">$29</span>
+          </h3>
+          <p class="cs-menu-text">
+            Creative way to paint, decorate, enhance, and embellish.
+          </p>
+        </li>
+      </ul>
+    </div>
+    <picture class="cs-picture">
+      <!--Mobile Image-->
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/steak2.jpg"
+      />
+      <!--Tablet and above Image-->
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/steak2.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/steak2.jpg"
+        alt="steak"
+        width="542"
+        height="743"
+      />
+    </picture>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #pricing-1027 {
+      padding: var(--sectionPadding);
+      background-color: #1a1a1a;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(738 / 16 * 1rem);
+        /* 24px - 48px */
+        padding: calc(48 / 16 * 1rem) clamp(1.5rem, 3.5vw, 3rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        border: 1px solid #4e4b66;
+        border-top: none;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        /* frees the :after element from the cs-title parent. It's now relative to the cs-content parent */
+        display: contents;
+        &:after {
+          /* underline */
+          content: "";
+          width: 100%;
+          height: 1px;
+          /* 20px - 32px */
+          margin: clamp(1.25rem, 3vw, 2rem) 0;
+          background: #4e4b66;
+          opacity: 1;
+          position: relative;
+          display: block;
+        }
+      }
+
+      .cs-menu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        column-gap: calc(20 / 16 * 1rem);
+        /* 28px - 40px */
+        row-gap: clamp(1.75rem, 3vw, 2.5rem);
+      }
+
+      .cs-menu-group {
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* 28px - 40px */
+        gap: clamp(1.75rem, 3vw, 2.5rem);
+      }
+
+      .cs-menu-item {
+        list-style: none;
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: calc(8 / 16 * 1rem);
+      }
+
+      .cs-h3 {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: calc(8 / 16 * 1rem);
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          /* grey line */
+          content: "";
+          width: 60%;
+          height: 1px;
+          background-image: linear-gradient(
+            90deg,
+            #4e4b66,
+            #4e4b66 75%,
+            transparent 75%,
+            transparent 100%
+          );
+          background-size: 6px 6px;
+          border: none;
+          opacity: 1;
+          display: block;
+          order: 2;
+          z-index: -1;
+        }
+      }
+
+      .cs-header {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2vw, 1.5625rem);
+        line-height: 1.2em;
+        text-align: inherit;
+        font-weight: 700;
+        width: auto;
+        max-width: 70%;
+        color: var(--bodyTextColorWhite);
+        display: block;
+        flex: none;
+      }
+
+      .cs-price {
+        /* 25px - 31px */
+        font-size: clamp(1.6525rem, 2.5vw, 1.9375rem);
+        line-height: 1.2em;
+        font-weight: bold;
+        color: var(--primary);
+        order: 3;
+      }
+
+      .cs-menu-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: 72vw;
+        display: block;
+        /* sends it to the top */
+        order: -1;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #pricing-1027 {
+      .cs-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+
+      .cs-content {
+        width: 66%;
+        border: 1px solid #4e4b66;
+        border-left: none;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-menu-group {
+        width: 100%;
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: auto;
+        max-width: calc(542 / 16 * 1rem);
+        max-height: 1000%;
+      }
+    }
+  }
+</style>

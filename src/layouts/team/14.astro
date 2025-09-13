@@ -1,0 +1,421 @@
+---
+
+---
+
+<!-- ============================================ --><!--               Meet The Team                  --><!-- ============================================ -->
+<section id="meet-team-454">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Team</span>
+      <h2 class="cs-title">Meet Our Staff</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <a href="" class="cs-button-solid">More About Us</a>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Meet-Team/meet5.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Meet-Team/meet5.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Meet-Team/meet5.jpg"
+            alt="staff"
+            width="305"
+            height="424"
+            aria-hidden="true"
+          />
+        </picture>
+        <h3 class="cs-h3">Wahid Keito</h3>
+        <span class="cs-desc">Creative Director</span>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Meet-Team/meet5.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Meet-Team/meet5.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Meet-Team/meet5.jpg"
+            alt="staff"
+            width="305"
+            height="424"
+            aria-hidden="true"
+          />
+        </picture>
+        <h3 class="cs-h3">Claudio Arthur</h3>
+        <span class="cs-desc">Creative Director</span>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Meet-Team/meet5.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Meet-Team/meet5.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Meet-Team/meet5.jpg"
+            alt="staff"
+            width="305"
+            height="424"
+            aria-hidden="true"
+          />
+        </picture>
+        <h3 class="cs-h3">Phillip Walker</h3>
+        <span class="cs-desc">Creative Director</span>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Meet-Team/meet5.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Meet-Team/meet5.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Meet-Team/meet5.jpg"
+            alt="staff"
+            width="305"
+            height="424"
+            aria-hidden="true"
+          />
+        </picture>
+        <h3 class="cs-h3">Thomas Castro</h3>
+        <span class="cs-desc">Creative Director</span>
+      </li>
+      <!--SVG Ripple-->
+      <li class="cs-ripple" aria-hidden="true">
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Meet-Team/ripple2.svg"
+          alt="ripple"
+          width="967"
+          height="650"
+        />
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Meet The Team        -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #meet-team-454 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1440px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(337 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(32 / 16 * 1rem);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        max-width: calc(995 / 16 * 1rem);
+        /* pushes up by the same amount as the 2nd & 4th cs-item translates up */
+        margin: clamp(2rem, 9vw, 3rem) 0 0 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        /* 14px - 40px */
+        row-gap: clamp(0.875rem, 3vw, 2.5rem);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-item {
+        list-style: none;
+        /* changes at desktop */
+        width: 47.5%;
+        margin: 0;
+        padding: 0 0 calc(24 / 16 * 1rem) 0;
+        border: 1px solid #b4b2c7;
+        background-color: #fff;
+        /* 12px - 16px */
+        border-radius: clamp(0.875rem, 1.5vw, 1rem);
+        /* clips img tag corners */
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+
+        &:before,
+        &:after {
+          /* green boxes */
+          content: "";
+          width: 0;
+          height: 100%;
+          background: var(--primary);
+          opacity: 0.9;
+          position: absolute;
+          display: block;
+          bottom: 0;
+          left: 0;
+          z-index: -1;
+          transform-origin: left bottom;
+          transition: width 0.5s;
+        }
+
+        &:after {
+          bottom: calc(0 / 16 * 1rem);
+          left: auto;
+          right: calc(0 / 16 * 1rem);
+          z-index: -1;
+        }
+
+        &:hover {
+          &:before,
+          &:after {
+            width: 100%;
+          }
+          .cs-picture {
+            img {
+              transform: scale(1.1);
+              filter: brightness(50%);
+            }
+          }
+
+          .cs-h3,
+          .cs-desc {
+            color: var(--bodyTextColorWhite);
+          }
+        }
+
+        &:nth-of-type(2),
+        &:nth-of-type(4) {
+          /* 32px - 48px */
+          /* wrapped in a calc function to make clamp value negative */
+          transform: translateY(calc(clamp(2rem, 9vw, 3rem) * -1));
+        }
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: auto;
+        margin-bottom: calc(24 / 16 * 1rem);
+        /* prevents img from overflowing container on hover */
+        overflow: hidden;
+        border-bottom: 1px solid #b4b2c7;
+        aspect-ratio: 160/135;
+        display: block;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* makes it act like a background image */
+          object-fit: cover;
+          transition:
+            transform 0.6s,
+            filter 0.3s;
+        }
+      }
+
+      .cs-ripple {
+        list-style: none;
+        /* changes at desktop */
+        width: 120vw;
+        height: auto;
+        /* prevents mouse from interacting with it */
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .cs-h3 {
+        /* 16px - 25px */
+        font-size: clamp(1rem, 1.5vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 calc(4 / 16 * 1rem) 0;
+        color: var(--headerColor);
+        display: block;
+      }
+
+      .cs-desc {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-align: center;
+        margin: 0;
+        color: var(--primary);
+        display: block;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #meet-team-454 {
+      .cs-container {
+        max-width: calc(1440 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cs-card-group {
+        width: calc(68% + 5vw);
+      }
+
+      .cs-ripple {
+        width: 120%;
+      }
+    }
+  }
+
+  /* Small Desktop - 1200px */
+  @media only screen and (min-width: 75rem) {
+    #meet-team-454 {
+      .cs-content {
+        /* 24px - 80px */
+        margin-left: clamp(1.5rem, 5.5vw, 5rem);
+      }
+
+      .cs-card-group {
+        justify-content: center;
+        margin: 0;
+        /* 20px - 40px */
+        column-gap: clamp(1.5rem, 2.5vw, 2.5rem);
+        &:hover {
+          .cs-ripple {
+            transform: translate(-50%, -50%) scale(1.1);
+          }
+        }
+      }
+
+      .cs-item {
+        width: calc(28% + 2vw);
+        max-width: calc(305 / 16 * 1rem);
+        &:nth-of-type(2),
+        &:nth-of-type(4) {
+          transform: none;
+        }
+
+        &:nth-of-type(1) {
+          transform: translateY(calc(311 / 16 * 1rem));
+        }
+
+        &:nth-of-type(3) {
+          transform: translateY(calc(213 / 16 * 1rem));
+        }
+      }
+
+      .cs-picture {
+        height: calc(242 / 16 * 1rem);
+        aspect-ratio: 305/242;
+      }
+
+      .cs-ripple {
+        width: 90%;
+        transition: transform 0.3s;
+      }
+    }
+  }
+</style>

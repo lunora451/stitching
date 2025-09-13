@@ -1,0 +1,400 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Hero                      --><!-- ============================================ -->
+<section id="hero-1806">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Gym/Boxing</span>
+      <h1 class="cs-title">You Can Boost Your Strength</h1>
+      <p class="cs-text">
+        Develop confidence, composure under pressure and the discipline needed
+        to be a champ. This is the club you’ve been looking.
+      </p>
+      <a href="" class="cs-button-solid">Schedule An Appointment</a>
+    </div>
+    <div class="cs-video-group">
+      <div class="cs-video-wrapper">
+        <!--Compress your video and upload it to a CDN like Digital Oceans Spaces so the video file doesn't cause load time issues. You can also remove the video tag and uncomment the picture tag to use a image instead of a video. Don't forget to remove the cs-play button!-->
+        <video
+          loading="lazy"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Videos/gym.mp4"
+          autoplay="false"></video>
+        <!-- <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-hero.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-hero.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-hero.jpg" alt="body builder" width="630" height="877">
+                </picture> -->
+        <button class="cs-play" aria-label="click to play video">
+          <img
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/play-right.svg"
+            alt="play icon"
+            class="cs-icon"
+            width="24"
+            height="24"
+            aria-hidden="true"
+            decoding="async"
+          />
+        </button>
+      </div>
+      <div class="cs-box">
+        <img
+          class="cs-box-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dna.svg"
+          alt="dna icon"
+          width="48"
+          height="48"
+          aria-hidden="true"
+          decoding="async"
+        />
+        <span class="cs-header">We’ve Over 26 Years of Experience</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---            Hero            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-1806 {
+      /* 200px - 244px top */
+      /* 60px - 100px  bottom */
+      padding: clamp(12.5rem, 16.82vw, 15.25rem) calc(16 / 16 * 1rem) 0;
+      /* clips the svg wave from overflowing */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: calc(48 / 16 * 1rem);
+      }
+
+      .cs-content {
+        text-align: center;
+        max-width: calc(630 / 16 * 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        z-index: 2;
+      }
+
+      .cs-topper {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        text-align: inherit;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: calc(4 / 16 * 1rem);
+        display: block;
+      }
+
+      .cs-title {
+        /* 39px - 84px */
+        font-size: clamp(2.4375rem, 6.3vw, 5.25rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: inherit;
+        /* 23 characters including spaces wide */
+        max-width: 23ch;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+        color: var(--headerColor);
+        position: relative;
+      }
+
+      .cs-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 1.5vw, 1.25rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        max-width: calc(531 / 16 * 1rem);
+        margin: 0 0 calc(32 / 16 * 1rem) 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-video-group {
+        width: 100%;
+        height: 100vw;
+        min-height: calc(340 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        row-gap: calc(16 / 16 * 1rem);
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          /* light grey section background. We attach it as a pseudo to the video group so it can be responsive and anchored in position to always be in the same position behind the cs-box */
+          content: "";
+          width: 300vw;
+          height: 500%;
+          background: #f7f7f7;
+          position: absolute;
+          display: block;
+          bottom: calc(54 / 16 * 1rem);
+          left: 50%;
+          z-index: -1;
+          transform: translateX(-50%);
+        }
+      }
+
+      .cs-box {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        /* 24px - 32px */
+        padding: clamp(1.5rem, 4vw, 2rem);
+        background-color: var(--primary);
+        display: flex;
+        align-items: flex-start;
+        /* 16px - 24px */
+        gap: clamp(1rem, 2vw, 1.5rem);
+      }
+
+      .cs-header {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-box-icon {
+        /* 40px - 48px */
+        width: clamp(2.5rem, 4vw, 3rem);
+      }
+
+      .cs-video-wrapper {
+        width: 100%;
+        /* changes to 90% at tablet, then back to 100% at desktop */
+        height: 100%;
+        display: block;
+        position: relative;
+
+        &:hover {
+          cursor: pointer;
+          .cs-play {
+            transform: translate(-50%, -50%) scale(1.2);
+          }
+        }
+
+        video,
+        .cs-picture {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* makes image act as a background image */
+          object-fit: cover;
+
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            /* makes image act as a background image */
+            object-fit: cover;
+          }
+        }
+      }
+
+      .cs-play {
+        /* 80px - 120px */
+        width: clamp(5rem, 14vw, 7.5rem);
+        height: clamp(5rem, 14vw, 7.5rem);
+        display: flex;
+        pointer-events: none;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(8px);
+        border: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition:
+          transform 0.3s,
+          opacity 0.3s;
+
+        &.cs-hide {
+          transform: translate(-50%, -50%) scale(0) !important;
+          opacity: 0;
+        }
+      }
+
+      .cs-icon {
+        width: calc(20 / 16 * 1rem);
+        height: auto;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-1806 {
+      .cs-container {
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+      }
+
+      .cs-content {
+        text-align: left;
+        width: 47%;
+        max-width: calc(522 / 16 * 1rem);
+        /* 168px - 300pxm this maintains consistent space between the cs content and the cs-box so no matter how much content you add here, there will always be X amount of padding between the bottom of the cs-content and the bottom of the cs-video-group */
+        padding-bottom: clamp(10.5rem, 30vw, 18.75rem);
+        flex: none;
+        align-items: flex-start;
+        align-self: flex-start;
+        order: 2;
+      }
+
+      .cs-title {
+        max-width: 10ch;
+      }
+
+      .cs-video-group {
+        width: 50%;
+        max-width: calc(630 / 16 * 1rem);
+        height: auto;
+        /* 530px - 880px */
+        min-height: clamp(33.125rem, 67vw, 55rem);
+
+        &:before {
+          bottom: calc(100 / 16 * 1rem);
+        }
+      }
+
+      .cs-video-wrapper {
+        /* changes back to 100% at desktop */
+        height: 90%;
+      }
+
+      .cs-box {
+        width: 80%;
+        max-width: calc(307 / 16 * 1rem);
+        flex-direction: column;
+        position: absolute;
+        /* chnages to 48px at desktop */
+        bottom: 0;
+        /* -112px to 200px */
+        right: calc(clamp(7.25rem, 17vw, 12.5rem) * -1);
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #hero-1806 {
+      .cs-video-wrapper {
+        height: 100%;
+      }
+
+      .cs-box {
+        bottom: calc(48 / 16 * 1rem);
+      }
+    }
+  }
+</style>
+<script>
+  function togglePlayButton() {
+    // Select all elements with the .cs-picture class
+    const pictures = document.querySelectorAll("#hero-1806 .cs-video-wrapper");
+
+    // Add a click event listener to each .cs-picture element
+    pictures.forEach((picture) => {
+      picture.addEventListener("click", () => {
+        // Select all elements with the .cs-play class
+        const playButtons = document.querySelectorAll("#hero-1806 .cs-play");
+
+        // Toggle the .cs-hide class on each .cs-play element
+        playButtons.forEach((button) => {
+          button.classList.toggle("cs-hide");
+        });
+      });
+    });
+  }
+
+  // Call the function to activate the event listeners
+  togglePlayButton();
+
+  function toggleVideoPlayback() {
+    // Select the video element
+    const video = document.querySelector("#hero-1806 video");
+
+    // Add a click event listener to the video
+    video.addEventListener("click", () => {
+      // Check if the video is paused
+      if (video.paused) {
+        video.play(); // Play the video if it is paused
+      } else {
+        video.pause(); // Pause the video if it is playing
+      }
+    });
+  }
+
+  // Call the function to activate the event listener
+  toggleVideoPlayback();
+</script>

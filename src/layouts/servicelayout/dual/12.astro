@@ -1,0 +1,314 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Services                   --><!-- ============================================ -->
+<section id="services-1178">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our services</span>
+      <h2 class="cs-title">Together We Can Restore</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/alloy-wheel%201.svg"
+            alt="icon"
+            aria-hidden="true"
+            decoding="async"
+            width="52"
+            height="52"
+          />
+        </picture>
+        <h2 class="cs-h2">Tire and wheel</h2>
+        <p class="cs-item-text">
+          What is Check Engine Light? There are many variations of passages of
+          Lorem Ipsum available, but the majority have...
+        </p>
+        <a href="" class="cs-link">
+          Read More
+          <img
+            class="cs-arrow"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/red-arrow-right.svg"
+            alt="icon"
+            width="20"
+            height="20"
+            aria-hidden="true"
+          />
+        </a>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/electric%201.svg"
+            alt="icon"
+            aria-hidden="true"
+            decoding="async"
+            width="52"
+            height="52"
+          />
+        </picture>
+        <h2 class="cs-h2">Electrical system</h2>
+        <p class="cs-item-text">
+          Our featured services Nemo enim ipsam voluptatem quia voluptas sit
+          aspernatur aut odit aut fugit, sed quia consequuntur...
+        </p>
+        <a href="" class="cs-link">
+          Read More
+          <img
+            class="cs-arrow"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/red-arrow-right.svg"
+            alt="icon"
+            width="20"
+            height="20"
+            aria-hidden="true"
+          />
+        </a>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-engine.svg"
+            alt="icon"
+            aria-hidden="true"
+            decoding="async"
+            width="52"
+            height="52"
+          />
+        </picture>
+        <h2 class="cs-h2">System service</h2>
+        <p class="cs-item-text">
+          Our services Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+          aut odit aut fugit, sed quia consequuntur magni...
+        </p>
+        <a href="" class="cs-link">
+          Read More
+          <img
+            class="cs-arrow"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/red-arrow-right.svg"
+            alt="icon"
+            width="20"
+            height="20"
+            aria-hidden="true"
+          />
+        </a>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-gear.svg"
+            alt="icon"
+            aria-hidden="true"
+            decoding="async"
+            width="52"
+            height="52"
+          />
+        </picture>
+        <h2 class="cs-h2">Engine diagnostics</h2>
+        <p class="cs-item-text">
+          What is Check Engine Light? There are many variations of passages of
+          Lorem Ipsum available, but the majority have...
+        </p>
+        <a href="" class="cs-link">
+          Read More
+          <img
+            class="cs-arrow"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/red-arrow-right.svg"
+            alt="icon"
+            width="20"
+            height="20"
+            aria-hidden="true"
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-1178 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        /* changes to 1440px at desktop */
+        max-width: calc(704 / 16 * 1rem);
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cs-content {
+        width: 100%;
+        margin: 0 auto calc(28 / 16 * 1rem) auto;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        max-width: calc(357 / 16 * 1rem);
+        margin: 0 auto;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        padding: calc(32 / 16 * 1rem) calc(24 / 16 * 1rem);
+        background-color: #f7f7f7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        transition: filter 0.3s;
+        grid-column: span 12;
+      }
+
+      .cs-picture {
+        width: calc(72 / 16 * 1rem);
+        height: calc(72 / 16 * 1rem);
+        margin: 0 0 calc(24 / 16 * 1rem) 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cs-icon {
+        width: calc(52 / 16 * 1rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-h2 {
+        font-size: calc(25 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 calc(12 / 16 * 1rem);
+        color: var(--headerColor);
+        display: block;
+        text-align: center;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        max-width: calc(450 / 16 * 1rem);
+        margin: 0;
+        margin-bottom: calc(20 / 16 * 1rem);
+        padding: 0;
+        color: var(--bodyTextColor);
+        text-align: center;
+      }
+
+      .cs-link {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin-top: auto;
+        color: var(--headerColor);
+        text-decoration: none;
+        vertical-align: center;
+        display: flex;
+        align-items: center;
+        transition: color 0.3s;
+        text-align: inherit;
+
+        &:hover {
+          color: var(--primary);
+
+          .cs-arrow {
+            transform: translateX(0.25rem);
+            filter: initial;
+          }
+        }
+      }
+
+      .cs-arrow {
+        width: calc(20 / 16 * 1rem);
+        height: auto;
+        display: block;
+        filter: grayscale(1) brightness(0);
+        transition:
+          filter 0.3s,
+          transform 0.3s;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-1178 {
+      .cs-item {
+        grid-column: span 6;
+
+        &:nth-of-type(3) {
+          order: 4;
+        }
+      }
+    }
+  }
+
+  /* Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #services-1178 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        align-items: center;
+        gap: calc(40 / 16 * 1rem);
+      }
+
+      .cs-content {
+        max-width: calc(433 / 16 * 1rem);
+        text-align: left;
+      }
+
+      .cs-card-group {
+        max-width: calc(733 / 16 * 1rem);
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cs-item {
+        grid-column: initial;
+      }
+    }
+  }
+</style>

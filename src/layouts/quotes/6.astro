@@ -1,0 +1,135 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Quote                     --><!-- ============================================ -->
+<section id="quote-1307">
+  <div class="cs-container">
+    <div class="cs-content">
+      <p class="cs-quote">
+        Creating long-term value with entrepreneurial intelligence! Our main
+        goal is Growth.
+      </p>
+      <span class="cs-name">Piter Bowman</span>
+      <span class="cs-job">Creative Director</span>
+    </div>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/banking-district.jpg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/banking-district.jpg"
+    />
+    <img
+      aria-hidden="true"
+      loading="lazy"
+      decoding="async"
+      src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/banking-district.jpg"
+      alt="banking cityscape"
+      width="360"
+      height="316"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #quote-1307 {
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        box-sizing: border-box;
+        padding: var(--sectionPadding);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .cs-content {
+        width: 100%;
+        max-width: calc(850 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+      }
+
+      .cs-quote {
+        /* 31px - 49px */
+        font-size: clamp(1.9375rem, 5.1vw, 3.0625rem);
+        line-height: 1.2em;
+        font-weight: bold;
+        margin: 0;
+        margin-bottom: calc(24 / 16 * 1rem);
+        color: #fff;
+        text-align: inherit;
+      }
+
+      .cs-name {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 3.25vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        margin-bottom: calc(8 / 16 * 1rem);
+        color: var(--primary);
+        display: block;
+        text-align: inherit;
+      }
+
+      .cs-job {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: #f7f7f7;
+        text-align: inherit;
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        background-color: #1a1a1a;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        /* darkened overlay */
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          z-index: 1;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0.24;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+</style>

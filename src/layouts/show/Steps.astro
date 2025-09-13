@@ -1,0 +1,227 @@
+---
+import Steps1 from "../steps/1.astro";
+import Steps2 from "../steps/2.astro";
+import Steps3 from "../steps/3.astro";
+import Steps4 from "../steps/4.astro";
+import Steps5 from "../steps/5.astro";
+import Steps6 from "../steps/6.astro";
+import Steps7 from "../steps/7.astro";
+import Steps8 from "../steps/8.astro";
+import Steps9 from "../steps/9.astro";
+import Steps10 from "../steps/10.astro";
+import Steps11 from "../steps/11.astro";
+import Steps12 from "../steps/12.astro";
+import Steps13 from "../steps/13.astro";
+import Steps14 from "../steps/14.astro";
+import Steps15 from "../steps/15.astro";
+import Steps16 from "../steps/16.astro";
+import Steps17 from "../steps/17.astro";
+import Steps18 from "../steps/18.astro";
+import Steps19 from "../steps/19.astro";
+import Steps20 from "../steps/20.astro";
+import Steps21 from "../steps/21.astro";
+import Steps22 from "../steps/22.astro";
+import Steps23 from "../steps/23.astro";
+import Steps24 from "../steps/24.astro";
+import Steps25 from "../steps/25.astro";
+import Steps26 from "../steps/26.astro";
+import Steps27 from "../steps/27.astro";
+import Steps28 from "../steps/28.astro";
+import Steps29 from "../steps/29.astro";
+import Steps30 from "../steps/30.astro";
+import Steps31 from "../steps/31.astro";
+---
+
+<div class="c-collection">
+  <div class="c-steps" data-value-steps="1">
+    <Steps1 />
+  </div>
+  <div class="c-steps" data-value-steps="2">
+    <Steps2 />
+  </div>
+  <div class="c-steps" data-value-steps="3">
+    <Steps3 />
+  </div>
+  <div class="c-steps" data-value-steps="4">
+    <Steps4 />
+  </div>
+  <div class="c-steps" data-value-steps="5">
+    <Steps5 />
+  </div>
+  <div class="c-steps" data-value-steps="6">
+    <Steps6 />
+  </div>
+  <div class="c-steps" data-value-steps="7">
+    <Steps7 />
+  </div>
+  <div class="c-steps" data-value-steps="8">
+    <Steps8 />
+  </div>
+  <div class="c-steps" data-value-steps="9">
+    <Steps9 />
+  </div>
+  <div class="c-steps" data-value-steps="10">
+    <Steps10 />
+  </div>
+  <div class="c-steps" data-value-steps="11">
+    <Steps11 />
+  </div>
+  <div class="c-steps" data-value-steps="12">
+    <Steps12 />
+  </div>
+  <div class="c-steps" data-value-steps="13">
+    <Steps13 />
+  </div>
+  <div class="c-steps" data-value-steps="14">
+    <Steps14 />
+  </div>
+  <div class="c-steps" data-value-steps="15">
+    <Steps15 />
+  </div>
+  <div class="c-steps" data-value-steps="16">
+    <Steps16 />
+  </div>
+  <div class="c-steps" data-value-steps="17">
+    <Steps17 />
+  </div>
+  <div class="c-steps" data-value-steps="18">
+    <Steps18 />
+  </div>
+  <div class="c-steps" data-value-steps="19">
+    <Steps19 />
+  </div>
+  <div class="c-steps" data-value-steps="20">
+    <Steps20 />
+  </div>
+  <div class="c-steps" data-value-steps="21">
+    <Steps21 />
+  </div>
+  <div class="c-steps" data-value-steps="22">
+    <Steps22 />
+  </div>
+  <div class="c-steps" data-value-steps="23">
+    <Steps23 />
+  </div>
+  <div class="c-steps" data-value-steps="24">
+    <Steps24 />
+  </div>
+  <div class="c-steps" data-value-steps="25">
+    <Steps25 />
+  </div>
+  <div class="c-steps" data-value-steps="26">
+    <Steps26 />
+  </div>
+  <div class="c-steps" data-value-steps="27">
+    <Steps27 />
+  </div>
+  <div class="c-steps" data-value-steps="28">
+    <Steps28 />
+  </div>
+  <div class="c-steps" data-value-steps="29">
+    <Steps29 />
+  </div>
+  <div class="c-steps" data-value-steps="30">
+    <Steps30 />
+  </div>
+  <div class="c-steps" data-value-steps="31">
+    <Steps31 />
+  </div>
+</div>
+
+<style lang="scss">
+  .c-collection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .c-steps {
+    display: none;
+  }
+  .active {
+    width: 100%;
+    display: block;
+  }
+</style>
+
+<script>
+  function changeCollection(selectedValue) {
+    const collections = document.querySelectorAll(".c-steps");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none" est sélectionné, ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection sélectionnée
+    const targetCollection = document.querySelector(
+      `[data-value-steps="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  // Fonction pour le hover des options
+  function previewOnHover(selectedValue) {
+    const collections = document.querySelectorAll(".c-steps");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none", ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection en preview
+    const targetCollection = document.querySelector(
+      `[data-value-steps="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const select = document.getElementById("template-select-steps");
+    const collections = document.querySelectorAll(".c-steps");
+
+    if (!select) return;
+
+    select.addEventListener("change", function () {
+      const selectedValue = this.value;
+      changeCollection(selectedValue);
+    });
+
+    // Alternative pour navigateur qui ne supportent pas mouseover sur option
+    let isSelectOpen = false;
+
+    select.addEventListener("focus", function () {
+      isSelectOpen = true;
+    });
+
+    select.addEventListener("blur", function () {
+      isSelectOpen = false;
+      // Revenir à la valeur sélectionnée quand on ferme
+      changeCollection(this.value);
+    });
+
+    // Navigation avec les flèches
+    select.addEventListener("keydown", function (e) {
+      if (isSelectOpen && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
+        setTimeout(() => {
+          // Simuler le hover sur l'option "focusée"
+          const currentValue = this.value;
+          previewOnHover(currentValue);
+        }, 10);
+      }
+    });
+  });
+</script>

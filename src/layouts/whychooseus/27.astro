@@ -1,0 +1,424 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Why Choose                  --><!-- ============================================ -->
+<section id="why-choose-359">
+  <div class="cs-container">
+    <!--Left Section-->
+    <div class="cs-content">
+      <span class="cs-topper">Who We Are</span>
+      <h2 class="cs-title">Expert Cleaning Service You Can Trust</h2>
+      <p class="cs-text">
+        At Stitch Cleaning Service, let us help you solve problems so that you
+        can focus on your mission. We support businesses through periods.
+      </p>
+      <!--Image of cleaners-->
+      <picture class="cs-picture">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaners-m.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaners.jpg"
+        />
+        <img
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaners.jpg"
+          alt="cleaners"
+          width="275"
+          height="132"
+        />
+      </picture>
+    </div>
+    <!--Cards-->
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <div class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/person-blue.svg"
+            alt="icon"
+            width="48"
+            height="48"
+          />
+          <!--Create a span to make more bubbles with pesudo elements-->
+          <span class="cs-bubble" aria-hidden="true"></span>
+        </div>
+        <div class="cs-flex">
+          <h3 class="cs-h3">Expert Employee</h3>
+          <p class="cs-item-text">
+            We’ve helped thousands of organizations to transform their company
+            to become relevant of helped thousands.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <div class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/hand-blue.svg"
+            alt="icon"
+            width="48"
+            height="48"
+          />
+          <!--Create a span to make more bubbles with pesudo elements-->
+          <span class="cs-bubble" aria-hidden="true"></span>
+        </div>
+        <div class="cs-flex">
+          <h3 class="cs-h3">Affordable Package</h3>
+          <p class="cs-item-text">
+            We’ve helped thousands of organizations to transform their company
+            to become relevant of helped thousands.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <div class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/stars-thumbs.svg"
+            alt="icon"
+            width="48"
+            height="48"
+          />
+          <!--Create a span to make more bubbles with pesudo elements-->
+          <span class="cs-bubble" aria-hidden="true"></span>
+        </div>
+        <div class="cs-flex">
+          <h3 class="cs-h3">100% Satisfaction</h3>
+          <p class="cs-item-text">
+            We’ve helped thousands of organizations to transform their company
+            to become relevant of helped thousands.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Why Choose         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #why-choose-359 {
+      padding: var(--sectionPadding);
+
+      @keyframes floatAnimation2 {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-4px);
+        }
+        70% {
+          transform: translateY(4px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes InAndOut {
+        0% {
+          transform: translateY(calc(40 / 16 * 1rem) scale(1));
+          opacity: 1;
+        }
+        30% {
+          transform: translateY(calc(20 / 16 * 1rem) scale(0.8));
+          opacity: 1;
+        }
+        60% {
+          transform: translateY(calc(10 / 16 * 1rem) scale(0.5));
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(calc(0 / 16 * 1rem) scale(0.5));
+          opacity: 0;
+        }
+      }
+
+      @keyframes InAndOut2 {
+        0% {
+          transform: translateY(calc(50 / 16 * 1rem) scale(1));
+          opacity: 1;
+        }
+        30% {
+          transform: translateY(calc(40 / 16 * 1rem) scale(1));
+          opacity: 1;
+        }
+        60% {
+          transform: translateY(calc(20 / 16 * 1rem) scale(0.6));
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(calc(0 / 16 * 1rem) scale(0.4));
+          opacity: 0;
+        }
+      }
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* 48px - 56px */
+        gap: clamp(3rem, 7vw, 3.5rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        max-width: 20ch;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: calc(400 / 16 * 1rem);
+        border-radius: calc(16 / 16 * 1rem);
+        /* clips the corners of rhe image */
+        overflow: hidden;
+        display: block;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          /* change to "top" if you don't want the top of the image cut off */
+          object-position: center;
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        /* 24px - 32px */
+        padding: clamp(1.5rem, 4.3vw, 2rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        border-radius: calc(16 / 16 * 1rem);
+        border: 1px solid #e8e8e8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .cs-icon-wrapper {
+        width: calc(65 / 16 * 1rem);
+        height: calc(80 / 16 * 1rem);
+        margin-bottom: calc(24 / 16 * 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+
+        &:before {
+          /* Small Bubble */
+          content: "";
+          width: calc(18 / 16 * 1rem);
+          height: calc(18 / 16 * 1rem);
+          border-radius: 50%;
+          background: #e5f2ff;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: calc(3 / 16 * 1rem);
+          animation-name: InAndOut;
+          animation-duration: 1.6s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+
+        &:after {
+          /* Small Bubble */
+          content: "";
+          width: calc(18 / 16 * 1rem);
+          height: calc(18 / 16 * 1rem);
+          border-radius: 50%;
+          background: #e5f2ff;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: calc(11 / 16 * 1rem);
+          right: calc(5 / 16 * 1rem);
+          animation-name: InAndOut2;
+          animation-duration: 2s;
+          animation-delay: 0.3s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+      }
+
+      .cs-bubble {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        &:before {
+          /* Big Bubble */
+          content: "";
+          width: calc(43 / 16 * 1rem);
+          height: calc(43 / 16 * 1rem);
+          border-radius: 50%;
+          background: #e5f2ff;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          bottom: calc(4 / 16 * 1rem);
+          left: calc(0 / 16 * 1rem);
+          animation-name: floatAnimation2;
+          animation-duration: 6s;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+          animation-iteration-count: infinite;
+        }
+
+        &:after {
+          /* Big Bubble */
+          content: "";
+          width: calc(31 / 16 * 1rem);
+          height: calc(31 / 16 * 1rem);
+          border-radius: 50%;
+          background: #e5f2ff;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          bottom: calc(-4 / 16 * 1rem);
+          right: calc(0 / 16 * 1rem);
+          animation-name: floatAnimation2;
+          animation-duration: 4s;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+          animation-iteration-count: infinite;
+        }
+      }
+
+      .cs-icon {
+        width: calc(48 / 16 * 1rem);
+        height: auto;
+        position: relative;
+        z-index: 10;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        margin-bottom: calc(12 / 16 * 1rem);
+        color: var(--headerColor);
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.6vw, 1rem);
+        line-height: 1.5em;
+        text-align: center;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #why-choose-359 {
+      .cs-item {
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+
+      .cs-icon-wrapper {
+        margin-right: calc(24 / 16 * 1rem);
+      }
+
+      .cs-h3,
+      .cs-item-text {
+        text-align: left;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #why-choose-359 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .cs-content {
+        max-width: calc(522 / 16 * 1rem);
+      }
+
+      .cs-picture {
+        height: calc(280 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        width: 50%;
+        max-width: calc(630 / 16 * 1rem);
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+    }
+  }
+</style>

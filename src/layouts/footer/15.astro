@@ -1,0 +1,297 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Footer                      --><!-- ============================================ -->
+<footer id="footer-1154">
+  <div class="cs-container">
+    <div class="cs-top">
+      <a aria-label="go back to home" class="cs-logo" href="">
+        <img
+          class="cs-logo-img"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Logos/stitch-charity.svg"
+          alt="logo"
+          width="168"
+          height="48"
+        />
+      </a>
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <a href="" class="cs-link">Home</a>
+        </li>
+        <li class="cs-li">
+          <a href="" class="cs-link">About</a>
+        </li>
+        <li class="cs-li">
+          <a href="" class="cs-link">Services</a>
+        </li>
+        <li class="cs-li">
+          <a href="" class="cs-link">Donations</a>
+        </li>
+        <li class="cs-li">
+          <a href="" class="cs-link">Events</a>
+        </li>
+        <li class="cs-li">
+          <a href="" class="cs-link">Blog</a>
+        </li>
+        <li class="cs-li">
+          <a href="" class="cs-link">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="cs-bottom">
+      <!--Social-->
+      <ul class="cs-social">
+        <li class="cs-social-li">
+          <a
+            href=""
+            class="cs-social-link"
+            aria-label="facebook"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="cs-social-icon cs-default"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-1a.svg"
+              alt="icon"
+              loading="lazy"
+              decoding="async"
+              width="12"
+              height="12"
+              aria-hidden="true"
+            />
+          </a>
+        </li>
+        <li class="cs-social-li">
+          <a
+            href=""
+            class="cs-social-link"
+            aria-label="twitter"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="cs-social-icon cs-default"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-1a.svg"
+              alt="icon"
+              loading="lazy"
+              decoding="async"
+              width="12"
+              height="12"
+              aria-hidden="true"
+            />
+          </a>
+        </li>
+        <li class="cs-social-li">
+          <a
+            href=""
+            class="cs-social-link"
+            aria-label="instagram"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="cs-social-icon cs-default"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-1a.svg"
+              alt="icon"
+              loading="lazy"
+              decoding="async"
+              width="12"
+              height="12"
+              aria-hidden="true"
+            />
+          </a>
+        </li>
+        <li class="cs-social-li">
+          <a
+            href=""
+            class="cs-social-link"
+            aria-label="twitter"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="cs-social-icon cs-default"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-1a.svg"
+              alt="icon"
+              loading="lazy"
+              decoding="async"
+              width="12"
+              height="12"
+              aria-hidden="true"
+            />
+          </a>
+        </li>
+      </ul>
+      <span class="cs-copyright">
+        © Copyright 2023 - <a href="" class="cs-copyright-link"
+          >Stitch Non-profit Charity</a
+        >
+      </span>
+    </div>
+  </div>
+</footer>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Footer            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #footer-1154 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cs-top {
+        width: 100%;
+        /* 32px - 40px */
+        margin-bottom: clamp(2rem, 4vw, 2.5rem);
+        padding-bottom: clamp(2rem, 4vw, 2.5rem);
+        border-bottom: 1px solid #e8e8e8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: calc(32 / 16 * 1rem);
+      }
+
+      .cs-ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        row-gap: calc(8 / 16 * 1rem);
+        /* 28px - 40px */
+        column-gap: clamp(1.75rem, 4vw, 2.5rem);
+      }
+
+      .cs-li {
+        list-style: none;
+      }
+
+      .cs-link {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-decoration: none;
+        margin: 0;
+        color: var(--bodyTextColor);
+        display: block;
+        transition: color 0.3s;
+
+        &:hover {
+          color: var(--primary);
+        }
+      }
+
+      .cs-logo {
+        width: calc(168 / 16 * 1rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-logo-img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .cs-bottom {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(24 / 16 * 1rem);
+      }
+
+      .cs-social {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: calc(8 / 16 * 1rem);
+      }
+
+      .cs-social-li {
+        list-style: none;
+      }
+
+      .cs-social-link {
+        width: calc(32 / 16 * 1rem);
+        height: calc(32 / 16 * 1rem);
+        background-color: #e8e8e8;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s;
+        &:hover {
+          background-color: var(--primary);
+
+          .cs-social-icon {
+            filter: grayscale(1) brightness(1000%);
+            opacity: 1;
+          }
+        }
+      }
+
+      .cs-social-icon {
+        width: calc(12 / 16 * 1rem);
+        height: auto;
+        display: block;
+        opacity: 0.6;
+        transition: opacity 0.3s;
+      }
+
+      .cs-copyright {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+        display: block;
+      }
+
+      .cs-copyright-link {
+        font-size: inherit;
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.3s;
+
+        &:hover {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #footer-1154 {
+      .cs-top {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .cs-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+</style>

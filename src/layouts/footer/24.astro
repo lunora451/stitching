@@ -1,0 +1,206 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Footer                     --><!-- ============================================ -->
+<footer id="cs-footer-106">
+  <div class="cs-container">
+    <ul class="cs-ul">
+      <li class="cs-li">
+        <a href="" class="cs-link">Home</a>
+      </li>
+      <li class="cs-li">
+        <a href="" class="cs-link">About</a>
+      </li>
+      <li class="cs-li">
+        <a href="" class="cs-link">Services</a>
+      </li>
+      <li class="cs-li">
+        <a href="" class="cs-link">Gallery</a>
+      </li>
+      <li class="cs-li">
+        <a href="" class="cs-link">Contact</a>
+      </li>
+      <li class="cs-li">
+        <a href="mailto:info@codestitch.com" class="cs-link"
+          >info@codestitch.com</a
+        >
+      </li>
+    </ul>
+    <div class="cs-bottom">
+      <span class="cs-copyright">© 2022 Copyright</span>
+      <a
+        class="cs-social-link"
+        aria-label="visit google profile"
+        href=""
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Social/google-black.svg"
+          alt="google"
+          width="11"
+          height="11"
+        />
+      </a>
+      <a
+        class="cs-social-link"
+        aria-label="visit facebook profile"
+        href=""
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Social/facebook-black.svg"
+          alt="facebook"
+          width="6"
+          height="11"
+        />
+      </a>
+      <a
+        class="cs-social-link"
+        aria-label="visit instagram profile"
+        href=""
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Social/instagram-black.svg"
+          alt="instagram"
+          width="11"
+          height="11"
+        />
+      </a>
+    </div>
+  </div>
+</footer>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Footer           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #cs-footer-106 {
+      padding: calc(40 / 16 * 1rem) calc(16 / 16 * 1rem) calc(20 / 16 * 1rem);
+      background: #1a1a1a;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1080 / 16 * 1rem);
+        margin: auto;
+      }
+
+      .cs-ul {
+        padding: 0 0 calc(40 / 16 * 1rem);
+        margin: auto;
+        border-bottom: 1px solid #eff0f6;
+      }
+
+      .cs-li {
+        list-style: none;
+        text-align: center;
+        margin-bottom: calc(20 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      .cs-link {
+        /* 15px - 17px */
+        font-size: clamp(0.9375rem, 2vw, 1.0625rem);
+        line-height: 1.5em;
+        text-decoration: none;
+        font-weight: 700;
+        color: var(--bodyTextColorWhite);
+        position: relative;
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+
+        &:before {
+          /* top right box */
+          content: "";
+          width: 0%;
+          height: calc(3 / 16 * 1rem);
+          background: var(--bodyTextColorWhite);
+          opacity: 1;
+          position: absolute;
+          display: block;
+          bottom: calc(-2 / 16 * 1rem);
+          left: 0;
+          transition: width 0.3s;
+        }
+      }
+
+      .cs-bottom {
+        margin-top: calc(20 / 16 * 1rem);
+        display: flex;
+        /* set everyone to position on the left side */
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .cs-copyright {
+        font-size: calc(15 / 16 * 1rem);
+        text-align: center;
+        color: #a0a3bd;
+        display: block;
+        /* margin right auto on a flexbox pushes everyone else to the right */
+        margin: 0 auto 0 0;
+      }
+
+      .cs-social-link {
+        width: calc(20 / 16 * 1rem);
+        height: calc(20 / 16 * 1rem);
+        margin-left: calc(12 / 16 * 1rem);
+        background: #a0a3bd;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          height: calc(11 / 16 * 1rem);
+          width: auto;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 700px */
+  @media only screen and (min-width: 43.75rem) {
+    #cs-footer-106 {
+      .cs-ul {
+        display: flex;
+        /* push everything to the left */
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .cs-li {
+        /* 45px - 88px */
+        margin: 0 clamp(2.8125rem, 7vw, 5.5rem) 0 0;
+        &:last-of-type {
+          margin: 0;
+          /* margin-left auto will push everything away and force it to the farthest 
+                   right edge */
+          margin-left: auto;
+        }
+      }
+    }
+  }
+</style>

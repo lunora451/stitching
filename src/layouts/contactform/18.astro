@@ -1,0 +1,457 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Contact                    --><!-- ============================================ -->
+<section id="contact-1151">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Contact Us</span>
+      <h2 class="cs-title">We Love to Hear from Our Happy Customers</h2>
+    </div>
+    <div class="cs-contact-group">
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/group.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/group.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/group.jpg"
+          alt="people"
+          width="630"
+          height="300"
+        />
+      </picture>
+      <p class="cs-contact-text">
+        There are many variations of passages of available but the majority have
+        suffered alteration in some form, by injected randomized words even
+        slightly believable.
+      </p>
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <picture class="cs-icon-wrapper">
+            <img
+              aria-hidden="true"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-phone.svg"
+              alt="phone icon"
+              class="cs-icon"
+              width="40"
+              height="40"
+              decoding="async"
+            />
+          </picture>
+          <div class="cs-flex-group">
+            <span class="cs-header">Phone</span>
+            <a href="tel:888-4565-789
+                        " class="cs-link"
+              >+1 (888) 4565 789
+            </a>
+          </div>
+        </li>
+        <li class="cs-li">
+          <picture class="cs-icon-wrapper">
+            <img
+              aria-hidden="true"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-pin.svg"
+              alt="address icon"
+              class="cs-icon"
+              width="40"
+              height="40"
+              decoding="async"
+            />
+          </picture>
+          <div class="cs-flex-group">
+            <span class="cs-header">Address</span>
+            <a href="" class="cs-link">2553 Woodbridge Lane, Boston Ware 120</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--Form-->
+    <form class="cs-form" id="cs-form-1151" name="Contact Form" method="post">
+      <label class="cs-label">
+        Name
+        <input
+          class="cs-input"
+          required
+          type="text"
+          id="name-1151"
+          name="name"
+          placeholder="Name"
+        />
+      </label>
+      <label class="cs-label cs-email">
+        Email
+        <input
+          class="cs-input"
+          required
+          type="email"
+          id="email-1151"
+          name="email"
+          placeholder="Email"
+        />
+      </label>
+      <label class="cs-label cs-phone">
+        Phone
+        <input
+          class="cs-input"
+          required
+          type="number"
+          id="phone-1151"
+          name="phone"
+          placeholder="Phone"
+        />
+      </label>
+      <label class="cs-label">
+        Message
+        <textarea
+          class="cs-input cs-textarea"
+          required
+          name="Message"
+          id="message-1151"
+          placeholder="Write message..."></textarea>
+      </label>
+      <button class="cs-button-solid cs-submit" type="submit"
+        >Make an Appointment</button
+      >
+    </form>
+    <!--Bounce Graphic-->
+    <img
+      class="cs-graphic cs-graphic1"
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/bounce.svg"
+      alt="bounce"
+      width="208"
+      height="124"
+    />
+    <!--Coin Graphic-->
+    <img
+      class="cs-graphic cs-graphic2"
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/coin.svg"
+      alt="bounce"
+      width="205"
+      height="161"
+    />
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #contact-1151 {
+      padding: var(--sectionPadding);
+      background-color: #f7f7f7;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(704 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: column;
+        column-gap: auto;
+        /* 48px - 80px */
+        row-gap: clamp(3rem, 6vw, 5rem);
+        position: relative;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-topper {
+        color: #767676;
+      }
+
+      .cs-title {
+        max-width: 23ch;
+        margin: 0;
+      }
+
+      .cs-picture {
+        width: 100%;
+        /* 240px - 300px */
+        height: clamp(15rem, 35vw, 18.75rem);
+        margin: 0 0 calc(24 / 16 * 1rem);
+        border-radius: calc(24 / 16 * 1rem);
+        /* clips image corners */
+        overflow: hidden;
+        display: block;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-contact-text {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        text-align: left;
+        margin: 0 0 calc(24 / 16 * 1rem);
+        color: var(--bodyTextColor);
+      }
+
+      .cs-ul {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(24 / 16 * 1rem);
+        position: relative;
+      }
+
+      .cs-li {
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: calc(20 / 16 * 1rem);
+
+        &:hover {
+          .cs-icon-wrapper {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      .cs-header {
+        font-size: calc(20 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        margin-bottom: calc(12 / 16 * 1rem);
+        color: var(--headerColor);
+        display: block;
+      }
+
+      .cs-link {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        text-decoration: none;
+        color: #767676;
+        display: block;
+        position: relative;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .cs-icon-wrapper {
+        width: calc(60 / 16 * 1rem);
+        height: calc(60 / 16 * 1rem);
+        margin: 0;
+        border-radius: 50%;
+        border: 1px solid #bababa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* prevents flexbox from squishing it */
+        flex: none;
+        transition: transform 0.3s;
+      }
+
+      .cs-icon {
+        width: calc(24 / 16 * 1rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-form {
+        width: 100%;
+        /* 24px - 48px top and bottom */
+        /* 16px - 32px left and right */
+        padding: clamp(1.5rem, 5.18vw, 3rem) clamp(1rem, 4vw, 2rem);
+        /* prevents flexbox from affecting height and width */
+        box-sizing: border-box;
+        background-color: #fff;
+        border-radius: calc(16 / 16 * 1rem);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-label {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        width: 100%;
+        color: var(--headerColor);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: calc(4 / 16 * 1rem);
+      }
+
+      .cs-input {
+        font-size: calc(16 / 16 * 1rem);
+        width: 100%;
+        height: calc(56 / 16 * 1rem);
+        padding: 0;
+        padding-left: calc(24 / 16 * 1rem);
+        color: var(--headerColor);
+        background-color: #f7f7f7;
+        border-radius: calc(8 / 16 * 1rem);
+        border: none;
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+        &::placeholder {
+          color: #7d799c;
+          opacity: 0.6;
+        }
+      }
+
+      .cs-textarea {
+        min-height: calc(120 / 16 * 1rem);
+        padding-top: calc(24 / 16 * 1rem);
+        margin-bottom: calc(12 / 16 * 1rem);
+        font-family: inherit;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #1a1a1a;
+        border: none;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--secondary);
+        border-radius: calc(4 / 16 * 1rem);
+        overflow: hidden;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #fff;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-submit {
+        width: 100%;
+        min-width: calc(283 / 16 * 1rem);
+        border-radius: calc(8 / 16 * 1rem);
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .cs-graphic {
+        display: none;
+      }
+
+      .cs-graphic1 {
+        width: calc(208 / 16 * 1rem);
+        height: auto;
+        position: absolute;
+        left: calc(-120 / 16 * 1rem);
+        top: calc(138 / 16 * 1rem);
+      }
+
+      .cs-graphic2 {
+        width: calc(205 / 16 * 1rem);
+        height: auto;
+        position: absolute;
+        right: calc(-156 / 16 * 1rem);
+        top: calc(8 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #contact-1151 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .cs-contact-group {
+        width: 50%;
+        max-width: calc(630 / 16 * 1rem);
+        /* sends it to the right in the 2nd position */
+        order: 2;
+      }
+
+      .cs-form {
+        width: 46%;
+        max-width: calc(578 / 16 * 1rem);
+      }
+
+      .cs-submit {
+        width: auto;
+      }
+    }
+  }
+
+  /* Large Desktop - 1500px */
+  @media only screen and (min-width: 93.75rem) {
+    #contact-1151 {
+      .cs-graphic {
+        display: block;
+      }
+    }
+  }
+</style>

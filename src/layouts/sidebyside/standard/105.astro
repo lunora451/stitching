@@ -1,0 +1,271 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Side By Side                 --><!-- ============================================ -->
+<section id="sbs-83">
+  <div class="cs-container">
+    <!-- Left Section -->
+    <div class="cs-image-group">
+      <picture class="cs-picture">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/outdoors-m.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/outdoors.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/outdoors.jpg"
+          alt="people outside"
+          width="254"
+          height="262"
+        />
+      </picture>
+      <picture class="cs-picture">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/pathway-m.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/pathway.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/[pathway].jpg"
+          alt="people outside"
+          width="254"
+          height="262"
+        />
+      </picture>
+      <picture class="cs-picture">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/planting-m.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/planting.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/planting.jpg"
+          alt="person gardening"
+          width="254"
+          height="262"
+        />
+      </picture>
+      <picture class="cs-picture">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/urban-environment-m.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/urban-environment.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/urban-environment.jpg"
+          alt="urban environment in green"
+          width="254"
+          height="262"
+        />
+      </picture>
+    </div>
+    <!-- Right Section -->
+    <div class="cs-content">
+      <span class="cs-topper">What We Do</span>
+      <h2 class="cs-title">Good Design Good Business</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida
+        faucibus pharetra id integer faucibus velit a ut. Fermentum tortor
+        vulputate nec gravida mauris orci orci tristique.
+      </p>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <span class="cs-number">100+</span>
+          <h3 class="cs-h3">Happy Customers</h3>
+        </li>
+        <li class="cs-item">
+          <span class="cs-number">85+</span>
+          <h3 class="cs-h3">Landscape Renovations</h3>
+        </li>
+        <li class="cs-item">
+          <span class="cs-number">95+</span>
+          <h3 class="cs-h3">Fence Installations</h3>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---        Side By Side        -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-83 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(522 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        max-width: 20ch;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        max-width: calc(400 / 16 * 1rem);
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 32%;
+        max-width: calc(150 / 16 * 1rem);
+        /* making flex so we can align a heading with 1 line to the bottom */
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        align-content: space-between;
+      }
+
+      .cs-number {
+        /* 39px - 49px */
+        font-size: clamp(2.4375rem, 5vw, 3.0625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        text-align: left;
+        color: var(--primary);
+        display: block;
+        /* 8px - 16px */
+        margin: 0 0 clamp(0.25rem, 0.5vw, 1rem);
+      }
+
+      .cs-h3 {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        line-height: 1.2em;
+        text-align: left;
+        /* auto margin top will push text to bottom if there's only one line */
+        margin: auto 0 0;
+        color: var(--headerColor);
+      }
+
+      .cs-image-group {
+        width: 100%;
+        max-width: calc(542 / 16 * 1rem);
+        /* pushes down by the same amount the images overlap the image group */
+        margin: 0 0 calc(40 / 16 * 1rem);
+        display: flex;
+        /* separate children to opposite sides of the room */
+        justify-content: center;
+        align-content: space-between;
+        flex-wrap: wrap;
+        gap: clamp(0.5rem, 2vw, 1.25rem);
+      }
+
+      .cs-picture {
+        width: 48%;
+        /* 218px - 264px */
+        min-height: clamp(13.625rem, 25vw, 16.5rem);
+        aspect-ratio: 160/218;
+        position: relative;
+        display: block;
+
+        &:nth-of-type(2) {
+          /* move slightly down */
+          transform: translateY(calc(40 / 16 * 1rem));
+        }
+
+        &:nth-of-type(4) {
+          /* move slightly up */
+          transform: translateY(calc(40 / 16 * 1rem));
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes image act as a background image to the picture element */
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbs-83 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        /* 44px - 108px */
+        column-gap: clamp(2.75rem, calc(4.5vw * 1.2 + 1em), 6.75rem);
+      }
+
+      .cs-card-group {
+        max-width: 100%;
+      }
+
+      .cs-image-group {
+        /* 318px - 542px */
+        width: clamp(19.875rem, 46.9vw, 33.875rem);
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-picture {
+        width: 47.8%;
+        aspect-ratio: initial;
+      }
+    }
+  }
+</style>

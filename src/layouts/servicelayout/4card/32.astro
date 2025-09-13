@@ -1,0 +1,364 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Services                  --><!-- ============================================ -->
+<section id="services-1252">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex-group">
+        <span class="cs-topper">Our Services</span>
+        <h2 class="cs-title">Professional Construction Services</h2>
+      </div>
+      <p class="cs-text">
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat duis enim velit mollit. Amet minim mollit
+        non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+        consequat duis enim velit mollit.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <h3 class="cs-h3">Sustainable System</h3>
+          <p class="cs-item-text">
+            We’ve helped thousands of organizations transform to become relevant
+            of helped thousands.
+          </p>
+        </a>
+        <picture class="cs-item-background">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/structure1.jpeg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/structure1.jpeg"
+          />
+          <img
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/structure1.jpeg"
+            alt="construction"
+            width="413"
+            height="374"
+            aria-hidden="true"
+          />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <h3 class="cs-h3">Honest Services</h3>
+          <p class="cs-item-text">
+            We’ve helped thousands of organizations transform to become relevant
+            of helped thousands.
+          </p>
+        </a>
+        <picture class="cs-item-background">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/structure2.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/structure2.jpg"
+          />
+          <img
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/structure2.jpg"
+            alt="construction"
+            width="413"
+            height="374"
+            aria-hidden="true"
+          />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <h3 class="cs-h3">Remodeling Expert</h3>
+          <p class="cs-item-text">
+            We’ve helped thousands of organizations transform to become relevant
+            of helped thousands.
+          </p>
+        </a>
+        <picture class="cs-item-background">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/structure3.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/structure3.jpg"
+          />
+          <img
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/structure3.jpg"
+            alt="construction"
+            width="413"
+            height="374"
+            aria-hidden="true"
+          />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <h3 class="cs-h3">Remodeling Expert</h3>
+          <p class="cs-item-text">
+            We’ve helped thousands of organizations transform to become relevant
+            of helped thousands.
+          </p>
+        </a>
+        <picture class="cs-item-background">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/structure3.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/structure3.jpg"
+          />
+          <img
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/structure3.jpg"
+            alt="construction"
+            width="413"
+            height="374"
+            aria-hidden="true"
+          />
+        </picture>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-1252 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 10;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        max-width: 20ch;
+      }
+
+      .cs-card-group {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+      }
+
+      .cs-item {
+        width: 100%;
+        text-align: left;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        border-radius: calc(8 / 16 * 1rem);
+        /* clips background image corners */
+        overflow: hidden;
+        box-shadow: 0px 12px 80px 0px rgba(26, 26, 26, 0.08);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        grid-column: span 12;
+        grid-row: span 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+          .cs-item-background {
+            img {
+              opacity: 0.4;
+              transform: scale(1.3);
+            }
+          }
+
+          .cs-h3 {
+            color: var(--primary);
+          }
+        }
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          /* prevents border from affecting height and width */
+          box-sizing: border-box;
+          border-radius: calc(8 / 16 * 1rem);
+          /* prevents the mouse from interacting with it so when you hover hover the other elements inside the card it doesn't block your mouse from hovering over them */
+          pointer-events: none;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: 10;
+        }
+      }
+
+      .cs-link {
+        text-decoration: none;
+        /* 125px - 236px */
+        /* padding goes on the link, not the cs-item as is normal. We do this because we want the whole card to be hoverable. So we add the padding to the link tag to create the space inside the card. By adding the space inside the cs-link tag we can make the whole card hoverable since the padding is now contributing to the height and widht of the link */
+        padding: clamp(7.8125rem, 19vw, 14.75rem) calc(24 / 16 * 1rem)
+          calc(24 / 16 * 1rem);
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: bold;
+        text-align: inherit;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--bodyTextColorWhite);
+        transition: color 0.3s;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        max-width: calc(450 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-item-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        &:before {
+          /* background color overlay */
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 100%;
+          background: #1a1a1a;
+          opacity: 0.24;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        &:after {
+          /* background color overlay */
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 100%;
+          background: -moz-linear-gradient(
+            top,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 1) 100%
+          ); /* FF3.6-15 */
+          background: -webkit-linear-gradient(
+            top,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 1) 100%
+          ); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 1) 100%
+          );
+          opacity: 0.4;
+          bottom: 0;
+          left: 0;
+          z-index: 2;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes img tag act as a background image */
+          object-fit: cover;
+          transition:
+            transform 0.6s,
+            opacity 0.3s;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-1252 {
+      padding-bottom: 0;
+
+      .cs-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: calc(48 / 16 * 1rem);
+      }
+
+      .cs-title {
+        margin: 0;
+      }
+
+      .cs-flex-group {
+        width: 50%;
+      }
+
+      .cs-item {
+        grid-column: span 6;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #services-1252 {
+      .cs-item {
+        grid-column: span 3;
+      }
+    }
+  }
+</style>

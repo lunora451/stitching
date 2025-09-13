@@ -1,0 +1,304 @@
+---
+
+---
+
+<!-- ============================================ --><!--                     Hero                     --><!-- ============================================ --><!--NOTE: There is a spacing note on Tablet about adjusting the marign top of the section to match the height of whatever navbar you add on top of it-->
+<section id="hero-2173">
+  <div class="cs-container">
+    <div class="cs-content">
+      <picture class="cs-picture cs-picture1">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding10.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding10.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding10.jpg"
+          alt="people at a wedding"
+          width="1058"
+          height="936"
+        />
+      </picture>
+      <div class="cs-wrapper">
+        <h2 class="cs-title">Make Your Wedding Dream Come True</h2>
+        <div class="cs-flex">
+          <p class="cs-text">
+            Authentic wedding photography emphasizes candid shots that capture
+            real emotions, reactions, and interactions among the couple, their
+            families, and guests. These moments are often spontaneous and
+            heartfelt.
+          </p>
+          <a href="" class="cs-button-solid">Book An Appointment</a>
+        </div>
+      </div>
+      <picture class="cs-picture cs-picture2">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 1023px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding11-m.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 1024px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding11.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding11.jpg"
+          alt="bride"
+          width="350"
+          height="936"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+  /* Mobile */
+  @media only screen and (min-width: 0rem) {
+    #hero-2173 {
+      overflow: hidden;
+      background-color: #f7f7f7;
+      position: relative;
+      z-index: 1;
+
+      .cs-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-wrapper {
+        /* 60px - 80px top */
+        /* 60px - 100px Bottom */
+        padding: clamp(3.75rem, 5vw, 5rem) calc(16 / 16 * 1rem)
+          clamp(3.75rem, 9.6vw, 6.25rem);
+      }
+
+      .cs-flex {
+        /* changes to clamp at tablet */
+        padding-left: calc(60 / 16 * 1rem);
+      }
+
+      .cs-title {
+        /* 39px - 82px */
+        font-size: clamp(2.4375rem, 6.5vw, 5.125rem);
+        text-transform: uppercase;
+        line-height: 1.1em;
+        max-width: 18ch;
+        /* 16px - 78px */
+        margin-bottom: clamp(1rem, 6vw, 4.875rem);
+      }
+
+      .cs-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-picture1 {
+        width: 100%;
+        height: 110vw;
+      }
+
+      .cs-picture2 {
+        width: 100%;
+        height: 68vw;
+        /* removed at desktop */
+        max-height: calc(341 / 16 * 1rem);
+        margin-left: calc(76 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Tablet - 700px */
+  @media only screen and (min-width: 43.75rem) {
+    #hero-2173 {
+      /* make this value the same height as your navigation for best results, and only use a navigation with a background color, not transparent. wont look right */
+      margin-top: calc(120 / 16 * 1rem);
+
+      .cs-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .cs-content {
+        width: 57vw;
+      }
+
+      .cs-flex {
+        padding-left: calc(140 / 16 * 1rem);
+      }
+
+      .cs-picture1 {
+        width: 56vw;
+        height: 100vh;
+        position: absolute;
+        top: 0%;
+        right: 82%;
+        z-index: -1;
+        transform: translateY(-10rem);
+      }
+
+      .cs-picture2 {
+        width: auto;
+        margin-left: calc(216 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #hero-2173 {
+      padding-right: calc(300 / 16 * 1rem);
+
+      .cs-content {
+        width: 54%;
+        max-width: calc(544 / 16 * 1rem);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .cs-title {
+        max-width: 12ch;
+      }
+
+      .cs-picture1 {
+        width: 60vw;
+        right: calc(100% - 5rem);
+      }
+
+      .cs-picture2 {
+        width: 30vw;
+        max-width: calc(350 / 16 * 1rem);
+        height: 100vh;
+        max-height: 100vh;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: calc(100% + 2.5rem);
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  /* Large Desktop - 1920px */
+  @media only screen and (min-width: 120rem) {
+    #hero-2173 {
+      padding-right: 0;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        padding-right: calc(80 / 16 * 1rem);
+        box-sizing: border-box;
+        position: initial;
+      }
+
+      .cs-content {
+        position: initial;
+      }
+
+      .cs-picture1 {
+        height: auto;
+        margin-right: calc(-94 / 16 * 1rem);
+        right: 50%;
+        top: 0;
+        bottom: 0;
+        transform: none;
+      }
+
+      .cs-picture2 {
+        height: auto;
+        width: 20vw;
+        max-height: none;
+        max-width: none;
+        margin-left: calc(606 / 16 * 1rem);
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        transform: none;
+      }
+    }
+  }
+</style>

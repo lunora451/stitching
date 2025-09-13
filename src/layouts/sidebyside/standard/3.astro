@@ -1,0 +1,459 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Side By Side                 --><!-- ============================================ -->
+<section id="sbs-2411">
+  <div class="cs-container">
+    <!-- Left Image Section -->
+    <div class="cs-image-group">
+      <!--To make your own PNG cropped people, use https://www.remove.bg/ to remove the background of any image, then crop all the extra space around the image out so it doesnt look too small-->
+      <!--Main Image-->
+      <picture class="cs-picture">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/Misc/dog3.png"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/Misc/dog3.png"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Misc/dog3.png"
+          alt="woman with her dog"
+          width="630"
+          height="704"
+          aria-hidden="true"
+        />
+      </picture>
+      <!--Message-->
+      <span class="cs-message">Cleaner spaces, happier pets.</span>
+      <!--Arrow-->
+      <img
+        class="cs-arrow"
+        loading="lazy"
+        decoding="async"
+        src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/swirl-arrow.svg"
+        alt="graphic"
+        width="71"
+        height="151"
+        aria-hidden="true"
+      />
+      <!--Circle Graphic-->
+      <img
+        class="cs-circle"
+        loading="lazy"
+        decoding="async"
+        src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/dog-circle.svg"
+        alt="graphic"
+        width="630"
+        height="646"
+        aria-hidden="true"
+      />
+    </div>
+    <!-- Right Content Section-->
+    <div class="cs-content-wrapper">
+      <div class="cs-content">
+        <span class="cs-topper">About Us</span>
+        <h2 class="cs-title">Dedicated to Cleaner Yards and Communities</h2>
+        <p class="cs-text">
+          We provide consistent, reliable pet waste services backed by strong
+          community values and eco-friendly practices. Your pets’ safety and
+          your satisfaction drive everything we do.
+        </p>
+        <ul class="cs-ul">
+          <li class="cs-li">
+            <img
+              class="cs-li-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/diamond.svg"
+              alt="diamond"
+              width="16"
+              height="16"
+            />
+            We proudly serve San Jose and the surrounding areas.
+          </li>
+          <li class="cs-li">
+            <img
+              class="cs-li-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/diamond.svg"
+              alt="diamond"
+              width="16"
+              height="16"
+            />
+            Skilled team dedicated to quality service.
+          </li>
+          <li class="cs-li">
+            <img
+              class="cs-li-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/diamond.svg"
+              alt="diamond"
+              width="16"
+              height="16"
+            />
+            Safe for pets, families, and the environment.
+          </li>
+          <li class="cs-li">
+            <img
+              class="cs-li-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/diamond.svg"
+              alt="diamond"
+              width="16"
+              height="16"
+            />
+            Count on us for punctual and courteous visits.
+          </li>
+        </ul>
+        <a class="cs-button-solid" href="">Learn More About Us</a>
+      </div>
+      <div class="cs-wrapper">
+        <div class="cs-graphic-group">
+          <!-- Circle Graphic -->
+          <img
+            class="cs-circle-small"
+            src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/dog-circle.svg"
+            alt="circle"
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+            width="157"
+            height="157"
+          />
+          <!-- Poop graphic -->
+          <img
+            class="cs-graphic"
+            src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Illustrations/poop-bag.svg"
+            alt="poop bag"
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+            width="96"
+            height="108"
+          />
+        </div>
+        <div class="cs-flex">
+          <h3 class="cs-header">Our mission:</h3>
+          <p class="cs-text cs-graphic-text">
+            Our mission is to promote healthier environments through
+            professional, affordable pet waste management services that make
+            life easier for families, property managers, and pet lovers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-2411 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        /* background color overlay */
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: var(--primary);
+        opacity: 0.05;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(580 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-content-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        min-width: calc(150 / 16 * 1rem);
+        margin: 0;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        color: #fff;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #000;
+          opacity: 1;
+          border-radius: calc(4 / 16 * 1rem);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-ul {
+        width: 100%;
+        list-style: none;
+        margin: 0 0 calc(32 / 16 * 1rem) 0;
+        padding: 0;
+        /* prevents padding from affecting width and height */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(8 / 16 * 1rem);
+      }
+
+      .cs-li {
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        text-align: left;
+        font-weight: 700;
+        width: 100%;
+        margin: 0;
+        color: var(--bodyTextColor);
+        display: flex;
+        align-items: center;
+        gap: calc(12 / 16 * 1rem);
+        position: relative;
+      }
+
+      .cs-li-icon {
+        width: calc(16 / 16 * 1rem);
+        height: auto;
+        flex: none;
+        display: block;
+        position: relative;
+      }
+
+      .cs-image-group {
+        /* scaling entire section down. font-size starts at a min in vw, and stops when that vales equals .74em, resets at desktop */
+        font-size: min(2.3vw, 0.6em);
+        width: calc(630 / 16 * 1em);
+        height: calc(704 / 16 * 1em);
+        position: relative;
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: calc(704 / 16 * 1em);
+        display: block;
+        position: relative;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+          position: relative;
+          bottom: 0;
+          left: 0;
+        }
+      }
+
+      .cs-circle {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .cs-message {
+        font-weight: 700;
+        width: calc(197 / 16 * 1em);
+        padding: calc(16 / 16 * 1em) calc(24 / 16 * 1em);
+        background-color: #fff;
+        border-radius: calc(32 / 16 * 1em);
+        text-align: center;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        &:before {
+          /* background color overlay */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: var(--primary);
+          opacity: 0.1;
+          border-radius: calc(32 / 16 * 1em);
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+        }
+
+        &:after {
+          /* background color overlay */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background-color: transparent;
+          border: calc(4 / 16 * 1em) solid var(--primary);
+          opacity: 0.2;
+          border-radius: calc(32 / 16 * 1em);
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+        }
+      }
+
+      .cs-arrow {
+        width: calc(150 / 16 * 1em);
+        height: auto;
+        position: absolute;
+        top: calc(99 / 16 * 1em);
+        right: calc(50 / 16 * 1em);
+      }
+
+      .cs-wrapper {
+        width: 100%;
+        max-width: calc(580 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* 16px - 32px */
+        gap: clamp(1rem, 1.9vw, 2rem);
+      }
+
+      .cs-graphic-group {
+        /* 96px - 157px */
+        width: clamp(6rem, 10vw, 9.8125rem);
+        height: clamp(6rem, 10vw, 9.8125rem);
+        flex: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .cs-circle-small {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .cs-graphic {
+        /* 55px - 96px */
+        width: clamp(3.4375rem, 5vw, 6rem);
+        height: auto;
+      }
+
+      .cs-header {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.9vw, 1.5625rem);
+        font-weight: 700;
+        margin-bottom: calc(12 / 16 * 1rem);
+        display: block;
+      }
+
+      .cs-graphic-text {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbs-2411 {
+      .cs-wrapper {
+        flex-direction: row;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #sbs-2411 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      .cs-image-group {
+        /* reset the scale */
+        font-size: min(0.95vw, 1rem);
+        /* prevent flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-content-wrapper {
+        width: 50%;
+      }
+    }
+  }
+</style>

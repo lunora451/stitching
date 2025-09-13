@@ -1,0 +1,284 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Gallery                    --><!-- ============================================ -->
+<section id="gallery-2243">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our Gallery</span>
+      <h2 class="cs-title">
+        A Dedicated Team Of Photographers, Capturing Precious Moments With Every
+        Click
+      </h2>
+      <p class="cs-text">
+        We have courses on-demand and live instructors for workshops and
+        support. We also provide LIVE instructor-led training courses and onsite
+        training.
+      </p>
+    </div>
+    <div class="cs-gallery">
+      <picture class="cs-picture cs-picture1">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg"
+          alt="formerly dress you people outside"
+          width="380"
+          height="271"
+        />
+      </picture>
+      <picture class="cs-picture cs-picture2">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg"
+          alt="formerly dress you people outside"
+          width="380"
+          height="271"
+        />
+      </picture>
+      <picture class="cs-picture cs-picture3">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg"
+          alt="formerly dress you people outside"
+          width="380"
+          height="271"
+        />
+      </picture>
+      <picture class="cs-picture cs-picture4">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg"
+          alt="formerly dress you people outside"
+          width="380"
+          height="271"
+        />
+      </picture>
+      <picture class="cs-picture cs-picture5">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg"
+          alt="formerly dress you people outside"
+          width="380"
+          height="271"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Gallery          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #gallery-2243 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1840 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 5vw, 4rem);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-content {
+        /* aligns text centrally. set to left to left-align text */
+        text-align: center;
+        pointer-events: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* centrally aligns items. set to flex-start to left-align items */
+        align-items: center;
+        z-index: 2;
+      }
+
+      .cs-title {
+        max-width: 40ch;
+      }
+
+      .cs-gallery {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(16, 16.666vw);
+        gap: clamp(0.5rem, 2vw, 1.25rem);
+      }
+
+      .cs-picture {
+        grid-column: span 6;
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-picture1 {
+        grid-row: 2 / span 3;
+      }
+
+      .cs-picture2 {
+        grid-row: 1 / span 4;
+      }
+
+      .cs-picture3 {
+        grid-column: span 12;
+        grid-row: 5 / span 5;
+      }
+
+      .cs-picture4 {
+        grid-row: 10 / span 4;
+      }
+
+      .cs-picture5 {
+        grid-row: 11 / span 3;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #gallery-2243 {
+      .cs-gallery {
+        /* 320px - 600px */
+        height: clamp(20rem, 41vw, 37.5rem);
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+
+        .cs-picture {
+          grid-column: span 1;
+        }
+
+        .cs-picture1 {
+          grid-column: 1 / span 1;
+          grid-row: 2 / span 3;
+        }
+
+        .cs-picture2 {
+          grid-column: 2 / span 1;
+          grid-row: 1 / span 4;
+        }
+
+        .cs-picture3 {
+          grid-column: 3 / span 2;
+          grid-row: 1 / span 6;
+        }
+
+        .cs-picture4 {
+          grid-column: 5 / span 1;
+          grid-row: 1 / span 4;
+        }
+
+        .cs-picture5 {
+          grid-column: 6 / span 1;
+          grid-row: 2 / span 3;
+        }
+      }
+    }
+  }
+
+  /* Desktop - 1600px */
+  @media only screen and (min-width: 100rem) {
+    #gallery-2243 {
+      .cs-gallery {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+
+        .cs-picture {
+          grid-column: span 1;
+        }
+
+        .cs-picture1 {
+          grid-column: 1 / span 1;
+          grid-row: 2 / span 4;
+        }
+
+        .cs-picture2 {
+          grid-column: 2 / span 1;
+          grid-row: 1 / span 5;
+        }
+
+        .cs-picture3 {
+          grid-column: 3 / span 1;
+          grid-row: 1 / span 6;
+        }
+
+        .cs-picture4 {
+          grid-column: 4 / span 1;
+          grid-row: 1 / span 5;
+        }
+
+        .cs-picture5 {
+          grid-column: 5 / span 1;
+          grid-row: 2 / span 4;
+        }
+      }
+    }
+  }
+</style>

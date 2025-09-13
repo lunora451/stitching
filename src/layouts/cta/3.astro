@@ -1,0 +1,198 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Call To Action                --><!-- ============================================ -->
+<section id="cta-2372">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h2 class="cs-title">Start Your Journey Towards Success Today</h2>
+      <p class="cs-text">
+        Receive expert support and compassionate care tailored to your needs,
+        along with a personalized therapy plan designed to fit seamlessly into
+        your life.
+      </p>
+      <a href="" class="cs-button-solid">Schedule Your Consultation</a>
+    </div>
+    <img
+      class="cs-graphic"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/healing-hands.svg"
+      alt="graphic"
+      loading="lazy"
+      decoding="async"
+      width="490"
+      height="451"
+    />
+    <img
+      class="cs-floater"
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/flower2.svg"
+      alt="flower blur"
+      width="851"
+      height="991"
+      aria-hidden="true"
+    />
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---      Call To Action        -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #cta-2372 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        padding: clamp(2rem, 8vw, 3.75rem) clamp(1rem, 6vw, 6.75rem) 0;
+        background-color: #08101a;
+        border-radius: calc(16 / 16 * 1rem);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(580 / 16 * 1rem);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        text-align: inherit;
+        margin-bottom: calc(32 / 16 * 1rem);
+        /* 48px - 64px */
+        padding-bottom: clamp(3rem, 6vw, 4rem);
+        color: var(--bodyTextColorWhite);
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 100vw;
+          height: 1px;
+          background: #d2d8df;
+          opacity: 0.2;
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(100 / 16 * 1rem);
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-graphic {
+        width: 100%;
+        max-width: calc(490 / 16 * 1rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-floater {
+        width: calc(851 / 16 * 1rem);
+        height: auto;
+        background-blend-mode: hard-light;
+        opacity: 0.54;
+        filter: blur(80px);
+        /* prevents the mouse from interacting wiht it */
+        pointer-events: none;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  /* Tablet - 700px */
+  @media only screen and (min-width: 43.75rem) {
+    #cta-2372 {
+      .cs-container {
+        padding-bottom: calc(60 / 16 * 1rem);
+        flex-direction: row;
+        align-items: flex-end;
+      }
+
+      .cs-content {
+        width: 45vw;
+      }
+
+      .cs-graphic {
+        width: 40vw;
+        position: absolute;
+        bottom: calc(0 / 16 * 1rem);
+        right: calc(18 / 16 * 1rem);
+        z-index: 1;
+      }
+    }
+  }
+</style>

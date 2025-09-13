@@ -1,0 +1,326 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Services                    --><!-- ============================================ -->
+<section id="services-502">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Service</span>
+      <h2 class="cs-title">Laboratory Testing Services</h2>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/cube.svg"
+          decoding="async"
+          alt="cube icon"
+          width="60"
+          height="60"
+        />
+        <div class="cs-flex-group">
+          <h3 class="cs-h3">Expert Service</h3>
+          <p class="cs-item-text">
+            Amet minim mollit non deserunt ullamco est sit aliqua minim mollit
+            non.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/cube.svg"
+          decoding="async"
+          alt="cube icon"
+          width="60"
+          height="60"
+        />
+        <div class="cs-flex-group">
+          <h3 class="cs-h3">Expert Service</h3>
+          <p class="cs-item-text">
+            Amet minim mollit non deserunt ullamco est sit aliqua minim mollit
+            non.
+          </p>
+        </div>
+      </li>
+    </ul>
+    <a href="" class="cs-button-solid">Learn More</a>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 767px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/people.jpg"
+    />
+    <source
+      media="(min-width: 768px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/people.jpg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/people.jpg"
+      alt="people"
+      width="275"
+      height="132"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-502 {
+      margin: var(--sectionPadding);
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0 calc(16 / 16 * 1rem);
+      /* prevents overflow from the slant shape */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        /* section background */
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: var(--primary);
+        opacity: 1;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        /* 60px - 80px top and bottom */
+        padding: clamp(3.75em, 6.82vw, 5em) 0;
+        /* maintains proportional margin top as screen size grows */
+        margin-top: 56vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        /* 40px - 70px */
+        gap: clamp(2.5rem, 5.7vw, 4.375rem);
+        position: relative;
+        /* places it on top of the cs-background */
+        z-index: 10;
+
+        &:before {
+          /* section slant on mobile */
+          content: "";
+          width: calc(1000 / 16 * 1rem);
+          height: calc(2000 / 16 * 1rem);
+          background: var(--primary);
+          opacity: 1;
+          position: absolute;
+          z-index: -1;
+          display: block;
+          top: calc(-460 / 16 * 1rem);
+          /* these last two center it horizontally and rotate -65deg */
+          left: 50%;
+          transform: translateX(-50%) rotate(-65deg);
+        }
+      }
+
+      .cs-background {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .cs-content {
+        width: 100%;
+      }
+
+      .cs-topper {
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-title {
+        /* changes to 45% at tablet */
+        width: 95%;
+        max-width: calc(514 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-card-group {
+        width: 100%;
+        max-width: calc(564 / 16 * 1rem);
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* 20px - 32px */
+        gap: clamp(1.25rem, 3vw, 2rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        /* 32px - 64px */
+        gap: clamp(2rem, 5vw, 4rem);
+      }
+
+      .cs-icon {
+        width: calc(60 / 16 * 1rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-h3 {
+        /* 25px - 31px */
+        font-size: clamp(1.5625rem, 3vw, 1.9375rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0 0 calc(20 / 16 * 1rem) 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-item-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 1rem, 1.25rem);
+        line-height: 1.5em;
+        text-align: left;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #000;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--secondary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #fff;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-502 {
+      &:before {
+        /* remove the pseudo for the section background */
+        display: none;
+      }
+      .cs-background {
+        /* reset height to let top and bottom properties create the height */
+        height: auto;
+        aspect-ratio: initial;
+        position: absolute;
+        /* creates the gap between the image and the blue section */
+        top: calc(60 / 16 * 1rem);
+        bottom: 0;
+
+        img {
+          width: 60%;
+          left: auto;
+          right: 0;
+          object-position: 80% top;
+        }
+      }
+
+      .cs-container {
+        margin-top: 0;
+
+        &:before {
+          /* make really tall so it always covers top to bottom, even when you add more list items */
+          height: calc(4000 / 16 * 1rem);
+          /* make really really wide so it covers the left side at large scree sizes */
+          width: calc(4000 / 16 * 1rem);
+          /* push X amount from the center line to the right.  If after you added content and the slant is not covering everything, make this negative number even more negative to pull it more to the right */
+          margin-right: calc(-1100 / 16 * 1rem);
+          /* prevents the mouse from interacting with it */
+          pointer-events: none;
+          top: 50%;
+          left: auto;
+          /* pushes the right edge of the element to the center line of the parent */
+          right: 50%;
+          transform: rotate(-35deg) translateY(-50%);
+        }
+      }
+
+      .cs-title {
+        width: 45%;
+      }
+
+      .cs-card-group {
+        width: 52%;
+        /* 24px - 32px */
+        padding-left: clamp(1.5rem, 3vw, 2rem);
+        /* prevents padding from adding to width */
+        box-sizing: border-box;
+      }
+
+      .cs-item {
+        flex-direction: row;
+      }
+    }
+  }
+</style>

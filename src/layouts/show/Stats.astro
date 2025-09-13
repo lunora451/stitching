@@ -1,0 +1,215 @@
+---
+import Stats1 from "../stats/1.astro";
+import Stats2 from "../stats/2.astro";
+import Stats3 from "../stats/3.astro";
+import Stats4 from "../stats/4.astro";
+import Stats5 from "../stats/5.astro";
+import Stats6 from "../stats/6.astro";
+import Stats7 from "../stats/7.astro";
+import Stats8 from "../stats/8.astro";
+import Stats9 from "../stats/9.astro";
+import Stats10 from "../stats/10.astro";
+import Stats11 from "../stats/11.astro";
+import Stats12 from "../stats/12.astro";
+import Stats13 from "../stats/13.astro";
+import Stats14 from "../stats/14.astro";
+import Stats15 from "../stats/15.astro";
+import Stats16 from "../stats/16.astro";
+import Stats17 from "../stats/17.astro";
+import Stats18 from "../stats/18.astro";
+import Stats19 from "../stats/19.astro";
+import Stats20 from "../stats/20.astro";
+import Stats21 from "../stats/21.astro";
+import Stats22 from "../stats/22.astro";
+import Stats23 from "../stats/23.astro";
+import Stats24 from "../stats/24.astro";
+import Stats25 from "../stats/25.astro";
+import Stats26 from "../stats/26.astro";
+import Stats27 from "../stats/27.astro";
+import Stats28 from "../stats/28.astro";
+---
+
+<div class="c-collection">
+  <div class="c-stats" data-value-stats="1">
+    <Stats1 />
+  </div>
+  <div class="c-stats" data-value-stats="2">
+    <Stats2 />
+  </div>
+  <div class="c-stats" data-value-stats="3">
+    <Stats3 />
+  </div>
+  <div class="c-stats" data-value-stats="4">
+    <Stats4 />
+  </div>
+  <div class="c-stats" data-value-stats="5">
+    <Stats5 />
+  </div>
+  <div class="c-stats" data-value-stats="6">
+    <Stats6 />
+  </div>
+  <div class="c-stats" data-value-stats="7">
+    <Stats7 />
+  </div>
+  <div class="c-stats" data-value-stats="8">
+    <Stats8 />
+  </div>
+  <div class="c-stats" data-value-stats="9">
+    <Stats9 />
+  </div>
+  <div class="c-stats" data-value-stats="10">
+    <Stats10 />
+  </div>
+  <div class="c-stats" data-value-stats="11">
+    <Stats11 />
+  </div>
+  <div class="c-stats" data-value-stats="12">
+    <Stats12 />
+  </div>
+  <div class="c-stats" data-value-stats="13">
+    <Stats13 />
+  </div>
+  <div class="c-stats" data-value-stats="14">
+    <Stats14 />
+  </div>
+  <div class="c-stats" data-value-stats="15">
+    <Stats15 />
+  </div>
+  <div class="c-stats" data-value-stats="16">
+    <Stats16 />
+  </div>
+  <div class="c-stats" data-value-stats="17">
+    <Stats17 />
+  </div>
+  <div class="c-stats" data-value-stats="18">
+    <Stats18 />
+  </div>
+  <div class="c-stats" data-value-stats="19">
+    <Stats19 />
+  </div>
+  <div class="c-stats" data-value-stats="20">
+    <Stats20 />
+  </div>
+  <div class="c-stats" data-value-stats="21">
+    <Stats21 />
+  </div>
+  <div class="c-stats" data-value-stats="22">
+    <Stats22 />
+  </div>
+  <div class="c-stats" data-value-stats="23">
+    <Stats23 />
+  </div>
+  <div class="c-stats" data-value-stats="24">
+    <Stats24 />
+  </div>
+  <div class="c-stats" data-value-stats="25">
+    <Stats25 />
+  </div>
+  <div class="c-stats" data-value-stats="26">
+    <Stats26 />
+  </div>
+  <div class="c-stats" data-value-stats="27">
+    <Stats27 />
+  </div>
+  <div class="c-stats" data-value-stats="28">
+    <Stats28 />
+  </div>
+</div>
+
+<style lang="scss">
+  .c-collection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .c-stats {
+    display: none;
+  }
+  .active {
+    width: 100%;
+    display: block;
+  }
+</style>
+
+<script>
+  function changeCollection(selectedValue) {
+    const collections = document.querySelectorAll(".c-stats");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none" est sélectionné, ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection sélectionnée
+    const targetCollection = document.querySelector(
+      `[data-value-stats="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  // Fonction pour le hover des options
+  function previewOnHover(selectedValue) {
+    const collections = document.querySelectorAll(".c-stats");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none", ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection en preview
+    const targetCollection = document.querySelector(
+      `[data-value-stats="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const select = document.getElementById("template-select-stats");
+    const collections = document.querySelectorAll(".c-stats");
+
+    if (!select) return;
+
+    select.addEventListener("change", function () {
+      const selectedValue = this.value;
+      changeCollection(selectedValue);
+    });
+
+    // Alternative pour navigateur qui ne supportent pas mouseover sur option
+    let isSelectOpen = false;
+
+    select.addEventListener("focus", function () {
+      isSelectOpen = true;
+    });
+
+    select.addEventListener("blur", function () {
+      isSelectOpen = false;
+      // Revenir à la valeur sélectionnée quand on ferme
+      changeCollection(this.value);
+    });
+
+    // Navigation avec les flèches
+    select.addEventListener("keydown", function (e) {
+      if (isSelectOpen && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
+        setTimeout(() => {
+          // Simuler le hover sur l'option "focusée"
+          const currentValue = this.value;
+          previewOnHover(currentValue);
+        }, 10);
+      }
+    });
+  });
+</script>

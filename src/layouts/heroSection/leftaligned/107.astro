@@ -1,0 +1,298 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Hero                       --><!-- ============================================ -->
+<section id="hero-288">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h1 class="cs-title">Defending Your Rights For The Next Generation</h1>
+      <p class="cs-text">
+        If you use real content in the design process, anytime you reach a
+        review point you’ll end up reviewing and negotiating the content.
+      </p>
+      <a href="" class="cs-button-solid">Make An Appointment</a>
+      <ul class="cs-stats-group">
+        <li class="cs-item">
+          <span class="cs-number">50+</span>
+          <span class="cs-desc">Licensed Attorneys</span>
+        </li>
+        <li class="cs-item">
+          <span class="cs-number">850+</span>
+          <span class="cs-desc">Global Partners</span>
+        </li>
+        <li class="cs-item">
+          <span class="cs-number">98%</span>
+          <span class="cs-desc">Successful Judgements</span>
+        </li>
+      </ul>
+    </div>
+    <!--Hero Image-->
+    <picture class="cs-picture">
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.digitaloceanspaces.com/Hero/lawyer-m.jpg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.digitaloceanspaces.com/Hero/lawyer-t.jpg"
+      />
+      <source
+        media="(min-width: 1024px)"
+        srcset="https://csimg.nyc3.digitaloceanspaces.com/Hero/lawyer.jpg"
+      />
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="https://csimg.nyc3.digitaloceanspaces.com/Hero/lawyer.jpg"
+        alt="lawyer"
+        width="630"
+        height="814"
+      />
+    </picture>
+    <!--Green Waves-->
+    <picture class="cs-waves">
+      <source
+        media="(min-width: 1024px)"
+        srcset="https://csimg.nyc3.digitaloceanspaces.com/Hero/waves.svg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.digitaloceanspaces.com/Hero/waves-t.svg"
+      />
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.digitaloceanspaces.com/Hero/waves-m.svg"
+      />
+      <img
+        decoding="async"
+        src="https://csimg.nyc3.digitaloceanspaces.com/Hero/waves.svg"
+        alt="waves"
+        width="645"
+        height="1080"
+        aria-hidden="true"
+      />
+    </picture>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---            Hero            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-288 {
+      /* centers button */
+      text-align: center;
+      /* 116px - 164px top */
+      /* 60px - 100px  bottom */
+      padding: clamp(7.25rem, 16.82vw, 10.25rem) calc(16 / 16 * 1rem)
+        clamp(3.75rem, 7.82vw, 6.25rem);
+      position: relative;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .cs-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .cs-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 5vw, 3.8125rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: center;
+        max-width: calc(700 / 16 * 1rem);
+        margin: 0 auto calc(16 / 16 * 1rem);
+        color: var(--headerColor);
+        position: relative;
+      }
+
+      .cs-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 1.5vw, 1.25rem);
+        line-height: 1.5em;
+        text-align: center;
+        width: 100%;
+        max-width: calc(531 / 16 * 1rem);
+        margin: 0 auto;
+        /* 28px - 40px */
+        margin-bottom: clamp(1.75rem, 3.92vw, 2.5rem);
+        color: var(--bodyTextColor);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: auto;
+        color: #1a1a1a;
+        min-width: calc(150 / 16 * 1rem);
+        margin: 0;
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--secondary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: var(--primary);
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #fff;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-stats-group {
+        max-width: calc(522 / 16 * 1rem);
+        margin: 0;
+        /* 40px - 98px */
+        margin-top: clamp(2.5rem, calc(6.3vw + 1rem), 6.125rem);
+        /* 40px - 48px */
+        margin-bottom: clamp(2.5rem, 10vw, 3rem);
+        padding: 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        /* 20px - 40px */
+        column-gap: clamp(1.25rem, 5.9vw, 2.5rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: auto;
+      }
+
+      .cs-number {
+        /* 25px - 49px */
+        font-size: clamp(1.5625rem, 3.8vw, 3.0625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        color: var(--headerColor);
+        display: block;
+      }
+
+      .cs-desc {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 2.1vw, 1rem);
+        line-height: 1.5em;
+        color: #767676;
+      }
+
+      .cs-picture {
+        width: 100%;
+        max-width: calc(585 / 16 * 1rem);
+        /* 380px - 453px */
+        height: clamp(23.75rem, 59vw, 28.3215rem);
+        border-radius: calc(16 / 16 * 1rem);
+        /* clips the img tag corners */
+        overflow: hidden;
+        display: block;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* makes image act as a background image */
+          object-fit: cover;
+        }
+      }
+
+      .cs-waves {
+        width: 100%;
+        height: 30%;
+        background-color: var(--primary);
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* makes image act as a background image */
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #hero-288 {
+      text-align: left;
+      .cs-container {
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: calc(100 / 16 * 1rem);
+      }
+
+      .cs-content {
+        width: 40%;
+        /* prevents flex-box from squishing it */
+        flex: none;
+        align-items: flex-start;
+      }
+
+      .cs-title,
+      .cs-text {
+        text-align: left;
+      }
+
+      .cs-picture {
+        max-width: calc(630 / 16 * 1rem);
+        /* 623px - 814px */
+        height: clamp(38.9375rem, 60vw, 50.875rem);
+      }
+
+      .cs-waves {
+        height: 100%;
+        width: calc(40vw + 9rem);
+        left: 50%;
+        margin-left: calc(200 / 16 * 1rem);
+      }
+    }
+  }
+</style>

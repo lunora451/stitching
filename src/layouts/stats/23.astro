@@ -1,0 +1,184 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Stats                      --><!-- ============================================ -->
+<section id="stats-472">
+  <div class="cs-container">
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Stats/codestitch.svg"
+          loading="lazy"
+          decoding="async"
+          alt="icon"
+          width="76"
+          height="66"
+        />
+        <span class="cs-number">100+</span>
+        <span class="cs-desc">Landscape Renovations Completed</span>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Stats/codestitch.svg"
+          loading="lazy"
+          decoding="async"
+          alt="icon"
+          width="76"
+          height="66"
+        />
+        <span class="cs-number">100%</span>
+        <span class="cs-desc">Guaranteed Customer Satisfaction</span>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Stats/codestitch.svg"
+          loading="lazy"
+          decoding="async"
+          alt="icon"
+          width="76"
+          height="66"
+        />
+        <span class="cs-number">5/5</span>
+        <span class="cs-desc">From 34 Google Ratings</span>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Stats/codestitch.svg"
+          loading="lazy"
+          decoding="async"
+          alt="icon"
+          width="76"
+          height="66"
+        />
+        <span class="cs-number">5/5</span>
+        <span class="cs-desc">From 34 Google Ratings</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #stats-472 {
+      padding: var(--sectionPadding);
+      background-color: #14142b;
+      /* clips the glowing orbs from causing overflow issues when they overflow the container */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      &:before,
+      &:after {
+        /* glowing orbs */
+        content: "";
+        width: calc(453 / 16 * 1rem);
+        height: calc(333 / 16 * 1rem);
+        background: #f1f1f4;
+        opacity: 0.16;
+        -webkit-filter: blur(182px);
+        filter: blur(182px);
+        position: absolute;
+        display: block;
+        top: calc(-66 / 16 * 1rem);
+        left: calc(-227 / 16 * 1rem);
+        z-index: -1;
+      }
+
+      &:after {
+        display: none;
+      }
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(700 / 16 * 1rem);
+        margin: auto;
+      }
+
+      .cs-card-group {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: calc(60 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 47%;
+        max-width: calc(240 / 16 * 1rem);
+        margin: 0;
+        padding: 0 calc(12 / 16 * 1rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cs-icon {
+        /* 50px - 76px */
+        width: clamp(3.125rem, 6vw, 4.75rem);
+        height: auto;
+        margin: 0 0 calc(20 / 16 * 1rem);
+        display: block;
+      }
+
+      .cs-number {
+        /* 31px - 61px */
+        font-size: clamp(1.9375rem, 4.3vw, 3.8125rem);
+        line-height: 1.2em;
+        text-align: center;
+        font-weight: 400;
+        margin: 0 0 calc(4 / 16 * 1rem) 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-desc {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2vw, 1.15rem);
+        line-height: 1.5em;
+        text-align: center;
+        width: 100%;
+        color: var(--bodyTextColorWhite);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #stats-472 {
+      &:after {
+        display: block;
+        left: auto;
+        top: calc(57 / 16 * 1rem);
+        right: calc(-281 / 16 * 1rem);
+      }
+
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: calc(16 / 16 * 1rem);
+      }
+    }
+  }
+</style>

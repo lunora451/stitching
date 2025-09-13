@@ -1,0 +1,506 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    CTA                       --><!-- ============================================ -->
+<section id="cta-1192">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Trusted Car Repair Company</span>
+      <h2 class="cs-title">The Best Service Is Our Main Goal</h2>
+      <a href="" class="cs-button-solid">Contact Now</a>
+    </div>
+    <!--To make an image like this one, use https://www.remove.bg/ to remove the background of any image-->
+    <picture class="cs-image">
+      <!--Mobile Image-->
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/yellow-car.png"
+      />
+      <!--Tablet and above Image-->
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/yellow-car.png"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/yellow-car.png"
+        alt="yellow car"
+        width="779"
+        height="482"
+      />
+    </picture>
+  </div>
+  <!--Tire Screech-->
+  <picture class="cs-graphic-wrapper">
+    <img
+      class="cs-graphic"
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/tire-screech2.svg"
+      alt="tire screech"
+      width="1462"
+      height="434"
+    />
+  </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                  Reviews                     -->
+<!-- ============================================ -->
+
+<section id="reviews-1192">
+  <div class="cs-container">
+    <!--Person-->
+    <picture class="cs-picture">
+      <!--Mobile Image-->
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/suit.jpg"
+      />
+      <!--Tablet and above Image-->
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/suit.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/suit.jpg"
+        alt="man in suit"
+        width="738"
+        height="493"
+      />
+    </picture>
+    <div class="cs-review-group">
+      <img
+        class="cs-icon"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/red-quotes.svg"
+        alt="red quotes"
+        width="97"
+        height="80"
+        aria-hidden="true"
+      />
+      <p class="cs-review-text">
+        When you think about collecting customer feed back, it’s easy to get
+        overwhelmed by the sheer volume of . With so many more customers and so
+        many ways to connect with their feedback it’s hard to know to where to
+        start.
+      </p>
+      <div class="cs-info">
+        <img
+          class="cs-profile"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mech-profile.png"
+          alt="profile"
+          width="50"
+          height="50"
+          aria-hidden="true"
+        />
+        <div class="cs-flex">
+          <span class="cs-name">George Thomas</span>
+          <span class="cs-desc">Founder Of Yokoloko</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #cta-1192 {
+      margin-top: calc(30 / 16 * 1rem);
+      padding: var(--sectionPadding);
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        /* yellow shape */
+        content: "";
+        width: calc(196 / 16 * 1rem);
+        /* 64px - 284px */
+        height: clamp(4rem, 10vw, 17.75rem);
+        background: var(--secondary);
+        opacity: 1;
+        position: absolute;
+        display: block;
+        top: calc(30 / 16 * 1rem);
+        left: 0;
+        z-index: 2;
+        transform: skew(-17deg);
+      }
+
+      &:after {
+        /* covers the rest of the :before shape on the left */
+        content: "";
+        width: calc(100 / 16 * 1rem);
+        /* 64px - 284px */
+        height: clamp(4rem, 10vw, 17.75rem);
+        background: var(--secondary);
+        opacity: 1;
+        position: absolute;
+        display: block;
+        top: calc(30 / 16 * 1rem);
+        left: 0;
+        z-index: 1;
+      }
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        padding: var(--sectionPadding);
+        /* 96px - 120px */
+        padding-top: clamp(6rem, 20vw, 7.5rem);
+        /* 100px - 240px */
+        padding-bottom: clamp(6.25rem, 25vw, 15rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+        z-index: 2;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title {
+        max-width: 17ch;
+        /* 28px - 40px */
+        margin: 0 0 clamp(1.75rem, 3vw, 2.5rem);
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(32 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-image {
+        width: 100%;
+        /* changes to 779px at large desktop */
+        max-width: calc(415 / 16 * 1rem);
+        max-height: calc(482 / 16 * 1rem);
+        height: auto;
+        display: block;
+        position: relative;
+        z-index: 10;
+
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+
+      .cs-graphic-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: #1a1a1a;
+        display: block;
+        position: absolute;
+        /* same as --secitonPadding variable */
+        top: clamp(3.75rem, 7.82vw, 6.25rem);
+        left: 0;
+        z-index: 1;
+      }
+
+      .cs-graphic {
+        width: 140vw;
+        height: auto;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        z-index: -1;
+        transform: translateX(-60%) rotate(-10deg);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #cta-1192 {
+      overflow: visible;
+
+      .cs-container {
+        flex-direction: row;
+        overflow: hidden;
+      }
+
+      .cs-content {
+        text-align: left;
+        width: 50%;
+        max-width: calc(500 / 16 * 1rem);
+        align-items: flex-start;
+      }
+
+      .cs-image {
+        flex: none;
+        position: absolute;
+        right: 0;
+        top: calc(80 / 16 * 1rem);
+      }
+
+      .cs-graphic {
+        width: 90vw;
+        max-width: calc(1462 / 16 * 1rem);
+        margin-left: calc(-250 / 16 * 1rem);
+        left: 50%;
+        transform: rotate(-10deg);
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #cta-1192 {
+      overflow: hidden;
+
+      .cs-container {
+        overflow: visible;
+      }
+      .cs-image {
+        width: 48vw;
+        max-width: calc(779 / 16 * 1rem);
+      }
+
+      .cs-graphic {
+        width: 80vw;
+      }
+    }
+  }
+
+  /* Large Desktop 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #cta-1192 {
+      overflow: hidden;
+      &:before {
+        height: calc(283 / 16 * 1rem);
+        width: 50vw;
+        margin-right: calc(490 / 16 * 1rem);
+        right: 50%;
+        left: auto;
+      }
+
+      &:after {
+        height: calc(283 / 16 * 1rem);
+        width: 10vw;
+      }
+
+      .cs-container {
+        padding-left: calc(217 / 16 * 1rem);
+        padding-right: 0;
+      }
+
+      .cs-image {
+        margin-left: clamp(2rem, 4.5vw, 5rem);
+        left: 50%;
+        right: auto;
+      }
+    }
+  }
+
+  /*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #reviews-1192 {
+      padding: var(--sectionPadding);
+      padding-top: 0;
+
+      .cs-container {
+        width: 100%;
+        /* changed to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+
+      .cs-picture {
+        width: 100%;
+        max-width: calc(738 / 16 * 1rem);
+        /* 296px - 493px */
+        height: clamp(18.5rem, 37vw, 30.8125rem);
+        /* -75px to -120px, makes it overlap the CTA section above, changes at tablet */
+        margin-top: calc(clamp(4.6875rem, 13vw, 7.5rem) * -1);
+        display: block;
+        position: relative;
+        z-index: 10;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-review-group {
+        width: 90%;
+        max-width: calc(630 / 16 * 1rem);
+        /* makes it overlap the image, removed at tablet */
+        margin-top: calc(-42 / 16 * 1rem);
+        /* 24px - 80px */
+        padding: clamp(1.5rem, 5.5vw, 5rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        background-color: #f7f7f7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: calc(24 / 16 * 1rem);
+        position: relative;
+        z-index: 10;
+      }
+
+      .cs-icon {
+        /* 48px - 97px */
+        width: clamp(3rem, 7vw, 6rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-review-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-align: center;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-profile {
+        width: calc(50 / 16 * 1rem);
+        height: auto;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        background-color: #fff;
+      }
+
+      .cs-name {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--headerColor);
+        display: block;
+      }
+
+      .cs-desc {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-align: center;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #reviews-1192 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+
+      .cs-picture {
+        /* changes at desktop */
+        width: 47%;
+        margin: 0;
+        position: absolute;
+        top: calc(clamp(4.6875rem, 13vw, 7.5rem) * -1);
+        left: 0;
+      }
+
+      .cs-review-group {
+        width: 57%;
+        margin: 0;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #reviews-1192 {
+      .cs-picture {
+        width: 55%;
+      }
+    }
+  }
+</style>

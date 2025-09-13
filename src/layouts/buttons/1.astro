@@ -1,0 +1,68 @@
+---
+
+---
+
+<a href="/contact" class="cs-button-5">
+  <span class="cs-button-text">Enroll Now</span>
+</a>
+
+<style lang="scss">
+  .cs-button-5 {
+    text-align: center;
+    font-size: calc(16 / 16 * 1rem);
+    line-height: calc(56 / 16 * 1rem);
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    min-width: calc(174 / 16 * 1rem);
+    margin: 0;
+    color: #1a1a1a;
+    padding: 0 calc(24 / 16 * 1rem);
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 2px solid #1a1a1a;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+
+    .cs-button-text {
+      display: block;
+      /* we translate it up so it looks centered in the white space. The black :before element takes up space at the bottom and makes it looks off-center */
+      transform: translateY(-0.125rem);
+      transition:
+        transform 0.3s,
+        color 0.3s,
+        letter-spacing 0.3s;
+    }
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: calc(6 / 16 * 1rem);
+      background: #1a1a1a;
+      opacity: 1;
+      position: absolute;
+      display: block;
+      bottom: 0;
+      left: 0;
+      transition: height 0.3s;
+      z-index: -1;
+    }
+
+    &:hover {
+      .cs-button-text {
+        color: #fff;
+        letter-spacing: 0.15em;
+      }
+      .cs-button-text {
+        transform: translateY(0);
+      }
+
+      &:before {
+        height: 100%;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,291 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Why Choose Us                 --><!-- ============================================ -->
+<section id="why-choose-223">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Why Choose Us</span>
+      <h2 class="cs-title">A Plumber You Can Trust in Manhattan</h2>
+      <p class="cs-text">
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat duis enim velit mollit. Amet minim mollit
+        non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+        consequat duis enim velit mollit.
+      </p>
+      <a href="" class="cs-button-solid">More About Us</a>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pipes.svg"
+          alt="icon"
+          width="72"
+          height="72"
+        />
+        <h3 class="cs-h3">Trusted Plumbers</h3>
+        <p class="cs-item-text">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          sint. Velit officia consequat duis enim velit mollit.
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pipes.svg"
+          alt="icon"
+          width="72"
+          height="72"
+        />
+        <h3 class="cs-h3">20+ Years Experience</h3>
+        <p class="cs-item-text">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          sint. Velit officia consequat duis enim velit mollit.
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pipes.svg"
+          alt="icon"
+          width="72"
+          height="72"
+        />
+        <h3 class="cs-h3">Licensed & Insured</h3>
+        <p class="cs-item-text">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          sint. Velit officia consequat duis enim velit mollit.
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pipes.svg"
+          alt="icon"
+          width="72"
+          height="72"
+        />
+        <h3 class="cs-h3">100% Satisfaction</h3>
+        <p class="cs-item-text">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          sint. Velit officia consequat duis enim velit mollit.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---        Why Choose          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #why-choose-223 {
+      padding: var(--sectionPadding);
+      background-color: #fafbfc;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px on tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(624 / 16 * 1rem);
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: calc(20 / 16 * 1rem);
+      }
+
+      .cs-item {
+        text-align: left;
+        list-style: none;
+        width: 100%;
+        /* 32px - 44px top & bottom, 24px - 32px left & right */
+        padding: clamp(2rem, 4vw, 2.75rem) clamp(1.5rem, 4vw, 2rem);
+        margin: 0;
+        border-radius: calc(5 / 16 * 1rem);
+        border: 1px solid #dad9e3;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        /* 16px - 32px */
+        column-gap: clamp(1rem, 2vw, 2rem);
+        /* 24px - 28px */
+        row-gap: clamp(1.5rem, 1.5vw, 1.75rem);
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: var(--primary);
+
+          .cs-icon {
+            filter: grayscale(1) brightness(1000%);
+          }
+
+          .cs-h3,
+          .cs-item-text {
+            color: #fff;
+          }
+        }
+      }
+
+      .cs-icon {
+        /* 70px - 80px */
+        width: clamp(4.375rem, 7vw, 5rem);
+        margin: 0;
+        height: auto;
+        margin: 0;
+        display: block;
+      }
+
+      .cs-h3 {
+        /* 25px - 31px */
+        font-size: clamp(1.5625rem, 2vw, 1.9375rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        text-align: inherit;
+        width: 55%;
+        margin: 0;
+        color: var(--headerColor);
+        transition: color 0.3s;
+      }
+
+      .cs-item-text {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        margin: auto 0 0 0;
+        color: var(--bodyTextColor);
+        transition: color 0.3s;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #why-choose-223 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-content {
+        width: 70%;
+      }
+
+      .cs-card-group {
+        /* switch to grid since there's no chance of adding or removing cards in this design.  We can be more set and rigid in our layout of this section and use grid for better spacing */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: calc(20 / 16 * 1rem);
+        /* if different boxes are different heights, this makes them all the same height so the grid is always even */
+        align-items: stretch;
+      }
+
+      .cs-item {
+        grid-column: span 1;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #why-choose-223 {
+      .cs-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .cs-card-group {
+        width: 60%;
+        max-width: calc(758 / 16 * 1rem);
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+    }
+  }
+</style>

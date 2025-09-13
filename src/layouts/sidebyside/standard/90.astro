@@ -1,0 +1,407 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Side By Side                  --><!-- ============================================ -->
+<section id="sbs-410">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Who We Are</span>
+      <h2 class="cs-title">About Our Company</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <ul class="cs-ul">
+        <li class="cs-item">
+          <h3 class="cs-h3">01 Title 01</h3>
+          <p class="cs-item-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+        </li>
+        <li class="cs-item">
+          <h3 class="cs-h3">01 Title 01</h3>
+          <p class="cs-item-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+        </li>
+      </ul>
+      <a href="" class="cs-button-solid">More About Us</a>
+    </div>
+    <div class="cs-image-group">
+      <!--Top Left Image-->
+      <picture class="cs-picture cs-picture1">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/landscaping1.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/landscaping1.jpg"
+        />
+        <img
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/landscaping1.jpg"
+          alt="backyard"
+          width="229"
+          height="352"
+        />
+      </picture>
+      <!--Top Right Image-->
+      <picture class="cs-picture cs-picture2">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/landscaping2.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/landscaping2.jpg"
+        />
+        <img
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/landscaping3.jpg"
+          alt="backyard"
+          width="390"
+          height="352"
+        />
+      </picture>
+      <!--Bottom Image-->
+      <picture class="cs-picture cs-picture3">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/landscaping3.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/landscaping3.jpg"
+        />
+        <img
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/landscaping3.jpg"
+          alt="backyard"
+          width="649"
+          height="227"
+        />
+      </picture>
+    </div>
+  </div>
+  <!--SVG Background Graphic-->
+  <picture class="cs-graphic">
+    <source
+      media="(min-width: 1300px)"
+      srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/svg-slant.svg"
+    />
+    <source
+      media="(min-width: 768px)"
+      srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/svg-slant-t.svg"
+    />
+    <source
+      media="(max-width: 767px)"
+      srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/svg-slant-m.svg"
+    />
+    <img
+      class="cs-graphic-img"
+      aria-hidden="true"
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/svg-slant-m.svg"
+      alt="graphic"
+      width="360"
+      height="741"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-410 {
+      padding: var(--sectionPadding);
+      border-bottom: 1px solid #b4b2c7;
+      /* clips svg as the screen grows so it doesn't overflow */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280 at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-ul {
+        width: 100%;
+        padding: 0;
+        margin: 0 0 calc(32 / 16 * 1rem) 0;
+        padding-top: calc(32 / 16 * 1rem);
+        border-top: 2px dashed #b4b2c7;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: calc(36 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        max-width: calc(264 / 16 * 1rem);
+        margin: 0;
+      }
+
+      .cs-h3 {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2.3vw, 1.25rem);
+        line-height: 1.5em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: 0 0 calc(8 / 16 * 1rem) 0;
+        color: var(--primary);
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-image-group {
+        font-size: min(2.5vw, 1em);
+        width: calc(579 / 16 * 1em);
+        height: calc(542 / 16 * 1em);
+        /* sends it to the top of the flexbox */
+        order: -1;
+        position: relative;
+      }
+
+      .cs-picture {
+        border-radius: calc(20 / 16 * 1em);
+        /* clips the img tag corners */
+        overflow: hidden;
+        position: absolute;
+        display: block;
+
+        &:hover {
+          &:before {
+            opacity: 0.6;
+          }
+
+          img {
+            transform: scale(1.1);
+          }
+        }
+
+        &:before {
+          /* Hover Box */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: var(--primary);
+          opacity: 0;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: 10;
+          transition: opacity 0.3s;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          transition: transform 0.6s;
+        }
+      }
+
+      .cs-picture1 {
+        width: calc(204 / 16 * 1em);
+        height: calc(314 / 16 * 1em);
+        top: 0;
+        left: 0;
+      }
+
+      .cs-picture2 {
+        width: calc(348 / 16 * 1em);
+        height: calc(314 / 16 * 1em);
+        top: 0;
+        right: 0;
+      }
+
+      .cs-picture3 {
+        width: calc(579 / 16 * 1em);
+        height: calc(202 / 16 * 1em);
+        bottom: 0;
+        left: 0;
+      }
+
+      .cs-graphic {
+        width: 100%;
+        position: absolute;
+        top: calc(182 / 16 * 1rem);
+        bottom: 0;
+        left: 0;
+        /* flips the svg horizontally */
+        transform: scaleX(-1);
+        z-index: -1;
+        &:before {
+          /* White Box */
+          content: "";
+          width: 100%;
+          background: #fafbfc;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          /* 110px - 140px */
+          top: clamp(6.875rem, 20vw, 8.75rem);
+          bottom: 0;
+          left: 0;
+        }
+      }
+
+      .cs-graphic-img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: initial;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbs-410 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        /* added section padding here only for the padding top in case you place it under a section that has a background color other than white.  It would look bad having the grey svg shape touching the edge of the next section. So we add this to create space and account for that.  If the section above this stitch has a white background, you can remove this */
+        padding: var(--sectionPadding);
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+
+      .cs-content {
+        width: 48%;
+        max-width: calc(588 / 16 * 1rem);
+      }
+
+      .cs-image-group {
+        font-size: min(1.2vw, 1em);
+        flex: none;
+      }
+
+      .cs-graphic {
+        background-color: transparent;
+        top: calc(0 / 16 * 1rem);
+        &:before {
+          /* 230px - 350px*/
+          top: clamp(16rem, 26vw, 21.875rem);
+        }
+      }
+
+      .cs-graphic-img {
+        /* 60px - 100px */
+        top: clamp(3.75rem, 6vw, 6.25rem);
+      }
+    }
+  }
+
+  /* Large Desktop 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #sbs-410 {
+      .cs-container {
+        align-items: center;
+      }
+
+      .cs-graphic {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+</style>

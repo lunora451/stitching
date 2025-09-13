@@ -1,0 +1,295 @@
+---
+title: "Page 41";
+---
+
+<!-- ============================================ --><!--                   Services                   --><!-- ============================================ -->
+<section id="services-470">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Services</span>
+      <h2 class="cs-title">Landscaping Services</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia
+        incidunt quia enim mollitia delectus? Perferendis sapiente quaerat quos.
+        Odit quasi similique nobis earum laudantium ad doloribus quos eos quod.
+        Delectus?
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture aria-hidden="true" class="cs-picture">
+          <img
+            src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/geen1.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="33"
+            height="38"
+          />
+        </picture>
+        <!-- Text Grouped For Flexbox-->
+        <div class="cs-flex">
+          <h3 class="cs-h3">Service 1</h3>
+          <p class="cs-item-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor.
+          </p>
+          <a href="" class="cs-link">Read More</a>
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture aria-hidden="true" class="cs-picture">
+          <img
+            src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/green2.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="33"
+            height="38"
+          />
+        </picture>
+        <!-- Text Grouped For Flexbox-->
+        <div class="cs-flex">
+          <h3 class="cs-h3">Service 2</h3>
+          <p class="cs-item-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor.
+          </p>
+          <a href="" class="cs-link">Read More</a>
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture aria-hidden="true" class="cs-picture">
+          <img
+            src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/green3.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="33"
+            height="38"
+          />
+        </picture>
+        <!-- Text Grouped For Flexbox-->
+        <div class="cs-flex">
+          <h3 class="cs-h3">Service 3</h3>
+          <p class="cs-item-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor.
+          </p>
+          <a href="" class="cs-link">Read More</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-470 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* 16px - 20px */
+        gap: clamp(1rem, 1.5vw, 1.25rem);
+      }
+
+      .cs-item {
+        width: 100%;
+        text-align: left;
+        list-style: none;
+        /* 24px - 32px */
+        padding: clamp(1.5rem, 3.5vw, 2rem);
+        box-shadow: 0px 24px 54px rgba(87, 107, 147, 0.12);
+        border: 2px solid #b4b2c7;
+        background-color: #fafbfc;
+        border-radius: calc(12 / 16 * 1rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        /* clips the border bottom to match the curve of the border */
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        /* 16px - 36px */
+        gap: clamp(1.5rem, 3vw, 2.25rem);
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+          &:before {
+            height: 100%;
+          }
+
+          .cs-h3,
+          .cs-item-text,
+          .cs-link {
+            color: var(--bodyTextColorWhite);
+          }
+
+          .cs-picture {
+            border-color: #fff;
+            img {
+              /* makes img turn grey, then brightened to get whiter */
+              filter: grayscale(1) brightness(1000%);
+            }
+          }
+        }
+
+        &:before {
+          /* border bottom that aniates on hover */
+          content: "";
+          width: 100%;
+          height: calc(6 / 16 * 1rem);
+          background: var(--primaryLight);
+          opacity: 1;
+          position: absolute;
+          display: block;
+          bottom: 0;
+          left: 0;
+          z-index: -1;
+          transition: height 0.3s;
+        }
+      }
+
+      .cs-picture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        /* 60px - 80px */
+        width: clamp(3.75rem, 7vw, 5rem);
+        height: clamp(3.75rem, 7vw, 5rem);
+        border-radius: 50%;
+        border: clamp(2px, 0.4vw, 4px) solid var(--primaryLight);
+        /* prevents border from affecting height and width */
+        box-sizing: border-box;
+        /* prevents flexbox from squishing it */
+        flex: none;
+        z-index: 10;
+        transition: border-color 0.3s;
+
+        img {
+          /* 30px - 44px */
+          width: clamp(1.875rem, 4.5vw, 2.75rem);
+          height: auto;
+          display: block;
+          position: relative;
+          z-index: 10;
+        }
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        line-height: 1.5em;
+        margin: 0;
+        /* 8px - 16px */
+        margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
+        color: var(--headerColor);
+        transition: color 0.3s;
+      }
+
+      .cs-item-text {
+        font-size: calc(14 / 16 * 1rem);
+        line-height: 1.5em;
+        margin: 0 0 calc(24 / 16 * 1rem) 0;
+        color: var(--bodyTextColor);
+        transition: color 0.3s;
+      }
+
+      .cs-link {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin: 0;
+        color: var(--primary);
+        position: relative;
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+
+        &:before {
+          /* hover bar under link */
+          content: "";
+          width: 0%;
+          height: calc(3 / 16 * 1rem);
+          background: currentColor;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          bottom: calc(-3 / 16 * 1rem);
+          left: 0;
+          transition: width 0.3s;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-470 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .cs-item {
+        width: clamp(31.5%, 30.5vw, 32.2%);
+        flex-direction: column;
+        gap: calc(24 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #services-470 {
+      .cs-item {
+        flex-direction: row;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,154 @@
+---
+title: "Page 3";
+---
+
+<!-- ============================================ --><!--                  Services                    --><!-- ============================================ -->
+<section id="services-2371">
+  <div class="cs-container">
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/therapy1.svg"
+          alt="icon"
+          width="120"
+          height="120"
+        />
+        <h3 class="cs-h3">Find Your Therapist</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, rerum
+          rem repudiandae libero.
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/therapy2.svg"
+          alt="icon"
+          width="120"
+          height="120"
+        />
+        <h3 class="cs-h3">Begin Your Journey</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, rerum
+          rem repudiandae libero.
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/therapy3.svg"
+          alt="icon"
+          width="120"
+          height="120"
+        />
+        <h3 class="cs-h3">Engine Diagnostics</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, rerum
+          rem repudiandae libero.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-2371 {
+      padding: var(--sectionPadding);
+      background-color: #fbf9f5;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-card-group {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: calc(20 / 16 * 1rem);
+      }
+
+      .cs-item {
+        width: 100%;
+        text-align: left;
+        list-style: none;
+        margin: 0;
+        /* 16px - 32px */
+        padding: clamp(1rem, 3vw, 2rem);
+        /* 80px - 140px */
+        padding-top: clamp(5rem, 10vw, 8.75rem);
+        border-radius: calc(16 / 16 * 1rem);
+        background-color: #fff;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        grid-column: span 12;
+        grid-row: span 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-icon {
+        /* 80px - 120px */
+        height: clamp(5rem, 9vw, 7.5rem);
+        width: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: bold;
+        text-align: inherit;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        max-width: calc(450 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* Tablet - 700px */
+  @media only screen and (min-width: 43.75rem) {
+    #services-2371 {
+      .cs-item {
+        grid-column: span 4;
+      }
+    }
+  }
+</style>

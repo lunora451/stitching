@@ -1,0 +1,287 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Why Choose Us                 --><!-- ============================================ -->
+<section id="why-choose-1630">
+  <div class="cs-container">
+    <div class="cs-flex">
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting-8.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting-8.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting-8.jpg"
+          alt="therapy"
+          width="608"
+          height="400"
+        />
+      </picture>
+      <div class="cs-content">
+        <span class="cs-topper">Why Choose Us</span>
+        <h2 class="cs-title">
+          Experience the Immersive Impact of Stitch Consulting Services on Your
+          Business
+        </h2>
+        <p class="cs-text">
+          Aqestic recusandae laudantium optio amet a quisquam saepe aliquid,
+          voluptate praesentium dicta fuga dolor error perspiciatis voluptatem
+          eum cupiditate totam reiciendis quam minus inventore sint rem impedit
+          esse quasi.
+        </p>
+      </div>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <h3 class="cs-h3">
+          <picture class="cs-wrapper">
+            <img
+              class="cs-h3-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/chat-gold.svg"
+              alt="icon"
+              width="24"
+              height="24"
+            />
+          </picture>
+          Answer a Few Questions
+        </h3>
+        <p class="cs-item-text">
+          We welcome and celebrate different perspectives to help our firm, our
+          clients and our people achieve adip iscing elit enduring results.
+        </p>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">
+          <picture class="cs-wrapper">
+            <img
+              class="cs-h3-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/call-gold.svg"
+              alt="icon"
+              width="24"
+              height="24"
+            />
+          </picture>
+          Complimentary Call
+        </h3>
+        <p class="cs-item-text">
+          We welcome and celebrate different perspectives to help our firm, our
+          clients and our people achieve adip iscing elit enduring results.
+        </p>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">
+          <picture class="cs-wrapper">
+            <img
+              class="cs-h3-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/money-gold.svg"
+              alt="icon"
+              width="24"
+              height="24"
+            />
+          </picture>
+          Grow Your Wealth
+        </h3>
+        <p class="cs-item-text">
+          We welcome and celebrate different perspectives to help our firm, our
+          clients and our people achieve adip iscing elit enduring results.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Why Choose Us        -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #why-choose-1630 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 7vw, 4rem);
+      }
+
+      .cs-flex {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 7vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(608 / 16 * 1rem);
+        /* prevents padding from affecting width and height */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      .cs-picture {
+        display: block;
+        position: relative;
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        /* chnages to auto at tablet */
+        height: 50vw;
+        /* removed at tablet */
+        max-height: calc(400 / 16 * 1rem);
+        /* clips img tag corners */
+        overflow: hidden;
+        /* sends it to the 2nd posiiton in the bottom */
+        order: 2;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        align-items: stretch;
+        /* 16px - 20px */
+        column-gap: clamp(1rem, 2.5vw, 2rem);
+        row-gap: calc(28 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        display: flex;
+        grid-column: span 12;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 3vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--headerColor);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: calc(12 / 16 * 1rem);
+        transition: color 0.3s;
+      }
+
+      .cs-wrapper {
+        width: calc(48 / 16 * 1rem);
+        height: calc(48 / 16 * 1rem);
+        border: 1px solid var(--primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cs-h3-icon {
+        width: calc(24 / 16 * 1rem);
+        height: auto;
+        margin-top: 2px;
+        display: block;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+        transition:
+          color 0.3s,
+          opacity 0.3s;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #why-choose-1630 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-flex {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+
+      .cs-content {
+        width: 50%;
+        /* 32px - 56px top and bottom */
+        padding: clamp(2rem, 4vw, 3.5rem) 0;
+        /* sends it to the left in the 1st position */
+        order: -1;
+        align-self: center;
+        flex: none;
+      }
+
+      .cs-picture {
+        width: 47vw;
+        min-height: calc(400 / 16 * 1rem);
+        max-height: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      .cs-item {
+        grid-column: span 4;
+      }
+    }
+  }
+</style>

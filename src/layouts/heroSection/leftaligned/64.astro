@@ -1,0 +1,344 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Hero                      --><!-- ============================================ -->
+<section id="hero-2410">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Welcome to Poop Patrol</span>
+      <h1 class="cs-title">Professional Pet Waste Removal Service</h1>
+      <p class="cs-text">
+        We help busy pet owners enjoy cleaner yards with reliable and discreet
+        pet waste removal services designed for residential and commercial
+        spaces.
+      </p>
+      <a href="" class="cs-button-solid">Get a Free Estimate</a>
+    </div>
+    <!--Hero Image-->
+    <div class="cs-image-group">
+      <!-- IF you have a wide image that gets cut off on the right, go the the cs-picture img and set the left value to a negative number till its where you like it in frame-->
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/dog.png"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/dog.png"
+        />
+        <img
+          decoding="async"
+          fetchpriority="high"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/dog.png"
+          alt="dog"
+          width="635"
+          height="836"
+        />
+      </picture>
+      <!--Circle Background-->
+      <!--Download the SVG from the CDN by copy ad pasting its link into your browser and saving it. Then the cs-circle fill property should override it and set it to the primary color of your site-->
+      <img
+        class="cs-circle"
+        decoding="async"
+        fetchpriority="high"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/noise-bg.svg"
+        alt="graphic"
+        width="758"
+        height="758"
+      />
+
+      <!--Arrow Box-->
+      <img
+        class="cs-arrow"
+        decoding="async"
+        fetchpriority="high"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/black-squiggle-arrow.svg"
+        alt="icon"
+        width="76"
+        height="162"
+      />
+
+      <!--Steaming pile-->
+      <img
+        class="cs-no-no"
+        decoding="async"
+        fetchpriority="high"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yeah-thats-poop.svg"
+        alt="icon"
+        width="48"
+        height="48"
+      />
+    </div>
+  </div>
+  <!--White curve-->
+  <svg
+    class="cs-wave"
+    width="1920"
+    height="167"
+    viewBox="0 0 1920 167"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M1920 167H0V0C111.116 45.3334 456.485 136 951 136C1445.52 136 1803.21 45.3334 1920 0V167Z"
+      fill="white"></path>
+  </svg>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---            Hero            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-2410 {
+      /* 180px - 200px top */
+      /* 60px - 120px bottom */
+      padding: clamp(11.25rem, 16.82vw, 12.5rem) calc(16 / 16 * 1rem)
+        clamp(3.75rem, 8vw, 7.5rem);
+      /* clips the svg wave from overflowing */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        /* background color */
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: var(--primary);
+        opacity: 0.2;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: calc(48 / 16 * 1rem);
+      }
+
+      .cs-content {
+        max-width: calc(550 / 16 * 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .cs-topper {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        text-align: inherit;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        color: var(--secondary);
+        margin-bottom: calc(4 / 16 * 1rem);
+        display: block;
+      }
+
+      .cs-title {
+        /* 39px - 72px */
+        font-size: clamp(2.4375rem, 5vw, 4.5rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: center;
+        /* 23 characters including spaces wide */
+        max-width: 23ch;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+        color: var(--headerColor);
+        position: relative;
+      }
+
+      .cs-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 1.5vw, 1.25rem);
+        line-height: 1.5em;
+        text-align: center;
+        width: 100%;
+        max-width: calc(531 / 16 * 1rem);
+        /* 28px - 40px */
+        margin: 0 0 clamp(1.75rem, 3.92vw, 2.5rem) 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-button-solid {
+        //responsive gradient button color adapts to unique branding color changes
+        --gradientmix: color-mix(in lab, var(--primary), black 49%);
+
+        font-size: calc(16 / 16 * 1rem);
+        line-height: clamp(calc(46 / 16 * 1rem), 5.5vw, calc(56 / 16 * 1rem));
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        color: #fff;
+        white-space: nowrap;
+        margin: 0;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(28 / 16 * 1rem);
+        background-color: var(--primary);
+        background-image: -moz-linear-gradient(
+          top,
+          rgba(0, 0, 0, 0) 0%,
+          var(--gradientmix) 99%
+        );
+        background-image: -webkit-linear-gradient(
+          top,
+          rgba(0, 0, 0, 0) 0%,
+          var(--gradientmix) 99%
+        );
+        background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 0%,
+          var(--gradientmix) 99%
+        );
+        border-radius: calc(100 / 16 * 1rem);
+        overflow: hidden;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          border-radius: calc(4 / 16 * 1rem);
+          background: var(--secondary);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+          opacity: 1;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-image-group {
+        /* we use ems for everything inside the cs-image-group so they pull their value for em from the cs-image-group container that we set.  This min-max property lets us tie the font size to the view width of the screen and grows proportionally with every pixel wide the screen gets until the value the view width units = .75em, resets at small desktop */
+        font-size: min(1.7vw, 0.55rem);
+        width: calc(835 / 16 * 1em);
+        height: calc(836 / 16 * 1em);
+        /* prevents flexbox from squishing it */
+        flex: none;
+        position: relative;
+        z-index: 2;
+      }
+
+      .cs-picture {
+        width: calc(635 / 16 * 1em);
+        height: calc(836 / 16 * 1em);
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        img {
+          width: auto;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          /* make this number negative if you have a wide image that gets cut off on the right and want to move it ove to the left more */
+          left: 0;
+        }
+      }
+
+      .cs-circle {
+        width: calc(758 / 16 * 1em);
+        height: auto;
+        position: absolute;
+        right: 0;
+        bottom: calc(18 / 16 * 1em);
+        z-index: -1;
+
+        circle {
+          fill: var(--primary);
+          opacity: 0.2;
+        }
+      }
+
+      .cs-arrow {
+        /* 60px - 130px */
+        width: calc(76 / 16 * 1em);
+        height: auto;
+        position: absolute;
+        bottom: calc(182 / 16 * 1em);
+        left: calc(103 / 16 * 1em);
+        transform: rotate(28deg);
+      }
+
+      .cs-no-no {
+        width: calc(165 / 16 * 1em);
+        height: auto;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      .cs-wave {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #hero-2410 {
+      text-align: left;
+
+      .cs-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .cs-content {
+        width: 40vw;
+        /* prevents flex-box from squishing it */
+        flex: none;
+        align-items: flex-start;
+      }
+
+      .cs-title,
+      .cs-text {
+        text-align: left;
+      }
+
+      .cs-image-group {
+        font-size: min(1vw, 1rem);
+      }
+    }
+  }
+
+  /* Large Desktop - 1400px */
+  @media only screen and (min-width: 87.5rem) {
+    #hero-2410 {
+      padding-bottom: 10vw;
+    }
+  }
+</style>

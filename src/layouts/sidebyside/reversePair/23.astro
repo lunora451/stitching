@@ -1,0 +1,379 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Side By Side                 --><!-- ============================================ -->
+<section id="RPsbs-1445">
+  <div class="cs-container">
+    <picture class="cs-picture">
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteers.jpg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteers.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteers.jpg"
+        alt="volunteers"
+        width="650"
+        height="600"
+        aria-hidden="true"
+      />
+    </picture>
+    <div class="cs-content">
+      <span class="cs-topper">Giving Back</span>
+      <h2 class="cs-title">How To Donate Us</h2>
+      <p class="cs-text">
+        Our impact is about more than moving money to where it’s needed most
+        it’s also about helping nonprofits access information and ideas that
+        will help them listen, learn, and grow. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Quas laborum hic consequuntur porro
+        repudiandae officiis, necessitatibus vero natus nihil suscipit.
+      </p>
+      <ul class="cs-card-group">
+        <li class="cs-li">
+          <picture class="cs-li-picture">
+            <img
+              class="cs-li-icon"
+              aria-hidden="true"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer1.svg"
+              decoding="async"
+              alt="icon"
+              width="32"
+              height="32"
+              loading="lazy"
+            />
+          </picture>
+          <div class="cs-flex">
+            <h3 class="cs-h3">Become a Volunteer</h3>
+            <p class="cs-li-text">
+              It’s no secret that one person alone cannot overcome the greatest
+              humanitarian crises. It truly takes all of us.
+            </p>
+          </div>
+        </li>
+        <li class="cs-li">
+          <picture class="cs-li-picture">
+            <img
+              class="cs-li-icon"
+              aria-hidden="true"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer2.svg"
+              decoding="async"
+              alt="icon"
+              width="32"
+              height="32"
+              loading="lazy"
+            />
+          </picture>
+          <div class="cs-flex">
+            <h3 class="cs-h3">Quick Fundraise</h3>
+            <p class="cs-li-text">
+              It’s no secret that one person alone cannot overcome the greatest
+              humanitarian crises. It truly takes all of us.
+            </p>
+          </div>
+        </li>
+        <li class="cs-li">
+          <picture class="cs-li-picture">
+            <img
+              class="cs-li-icon"
+              aria-hidden="true"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer3.svg"
+              decoding="async"
+              alt="icon"
+              width="32"
+              height="32"
+              loading="lazy"
+            />
+          </picture>
+          <div class="cs-flex">
+            <h3 class="cs-h3">Start Donating</h3>
+            <p class="cs-li-text">
+              It’s no secret that one person alone cannot overcome the greatest
+              humanitarian crises. It truly takes all of us.
+            </p>
+          </div>
+        </li>
+      </ul>
+      <a href="" class="cs-button-solid">Donate Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="RPsbsr-1445">
+  <div class="cs-container">
+    <picture class="cs-picture">
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteers.jpg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteers.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteers.jpg"
+        alt="volunteers"
+        width="650"
+        height="600"
+        aria-hidden="true"
+      />
+    </picture>
+    <div class="cs-content">
+      <span class="cs-topper">Giving Back</span>
+      <h2 class="cs-title">How To Donate Us</h2>
+      <p class="cs-text">
+        Our impact is about more than moving money to where it’s needed most
+        it’s also about helping nonprofits access information and ideas that
+        will help them listen, learn, and grow. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Quas laborum hic consequuntur porro
+        repudiandae officiis, necessitatibus vero natus nihil suscipit.
+      </p>
+      <p class="cs-text">
+        Our impact is about more than moving money to where it’s needed most
+        it’s also about helping nonprofits access information and ideas that
+        will help them listen, learn, and grow. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Quas laborum hic consequuntur porro
+        repudiandae officiis, necessitatibus vero natus nihil suscipit.
+      </p>
+      <a href="" class="cs-button-solid">Donate Now</a>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #RPsbs-1445,
+    #RPsbsr-1445 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(542 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        margin: 0 0 calc(32 / 16 * 1rem) 0;
+        padding: 0;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: calc(24 / 16 * 1rem);
+      }
+
+      .cs-li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        /* 16px - 20px */
+        gap: clamp(1rem, 2.5vw, 1.25rem);
+      }
+
+      .cs-li-picture {
+        width: calc(80 / 16 * 1rem);
+        height: calc(80 / 16 * 1rem);
+        margin: 0;
+        border-radius: 50%;
+        background-color: #fff;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* prevents flexbox from squishing it */
+        flex: none;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: var(--primary);
+          opacity: 0.1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+      }
+
+      .cs-li-icon {
+        width: calc(32 / 16 * 1rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-h3 {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        text-align: left;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-li-text {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        text-align: left;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(32 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-picture {
+        width: 100%;
+        max-width: calc(650 / 16 * 1rem);
+        min-height: calc(362 / 16 * 1rem);
+        border-radius: calc(24 / 16 * 1rem);
+        /* clips img tag corners */
+        overflow: hidden;
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #RPsbs-1445,
+    #RPsbsr-1445 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        position: relative;
+      }
+
+      .cs-content {
+        width: 50%;
+        padding: calc(40 / 16 * 1rem) 0;
+      }
+
+      .cs-picture {
+        height: auto;
+        width: 55%;
+      }
+    }
+  }
+
+  /*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #RPsbsr-1445 {
+      background-color: #f7f7f7;
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #RPsbsr-1445 {
+      .cs-picture {
+        /* sends it to the right in the 2nd position */
+        order: 2;
+      }
+    }
+  }
+</style>

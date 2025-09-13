@@ -1,0 +1,208 @@
+---
+import Footer1 from "../footer/1.astro";
+import Footer2 from "../footer/2.astro";
+import Footer3 from "../footer/3.astro";
+import Footer4 from "../footer/4.astro";
+import Footer5 from "../footer/5.astro";
+import Footer6 from "../footer/6.astro";
+import Footer7 from "../footer/7.astro";
+import Footer8 from "../footer/8.astro";
+import Footer9 from "../footer/9.astro";
+import Footer10 from "../footer/10.astro";
+import Footer11 from "../footer/11.astro";
+import Footer12 from "../footer/12.astro";
+import Footer13 from "../footer/13.astro";
+import Footer14 from "../footer/14.astro";
+import Footer15 from "../footer/15.astro";
+import Footer16 from "../footer/16.astro";
+import Footer17 from "../footer/17.astro";
+import Footer18 from "../footer/18.astro";
+import Footer19 from "../footer/19.astro";
+import Footer20 from "../footer/20.astro";
+import Footer21 from "../footer/21.astro";
+import Footer22 from "../footer/22.astro";
+import Footer23 from "../footer/23.astro";
+import Footer24 from "../footer/24.astro";
+import Footer25 from "../footer/25.astro";
+import Footer26 from "../footer/26.astro";
+import Footer27 from "../footer/27.astro";
+---
+
+<div class="c-collection">
+  <div class="c-footer" data-value-footer="1">
+    <Footer1 />
+  </div>
+  <div class="c-footer" data-value-footer="2">
+    <Footer2 />
+  </div>
+  <div class="c-footer" data-value-footer="3">
+    <Footer3 />
+  </div>
+  <div class="c-footer" data-value-footer="4">
+    <Footer4 />
+  </div>
+  <div class="c-footer" data-value-footer="5">
+    <Footer5 />
+  </div>
+  <div class="c-footer" data-value-footer="6">
+    <Footer6 />
+  </div>
+  <div class="c-footer" data-value-footer="7">
+    <Footer7 />
+  </div>
+  <div class="c-footer" data-value-footer="8">
+    <Footer8 />
+  </div>
+  <div class="c-footer" data-value-footer="9">
+    <Footer9 />
+  </div>
+  <div class="c-footer" data-value-footer="10">
+    <Footer10 />
+  </div>
+  <div class="c-footer" data-value-footer="11">
+    <Footer11 />
+  </div>
+  <div class="c-footer" data-value-footer="12">
+    <Footer12 />
+  </div>
+  <div class="c-footer" data-value-footer="13">
+    <Footer13 />
+  </div>
+  <div class="c-footer" data-value-footer="14">
+    <Footer14 />
+  </div>
+  <div class="c-footer" data-value-footer="15">
+    <Footer15 />
+  </div>
+  <div class="c-footer" data-value-footer="16">
+    <Footer16 />
+  </div>
+  <div class="c-footer" data-value-footer="17">
+    <Footer17 />
+  </div>
+  <div class="c-footer" data-value-footer="18">
+    <Footer18 />
+  </div>
+  <div class="c-footer" data-value-footer="19">
+    <Footer19 />
+  </div>
+  <div class="c-footer" data-value-footer="20">
+    <Footer20 />
+  </div>
+  <div class="c-footer" data-value-footer="21">
+    <Footer21 />
+  </div>
+  <div class="c-footer" data-value-footer="22">
+    <Footer22 />
+  </div>
+  <div class="c-footer" data-value-footer="23">
+    <Footer23 />
+  </div>
+  <div class="c-footer" data-value-footer="24">
+    <Footer24 />
+  </div>
+  <div class="c-footer" data-value-footer="25">
+    <Footer25 />
+  </div>
+  <div class="c-footer" data-value-footer="27">
+    <Footer27 />
+  </div>
+</div>
+
+<style lang="scss">
+  .c-collection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .c-footer {
+    display: none;
+  }
+  .active {
+    width: 100%;
+    display: block;
+  }
+</style>
+
+<script>
+  function changeCollection(selectedValue) {
+    const collections = document.querySelectorAll(".c-footer");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none" est sélectionné, ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection sélectionnée
+    const targetCollection = document.querySelector(
+      `[data-value-footer="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  // Fonction pour le hover des options
+  function previewOnHover(selectedValue) {
+    const collections = document.querySelectorAll(".c-footer");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none", ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection en preview
+    const targetCollection = document.querySelector(
+      `[data-value-footer="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const select = document.getElementById("template-select-footer");
+    const collections = document.querySelectorAll(".c-footer");
+
+    if (!select) return;
+
+    select.addEventListener("change", function () {
+      const selectedValue = this.value;
+      changeCollection(selectedValue);
+    });
+
+    // Alternative pour navigateur qui ne supportent pas mouseover sur option
+    let isSelectOpen = false;
+
+    select.addEventListener("focus", function () {
+      isSelectOpen = true;
+    });
+
+    select.addEventListener("blur", function () {
+      isSelectOpen = false;
+      // Revenir à la valeur sélectionnée quand on ferme
+      changeCollection(this.value);
+    });
+
+    // Navigation avec les flèches
+    select.addEventListener("keydown", function (e) {
+      if (isSelectOpen && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
+        setTimeout(() => {
+          // Simuler le hover sur l'option "focusée"
+          const currentValue = this.value;
+          previewOnHover(currentValue);
+        }, 10);
+      }
+    });
+  });
+</script>

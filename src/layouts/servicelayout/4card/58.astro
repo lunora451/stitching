@@ -1,0 +1,282 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Services                    --><!-- ============================================ -->
+<section id="services-281">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h2 class="cs-title">What We Can Do For You</h2>
+      <div class="cs-flex">
+        <p class="cs-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. At sagittis,
+          odio congue aenean egestas suspendisse neque.
+        </p>
+        <a href="" class="cs-link"
+          >Read More About Our Process
+          <!-- Arrow SVG -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_1_114)">
+              <path
+                d="M4.16667 10.8333H13.475L9.40833 14.9C9.08333 15.225 9.08333 15.7583 9.40833 16.0833C9.73333 16.4083 10.2583 16.4083 10.5833 16.0833L16.075 10.5917C16.4 10.2667 16.4 9.74167 16.075 9.41667L10.5917 3.91667C10.2667 3.59167 9.74167 3.59167 9.41667 3.91667C9.09167 4.24167 9.09167 4.76667 9.41667 5.09167L13.475 9.16667H4.16667C3.70833 9.16667 3.33333 9.54167 3.33333 10C3.33333 10.4583 3.70833 10.8333 4.16667 10.8333Z"
+                fill="#1A1A1A"></path>
+            </g><defs
+              ><clipPath id="clip0_1_114-281-281"
+                ><rect width="20" height="20" fill="white"></rect></clipPath
+              ></defs
+            >
+          </svg>
+        </a>
+      </div>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Services/shirt-solid.svg"
+          alt="svg icon"
+          width="37"
+          height="29"
+          loading="lazy"
+          decoding="async"
+        />
+        <h3 class="cs-h3">Design</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. At sagittis,
+          odio congue aenean.
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Services/ruler-solid.svg"
+          alt="svg icon"
+          width="29"
+          height="29"
+          loading="lazy"
+          decoding="async"
+        />
+        <h3 class="cs-h3">Sizing</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. At sagittis,
+          odio congue aenean.
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Services/fill-drip-solid.svg"
+          alt="svg icon"
+          width="33"
+          height="30"
+          loading="lazy"
+          decoding="async"
+        />
+        <h3 class="cs-h3">Colouring</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. At sagittis,
+          odio congue aenean.
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Services/boxes-packing.svg"
+          alt="svg icon"
+          width="37"
+          height="30"
+          loading="lazy"
+          decoding="async"
+        />
+        <h3 class="cs-h3">Packaging</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. At sagittis,
+          odio congue aenean.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-281 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px on tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        max-width: 12ch;
+      }
+
+      .cs-text {
+        max-width: calc(522 / 16 * 1rem);
+        /* 28px - 40px */
+        margin: 0 0 clamp(1.75rem, 3vw, 2.5rem);
+      }
+
+      .cs-link {
+        /* makes sure the text is always 1 line */
+        white-space: nowrap;
+        font-size: calc(16 / 16 * 1rem);
+        color: var(--bodyTextColor);
+        font-weight: 700;
+        text-decoration: none;
+        width: calc(242 / 16 * 1rem);
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        transition: color 0.3s;
+
+        &:hover {
+          color: var(--primary);
+
+          svg {
+            transform: translateX(calc(10 / 16 * 1rem));
+          }
+        }
+
+        &:before {
+          /* underline */
+          content: "";
+          width: 100%;
+          height: 2px;
+          background: currentColor;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          bottom: calc(-2 / 16 * 1rem);
+          left: 0;
+        }
+
+        svg {
+          margin-left: calc(4 / 16 * 1rem);
+          transition: transform 0.3s;
+
+          path {
+            /* current color of the parent */
+            fill: currentColor;
+          }
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: calc(28 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .cs-icon {
+        width: auto;
+        height: calc(30 / 16 * 1rem);
+        /* 20px - 24px */
+        margin-bottom: clamp(1.25rem, 2.4vw, 1.5rem);
+      }
+
+      .cs-h3 {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        /* 16px - 20px */
+        margin-bottom: clamp(1rem, 2vw, 1.25rem);
+        color: var(--headerColor);
+      }
+
+      .cs-item-text {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* In Between - 500px */
+  @media only screen and (min-width: 31.25rem) {
+    #services-281 {
+      .cs-card-group {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .cs-item {
+        width: 46%;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-281 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        width: 40%;
+      }
+
+      .cs-flex {
+        width: 50%;
+      }
+
+      .cs-item {
+        width: 22%;
+      }
+    }
+  }
+</style>

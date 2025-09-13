@@ -1,0 +1,286 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Contact                    --><!-- ============================================ -->
+<section id="contact-323">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Contact Us</span>
+      <h2 class="cs-title">Get in Touch</h2>
+      <p class="cs-text">
+        In consequat tincidunt turpis sit amet imperdiet. Praesent Class
+        officelan nonatoureanor mauris laoreet, iaculis.
+      </p>
+      <!--Form-->
+      <form class="cs-form" id="cs-form-323" name="Contact Form" method="post">
+        <label class="cs-label">
+          Name
+          <input
+            class="cs-input"
+            required
+            type="text"
+            id="name-323"
+            name="name"
+            placeholder="Name"
+          />
+        </label>
+        <label class="cs-label cs-email">
+          Email
+          <input
+            class="cs-input"
+            required
+            type="text"
+            id="email-323"
+            name="email"
+            placeholder="Email"
+          />
+        </label>
+        <label class="cs-label cs-phone">
+          Phone
+          <input
+            class="cs-input"
+            required
+            type="text"
+            id="phone-323"
+            name="phone"
+            placeholder="Phone"
+          />
+        </label>
+        <label class="cs-label">
+          Message
+          <textarea
+            class="cs-input cs-textarea"
+            required
+            name="Message"
+            id="message-323"
+            placeholder="Write message..."></textarea>
+        </label>
+        <button class="cs-button-solid cs-submit" type="submit"
+          >Make an Appointment</button
+        >
+      </form>
+    </div>
+    <!--Map Image, pin is made in the Figma then export as one image-->
+    <picture class="cs-map">
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/map+pin.png"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/map+pin.png"
+      />
+      <img
+        decoding="async"
+        src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/map+pin.png"
+        alt="map"
+        width="610"
+        height="425"
+        aria-hidden="true"
+      />
+    </picture>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #contact-323 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(580 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: calc(52 / 16 * 1rem);
+      }
+
+      .cs-content {
+        text-align: left;
+      }
+
+      .cs-text {
+        /* 24px - 32px */
+        margin-bottom: clamp(1.5rem, 5vw, 2rem);
+      }
+
+      .cs-form {
+        /* 20px - 48px top and bottom */
+        /* 20px - 32px left and right */
+        padding: clamp(1.25rem, 4.18vw, 3rem) clamp(1.25rem, 4.18vw, 2rem);
+        background-color: #f7f7f7;
+        border-radius: calc(16 / 16 * 1rem);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-label {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        width: 100%;
+        color: var(--headerColor);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: calc(4 / 16 * 1rem);
+      }
+
+      .cs-input {
+        font-size: calc(16 / 16 * 1rem);
+        width: 100%;
+        height: calc(56 / 16 * 1rem);
+        padding: 0;
+        padding-left: calc(24 / 16 * 1rem);
+        border-radius: calc(8 / 16 * 1rem);
+        color: var(--headerColor);
+        background-color: #fff;
+        border: none;
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+        &::placeholder {
+          color: #7d799c;
+          opacity: 0.6;
+        }
+      }
+
+      .cs-textarea {
+        min-height: calc(120 / 16 * 1rem);
+        padding-top: calc(24 / 16 * 1rem);
+        margin-bottom: calc(12 / 16 * 1rem);
+        font-family: inherit;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-submit {
+        text-transform: uppercase;
+        width: calc(283 / 16 * 1rem);
+        background-color: var(--secondaryLight);
+        color: var(--headerColor);
+        border: none;
+        transition: color 0.3s;
+        &:hover {
+          cursor: pointer;
+          color: #fff;
+        }
+      }
+
+      .cs-map {
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        /* 328px - 425px */
+        height: clamp(20.5rem, 63.4vw, 26.5625rem);
+        border-radius: calc(24 / 16 * 1rem);
+        /* clips the corners of the img tag */
+        overflow: hidden;
+        position: relative;
+        display: block;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #contact-323 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: calc(52 / 16 * 1rem);
+      }
+
+      .cs-content {
+        max-width: calc(567 / 16 * 1rem);
+      }
+
+      .cs-title,
+      .cs-topper,
+      .cs-text {
+        text-align: left;
+        margin-left: 0;
+      }
+
+      .cs-title {
+        max-width: calc(522 / 16 * 1rem);
+      }
+
+      .cs-email,
+      .cs-phone {
+        width: 47%;
+      }
+
+      .cs-button-solid {
+        margin-left: 0;
+      }
+
+      .cs-map {
+        height: auto;
+        aspect-ratio: 630/701;
+      }
+    }
+  }
+</style>

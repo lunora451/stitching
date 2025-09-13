@@ -1,0 +1,226 @@
+---
+
+---
+
+<!--                   Banner                     --><!-- ============================================ -->
+<div id="banner-1448">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-int-title">About Us</span>
+      <div class="cs-breadcrumbs">
+        <a href="" class="cs-link">Home</a>
+        <a href="" class="cs-link cs-active">About</a>
+      </div>
+    </div>
+    <picture class="cs-picture">
+      <!--Mobile Image-->
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/3-volunteers.png"
+      />
+      <!--Tablet and above Image-->
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/3-volunteers.png"
+      />
+      <img
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/3-volunteers.png"
+        alt="people laughing"
+        width="1280"
+        height="568"
+        aria-hidden="true"
+      />
+    </picture>
+  </div>
+</div>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Banner            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #banner-1448 {
+      padding: var(--sectionPadding);
+      /* 200px - 350px */
+      padding-top: clamp(12.5rem, 30vw, 21.875rem);
+      /* changes to 100px at tablet */
+      padding-bottom: 0;
+      /* clips the line from causing overflow issues for going off screen */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        /* textured pattern */
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        /* changes to a desktop image at tablet */
+        background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/splatter-bg-m.png");
+        background-size: auto;
+        background-position: center;
+        background-repeat: repeat;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        /* prevents the mouse from interacting with itand also in dev tool mode */
+        pointer-events: none;
+      }
+
+      .cs-container {
+        text-align: center;
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: calc(48 / 16 * 1rem);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-int-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: inherit;
+        margin: 0;
+        color: var(--headerColor);
+        position: relative;
+      }
+
+      .cs-breadcrumbs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cs-link {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        text-decoration: none;
+        color: var(--bodyTextColor);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:last-of-type {
+          /* remove the chevron on the last list item */
+          &::after {
+            display: none;
+          }
+        }
+
+        &:after {
+          /* chevron */
+          content: "";
+          width: calc(7 / 16 * 1rem);
+          height: calc(12 / 16 * 1rem);
+          margin: 0 calc(16 / 16 * 1rem);
+          background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/grey-chev.svg");
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          position: relative;
+          display: block;
+        }
+
+        &.cs-active {
+          color: var(--primary);
+        }
+      }
+
+      .cs-picture {
+        /* we set everything inside of the cs-picture in ems, not rems, so we can use the font size minmax to scale it down.  We use the desktop width and height values and position the elements relative to those dimensions of it. We can then set a max height on the img tag that is the same height as the cs-picture, scale down the cs-picture group with the font size minmax to shrink for mobile, and let it grow until it reaches its final size at desktop.  By doing this it allows us to set the img tag to always try to fill the width of the cs-picture 100%, but can be no taller than 362px, and object fit contain makes sure the image is contained within the dimensions of the parent. Then we center the image with flexbox and its done.  You can swap in any PNG cut out you want and it will fit within the dimensions of the box we defined on the cs-picture. Now our code is TRUELY responsive because our code responds not only to the size of the screen, but also the size of the image you replace our default one with */
+        font-size: min(2.2vw, 1em);
+        width: calc(672 / 16 * 1em);
+        height: calc(362 / 16 * 1em);
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: calc(672 / 16 * 1em);
+          height: calc(672 / 16 * 1em);
+          border-radius: 50%;
+          background: #e8e8e8;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: calc(20 / 16 * 1em);
+          left: 50%;
+          z-index: -1;
+          transform: translateX(-50%);
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          max-height: calc(362 / 16 * 1em);
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #banner-1448 {
+      padding-bottom: calc(100 / 16 * 1rem);
+
+      .cs-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        position: initial;
+      }
+
+      .cs-content {
+        text-align: left;
+        width: 40%;
+        align-items: flex-start;
+      }
+
+      .cs-picture {
+        font-size: min(1.3vw, 1em);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #banner-1448 {
+      .cs-picture {
+        margin-left: calc(-30 / 16 * 1rem);
+        left: 50%;
+        right: auto;
+      }
+    }
+  }
+</style>

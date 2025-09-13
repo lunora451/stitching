@@ -1,0 +1,448 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Side By Side                 --><!-- ============================================ -->
+<section id="sbs-1565">
+  <div class="cs-container">
+    <picture class="cs-picture">
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model.jpg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model.jpg"
+        alt="model"
+        width="586"
+        height="752"
+        aria-hidden="true"
+      />
+    </picture>
+    <div class="cs-content">
+      <span class="cs-topper">Our Features</span>
+      <h2 class="cs-title">
+        Accessible Wardrobe That Women Can Wear and Curate Over Time
+      </h2>
+      <ul class="cs-card-group">
+        <li class="cs-li">
+          <picture class="cs-li-picture">
+            <img
+              class="cs-li-icon"
+              aria-hidden="true"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/price-tag.svg"
+              decoding="async"
+              alt="icon"
+              width="32"
+              height="32"
+              loading="lazy"
+            />
+          </picture>
+          <div class="cs-flex">
+            <h3 class="cs-h3">Member Discount</h3>
+            <p class="cs-li-text">
+              It’s no secret that one person alone cannot overcome the greatest
+              humanitarian crises, return them within 30 days for a full refund.
+            </p>
+          </div>
+        </li>
+        <li class="cs-li">
+          <picture class="cs-li-picture">
+            <img
+              class="cs-li-icon"
+              aria-hidden="true"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/sheild.svg"
+              decoding="async"
+              alt="icon"
+              width="32"
+              height="32"
+              loading="lazy"
+            />
+          </picture>
+          <div class="cs-flex">
+            <h3 class="cs-h3">Safe Payment</h3>
+            <p class="cs-li-text">
+              It’s no secret that one person alone cannot overcome the greatest
+              humanitarian crises, return them within 30 days for a full refund.
+            </p>
+          </div>
+        </li>
+        <li class="cs-li">
+          <picture class="cs-li-picture">
+            <img
+              class="cs-li-icon"
+              aria-hidden="true"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/bag.svg"
+              decoding="async"
+              alt="icon"
+              width="32"
+              height="32"
+              loading="lazy"
+            />
+          </picture>
+          <div class="cs-flex">
+            <h3 class="cs-h3">Shop with Confidence</h3>
+            <p class="cs-li-text">
+              It’s no secret that one person alone cannot overcome the greatest
+              humanitarian crises, return them within 30 days for a full refund.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Logos                      -->
+<!-- ============================================ -->
+
+<div id="logos-1565">
+  <div class="cs-container">
+    <span class="cs-header">Shop By Brand</span>
+    <div class="cs-logo-group">
+      <!--Ideally you want to use svg's for the file path image, which is why these aren't wrapped in picture elements for different screen sizes-->
+      <picture class="cs-picture">
+        <img
+          class="cs-logo"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/logo6.png"
+          alt="logo"
+          width="287"
+          height="65"
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
+      <picture class="cs-picture">
+        <img
+          class="cs-logo"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/logo2.png"
+          alt="logo"
+          width="229"
+          height="55"
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
+      <picture class="cs-picture">
+        <img
+          class="cs-logo"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/logo3.png"
+          alt="logo"
+          width="235"
+          height="53"
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
+      <picture class="cs-picture">
+        <img
+          class="cs-logo"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/logo4.png"
+          alt="logo"
+          width="228"
+          height="61"
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
+      <picture class="cs-picture">
+        <img
+          class="cs-logo"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/logo5.png"
+          alt="logo"
+          width="228"
+          height="61"
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
+    </div>
+  </div>
+  <!-- Background Graphic -->
+  <picture class="cs-background">
+    <img
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/waves-side.svg"
+      alt="waves"
+      width="1920"
+      height="300"
+      aria-hidden="true"
+      loading="lazy"
+      decoding="async"
+    />
+  </picture>
+</div>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-1565 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 2;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        /* 28px - 40px */
+        margin: 0 0 clamp(1.75rem, 3vw, 2.5rem) 0;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        /* 28px - 40px */
+        gap: clamp(1.75rem, 4vw, 2.5rem);
+      }
+
+      .cs-li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        /* 16px - 20px */
+        gap: clamp(1rem, 2.5vw, 1.25rem);
+      }
+
+      .cs-li-picture {
+        /* 60px - 80px */
+        width: clamp(3.75rem, 7vw, 5rem);
+        height: clamp(3.75rem, 7vw, 5rem);
+        margin: 0;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 1px solid var(--primary);
+        box-sizing: border-box;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* prevents flexbox from squishing it */
+        flex: none;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: var(--primary);
+          opacity: 0.1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+      }
+
+      .cs-li-icon {
+        /* 24px 36px */
+        width: clamp(1.5rem, 3vw, 2.25rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-h3 {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        text-align: left;
+        margin: 0 0 calc(8 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-li-text {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        text-align: left;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-picture {
+        width: 100%;
+        max-width: calc(586 / 16 * 1rem);
+        height: 100vw;
+        min-height: calc(360 / 16 * 1rem);
+        max-height: calc(600 / 16 * 1rem);
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbs-1565 {
+      padding-bottom: 0;
+
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        position: relative;
+      }
+
+      .cs-content {
+        width: 50%;
+        /* Same as marign-bottom on .cs-picture, offsets its negative margin */
+        padding-bottom: clamp(5rem, 7vw, 7rem);
+      }
+
+      .cs-picture {
+        height: auto;
+        /* 640px - 752px */
+        min-height: clamp(40rem, 70vw, 47rem);
+        max-height: 100%;
+        width: 42%;
+        /* -80px to -112px */
+        margin-bottom: calc(clamp(5rem, 7vw, 7rem) * -1);
+      }
+    }
+  }
+
+  /*-- -------------------------- -->
+<---           Logos            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #logos-1565 {
+      padding: var(--sectionPadding);
+      background-color: #1a1a1a;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+      }
+
+      .cs-header {
+        font-size: calc(25 / 16 * 1rem);
+        text-align: center;
+        font-weight: 700;
+        line-height: 1.2em;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        display: block;
+      }
+
+      .cs-logo-group {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        column-gap: calc(40 / 16 * 1rem);
+      }
+
+      .cs-picture {
+        /* 120px - 196px */
+        width: clamp(7.5rem, 12vw, 12.25rem);
+        /* 72px - 134px */
+        height: clamp(4.5rem, 12vw, 8.375rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cs-logo {
+        width: 100%;
+        height: auto;
+        height: auto;
+        margin: 0;
+        display: block;
+        object-fit: contain;
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        max-height: calc(650 / 16 * 1rem);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #logos-1565 {
+      /* 170px - 192px */
+      padding-top: clamp(10.625rem, 17vw, 12rem);
+      .cs-logo-group {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+      }
+    }
+  }
+</style>

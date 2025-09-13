@@ -1,0 +1,232 @@
+---
+
+---
+
+<!-- ============================================ --><!--                     Steps                    --><!-- ============================================ -->
+<section id="steps-2127">
+  <div class="cs-container">
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/layer.svg"
+          alt="icon"
+          width="20"
+          height="20"
+          aria-hidden="true"
+        />
+        <h3 class="cs-h3">Perfect Arrangement</h3>
+        <span class="cs-item-text">
+          Choose from our range of Photo booth options, including open-air to
+          suit your wedding theme style.
+        </span>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/snowflake.svg"
+          alt="icon"
+          width="20"
+          height="20"
+          aria-hidden="true"
+        />
+        <h3 class="cs-h3">The Wedding Bliss</h3>
+        <span class="cs-item-text">
+          Choose from our range of Photo booth options, including open-air to
+          suit your wedding theme style.
+        </span>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/two-users.svg"
+          alt="icon"
+          width="20"
+          height="20"
+          aria-hidden="true"
+        />
+        <h3 class="cs-h3">Just The Two of Us</h3>
+        <span class="cs-item-text">
+          Choose from our range of Photo booth options, including open-air to
+          suit your wedding theme style.
+        </span>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/heart-outline.svg"
+          alt="icon"
+          width="20"
+          height="20"
+          aria-hidden="true"
+        />
+        <h3 class="cs-h3">Make With Love</h3>
+        <span class="cs-item-text">
+          Choose from our range of Photo booth options, including open-air to
+          suit your wedding theme style.
+        </span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---            Steps           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #steps-2127 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(704 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+      }
+
+      .cs-item {
+        text-align: center;
+        list-style: none;
+        width: 100%;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        padding: calc(32 / 16 * 1rem) 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-column: span 12;
+        position: relative;
+        z-index: 1;
+
+        &:first-of-type {
+          padding-top: 0;
+        }
+
+        &:last-of-type {
+          padding-bottom: 0;
+
+          &::after {
+            display: none;
+          }
+        }
+
+        /* bottom border */
+        &::after {
+          content: "";
+          width: 100%;
+          height: 1px;
+          /* to change the color of the bottom border, adjust the second color (at 50%). the first and third will blend the color to transparent */
+          /* note you'll also have to change the color in the tablet media query when the lines go vertical */
+          background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgb(186, 186, 186, 1) 50%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+
+      .cs-icon {
+        /* 48px - 60px */
+        width: clamp(3rem, 6vw, 3.75rem);
+        height: auto;
+        /* 24px - 40px */
+        margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+        display: block;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2vw, 1.5625rem);
+        font-weight: bold;
+        line-height: 1.2em;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-item-text {
+        /* 14px - 20px */
+        font-size: clamp(0.875rem, 1.5vw, 1.25rem);
+        line-height: 1.5em;
+        text-decoration: none;
+        max-width: calc(300 / 16 * 1rem);
+        padding: 0;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #steps-2127 {
+      .cs-container {
+        max-width: calc(1720 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        row-gap: calc(48 / 16 * 1rem);
+      }
+
+      .cs-item {
+        padding: 0 calc(16 / 16 * 1rem);
+        grid-column: span 3;
+
+        &::after {
+          width: 1px;
+          height: 100%;
+          background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgb(186, 186, 186, 1) 50%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          right: 0;
+          left: initial;
+        }
+      }
+
+      .cs-h3 {
+        max-width: 13ch;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #steps-2127 {
+      .cs-item {
+        /* 20px - 30px */
+        padding: 0 clamp(1.25rem, 2.5vw, 1.875rem);
+      }
+    }
+  }
+</style>

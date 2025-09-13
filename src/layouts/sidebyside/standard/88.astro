@@ -1,0 +1,327 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Side By Side                  --><!-- ============================================ -->
+<section id="sbs-416">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Who We Are</span>
+      <h2 class="cs-title">About Our Company</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <ul class="cs-ul">
+        <li class="cs-item">
+          <h3 class="cs-h3">01 Title 01</h3>
+          <p class="cs-item-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+        </li>
+        <li class="cs-item">
+          <h3 class="cs-h3">01 Title 01</h3>
+          <p class="cs-item-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+        </li>
+      </ul>
+      <a href="" class="cs-button-solid">More About Us</a>
+    </div>
+    <div class="cs-image-group">
+      <!--Top Left Image-->
+      <picture class="cs-picture cs-picture1">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves1-m.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves1.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves1.jpg"
+          alt="leaves"
+          width="229"
+          height="352"
+          aria-hidden="true"
+        />
+      </picture>
+      <!--Top Right Image-->
+      <picture class="cs-picture cs-picture2">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves2-m.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves2.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves2.jpg"
+          alt="leaves"
+          width="390"
+          height="352"
+          aria-hidden="true"
+        />
+      </picture>
+      <!--Bottom Image-->
+      <picture class="cs-picture cs-picture3">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves3-m.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves3.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves3.jpg"
+          alt="leaves"
+          width="649"
+          height="227"
+          aria-hidden="true"
+        />
+      </picture>
+      <!--Person Image-->
+      <!--To make your own crop, use https://www.remove.bg to remove the background of your own images-->
+      <picture class="cs-picture cs-person">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/person2.png"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/person2.png"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/person2.png"
+          alt="person"
+          width="649"
+          height="227"
+          aria-hidden="true"
+        />
+      </picture>
+      <div class="cs-info-box">
+        <span class="cs-job">Owner/Operator</span>
+        <span class="cs-name">Alex J Matias</span>
+      </div>
+    </div>
+  </div>
+  <!--SVG Background Graphic-->
+  <picture class="cs-graphic">
+    <source
+      media="(min-width: 1300px)"
+      srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/svg-slant.svg"
+    />
+    <source
+      media="(min-width: 768px)"
+      srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/svg-slant-t.svg"
+    />
+    <source
+      media="(max-width: 767px)"
+      srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/svg-slant-m.svg"
+    />
+    <img
+      class="cs-graphic-img"
+      aria-hidden="true"
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/svg-slant-m.svg"
+      alt="graphic"
+      width="360"
+      height="741"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-416 {
+      padding: var(--sectionPadding);
+      /* clips svg as the screen grows so it doesn't overflow */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280 at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 108px */
+        gap: clamp(3rem, 6vw + 1.1em, 6.75rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(542 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-image-group {
+        font-size: min(2.5vw, 1em);
+        width: calc(579 / 16 * 1em);
+        height: calc(542 / 16 * 1em);
+        /* sends it to the top of the flexbox */
+        order: -1;
+        position: relative;
+      }
+
+      .cs-picture {
+        border-radius: calc(20 / 16 * 1em);
+        /* clips the img tag corners */
+        overflow: hidden;
+        position: absolute;
+        display: block;
+
+        &:hover {
+          &:before {
+            opacity: 0.6;
+          }
+
+          img {
+            transform: scale(1.1);
+          }
+        }
+
+        &:before {
+          /* Hover Box */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: var(--primary);
+          opacity: 0;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: 10;
+          transition: opacity 0.3s;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          transition: transform 0.6s;
+        }
+      }
+
+      .cs-picture1 {
+        width: calc(204 / 16 * 1em);
+        height: calc(314 / 16 * 1em);
+        top: 0;
+        left: 0;
+      }
+
+      .cs-picture2 {
+        width: calc(348 / 16 * 1em);
+        height: calc(314 / 16 * 1em);
+        top: 0;
+        right: 0;
+      }
+
+      .cs-picture3 {
+        width: calc(579 / 16 * 1em);
+        height: calc(202 / 16 * 1em);
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #sbs-416 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .cs-content {
+        width: 48%;
+      }
+
+      .cs-image-group {
+        font-size: min(1.15vw, 1em);
+        flex: none;
+      }
+    }
+  }
+</style>

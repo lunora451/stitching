@@ -1,0 +1,150 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Stats                      --><!-- ============================================ -->
+<div id="stats-2402">
+  <div class="cs-container">
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <span class="cs-number">100<span class="cs-small">%</span></span>
+        <span class="cs-header">Satisfaction Guaranteed</span>
+        <span class="cs-item-text">We stand behind our work.</span>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">100<span class="cs-small">%</span></span>
+        <span class="cs-header">Eco-Friendly Products</span>
+        <span class="cs-item-text">Safe for pets and the planet.</span>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">20<span class="cs-small">+</span></span>
+        <span class="cs-header">Years of Experience</span>
+        <span class="cs-item-text">A decade of trusted service.</span>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">5K<span class="cs-small">+</span></span>
+        <span class="cs-header">Happy Clients</span>
+        <span class="cs-item-text">Countless satisfied pet owners.</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #stats-2402 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 2.5vw, 1.25rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        text-align: left;
+        /* 32px - 40px and 24 - 40px */
+        padding: clamp(2rem, 4vw, 2.5rem) clamp(1.25rem, 4vw, 2.5rem);
+        grid-column: span 12;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        position: relative;
+
+        &:before {
+          /* pseudo element for border */
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 100%;
+          border: 1px solid var(--primary);
+          border-radius: calc(12 / 16 * 1rem);
+          opacity: 0.2;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          height: calc(40 / 16 * 1rem);
+          width: calc(6 / 16 * 1rem);
+          background-color: var(--primary);
+          border-radius: 0 calc(8 / 16 * 1rem) calc(8 / 16 * 1rem) 0;
+          top: calc(35 / 16 * 1rem);
+          left: 0;
+        }
+      }
+
+      .cs-number {
+        font-size: calc(39 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 900;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--headerColor);
+        display: block;
+      }
+
+      .cs-small {
+        font-size: calc(25 / 16 * 1rem);
+      }
+
+      .cs-header {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 900;
+        margin-bottom: calc(4 / 16 * 1rem);
+        color: var(--bodyTextColor);
+      }
+
+      .cs-item-text {
+        line-height: 1.5em;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* Tablet - 700px */
+  @media only screen and (min-width: 700px) {
+    #stats-2402 {
+      .cs-item {
+        grid-column: span 6;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #stats-2402 {
+      .cs-item {
+        grid-column: span 3;
+      }
+    }
+  }
+</style>

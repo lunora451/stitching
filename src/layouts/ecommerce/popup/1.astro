@@ -1,0 +1,435 @@
+---
+
+---
+
+<div id="cs-modal-1605" style="z-index: -10">
+  <div class="cs-wrapper">
+    <button id="cs-close-1605" class="cs-close" aria-label="close pop up">
+      <img
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/Close.svg"
+        alt="clothing"
+        width="24"
+        height="24"
+        aria-hidden="true"
+      />
+    </button>
+    <picture class="cs-picture">
+      <!--Mobile Image-->
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/clothing.jpg"
+      />
+      <!--Tablet and above Image-->
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/clothing.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/clothing.jpg"
+        alt="clothing"
+        width="413"
+        height="500"
+      />
+    </picture>
+    <div class="cs-content">
+      <span class="cs-header">
+        Join Our Newsletter Get 20% Off On First Order
+      </span>
+      <p class="cs-text">
+        With designs that spark conversations and evoke the spirit of adventure,
+        empowers you to wear your passion on your sleeve.
+      </p>
+      <!--If you remove the form because you don't want it, make sure you remove "CSsubmitButton.addEventListener('click', handleClose);" in the JS code. It is adding an event listener on the submit button, if you remove the submit button JS freaks out that its trying to add an event listener to something that isn't there and won't work -->
+      <form class="cs-form" name="Contact Form" method="post">
+        <input
+          class="cs-input"
+          type="email"
+          id="cs-email-1605"
+          name="find-us"
+          placeholder="Email Address"
+        />
+        <button
+          id="cs-submit-1605"
+          class="cs-button-solid cs-submit"
+          type="submit">Subscribe Now</button
+        >
+      </form>
+      <div class="cs-social">
+        <a href="" class="cs-social-link">
+          <img
+            class="cs-social-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-1a.svg"
+            alt="logo"
+            width="12"
+            height="12"
+            aria-hidden="true"
+            decoding="async"
+          />
+        </a>
+        <a href="" class="cs-social-link">
+          <img
+            class="cs-social-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-1a.svg"
+            alt="logo"
+            width="12"
+            height="12"
+            aria-hidden="true"
+            decoding="async"
+          />
+        </a>
+        <a href="" class="cs-social-link">
+          <img
+            class="cs-social-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram1a.svg"
+            alt="logo"
+            width="12"
+            height="12"
+            aria-hidden="true"
+            decoding="async"
+          />
+        </a>
+        <a href="" class="cs-social-link">
+          <img
+            class="cs-social-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/youtube1a.svg"
+            alt="logo"
+            width="12"
+            height="12"
+            aria-hidden="true"
+            decoding="async"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Modal            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #cs-modal-1605 {
+      padding: var(--sectionPadding);
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      transition:
+        opacity 0.3s,
+        visibility 0.3s;
+      transition-delay: 0.3s;
+
+      &.cs-loaded {
+        /* when the page finishes loading, the JS will add this class to the cs-modal which will then animate into existence */
+        opacity: 1;
+        visibility: visible;
+
+        .cs-wrapper {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      &.cs-closed {
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1000;
+      }
+
+      .cs-wrapper {
+        width: 100%;
+        /* changes to 846px at tbalet */
+        max-width: calc(400 / 16 * 1rem);
+        background-color: #fff;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+        transform: translateY(12.25rem);
+        transition:
+          transform 0.7s,
+          opacity 0.3s;
+        transition-delay: 0.5s;
+      }
+
+      .cs-content {
+        text-align: center;
+        /* 40px - 60px top & bottom */
+        /* 24px - 40px left & right */
+        padding: clamp(2.5rem, 8vw, 3.75rem) clamp(1.5rem, 3vw, 2.5rem);
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cs-close {
+        width: calc(40 / 16 * 1rem);
+        height: calc(40 / 16 * 1rem);
+        border: 1px solid transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        transition:
+          border-color 0.3s,
+          transform 0.5s;
+
+        &:hover {
+          cursor: pointer;
+          border-color: #e8e8e8;
+          transform: rotate(90deg);
+        }
+
+        img {
+          width: calc(24 / 16 * 1rem);
+          height: auto;
+        }
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: 60vw;
+        /* removed at tablet */
+        max-height: calc(250 / 16 * 1rem);
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-header {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        text-align: inherit;
+        line-height: 1.2em;
+        font-weight: 700;
+        max-width: 20ch;
+        /* 12px - 16px */
+        margin: 0 0 clamp(0.75rem, 2vw, 1rem);
+        display: block;
+      }
+
+      .cs-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        /* 28px - 32px */
+        margin: 0 0 clamp(1.75rem, 2.5vw, 2rem);
+      }
+
+      .cs-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-input {
+        font-size: calc(16 / 16 * 1rem);
+        width: 100%;
+        height: clamp(2.875rem, 5.5vw, 3.5rem);
+        margin: 0;
+        padding: 0;
+        padding-left: calc(20 / 16 * 1rem);
+        background-color: #f7f7f7;
+        border: none;
+        /* prevents padding from adding to width and height */
+        box-sizing: border-box;
+        display: block;
+        &::placeholder {
+          color: #767676;
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primaryLight);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-submit {
+        width: 100%;
+        border: none;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .cs-social {
+        height: calc(32 / 16 * 1rem);
+        margin-top: calc(32 / 16 * 1rem);
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: calc(8 / 16 * 1rem);
+        transition:
+          opacity 0.3s,
+          visibility 0.3s,
+          height 0.3s;
+      }
+
+      .cs-social-link {
+        text-decoration: none;
+        width: calc(32 / 16 * 1rem);
+        height: calc(32 / 16 * 1rem);
+        background-color: #484848;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: var(--primary);
+
+          .cs-social-icon {
+            opacity: 1;
+            filter: grayscale(1) brightness(10000%);
+          }
+        }
+      }
+
+      .cs-social-icon {
+        width: calc(12 / 16 * 1rem);
+        height: auto;
+        filter: grayscale(1) brightness(1000%);
+        opacity: 0.6;
+        display: block;
+        transition: opacity 0.6s;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #cs-modal-1605 {
+      .cs-wrapper {
+        max-width: calc(846 / 16 * 1rem);
+        flex-flow: row;
+        align-items: stretch;
+      }
+
+      .cs-close {
+        background-color: transparent;
+        top: calc(16 / 16 * 1rem);
+        right: calc(16 / 16 * 1rem);
+      }
+
+      .cs-content {
+        width: 50%;
+      }
+
+      .cs-picture {
+        width: 50%;
+        min-height: calc(432 / 16 * 1rem);
+        height: auto;
+        max-height: 100%;
+      }
+    }
+  }
+</style>
+
+<script>
+  // your local storage reset for local testing. uncomment this command so you can still access you pop up after clicking the close or submit button.
+  // localStorage.setItem('modalClosed', 'false');
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Variables
+    var CSmodal = document.getElementById("cs-modal-1605");
+    var CScloseButton = document.getElementById("cs-close-1605");
+    var CSsubmitButton = document.getElementById("cs-submit-1605");
+
+    // Check localStorage to see if the modal has been closed before
+    if (localStorage.getItem("modalClosed") !== "true") {
+      // Show the modal after 5 seconds
+      setTimeout(function () {
+        CSmodal.classList.add("cs-loaded");
+        CSmodal.style.zIndex = 12000; // Set z-index to 12000 to make it visible
+      }, 0);
+    } else {
+      // If modal is marked as closed, make sure it's hidden
+      CSmodal.classList.add("cs-closed");
+      CSmodal.classList.remove("cs-loaded");
+      CSmodal.style.zIndex = -10000; // Set z-index to -1000 to keep it hidden
+    }
+
+    // Close button event listener
+    CScloseButton.addEventListener("click", function () {
+      // Add 'cs-closed' class and remove 'cs-loaded' class
+      CSmodal.classList.add("cs-closed");
+      CSmodal.classList.remove("cs-loaded");
+      CSmodal.style.zIndex = -1000; // Set z-index to -1000 to hide the modal
+
+      // Store the closed state in localStorage
+      localStorage.setItem("modalClosed", "true");
+    });
+
+    // Optional: Add event listener for the submit button if you want any functionality
+    CSsubmitButton.addEventListener("click", function () {
+      // Your submit button logic here (e.g., form submission)
+    });
+  });
+</script>

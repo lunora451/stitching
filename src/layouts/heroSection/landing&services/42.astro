@@ -1,0 +1,586 @@
+---
+
+---
+
+<!--
+    NOTES:
+
+    We are using negative margin on the cs-card-group to create the overlapping effect. This pulls the section below it toward it which makes it overlap whatever section is below it. So we need to add extra padding top the the section below it to account for this. Here's the values you need to add to the section below this one to make them work together:
+
+    On mobile:
+    LESS: padding-top: (260/16rem)
+    SCSS: padding-top: calc(260 / 16 * 1rem)
+    CSS: 16.25rem
+
+    On tablet (768px):
+    /* 132px - 260px */
+    padding-top: clamp(8.25rem, 25vw, 16.25rem);
+--><!-- ============================================ --><!--                    Hero                      --><!-- ============================================ -->
+<section id="hero-1482">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Daycare & Preschool</span>
+      <h1 class="cs-title">Together We’ll Explore New Things</h1>
+      <p class="cs-text">
+        Our mission is to provide affordable, high-quality early education and
+        childcare services for working families to ensure every child.
+      </p>
+      <a href="" class="cs-button-solid">Get Started</a>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/day-care-house.svg"
+          loading="lazy"
+          decoding="async"
+          alt="icon"
+          width="32"
+          height="32"
+          aria-hidden="true"
+        />
+        <h3 class="cs-h3">Home-like Environment</h3>
+        <img
+          class="cs-graphic"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/Vector%204.svg"
+          alt="graphic"
+          width="310"
+          height="121"
+          decoding="async"
+          loading="lazy"
+        />
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/day-care-shield.svg"
+          loading="lazy"
+          decoding="async"
+          alt="icon"
+          width="32"
+          height="32"
+          aria-hidden="true"
+        />
+        <h3 class="cs-h3">Security and Safety</h3>
+        <img
+          class="cs-graphic"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/Vector%204.svg"
+          alt="graphic"
+          width="310"
+          height="121"
+          decoding="async"
+          loading="lazy"
+        />
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/day-care-thumb.svg"
+          loading="lazy"
+          decoding="async"
+          alt="icon"
+          width="32"
+          height="32"
+          aria-hidden="true"
+        />
+        <h3 class="cs-h3">Quality Educators</h3>
+        <img
+          class="cs-graphic"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/Vector%204.svg"
+          alt="graphic"
+          width="310"
+          height="121"
+          decoding="async"
+          loading="lazy"
+        />
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/day-care-ball.svg"
+          loading="lazy"
+          decoding="async"
+          alt="icon"
+          width="32"
+          height="32"
+          aria-hidden="true"
+        />
+        <h3 class="cs-h3">Learn by Playing</h3>
+        <img
+          class="cs-graphic"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/Vector%204.svg"
+          alt="graphic"
+          width="310"
+          height="121"
+          decoding="async"
+          loading="lazy"
+        />
+      </li>
+    </ul>
+  </div>
+  <!-- Background Image, background image added in the css at 1600px for parallax effect -->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/daycare-m.jpg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/daycare.jpg"
+    />
+    <img
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/daycare.jpg"
+      alt="abstract background"
+      width="2250"
+      height="1500"
+      aria-hidden="true"
+    />
+  </picture>
+  <div class="cs-graphics-wrapper">
+    <!--Flower-->
+    <img
+      class="cs-flower cs-hide"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/flower.svg"
+      alt="abstract flower"
+      width="139"
+      height="144"
+      aria-hidden="true"
+    />
+    <!--Yellow Blob-->
+    <img
+      class="cs-blob1 cs-hide"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-shape.svg"
+      alt="abstract shape"
+      width="378"
+      height="268"
+      aria-hidden="true"
+    />
+    <!--Red Blob-->
+    <img
+      class="cs-blob2 cs-hide"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/orange-blob.svg"
+      alt="abstract shap"
+      width="318"
+      height="221"
+      aria-hidden="true"
+    />
+    <!--Leaf-->
+    <img
+      class="cs-leaf cs-hide"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/abstract-leaf.svg"
+      alt="abstract leaf"
+      width="318"
+      height="221"
+      aria-hidden="true"
+    />
+  </div>
+  <!--SVG Curve-->
+  <svg
+    class="cs-curve"
+    width="1920"
+    height="136"
+    viewBox="0 0 1920 136"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M1920 136V0C1803.21 45.3334 1445.52 136 951 136C456.485 136 111.116 45.3334 0 0V136H951H1920Z"
+      fill="#fff"></path>
+  </svg>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-1482 {
+      /* 200px - 400px - leaving extra space for the navigation */
+      padding: clamp(12.5rem, 29.95vw, 25rem) calc(16 / 16 * 1rem) 0;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #fff3ec;
+        opacity: 0.9;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+      }
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 240px */
+        gap: clamp(3rem, 14vw, 15rem);
+        position: relative;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        max-width: calc(616 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+        position: relative;
+        z-index: 10;
+      }
+
+      .cs-topper {
+        /* 13px - 16px */
+        font-size: clamp(0.8125rem, 1.6vw, 1rem);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        text-align: inherit;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        color: var(--secondary);
+        margin-bottom: calc(8 / 16 * 1rem);
+        display: block;
+      }
+
+      .cs-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-align: inherit;
+        max-width: 20ch;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+        color: var(--headerColor);
+        position: relative;
+      }
+
+      .cs-text {
+        /* 16px - 24px */
+        font-size: clamp(1rem, 2.3vw, 1.25rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        /* 32px - 40px */
+        margin: 0 0 clamp(2rem, 4vw, 2.5rem) 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        overflow: hidden;
+        margin: 0;
+        color: #fff;
+        padding: 0 calc(48 / 16 * 1rem);
+        border-radius: calc(30 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 0%;
+          background: #fff;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: var(--primary);
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0 0 calc(-200 / 16 * 1rem) 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 8px - 20px */
+        gap: clamp(0.5rem, 2vw, 1.25rem);
+        position: relative;
+        z-index: 50;
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        box-sizing: border-box;
+        /* 24px - 80px - top and bottom*/
+        /* 12px - 60px - Left and right*/
+        padding: clamp(1.5rem, 8vw, 5rem) clamp(0.75rem, 1vw, 3.75rem);
+        border: 1px solid #e8e8e8;
+        background-color: #fff;
+        /* 24px - 60px */
+        border-radius: clamp(1.5rem, 4vw, 3.75rem);
+        grid-column: span 6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: clamp(1rem, 1.7vw, 1.5rem);
+        position: relative;
+        overflow: hidden;
+        transition:
+          border-color 0.3s,
+          background-color 0.3s;
+
+        &:hover {
+          border-color: var(--primary);
+
+          .cs-icon {
+            filter: none;
+          }
+
+          .cs-graphic {
+            filter: grayscale(0);
+          }
+        }
+      }
+
+      .cs-icon {
+        width: auto;
+        /* 48px - 60px */
+        height: clamp(3rem, 5vw, 3.75rem);
+        /* greyscale gets removed on hover, revealing the color of the icon. customise your icons to match your color scheme and the hover effect will work automatically */
+        filter: grayscale(1);
+        transition: filter 0.3s;
+      }
+
+      .cs-h3 {
+        font-size: calc(20 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-align: center;
+        max-width: calc(185 / 16 * 1rem);
+        margin: 0 auto;
+        color: var(--headerColor);
+      }
+
+      .cs-graphics-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      .cs-graphic {
+        min-width: calc(310 / 16 * 1rem);
+        width: 100%;
+        height: auto;
+        filter: grayscale(1);
+        display: none;
+        position: absolute;
+        /* changes to 0 at large desktop */
+        bottom: calc(-35 / 16 * 1rem);
+        left: 0;
+        transition: filter 0.3s;
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          /* makes the top of the image start at the top of the parent */
+          object-position: top;
+        }
+      }
+
+      .cs-hide {
+        display: none;
+      }
+
+      .cs-blob1 {
+        /* 166px - 378px */
+        width: clamp(10.375rem, 18vw, 23.625rem);
+        height: auto;
+        left: calc(-10 / 16 * 1rem);
+        bottom: calc(32 / 16 * 1rem);
+        transform: rotate(-8deg);
+      }
+
+      .cs-blob2 {
+        /* 170px - 318px */
+        width: clamp(10.625rem, 23vw, 19.875rem);
+        height: auto;
+        right: calc(-56 / 16 * 1rem);
+        bottom: calc(-10 / 16 * 1rem);
+        transform: rotate(-8deg);
+      }
+
+      .cs-leaf {
+        /* 115px - 143px */
+        width: clamp(7.1875rem, 14vw, 8.9375rem);
+        height: auto;
+        right: calc(-56 / 16 * 1rem);
+        /* 200px - 340px */
+        top: clamp(12.5rem, 13vw, 21.25rem);
+        transform: rotate(-63deg);
+      }
+
+      .cs-curve {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-1482 {
+      &:before {
+        background: linear-gradient(
+          89deg,
+          rgba(255, 243, 236, 0.9) 44.46%,
+          rgba(255, 243, 236, 0) 78.47%
+        );
+        opacity: 1;
+      }
+
+      .cs-container {
+        align-items: flex-start;
+      }
+
+      .cs-content {
+        width: 67%;
+        text-align: left;
+        align-items: flex-start;
+      }
+
+      .cs-card-group {
+        /* 72px - 160px */
+        margin-bottom: calc(clamp(4.5rem, 14vw, 10rem) * -1);
+      }
+
+      .cs-item {
+        grid-column: span 3;
+      }
+
+      .cs-hide {
+        display: block;
+        position: absolute;
+        z-index: 10;
+      }
+
+      .cs-flower {
+        display: none;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #hero-1482 {
+      .cs-graphic {
+        display: block;
+      }
+
+      .cs-flower {
+        display: block;
+        left: calc(-56 / 16 * 1rem);
+        /* 150px - 280px */
+        top: clamp(9.375rem, 10vw, 17.5rem);
+      }
+    }
+  }
+
+  /* Larger Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #hero-1482 {
+      .cs-graphic {
+        bottom: 0;
+      }
+    }
+  }
+
+  /* Largest Desktop Parallax Effect - 1600px */
+  @media only screen and (min-width: 100rem) {
+    #hero-1482 {
+      .cs-background {
+        background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/daycare.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        img {
+          display: none;
+        }
+      }
+
+      .cs-flower {
+        left: auto;
+        right: 50%;
+        margin-right: calc(701 / 16 * 1rem);
+      }
+
+      .cs-blob1 {
+        left: auto;
+        right: 50%;
+        margin-right: calc(622 / 16 * 1rem);
+      }
+
+      .cs-blob2 {
+        right: auto;
+        left: 50%;
+        margin-left: calc(686 / 16 * 1rem);
+      }
+
+      .cs-leaf {
+        right: auto;
+        left: 50%;
+        margin-left: calc(747 / 16 * 1rem);
+      }
+    }
+  }
+</style>

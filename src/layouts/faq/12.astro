@@ -1,0 +1,311 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    FAQ                       --><!-- ============================================ -->
+<section id="faq-1108">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">FAQ’s</span>
+      <h2 class="cs-title">Frequently Asked Questions</h2>
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/mechanic23.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/mechanic23.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/mechanic23.jpg"
+          alt="appliance"
+          width="522"
+          height="400"
+        />
+      </picture>
+    </div>
+    <div class="cs-flex-group">
+      <ul class="cs-faq-group">
+        <!-- Active class added as default -->
+        <li class="cs-faq-item active">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              Do you have experience with car like mine?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            In the U.S., the terms lawyer and attorney are often used
+            interchangeably. A lawyer provides legal services such as giving
+            legal advice, writing legal documents and providing policy counsel
+            to governments. An attorney, on top of these things also holds a
+            state or regional license to represent clients in a law court.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              What is your plan cancellation policy?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              What professional certifications you have?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              What professional certifications you have?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              How much air pressure should I put my tires?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---            FAQ             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #faq-1108 {
+      padding: var(--sectionPadding);
+      position: relative;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(584 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 32px - 48px */
+        gap: clamp(2rem, 6vw, 3rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title {
+        /* 32px - 48px */
+        margin: 0 0 clamp(2rem, 5vw, 3rem);
+      }
+
+      .cs-picture {
+        width: 100%;
+        /* 360px - 400px */
+        height: clamp(22.5rem, 54vw, 25rem);
+        display: block;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .cs-faq-group {
+        width: 100%;
+        max-width: calc(650 / 16 * 1rem);
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-faq-item {
+        list-style: none;
+        width: 100%;
+        background-color: #f7f7f7;
+        /* clips all corners of the button that overlap the rounded border */
+        overflow: hidden;
+        transition: border-bottom 0.3s;
+
+        &.active {
+          .cs-button {
+            color: var(--primary);
+            &:before {
+              background-color: var(--primary);
+              transform: rotate(315deg);
+            }
+            &:after {
+              background-color: var(--primary);
+              transform: rotate(-315deg);
+            }
+          }
+          .cs-item-p {
+            height: auto;
+            /* 20px - 24px bottom */
+            /* 16px - 24px left & right */
+            padding: 0 clamp(1rem, 2vw, 1.5rem) clamp(1.25rem, 1.3vw, 1.5rem);
+            opacity: 1;
+          }
+        }
+      }
+
+      .cs-button {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        line-height: 1.2em;
+        text-align: left;
+        font-weight: bold;
+        /* 20px - 24px */
+        padding: clamp(1.25rem, 2vw, 1.5rem);
+        background-color: #f7f7f7;
+        border: none;
+        color: var(--headerColor);
+        display: block;
+        width: 100%;
+        position: relative;
+        transition:
+          background-color 0.3s,
+          color 0.3s;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:before {
+          /* left line */
+          content: "";
+          width: calc(8 / 16 * 1rem);
+          height: calc(2 / 16 * 1rem);
+          background-color: var(--headerColor);
+          opacity: 1;
+          border-radius: 50%;
+          position: absolute;
+          display: block;
+          top: 50%;
+          right: calc(24 / 16 * 1rem);
+          transform: rotate(45deg);
+          /* animate the transform from the left side of the x axis, and the center of the y */
+          transform-origin: left center;
+          transition: transform 0.5s;
+        }
+
+        &:after {
+          /* right line */
+          content: "";
+          width: calc(8 / 16 * 1rem);
+          height: calc(2 / 16 * 1rem);
+          background-color: var(--headerColor);
+          opacity: 1;
+          border-radius: 50%;
+          position: absolute;
+          display: block;
+          top: 50%;
+          right: calc(21 / 16 * 1rem);
+          transform: rotate(-45deg);
+          /* animate the transform from the right side of the x axis, and the center of the y */
+          transform-origin: right center;
+          transition: transform 0.5s;
+        }
+      }
+
+      .cs-button-text {
+        width: 80%;
+        display: block;
+      }
+
+      .cs-item-p {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        width: 90%;
+        height: 0;
+        margin: 0;
+        /* 16px - 24px */
+        padding: 0 clamp(1rem, 2vw, 1.5rem);
+        opacity: 0;
+        color: var(--bodyTextColor);
+        /* clips the text so it doesn't show up */
+        overflow: hidden;
+        transition:
+          opacity 0.3s,
+          padding-bottom 0.3s;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #faq-1108 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+
+      .cs-content {
+        width: 40%;
+        text-align: left;
+        align-items: flex-start;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+    }
+  }
+</style><script>
+  const faqItems = Array.from(document.querySelectorAll(".cs-faq-item"));
+  for (const item of faqItems) {
+    const onClick = () => {
+      item.classList.toggle("active");
+    };
+    item.addEventListener("click", onClick);
+  }
+</script>

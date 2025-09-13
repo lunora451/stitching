@@ -1,0 +1,359 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Side By Side                 --><!-- ============================================ -->
+<section id="sbs-418">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Features</span>
+      <h2 class="cs-title">Professional Landscaping Services</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+      <div class="cs-button-group">
+        <a href="" class="cs-button-solid">Learn More</a>
+        <a href="" class="cs-button-transparent">Get In Touch</a>
+      </div>
+    </div>
+    <div class="cs-image-group">
+      <picture class="cs-picture">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/yard-m.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/yard.jpg"
+        />
+        <img
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/yard.jpg"
+          alt="yard"
+          width="558"
+          height="496"
+        />
+      </picture>
+      <!--Info Box-->
+      <div class="cs-info">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/tree.svg"
+          alt="icon"
+          width="48"
+          height="48"
+        />
+        <div class="cs-flex">
+          <span class="cs-header">Full Remodel</span>
+          <span class="cs-desc">Sod, plants, driveway, hedges</span>
+        </div>
+      </div>
+      <!--Svg Green Trapezpid-->
+      <img
+        class="cs-trapezoid"
+        aria-hidden="true"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/trapezoid.svg"
+        alt="yard"
+        width="558"
+        height="496"
+      />
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-418 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* 48px - 76px */
+        gap: clamp(3rem, 9vw, 4.75rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(522 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-group {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-button-transparent {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: var(--primary);
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: transparent;
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        transition:
+          color 0.3s,
+          border-color 0.3s,
+          background-color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #fff;
+          border-color: #000;
+          background-color: #000;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-image-group {
+        width: 100%;
+        /* changes to 650px at desktop */
+        max-width: calc(550 / 16 * 1rem);
+        height: auto;
+        /* removed at desktop */
+        padding-top: calc(30 / 16 * 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        order: -1;
+      }
+
+      .cs-info {
+        /* 12px - 20px */
+        padding: clamp(0.75rem, 1.5vw, 1.25rem);
+        /*260px - 360px */
+        min-width: clamp(16.25rem, 30vw, 22.5rem);
+        background-color: #fff;
+        border: 1px solid #b4b2c7;
+        border-radius: calc(12 / 16 * 1rem);
+        box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.4);
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        /* next two properties centers it horizontally */
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: calc(20 / 16 * 1rem);
+      }
+
+      .cs-icon {
+        /* 32px - 48px */
+        width: clamp(2rem, 4vw, 3rem);
+        height: auto;
+        margin-right: calc(12 / 16 * 1rem);
+      }
+
+      .cs-header {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 1.5vw, 1.25rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        margin-bottom: calc(4 / 16 * 1rem);
+        color: var(--headerColor);
+        display: block;
+      }
+
+      .cs-desc {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.2em;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-picture {
+        width: 85%;
+        max-width: calc(558 / 16 * 1rem);
+        margin-bottom: calc(40 / 16 * 1rem);
+        border-radius: calc(12 / 16 * 1rem);
+        /* removed at tablet */
+        aspect-ratio: 272/269;
+        /* clips img corners */
+        overflow: hidden;
+        display: block;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* makes it act like a background image */
+          object-fit: cover;
+        }
+      }
+
+      .cs-trapezoid {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbs-418 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+
+      .cs-content {
+        width: 50%;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-image-group {
+        max-width: calc(659 / 16 * 1rem);
+      }
+
+      .cs-picture {
+        /* 269px - 496px changes at desktop */
+        height: clamp(16.8125rem, 35vw, 31rem);
+        aspect-ratio: none;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #sbs-418 {
+      .cs-container {
+        align-items: center;
+      }
+
+      .cs-image-group {
+        max-width: calc(650 / 16 * 1rem);
+        padding: 0;
+      }
+
+      .cs-picture {
+        /* 421px - 496px changes at desktop */
+        height: clamp(26.3125rem, 40vw, 31rem);
+      }
+
+      .cs-info {
+        left: auto;
+        right: calc(18 / 16 * 1rem);
+        transform: none;
+      }
+
+      .cs-trapezoid {
+        height: 80%;
+        bottom: 0;
+      }
+    }
+  }
+</style>

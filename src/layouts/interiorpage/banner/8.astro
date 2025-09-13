@@ -1,0 +1,205 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Banner                     --><!-- ============================================ -->
+<div id="banner-1519">
+  <div class="cs-container">
+    <span class="cs-int-title">About Us</span>
+    <div class="cs-breadcrumbs">
+      <a href="" class="cs-link">Home</a>
+      <a href="" class="cs-link cs-active">About</a>
+    </div>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kids-playing2.jpg"
+    />
+    <!--Tablet and above Image-->
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kids-playing2.jpg"
+    />
+    <img
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kids-playing2.jpg"
+      alt="people laughing"
+      width="1280"
+      height="568"
+      aria-hidden="true"
+    />
+  </picture>
+  <svg
+    class="cs-mask"
+    xmlns="http://www.w3.org/2000/svg"
+    width="1920"
+    height="136"
+    viewBox="0 0 1920 136"
+    fill="none"
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M1920 136V0C1803.21 45.3334 1445.52 136 951 136C456.485 136 111.116 45.3334 0 0V136H951H1920Z"
+      fill="var(--maskBG)"></path>
+  </svg>
+</div>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Banner            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #banner-1519 {
+      padding: var(--sectionPadding);
+      /* 190px - 268px */
+      padding-top: clamp(11.875rem, 25vw, 16.75rem);
+      /* 100px - 150px */
+      padding-bottom: clamp(6.25rem, 12vw, 9.375rem);
+      /* clips the line from causing overflow issues for going off screen */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        text-align: center;
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        /* 8px - 12px */
+        gap: clamp(0.5rem, 1vw, 0.75rem);
+      }
+
+      .cs-int-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: inherit;
+        margin: 0;
+        color: var(--headercolor);
+        position: relative;
+      }
+
+      .cs-breadcrumbs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cs-link {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        text-decoration: none;
+        color: var(--bodyTextColor);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:last-of-type {
+          /* remove the chevron on the last list item */
+          &::after {
+            display: none;
+          }
+        }
+
+        &:after {
+          /* chevron */
+          content: "";
+          width: calc(7 / 16 * 1rem);
+          height: calc(12 / 16 * 1rem);
+          margin: 0 calc(16 / 16 * 1rem);
+          background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/grey-chevron.svg");
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          position: relative;
+          display: block;
+        }
+
+        &.cs-active {
+          color: var(--primary);
+        }
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        &:before {
+          /* gradient overlay */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: #fff3ec;
+          opacity: 0.8;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes img tag act as a background image */
+          object-fit: cover;
+        }
+      }
+
+      .cs-mask {
+        --maskBG: #ffffff;
+
+        width: 100%;
+        height: auto;
+        display: block;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        z-index: 100;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #banner-1519 {
+      .cs-background {
+        &:before {
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            90deg,
+            rgba(255, 243, 236, 0.9) 23.05%,
+            rgba(255, 243, 236, 0) 80.08%
+          );
+          opacity: 1;
+        }
+      }
+
+      .cs-mask {
+        --maskBG: var(--dark);
+      }
+    }
+  }
+</style>

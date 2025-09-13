@@ -1,81 +1,44 @@
-.lu-container {
-    margin: auto;
-    max-width: 36.5rem;
-    width: 100%;
+  :root{
+    /* 13px - 16px */
+    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    /* 31px - 49px */
+    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --bodyFontSize: 1rem;
+    /* 60px - 100px top and bottom */
+    /* --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem; */
+    --sectionPadding: 4rem 0;
   }
-
-.lu-header{
-    position: relative;
-    display: block;
-    margin: 0 0 1.25rem 0;
+  
+  
+  .cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
     text-transform: uppercase;
-    font-family: var(--headerFont);
-    font-size: var(--headerFontSize);
-    line-height: 1.5em;
-    font-weight: 700;
-    color: var(--headerColor);
-    transition: color 0.3s;
-}
-
-.lu-p{
-    margin: 0;
-    font-size: var(--bodyFontSize);
-    color: var(--bodyTextColor);
     text-align: inherit;
-    transition: color 0.3s;
-}
-
-.lu-text{
-  margin: 0;
-  font-size: 1rem;
-  color: var(--headerColor);
-  text-align: inherit;
-  transition: color 0.3s;
-}
-
-.lu-ul{
-padding: 0;
-}
-
-.lu-li{
-    color: var(--headerColor);
-    transition: color 0.3s;
-}
-
-.lu-a{
-  color: var(--headerColor);
-  font-size: 1rem;
-  cursor: pointer;
-  transition: color 0.3s, background-color 0.3s;
-}
-.lu-a:hover{
-    color: var(--secondary);
-}
-
-.lu-lineH{
-  display: block;
-  content: "";
-  border-bottom: 1px solid #000;
-}
-
-.lu-lineV{
-  content: "";
-  border-right: 1px solid #000;
-}
-
-
-
-
-@media screen and (min-width: 400px) {
-}
-@media screen and (min-width: 568px) {
-}
-@media screen and (min-width: 768px) {
-  .lu-container {
-    max-width: 80rem;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
   }
-}
-@media screen and (min-width: 1024px) {
-}
-@media screen and (min-width: 1300px) {
-}
+
+  .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+
+  .cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }

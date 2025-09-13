@@ -1,0 +1,484 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    FAQ                       --><!-- ============================================ -->
+<section id="faq-2294">
+  <div class="cs-container">
+    <div class="cs-faq-group">
+      <div class="cs-content">
+        <span class="cs-topper">Frequently Asked Questions</span>
+        <h2 class="cs-title">Frequently Asked Questions</h2>
+      </div>
+      <picture class="cs-faq-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-review-small.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-review-small.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-review-small.jpg"
+          alt="appliance"
+          width="522"
+          height="400"
+        />
+      </picture>
+      <ul class="cs-faq">
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text"> 1. What areas do you serve? </span>
+          </button>
+          <p class="cs-item-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
+          </p>
+        </li>
+        <!-- Active class added as default -->
+        <li class="cs-faq-item actived">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              2. What types of projects do you specialize in?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            We specialize in high-end custom homes, hardscaping, and extensions,
+            along with a range of other construction services, including
+            renovations, property maintenance, and groundwork.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              3. Can I see examples of your previous work?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              4. Do you provide free consultations?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              5. Are you able to help with design and planning?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="cs-picture-group">
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-review-large.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-review-large.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-review-large.jpg"
+          alt="appliance"
+          width="522"
+          height="400"
+        />
+      </picture>
+      <h3 class="cs-h3">Inspired by our work?</h3>
+      <p class="cs-text">
+        By collaborating, we can create something extraordinary and
+        unforgettable together.
+      </p>
+      <a href="" class="cs-button-solid">Get Started</a>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---            FAQ             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #faq-2294 {
+      padding: var(--sectionPadding);
+      background-color: #fffcf3;
+      position: relative;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1440px at large desktop */
+        max-width: calc(1080 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 32px - 64px */
+        gap: clamp(2rem, 4vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to center if content needs to be centrally aligned */
+        text-align: left;
+        width: 100%;
+        /* 48px - 64px */
+        margin-bottom: clamp(3rem, 6vw, 4rem);
+        display: flex;
+        flex-direction: column;
+        /* aligns content to the left, set to center to centrally align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        margin: 0;
+      }
+
+      .cs-faq-picture {
+        width: 100%;
+        /* 360px - 400px */
+        height: clamp(22.5rem, 54vw, 25rem);
+        display: block;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .cs-faq {
+        width: 100%;
+        margin: calc(32 / 16 * 1rem) 0 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-faq-item {
+        list-style: none;
+        width: 100%;
+        background-color: #f7f7f7;
+        /* clips all corners of the button that overlap the rounded border */
+        overflow: hidden;
+        position: relative;
+        transition: border 0.3s;
+
+        &.active {
+          background-color: #fff9e8;
+
+          .cs-button {
+            background-color: #fff9e8;
+            border: none;
+
+            &::before,
+            &::after {
+              transform: rotate(0deg);
+            }
+          }
+
+          .cs-item-p {
+            height: auto;
+            padding: 0 calc(40 / 16 * 1rem) calc(20 / 16 * 1rem)
+              calc(20 / 16 * 1rem);
+            opacity: 1;
+          }
+
+          &::after {
+            width: 100%;
+          }
+        }
+
+        &:hover {
+          &::after {
+            width: 100%;
+          }
+        }
+
+        &::after {
+          content: "";
+          width: 0;
+          height: calc(4 / 16 * 1rem);
+          background-color: var(--secondary);
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          transition: width 0.3s ease;
+        }
+      }
+
+      .cs-button {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-align: left;
+        width: 100%;
+        /* 20px - 24px */
+        padding: clamp(1.25rem, 2vw, 1.5rem);
+        background-color: #fff;
+        color: var(--headerColor);
+        border: 1px solid #f3f3f3;
+        display: block;
+        position: relative;
+        transition:
+          background-color 0.3s,
+          color 0.3s;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:before {
+          /* horizontal line */
+          content: "";
+          width: calc(12 / 16 * 1rem);
+          height: calc(2 / 16 * 1rem);
+          background-color: #a0a1a3;
+          opacity: 1;
+          border-radius: calc(2 / 16 * 1rem);
+          display: block;
+          position: absolute;
+          top: 50%;
+          right: calc(21 / 16 * 1rem);
+          transform: rotate(270deg);
+          transition: transform 0.3s;
+          /* center origin for rotation */
+          transform-origin: center center;
+        }
+
+        &:after {
+          /* vertical line */
+          content: "";
+          width: calc(12 / 16 * 1rem);
+          height: calc(2 / 16 * 1rem);
+          background-color: #a0a1a3;
+          opacity: 1;
+          border-radius: calc(2 / 16 * 1rem);
+          display: block;
+          position: absolute;
+          top: 50%;
+          right: calc(21 / 16 * 1rem);
+          transform: rotate(180deg);
+          transition: transform 0.3s;
+          /* center origin for rotation */
+          transform-origin: center center;
+        }
+      }
+
+      .cs-button-text {
+        width: 80%;
+        display: block;
+      }
+
+      .cs-item-p {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        /* clips the text so it doesn't show up */
+        overflow: hidden;
+        color: var(--bodyTextColor);
+        opacity: 0;
+        transition:
+          opacity 0.3s,
+          padding-bottom 0.3s;
+      }
+
+      .cs-picture-group {
+        width: 100%;
+        padding: calc(16 / 16 * 1rem);
+        padding-top: calc(100 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        position: relative;
+
+        /* faded background */
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background:
+            linear-gradient(180deg, rgba(20, 22, 21, 0) 22.78%, #141615 69.37%),
+            50% / cover no-repeat;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .cs-h3 {
+        font-size: calc(25 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        margin: 0 0 calc(8 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+        position: relative;
+        z-index: 2;
+      }
+
+      .cs-text {
+        margin-bottom: calc(32 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+        position: relative;
+        z-index: 2;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-align: center;
+        text-decoration: none;
+        min-width: calc(150 / 16 * 1rem);
+        margin: 0;
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        color: var(--bodyTextColorWhite);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #000;
+          opacity: 1;
+          border-radius: calc(4 / 16 * 1rem);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #faq-2294 {
+      .cs-faq-group {
+        display: grid;
+        grid-template-columns: auto auto;
+        /* 32px - 48px */
+        column-gap: clamp(2rem, 5vw, 3rem);
+      }
+
+      .cs-content {
+        grid-column: span 2;
+      }
+
+      .cs-faq-picture {
+        height: 100%;
+        grid-column: span 1;
+      }
+
+      .cs-faq {
+        margin: 0;
+        grid-column: span 1;
+      }
+
+      .cs-picture-group {
+        min-height: calc(416 / 16 * 1rem);
+        padding: calc(40 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #faq-2294 {
+      .cs-container {
+        max-width: calc(1440 / 16 * 1rem);
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      .cs-faq {
+        justify-content: flex-start;
+      }
+
+      .cs-faq-picture {
+        height: calc(440 / 16 * 1rem);
+      }
+
+      .cs-picture-group {
+        min-height: calc(586 / 16 * 1rem);
+        width: calc(413 / 16 * 1rem);
+        flex: 1 0 auto;
+      }
+    }
+  }
+</style><script>
+  const faqItems = Array.from(document.querySelectorAll(".cs-faq-item"));
+  for (const item of faqItems) {
+    const onClick = () => {
+      item.classList.toggle("active");
+    };
+    item.addEventListener("click", onClick);
+  }
+</script>

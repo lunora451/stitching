@@ -1,0 +1,213 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Side by Side                 --><!-- ============================================ -->
+<section id="sbs-1901">
+  <div class="cs-container">
+    <div class="cs-content">
+      <picture class="cs-picture cs-picture1">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-2.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-2.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-2.jpg"
+          alt="people"
+          width="608"
+          height="406"
+        />
+      </picture>
+      <div class="cs-wrapper cs-wrapper1">
+        <span class="cs-topper">Our Special Features</span>
+        <h2 class="cs-title">Be You, Just Stronger! Power Is In You!</h2>
+        <p class="cs-text">
+          We understand that your lifestyle changes, that’s why we’ve made
+          fitness straightforward and stress free. Join today on a no lock-in
+          contract membership and start achieving your fitness goals. We value
+          flexibility at Jetts, with unlimited 24/7 access.
+        </p>
+        <a class="cs-button-solid" href="">Enroll Now</a>
+      </div>
+    </div>
+    <div class="cs-content">
+      <picture class="cs-picture cs-picture2">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-3.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-3.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-3.jpg"
+          alt="people"
+          width="608"
+          height="406"
+        />
+      </picture>
+      <div class="cs-wrapper cs-wrapper2">
+        <span class="cs-topper">Our Special Features</span>
+        <h2 class="cs-title">Today Is The Best Day To Start</h2>
+        <p class="cs-text">
+          We understand that your lifestyle changes, that’s why we’ve made
+          fitness straightforward and stress free. Join today on a no lock-in
+          contract membership and start achieving your fitness goals. We value
+          flexibility at Jetts, with unlimited 24/7 access.
+        </p>
+        <a class="cs-button-solid" href="">Enroll Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<--        Side by Side        -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-1901 {
+      padding: var(--sectionPadding);
+      /* 128px - 192px */
+      padding-bottom: clamp(8rem, 14vw, 12rem);
+      overflow-x: clip;
+      position: relative;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(584 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-align: center;
+        text-decoration: none;
+        min-width: calc(150 / 16 * 1rem);
+        margin: calc(32 / 16 * 1rem) 0 0;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        color: #fff;
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #000;
+          opacity: 1;
+          border-radius: calc(4 / 16 * 1rem);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: 100vw;
+        /* 360px - 720px */
+        max-height: clamp(22.5rem, 70vw, 45rem);
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbs-1901 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+
+      .cs-content {
+        justify-content: stretch;
+      }
+
+      .cs-picture {
+        /* 540px - 740px */
+        min-height: clamp(33.75rem, 40vw, 46.25rem);
+        height: 100%;
+        max-height: 100%;
+      }
+
+      .cs-picture2 {
+        order: 2;
+        height: 100%;
+        min-height: calc(540 / 16 * 1rem);
+        max-height: 100%;
+      }
+
+      .cs-wrapper1 {
+        padding-bottom: calc(64 / 16 * 1rem);
+      }
+
+      .cs-wrapper2 {
+        padding-top: calc(100 / 16 * 1rem);
+      }
+    }
+  }
+</style>

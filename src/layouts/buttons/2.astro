@@ -1,0 +1,94 @@
+---
+
+---
+
+<a href="" class="cs-button-12">
+  Read More
+  <picture class="cs-button-wrapper">
+    <img
+      class="cs-button-icon"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/angle-arrow.svg"
+      alt="icon"
+      loading="lazy"
+      decoding="async"
+      width="28"
+      height="28"
+    />
+  </picture>
+</a>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Button 12         -->
+<--- -------------------------- -*/
+
+  .cs-button-12 {
+    font-size: calc(16 / 16 * 1rem);
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 8vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    margin: auto;
+    color: #fff;
+    background-color: var(--primary);
+    padding: 0 0 0 calc(24 / 16 * 1rem);
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: calc(24 / 16 * 1rem);
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #1a1a1a;
+
+      .cs-button-wrapper {
+        &:before {
+          height: 100%;
+        }
+      }
+
+      .cs-button-icon {
+        /* turns it white */
+        filter: grayscale(1) brightness(1000%);
+      }
+    }
+
+    .cs-button-wrapper {
+      width: calc(56 / 16 * 1rem);
+      background-color: #e8e8e8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      transition:
+        transform 0.3s,
+        background-color 0.3s;
+
+      &:before {
+        /* button background color */
+        content: "";
+        width: 100%;
+        height: 0%;
+        background: var(--primary);
+        opacity: 1;
+        position: absolute;
+        display: block;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        transition: height 0.3s;
+      }
+    }
+
+    .cs-button-icon {
+      width: calc(28 / 16 * 1rem);
+      height: auto;
+      display: block;
+    }
+  }
+</style>

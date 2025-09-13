@@ -1,0 +1,442 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Contact                    --><!-- ============================================ -->
+<section id="contact-1442">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Contact Us</span>
+      <h2 class="cs-title">We Love to Hear From Our Happy Customers</h2>
+    </div>
+    <div class="cs-contact-group">
+      <p class="cs-text">
+        There are many variations of passages of available but the majority have
+        suffered alteration in some form, by injected randomized words even
+        slightly believable.
+      </p>
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <picture class="cs-icon-wrapper">
+            <img
+              aria-hidden="true"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-yellow.svg"
+              alt="phone icon"
+              class="cs-icon"
+              width="40"
+              height="40"
+              decoding="async"
+            />
+          </picture>
+          <div class="cs-flex-group">
+            <span class="cs-header">Phone</span>
+            <a href="tel:888-4565-789
+                        " class="cs-link"
+              >+1 (888) 4565 789
+            </a>
+          </div>
+        </li>
+        <li class="cs-li">
+          <picture class="cs-icon-wrapper">
+            <img
+              aria-hidden="true"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pin-yellow.svg"
+              alt="address icon"
+              class="cs-icon"
+              width="40"
+              height="40"
+              decoding="async"
+            />
+          </picture>
+          <div class="cs-flex-group">
+            <span class="cs-header">Address</span>
+            <a href="mailto:Email@stitch.com" class="cs-link"
+              >121 King St, Melbourne, Australia</a
+            >
+          </div>
+        </li>
+      </ul>
+      <picture class="cs-background">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/wind-turbine.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/wind-turbine.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/wind-turbine.jpg"
+          alt="wind turbine"
+          width="650"
+          height="613"
+        />
+      </picture>
+    </div>
+    <!--Form-->
+    <form class="cs-form" id="cs-form-1442" name="Contact Form" method="post">
+      <label class="cs-label">
+        Name
+        <input
+          class="cs-input"
+          required
+          type="text"
+          id="name-1442"
+          name="name"
+          placeholder="Name"
+        />
+      </label>
+      <label class="cs-label cs-email">
+        Email
+        <input
+          class="cs-input"
+          required
+          type="email"
+          id="email-1442"
+          name="email"
+          placeholder="Email"
+        />
+      </label>
+      <label class="cs-label cs-phone">
+        Phone
+        <input
+          class="cs-input"
+          required
+          type="number"
+          id="phone-1442"
+          name="phone"
+          placeholder="Phone"
+        />
+      </label>
+      <label class="cs-label">
+        Message
+        <textarea
+          class="cs-input cs-textarea"
+          required
+          name="Message"
+          id="message-1442"
+          placeholder="Write message..."></textarea>
+      </label>
+      <button class="cs-button-solid cs-submit" type="submit"
+        >Send Message</button
+      >
+    </form>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #contact-1442 {
+      padding: var(--sectionPadding);
+      background-color: #f7f7f7;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(584 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: column;
+        column-gap: auto;
+        /* 48px - 64px */
+        row-gap: clamp(2rem, 3vw, 3rem);
+        column-gap: calc(20 / 16 * 1rem);
+        position: relative;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title {
+        max-width: 18ch;
+        margin: 0;
+      }
+
+      .cs-text {
+        color: #e8e8e8;
+      }
+
+      .cs-contact-group {
+        width: 100%;
+        max-width: calc(650 / 16 * 1rem);
+        min-height: calc(500 / 16 * 1rem);
+        /* 24px - 32px */
+        padding: clamp(1.5rem, 2.5vw, 2rem);
+        padding-top: calc(150 / 16 * 1rem);
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        border-radius: calc(24 / 16 * 1rem);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: calc(32 / 16 * 1rem);
+        /* sends it to the bottom in the 3rd position */
+        order: 3;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-ul {
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: calc(24 / 16 * 1rem);
+        position: relative;
+      }
+
+      .cs-li {
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: calc(20 / 16 * 1rem);
+
+        &:hover {
+          .cs-icon-wrapper {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      .cs-header {
+        font-size: calc(20 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        margin-bottom: calc(12 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+        display: block;
+      }
+
+      .cs-link {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        text-decoration: none;
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+        display: block;
+        position: relative;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .cs-icon-wrapper {
+        width: calc(60 / 16 * 1rem);
+        height: calc(60 / 16 * 1rem);
+        margin: 0;
+        border-radius: 50%;
+        border: 1px solid var(--secondary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* prevents flexbox from squishing it */
+        flex: none;
+        transition: transform 0.3s;
+      }
+
+      .cs-icon {
+        width: calc(24 / 16 * 1rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        &:before {
+          /* background color overlay */
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 100%;
+          background: linear-gradient(
+            0deg,
+            rgba(26, 26, 26, 0.94) 33.99%,
+            rgba(26, 26, 26, 0) 79.31%
+          );
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes img tag act as a background image */
+          object-fit: cover;
+        }
+      }
+
+      .cs-form {
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        /* 24px - 48px top and bottom */
+        /* 16px - 48px left and right */
+        padding: clamp(1.5rem, 5.18vw, 3rem) clamp(1rem, 4vw, 3rem);
+        /* prevents flexbox from affecting height and width */
+        box-sizing: border-box;
+        background-color: #fff;
+        border-radius: calc(24 / 16 * 1rem);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-label {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        width: 100%;
+        color: var(--headerColor);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: calc(4 / 16 * 1rem);
+      }
+
+      .cs-input {
+        font-size: calc(16 / 16 * 1rem);
+        width: 100%;
+        height: calc(56 / 16 * 1rem);
+        padding: 0;
+        padding-left: calc(24 / 16 * 1rem);
+        color: var(--headerColor);
+        background-color: #f7f7f7;
+        border-radius: calc(8 / 16 * 1rem);
+        border: none;
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+        &::placeholder {
+          color: #7d799c;
+          opacity: 0.6;
+        }
+      }
+
+      .cs-textarea {
+        min-height: calc(120 / 16 * 1rem);
+        padding-top: calc(24 / 16 * 1rem);
+        margin-bottom: calc(12 / 16 * 1rem);
+        font-family: inherit;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: calc(56 / 16 * 1rem);
+        text-decoration: none;
+        font-weight: 700;
+        overflow: hidden;
+        margin: 0;
+        color: #fff;
+        padding: 0 calc(48 / 16 * 1rem);
+        border-radius: calc(8 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 0%;
+          background: #1a1a1a;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: var(--primary);
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-submit {
+        width: 100%;
+        min-width: calc(200 / 16 * 1rem);
+        border: none;
+
+        &:hover {
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #contact-1442 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .cs-content {
+        width: 100%;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-contact-group {
+        width: 50vw;
+      }
+
+      .cs-form {
+        width: 45%;
+        max-width: calc(542 / 16 * 1rem);
+      }
+
+      .cs-submit {
+        width: auto;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,363 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Reviews                    --><!-- ============================================ -->
+<section id="reviews-1397">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Testimonials</span>
+      <h2 class="cs-title">Happy Client’s Feedback About Our Service</h2>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <!--Blue Quote-->
+        <img
+          class="cs-quote"
+          aria-hidden="true"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pink-quotes.svg"
+          decoding="async"
+          alt="quote icon"
+          width="120"
+          height="99"
+        />
+        <p class="cs-item-text">
+          Small businesses are the heartbeat of communities, embodying the
+          spirit of entrepreneurship, determination, and local support.
+        </p>
+        <div class="cs-flex-group">
+          <picture class="cs-picture">
+            <img
+              class="cs-profile"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile2.jpg"
+              decoding="async"
+              alt="profile"
+              width="50"
+              height="50"
+              aria-hidden="true"
+            />
+          </picture>
+          <span class="cs-name">
+            Britney Allison
+            <span class="cs-job">Founder Of Yokoloko</span>
+          </span>
+        </div>
+      </li>
+      <li class="cs-item">
+        <!--Blue Quote-->
+        <img
+          class="cs-quote"
+          aria-hidden="true"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pink-quotes.svg"
+          decoding="async"
+          alt="quote icon"
+          width="120"
+          height="99"
+        />
+        <p class="cs-item-text">
+          I want to say a huge thank you to the Stitch team. The guys in a short
+          time and very efficiently helped me with the development of a website
+          for my new startup.
+        </p>
+        <div class="cs-flex-group">
+          <picture class="cs-picture">
+            <img
+              class="cs-profile"
+              src="https://csimages2.nyc3.digitaloceanspaces.com/Reviews/profile3.jpg"
+              decoding="async"
+              alt="profile"
+              width="50"
+              height="50"
+              aria-hidden="true"
+            />
+          </picture>
+          <span class="cs-name">
+            Jessica Jonson
+            <span class="cs-job">CTO Of Meriette</span>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="cs-bubbles" aria-hidden="true"></div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    @keyframes floatAnimation {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-2rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floatAnimation2 {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-3rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    #reviews-1397 {
+      /* centers the button */
+      text-align: center;
+      padding: var(--sectionPadding);
+      /* clips the orbs from causing overflow issues */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1024px at tablet */
+        max-width: calc(584 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title {
+        max-width: 20ch;
+        margin: 0;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 2.5vw, 1.15rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        text-align: left;
+        /* 20px - 60px */
+        padding: clamp(1rem, 4vw, 3.75rem);
+        background-color: #fff;
+        /* 12px - 24px */
+        border-radius: clamp(0.75rem, 1.5vw, 1.25rem);
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+        /* clips the pseudo box from overflowing */
+        overflow: hidden;
+        display: flex;
+        grid-column: span 12;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          /* background color */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: var(--primary);
+          opacity: 0.05;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          /* prevents the mouse from interacting it */
+          pointer-events: none;
+        }
+      }
+
+      .cs-quote {
+        /* 72px - 120px */
+        width: clamp(4.5rem, 10vw, 7.5rem);
+        height: auto;
+        /* 32px - 64px */
+        margin-bottom: clamp(2rem, 6vw, 4rem);
+        display: block;
+      }
+
+      .cs-item-text {
+        /* 16px - 25px */
+        font-size: clamp(1rem, 2.6vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: bold;
+        margin: 0;
+        /* 24px - 64px */
+        margin-bottom: clamp(1.5rem, 6vw, 4rem);
+        color: var(--bodyTextColor);
+      }
+
+      .cs-flex-group {
+        /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
+        margin-top: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        /* 8px - 24px */
+        gap: clamp(0.8rem, 1.5vw, 1rem);
+      }
+
+      .cs-profile {
+        /* 40px - 52px */
+        width: clamp(2.5rem, 5vw, 3.25rem);
+        height: clamp(2.5rem, 5vw, 3.25rem);
+        margin: 0;
+        border-radius: 50%;
+        box-sizing: border-box;
+        border: 2px solid #fff;
+        /* clips image corners to make circle */
+        overflow: hidden;
+        position: relative;
+        display: block;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* makes the image behave like a background image */
+          object-fit: cover;
+        }
+      }
+
+      .cs-name {
+        /* 16px - 25px */
+        font-size: clamp(1rem, 2.5vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--headerColor);
+        display: block;
+      }
+
+      .cs-job {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        font-weight: 400;
+        margin: 0;
+        color: #746f95;
+        display: block;
+      }
+
+      .cs-bubbles {
+        font-size: min(2.5vw, 0.7em);
+        width: calc(562 / 16 * 1em);
+        height: calc(562 / 16 * 1em);
+        position: absolute;
+        /* changes to 160px at larger desktop */
+        left: calc(-260 / 16 * 1em);
+        /* chnages to 30px at Large desktop */
+        bottom: calc(-50 / 16 * 1em);
+        z-index: -1;
+
+        &:before {
+          /* white border bubble */
+          content: "";
+          width: calc(420 / 16 * 1em);
+          height: calc(420 / 16 * 1em);
+          background: transparent;
+          border: 1px solid #1a1a1a;
+          border-radius: 50%;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          bottom: 0;
+          left: 0;
+          animation-name: floatAnimation;
+          animation-duration: 5s;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+          animation-iteration-count: infinite;
+        }
+
+        &:after {
+          /* orange bubble */
+          content: "";
+          width: calc(331 / 16 * 1em);
+          height: calc(331 / 16 * 1em);
+          background: var(--primary);
+          opacity: 0.15;
+          border-radius: 50%;
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: -1;
+          animation-name: floatAnimation2;
+          animation-duration: 14s;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+          animation-iteration-count: infinite;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #reviews-1397 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-item {
+        grid-column: span 6;
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #reviews-1397 {
+      .cs-container {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      .cs-content {
+        text-align: left;
+        width: calc(369 / 16 * 1rem);
+        align-items: flex-start;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-bubbles {
+        margin-right: calc(600 / 16 * 1rem);
+        left: auto;
+        right: 50%;
+      }
+    }
+  }
+</style>

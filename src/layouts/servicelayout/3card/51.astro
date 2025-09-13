@@ -1,0 +1,307 @@
+---
+title: "Page 51";
+---
+
+<!-- ============================================ --><!--                   Services                   --><!-- ============================================ -->
+<section id="services-38">
+  <div class="cs-container">
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/floral-m.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/floral.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/floral.jpg"
+            alt="living room"
+            width="348"
+            height="433"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-box">
+          <h3 class="cs-h3">Floral <span>Arrangements</span></h3>
+          <p class="cs-item-text">
+            Ut enim ad minim veniam, quis nostrud exercitation laboris nisi ut
+            aliquip ex ea commodo.
+          </p>
+          <a
+            class="cs-link"
+            aria-label="read more about floral arrangements"
+            href="">Read More</a
+          >
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/wedding-m.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/wedding.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/wedding.jpg"
+            alt="living room"
+            width="348"
+            height="433"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-box">
+          <h3 class="cs-h3">Wedding <span>Photography</span></h3>
+          <p class="cs-item-text">
+            Ut enim ad minim veniam, quis nostrud exercitation laboris nisi ut
+            aliquip ex ea commodo.
+          </p>
+          <a
+            class="cs-link"
+            aria-label="read more about Wedding Photography"
+            href="">Read More</a
+          >
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/wedding-cake-m.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/wedding-cake.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/wedding-cake.jpg"
+            alt="living room"
+            width="348"
+            height="433"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-box">
+          <h3 class="cs-h3">Wedding <span>Cakes</span></h3>
+          <p class="cs-item-text">
+            Ut enim ad minim veniam, quis nostrud exercitation laboris nisi ut
+            aliquip ex ea commodo.
+          </p>
+          <a class="cs-link" aria-label="read more about wedding cakes" href=""
+            >Read More</a
+          >
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-38 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280pc at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* in case you add a .cs-content to this stitch */
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        column-gap: calc(20 / 16 * 1rem);
+        row-gap: calc(60 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        margin: 0;
+
+        &:hover {
+          .cs-picture {
+            &:before {
+              height: 100%;
+            }
+
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+
+      .cs-picture {
+        aspect-ratio: 328/360;
+        position: relative;
+        display: block;
+        /* Keeps image from bleeding outside the picture element */
+        overflow: hidden;
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 0%;
+          width: 100%;
+          background: var(--primaryLight);
+          opacity: 0.8;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          transition: height 0.3s;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes img tag act like a background image */
+          object-fit: cover;
+          transition: transform 0.7s;
+        }
+      }
+
+      .cs-box {
+        /* Centers the button */
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+        /* -32px to 48px */
+        margin-top: calc(clamp(2rem, 7vw, 3rem) * -1);
+        padding: calc(24 / 16 * 1rem) calc(16 / 16 * 1rem) 0;
+        background: #fff;
+        position: relative;
+        z-index: 10;
+        /* Prevents padding from adding to the total width */
+        box-sizing: border-box;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2vw, 1.5625rem);
+        text-align: center;
+        line-height: 1.2em;
+        font-weight: bold;
+        color: var(--headerColor);
+        margin: 0 0 calc(16 / 16 * 1rem);
+      }
+
+      .cs-item-text {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        margin: 0 0 calc(4 / 16 * 1rem);
+        padding: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-link {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        text-decoration: none;
+        font-weight: 700;
+        margin: auto;
+        color: var(--primary);
+        background-color: transparent;
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          height: calc(3 / 16 * 1rem);
+          width: 0%;
+          background: var(--primary);
+          opacity: 1;
+          bottom: calc(6 / 16 * 1rem);
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-38 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      .cs-item {
+        margin: 0;
+      }
+
+      .cs-picture {
+        /* 360px - 430px */
+        height: clamp(22.5rem, 42vw, 26.875rem);
+        /* reset aspect ratio, don't need it anymore */
+        aspect-ratio: initial;
+      }
+
+      .cs-box {
+        width: 90%;
+        padding: calc(24 / 16 * 1rem) calc(12 / 16 * 1rem);
+      }
+
+      .cs-h3 {
+        /* force heading to 2 lines for consistent spacing */
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+</style>

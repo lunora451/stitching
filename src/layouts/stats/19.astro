@@ -1,0 +1,254 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Stats                      --><!-- ============================================ -->
+<section id="stats-543">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Stats</span>
+      <h2 class="cs-title">
+        Lorem ipsum dolor sit amet consectetur, adipisicing.
+      </h2>
+      <p class="cs-text">
+        Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco
+        cillum dolor. Voluptate exercitation incididunt aliquip deserunt.
+      </p>
+    </div>
+    <!--SVG Circles-->
+    <ul class="cs-circles">
+      <li class="cs-item">
+        <div class="cs-ring-wrapper">
+          <span class="cs-number">75<span class="cs-percentage">%</span></span>
+          <!--Change the --ratio to the decimal percentage of this circle-->
+          <svg class="cs-ring" style="--ratio: 0.75">
+            <circle cx="50%" cy="50%" r="50%"></circle>
+            <circle cx="50%" cy="50%" r="50%"></circle>
+          </svg>
+        </div>
+        <h3 class="cs-h3">Stat 1</h3>
+        <span class="cs-desc">Stat Description</span>
+      </li>
+      <li class="cs-item">
+        <div class="cs-ring-wrapper">
+          <span class="cs-number">90<span class="cs-percentage">%</span></span>
+          <!--Change the --ratio to the decimal percentage of this circle-->
+          <svg class="cs-ring" style="--ratio: 0.90">
+            <circle cx="50%" cy="50%" r="50%"></circle>
+            <circle cx="50%" cy="50%" r="50%"></circle>
+          </svg>
+        </div>
+        <h3 class="cs-h3">Stat 2</h3>
+        <span class="cs-desc">Stat Description</span>
+      </li>
+      <li class="cs-item">
+        <div class="cs-ring-wrapper">
+          <span class="cs-number">65<span class="cs-percentage">%</span></span>
+          <!--Change the --ratio to the decimal percentage of this circle-->
+          <svg class="cs-ring" style="--ratio: 0.65">
+            <circle cx="50%" cy="50%" r="50%"></circle>
+            <circle cx="50%" cy="50%" r="50%"></circle>
+          </svg>
+        </div>
+        <h3 class="cs-h3">Stat 3</h3>
+        <span class="cs-desc">Stat Description</span>
+      </li>
+      <li class="cs-item">
+        <div class="cs-ring-wrapper">
+          <span class="cs-number">65<span class="cs-percentage">%</span></span>
+          <!--Change the --ratio to the decimal percentage of this circle-->
+          <svg class="cs-ring" style="--ratio: 0.65">
+            <circle cx="50%" cy="50%" r="50%"></circle>
+            <circle cx="50%" cy="50%" r="50%"></circle>
+          </svg>
+        </div>
+        <h3 class="cs-h3">Stat 4</h3>
+        <span class="cs-desc">Stat Description</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #stats-543 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1440px at desktop */
+        max-width: calc(700 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-circles {
+        width: 100%;
+        padding: 0;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: calc(40 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cs-ring-wrapper {
+        /* changes to 100% at tablet */
+        width: 70%;
+        max-width: calc(324 / 16 * 1rem);
+        /* 28px - 48px */
+        margin-bottom: clamp(1.75rem, 4vw, 3rem);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex: 1;
+        aspect-ratio: 1;
+      }
+
+      .cs-number {
+        /* 49px - 61px */
+        font-size: clamp(3.0625rem, 5vw, 3.8125rem);
+        font-weight: 900;
+        margin: 0;
+        /* prevents mouse from interacting with it */
+        pointer-events: none;
+        line-height: 1.2em;
+        color: var(--headerColor);
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .cs-percentage {
+        /* 25px - 31px */
+        font-size: clamp(1.5625rem, 5vw, 1.9375rem);
+        color: var(--primaryLight);
+        margin-left: calc(12 / 16 * 1rem);
+        transform: translateY(calc(-12 / 16 * 1rem));
+      }
+
+      .cs-h3 {
+        /* 24px - 36px */
+        font-size: clamp(1.5rem, 3.2vw, 2.25rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+      }
+
+      .cs-desc {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.4vw, 1rem);
+        line-height: 1.5em;
+        text-align: center;
+        /* prevents mouse from interacting with it */
+        pointer-events: none;
+        width: 100%;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-ring {
+        --ring-width: 12px;
+        position: absolute;
+        width: calc(100% - var(--ring-width));
+        aspect-ratio: 1;
+        overflow: visible;
+        pointer-events: none;
+        rotate: -90deg;
+        scale: 1 -1;
+      }
+
+      .cs-ring circle {
+        fill: none;
+        /* ring grey background */
+        stroke: #fafbfc;
+        stroke-width: var(--ring-width);
+      }
+
+      .cs-ring circle:last-of-type {
+        /* ring color */
+        stroke: var(--primaryLight);
+        stroke-dasharray: calc(var(--ratio) * 314%) 314%;
+
+        transition: stroke-dasharray 1s;
+      }
+
+      .cs-ring-wrapper:hover .cs-ring {
+        --ratio: 0 !important;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #stats-543 {
+      .cs-circles {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .cs-item {
+        /* changes to 100% at desktop */
+        width: 27.5vw;
+      }
+
+      .cs-ring-wrapper {
+        width: 100%;
+      }
+
+      .cs-desc {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+      }
+    }
+  }
+
+  /* Desktop - 1200px */
+  @media only screen and (min-width: 75rem) {
+    #stats-543 {
+      .cs-container {
+        max-width: calc(1440 / 16 * 1rem);
+      }
+
+      .cs-circles {
+        flex-wrap: nowrap;
+      }
+
+      .cs-item {
+        width: 100%;
+      }
+    }
+  }
+</style>

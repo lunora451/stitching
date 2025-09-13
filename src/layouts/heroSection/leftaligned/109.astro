@@ -1,0 +1,161 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Hero                      --><!-- ============================================ -->
+<section id="hero-219">
+  <div class="cs-container">
+    <h1 class="cs-title">
+      Construction & Maintenance Experts in New York City
+    </h1>
+    <p class="cs-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. At quis donec
+      eget tellus turpis imperdiet aenean libero.
+    </p>
+    <a href="" class="cs-button-solid">Request Appointment</a>
+  </div>
+
+  <!-- Background Image -->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.digitaloceanspaces.com/Hero/kitchen-m.jpg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.digitaloceanspaces.com/Hero/kitchen.jpg"
+    />
+    <img
+      decoding="async"
+      src="https://csimg.nyc3.digitaloceanspaces.com/Hero/kitchen.jpg"
+      alt="kitchen"
+      width="2250"
+      height="1500"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-219 {
+      /* Centers button */
+      text-align: left;
+      /* 144px - 300px - leaving extra space for the navigation */
+      padding: clamp(9rem, 25.95vw, 18.75rem) calc(16 / 16 * 1rem) 0;
+      /* 130px - 200px */
+      padding-bottom: clamp(8.125rem, 12.5vw, 25rem);
+      position: relative;
+      z-index: 1;
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+
+        &:before {
+          /* Overlay */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: #000;
+          opacity: 0.7;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          /* prevents the cursor from interacting with it */
+          pointer-events: none;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+      }
+
+      .cs-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-align: left;
+        max-width: calc(829 / 16 * 1rem);
+        /* 16px - 24px */
+        margin: 0 auto clamp(1rem, 4vw, 1.5rem) 0;
+        color: #fff;
+        position: relative;
+      }
+
+      .cs-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 1.95vw, 1.25rem);
+        line-height: 1.5em;
+        text-align: left;
+        width: 100%;
+        /* 464px - 622px */
+        max-width: clamp(29rem, 60vw, 38.785rem);
+        margin: 0 auto 0 0;
+        /* 40px - 48px */
+        margin-bottom: clamp(2.5rem, 4vw, 3rem);
+        color: #fff;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: calc(56 / 16 * 1rem);
+        text-decoration: none;
+        font-weight: 700;
+        margin: auto;
+        color: #fff;
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+</style>

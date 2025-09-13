@@ -1,0 +1,362 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Side By Side                  --><!-- ============================================ -->
+<section id="sbs-449">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Who We Are</span>
+      <h2 class="cs-title">Four Seasons Landscaping Experts In Bellview</h2>
+      <p class="cs-text">
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat duis enim velit mollit. Amet minim mollit
+        non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+        consequat duis enim velit mollit.
+      </p>
+      <a href="" class="cs-button-solid">More About Us</a>
+    </div>
+    <div class="cs-image-group">
+      <!--Person Picture, to make your own crops of people use https://www.remove.bg/ -->
+      <picture class="cs-person">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/person2.png"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/person2.png"
+        />
+        <img
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/person2.png"
+          alt="person"
+          width="470"
+          height="652"
+        />
+      </picture>
+      <!--Background Image-->
+      <!--Need wrapper div to make svg mask work-->
+      <div class="cs-wrapper">
+        <picture class="cs-background">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/leaves.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/leaves.jpg"
+          />
+          <img
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/leaves.jpg"
+            alt="leaves"
+            width="625"
+            height="602"
+          />
+        </picture>
+        <!--SVG Mask-->
+        <svg
+          class="cs-mask"
+          xmlns="http://www.w3.org/2000/svg"
+          width="449.334"
+          height="206.667"
+          viewBox="0 0 337 155"
+          ><path
+            viewBox="0 0 337 155"
+            fill="#f7f7f7"
+            d="M0 .99S0-.01.01 0C16.93-.02 337 0 337 0v138l-.04 16.87c-2.43-11.92-13.09-15.79-22.96-20.02l-63-26.86-68-29.14L81 35.28 26 11.85C19.97 9.26 1.74 1.81 0 .99Z"
+          ></path></svg
+        >
+      </div>
+      <span class="cs-info">
+        <span class="cs-job">Founder</span>
+        Alex J Matias
+      </span>
+    </div>
+  </div>
+  <!--Floating Plant at 1300px-->
+  <img
+    class="cs-floater"
+    aria-hidden="true"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/tilted-leaf.png"
+    alt="floating leaves"
+    width="473"
+    height="128"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-449 {
+      padding: var(--sectionPadding);
+      background-color: #f7f7f7;
+      /* prevent overflow from .cs-container pseudo mask */
+      overflow: hidden;
+      position: relative;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+
+        &:before {
+          /* covers the .cs-background on the left edge */
+          content: "";
+          width: 50%;
+          height: calc(500 / 16 * 1rem);
+          background: #f7f7f7;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: calc(-50 / 16 * 1rem);
+          /* pushes it to the left 100% width of the parent, making it's right side rest flush with the parents left edge */
+          right: 100%;
+          z-index: 10;
+        }
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(550 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-image-group {
+        font-size: min(2.4vw, 0.6em);
+        /* changes at tablet */
+        width: 100%;
+        /* changes to 100% at tablet */
+        max-width: calc(400 / 16 * 1rem);
+        height: auto;
+        display: flex;
+        /* push person image to the right of the box */
+        justify-content: center;
+        order: -1;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-person {
+        width: auto;
+        height: calc(652 / 16 * 1em);
+        margin-right: calc(64 / 16 * 1em);
+
+        img {
+          width: auto;
+          height: 100%;
+          filter: drop-shadow(30px 0px 54px rgba(0, 0, 0, 0.25));
+        }
+      }
+
+      .cs-wrapper {
+        /* changes at tablet */
+        width: calc(750 / 16 * 1em);
+        height: calc(662 / 16 * 1em);
+        border-radius: 0 0 calc(24 / 16 * 1em);
+        /* clips corners around the border radius */
+        overflow: hidden;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        /* 40px - 120px */
+        right: clamp(2rem, 5vw, 7rem);
+        z-index: -1;
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &:before {
+          /* green overlay */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: var(--primary);
+          opacity: 0.6;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          z-index: -1;
+        }
+      }
+
+      .cs-mask {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        /* ensures there's no gap for the picture to show at the edge */
+        top: -2px;
+        left: 0;
+        z-index: 100;
+
+        path {
+          width: 100%;
+        }
+      }
+
+      .cs-info {
+        /* 20px - 31px */
+        font-size: clamp(1.25rem, 3vw, 1.9375rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        /* 16px - 24px top and bottom */
+        /* 24px - 32px left and right */
+        padding: clamp(1rem, 2vw, 1.5rem) clamp(1.5rem, 2.3vw, 2rem);
+        border-radius: calc(12 / 16 * 1rem) calc(12 / 16 * 1rem) 0 0;
+        color: var(--headerColor);
+        background-color: #fafbfc;
+        border-bottom: 4px solid var(--primaryLight);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+
+      .cs-job {
+        /* 13px - 16px */
+        font-size: clamp(0.8125rem, 1.5vw, 1rem);
+        line-height: 1.2em;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: var(--headerColor);
+        display: block;
+      }
+
+      .cs-floater {
+        display: none;
+        position: absolute;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbs-449 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+
+        &:before {
+          display: none;
+        }
+      }
+
+      .cs-image-group {
+        font-size: min(1.2vw, 1em);
+        width: calc(535 / 16 * 1em);
+        max-width: 100%;
+      }
+
+      .cs-wrapper {
+        width: calc(850 / 16 * 1em);
+        right: calc(30 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Small Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #sbs-449 {
+      .cs-content {
+        margin-right: calc(90 / 16 * 1rem);
+      }
+
+      .cs-floater {
+        display: block;
+        top: 0;
+        /* places left edge at the center line of the container */
+        left: 50%;
+        /* pushes X amount of pixels from the center line */
+        margin-left: calc(500 / 16 * 1rem);
+        /* flip horizontally */
+        transform: scaleX(-1);
+      }
+    }
+  }
+</style>

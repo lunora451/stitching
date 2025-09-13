@@ -1,0 +1,195 @@
+---
+import Team1 from "../team/1.astro";
+import Team2 from "../team/2.astro";
+import Team3 from "../team/3.astro";
+import Team4 from "../team/4.astro";
+import Team5 from "../team/5.astro";
+import Team6 from "../team/6.astro";
+import Team7 from "../team/7.astro";
+import Team8 from "../team/8.astro";
+import Team9 from "../team/9.astro";
+import Team10 from "../team/10.astro";
+import Team11 from "../team/11.astro";
+import Team12 from "../team/12.astro";
+import Team13 from "../team/13.astro";
+import Team14 from "../team/14.astro";
+import Team15 from "../team/15.astro";
+import Team16 from "../team/16.astro";
+import Team17 from "../team/17.astro";
+import Team18 from "../team/18.astro";
+import Team19 from "../team/19.astro";
+import Team20 from "../team/20.astro";
+import Team21 from "../team/21.astro";
+import Team22 from "../team/22.astro";
+import Team23 from "../team/23.astro";
+---
+
+<div class="c-collection">
+  <div class="c-team" data-value-team="1">
+    <Team1 />
+  </div>
+  <div class="c-team" data-value-team="2">
+    <Team2 />
+  </div>
+  <div class="c-team" data-value-team="3">
+    <Team3 />
+  </div>
+  <div class="c-team" data-value-team="4">
+    <Team4 />
+  </div>
+  <div class="c-team" data-value-team="5">
+    <Team5 />
+  </div>
+  <div class="c-team" data-value-team="6">
+    <Team6 />
+  </div>
+  <div class="c-team" data-value-team="7">
+    <Team7 />
+  </div>
+  <div class="c-team" data-value-team="8">
+    <Team8 />
+  </div>
+  <div class="c-team" data-value-team="9">
+    <Team9 />
+  </div>
+  <div class="c-team" data-value-team="10">
+    <Team10 />
+  </div>
+  <div class="c-team" data-value-team="11">
+    <Team11 />
+  </div>
+  <div class="c-team" data-value-team="12">
+    <Team12 />
+  </div>
+  <div class="c-team" data-value-team="13">
+    <Team13 />
+  </div>
+  <div class="c-team" data-value-team="14">
+    <Team14 />
+  </div>
+  <div class="c-team" data-value-team="15">
+    <Team15 />
+  </div>
+  <div class="c-team" data-value-team="16">
+    <Team16 />
+  </div>
+  <div class="c-team" data-value-team="17">
+    <Team17 />
+  </div>
+  <div class="c-team" data-value-team="18">
+    <Team18 />
+  </div>
+  <div class="c-team" data-value-team="19">
+    <Team19 />
+  </div>
+  <div class="c-team" data-value-team="20">
+    <Team20 />
+  </div>
+  <div class="c-team" data-value-team="21">
+    <Team21 />
+  </div>
+  <div class="c-team" data-value-team="22">
+    <Team22 />
+  </div>
+  <div class="c-team" data-value-team="23">
+    <Team23 />
+  </div>
+</div>
+
+<style lang="scss">
+  .c-collection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .c-team {
+    display: none;
+  }
+  .active {
+    width: 100%;
+    display: block;
+  }
+</style>
+
+<script>
+  function changeCollection(selectedValue) {
+    const collections = document.querySelectorAll(".c-team");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none" est sélectionné, ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection sélectionnée
+    const targetCollection = document.querySelector(
+      `[data-value-team="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  // Fonction pour le hover des options
+  function previewOnHover(selectedValue) {
+    const collections = document.querySelectorAll(".c-team");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none", ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection en preview
+    const targetCollection = document.querySelector(
+      `[data-value-team="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const select = document.getElementById("template-select-team");
+    const collections = document.querySelectorAll(".c-team");
+
+    if (!select) return;
+
+    select.addEventListener("change", function () {
+      const selectedValue = this.value;
+      changeCollection(selectedValue);
+    });
+
+    // Alternative pour navigateur qui ne supportent pas mouseover sur option
+    let isSelectOpen = false;
+
+    select.addEventListener("focus", function () {
+      isSelectOpen = true;
+    });
+
+    select.addEventListener("blur", function () {
+      isSelectOpen = false;
+      // Revenir à la valeur sélectionnée quand on ferme
+      changeCollection(this.value);
+    });
+
+    // Navigation avec les flèches
+    select.addEventListener("keydown", function (e) {
+      if (isSelectOpen && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
+        setTimeout(() => {
+          // Simuler le hover sur l'option "focusée"
+          const currentValue = this.value;
+          previewOnHover(currentValue);
+        }, 10);
+      }
+    });
+  });
+</script>

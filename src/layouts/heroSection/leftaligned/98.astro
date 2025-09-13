@@ -1,0 +1,251 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Hero                      --><!-- ============================================ -->
+<section id="hero-855">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Modern and Professional</span>
+      <h1 class="cs-title">Physical Therapy & Health and Wellness</h1>
+      <p class="cs-text">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus
+        unde id saepe quo. Est, ea! Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Id, provident? Lorem ipsum dolor sit amet consectetur
+        adipisicing.
+      </p>
+      <a href="" class="cs-button-solid">Schedule An Appointment</a>
+    </div>
+    <!--Hero Image-->
+    <picture class="cs-picture">
+      <!--Mobile-->
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy.jpg"
+      />
+      <!--Tablet-->
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy.jpg"
+      />
+      <!--Desktop-->
+      <source
+        media="(min-width: 1024px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy.jpg"
+      />
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy.jpg"
+        alt="therapy"
+        width="570"
+        height="701"
+      />
+    </picture>
+  </div>
+  <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+  <svg
+    class="cs-wave"
+    width="1920"
+    height="179"
+    viewBox="0 0 1920 179"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z"
+      fill="white"></path>
+  </svg>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---            Hero            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-855 {
+      /* 116px - 164px top */
+      /* 60px - 100px  bottom */
+      padding: clamp(7.25rem, 16.82vw, 10.25rem) calc(16 / 16 * 1rem)
+        clamp(3.75rem, 7.82vw, 6.25rem);
+      background-color: #f7f7f7;
+      /* clips the svg wave from overflowing */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: calc(48 / 16 * 1rem);
+      }
+
+      .cs-content {
+        max-width: calc(630 / 16 * 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .cs-topper {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        text-align: inherit;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: calc(4 / 16 * 1rem);
+        display: block;
+      }
+
+      .cs-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 5vw, 3.8125rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: center;
+        /* 23 characters including spaces wide */
+        max-width: 23ch;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+        color: var(--headerColor);
+        position: relative;
+      }
+
+      .cs-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 1.5vw, 1.25rem);
+        line-height: 1.5em;
+        text-align: center;
+        width: 100%;
+        max-width: calc(531 / 16 * 1rem);
+        /* 28px - 40px */
+        margin: 0 0 clamp(1.75rem, 3.92vw, 2.5rem) 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-picture {
+        width: 100%;
+        max-width: calc(570 / 16 * 1rem);
+        /* 400px - 712px */
+        height: clamp(25rem, 95vw, 44.5rem);
+        /* 100px - 200px */
+        border-radius: 0 clamp(6.25rem, 17vw, 12.5rem) 0
+          clamp(6.25rem, 17vw, 12.5rem);
+        box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.16);
+        /* clips the img tag corners */
+        overflow: hidden;
+        display: block;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* makes image act as a background image */
+          object-fit: cover;
+          /* ensures the top of the images is at the top of the container, no heads getting cut off */
+          object-position: top;
+        }
+      }
+
+      .cs-wave {
+        /* we're stretching the svg wider than the viewport so it's taller and has more of a presence */
+        width: 320%;
+        height: auto;
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: -1px;
+        transform: translateX(-50%);
+        z-index: -1;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #hero-855 {
+      text-align: left;
+      .cs-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .cs-content {
+        width: 40vw;
+        /* prevents flex-box from squishing it */
+        flex: none;
+        align-items: flex-start;
+      }
+
+      .cs-title,
+      .cs-text {
+        text-align: left;
+      }
+
+      .cs-picture {
+        /* 623px - 814px */
+        height: clamp(38.9375rem, 60vw, 50.875rem);
+      }
+
+      .cs-wave {
+        width: 100%;
+        left: 0;
+        transform: none;
+      }
+    }
+  }
+</style>

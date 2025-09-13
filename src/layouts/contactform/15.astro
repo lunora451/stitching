@@ -1,0 +1,434 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Contact                    --><!-- ============================================ -->
+<section id="contact-1333">
+  <div class="cs-container">
+    <!--Form-->
+    <form class="cs-form" id="cs-form-1333" name="Contact Form" method="post">
+      <div class="cs-content">
+        <span class="cs-topper">Contact Us</span>
+        <h2 class="cs-title">Make Appointment</h2>
+      </div>
+      <label class="cs-label">
+        Name
+        <input
+          class="cs-input"
+          required
+          type="text"
+          id="name-1333"
+          name="name"
+          placeholder="Name"
+        />
+      </label>
+      <label class="cs-label cs-email">
+        Email
+        <input
+          class="cs-input"
+          required
+          type="email"
+          id="email-1333"
+          name="email"
+          placeholder="Email"
+        />
+      </label>
+      <label class="cs-label cs-phone">
+        Phone
+        <input
+          class="cs-input"
+          required
+          type="number"
+          id="phone-1333"
+          name="phone"
+          placeholder="Phone"
+        />
+      </label>
+      <label class="cs-label">
+        Message
+        <textarea
+          class="cs-input cs-textarea"
+          required
+          name="Message"
+          id="message-1333"
+          placeholder="Write message..."></textarea>
+      </label>
+      <button class="cs-button-solid cs-submit" type="submit"
+        >Schedule Appointment</button
+      >
+    </form>
+    <div class="cs-content">
+      <span class="cs-topper">Asked Questions</span>
+      <h2 class="cs-title">Frequently Asked Questions</h2>
+      <ul class="cs-faq-group">
+        <!-- Active class added as default -->
+        <li class="cs-faq-item active">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              What is the best way to start investing?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              What are the tax implications of investing in the stock market?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              How can I improve my credit score?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              What is the difference between a traditional IRA and a Roth IRA?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              How can I reduce my tax liability as a self-employed individual?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #contact-1333 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(584 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: column;
+        /* 48px - 80px */
+        gap: clamp(3rem, 6vw, 5rem);
+        position: relative;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        max-width: 23ch;
+        margin: 0 0 calc(28 / 16 * 1rem) 0;
+      }
+
+      .cs-form {
+        width: 100%;
+        max-width: calc(650 / 16 * 1rem);
+        /* 32px - 48px top and bottom */
+        /* 16px - 60px left and right */
+        padding: clamp(2rem, 5.18vw, 3rem) clamp(1rem, 5vw, 3.75rem);
+        /* prevents flexbox from affecting height and width */
+        box-sizing: border-box;
+        background-color: #f7f7f7;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        /* prevents flexbox from squishing it */
+        flex: none;
+        gap: calc(12 / 16 * 1rem);
+
+        .cs-title {
+          /* 16px - 28px */
+          margin: 0 0 clamp(1rem, 3vw, 1.75rem) 0;
+        }
+      }
+
+      .cs-label {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        width: 100%;
+        color: var(--headerColor);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: calc(4 / 16 * 1rem);
+      }
+
+      .cs-input {
+        font-size: calc(16 / 16 * 1rem);
+        width: 100%;
+        height: calc(56 / 16 * 1rem);
+        padding: 0;
+        padding-left: calc(24 / 16 * 1rem);
+        color: var(--headerColor);
+        background-color: #fff;
+        border: none;
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+        &::placeholder {
+          color: #767676;
+          opacity: 0.6;
+        }
+      }
+
+      .cs-textarea {
+        min-height: calc(120 / 16 * 1rem);
+        padding-top: calc(24 / 16 * 1rem);
+        /* 16px - 28px */
+        margin: 0 0 clamp(1rem, 3vw, 1.75rem) 0;
+        font-family: inherit;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #1a1a1a;
+        border: none;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        overflow: hidden;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #fff;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-submit {
+        width: 100%;
+        min-width: calc(283 / 16 * 1rem);
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .cs-faq-group {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .cs-faq-item {
+        list-style: none;
+        width: 100%;
+        border-bottom: 1px solid #e8e8e8;
+        transition: border-bottom 0.3s;
+
+        &.active {
+          border-color: var(--primary);
+          .cs-button {
+            color: var(--primary);
+            &:before {
+              background-color: var(--primary);
+              transform: rotate(315deg);
+            }
+            &:after {
+              background-color: var(--primary);
+              transform: rotate(-315deg);
+            }
+          }
+          .cs-item-p {
+            height: auto;
+            /* 20px - 24px bottom */
+            /* 16px - 24px left & right */
+            padding: 0 clamp(1rem, 2vw, 1.5rem) clamp(1.25rem, 2vw, 1.5rem) 0;
+            opacity: 1;
+          }
+        }
+      }
+
+      .cs-button {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        text-align: left;
+        font-weight: bold;
+        /* 16px - 24px */
+        padding: clamp(1rem, 2vw, 1.5rem);
+        padding-left: 0;
+        border: none;
+        background: transparent;
+        color: var(--headerColor);
+        display: block;
+        width: 100%;
+        position: relative;
+        transition:
+          background-color 0.3s,
+          color 0.3s;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:before {
+          /* left line */
+          content: "";
+          width: calc(8 / 16 * 1rem);
+          height: calc(2 / 16 * 1rem);
+          background-color: var(--headerColor);
+          opacity: 1;
+          border-radius: 50%;
+          position: absolute;
+          display: block;
+          top: 45%;
+          right: calc(24 / 16 * 1rem);
+          transform: rotate(45deg);
+          /* animate the transform from the left side of the x axis, and the center of the y */
+          transform-origin: left center;
+          transition: transform 0.5s;
+        }
+
+        &:after {
+          /* right line */
+          content: "";
+          width: calc(8 / 16 * 1rem);
+          height: calc(2 / 16 * 1rem);
+          background-color: var(--headerColor);
+          opacity: 1;
+          border-radius: 50%;
+          position: absolute;
+          display: block;
+          top: 45%;
+          right: calc(21 / 16 * 1rem);
+          transform: rotate(-45deg);
+          /* animate the transform from the right side of the x axis, and the center of the y */
+          transform-origin: right center;
+          transition: transform 0.5s;
+        }
+      }
+
+      .cs-button-text {
+        width: 80%;
+        display: block;
+      }
+
+      .cs-item-p {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        width: 90%;
+        height: 0;
+        margin: 0;
+        /* 16px - 24px */
+        padding: 0 clamp(1rem, 2vw, 1.5rem);
+        opacity: 0;
+        color: var(--bodyTextColor);
+        /* clips the text so it doesn't show up */
+        overflow: hidden;
+        transition:
+          opacity 0.3s,
+          padding-bottom 0.3s;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #contact-1333 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .cs-form {
+        width: 45vw;
+      }
+
+      .cs-submit {
+        width: auto;
+      }
+    }
+  }
+</style><script>
+  const faqItems = Array.from(document.querySelectorAll(".cs-faq-item"));
+  for (const item of faqItems) {
+    const onClick = () => {
+      item.classList.toggle("active");
+    };
+    item.addEventListener("click", onClick);
+  }
+</script>

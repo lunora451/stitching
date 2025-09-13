@@ -1,0 +1,245 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Side By Side                 --><!-- ============================================ -->
+<section id="sbs-75">
+  <div class="cs-container">
+    <div class="cs-wrapper">
+      <picture class="cs-picture">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/body-builder-m.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/body-builder.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/body-builder.jpg"
+          alt="body builder"
+          width="500"
+          height="552"
+          aria-hidden="true"
+        />
+      </picture>
+    </div>
+    <div class="cs-content">
+      <span class="cs-topper">Small Group Training</span>
+      <h2 class="cs-title">Make your circle healthier together</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc massa ut
+        sed odio cursus. Malesuada scelerisque eget eu, sollicitudin tellus nibh
+        aenean enim sed. Ut vitae eget commodo consectetur felis augue.
+        Condimentum pellentesque sed aliquet leo in potenti libero.
+      </p>
+      <a
+        class="cs-button-solid"
+        aria-label="learn more about our programs"
+        href="">Learn More</a
+      >
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-75 {
+      padding: var(--sectionPadding);
+      /* clips the red box from causing overflow issues */
+      overflow: hidden;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(542 / 16 * 1rem);
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-wrapper {
+        width: 95%;
+        max-width: calc(550 / 16 * 1rem);
+        /* 28px - 80px */
+        /* pushes up and down by the same amount the decorative box overflows the wrapper */
+        margin: clamp(1.75em, 7.8vw, 5em) 0;
+        position: relative;
+        &:before {
+          /* Red decorative box */
+          content: "";
+          /* make it huge so it covers everything on the left as it overflows */
+          width: calc(800 / 16 * 1em);
+          background: var(--primary);
+          opacity: 1;
+          border-radius: calc(16 / 16 * 1rem);
+          position: absolute;
+          display: block;
+          /* 28px - 80px */
+          /* wrapped in a calc function to get a negative clamp value */
+          top: calc(clamp(1.75em, 7.8vw, 5em) * -1);
+          bottom: calc(clamp(1.75em, 7.8vw, 5em) * -1);
+          right: calc(65 / 16 * 1em);
+          z-index: -1;
+        }
+      }
+
+      .cs-picture {
+        width: 100%;
+        margin: 0;
+        position: relative;
+        display: block;
+        /* width divided by height */
+        aspect-ratio: 312/335;
+        border-radius: calc(16 / 16 * 1rem);
+        z-index: 1;
+
+        &:before {
+          /* Top right box */
+          content: "";
+          width: calc(160 / 16 * 1rem);
+          /* 202px - 248px */
+          height: clamp(12.625rem, 25vw, 15.5rem);
+          background: #1a1a1a;
+          opacity: 1;
+          border-radius: calc(16 / 16 * 1rem);
+          position: absolute;
+          display: block;
+          /* 16px -20px */
+          /* wrapped in a calc function to get a negative clamp value */
+          top: calc(clamp(0.5rem, 2.09vw, 1.25rem) * -1);
+          right: calc(clamp(0.5rem, 2.09vw, 1.25rem) * -1);
+        }
+
+        &:after {
+          /* Bottom left box */
+          content: "";
+          width: calc(160 / 16 * 1rem);
+          /* 202px - 248px */
+          height: clamp(12.625rem, 25vw, 15.5rem);
+          background: #1a1a1a;
+          opacity: 1;
+          border-radius: calc(16 / 16 * 1rem);
+          position: absolute;
+          display: block;
+          /* 16px -20px */
+          /* wrapped in a calc function to get a negative clamp value */
+          bottom: calc(clamp(0.5rem, 2.09vw, 1.25rem) * -1);
+          left: calc(clamp(0.5rem, 2.09vw, 1.25rem) * -1);
+          z-index: -1;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: calc(16 / 16 * 1rem);
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbs-75 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: flex-start;
+        /* 60px - 128px */
+        gap: clamp(3.75rem, 9.5vw, 8rem);
+      }
+
+      .cs-wrapper {
+        /* 328px - 502px */
+        width: clamp(20.5rem, 37.5vw, 31.375rem);
+        /* 440px - 520px */
+        height: clamp(27.5rem, 40vw, 32.5rem);
+        flex: none;
+      }
+
+      .cs-picture {
+        /* 16px - 20px */
+        margin: 0 0 0 clamp(1rem, 5vw, 1.25rem);
+        height: 100%;
+        flex: none;
+      }
+
+      .cs-content {
+        width: 45%;
+      }
+    }
+  }
+</style>

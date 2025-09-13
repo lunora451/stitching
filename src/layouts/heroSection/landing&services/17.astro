@@ -1,0 +1,375 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Hero                       --><!-- ============================================ -->
+<section id="hero-2344">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex cs-flex1">
+        <span class="cs-topper">Plan for secure future</span>
+        <h2 class="cs-title">Modern Architecture</h2>
+      </div>
+      <div class="cs-flex cs-flex2">
+        <p class="cs-text">
+          At ArchiStitch, we seamlessly blend innovative design with
+          functionality, creating spaces that inspire, elevate, and endure. From
+          visionary concepts to flawless execution, we craft architectural
+          masterpieces tailored to your lifestyle.
+        </p>
+        <a href="" class="cs-button-solid">Book A Call</a>
+      </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+      <!--Mobile Image-->
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building14.jpg"
+      />
+      <!--Tablet and above Image-->
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building14.jpg"
+      />
+      <img
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building14.jpg"
+        alt="fancy modern architecture"
+        width="1800"
+        height="860"
+      />
+    </picture>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                 Services                     -->
+<!-- ============================================ -->
+
+<section id="services-2344">
+  <ul class="cs-card-group">
+    <li class="cs-item">
+      <a href="" class="cs-link">
+        <h2 class="cs-h2">
+          Expensive Living Spaces
+          <img
+            class="cs-icon"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/right-arrow.svg"
+            alt="icon"
+            width="24"
+            height="24"
+          />
+        </h2>
+        <p class="cs-item-text">
+          Urban design draws together the many strands of place-making,
+          environmental stewardship.
+        </p>
+      </a>
+    </li>
+    <li class="cs-item">
+      <a href="" class="cs-link">
+        <h2 class="cs-h2">
+          Smart Home Integration
+          <img
+            class="cs-icon"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/right-arrow.svg"
+            alt="icon"
+            width="24"
+            height="24"
+          />
+        </h2>
+        <p class="cs-item-text">
+          Urban design draws together the many strands of place-making,
+          environmental stewardship.
+        </p>
+      </a>
+    </li>
+    <li class="cs-item">
+      <a href="" class="cs-link">
+        <h2 class="cs-h2">
+          Home Security System
+          <img
+            class="cs-icon"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/right-arrow.svg"
+            alt="icon"
+            width="24"
+            height="24"
+          />
+        </h2>
+        <p class="cs-item-text">
+          Urban design draws together the many strands of place-making,
+          environmental stewardship.
+        </p>
+      </a>
+    </li>
+    <li class="cs-item">
+      <a href="" class="cs-link">
+        <h2 class="cs-h2">
+          Covered Parking
+          <img
+            class="cs-icon"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/right-arrow.svg"
+            alt="icon"
+            width="24"
+            height="24"
+          />
+        </h2>
+        <p class="cs-item-text">
+          Urban design draws together the many strands of place-making,
+          environmental stewardship.
+        </p>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+  /* Mobile */
+  @media only screen and (min-width: 0rem) {
+    #hero-2344 {
+      padding: var(--sectionPadding);
+      /* 120px 0 160px */
+      padding-top: clamp(7.5rem, 12vw, 10rem);
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1800 / 16 * 1rem);
+        margin: auto;
+        /* 420px - 560px */
+        padding-top: clamp(26.25rem, 65vw, 35rem);
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          /* gradient Overlay */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.92) 100%
+          ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          opacity: 1;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+      }
+
+      .cs-content {
+        /* 24px - 40px top & bottom */
+        /* 16px - 40px left & right */
+        padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 4vw, 2.5rem);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        row-gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      .cs-flex2 {
+        max-width: calc(540 / 16 * 1rem);
+      }
+
+      .cs-title {
+        /* 39px - 90px */
+        font-size: clamp(2.4375rem, 6vw, 5.625rem);
+        margin-bottom: 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-text {
+        color: var(--bodyTextColorWhite);
+        margin-bottom: calc(32 / 16 * 1rem);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-align: center;
+        text-decoration: none;
+        min-width: calc(150 / 16 * 1rem);
+        margin: 0;
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        color: var(--bodyTextColorWhite);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #000;
+          opacity: 1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-button-solid {
+        align-self: flex-start;
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        z-index: -2;
+
+        img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-2344 {
+      .cs-content {
+        flex-direction: row;
+        justify-content: space-between;
+        /* 64px - 100px */
+        gap: clamp(4rem, 10vw, 6.25rem);
+      }
+    }
+  }
+
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile */
+  @media only screen and (min-width: 0rem) {
+    #services-2344 {
+      padding: var(--sectionPadding);
+      padding-top: 0;
+
+      .cs-card-group {
+        width: 100%;
+        max-width: calc(1800 / 16 * 1rem);
+        margin: 0 auto;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px, changes to 100px at large desktop 1300px */
+        column-gap: clamp(1rem, 3vw, 1.25rem);
+        row-gap: calc(32 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        grid-column: span 12;
+      }
+
+      .cs-link {
+        text-decoration: none;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-h2 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 3vw, 1.5625rem);
+        text-align: inherit;
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        padding-bottom: calc(16 / 16 * 1rem);
+        height: 100%;
+        color: var(--headerColor);
+        border-bottom: 1px solid #e3ddd9;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-icon {
+        width: calc(24 / 16 * 1rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-item-text {
+        font-size: calc(16 / 16 * 1rem);
+        text-align: inherit;
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-2344 {
+      .cs-item {
+        grid-column: span 6;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #services-2344 {
+      .cs-item {
+        grid-column: span 3;
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #services-2344 {
+      .cs-card-group {
+        column-gap: calc(100 / 16 * 1rem);
+      }
+    }
+  }
+</style>

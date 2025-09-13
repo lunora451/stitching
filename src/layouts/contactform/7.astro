@@ -1,0 +1,380 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Contact                     --><!-- ============================================ -->
+<section id="contact-1970">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h1 class="cs-title">
+        How much will your vacation rental property generate?
+      </h1>
+      <p class="cs-text">
+        Our team will provide you with an in depth financial property analysis
+        that combines proprietary historical data, local property comparable,
+        and live pricing.
+      </p>
+    </div>
+    <div class="cs-right">
+      <!--Form-->
+      <form class="cs-form" id="cs-form-1970" name="Contact Form" method="post">
+        <label class="cs-label">
+          First Name
+          <input
+            class="cs-input"
+            required
+            type="text"
+            id="first-name-1970"
+            name="first name"
+          />
+        </label>
+        <label class="cs-label">
+          Last Name
+          <input
+            class="cs-input"
+            required
+            type="text"
+            id="last-name-1970"
+            name="last name"
+          />
+        </label>
+        <label class="cs-label">
+          Email
+          <input
+            class="cs-input"
+            required
+            type="email"
+            id="email-1970"
+            name="email"
+          />
+        </label>
+        <label class="cs-label">
+          Phone
+          <input
+            class="cs-input"
+            required
+            type="tel"
+            id="phone-1970"
+            name="phone"
+          />
+        </label>
+        <label class="cs-label">
+          # of Bedrooms
+          <input
+            class="cs-input"
+            required
+            type="text"
+            id="bedrooms-1970"
+            name="bedrooms"
+          />
+        </label>
+        <label class="cs-label">
+          Property Address
+          <input
+            class="cs-input"
+            required
+            type="text"
+            id="address-1970"
+            name="address"
+          />
+        </label>
+        <button class="cs-button-solid cs-submit" type="submit"
+          >Get Estimate</button
+        >
+      </form>
+    </div>
+  </div>
+  <!-- Background Image, added in CSS as a background image for parallax effect -->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/downtown.jpeg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/downtown.jpeg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/downtown.jpeg"
+      alt="downtown"
+      width="1920"
+      height="640"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Contact            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #contact-1970 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(704 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        /* 40px - 80px */
+        gap: clamp(2.5rem, 5vw, 5rem);
+      }
+
+      .cs-content {
+        text-align: center;
+        width: 100%;
+        max-width: calc(622 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .cs-title {
+        max-width: calc(829 / 16 * 1rem);
+        color: #fff;
+      }
+
+      .cs-text {
+        color: #f7f7f7;
+      }
+
+      .cs-right {
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding: calc(24 / 16 * 1rem);
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-form {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: clamp(1rem, 2vw, 1.25rem);
+        row-gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-label {
+        font-size: calc(14 / 16 * 1rem);
+        width: 100%;
+        color: #767676;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: calc(4 / 16 * 1rem);
+      }
+
+      .cs-input,
+      select {
+        font-size: calc(16 / 16 * 1rem);
+        width: 100%;
+        height: calc(56 / 16 * 1rem);
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+        padding: 0;
+        padding-left: calc(24 / 16 * 1rem);
+        background-color: #f7f7f7;
+        color: var(--bodyTextColor);
+        border: none;
+        transition: border-color 0.3s;
+
+        &:hover {
+          border-color: var(--secondary);
+        }
+
+        &:focus {
+          outline: 1px solid var(--secondary);
+        }
+
+        &::placeholder {
+          color: #7d799c;
+          opacity: 0.6;
+        }
+      }
+
+      .cs-textarea {
+        font-family: inherit;
+        min-height: calc(95 / 16 * 1rem);
+        margin-bottom: calc(12 / 16 * 1rem);
+        padding-top: calc(24 / 16 * 1rem);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-align: center;
+        text-decoration: none;
+        min-width: calc(200 / 16 * 1rem);
+        margin: 0;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        overflow: hidden;
+        color: #fff;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #000;
+          opacity: 1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-submit {
+        width: 100%;
+        margin: calc(24 / 16 * 1rem) 0 0 0;
+        border: none;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+
+        &:before {
+          /* Overlay */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            0deg,
+            rgba(26, 26, 26, 0.8) 0%,
+            rgba(26, 26, 26, 0.8) 100%
+          );
+          /* prevents the cursor from interacting with it */
+          pointer-events: none;
+          opacity: 1;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #contact-1970 {
+      .cs-right {
+        max-width: calc(578 / 16 * 1rem);
+        padding: calc(48 / 16 * 1rem) calc(32 / 16 * 1rem);
+      }
+
+      .cs-form {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+      }
+
+      .cs-label {
+        grid-column: span 12;
+
+        &:nth-of-type(1),
+        &:nth-of-type(2),
+        &:nth-of-type(3),
+        &:nth-of-type(4),
+        &:nth-of-type(5),
+        &:nth-of-type(6) {
+          grid-column: span 6;
+        }
+      }
+
+      .cs-submit {
+        grid-column: span 12;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #contact-1970 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+      }
+
+      .cs-content {
+        text-align: left;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  /* Desktop Parallax Effect - 1600px */
+  @media only screen and (min-width: 100rem) {
+    #contact-1970 {
+      background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/downtown.jpeg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
+      .cs-background {
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+</style>

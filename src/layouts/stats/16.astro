@@ -1,0 +1,254 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Stats                      --><!-- ============================================ -->
+<section id="stats-963">
+  <div class="cs-container">
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <span class="cs-number">100</span>
+        <span class="cs-desc">Natural Styles</span>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">25+</span>
+        <span class="cs-desc">Products</span>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">5K+</span>
+        <span class="cs-desc">Clients</span>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">15</span>
+        <span class="cs-desc">Color Shades</span>
+      </li>
+    </ul>
+    <picture class="cs-picture">
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/salon3-m.jpg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/salon3.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/salon3.jpg"
+        alt="brick Wall"
+        width="1920"
+        height="1282"
+        aria-hidden="true"
+      />
+    </picture>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/marble-m.jpg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/marble.jpg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/marble.jpg"
+      alt="brick Wall"
+      width="1920"
+      height="1282"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #stats-963 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        /* 48px - 100px */
+        gap: clamp(3rem, 8vw, 6.25rem);
+      }
+
+      .cs-card-group {
+        width: 100%;
+        /* changes to 100% at large desktop */
+        max-width: calc(624 / 16 * 1rem);
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: calc(30 / 16 * 1rem);
+        position: relative;
+
+        &:before {
+          /* long center line */
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: var(--primary);
+          opacity: 0.4;
+          position: absolute;
+          display: block;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+      }
+
+      .cs-item {
+        text-align: center;
+        list-style: none;
+        width: 50%;
+        display: block;
+        position: relative;
+
+        &:nth-of-type(odd) {
+          /* short vertical loines */
+          &:before {
+            content: "";
+            width: 1px;
+            height: calc(80 / 16 * 1rem);
+            background: var(--primary);
+            opacity: 0.4;
+            position: absolute;
+            display: block;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+          }
+        }
+      }
+
+      .cs-number {
+        /* 64px - 120px */
+        font-size: clamp(4rem, 16vw, 7.5rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        -webkit-text-stroke: 2px var(--primary);
+        -webkit-text-fill-color: transparent;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        display: block;
+      }
+
+      .cs-desc {
+        /* 13px -25px */
+        font-size: clamp(0.8125rem, 3.5vw, 1.5625rem);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-picture {
+        width: 100%;
+        /* 328px - 640px */
+        height: clamp(20.5rem, 45vw, 38.75rem);
+        display: block;
+        position: relative;
+
+        img {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+        }
+      }
+
+      .cs-background {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80%;
+        z-index: -1;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #stats-963 {
+      .cs-card-group {
+        max-width: 100%;
+        flex-wrap: nowrap;
+
+        &:before {
+          display: none;
+        }
+
+        .cs-item {
+          &:last-of-type {
+            &:before {
+              display: none;
+            }
+          }
+          /* short vertical loines */
+          &:before {
+            content: "";
+            width: 1px;
+            height: calc(80 / 16 * 1rem);
+            background: var(--primary);
+            opacity: 0.4;
+            position: absolute;
+            display: block;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  /* Big Desktop Parallax Effect - 1500px */
+  @media only screen and (min-width: 93.75rem) {
+    #stats-963 {
+      .cs-background {
+        background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/marble.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+</style>

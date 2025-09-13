@@ -1,0 +1,382 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Side By Side                 --><!-- ============================================ -->
+<section id="sbs-2218">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <!--Top left image-->
+      <picture class="cs-picture cs-picture1">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding1.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding1.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding1.jpg"
+          alt="wedding photoshoot"
+          width="297"
+          height="366"
+        />
+      </picture>
+      <!--Bottom right image-->
+      <picture class="cs-picture cs-picture2">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/photography1.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/photography1.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/photography1.jpg"
+          alt="photograph of a woman"
+          width="405"
+          height="376"
+        />
+      </picture>
+      <!--Middle image-->
+      <picture class="cs-picture cs-picture3">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/children-birthday.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/children-birthday.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/children-birthday.jpg"
+          alt="children's birthday"
+          width="218"
+          height="155"
+        />
+      </picture>
+    </div>
+    <div class="cs-content">
+      <span class="cs-topper">Welcome to Stitchography</span>
+      <h2 class="cs-title">
+        Your Wedding Memory will be More Memorable with Our Photography
+      </h2>
+      <p class="cs-text">
+        Our expert instructors give you the skills and knowledge to manage
+        process risks and show you how to continuously make your facilities and
+        operations more safe and reliable. PSRG training courses are available
+        online. We have courses on-demand and live instructors for workshops and
+        support. We also provide LIVE instructor-led training courses and onsite
+        training.
+      </p>
+      <ul class="cs-list">
+        <li class="cs-li">
+          <picture class="cs-icon-wrapper">
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mechanic2.svg"
+              decoding="async"
+              alt="icon"
+              width="32"
+              height="32"
+              loading="lazy"
+            />
+          </picture>
+          <div class="cs-flex">
+            <h3 class="cs-h3">We Bring Quality Services</h3>
+            <p class="cs-li-text">
+              We welcome and celebrate different perspectives to help our firm,
+              our clients and our people adip iscing elit achieve enduring
+              results.
+            </p>
+          </div>
+        </li>
+        <li class="cs-li">
+          <picture class="cs-icon-wrapper">
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mechanic2.svg"
+              decoding="async"
+              alt="icon"
+              width="32"
+              height="32"
+              loading="lazy"
+            />
+          </picture>
+          <div class="cs-flex">
+            <h3 class="cs-h3">Forever Make with Love</h3>
+            <p class="cs-li-text">
+              Interview vetted advisors to find the best fit Lorem ipsum dolor
+              sit amet, consectetur adip perspectives to help our firm iscing
+              elit.
+            </p>
+          </div>
+        </li>
+      </ul>
+      <a href="" class="cs-button-solid">Learn More</a>
+    </div>
+  </div>
+  <img
+    class="cs-graphic"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/leaf11.png"
+    alt="leaf"
+    width="255"
+    height="199"
+    aria-hidden="true"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-2218 {
+      padding: var(--sectionPadding);
+      background-color: #fdfaf8;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(584 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(586 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(24 / 16 * 1rem);
+      }
+
+      .cs-list {
+        margin: 0 0 calc(32 / 16 * 1rem) 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* 24px - 32px */
+        gap: clamp(1.5rem, 3vw, 2rem);
+      }
+
+      .cs-li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: calc(24 / 16 * 1rem);
+      }
+
+      .cs-icon-wrapper {
+        /* 60px - 80px */
+        width: clamp(3.75rem, 7vw, 5rem);
+        height: clamp(3.75rem, 7vw, 5rem);
+        border: 1px solid #bababa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: none;
+      }
+
+      .cs-icon {
+        width: calc(32 / 16 * 1rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-align: left;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-li-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.8vw, 1rem);
+        line-height: 1.5em;
+        text-align: left;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-image-group {
+        /* scales the whole group based on the view width size and stop when that vales equals .74em, resets at desktop */
+        font-size: min(2.32vw, 0.74em);
+        width: calc(630 / 16 * 1em);
+        height: calc(655 / 16 * 1em);
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+          content: "";
+          width: calc(358 / 16 * 1em);
+          height: auto;
+          background: var(--secondary);
+          opacity: 0.2;
+          display: block;
+          position: absolute;
+          top: calc(144 / 16 * 1em);
+          bottom: calc(178 / 16 * 1em);
+          left: calc(88 / 16 * 1em);
+        }
+      }
+
+      .cs-picture {
+        position: absolute;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-picture1 {
+        width: calc(305 / 16 * 1em);
+        height: auto;
+        border: 4px solid #ffffff;
+        top: 0;
+        bottom: calc(281 / 16 * 1em);
+        left: 0;
+      }
+
+      .cs-picture2 {
+        width: calc(413 / 16 * 1em);
+        height: auto;
+        border: 4px solid #ffffff;
+        top: calc(271 / 16 * 1em);
+        right: 0;
+        bottom: 0;
+      }
+
+      .cs-picture3 {
+        width: calc(218 / 16 * 1em);
+        height: calc(155 / 16 * 1em);
+        top: calc(84 / 16 * 1em);
+        right: calc(75 / 16 * 1em);
+      }
+
+      .cs-graphic {
+        /* 131px - 255px */
+        width: clamp(5.8175rem, 15vw, 15.9375rem);
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-align: center;
+        text-decoration: none;
+        min-width: calc(150 / 16 * 1rem);
+        margin: 0;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        color: #fff;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #000;
+          opacity: 1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #sbs-2218 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+      }
+
+      .cs-content {
+        width: 47%;
+        align-self: center;
+      }
+
+      .cs-li {
+        align-items: center;
+      }
+
+      .cs-image-group {
+        font-size: min(1.2vw, 1em);
+        height: auto;
+        flex: none;
+      }
+    }
+  }
+</style>

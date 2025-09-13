@@ -1,0 +1,441 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Reviews                     --><!-- ============================================ -->
+<div id="reviews-2429">
+  <div class="cs-container">
+    <div class="cs-icon-group">
+      <!--You can swap out the quote and change the background color -->
+      <picture class="cs-icon-wrapper">
+        <img
+          src="https://nyc3.digitaloceanspaces.com/csimages2/Icons/red-quote.svg"
+          class="cs-icon"
+          alt="icon"
+          width="64"
+          height="64"
+          loading="lazy"
+          aria-hidden="true"
+          decoding="async"
+        />
+      </picture>
+      <img
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/circle-words.svg"
+        class="cs-icon-text"
+        alt="icon"
+        width="228"
+        height="228"
+        loading="lazy"
+        aria-hidden="true"
+        decoding="async"
+      />
+    </div>
+    <div class="cs-reviews-wrapper">
+      <div class="cs-wrapper cs-active">
+        <p class="cs-review">
+          The UV body art was absolutely stunning. The detail, the glow, and the
+          experience everything felt magical. I’ve never felt more expressive
+          and alive.
+        </p>
+        <div class="cs-profile-group">
+          <img
+            class="cs-profile"
+            loading="lazy"
+            decoding="async"
+            src="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/profile.jpg"
+            alt="person"
+            width="60"
+            height="60"
+          />
+          <div class="cs-info">
+            <span class="cs-name">Emily S.</span>
+            <span class="cs-job">Makeover Expert</span>
+          </div>
+        </div>
+      </div>
+      <div class="cs-wrapper cs-hidden">
+        <p class="cs-review">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quos
+          inventore optio ut sint quisquam laborum eligendi dolor ipsa deleniti.
+        </p>
+        <div class="cs-profile-group">
+          <img
+            class="cs-profile"
+            loading="lazy"
+            decoding="async"
+            src="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/profile.jpg"
+            alt="person"
+            width="60"
+            height="60"
+          />
+          <div class="cs-info">
+            <span class="cs-name">John D.</span>
+            <span class="cs-job">Tattoo Artist</span>
+          </div>
+        </div>
+      </div>
+      <div class="cs-wrapper cs-hidden">
+        <p class="cs-review">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea eos
+          inventore id enim sint possimus laudantium fuga sit, tempora odio?
+        </p>
+        <div class="cs-profile-group">
+          <img
+            class="cs-profile"
+            loading="lazy"
+            decoding="async"
+            src="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/profile.jpg"
+            alt="person"
+            width="60"
+            height="60"
+          />
+          <div class="cs-info">
+            <span class="cs-name">Jake S.</span>
+            <span class="cs-job">Hairstylist</span>
+          </div>
+        </div>
+      </div>
+      <div class="cs-button-group">
+        <button class="cs-button" aria-label="previous review">
+          <img
+            class="cs-button-arrow"
+            src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-arrowleft.svg"
+            decoding="async"
+            alt="arrow"
+            width="20"
+            height="20"
+            aria-hidden="true"
+          />
+        </button>
+        <button class="cs-button" aria-label="next review">
+          <img
+            class="cs-button-arrow"
+            src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-arrowright.svg"
+            decoding="async"
+            alt="arrow"
+            width="20"
+            height="20"
+            aria-hidden="true"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+  <!--Floating Graphic -->
+  <img
+    class="cs-floater"
+    src="https://nyc3.digitaloceanspaces.com/csimages2/Icons/tattoo.svg"
+    alt="icon"
+    aria-hidden="true"
+    decoding="async"
+    loading="lazy"
+    width="152"
+    height="513"
+  />
+</div>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Reviews          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #reviews-2429 {
+      padding: var(--sectionPadding);
+      background-color: #030711;
+      overflow: hidden;
+      position: relative;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-reviews-wrapper {
+        max-width: calc(792 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-button-group {
+        width: auto;
+        display: inline-flex;
+        justify-content: center;
+        gap: calc(16 / 16 * 1rem);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+      }
+
+      .cs-button {
+        width: calc(48 / 16 * 1rem);
+        height: calc(48 / 16 * 1rem);
+        padding: calc(14 / 16 * 1rem);
+        background-color: var(--primary);
+        border: none;
+        transition: background-color 0.3s;
+
+        &:first-of-type {
+          background-color: var(--headerColor);
+        }
+
+        &:hover {
+          cursor: pointer;
+          background-color: #f7f7f7;
+
+          .cs-button-arrow {
+            filter: invert(1);
+          }
+        }
+      }
+
+      .cs-button-arrow {
+        width: calc(20 / 16 * 1rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-review {
+        /* 25px - 39px */
+        font-size: clamp(1.5625rem, 4vw, 2.4375rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        /* adjust as needed based on the tallest review, changes on desktop */
+        min-height: calc(178 / 16 * 1rem);
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-wrapper {
+        position: relative;
+        z-index: 1;
+        transition: opacity 0.3s;
+      }
+
+      .cs-active {
+        opacity: 1;
+      }
+
+      .cs-hidden {
+        opacity: 0;
+        position: absolute;
+      }
+
+      .cs-profile-group {
+        /* 32px - 48px */
+        margin-top: clamp(2rem, 4vw, 3rem);
+        padding-top: clamp(2rem, 3vw, 3rem);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-profile {
+        width: calc(60 / 16 * 1rem);
+        height: calc(60 / 16 * 1rem);
+        border-radius: 50%;
+        overflow: hidden;
+        object-fit: cover;
+        display: block;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-info {
+        /* prevents overlap with button group */
+        max-width: 45%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cs-name {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        display: block;
+      }
+
+      .cs-job {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        font-weight: 400;
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+        display: block;
+      }
+
+      .cs-icon-group {
+        /* 163px - 228px */
+        width: clamp(10.1875rem, 21vw, 14.25rem);
+        height: clamp(10.1875rem, 21vw, 14.25rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .cs-icon-wrapper {
+        /* 115px - 161px */
+        width: clamp(7.1875rem, 15vw, 10.0625rem);
+        height: clamp(7.1875rem, 15vw, 10.0625rem);
+        background-color: rgba(136, 137, 139, 0.16);
+        border-radius: 50%;
+        backdrop-filter: blur(16px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+      }
+
+      .cs-icon {
+        /* 46px - 64px */
+        width: clamp(2.875rem, 6vw, 4rem);
+        height: auto;
+        position: absolute;
+      }
+
+      .cs-icon-text {
+        /* 163px - 228px */
+        width: clamp(10.1875rem, 21vw, 14.25rem);
+        height: clamp(10.1875rem, 21vw, 14.25rem);
+      }
+
+      .cs-floater {
+        width: calc(152 / 16 * 1rem);
+        height: auto;
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: calc(-232 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #reviews-2429 {
+      .cs-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .cs-review {
+        /* adjust as needed based on the tallest review, changes on desktop */
+        min-height: calc(182 / 16 * 1rem);
+      }
+
+      .cs-floater {
+        display: block;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #reviews-2429 {
+      .cs-review {
+        /* change based on the height of the tallest review */
+        min-height: calc(230 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Large Desktop - 1600px */
+  @media only screen and (min-width: 100rem) {
+    #reviews-2429 {
+      .cs-review {
+        /* change based on the height of the tallest review */
+        min-height: calc(183 / 16 * 1rem);
+      }
+    }
+  }
+</style><script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Get all review wrapper elements
+    const reviewWrappers = document.querySelectorAll("#reviews .cs-wrapper");
+
+    // Get navigation buttons (existing ones in your HTML)
+    const prevButton = document.querySelector(
+      "#reviews .cs-button-group .cs-button:first-child"
+    );
+    const nextButton = document.querySelector(
+      "#reviews .cs-button-group .cs-button:last-child"
+    );
+
+    // Initialize the current review index
+    let currentReviewIndex = 0;
+
+    // Function to show a specific review
+    const showReview = (index) => {
+      // Hide all reviews
+      reviewWrappers.forEach((wrapper) => {
+        wrapper.classList.add("cs-hidden");
+        wrapper.classList.remove("cs-active");
+      });
+
+      // Show the specified review
+      reviewWrappers[index].classList.remove("cs-hidden");
+      reviewWrappers[index].classList.add("cs-active");
+
+      // Update current index
+      currentReviewIndex = index;
+    };
+
+    // Next button click event
+    if (nextButton) {
+      nextButton.addEventListener("click", () => {
+        let nextIndex = currentReviewIndex + 1;
+
+        // Loop back to the first review if at the end
+        if (nextIndex >= reviewWrappers.length) {
+          nextIndex = 0;
+        }
+
+        showReview(nextIndex);
+      });
+    }
+
+    // Previous button click event
+    if (prevButton) {
+      prevButton.addEventListener("click", () => {
+        let prevIndex = currentReviewIndex - 1;
+
+        // Loop to the last review if at the beginning
+        if (prevIndex < 0) {
+          prevIndex = reviewWrappers.length - 1;
+        }
+
+        showReview(prevIndex);
+      });
+    }
+
+    // Initialize by showing the first review and hiding others
+    reviewWrappers.forEach((wrapper, index) => {
+      if (index === 0) {
+        wrapper.classList.add("cs-active");
+        wrapper.classList.remove("cs-hidden");
+      } else {
+        wrapper.classList.add("cs-hidden");
+        wrapper.classList.remove("cs-active");
+      }
+    });
+  });
+</script>

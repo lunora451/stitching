@@ -1,0 +1,328 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Gallery                    --><!-- ============================================ -->
+<section id="gallery-2235">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex-group">
+        <span class="cs-topper">Our Gallery</span>
+        <h2 class="cs-title">
+          Capturing Precious Moments of Your Dream Wedding
+        </h2>
+      </div>
+      <p class="cs-text">
+        We have courses on-demand and live instructors for workshops and
+        support. We also provide LIVE instructor-led training courses and onsite
+        training.
+      </p>
+    </div>
+    <div class="cs-wrapper">
+      <div class="cs-slideshow">
+        <!-- Ensure that the the cs-slide you want to start on has the 'initial' class applied. The JS will take care of the rest -->
+        <picture class="cs-slide initial">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/People/wedding1.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/People/wedding1.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Images/People/wedding1.jpg"
+            alt="formal dinner"
+            width="380"
+            height="271"
+          />
+        </picture>
+        <picture class="cs-slide">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding7.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding7.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding7.jpg"
+            alt="formal dinner"
+            width="380"
+            height="271"
+          />
+        </picture>
+        <picture class="cs-slide">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding10.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding10.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding10.jpg"
+            alt="formal dinner"
+            width="380"
+            height="271"
+          />
+        </picture>
+
+        <div class="cs-slideshow-button cs-slideshow-next"></div>
+        <div class="cs-slideshow-button cs-slideshow-prev"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /* ---------------------------------- */
+  /*           Gallery                  */
+  /* ---------------------------------- */
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #gallery-2235 {
+      padding: var(--sectionPadding);
+      background-color: #fbf5f1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1920 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-flex-group {
+        display: flex;
+        flex-direction: column;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-topper {
+        color: var(--secondary);
+      }
+
+      .cs-text {
+        max-width: none;
+      }
+
+      .cs-wrapper {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .cs-slideshow {
+        position: relative;
+        transform-style: preserve-3d;
+      }
+
+      .cs-slide {
+        width: 100%;
+        /* 340px - 840px */
+        height: clamp(21.25rem, 60vw, 52.5rem);
+        margin: auto;
+        opacity: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        z-index: 100;
+        transition:
+          transform 0.3s,
+          opacity 0.3s,
+          z-index 0.3s;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        /* classes applied by the JS file */
+        &.initial,
+        &.active {
+          opacity: 1;
+          position: relative;
+          z-index: 900;
+        }
+
+        &.prev,
+        &.next {
+          z-index: 800;
+        }
+
+        &.prev {
+          transform: translateX(-100%);
+        }
+
+        &.next {
+          transform: translateX(100%);
+        }
+      }
+
+      .cs-slideshow-button {
+        /* 36px - 80px */
+        width: clamp(2.25rem, 6vw, 5rem);
+        /* 36px - 80px */
+        height: clamp(2.25rem, 6vw, 5rem);
+        cursor: pointer;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        z-index: 1000;
+        transform: translateY(-50%);
+
+        &::before {
+          content: "";
+          /* 20px - 64px */
+          width: clamp(1.25rem, 5vw, 4rem);
+          /* 20px - 64px */
+          height: clamp(1.25rem, 5vw, 4rem);
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        &.cs-slideshow-prev {
+          left: calc(16 / 16 * 1rem);
+
+          &::before {
+            background-image: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/slideshow-left.svg");
+          }
+        }
+
+        &.cs-slideshow-next {
+          right: calc(16 / 16 * 1rem);
+
+          &::before {
+            background-image: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/slideshow-right.svg");
+          }
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #gallery-2235 {
+      .cs-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: calc(40 / 16 * 1rem);
+      }
+
+      .cs-title {
+        margin-bottom: 0;
+      }
+
+      .cs-flex-group {
+        width: 55%;
+      }
+    }
+  }
+</style><script>
+  class Slideshow {
+    constructor() {
+      // Initialize DOM elements for the slideshow
+      // Converts NodeList to Array for better method availability
+      this.slides = Array.from(document.querySelectorAll(".cs-slide"));
+      this.nextButton = document.querySelector(".cs-slideshow-next");
+      this.prevButton = document.querySelector(".cs-slideshow-prev");
+
+      // Track the currently displayed slide and animation state
+      this.currentIndex = 0;
+      this.isMoving = false;
+
+      // Setup event listeners and initial slide positions
+      this.init();
+    }
+
+    init() {
+      // Attach click handlers for navigation, using optional chaining for null safety
+      this.nextButton?.addEventListener("click", () => this.moveSlide("next"));
+      this.prevButton?.addEventListener("click", () => this.moveSlide("prev"));
+
+      // Position slides in their starting configuration
+      this.updateSlideStates();
+    }
+
+    updateSlideStates() {
+      this.slides.forEach((slide, index) => {
+        // Clear existing position classes to prevent conflicts
+        slide.classList.remove("active", "prev", "next", "initial");
+
+        // Apply appropriate positioning class based on slide's relation to current slide
+        if (index === this.currentIndex) {
+          slide.classList.add("active");
+        } else if (index === this.getAdjacentIndex("prev")) {
+          slide.classList.add("prev");
+        } else if (index === this.getAdjacentIndex("next")) {
+          slide.classList.add("next");
+        }
+      });
+    }
+
+    getAdjacentIndex(direction) {
+      const totalSlides = this.slides.length;
+      // Calculate the index of the next/previous slide with wrapping
+      // Using modulo to create circular navigation
+      if (direction === "next") {
+        return (this.currentIndex + 1) % totalSlides;
+      } else {
+        return (this.currentIndex - 1 + totalSlides) % totalSlides;
+      }
+    }
+
+    moveSlide(direction) {
+      // Prevent animation overlap by checking if transition is in progress
+      if (this.isMoving) return;
+      this.isMoving = true;
+
+      // Update the current slide index based on navigation direction
+      this.currentIndex = this.getAdjacentIndex(direction);
+
+      // Apply new positioning classes to slides
+      this.updateSlideStates();
+
+      // Re-enable navigation after transition animation completes
+      setTimeout(() => {
+        this.isMoving = false;
+      }, 300); // Timeout should match CSS transition-duration
+    }
+  }
+
+  // Create slideshow instance once DOM is fully loaded
+  document.addEventListener("DOMContentLoaded", () => {
+    new Slideshow();
+  });
+</script>

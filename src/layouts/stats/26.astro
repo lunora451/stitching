@@ -1,0 +1,190 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Stats                      --><!-- ============================================ -->
+<section id="stats-15">
+  <div class="cs-container">
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <span class="cs-number">400+</span>
+        <span class="cs-header">Happy Clients</span>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed enim
+          ut sem viverra aliquet eget sit.
+        </p>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">40K+</span>
+        <span class="cs-header">Pipes Fixed</span>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed enim
+          ut sem viverra aliquet eget sit.
+        </p>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">8M+</span>
+        <span class="cs-header">Cups of Coffee</span>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed enim
+          ut sem viverra aliquet eget sit.
+        </p>
+      </li>
+    </ul>
+  </div>
+  <!-- Wave Graphic -->
+  <picture aria-hidden="true" class="cs-image">
+    <source
+      media="(max-width: 767px)"
+      srcset="https://csimg.nyc3.digitaloceanspaces.com/Stats/wave.svg"
+    />
+    <source
+      media="(min-width: 768px)"
+      srcset="https://csimg.nyc3.digitaloceanspaces.com/Stats/long-wave.svg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.digitaloceanspaces.com/Stats/long-wave.svg"
+      alt="wave graphic"
+      width="1024"
+      height="220"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #stats-15 {
+      padding: var(--sectionPadding);
+      background-color: var(--primary);
+      /* Prevents bg image from overflowing */
+      overflow: hidden;
+      z-index: 1;
+
+      .cs-image {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.05;
+        z-index: 1;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .cs-container {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: calc(1080 / 16 * 1rem);
+        margin: auto;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        position: relative;
+        z-index: 2;
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        margin: auto;
+        margin-bottom: calc(48 / 16 * 1rem);
+        max-width: calc(255 / 16 * 1rem);
+        display: block;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      .cs-number {
+        /* 49px - 61px */
+        font-size: clamp(3.0625rem, 5.1vw, 3.8125rem);
+        line-height: 1.2em;
+        text-align: center;
+        font-weight: 700;
+        margin: auto;
+        /* 12px - 16px */
+        margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+        color: var(--bodyTextColorWhite);
+        display: block;
+      }
+
+      .cs-header {
+        /* 20px - 31px */
+        font-size: clamp(1.25rem, 2.4vw, 1.9375rem);
+        line-height: 1.5em;
+        text-align: center;
+        font-weight: 700;
+        margin: auto;
+        /* 12px - 16px */
+        margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+        color: var(--bodyTextColorWhite);
+        display: block;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.7vw, 1rem);
+        text-align: center;
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #stats-15 {
+      position: relative;
+      .cs-image {
+        left: 0;
+        opacity: 1;
+        /* set is as a repeating background-pattern */
+        background: url("https://csimg.nyc3.digitaloceanspaces.com/Stats/long-wave.svg");
+        background-size: auto calc(275 / 16 * 1rem);
+        background-position: center;
+        background-repeat: repeat-x;
+
+        img {
+          /* removed image */
+          display: none;
+        }
+      }
+
+      .cs-card-group {
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        /* 32px - 64px */
+        column-gap: clamp(2rem, 6vw, 4rem);
+      }
+
+      .cs-item {
+        margin: 0;
+        width: 30%;
+        max-width: calc(255 / 16 * 1rem);
+      }
+    }
+  }
+</style>

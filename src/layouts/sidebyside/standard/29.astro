@@ -1,0 +1,261 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Side By Side                  --><!-- ============================================ -->
+<section id="sbs-1809">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <!--Main Image-->
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym3.png"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym3.png"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym3.png"
+          alt="body builder"
+          width="562"
+          height="568"
+        />
+      </picture>
+      <!--Pink Blob-->
+      <img
+        class="cs-splatter"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/red-splatter.svg"
+        alt="red splatter"
+        width="441"
+        height="478"
+      />
+    </div>
+    <div class="cs-content">
+      <span class="cs-topper">About Us</span>
+      <h2 class="cs-title">We Are Pushing The Limit Of Your Core Strength</h2>
+      <p class="cs-text">
+        We understand that your lifestyle changes, that’s why we’ve made fitness
+        straightforward and stress free. Join today on a no lock-in contract
+        membership and start achieving your fitness goals. We value flexibility
+        at Jetts, with unlimited 24/7 access.
+      </p>
+      <a href="" class="cs-button-solid" aria-label="learn more about us"
+        >Learn More</a
+      >
+    </div>
+  </div>
+
+  <!--White Splash Graphic-->
+  <img
+    class="cs-graphic cs-light"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/f7-splatter.svg"
+    alt="graphic"
+    height="161"
+    width="1920"
+    loading="lazy"
+    decoding="async"
+  />
+  <!--This is a dark version. Download the image and change the fill color to match the color of the section background below it-->
+  <img
+    class="cs-graphic cs-dark"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dark-mode-splatter2.svg"
+    alt="graphic"
+    height="161"
+    width="1920"
+    loading="lazy"
+    decoding="async"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-1809 {
+      padding: var(--sectionPadding);
+      /* 100px - 200px */
+      padding-bottom: clamp(6.25rem, 8vw, 12.5rem);
+      /* clips anything overflowing */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(522 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+        position: relative;
+        z-index: 3;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-image-group {
+        /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
+        font-size: min(1.7vw, 0.6rem);
+        /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+        width: calc(699 / 16 * 1em);
+        height: calc(643 / 16 * 1em);
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          /* blur effect */
+          content: "";
+          width: calc(2000 / 16 * 1rem);
+          height: calc(2000 / 16 * 1rem);
+          margin-right: calc(-450 / 16 * 1rem);
+          background-color: rgba(255, 255, 255, 0.08);
+          backdrop-filter: blur(20px);
+          position: absolute;
+          display: none;
+          top: calc(-200 / 16 * 1em);
+          right: 50%;
+          transform: skew(40deg);
+          transform-origin: center;
+          z-index: -1;
+        }
+      }
+
+      .cs-picture {
+        width: auto;
+        height: calc(643 / 16 * 1em);
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: calc(0 / 16 * 1em);
+        transform: translateX(-50%);
+
+        img {
+          width: auto;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .cs-splatter {
+        width: calc(782 / 16 * 1em);
+        height: auto;
+        object-fit: cover;
+        position: absolute;
+        bottom: calc(-40 / 16 * 1em);
+        right: calc(88 / 16 * 1em);
+        z-index: -2;
+      }
+
+      .cs-graphic {
+        width: 100%;
+        min-width: calc(1200 / 16 * 1rem);
+        height: auto;
+        object-fit: cover;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        z-index: 1;
+        transform: translateX(-50%);
+      }
+
+      .cs-dark {
+        display: none;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbs-1809 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cs-image-group {
+        /* set to inherit at Large Desktop */
+        font-size: min(1.2vw, 1rem);
+
+        &:before {
+          display: block;
+        }
+      }
+
+      .cs-content {
+        width: 51%;
+      }
+    }
+  }
+</style>

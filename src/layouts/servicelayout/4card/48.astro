@@ -1,0 +1,262 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Services                    --><!-- ============================================ -->
+<section id="services-672">
+  <ul class="cs-card-group">
+    <li class="cs-item">
+      <picture class="cs-picture">
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services%2Fhealth1.svg"
+          alt="icon"
+          aria-hidden="true"
+          decoding="async"
+          width="52"
+          height="52"
+        />
+      </picture>
+      <h2 class="cs-h2">Semaglutide</h2>
+      <a href="" class="cs-link" aria-label="read mroe about Semaglutide"
+        >Read More</a
+      >
+      <!--SVG Waves-->
+      <img
+        class="cs-waves"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services%2Fgrey-waves.svg"
+        alt="waves graphic"
+        aria-hidden="true"
+        decoding="async"
+        width="480"
+        height="331"
+      />
+    </li>
+    <li class="cs-item">
+      <picture class="cs-picture">
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services%2Fhealth2.svg"
+          alt="icon"
+          aria-hidden="true"
+          decoding="async"
+          width="52"
+          height="52"
+        />
+      </picture>
+      <h2 class="cs-h2">Dermal Filler</h2>
+      <a href="" class="cs-link" aria-label="read mroe about Dermal Filler"
+        >Read More</a
+      >
+      <!--SVG Waves-->
+      <img
+        class="cs-waves"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services%2Fgrey-waves.svg"
+        alt="waves graphic"
+        aria-hidden="true"
+        decoding="async"
+        width="480"
+        height="331"
+      />
+    </li>
+    <li class="cs-item">
+      <picture class="cs-picture">
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services%2Fhealth3.svg"
+          alt="icon"
+          aria-hidden="true"
+          decoding="async"
+          width="52"
+          height="52"
+        />
+      </picture>
+      <h2 class="cs-h2">Tirezapetide</h2>
+      <a href="" class="cs-link" aria-label="read mroe about Tirezapetide"
+        >Read More</a
+      >
+      <!--SVG Waves-->
+      <img
+        class="cs-waves"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services%2Fgrey-waves.svg"
+        alt="waves graphic"
+        aria-hidden="true"
+        decoding="async"
+        width="480"
+        height="331"
+      />
+    </li>
+    <li class="cs-item">
+      <picture class="cs-picture">
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services%2Fhealth4.svg"
+          alt="icon"
+          aria-hidden="true"
+          decoding="async"
+          width="52"
+          height="52"
+        />
+      </picture>
+      <h2 class="cs-h2">Neurotoxins</h2>
+      <a href="" class="cs-link" aria-label="read mroe about Neurotoxins"
+        >Read More</a
+      >
+      <!--SVG Waves-->
+      <img
+        class="cs-waves"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services%2Fgrey-waves.svg"
+        alt="waves graphic"
+        aria-hidden="true"
+        decoding="async"
+        width="480"
+        height="331"
+      />
+    </li>
+  </ul>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-672 {
+      .cs-card-group {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cs-item {
+        list-style: none;
+        /* 40px - 64px */
+        padding: clamp(2.5rem, 6.3vw, 4rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        background-color: #eff1f0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        transition: filter 0.3s;
+
+        &:hover {
+          filter: brightness(70%);
+        }
+
+        &:nth-of-type(even) {
+          background-color: var(--primary);
+          .cs-link,
+          .cs-h2 {
+            color: #f7f7f7;
+          }
+
+          .cs-waves {
+            display: none;
+          }
+        }
+      }
+
+      .cs-picture {
+        width: calc(100 / 16 * 1rem);
+        height: calc(100 / 16 * 1rem);
+        margin: 0 0 calc(20 / 16 * 1rem) 0;
+        background-color: #fdfaf8;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cs-icon {
+        width: calc(52 / 16 * 1rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-h2 {
+        font-size: calc(25 / 16 * 1rem);
+        font-weight: 700;
+        text-align: center;
+        line-height: 1.2em;
+        /* 20px - 32px */
+        margin: 0 0 clamp(1.25rem, 3vw, 2rem);
+        color: var(--headerColor);
+        display: block;
+      }
+
+      .cs-link {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        text-decoration: none;
+        margin: 0;
+        color: var(--primary);
+        display: inline-block;
+        position: relative;
+        &:before {
+          /* underline */
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: currentColor;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          bottom: -1px;
+          left: 0;
+        }
+      }
+
+      .cs-waves {
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* prevents the mouse from interacting with it */
+        pointer-events: none;
+        /* makes it act like a background images */
+        object-fit: cover;
+        z-index: -1;
+      }
+    }
+  }
+
+  /* Tablet - 650px */
+  @media only screen and (min-width: 40.625rem) {
+    #services-672 {
+      .cs-card-group {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .cs-item {
+        width: 50%;
+
+        &:nth-of-type(3) {
+          order: 4;
+        }
+      }
+    }
+  }
+
+  /* Small Desktop - 1200px */
+  @media only screen and (min-width: 75rem) {
+    #services-672 {
+      .cs-item {
+        width: 25%;
+        &:nth-of-type(3) {
+          order: initial;
+        }
+      }
+    }
+  }
+</style>

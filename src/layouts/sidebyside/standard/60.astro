@@ -1,0 +1,351 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Side By Side                  --><!-- ============================================ -->
+<section id="sbs-1016">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our Food</span>
+      <h2 class="cs-title">Tasteful.<br /> Satisfying.<br /> Luxury.</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco.
+      </p>
+      <a href="" class="cs-button-solid">Reserve Your Table</a>
+    </div>
+    <picture class="cs-picture">
+      <!--Mobile Image-->
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food8.jpg"
+      />
+      <!--Tablet and above Image-->
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food8.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food8.jpg"
+        alt="kitchen"
+        width="950"
+        height="480"
+      />
+    </picture>
+  </div>
+  <div class="cs-image-group">
+    <picture class="cs-image">
+      <!--Mobile Image-->
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food3.jpg"
+      />
+      <!--Tablet and above Image-->
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food3.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food3.jpg"
+        alt="food"
+        width="368"
+        height="284"
+      />
+    </picture>
+    <picture class="cs-image">
+      <!--Mobile Image-->
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food4.jpg"
+      />
+      <!--Tablet and above Image-->
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food4.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food4.jpg"
+        alt="food"
+        width="368"
+        height="284"
+      />
+    </picture>
+    <picture class="cs-image">
+      <!--Mobile Image-->
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food5.jpg"
+      />
+      <!--Tablet and above Image-->
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food5.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food5.jpg"
+        alt="food"
+        width="368"
+        height="284"
+      />
+    </picture>
+    <picture class="cs-image">
+      <!--Mobile Image-->
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food6.jpg"
+      />
+      <!--Tablet and above Image-->
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food6.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food6.jpg"
+        alt="food"
+        width="368"
+        height="284"
+      />
+    </picture>
+    <picture class="cs-image">
+      <!--Mobile Image-->
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food7.jpg"
+      />
+      <!--Tablet and above Image-->
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food7.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food7.jpg"
+        alt="food"
+        width="368"
+        height="284"
+      />
+    </picture>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-1016 {
+      /* prevents the overflowing cs-picture at large desktop from causing overflow issues */
+      overflow: hidden;
+      background-color: #1a1a1a;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        /* 16px - 20px */
+        margin: 0 auto clamp(1rem, 1.5vw, 1.25rem);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 7vw, 4rem);
+        position: relative;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        max-width: calc(530 / 16 * 1rem);
+        /* moved section padding to the content area */
+        padding: var(--sectionPadding);
+        padding-bottom: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title,
+      .cs-text {
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-text {
+        margin: 0 0 calc(32 / 16 * 1rem);
+        opacity: 0.8;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(32 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: calc(480 / 16 * 1rem);
+        display: block;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-image-group {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 1.5vw, 1.25rem);
+      }
+
+      .cs-image {
+        width: 100%;
+        /* 170px - 284px */
+        height: clamp(10.625rem, 32vw, 17.75rem);
+        display: block;
+        grid-column: span 6;
+        position: relative;
+
+        &:nth-of-type(3),
+        &:nth-of-type(4),
+        &:nth-of-type(5) {
+          display: none;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbs-1016 {
+      .cs-container {
+        /* moved section padding to the container */
+        padding: var(--sectionPadding);
+        padding-bottom: 0;
+        /* remove padding-right so the image touches the right screen edge */
+        padding-right: 0;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .cs-content {
+        text-align: left;
+        padding: 0;
+        align-items: flex-start;
+      }
+
+      .cs-image {
+        grid-column: span 4;
+        &:nth-of-type(3) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  /* Large Desktop - 1200px */
+  @media only screen and (min-width: 75rem) {
+    #sbs-1016 {
+      /* moved section padding to the section but removed all padding except the padding top.  We're moving the padding top from the container to the section container so we can place the cs-picture easier inside the cs-container. If the Stitch below this Stitch is on a white background, add padding-bottom:0; to this one so there's not a huge gap between the sections. */
+      padding: var(--sectionPadding);
+      padding-left: 0;
+      padding-right: 0;
+
+      .cs-container {
+        padding-top: 0;
+      }
+
+      .cs-content {
+        padding: calc(52 / 16 * 1rem) 0;
+      }
+
+      .cs-picture {
+        width: 50vw;
+        height: 100%;
+        margin: 0 0 0 calc(10 / 16 * 1rem);
+        /* absolutely positioned so it can rest on the right edge of the screen, and its height will respond the the changing height of the cs-content when you add or subtract content */
+        position: absolute;
+        left: 50%;
+        top: 0;
+      }
+
+      .cs-image-group {
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      .cs-image {
+        grid-column: span 1;
+
+        &:nth-of-type(4),
+        &:nth-of-type(5) {
+          display: block;
+        }
+      }
+    }
+  }
+</style>

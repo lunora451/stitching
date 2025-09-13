@@ -1,0 +1,174 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Banner                     --><!-- ============================================ -->
+<div id="banner-1881">
+  <div class="cs-container">
+    <span class="cs-int-title">Contact Us</span>
+    <div class="cs-breadcrumbs">
+      <a href="" class="cs-link">Home</a>
+      <a href="" class="cs-link cs-active">Contact Us</a>
+    </div>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/dermatology-banner.jpg"
+    />
+    <!--Tablet and above Image-->
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/dermatology-banner.jpg"
+    />
+    <img
+      decoding="async"
+      src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/dermatology-banner.jpg"
+      alt="mechanic"
+      width="3860"
+      height="2577"
+      aria-hidden="true"
+    />
+  </picture>
+  <img
+    class="cs-graphic"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/banner-flower.svg"
+    alt="graphic"
+    loading="lazy"
+    decoding="async"
+    height="202"
+    width="331"
+  />
+</div>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Banner            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #banner-1881 {
+      padding: var(--sectionPadding);
+      /* 180px - 242px */
+      padding-top: clamp(11.25rem, 27vw, 15.125rem);
+      /* 60px - 182px */
+      padding-bottom: clamp(3.75rem, 14vw, 11.375rem);
+      /* clips the line from causing overflow issues for going off screen */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        text-align: center;
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-int-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: inherit;
+        margin: 0;
+        color: var(--headerColor);
+        position: relative;
+      }
+
+      .cs-breadcrumbs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cs-link {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        text-decoration: none;
+        color: var(--primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &:last-of-type {
+          /* remove the chevron on the last list item */
+          &::after {
+            display: none;
+          }
+        }
+
+        &:after {
+          /* chevron */
+          content: "";
+          width: calc(7 / 16 * 1rem);
+          height: calc(12 / 16 * 1rem);
+          margin: 0 calc(16 / 16 * 1rem);
+          background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/grey-right-arrow-2.svg");
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          display: block;
+          position: relative;
+        }
+
+        &.cs-active {
+          color: var(--bodyTextColor);
+        }
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        &:before {
+          /* background color overlay */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: #faf6f2;
+          opacity: 0.84;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          /* Makes img tag act as a background image */
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-graphic {
+        /* 123px - 227px */
+        width: clamp(7.71rem, 22.5vw, 14.19rem);
+        height: auto;
+        position: absolute;
+        top: calc(20 / 16 * 1rem);
+        right: calc(-32 / 16 * 1rem);
+        z-index: -1;
+      }
+    }
+  }
+</style>

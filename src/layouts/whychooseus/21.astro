@@ -1,0 +1,259 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Why Choose                   --><!-- ============================================ -->
+<section id="why-choose-506">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex">
+        <span class="cs-topper">About Us</span>
+        <h2 class="cs-title">Laborum magna nulla Consecte duis</h2>
+      </div>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam tempora
+        nulla sit reprehenderit quod suscipit, soluta minus impedit libero dolor
+        et aspernatur ratione blanditiis nihil!
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Why-Choose/icon-squares.svg"
+          loading="lazy"
+          decoding="async"
+          alt="icon"
+          width="70"
+          height="70"
+        />
+        <h3 class="cs-h3">Trait Number 1</h3>
+        <p class="cs-item-text">
+          Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamc.
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Why-Choose/icon-squares.svg"
+          loading="lazy"
+          decoding="async"
+          alt="icon"
+          width="70"
+          height="70"
+        />
+        <h3 class="cs-h3">Trait Number 3</h3>
+        <p class="cs-item-text">
+          Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamc.
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Why-Choose/icon-squares.svg"
+          loading="lazy"
+          decoding="async"
+          alt="icon"
+          width="70"
+          height="70"
+        />
+        <h3 class="cs-h3">Trait Number 3</h3>
+        <p class="cs-item-text">
+          Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamc.
+        </p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Why-Choose/icon-squares.svg"
+          loading="lazy"
+          decoding="async"
+          alt="icon"
+          width="70"
+          height="70"
+        />
+        <h3 class="cs-h3">Trait Number 3</h3>
+        <p class="cs-item-text">
+          Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamc.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #why-choose-506 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1104px at tablet */
+        max-width: calc(550 / 16 * 1em);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        max-width: 20ch;
+      }
+
+      .cs-text {
+        max-width: calc(504 / 16 * 1rem);
+
+        &:before {
+          /* divider line */
+          content: "";
+          width: calc(125 / 16 * 1rem);
+          height: 3px;
+          margin-bottom: calc(16 / 16 * 1rem);
+          background: var(--primary);
+          opacity: 1;
+          display: block;
+          position: relative;
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+        flex-direction: column;
+        /* 16px - 20px */
+        gap: clamp(1rem, 1.5vw, 1.25rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        margin-right: 0;
+        /* 24px - 28px top & bottom */
+        /* 16px - 40px left & right */
+        padding: clamp(1.5rem, 4vw, 1.75rem) clamp(1rem, 3vw, 2.5rem);
+        border-bottom: 8px solid var(--primary);
+        box-shadow: 0px 19px 33px rgba(94, 94, 94, 0.13);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .cs-icon {
+        width: auto;
+        height: calc(70 / 16 * 1rem);
+        margin-bottom: calc(40 / 16 * 1rem);
+      }
+
+      .cs-h3 {
+        /* 25px - 31px */
+        font-size: clamp(1.5625rem, 2.5vw, 1.9375rem);
+        font-weight: 900;
+        text-align: left;
+        text-transform: uppercase;
+        line-height: 1.2em;
+        margin: 0;
+        margin-bottom: calc(16 / 16 * 1rem);
+        color: var(--headerColor);
+      }
+
+      .cs-item-text {
+        font-size: calc(16 / 16 * 1rem);
+        text-align: left;
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #why-choose-506 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-content {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cs-flex {
+        width: 50%;
+        max-width: calc(550 / 16 * 1rem);
+        flex: none;
+      }
+
+      .cs-topper,
+      .cs-title {
+        text-align: right;
+      }
+
+      .cs-title {
+        margin: 0;
+      }
+
+      .cs-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:before {
+          width: 3px;
+          height: calc(125 / 16 * 1rem);
+          /* 24px - 28px */
+          margin: 0 clamp(1.5rem, 3vw, 1.75rem);
+          /* prevents flexbox from squishing it */
+          flex: none;
+        }
+      }
+
+      .cs-card-group {
+        /* using grid here so we can have a perfect 2x2, it's really hard to do that with flexbox */
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* makes sure all boxes are the same height even when they have mroe or less content inside of them */
+        align-items: stretch;
+        gap: calc(20 / 16 * 1rem);
+      }
+
+      .cs-item {
+        grid-column: span 6;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #why-choose-506 {
+      .cs-item {
+        grid-column: span 3;
+      }
+    }
+  }
+</style>

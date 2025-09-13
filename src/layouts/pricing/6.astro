@@ -1,0 +1,366 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Pricing                    --><!-- ============================================ -->
+<section id="pricing-2383">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Pricing</span>
+      <h2 class="cs-title">Prioritize Your Health and Happiness</h2>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <div class="cs-wrapper">
+          <div class="cs-flex">
+            <h3 class="cs-package">Personal Therapy</h3>
+            <span class="cs-price">$170-$190</span>
+            <span class="cs-desc"> per session </span>
+          </div>
+          <p class="cs-item-text">
+            Customized sessions focused on overcoming fears, enhancing
+            well-being, and fostering personal development. Experience support
+            tailored just for you.
+          </p>
+          <a href="" class="cs-button-solid cs-price-button">Book a Session</a>
+        </div>
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/blob1.jpg"
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/blob1.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/blob1.jpg"
+            alt="graphic"
+            width="413"
+            height="268"
+            aria-hidden="true"
+          />
+        </picture>
+      </li>
+      <li class="cs-item cs-popular">
+        <div class="cs-wrapper">
+          <div class="cs-flex">
+            <h3 class="cs-package">Relationship Therapy</h3>
+            <span class="cs-price">$170-$190</span>
+            <span class="cs-desc"> per session </span>
+          </div>
+          <p class="cs-item-text">
+            Customized sessions focused on overcoming fears, enhancing
+            well-being, and fostering personal development. Experience support
+            tailored just for you.
+          </p>
+          <a href="" class="cs-button-solid cs-price-button">Book a Session</a>
+        </div>
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/blob2.jpg"
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/blob2.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/blob2.jpg"
+            alt="graphic"
+            width="413"
+            height="268"
+            aria-hidden="true"
+          />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <div class="cs-wrapper">
+          <div class="cs-flex">
+            <h3 class="cs-package">Eating Disorder Assessment</h3>
+            <span class="cs-price">$325</span>
+            <span class="cs-desc"> per session </span>
+          </div>
+          <p class="cs-item-text">
+            Customized sessions focused on overcoming fears, enhancing
+            well-being, and fostering personal development. Experience support
+            tailored just for you.
+          </p>
+          <a href="" class="cs-button-solid cs-price-button">Book a Session</a>
+        </div>
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/blob3.jpg"
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/blob3.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/blob3.jpg"
+            alt="graphic"
+            width="413"
+            height="268"
+            aria-hidden="true"
+          />
+        </picture>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #pricing-2383 {
+      padding: var(--sectionPadding);
+      background-color: #fbf9f5;
+      position: relative;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1em);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+        position: relative;
+        z-index: 10;
+      }
+
+      .cs-title {
+        margin: 0;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        align-items: stretch;
+        /* 16px - 20px */
+        gap: clamp(1rem, 1.8vw, 1.25rem);
+        position: relative;
+        z-index: 10;
+      }
+
+      .cs-item {
+        text-align: left;
+        list-style: none;
+        width: 100%;
+        max-width: calc(500 / 16 * 1rem);
+        margin: 0;
+        padding-top: calc(60 / 16 * 1rem);
+        border-radius: calc(16 / 16 * 1rem);
+        overflow: hidden;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        display: flex;
+        grid-column: span 12;
+        flex-direction: column;
+        align-items: stretch;
+        position: relative;
+        z-index: 1;
+
+        &.cs-popular {
+          .cs-flex {
+            border-color: var(--primary);
+          }
+
+          .cs-price {
+            color: var(--secondary);
+          }
+
+          .cs-price-button {
+            background-color: var(--primary);
+            color: var(--headerColor);
+            border: none;
+
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      .cs-wrapper {
+        height: 100%;
+        /* 24px - 48px top *
+            /* 16px - 48px left & right */
+        padding: clamp(1.25rem, 4vw, 3rem) clamp(1rem, 5vw, 3rem);
+        border-radius: calc(16 / 16 * 1rem);
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cs-flex {
+        /* 126px - 170px */
+        min-height: clamp(7.875rem, 10vw, 10.625rem);
+        /* 24px - 32px */
+        margin-bottom: clamp(1.5rem, 3vw, 2rem);
+        padding-bottom: calc(24 / 16 * 1rem);
+        border-bottom: 1px solid #d2d8df;
+      }
+
+      .cs-package {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 1.4vw, 1.25rem);
+        line-height: 1.2em;
+        text-align: inherit;
+        font-weight: 700;
+        margin: 0 0 calc(8 / 16 * 1rem) 0;
+        color: var(--headerColor);
+        display: block;
+      }
+
+      .cs-price {
+        /* 25px - 39px */
+        font-size: clamp(1.5625rem, 5vw, 2.4375rem);
+        line-height: 1.2em;
+        text-align: inherit;
+        font-weight: 900;
+        margin: 0;
+        color: var(--primary);
+      }
+
+      .cs-desc {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 5vw, 1rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        font-weight: 400;
+        /* 16px - 24px */
+        margin: 0 0 clamp(1rem, 2vw, 1.5rem);
+        color: var(--bodyTextColor);
+        display: block;
+      }
+
+      .cs-item-text {
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        margin: 0 0 calc(32 / 16 * 1rem);
+        color: var(--bodyTextColor);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        border-radius: calc(100 / 16 * 1rem);
+        overflow: hidden;
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-price-button {
+        width: 100%;
+        margin-top: auto;
+        background-color: transparent;
+        border: 1px solid var(--primary);
+        color: var(--primary);
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: var(--primary);
+          color: var(--bodyTextColorWhite);
+        }
+
+        &:before {
+          background-color: var(--primary);
+        }
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: calc(268 / 16 * 1rem);
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: absolute;
+          left: 0;
+          right: 0;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #pricing-2383 {
+      .cs-item {
+        grid-column: span 4;
+      }
+    }
+  }
+</style>

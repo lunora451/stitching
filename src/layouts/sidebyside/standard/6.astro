@@ -1,0 +1,180 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Side By Side                 --><!-- ============================================ -->
+<section id="sbs-2348">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">About Us</span>
+      <h2 class="cs-title">
+        The Best Place for Your Dream Vacation is Here, Where Luxury Meets
+        Tranquility
+      </h2>
+      <p class="cs-text">
+        At ArchiStitch, we seamlessly blend innovative design with
+        functionality, creating spaces that inspire, elevate, and endure. From
+        visionary concepts to flawless execution, we craft architectural
+        masterpieces. Urban design draws together the many strands of
+        place-making, environmental stewardship. We craft premium digital work
+        for web, mobile and experiential with creative agencies and global
+        brands.
+      </p>
+      <a href="" class="cs-button-solid">Learn More</a>
+    </div>
+    <picture class="cs-picture">
+      <!--Mobile Image-->
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building29.jpg"
+      />
+      <!--Tablet and above Image-->
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building29.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building29.jpg"
+        alt="building"
+        width="1280"
+        height="568"
+      />
+    </picture>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile */
+  @media only screen and (min-width: 0rem) {
+    #sbs-2348 {
+      padding: var(--sectionPadding);
+      /* 100px - 200px */
+      padding-bottom: clamp(6.25rem, 8vw, 12.5rem);
+      /* clips anything overflowing */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1800 / 16 * 1rem);
+        margin: auto;
+        /* 16px - 80px */
+        padding: clamp(1rem, 5vw, 5rem);
+        box-sizing: border-box;
+        background-color: #f1eeec;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(766 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+        position: relative;
+        z-index: 3;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-align: center;
+        text-decoration: none;
+        min-width: calc(150 / 16 * 1rem);
+        margin: 0;
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        color: var(--bodyTextColorWhite);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #000;
+          opacity: 1;
+          border-radius: calc(4 / 16 * 1rem);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: 95vw;
+        max-height: calc(450 / 16 * 1rem);
+        display: block;
+        order: -1;
+        position: relative;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbs-2348 {
+      .cs-container {
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+      }
+
+      .cs-content {
+        /* 48px - 80px */
+        padding: clamp(3rem, 6vw, 5rem) 0;
+      }
+
+      .cs-picture {
+        width: 43vw;
+        height: auto;
+        max-height: 100%;
+        max-width: calc(810 / 16 * 1rem);
+        flex: none;
+      }
+    }
+  }
+</style>

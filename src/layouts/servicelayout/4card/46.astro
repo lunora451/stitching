@@ -1,0 +1,241 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Services                    --><!-- ============================================ -->
+<section id="services-930">
+  <ul class="cs-card-group">
+    <li class="cs-item">
+      <span class="cs-letter">H</span>
+      <h2 class="cs-h2">Cuts & Colors</h2>
+      <p class="cs-item-text">
+        From barely there pink to balayage blonde, our colour experts will nail
+        any tone you can imagine.
+      </p>
+      <a href="" class="cs-link">Read More</a>
+      <!--Background Image-->
+      <picture class="cs-background">
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hair1.jpg"
+          alt="hair cut"
+          width="480"
+          height="425"
+        />
+      </picture>
+    </li>
+    <li class="cs-item">
+      <span class="cs-letter">A</span>
+      <h2 class="cs-h2">Natural products</h2>
+      <p class="cs-item-text">
+        From barely there pink to balayage blonde, our colour experts will nail
+        any tone you can imagine.
+      </p>
+      <a href="" class="cs-link">Read More</a>
+      <!--Background Image-->
+      <picture class="cs-background">
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hair2.jpg"
+          alt="hair cut"
+          width="480"
+          height="425"
+        />
+      </picture>
+    </li>
+    <li class="cs-item">
+      <span class="cs-letter">I</span>
+      <h2 class="cs-h2">Hightlight Styles</h2>
+      <p class="cs-item-text">
+        From barely there pink to balayage blonde, our colour experts will nail
+        any tone you can imagine.
+      </p>
+      <a href="" class="cs-link">Read More</a>
+      <!--Background Image-->
+      <picture class="cs-background">
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hair3.jpg"
+          alt="hair cut"
+          width="480"
+          height="425"
+        />
+      </picture>
+    </li>
+    <li class="cs-item">
+      <span class="cs-letter">R</span>
+      <h2 class="cs-h2">Hairstyle Experts</h2>
+      <p class="cs-item-text">
+        From barely there pink to balayage blonde, our colour experts will nail
+        any tone you can imagine.
+      </p>
+      <a href="" class="cs-link">Read More</a>
+      <!--Background Image-->
+      <picture class="cs-background">
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hair4.jpg"
+          alt="hair cut"
+          width="480"
+          height="425"
+        />
+      </picture>
+    </li>
+  </ul>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-930 {
+      .cs-card-group {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .cs-item {
+        width: 100%;
+        text-align: center;
+        list-style: none;
+        margin: 0;
+        padding: calc(64 / 16 * 1rem) calc(32 / 16 * 1rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &:hover {
+          .cs-background {
+            &:before {
+              opacity: 0.96;
+            }
+          }
+        }
+      }
+
+      .cs-letter {
+        font-size: calc(92 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin: 0 0 calc(20 / 16 * 1rem) 0;
+        color: var(--primary);
+      }
+
+      .cs-h2 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 3vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: bold;
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        max-width: calc(300 / 16 * 1rem);
+        margin: 0 0 calc(32 / 16 * 1rem) 0;
+        padding: 0;
+        color: #f7f7f7;
+      }
+
+      .cs-link {
+        text-decoration: none;
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        color: var(--primary);
+        position: relative;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #fff;
+        }
+
+        &:before {
+          /* underline */
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: currentColor;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          bottom: calc(0 / 16 * 1rem);
+          left: 0;
+        }
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        &:before {
+          /* background color overlay */
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 100%;
+          background: #1a1a1a;
+          opacity: 0.8;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          transition: opacity 0.3s;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes img tag act as a background image */
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 666px */
+  @media only screen and (min-width: 41.625rem) {
+    #services-930 {
+      .cs-item {
+        width: 50%;
+      }
+    }
+  }
+
+  /* Large Desktop 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #services-930 {
+      .cs-item {
+        width: 25%;
+      }
+    }
+  }
+</style>

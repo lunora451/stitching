@@ -1,0 +1,264 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Side By Side                 --><!-- ============================================ -->
+<section id="sbs-511">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Who We Are</span>
+      <h2 class="cs-title">
+        Bringing <span class="cs-color">Your Ideas</span> and Innovations to Life
+      </h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+        commodi et tempore sed vel explicabo maiores, perspiciatis saepe
+        pariatur, repellendus illum iure, totam suscipit quidem perferendis
+        vitae ullam repudiandae nemo?
+      </p>
+      <a href="" class="cs-button-solid">Read More</a>
+    </div>
+    <div class="cs-image-group">
+      <!--Large Image-->
+      <picture class="cs-picture cs-picture-large">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/lab1-m.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/lab1.jpg"
+        />
+        <img
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/lab1.jpg"
+          alt="lab"
+          width="334"
+          height="380"
+        />
+      </picture>
+      <!--Small Image-->
+      <picture class="cs-picture cs-picture-small">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/lab2.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/lab2.jpg"
+        />
+        <img
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/lab2.jpg"
+          alt="lab"
+          width="183"
+          height="158"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-511 {
+      padding: var(--sectionPadding);
+
+      @keyframes floatAnimation {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-0.6em);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes floatAnimation2 {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-1em);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(550 / 16 * 1em);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(542 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-color {
+        color: var(--secondary);
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-image-group {
+        /* this is how we can scale entire groups using ems.  Font size is tied to the view width, so as the screen gets bigger, so does the font size, and this scales up and down the elements with em values.  Then it stops growing once the font size reaches the defined value of 1em (16px which is default on the html element). Font size changes at desktop */
+        font-size: min(2.35vw, 0.8em);
+        /* all values are done in ems, not rems, so we can scale the group with a font size min/max equation */
+        width: calc(567 / 16 * 1em);
+        height: calc(604 / 16 * 1em);
+        /* pushes up by the same value the blue box is absolutely positioned up.  This makes sure the space above the section is consistent and matches all other surrounding sections spacing top and bottom */
+        margin-top: calc(62 / 16 * 1em);
+        position: relative;
+        /* pushes it to the top in the first position */
+        order: -1;
+        /* pushed half the distance that the blue box is positioned left (-62px).  This is so it can be centered in the container and align with the content below it. */
+        transform: translateX(calc(31 / 16 * 1em));
+
+        &:before {
+          /* blue box */
+          content: "";
+          width: calc(186 / 16 * 1em);
+          height: calc(161 / 16 * 1em);
+          background: var(--primary);
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: calc(-62 / 16 * 1em);
+          left: calc(-62 / 16 * 1em);
+          animation-name: floatAnimation;
+          animation-duration: 6s;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+          animation-iteration-count: infinite;
+        }
+      }
+
+      .cs-picture {
+        display: block;
+        position: absolute;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* makes it act like a background image */
+          object-fit: cover;
+        }
+      }
+
+      .cs-picture-large {
+        width: calc(476 / 16 * 1em);
+        height: calc(542 / 16 * 1em);
+        top: 0;
+        left: 0;
+      }
+
+      .cs-picture-small {
+        width: calc(260 / 16 * 1em);
+        height: calc(225 / 16 * 1em);
+        border: calc(10 / 16 * 1em) solid #fff;
+        background-color: #fff;
+        bottom: 0;
+        right: 0;
+        animation-name: floatAnimation2;
+        animation-duration: 20s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #sbs-511 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .cs-content {
+        width: 51%;
+      }
+
+      .cs-image-group {
+        font-size: min(1.1vw, 1em);
+        margin-left: calc(62 / 16 * 1em);
+      }
+    }
+  }
+</style>

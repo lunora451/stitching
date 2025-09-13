@@ -1,0 +1,187 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Side By Side                 --><!-- ============================================ -->
+<section id="sbs-90">
+  <div class="cs-container">
+    <!-- Left Image Section -->
+    <picture class="cs-picture">
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/city.jpg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/city.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/city.jpg"
+        alt="city"
+        width="347"
+        height="604"
+        aria-hidden="true"
+      />
+    </picture>
+    <!-- Right Content Section-->
+    <div class="cs-content">
+      <span class="cs-topper">What We Do</span>
+      <h2 class="cs-title">Business Estate & Building</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed arcu erat
+        mattis adipiscing eu. Integer cras lorem pharetra elit fames. Donec
+        pulvinar cras felis felis enim. Commodo, vitae euismod erat aenean
+        elementum massa.
+      </p>
+      <a
+        class="cs-button-solid"
+        aria-label="read more about our services"
+        href="">Read More</a
+      >
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---        Side By Side        -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-90 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        max-width: calc(562 / 16 * 1rem);
+        margin-bottom: calc(16 / 16 * 1rem);
+
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-picture {
+        width: 90%;
+        /* pushes down the by the same amount as the yellow circle overflows the container */
+        /* 40px -88px */
+        margin: 0 clamp(2.5rem, 5.9vw + 1rem, 5.5rem) calc(44 / 16 * 1rem) 0;
+        position: relative;
+        display: block;
+        /* width divided by height */
+        aspect-ratio: 288/220;
+
+        &:before {
+          /* yellow circle */
+          content: "";
+          width: calc(217 / 16 * 1rem);
+          height: calc(217 / 16 * 1rem);
+          background: var(--primaryLight);
+          opacity: 1;
+          border-radius: 50%;
+          position: absolute;
+          display: block;
+          bottom: calc(-44 / 16 * 1rem);
+          /* wrapped in a clamp so we can have a negative clamp */
+          right: calc(clamp(2.5rem, 5.9vw + 1rem, 5.5rem) * -1);
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbs-90 {
+      overflow: visible;
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        justify-content: space-between;
+        align-items: center;
+        /* set flexbox back to the row orientation */
+        flex-direction: row;
+      }
+
+      .cs-picture {
+        /* 300px - 455px */
+        width: clamp(18.75rem, 42.5vw, 28.4375rem);
+        height: calc(282 / 16 * 1rem);
+        /* prevent flexbox from squishing it */
+        flex: none;
+      }
+    }
+  }
+</style>

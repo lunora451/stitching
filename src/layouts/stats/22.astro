@@ -1,0 +1,262 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Timeline                    --><!-- ============================================ -->
+<section id="timeline-504">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex">
+        <span class="cs-topper">Better Process</span>
+        <h2 class="cs-title">
+          The Process of Working <span class="cs-color">With Us</span>
+        </h2>
+      </div>
+      <p class="cs-text">
+        Dapibus ultrices in iaculis nunc sed augue lacus viverra vitae. Vehicula
+        ipsum a arcu cursus vitae congue mauris. Enim facilisis gravida neque
+        convallis a cras
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <h3 class="cs-h3">Lorem ipsum dolor sit amet consectetur</h3>
+        <p class="cs-item-text">
+          In arcu cursus euismod quis viverra nibh cras pulvinar mattis. Cras
+          adipiscing enim eu turpis
+        </p>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Lorem ipsum dolor sit amet consectetur</h3>
+        <p class="cs-item-text">
+          In arcu cursus euismod quis viverra nibh cras pulvinar mattis. Cras
+          adipiscing enim eu turpis
+        </p>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Lorem ipsum dolor sit amet consectetur</h3>
+        <p class="cs-item-text">
+          In arcu cursus euismod quis viverra nibh cras pulvinar mattis. Cras
+          adipiscing enim eu turpis
+        </p>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Lorem ipsum dolor sit amet consectetur</h3>
+        <p class="cs-item-text">
+          In arcu cursus euismod quis viverra nibh cras pulvinar mattis. Cras
+          adipiscing enim eu turpis
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Timeline          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #timeline-504 {
+      padding: var(--sectionPadding);
+      background-color: var(--primary);
+      /* clips the white line through the bullets */
+      overflow: hidden;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-topper,
+      .cs-title {
+        max-width: 18ch;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-text {
+        max-width: calc(522 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+      }
+
+      .cs-color {
+        color: var(--secondary);
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        /* changes at tablet */
+        gap: calc(32 / 16 * 1rem);
+        position: relative;
+        &:before {
+          /* white line through the bullets */
+          content: "";
+          width: 1px;
+          background: #b4b2c7;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          /* send it way down to reach the bottom of the section, and have some overlap so if you add content and the ul gets longer, it will still be at the bottom */
+          bottom: calc(-300 / 16 * 1rem);
+          /* half the width of the bullet */
+          left: calc(10 / 16 * 1rem);
+        }
+      }
+
+      .cs-item {
+        width: 100%;
+        max-width: calc(400 / 16 * 1rem);
+        list-style: none;
+        padding: 0 0 0 calc(55 / 16 * 1rem);
+        position: relative;
+        &:before {
+          /* bullet circle */
+          content: "";
+          width: calc(20 / 16 * 1rem);
+          height: calc(20 / 16 * 1rem);
+          background: var(--secondary);
+          border-radius: 50%;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-h3 {
+        /* 16px - 25px */
+        font-size: clamp(1rem, 2.5vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        /* changes to 100% at tablet */
+        width: 80%;
+        margin: 0;
+        margin-bottom: calc(20 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+        position: relative;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #timeline-504 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+
+      .cs-title {
+        margin: 0;
+      }
+
+      .cs-text {
+        width: 50%;
+        margin: 0;
+      }
+
+      .cs-card-group {
+        flex-direction: row;
+        /* 16px - 20px */
+        gap: clamp(1rem, 1.5vw, 1.25rem);
+
+        &:before {
+          /* make wide enough to cover large screens */
+          width: calc(4000 / 16 * 1rem);
+          height: 1px;
+          top: calc(10 / 16 * 1rem);
+          /* these next two properties center the line in the UL */
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      .cs-item {
+        padding: 0;
+        z-index: 1;
+
+        &:hover {
+          &:after {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
+        &::before {
+          /* 56px - 72px */
+          margin-bottom: clamp(3.5rem, 7vw, 4.5rem);
+          position: relative;
+          top: auto;
+          left: auto;
+        }
+
+        &:after {
+          /* Hover bullet */
+          content: "";
+          width: calc(40 / 16 * 1rem);
+          height: calc(40 / 16 * 1rem);
+          background: var(--primary);
+          border: 1px solid var(--secondary);
+          border-radius: 50%;
+          box-sizing: border-box;
+          opacity: 0;
+          position: absolute;
+          display: block;
+          top: calc(-10 / 16 * 1rem);
+          left: calc(-10 / 16 * 1rem);
+          z-index: -1;
+          transform: scale(0);
+          transition:
+            width 0.3s,
+            height 0.3s,
+            transform 0.4s,
+            opacity 0.3s;
+        }
+      }
+
+      .cs-h3 {
+        width: 100%;
+      }
+    }
+  }
+</style>

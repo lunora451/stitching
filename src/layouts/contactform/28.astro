@@ -1,0 +1,482 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Contact                    --><!-- ============================================ -->
+<section id="contact-401">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Contact Us</span>
+      <h2 class="cs-title">Get In Touch</h2>
+      <!--Form-->
+      <form class="cs-form" id="cs-form-401" name="Contact Form" method="post">
+        <label class="cs-label">
+          Name
+          <input
+            class="cs-input"
+            required
+            type="text"
+            id="name-401"
+            name="name"
+            placeholder="Name"
+          />
+        </label>
+        <label class="cs-label cs-email">
+          Email
+          <input
+            class="cs-input"
+            required
+            type="text"
+            id="email-401"
+            name="email"
+            placeholder="Email"
+          />
+        </label>
+        <label class="cs-label cs-phone">
+          Phone
+          <input
+            class="cs-input"
+            required
+            type="text"
+            id="phone-401"
+            name="phone"
+            placeholder="Phone"
+          />
+        </label>
+        <label class="cs-label">
+          Message
+          <textarea
+            class="cs-input cs-textarea"
+            required
+            name="Message"
+            id="message-401"
+            placeholder="Write message..."></textarea>
+        </label>
+        <button class="cs-button-solid cs-submit" type="submit"
+          >Make an Appointment</button
+        >
+      </form>
+    </div>
+    <div class="cs-right">
+      <!-- Create new map image in figma and place pin where you want it and save the group as an image and place here-->
+      <picture class="cs-map">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/map+pin.png"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/map+pin.png"
+        />
+        <img
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/map+pin.png"
+          alt="map"
+          width="610"
+          height="425"
+        />
+      </picture>
+      <ul class="cs-contact-group">
+        <li class="cs-item">
+          <span class="cs-header">Contact Information</span>
+        </li>
+        <li class="cs-item">
+          <img
+            class="cs-icon"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/clock-grey2.svg"
+            alt="icon"
+            width="24"
+            height="24"
+          />
+          <span class="cs-hours">Monday To Friday (9am - 5pm)</span>
+        </li>
+        <li class="cs-item">
+          <img
+            class="cs-icon"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone-grey2.svg"
+            alt="icon"
+            width="24"
+            height="24"
+          />
+          <a href="tel:555-456 7899" class="cs-link">(555) 456 7898</a>
+        </li>
+        <li class="cs-item">
+          <img
+            class="cs-icon"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/mail-grey2.svg"
+            alt="icon"
+            width="24"
+            height="24"
+          />
+          <a href="mailto:info@example.com" class="cs-link">info@example.com</a>
+        </li>
+        <li class="cs-item">
+          <img
+            class="cs-icon"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin-grey2.svg"
+            alt="icon"
+            width="24"
+            height="24"
+          />
+          <a href="" class="cs-link">121 King St, Melbourne VIC, Australia</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background" aria-hidden="true">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/waves-svg-m.svg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/waves-svg.svg"
+    />
+    <img
+      decoding="async"
+      src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/waves-svg.svg"
+      alt="map"
+      width="610"
+      height="425"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #contact-401 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+      background-color: #1a1a1a;
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes img tag act as a background image */
+          object-fit: cover;
+        }
+      }
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: calc(52 / 16 * 1rem);
+      }
+
+      .cs-content {
+        text-align: left;
+      }
+
+      .cs-title {
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-form {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-label {
+        font-size: calc(14 / 16 * 1rem);
+        width: 100%;
+        color: var(--bodyTextColorWhite);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: calc(4 / 16 * 1rem);
+      }
+
+      .cs-input {
+        font-size: calc(16 / 16 * 1rem);
+        width: 100%;
+        height: calc(56 / 16 * 1rem);
+        padding: 0;
+        padding-left: calc(24 / 16 * 1rem);
+        border-radius: calc(8 / 16 * 1rem);
+        color: var(--headerColor);
+        background-color: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(15px);
+        border: none;
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+        &::placeholder {
+          color: var(--bodyTextColorWhite);
+          opacity: 0.6;
+        }
+      }
+
+      .cs-textarea {
+        min-height: calc(120 / 16 * 1rem);
+        padding-top: calc(24 / 16 * 1rem);
+        margin-bottom: calc(12 / 16 * 1rem);
+        font-family: inherit;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-submit {
+        text-transform: uppercase;
+        width: calc(283 / 16 * 1rem);
+        background-color: var(--primary);
+        color: var(--headerColor);
+        border: none;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+
+      .cs-right {
+        max-width: calc(630 / 16 * 1rem);
+        width: 100%;
+        /* 16px - 24px */
+        padding: clamp(1rem, 2.3vw, 1.5rem);
+        border-radius: calc(24 / 16 * 1rem);
+        background-color: #484848;
+        display: flex;
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: calc(24 / 16 * 1rem);
+      }
+
+      .cs-map {
+        width: 100%;
+        /* 300px - 425px */
+        height: clamp(18.75rem, 63.4vw, 26.5625rem);
+        border-radius: calc(24 / 16 * 1rem);
+        /* clips the corners of the img tag */
+        overflow: hidden;
+        position: relative;
+        display: block;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .cs-contact-group {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: calc(8 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-header {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 3vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin-right: auto;
+        margin-bottom: calc(16 / 16 * 1rem);
+        color: #fff;
+      }
+
+      .cs-icon {
+        width: calc(24 / 16 * 1rem);
+        height: auto;
+      }
+
+      .cs-link,
+      .cs-hours {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-decoration: none;
+        color: var(--bodyTextColorWhite);
+        transition: color 0.3s;
+      }
+
+      .cs-link {
+        &:hover {
+          color: var(--secondaryLight);
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #contact-401 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+        /* 44px - 80px */
+        gap: clamp(2.75rem, 7vw, 5rem);
+      }
+
+      .cs-content {
+        max-width: calc(522 / 16 * 1rem);
+      }
+
+      .cs-topper,
+      .cs-title {
+        text-align: left;
+        margin-left: 0;
+      }
+
+      .cs-right {
+        min-width: calc(360 / 16 * 1rem);
+        width: 100%;
+      }
+
+      .cs-map {
+        /* 250px - 400px */
+        height: clamp(15.625rem, 30vw, 25rem);
+      }
+
+      .cs-submit {
+        margin-left: 0;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #contact-401 {
+      .cs-email,
+      .cs-phone {
+        width: 48%;
+      }
+
+      .cs-right {
+        width: 51.6%;
+        /* prevent flexbox from squishing it */
+        flex: none;
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 64rem) {
+    #contact-401 {
+      .cs-contact-group {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: calc(0 / 16 * 1rem);
+        row-gap: calc(8 / 16 * 1rem);
+      }
+
+      .cs-item {
+        width: calc(260 / 16 * 1rem);
+        justify-content: flex-start;
+        &:nth-of-type(1) {
+          width: 100%;
+          text-align: left;
+        }
+
+        &:nth-of-type(3) {
+          /* changing the order of our list so they are arranged like in the design */
+          order: 4;
+        }
+
+        &:nth-of-type(4) {
+          order: 2;
+        }
+
+        &:nth-of-type(5) {
+          order: 5;
+        }
+
+        &:nth-of-type(4),
+        &:nth-of-type(5) {
+          width: calc(306 / 16 * 1rem);
+        }
+      }
+    }
+  }
+</style>

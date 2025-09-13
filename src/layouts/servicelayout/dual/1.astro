@@ -1,0 +1,301 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Services                  --><!-- ============================================ -->
+<section id="services-2230">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">What We Do</span>
+      <h2 class="cs-title">Our Special Services for You</h2>
+      <p class="cs-text">
+        Authentic wedding photography emphasises candid shots that capture real
+        emotions, reactions, and interactions among the couple, their families,
+        and guests.
+      </p>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <picture class="cs-wrapper">
+            <img
+              class="cs-icon"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/wedding-service1.svg"
+              alt="icon"
+              height="33"
+              width="33"
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
+            />
+          </picture>
+          <h3 class="cs-h3">Pre-Wedding</h3>
+        </li>
+        <li class="cs-item">
+          <picture class="cs-wrapper">
+            <img
+              class="cs-icon"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/wedding-service2.svg"
+              alt="icon"
+              height="33"
+              width="33"
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
+            />
+          </picture>
+          <h3 class="cs-h3">Wedding</h3>
+        </li>
+        <li class="cs-item">
+          <picture class="cs-wrapper">
+            <img
+              class="cs-icon"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/wedding-service3.svg"
+              alt="icon"
+              height="33"
+              width="33"
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
+            />
+          </picture>
+          <h3 class="cs-h3">Portrait</h3>
+        </li>
+        <li class="cs-item">
+          <picture class="cs-wrapper">
+            <img
+              class="cs-icon"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/wedding-service4.svg"
+              alt="icon"
+              height="33"
+              width="33"
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
+            />
+          </picture>
+          <h3 class="cs-h3">Fashion</h3>
+        </li>
+        <li class="cs-item">
+          <picture class="cs-wrapper">
+            <img
+              class="cs-icon"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/wedding-service5.svg"
+              alt="icon"
+              height="33"
+              width="33"
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
+            />
+          </picture>
+          <h3 class="cs-h3">Maternity</h3>
+        </li>
+        <li class="cs-item">
+          <picture class="cs-wrapper">
+            <img
+              class="cs-icon"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/wedding-service6.svg"
+              alt="icon"
+              height="33"
+              width="33"
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
+            />
+          </picture>
+          <h3 class="cs-h3">Birthday</h3>
+        </li>
+      </ul>
+    </div>
+    <picture class="cs-picture">
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding1.jpg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding1.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding1.jpg"
+        alt="wedding"
+        width="742"
+        height="640"
+      />
+    </picture>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-2230 {
+      padding: var(--sectionPadding);
+      background-color: #f7f7f7;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1em);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: center;
+      }
+
+      .cs-content {
+        text-align: center;
+        width: auto;
+        max-width: calc(1160 / 16 * 1rem);
+        padding: calc(24 / 16 * 1rem) calc(16 / 16 * 1rem) calc(120 / 16 * 1rem);
+        /* clips the pseudo element */
+        overflow: hidden;
+        border: 1px solid var(--primary);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+        position: relative;
+      }
+
+      .cs-topper {
+        color: var(--secondary);
+      }
+
+      .cs-card-group {
+        list-style: none;
+        width: 100%;
+        /* 48px - 64px */
+        margin: clamp(3rem, 6vw, 4rem) 0 0;
+        padding: 0;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        /* 16px - 20px */
+        column-gap: clamp(1rem, 2vw, 1.25rem);
+        /* 32px - 40px */
+        row-gap: clamp(2rem, 4vw, 2.5rem);
+      }
+
+      .cs-item {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* 16px - 24px */
+        gap: clamp(1rem, 2vw, 1.5rem);
+
+        &:hover {
+          .cs-icon {
+            filter: invert(1) brightness(1000%);
+          }
+
+          .cs-wrapper {
+            background-color: var(--primary);
+            border-color: var(--primary);
+          }
+        }
+      }
+
+      .cs-wrapper {
+        width: fit-content;
+        padding: calc(30 / 16 * 1rem);
+        border: 1px solid #e8e8e8;
+        border-radius: calc(100 / 16 * 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition:
+          background-color 0.3s,
+          border-color 0.3s;
+      }
+
+      .cs-icon {
+        width: calc(32 / 16 * 1rem);
+        height: calc(32 / 16 * 1rem);
+        display: block;
+      }
+
+      .cs-h3 {
+        font-size: calc(20 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-align: inherit;
+        margin: 0;
+        color: var(--headerColor);
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: calc(505 / 16 * 1rem);
+        margin: calc(-60 / 16 * 1rem) 0 0;
+        /* clips the img corners */
+        overflow: hidden;
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          /* adding padding to the img allows us to offset the sides of the image */
+          padding: 0 calc(24 / 16 * 1rem);
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-2230 {
+      .cs-container {
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+      }
+
+      .cs-content {
+        text-align: left;
+        width: 80%;
+        margin: 0;
+        /* 32px - 80px */
+        padding: clamp(2rem, 6vw, 5rem);
+        /* 120px - 300px */
+        padding-right: clamp(7.5rem, 21vw, 18.75rem);
+        align-items: flex-start;
+      }
+
+      .cs-card-group {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .cs-picture {
+        /* 224px - 513px */
+        width: clamp(14rem, 36vw, 32.0625rem);
+        height: 100%;
+        position: absolute;
+        top: calc(60 / 16 * 1rem);
+        right: 0;
+        bottom: 0;
+
+        img {
+          /* 32px - 100px */
+          padding: clamp(2rem, 7vw, 6.25rem) 0;
+        }
+      }
+    }
+  }
+</style>

@@ -1,0 +1,308 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Hero                      --><!-- ============================================ -->
+<section id="hero-329">
+  <div class="cs-container">
+    <div class="cs-flex-group">
+      <h1 class="cs-title">
+        <span class="cs-accent">Professional</span> Cleaning Service for Your Home
+        And Other Area
+      </h1>
+      <p class="cs-text">
+        We are committed to the best quality in the field of industrial
+        cleaning, home and garden cleaning.
+      </p>
+      <div class="cs-button-group">
+        <a href="" class="cs-button-solid">Get Started</a>
+        <a href="" class="cs-button-transparent">
+          <picture class="cs-picture">
+            <img
+              class="cs-img"
+              decoding="async"
+              src="https://csimg.nyc3.digitaloceanspaces.com/chevron-right.svg"
+              alt="icon"
+              width="12"
+              height="12"
+              aria-hidden="true"
+            />
+          </picture>
+          See Prices
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Image -->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.digitaloceanspaces.com/cleaner-m.jpg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.digitaloceanspaces.com/cleaner.jpg"
+    />
+    <img
+      decoding="async"
+      src="https://csimg.nyc3.digitaloceanspaces.com/cleaner.jpg"
+      alt="cleaner"
+      width="2250"
+      height="1500"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-329 {
+      /* Centers button */
+      text-align: center;
+      /* changes on tablet */
+      padding: clamp(9rem, 25.95vw, 17.5rem) calc(16 / 16 * 1rem);
+      /* 150px - 160px */
+      padding-bottom: clamp(9.375rem, 12.5vw, 10rem);
+      position: relative;
+      z-index: 1;
+      /* prevents overflow from the lines extending past the screen width */
+      overflow: hidden;
+
+      .cs-background {
+        /* Background Image */
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+
+        &:before {
+          /* White Color Overlay */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: #fff;
+          opacity: 0.85;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          /* prevents the cursor from interacting with it */
+          pointer-events: none;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes image act like a background-image */
+          object-fit: cover;
+          /* places the top of the image at the top of the parent */
+          object-position: top;
+        }
+      }
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        position: relative;
+      }
+
+      .cs-flex-group {
+        /* 456px - 626px */
+        max-width: clamp(28.5rem, 62vw, 39.125rem);
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+      }
+
+      .cs-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: left;
+        width: 100%;
+        margin: 0 auto calc(16 / 16 * 1rem);
+        color: var(--headerColor);
+        position: relative;
+      }
+
+      .cs-accent {
+        color: var(--primaryLight);
+      }
+
+      .cs-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 1.95vw, 1.25rem);
+        line-height: 1.5em;
+        text-align: left;
+        width: 100%;
+        max-width: calc(442 / 16 * 1rem);
+        /* 32px - 40px */
+        margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
+        /* 24px - 40px */
+        margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+        color: var(--bodyTextColor);
+      }
+
+      .cs-button-group {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        width: calc(180 / 16 * 1rem);
+        text-decoration: none;
+        font-weight: 700;
+        border-radius: calc(8 / 16 * 1rem);
+        /* clips corners of the before element */
+        overflow: hidden;
+        margin: 0;
+        color: #fff;
+        padding: 0;
+        background-color: var(--secondary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-button-transparent {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        width: calc(180 / 16 * 1rem);
+        /* 46px - 56px */
+        height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        margin: 0;
+        color: var(--primary);
+        padding: 0;
+        background-color: transparent;
+        box-sizing: border-box;
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          /* white hover box */
+          content: "";
+          /* 46px - 56px */
+          width: clamp(2.875rem, 5.5vw, 3.5rem);
+          background: #fff;
+          border-radius: calc(28 / 16 * 1rem);
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0px;
+          bottom: 0px;
+          left: 0px;
+          z-index: -1;
+          transition:
+            width 0.3s,
+            box-shadow 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          }
+        }
+      }
+
+      .cs-picture {
+        /* 46px - 56px */
+        width: clamp(2.875rem, 5.5vw, 3.5rem);
+        height: clamp(2.875rem, 5.5vw, 3.5rem);
+        margin-right: calc(8 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: 50%;
+        border: 6px solid #fff;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cs-image {
+        width: 12/16rem;
+        height: auto;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-329 {
+      .cs-background {
+        &:before {
+          width: 80%;
+          background: -moz-linear-gradient(
+            left,
+            rgba(247, 247, 247, 1) 47%,
+            rgba(249, 249, 249, 1) 59%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          background: -webkit-linear-gradient(
+            left,
+            rgba(247, 247, 247, 1) 47%,
+            rgba(249, 249, 249, 1) 59%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          background: linear-gradient(
+            to right,
+            rgba(247, 247, 247, 1) 47%,
+            rgba(249, 249, 249, 1) 59%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          opacity: 1;
+        }
+      }
+    }
+  }
+</style>

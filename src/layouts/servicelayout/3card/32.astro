@@ -1,0 +1,252 @@
+---
+title: "Page 32";
+---
+
+<!-- ============================================ --><!--                  Services                    --><!-- ============================================ -->
+<section id="services-961">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our Services</span>
+      <h2 class="cs-title">Providing Our Customers With Quality Services</h2>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <a class="cs-item-link" href="">
+          <img
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/heart-gold.svg"
+            alt=""
+            width="40"
+            height="40"
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+          />
+          <h3 class="cs-h3">We Love Your Hair</h3>
+          <p class="cs-item-text">
+            We are well equipped with years of hair know-how, and ready to
+            create your best look with natural products. Hair is our passion.
+          </p>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-item-link">
+          <img
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/trees-gold.svg"
+            alt=""
+            width="40"
+            height="40"
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+          />
+          <h3 class="cs-h3">Only Natural Products</h3>
+          <p class="cs-item-text">
+            Full range of shipping disputes such as charter party disputes,
+            demurrage claims, purchase agreements, trade finance, carriage and
+            claims.
+          </p>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-item-link">
+          <img
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/flower-gold.svg"
+            alt=""
+            width="40"
+            height="40"
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+          />
+          <h3 class="cs-h3">Professional Stylists</h3>
+          <p class="cs-item-text">
+            Full range of shipping disputes such as charter party disputes,
+            demurrage claims, purchase agreements, trade finance, carriage and
+            claims.
+          </p>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/salon2.jpg"
+    />
+    <!--Tablet and above Image-->
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/salon2.jpg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/salon2.jpg"
+      alt="salon"
+      width="842"
+      height="643"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-961 {
+      padding: var(--sectionPadding);
+      background-color: #f7f7f7;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title {
+        margin: 0;
+        max-width: 20ch;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* 16px - 20px */
+        gap: clamp(1rem, 1.5vw, 1.25rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        text-align: left;
+        width: 100%;
+        /* 24px - 32px */
+        padding: clamp(1.5rem, 2.5vw, 2rem);
+        background-color: #fff;
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+        position: relative;
+        z-index: 1;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+
+        &:hover {
+          transform: translateY(-0.5rem);
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+      }
+
+      .cs-item-link {
+        text-decoration: none;
+      }
+
+      .cs-icon {
+        width: calc(48 / 16 * 1rem);
+        height: auto;
+        margin-bottom: calc(20 / 16 * 1rem);
+        display: block;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        line-height: 1.2em;
+        margin: 0;
+        margin-bottom: calc(12 / 16 * 1rem);
+        color: var(--headerColor);
+        font-weight: bold;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-background {
+        width: 100%;
+        height: calc(355 / 16 * 1rem);
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes img tag act as a background image */
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-961 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-content {
+        text-align: left;
+        align-items: flex-start;
+      }
+
+      .cs-card-group {
+        display: flex;
+        justify-content: center;
+        /* makes sure every box "stretches" to be the same height as the tallest box */
+        align-items: stretch;
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
+
+      .cs-item {
+        width: clamp(31.85%, 30.5vw, 32.28%);
+      }
+
+      .cs-background {
+        width: 50vw;
+        height: 100%;
+        /* 64px - 120px */
+        margin-left: clamp(4rem, 10vw, 7.5rem);
+        left: 50%;
+      }
+    }
+  }
+</style>

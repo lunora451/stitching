@@ -1,0 +1,405 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Hero                      --><!-- ============================================ -->
+<section id="hero-2152">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Perfect Photography at Your Doorstep</span>
+      <h2 class="cs-title">
+        Your Wedding Memory will be More Memorable with Our Photography
+      </h2>
+      <p class="cs-text">
+        Choose from our range of photobooth options, including open-air and
+        enclosed booths, to suit your wedding theme and style.
+      </p>
+      <a href="" class="cs-button-solid">Book An Appointment</a>
+      <img
+        class="cs-graphic"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/leaf5.png"
+        alt="graphic"
+        width="280"
+        height="350"
+        aria-hidden="true"
+      />
+    </div>
+    <picture class="cs-background">
+      <!--Mobile Image-->
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/wedding-pose.jpeg"
+      />
+      <!--Tablet and above Image-->
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/wedding-pose.jpeg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/wedding-pose.jpeg"
+        alt="icon"
+        width="960"
+        height="857"
+      />
+    </picture>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-2152">
+  <div class="cs-container">
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <div class="cs-flex">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/lily-flower.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="32"
+            height="32"
+            aria-hidden="true"
+          />
+          <h3 class="cs-h3">The Ceremony</h3>
+        </div>
+        <p class="cs-item-text">
+          Choose from our range of Photo booth options, including open-air to
+          suit your wedding theme and style.
+        </p>
+      </li>
+      <li class="cs-item">
+        <div class="cs-flex">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/knife-fork.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="32"
+            height="32"
+            aria-hidden="true"
+          />
+          <h3 class="cs-h3">Lunch Together</h3>
+        </div>
+        <p class="cs-item-text">
+          Choose from our range of Photo booth options, including open-air to
+          suit your wedding theme and style.
+        </p>
+      </li>
+      <li class="cs-item">
+        <div class="cs-flex">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/camera-shutter.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="32"
+            height="32"
+            aria-hidden="true"
+          />
+          <h3 class="cs-h3">Photo Booth</h3>
+        </div>
+        <p class="cs-item-text">
+          Choose from our range of Photo booth options, including open-air to
+          suit your wedding theme and style.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---            Hero            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-2152 {
+      /* 160px - 200px - top leaving extra space for the navigation */
+      padding: clamp(10rem, 25.95vw, 12.5rem) 0 0 0;
+      background-color: #f6ebe3;
+      overflow: hidden;
+      position: relative;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1720 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 100px */
+        gap: clamp(3rem, 6vw, 6.25rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        /* 16px - 100px left & right */
+        padding: 0 clamp(1rem, 2vw, 6.25rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        max-width: 30ch;
+      }
+
+      .cs-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 1.5vw, 1.25rem);
+        max-width: 65ch;
+        margin: 0 0 calc(32 / 16 * 1rem) 0;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-align: center;
+        text-decoration: none;
+        min-width: calc(200 / 16 * 1rem);
+        margin: 0;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        /* 32px - 48px */
+        padding: 0 clamp(2rem, 4vw, 3rem);
+        background-color: var(--primary);
+        color: var(--bodyTextColorWhite);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #ffffff;
+          opacity: 1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: var(--headerColor);
+
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100vw;
+        max-height: calc(476 / 16 * 1rem);
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-graphic {
+        /* 200px - 280px */
+        width: clamp(12.5rem, 25vw, 17.5rem);
+        height: auto;
+        display: none;
+        position: absolute;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-2152 {
+      .cs-graphic {
+        display: block;
+        bottom: calc(clamp(3rem, 6vw, 6.25rem) * -1);
+        left: 0;
+        z-index: 0;
+      }
+
+      .cs-content {
+        /* 60px - 100px */
+        padding-bottom: clamp(3.75rem, 7.82vw, 6.25rem);
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #hero-2152 {
+      /* 120px - 250px top */
+      /* 60px - 200px  bottom */
+      padding: clamp(7.5rem, 23.82vw, 15.625rem) calc(16 / 16 * 1rem)
+        clamp(3.75rem, 15.82vw, 12.5rem) calc(16 / 16 * 1rem);
+
+      .cs-container {
+        flex-direction: row;
+      }
+
+      .cs-content {
+        /* removed padding and put it on the section */
+        width: 55%;
+        /* 16px - 100px */
+        padding: 0 clamp(1rem, 2vw, 6.25rem);
+      }
+
+      .cs-background {
+        width: 42%;
+        height: auto;
+        max-height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .cs-graphic {
+        bottom: calc(clamp(3.75rem, 15.82vw, 12.5rem) * -1);
+      }
+    }
+  }
+
+  /* Large Desktop - 1440px */
+  @media only screen and (min-width: 90rem) {
+    #hero-2152 {
+      .cs-background {
+        width: 50%;
+      }
+
+      .cs-content {
+        width: 50%;
+      }
+
+      .cs-graphic {
+        left: calc(-70 / 16 * 1rem);
+      }
+    }
+  }
+
+  /*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-2152 {
+      padding: var(--sectionPadding);
+      background-color: #f7f7f7;
+      overflow: hidden;
+      position: relative;
+
+      .cs-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        max-width: calc(1720 / 16 * 1rem);
+        margin: 0;
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 32px - 60px */
+        row-gap: clamp(2rem, 4vw, 3.75rem);
+        position: relative;
+      }
+
+      .cs-item {
+        text-align: left;
+        list-style: none;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: calc(16 / 16 * 1rem);
+        grid-column: span 12;
+      }
+
+      .cs-flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: calc(8 / 16 * 1rem);
+      }
+
+      .cs-icon {
+        width: calc(32 / 16 * 1rem);
+        height: auto;
+        margin: 0;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2vw, 1.5625rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-align: inherit;
+        margin: 0;
+        color: var(--headerColor);
+        transition: color 0.3s;
+      }
+
+      .cs-item-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-2152 {
+      .cs-card-group {
+        /* 32px - 60px */
+        gap: clamp(2rem, 4vw, 3.75rem);
+      }
+
+      .cs-item {
+        grid-column: span 4;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,512 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Hero                      --><!-- ============================================ -->
+<section id="hero-996">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Stitch Restaurant</span>
+      <h1 class="cs-title">
+        <span class="cs-color">#1</span> Breakfast Restaurant in Oak Harbor
+      </h1>
+      <p class="cs-text">
+        Stitch Restaurant serves the best quality food templates for web
+        developers in the world. Our attention to detail and quality is second
+        to none and the customer service to match!
+      </p>
+      <div class="cs-button-box">
+        <a href="" class="cs-button-solid">Explore More</a>
+        <a href="" class="cs-button-transparent">Learn More</a>
+      </div>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/oyster.svg"
+            alt="icon"
+            width="60"
+            height="60"
+          />
+        </picture>
+        <h3 class="cs-h3">Seafood Special</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias?
+        </p>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/wine.svg"
+            alt="icon"
+            width="60"
+            height="60"
+          />
+        </picture>
+        <h3 class="cs-h3">Wine Bar</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias?
+        </p>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/bookmark.svg"
+            alt="icon"
+            width="60"
+            height="60"
+          />
+        </picture>
+        <h3 class="cs-h3">Package Options</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias?
+        </p>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/cake.svg"
+            alt="icon"
+            width="60"
+            height="60"
+          />
+        </picture>
+        <h3 class="cs-h3">Luxury Party</h3>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias?
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Background Image -->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/landing-m.jpg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/landing.jpg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/landing.jpg"
+      alt="restaurant"
+      width="1920"
+      height="1200"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-996 {
+      /* 200px - 300px - leaving extra space for the navigation */
+      padding: clamp(12.5rem, 25.95vw, 18.75rem) calc(16 / 16 * 1rem) 0;
+      padding-bottom: 0;
+      position: relative;
+      z-index: 1;
+      /* prevents overflow from the lines extending past the screen width */
+      overflow: hidden;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* 100px - 200px */
+        gap: clamp(6.25rem, 25vw, 12.5rem);
+      }
+
+      .cs-content {
+        width: 100%;
+        max-width: calc(955 / 16 * 1rem);
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        box-sizing: border-box;
+      }
+
+      .cs-topper {
+        /* 13px - 16px */
+        font-size: clamp(0.8125rem, 1.6vw, 1rem);
+        line-height: 1.2em;
+        white-space: nowrap;
+        text-transform: uppercase;
+        text-align: left;
+        letter-spacing: 0.1rem;
+        font-weight: 700;
+        width: 100%;
+        color: var(--bodyTextColorWhite);
+        margin-bottom: calc(28 / 16 * 1rem);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: calc(20 / 16 * 1rem);
+        position: relative;
+
+        &:after {
+          /* white line */
+          content: "";
+          width: 50%;
+          max-width: calc(120 / 16 * 1rem);
+          height: 1px;
+          background: currentColor;
+          opacity: 1;
+          position: relative;
+          display: block;
+        }
+      }
+
+      .cs-title {
+        /* 39px - 80px */
+        font-size: clamp(2.4375rem, 6.4vw, 5rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: left;
+        width: 100%;
+        max-width: 20ch;
+        margin: 0 0 calc(32 / 16 * 1rem) 0;
+        color: var(--bodyTextColorWhite);
+        position: relative;
+      }
+
+      .cs-color {
+        color: var(--primary);
+      }
+
+      .cs-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 1.95vw, 1.25rem);
+        line-height: 1.5em;
+        text-align: left;
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        margin: 0 0 calc(32 / 16 * 1rem) 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-button-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: calc(20 / 16 * 1rem);
+      }
+
+      .cs-button-solid {
+        text-align: center;
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        width: calc(180 / 16 * 1rem);
+        text-decoration: none;
+        font-weight: 700;
+        margin: 0;
+        color: #fff;
+        padding: 0;
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 0%;
+          background: #fff;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #1a1a1a;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-button-transparent {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        width: calc(180 / 16 * 1rem);
+        /* 46px - 56px */
+        height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        margin: 0;
+        color: #fff;
+        padding: 0;
+        background-color: transparent;
+        border: 1px solid var(--bodyTextColorWhite);
+        box-sizing: border-box;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        transition: color / 3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          background: #fff;
+          opacity: 1;
+          /* so it sits on top of the border */
+          top: -1px;
+          left: -1px;
+          right: -1px;
+          bottom: -1px;
+          z-index: -1;
+          transform-origin: left;
+          /* this is what creates the grow affect on hover */
+          transform: scaleX(0);
+          transition: transform 0.3s;
+        }
+
+        &:hover {
+          color: #1a1a1a;
+          &:before {
+            transform: scaleX(1);
+          }
+        }
+      }
+
+      .cs-card-group {
+        margin: 0;
+        padding: var(--sectionPadding);
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+        position: relative;
+
+        &:before {
+          /* glass blur background */
+          content: "";
+          width: 100vw;
+          height: 100%;
+          border-top: 2px solid rgba(255, 255, 255, 0.5);
+          background: rgba(26, 26, 26, 0.5);
+          -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      .cs-item {
+        width: 100%;
+        text-align: center;
+        list-style: none;
+        margin: 0;
+        padding: calc(24 / 16 * 1rem);
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        background-color: rgba(255, 255, 255, 0.06);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        grid-column: span 12;
+        grid-row: span 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        transition: border-color 0.3s;
+
+        &:before {
+          /* backgorund color */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background-color: #000;
+          opacity: 0;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: opacity 0.6s;
+        }
+
+        &:hover {
+          border-color: var(--primary);
+          &:before {
+            opacity: 1;
+          }
+        }
+
+        &:hover {
+          .cs-h3 {
+            color: var(--bodyTextColorWhite);
+          }
+          .cs-item-text {
+            color: var(--bodyTextColorWhite);
+            opacity: 0.9;
+          }
+          .cs-background {
+            opacity: 1;
+          }
+        }
+      }
+
+      .cs-icon-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cs-icon {
+        /* 36px - 60px */
+        width: clamp(2.25rem, 6vw, 4rem);
+        height: auto;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: bold;
+        margin: 0 0 calc(8 / 16 * 1rem) 0;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        max-width: calc(300 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+      }
+
+      .cs-background {
+        /* Background Image */
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+
+        &:before {
+          /* Black Color Overlay */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            41deg,
+            rgba(26, 26, 26, 0.9) 30%,
+            rgba(26, 26, 26, 0.3) 100%
+          );
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          /* prevents the cursor from interacting with it */
+          pointer-events: none;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes image act like a background-image */
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 600px */
+  @media only screen and (min-width: 37.5rem) {
+    #hero-996 {
+      .cs-card-group {
+        .cs-item {
+          grid-column: span 6;
+        }
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #hero-996 {
+      .cs-card-group {
+        .cs-item {
+          grid-column: span 3;
+        }
+      }
+    }
+  }
+
+  /* Large Desktop Parallax Effect - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #hero-996 {
+      background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/landing.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      /* creates parallax effect on background image */
+      background-attachment: fixed;
+      /* remove img tag so we can make parallax work */
+
+      .cs-background {
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+</style>

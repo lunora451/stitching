@@ -1,0 +1,146 @@
+---
+
+---
+
+<!-- ============================================ --><!--                     Quote                    --><!-- ============================================ -->
+<section id="quote-2141">
+  <div class="cs-container">
+    <div class="cs-content">
+      <img
+        class="cs-quote-icon"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/beige-quote.svg"
+        alt="quote"
+        width="222"
+        height="186"
+        aria-hidden="true"
+      />
+      <p class="cs-quote">
+        "We're not just photographers, we're dream weavers, transforming your
+        visions into tangible memories you'll cherish forever."
+      </p>
+      <span class="cs-name">Elisa Morgan</span>
+      <span class="cs-job">CEO of Stitchography</span>
+    </div>
+  </div>
+  <img
+    class="cs-flower cs-left"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/wedding-flower2.png"
+    alt="flower"
+    width="640"
+    height="324"
+    aria-hidden="true"
+  />
+  <img
+    class="cs-flower cs-right"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/wedding-flower1.png"
+    alt="flower"
+    width="640"
+    height="324"
+    aria-hidden="true"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Quote            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #quote-2141 {
+      /* 80px - 160px */
+      padding: clamp(5rem, 10vw, 10rem) calc(16 / 16 * 1rem);
+      background-color: #fbf5f1;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        margin-top: calc(48 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+      }
+
+      .cs-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .cs-quote-icon {
+        /* 120px - 220px */
+        width: clamp(7.5rem, 12vw, 13.75rem);
+        height: auto;
+        display: block;
+        position: absolute;
+        /* -48px - -96px */
+        top: calc(clamp(3rem, 8vw, 6rem) * -1);
+        z-index: -1;
+      }
+
+      .cs-quote {
+        /* 25px - 49px */
+        font-size: clamp(1.5625rem, 4.8vw, 3.0625rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: center;
+        max-width: 45ch;
+        /* 24px - 32px */
+        margin: 0 0 clamp(1.5rem, 3vw, 2rem);
+        color: var(--headerColor);
+      }
+
+      .cs-name {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        margin: 0 0 calc(8 / 16 * 1rem) 0;
+        color: var(--secondary);
+        display: block;
+      }
+
+      .cs-job {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        color: var(--bodyTextColor);
+        display: block;
+      }
+
+      .cs-flower {
+        width: 50vw;
+        max-width: calc(640 / 16 * 1rem);
+        height: auto;
+        display: block;
+        position: absolute;
+        z-index: -1;
+      }
+
+      .cs-left {
+        top: 0;
+        left: 0;
+      }
+
+      .cs-right {
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+</style>

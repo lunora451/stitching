@@ -1,0 +1,1126 @@
+---
+
+---
+
+<!--
+    
+Menu Rules
+
+
+1) The menu items are broken up in to rows (cs-menu-row) so we can have an easier time arranging the menu items for more flexibility.
+
+2) There are 2 menu items by default in the cs-menu-row, if you need a third menu item, add a class .cs-3 to the .cs-menu-row. This will change the styles to account for a third option and look much better.
+
+4) For easier code management, collapse all "#cs-menu .cs-menu" section tags.  So #cs-menu1, #cs-menu2, #cs-menu3, etc will have their .cs-menu section tags collapsed. Makes it easier to go up and down the document.  You can also add your own menu styles or edit the ones we have for you to be more suited for your design.
+
+5) ADD NEW MENUS - When you need to add more menus, copy and paste the .cs-button in .cs-button-group and change the data-filter to the next number ("six" if you still have the default 5 items). Then make sure you change its ID to the next menu number (#cs-menu6 if you added a 6th one, #cs-menu 7 and so on) and change the onclick location to the same ID number.
+
+For quick reference:
+
+.cs-3 = when placed on .cs-menu-row it turns the row into a 3 item flexbox, dont forget to add the 3rd item
+
+--><!-- ============================================ --><!--                  Menu Group                  --><!-- ============================================ -->
+<div id="cs-menu-group-1039">
+  <div class="cs-container">
+    <div class="cs-content">
+      <picture class="cs-picture">
+        <img
+          class="cs-icon"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Ffancy-divider.svg"
+          alt="divider"
+          width="181"
+          height="36"
+          aria-hidden="true"
+        />
+      </picture>
+      <h2 class="cs-title">Our Menu</h2>
+      <div class="cs-button-group">
+        <button
+          class="cs-button cs-active"
+          data-filter="one"
+          onclick="window.location.href='#cs-menu-group';"
+        >
+          Breakfast
+        </button>
+        <button
+          class="cs-button"
+          data-filter="two"
+          onclick="window.location.href='#cs-menu-group';"
+        >
+          Lunch
+        </button>
+        <button
+          class="cs-button"
+          data-filter="three"
+          onclick="window.location.href='#cs-menu-group';"
+        >
+          Dinner
+        </button>
+        <button
+          class="cs-button"
+          data-filter="four"
+          onclick="window.location.href='#cs-menu-group';"
+        >
+          Desserts
+        </button>
+        <button
+          class="cs-button"
+          data-filter="five"
+          onclick="window.location.href='#cs-menu-group';"
+        >
+          Appetizers
+        </button>
+      </div>
+    </div>
+    <!--Breakfast-->
+    <div id="cs-menu1-1039" class="cs-menu-group" data-category="one">
+      <!--Breakfast Section 1-->
+      <section class="cs-menu">
+        <div class="cs-container">
+          <div class="cs-menu-list">
+            <!--If you want a row of three, add cs-3 class to the row and it will format to the a 3 item menu row-->
+            <div class="cs-menu-row cs-3">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+            <div class="cs-menu-row">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada Combo</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+            <div class="cs-menu-row">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+            <div class="cs-menu-row">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+            <div class="cs-menu-row">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!--Lunch-->
+    <div id="cs-menu2-1039" class="cs-menu-group" data-category="two">
+      <!--Lunch Section 1-->
+      <section class="cs-menu">
+        <div class="cs-container">
+          <div class="cs-menu-list">
+            <!--If you want a row of three, add cs-3 class to the row and it will format to the a 3 item menu row-->
+            <div class="cs-menu-row cs-3">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada Lunch</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+            <div class="cs-menu-row">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+            <div class="cs-menu-row">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+            <div class="cs-menu-row">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+            <div class="cs-menu-row">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!--Dinner-->
+    <div id="cs-menu3-1039" class="cs-menu-group" data-category="three">
+      <!--Dinner Section 1-->
+      <section class="cs-menu">
+        <div class="cs-container">
+          <div class="cs-menu-list">
+            <!--If you want a row of three, add cs-3 class to the row and it will format to the a 3 item menu row-->
+            <div class="cs-menu-row cs-3">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada Dinner</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+            <div class="cs-menu-row">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+            <div class="cs-menu-row">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+            <div class="cs-menu-row">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+            <div class="cs-menu-row">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!--Desserts-->
+    <div id="cs-menu4-1039" class="cs-menu-group" data-category="four">
+      <!--Desserts Section 1-->
+      <section class="cs-menu">
+        <div class="cs-container">
+          <div class="cs-menu-list">
+            <!--If you want a row of three, add cs-3 class to the row and it will format to the a 3 item menu row-->
+            <div class="cs-menu-row cs-3">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada Dessert</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+            <div class="cs-menu-row">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+            <div class="cs-menu-row">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+            <div class="cs-menu-row">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+            <div class="cs-menu-row">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!--Appetizers-->
+    <div id="cs-menu5-1039" class="cs-menu-group" data-category="five">
+      <!--Desserts Section 1-->
+      <section class="cs-menu">
+        <div class="cs-container">
+          <div class="cs-menu-list">
+            <!--If you want a row of three, add cs-3 class to the row and it will format to the a 3 item menu row-->
+            <div class="cs-menu-row cs-3">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada App.</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+            <div class="cs-menu-row">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+            <div class="cs-menu-row">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+            <div class="cs-menu-row">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+            <div class="cs-menu-row">
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+              <div class="cs-menu-item">
+                <h3 class="cs-h3">
+                  <span class="cs-name">Purple Corn Tostada</span>
+                  <span class="cs-price">$56</span>
+                </h3>
+                <p class="cs-menu-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <a href="" class="cs-button-solid">Reserve Your Table</a>
+  </div>
+</div>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Menu             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #cs-menu-group-1039 {
+      text-align: center;
+      height: auto;
+      padding: var(--sectionPadding);
+      background-color: #1a1a1a;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-picture {
+        width: 100%;
+        margin: 0 0 calc(12 / 16 * 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: calc(16 / 16 * 1rem);
+        position: relative;
+
+        &:before {
+          /* left line */
+          content: "";
+          width: 50%;
+          max-width: calc(150 / 16 * 1rem);
+          height: 1px;
+          background: #b4b2c7;
+          opacity: 0.2;
+          position: relative;
+          display: block;
+        }
+
+        &:after {
+          /* right line */
+          content: "";
+          width: 50%;
+          max-width: calc(150 / 16 * 1rem);
+          height: 1px;
+          background: #b4b2c7;
+          opacity: 0.2;
+          position: relative;
+          display: block;
+        }
+      }
+
+      .cs-icon {
+        width: 40%;
+        /* 100px - 180px */
+        max-width: clamp(6.25rem, 18vw, 11.25rem);
+        height: auto;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-title {
+        margin: 0 0 calc(32 / 16 * 1rem);
+      }
+
+      .cs-hidden {
+        display: none;
+      }
+
+      .cs-button-group {
+        width: auto;
+        max-width: calc(1000 / 16 * 1rem);
+        margin: 0 calc(16 / 16 * 1rem);
+        /* 16px - 28px top & bottom */
+        /* 32px - 48px left & right */
+        padding: clamp(1rem, 3vw, 1.75rem) clamp(2rem, 4vw, 3rem);
+        border-radius: calc(70 / 16 * 1rem);
+        background-color: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(180, 178, 199, 0.2);
+        display: inline-flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        /* 24px - 36px */
+        column-gap: clamp(1.5rem, 2vw, 2.25rem);
+        row-gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-button {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        color: #fafbfc;
+        background: transparent;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transition:
+          color 0.3s,
+          font-weight 0.3s,
+          color 0.3s;
+
+        &:hover {
+          color: var(--primary);
+          cursor: pointer;
+        }
+
+        &:after {
+          /* active state icon */
+          content: "";
+          position: relative;
+          display: block;
+          width: 0;
+          /* 16px - 24px */
+          height: clamp(1rem, 3vw, 1.5rem);
+          background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Ffancy-icon.svg");
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          opacity: 0;
+          transition:
+            width 0.3s,
+            opacity 0.3s,
+            margin-left 0.3s;
+        }
+
+        &.cs-active {
+          color: var(--bodyTextColorWhite);
+          font-weight: 700;
+          &:after {
+            width: clamp(1.5625rem, 3vw, 2.25rem);
+            opacity: 1;
+            /* 8px - 16px */
+            margin-left: clamp(0.5rem, 0.5vw, 1rem);
+          }
+        }
+      }
+
+      .cs-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 32px - 64px */
+        gap: clamp(2rem, 6vw, 4rem);
+      }
+
+      .cs-menu-list {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        /* 32px - 60px */
+        row-gap: clamp(2rem, 6vw, 3.75rem);
+        position: relative;
+        z-index: 20;
+      }
+
+      .cs-menu-row {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        /* 32px - 60px */
+        row-gap: clamp(2rem, 6vw, 3.75rem);
+      }
+
+      .cs-menu-item {
+        text-align: left;
+        list-style: none;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: calc(16 / 16 * 1rem);
+        position: relative;
+
+        &:after {
+          /* divider line */
+          content: "";
+          width: 50%;
+          height: 1px;
+          background: #b4b2c7;
+          opacity: 0.2;
+          position: relative;
+          display: block;
+          order: 1;
+        }
+      }
+
+      .cs-name {
+        /* 16px - 25px */
+        font-size: clamp(1rem, 2vw, 1.5625rem);
+        line-height: 1.2em;
+        max-width: 16ch;
+        margin-right: auto;
+        color: var(--bodyTextColorWhite);
+        display: block;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-price {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: bold;
+        width: auto;
+        margin: 0;
+        padding: calc(8 / 16 * 1rem) calc(12 / 16 * 1rem);
+        border-radius: calc(80 / 16 * 1rem);
+        background-color: transparent;
+        border: 1px solid #b4b2c7;
+        color: var(--primary);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        display: block;
+        /* prevents flexbox from squishing it */
+        flex: none;
+        /* forces it into the 3rd position */
+        order: 3;
+      }
+
+      .cs-menu-p {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(32 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #cs-menu-group-1039 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-menu-row {
+        width: 100%;
+        flex-direction: row;
+        justify-content: stretch;
+        /* 32px - 80px */
+        gap: clamp(2em, 4vw, 5rem);
+
+        &.cs-3 {
+          .cs-h3 {
+            gap: calc(8 / 16 * 1rem);
+            &:after {
+              display: none;
+            }
+          }
+          .cs-name {
+            font-size: clamp(1rem, 2vw, 1.5625rem);
+            width: 70%;
+            max-width: 20ch;
+          }
+        }
+      }
+
+      .cs-menu-item {
+        max-width: calc(600 / 16 * 1rem);
+        margin: 0 auto;
+      }
+
+      .cs-name {
+        width: fit-content;
+        max-width: 70%;
+      }
+    }
+  }
+</style><script>
+  class CS_MenuFilter {
+    filtersSelector = ".cs-button";
+    menuSelector = ".cs-menu-group";
+    activeClass = "cs-active";
+    hiddenClass = "cs-hidden";
+
+    constructor() {
+      this.$menus = document.querySelectorAll(this.menuSelector);
+      const $filters = document.querySelectorAll(this.filtersSelector);
+
+      this.onClick($filters[0]);
+
+      for (const $filter of $filters) {
+        $filter.addEventListener("click", () => this.onClick($filter));
+      }
+    }
+
+    onClick($filter) {
+      this.filter($filter.dataset.filter);
+
+      const { activeClass } = this;
+
+      this.$activeFilter?.classList.remove(activeClass);
+      $filter.classList.add(activeClass);
+
+      this.$activeFilter = $filter;
+    }
+
+    filter(filter) {
+      const showAll = filter == "all";
+      const { hiddenClass } = this;
+
+      for (const $menu of this.$menus) {
+        const show = showAll || $menu.dataset.category == filter;
+        $menu.classList.toggle(hiddenClass, !show);
+      }
+    }
+  }
+
+  new CS_MenuFilter();
+</script>

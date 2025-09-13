@@ -1,0 +1,123 @@
+---
+import Component1 from "../component/1.astro";
+import Component2 from "../component/2.astro";
+import Component3 from "../component/3.astro";
+import Component4 from "../component/4.astro";
+import Component5 from "../component/5.astro";
+import Component6 from "../component/6.astro";
+import Component7 from "../component/7.astro";
+import Component8 from "../component/8.astro";
+import Component9 from "../component/9.astro";
+import Component10 from "../component/10.astro";
+---
+
+<div class="c-collection">
+  <div class="c-component" data-value-component="1"><Component1 /></div>
+  <div class="c-component" data-value-component="2"><Component2 /></div>
+  <div class="c-component" data-value-component="3"><Component3 /></div>
+  <div class="c-component" data-value-component="4"><Component4 /></div>
+  <div class="c-component" data-value-component="5"><Component5 /></div>
+  <div class="c-component" data-value-component="6"><Component6 /></div>
+  <div class="c-component" data-value-component="7"><Component7 /></div>
+  <div class="c-component" data-value-component="8"><Component8 /></div>
+  <div class="c-component" data-value-component="9"><Component9 /></div>
+  <div class="c-component" data-value-component="10"><Component10 /></div>
+</div>
+
+<style lang="scss">
+  .c-collection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .c-component {
+    display: none;
+  }
+  .active {
+    width: 100%;
+    display: block;
+  }
+</style>
+
+<script>
+  function changeCollection(selectedValue) {
+    const collections = document.querySelectorAll(".c-component");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none" est sélectionné, ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection sélectionnée
+    const targetCollection = document.querySelector(
+      `[data-value-component="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  // Fonction pour le hover des options
+  function previewOnHover(selectedValue) {
+    const collections = document.querySelectorAll(".c-component");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none", ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection en preview
+    const targetCollection = document.querySelector(
+      `[data-value-component="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const select = document.getElementById("template-select-component");
+    const collections = document.querySelectorAll(".c-component");
+
+    if (!select) return;
+
+    select.addEventListener("change", function () {
+      const selectedValue = this.value;
+      changeCollection(selectedValue);
+    });
+
+    // Alternative pour navigateur qui ne supportent pas mouseover sur option
+    let isSelectOpen = false;
+
+    select.addEventListener("focus", function () {
+      isSelectOpen = true;
+    });
+
+    select.addEventListener("blur", function () {
+      isSelectOpen = false;
+      // Revenir à la valeur sélectionnée quand on ferme
+      changeCollection(this.value);
+    });
+
+    // Navigation avec les flèches
+    select.addEventListener("keydown", function (e) {
+      if (isSelectOpen && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
+        setTimeout(() => {
+          // Simuler le hover sur l'option "focusée"
+          const currentValue = this.value;
+          previewOnHover(currentValue);
+        }, 10);
+      }
+    });
+  });
+</script>

@@ -1,0 +1,228 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Gallery                    --><!-- ============================================ -->
+<section id="gallery-1152">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our Portfolio</span>
+      <h2 class="cs-title">Our Photo Gallery</h2>
+    </div>
+    <div class="cs-gallery">
+      <!--Picture 1-->
+      <picture class="cs-image">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/char1.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/char1.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/char1.jpg"
+          alt="gallery"
+          width="272"
+          height="320"
+        />
+      </picture>
+      <!--Picture 2-->
+      <picture class="cs-image">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/char2.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/char2.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/char2.jpg"
+          alt="gallery"
+          width="272"
+          height="320"
+        />
+      </picture>
+      <!--Picture 3-->
+      <picture class="cs-image">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/char3.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/char3.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/char3.jpg"
+          alt="gallery"
+          width="272"
+          height="320"
+        />
+      </picture>
+      <!--Picture 4-->
+      <picture class="cs-image">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/char4.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/char4.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/char4.jpg"
+          alt="gallery"
+          width="272"
+          height="320"
+        />
+      </picture>
+      <!--Picture 5-->
+      <picture class="cs-image">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/char5.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/char5.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/char5.jpg"
+          alt="gallery"
+          width="272"
+          height="320"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Gallery           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #gallery-1152 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at large desktop */
+        max-width: calc(944 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-topper {
+        color: #767676;
+      }
+
+      .cs-title {
+        margin: 0;
+      }
+
+      .cs-gallery {
+        width: 100%;
+        /* changes to 100% at tablet */
+        max-width: calc(500 / 16 * 1rem);
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 1.5vw, 1.25rem);
+      }
+
+      .cs-image {
+        /* 260px - 360px */
+        min-height: clamp(16.25rem, 60vw, 20rem);
+        border-radius: calc(16 / 16 * 1rem);
+        /* clips the image corners */
+        overflow: hidden;
+        display: block;
+        grid-column: span 12;
+        grid-row: span 1;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* makes it act like a background image */
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 700px */
+  @media only screen and (min-width: 43.75rem) {
+    #gallery-1152 {
+      .cs-gallery {
+        max-width: 100%;
+        grid-template-rows: 1fr;
+      }
+
+      .cs-image {
+        grid-column: span 4;
+
+        &:nth-of-type(4),
+        &:nth-of-type(5) {
+          grid-column: span 6;
+        }
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #gallery-1152 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-gallery {
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      .cs-image {
+        grid-column: span 1;
+
+        &:nth-of-type(4),
+        &:nth-of-type(5) {
+          grid-column: span 1;
+        }
+      }
+    }
+  }
+</style>

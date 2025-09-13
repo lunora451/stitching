@@ -1,0 +1,232 @@
+---
+title: "Page 8";
+---
+
+<!-- ============================================ --><!--                  Services                    --><!-- ============================================ -->
+<section id="services-1972">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Dental Care For Everyone</span>
+      <h2 class="cs-title">Explore Our Services</h2>
+      <p class="cs-text">
+        From preventative care to restorative dentistry, our team is dedicated
+        to providing the best possible dental care.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <h3 class="cs-h3">Gum Surgery</h3>
+        <p class="cs-item-text">
+          Dentitch provides the best service and has won many awards. Our
+          mission is to make everyone confident to give their best smile.
+        </p>
+        <a href="" class="cs-link"> Learn More </a>
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/toothache.png"
+            alt="icon"
+            width="181"
+            height="102"
+          />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Dental Implants</h3>
+        <p class="cs-item-text">
+          Dentitch provides the best service and has won many awards. Our
+          mission is to make everyone confident to give their best smile.
+        </p>
+        <a href="" class="cs-link"> Learn More </a>
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/implant.png"
+            alt="icon"
+            width="181"
+            height="102"
+          />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Dental Crowns</h3>
+        <p class="cs-item-text">
+          Dentitch provides the best service and has won many awards. Our
+          mission is to make everyone confident to give their best smile.
+        </p>
+        <a href="" class="cs-link"> Learn More </a>
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/braces.png"
+            alt="icon"
+            width="181"
+            height="102"
+          />
+        </picture>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-1972 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: var(--primary);
+        opacity: 0.05;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(704 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+      }
+
+      .cs-item {
+        text-align: left;
+        list-style: none;
+        width: 100%;
+        margin: 0 auto;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        /* 24px - 32px */
+        padding: clamp(1.5rem, 4vw, 2rem) clamp(1.5rem, 4vw, 2rem)
+          calc(60 / 16 * 1rem) clamp(1.5rem, 4vw, 2rem);
+        box-sizing: border-box;
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: calc(8 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        grid-column: span 12;
+        grid-row: span 1;
+        position: relative;
+        z-index: 1;
+        transition:
+          box-shadow 0.3s,
+          border-color 0.3s;
+      }
+
+      .cs-picture {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+
+      .cs-icon {
+        width: calc(181 / 16 * 1rem);
+        height: auto;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        font-weight: bold;
+        line-height: 1.2em;
+        text-align: inherit;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+        color: var(--headerColor);
+        transition: color 0.3s;
+      }
+
+      .cs-item-text {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        max-width: calc(650 / 16 * 1rem);
+        margin: 0;
+        margin-bottom: calc(32 / 16 * 1rem);
+        padding: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-link {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-align: inherit;
+        text-decoration: none;
+        margin-top: auto;
+        color: var(--primary);
+        border-bottom: 1px solid var(--primary);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        transition: color 0.3s;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-1972 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-content {
+        width: 60%;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #services-1972 {
+      .cs-item {
+        grid-column: span 4;
+      }
+    }
+  }
+</style>

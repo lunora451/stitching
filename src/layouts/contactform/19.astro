@@ -1,0 +1,324 @@
+---
+
+---
+
+<!--
+    Instructions for changing the white splash image color for dark mode or change the color of the defauly one from white to whatever else you need
+--><!--
+    Step 1: Open photoshop, and open the splash image
+
+    Step 2: click on the rectangle tool near the bottom of the tools list ( it should be under the pointer arrow and above the hand). At the bottom of the tool bar should be two squares for choosing the color of the rectangle, cick the top left one and select the color you need.
+
+    Step 3: Starting from the outside of the image, drag a rectangle that covers the whole image. You'll notice in the layer panels that a new rectangle layer was created.  Right click on the layer and select "Create Clipping Mask" and the rectanlge will not take the shape of the image layer underneath it. Hit enter to complete the action.
+
+    Step 4: hit CTRL + Shift + Alt + s to save for web, and select PNG and save to your folder. You just converted this image to a different color.  Do this for the dark mode version so it matches the color scheme of the background of the section below it to create the illusion that the paint splash bleeds into that section.
+
+    The current dark mode image color is #082032, this is for the --dark variable in our CodeStitch dark mode style variables. If your dark mode color pallate is different, go thorugh these previous steps to change your splash image to that color you need it to be
+--><!-- ============================================ --><!--                     CTA                      --><!-- ============================================ -->
+<section id="cta-1146">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Stay Up To Date</span>
+      <h2 class="cs-title">Subscribe for Newsletter</h2>
+      <p class="cs-text">
+        Nulla dig nissimmi quis neque interdum. An Ohio man allegedly punched
+        his lawyer in the face in court Tuesday upon finding out he was
+        sentenced.
+      </p>
+      <form class="cs-form" name="Contact Form" method="post">
+        <input
+          class="cs-input"
+          type="email"
+          id="cs-email-302-1146"
+          name="find-us"
+          placeholder="Email Address"
+        />
+        <button class="cs-button-solid cs-submit" type="submit"
+          >Subscribe Now</button
+        >
+      </form>
+    </div>
+  </div>
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/family-moving.jpg"
+    />
+    <!--Tablet and above Image-->
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/family-moving.jpg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/family-moving.jpg"
+      alt="family"
+      width="1280"
+      height="568"
+    />
+  </picture>
+  <!--White splash graphic-->
+  <picture class="cs-graphic cs-light">
+    <!--Mobile Image-->
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/splash-m.png"
+    />
+    <!--Tablet and above Image-->
+    <source
+      media="(max-width: 1023px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/splash-t.png"
+    />
+    <!--Desktop and above Image-->
+    <source
+      media="(min-width: 1024px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/splash.png"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/splash.png"
+      alt="graphic"
+      width="1920"
+      height="108"
+      aria-hidden="true"
+    />
+  </picture>
+  <!--Dark Mode splash graphic, Remove if not needed!-->
+  <picture class="cs-graphic cs-dark">
+    <!--Mobile Image-->
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/splash-m-dark.png"
+    />
+    <!--Tablet and above Image-->
+    <source
+      media="(max-width: 1023px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/splash-t-dark.png"
+    />
+    <!--Desktop and above Image-->
+    <source
+      media="(min-width: 1024px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/splash-dark.png"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/splash-dark.png"
+      alt="graphic"
+      width="1920"
+      height="108"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #cta-1146 {
+      padding: var(--sectionPadding);
+      /* chnages at tablet */
+      padding-bottom: 30vw;
+      background-color: var(--primary);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title {
+        max-width: 24ch;
+
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-text {
+        /* 28px - 40px */
+        margin: 0 0 clamp(1.75rem, 4vw, 2.5rem);
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* 8px - 16px */
+        gap: clamp(0.5rem, 2vw, 1rem);
+      }
+
+      .cs-input {
+        font-size: calc(16 / 16 * 1rem);
+        width: 100%;
+        height: clamp(2.875rem, 5.5vw, 3.5rem);
+        margin: 0;
+        padding: 0;
+        padding-left: calc(20 / 16 * 1rem);
+        border: none;
+        border-radius: calc(4 / 16 * 1rem);
+        /* prevents padding from adding to width and height */
+        box-sizing: border-box;
+        display: block;
+        &::placeholder {
+          color: #767676;
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--secondary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-submit {
+        width: 100%;
+        color: var(--headerColor);
+        border: none;
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        &:before {
+          /* background color overlay */
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 100%;
+          background: #1a1a1a;
+          opacity: 0.8;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes img tag act as a background image */
+          object-fit: cover;
+        }
+      }
+
+      .cs-graphic {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        z-index: 10;
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+
+      .cs-dark {
+        display: none;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #cta-1146 {
+      /* changes at desktop */
+      padding-bottom: 15vw;
+
+      .cs-form {
+        flex-direction: row;
+      }
+
+      .cs-input {
+        width: calc(360 / 16 * 1rem);
+      }
+
+      .cs-submit {
+        width: calc(205 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #cta-1146 {
+      /* changes at desktop */
+      padding-bottom: 10vw;
+    }
+  }
+</style>

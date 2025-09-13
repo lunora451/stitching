@@ -1,0 +1,283 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Hero                      --><!-- ============================================ -->
+<section id="hero-1159">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">The Best Care Servicing In Town</span>
+      <h1 class="cs-title">We Are Qualified And Professional</h1>
+      <p class="cs-text">
+        We are the premier Stitch Design Pack for mechanics and auto body
+        websites of all varieties.
+      </p>
+      <a href="" class="cs-button-solid">Explore Services</a>
+    </div>
+    <!-- Person, to make your own crop of a person, visit https://www.remove.bg to do it for you -->
+    <picture class="cs-picture">
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic-hero-m.png"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic-hero2.png"
+      />
+      <img
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic-hero2.png"
+        alt="person"
+        width="698"
+        height="844"
+        aria-hidden="true"
+      />
+    </picture>
+  </div>
+
+  <!--SVG V Graphic-->
+  <img
+    class="cs-graphic"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/v-graphic2.svg"
+    alt="graphic"
+    width="1920"
+    height="163"
+    aria-hidden="true"
+  />
+
+  <!-- Background Image, also BG Image is set in CSS at 1600px wide for parallax effect -->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/garage.jpg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/garage.jpg"
+    />
+    <img
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/garage.jpg"
+      alt="garage"
+      width="2250"
+      height="1500"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-1159 {
+      /* 200px - 300px - leaving extra space for the navigation */
+      padding: clamp(12.5rem, 31.95vw, 18.75rem) calc(16 / 16 * 1rem) 0;
+      /* prevents padding and border from affecting height and width */
+      box-sizing: border-box;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-topper {
+        font-size: var(--topperFontSize);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        text-align: inherit;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        color: var(--secondary);
+        margin-bottom: calc(4 / 16 * 1rem);
+        display: block;
+      }
+
+      .cs-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-align: inherit;
+        max-width: calc(829 / 16 * 1rem);
+        margin: 0 auto calc(16 / 16 * 1rem) 0;
+        color: #fff;
+        position: relative;
+      }
+
+      .cs-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 1.95vw, 1.25rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        /* 464px - 622px */
+        max-width: clamp(29rem, 60vw, 38.785rem);
+        margin: 0 0 calc(40 / 16 * 1rem) 0;
+        color: #fff;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        margin: 0;
+        color: #fff;
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-picture {
+        /* 340px - 742px */
+        height: clamp(21.25rem, 68vw, 46.375rem);
+        width: auto;
+        max-width: calc(700 / 20 * 1em);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+
+      .cs-graphic {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+
+        &:before {
+          /* Overlay */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: #1a1a1a;
+          opacity: 0.84;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          /* prevents the cursor from interacting with it */
+          pointer-events: none;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          /* makes the top of the image start at the top of the parent */
+          object-position: top;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-1159 {
+      /* 150px - 300px */
+      padding-bottom: clamp(9.375rem, 22vw, 18.75rem);
+
+      .cs-container {
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+
+      .cs-content {
+        text-align: left;
+        width: 55%;
+        max-width: calc(630 / 16 * 1rem);
+        align-items: flex-start;
+      }
+
+      .cs-picture {
+        justify-content: flex-start;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+      }
+    }
+  }
+
+  /* Large Desktop - 1600px - Prallax Effect */
+  @media only screen and (min-width: 100rem) {
+    #hero-1159 {
+      .cs-background {
+        background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/garage.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+</style>

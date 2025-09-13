@@ -1,0 +1,245 @@
+---
+title: "Page 12";
+---
+
+<!-- ============================================ --><!--                   Services                   --><!-- ============================================ -->
+<section id="services-1684">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our services</span>
+      <h2 class="cs-title">Grow Your Business with Our New Bold Agency</h2>
+      <p class="cs-text">
+        Aqestic recusandae laudantium optio amet a quisquam saepe aliquid,
+        voluptate praesentium dicta fuga dolor error perspiciatis voluptatem eum
+        cupiditate totam reiciendis quam minus inventore sint rem impedit esse
+        quasi Tenetur sed reprehenderit earum a magni aliquid blanditiis
+        dolores, veritatis soluta autem beatae officia expedita ipsum rerum
+        doloribus sit provident delectus.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <h3 class="cs-h3">Process Safety & Risk Management</h3>
+        <p class="cs-item-text">
+          We provide some of the finest quality, most reliable, and cost
+          effective services and solutions.
+        </p>
+        <a href="" class="cs-link">
+          <span class="cs-link-text">Get Started</span>
+          <img
+            class="cs-arrow"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+            alt="icon"
+            width="20"
+            height="20"
+            aria-hidden="true"
+          />
+        </a>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Occupational Safety & Health</h3>
+        <p class="cs-item-text">
+          We provide some of the finest quality, most reliable, and cost
+          effective services and solutions.
+        </p>
+        <a href="" class="cs-link">
+          <span class="cs-link-text">Get Started</span>
+          <img
+            class="cs-arrow"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+            alt="icon"
+            width="20"
+            height="20"
+            aria-hidden="true"
+          />
+        </a>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Security Assessment and Planning</h3>
+        <p class="cs-item-text">
+          We provide some of the finest quality, most reliable, and cost
+          effective services and solutions.
+        </p>
+        <a href="" class="cs-link">
+          <span class="cs-link-text">Get Started</span>
+          <img
+            class="cs-arrow"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+            alt="icon"
+            width="20"
+            height="20"
+            aria-hidden="true"
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-1684 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(584 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to center if content needs to be centrally aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* left aligns the content, center the content by using 'center' */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        max-width: none;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-auto-flow: row;
+        gap: calc(28 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        margin: 0 auto;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        padding-bottom: calc(28 / 16 * 1rem);
+        border-bottom: 1px solid var(--primary);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        grid-column: span 12;
+        grid-row: span 1;
+        position: relative;
+        z-index: 1;
+        transition:
+          box-shadow 0.3s,
+          border-color 0.3s;
+
+        &:hover {
+          .cs-h3,
+          .cs-link {
+            color: var(--primary);
+          }
+
+          .cs-arrow {
+            filter: initial;
+          }
+        }
+
+        &:last-of-type {
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+      }
+
+      .cs-h3 {
+        /* 20px - 31px */
+        font-size: clamp(1.25rem, 2vw, 1.9375rem);
+        font-weight: bold;
+        line-height: 1.2em;
+        text-align: inherit;
+        margin: 0 0 calc(16 / 16 * 1rem);
+        color: var(--headerColor);
+        transition: color 0.3s;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        margin: 0 0 calc(24 / 16 * 1rem) 0;
+        padding: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-link {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-align: inherit;
+        text-decoration: none;
+        margin-top: auto;
+        color: var(--primary);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: calc(10 / 16 * 1rem);
+        transition: color 0.3s;
+
+        &:hover {
+          .cs-arrow {
+            transform: translateX(0.25rem);
+          }
+        }
+      }
+
+      .cs-link-text {
+        width: fit-content;
+      }
+
+      .cs-arrow {
+        width: calc(20 / 16 * 1rem);
+        height: auto;
+        display: block;
+        transition:
+          filter 0.3s,
+          transform 0.3s;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-1684 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        /* 20px - 32px */
+        gap: clamp(1.25rem, 3vw, 2rem);
+      }
+
+      .cs-item {
+        padding: 0;
+        /* 20px - 32px */
+        padding-left: clamp(1.25rem, 3vw, 2rem);
+        border: none;
+        border-left: 1px solid var(--primary);
+        grid-column: span 4;
+      }
+    }
+  }
+</style>

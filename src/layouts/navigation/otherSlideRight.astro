@@ -1,0 +1,255 @@
+---
+
+---
+
+<!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+<li class="cs-li cs-dropdown" tabindex="0">
+  <span class="cs-li-link cs-dropdown-toggle">
+    Services
+    <img
+      class="cs-drop-icon"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
+      alt="dropdown icon"
+      width="15"
+      height="15"
+      decoding="async"
+      aria-hidden="true"
+    />
+  </span>
+  <ul class="cs-drop-ul">
+    <li class="cs-drop-li cs-drop3-main">
+      <span class="cs-li-link cs-drop-link">
+        HOA Painting
+        <img
+          class="cs-drop-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
+          alt="dropdown icon"
+          width="15"
+          height="15"
+          decoding="async"
+          aria-hidden="true"
+        />
+      </span>
+      <!--Tertiary-->
+      <ul class="cs-drop3">
+        <li class="cs-drop-li3">
+          <a href="" class="cs-li-link cs-drop-link cs-drop-link3"
+            >Los Angeles</a
+          >
+        </li>
+        <li class="cs-drop-li3">
+          <a href="" class="cs-li-link cs-drop-link cs-drop-link3"
+            >Redondo Beach</a
+          >
+        </li>
+        <li class="cs-drop-li3">
+          <a href="" class="cs-li-link cs-drop-link cs-drop-link3"
+            >Manhattan Beach</a
+          >
+        </li>
+        <li class="cs-drop-li3">
+          <a href="" class="cs-li-link cs-drop-link cs-drop-link3"
+            >Orange County</a
+          >
+        </li>
+        <li class="cs-drop-li3">
+          <a href="" class="cs-li-link cs-drop-link cs-drop-link3"
+            >San Bernardino</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li class="cs-drop-li cs-drop3-main">
+      <span class="cs-li-link cs-drop-link">
+        Commercial Painting
+        <img
+          class="cs-drop-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
+          alt="dropdown icon"
+          width="15"
+          height="15"
+          decoding="async"
+          aria-hidden="true"
+        />
+      </span>
+      <!--Tertiary-->
+      <ul class="cs-drop3">
+        <li class="cs-drop-li3">
+          <a href="" class="cs-li-link cs-drop-link cs-drop-link3"
+            >Los Angeles</a
+          >
+        </li>
+        <li class="cs-drop-li3">
+          <a href="" class="cs-li-link cs-drop-link cs-drop-link3"
+            >Orange County</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li class="cs-drop-li cs-drop3-main">
+      <span class="cs-li-link cs-drop-link">
+        Residential Painting
+        <img
+          class="cs-drop-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
+          alt="dropdown icon"
+          width="15"
+          height="15"
+          decoding="async"
+          aria-hidden="true"
+        />
+      </span>
+      <!--Tertiary-->
+      <ul class="cs-drop3">
+        <li class="cs-drop-li3">
+          <a href="" class="cs-li-link cs-drop-link cs-drop-link3"
+            >Los Angeles</a
+          >
+        </li>
+        <li class="cs-drop-li3">
+          <a href="" class="cs-li-link cs-drop-link cs-drop-link3"
+            >Orange County</a
+          >
+        </li>
+        <li class="cs-drop-li3">
+          <a href="" class="cs-li-link cs-drop-link cs-drop-link3"
+            >Redondo Beach</a
+          >
+        </li>
+        <li class="cs-drop-li3">
+          <a href="" class="cs-li-link cs-drop-link cs-drop-link3"
+            >Manhattan Beach</a
+          >
+        </li>
+        <li class="cs-drop-li3">
+          <a href="" class="cs-li-link cs-drop-link cs-drop-link3"
+            >San Bernardino</a
+          >
+        </li>
+      </ul>
+    </li>
+  </ul>
+</li>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---    Tertiary Navigation     -->
+<--- -------------------------- -*/
+
+  /* Mobile - 1023px */
+  @media only screen and (max-width: 1023px) {
+    #cs-navigation .cs-dropdown.cs-active .cs-drop-ul {
+      visibility: visible;
+      opacity: 1;
+      transform: scale(1);
+      margin: 0.75rem auto 0 auto;
+      height: auto;
+      padding: 1.5rem;
+    }
+    #cs-navigation .cs-dropdown.cs-active .cs-drop-link {
+      opacity: 1;
+    }
+    #cs-navigation .cs-dropdown.cs-active .cs-dropdown-toggle {
+      pointer-events: none;
+    }
+    #cs-navigation .cs-dropdown-toggle {
+      pointer-events: none;
+    }
+    #cs-navigation .cs-drop-ul {
+      width: 67%;
+      box-sizing: border-box;
+    }
+    #cs-navigation .cs-drop3 {
+      visibility: hidden;
+      opacity: 0;
+      transform: scale(0);
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.2);
+      box-sizing: border-box;
+      height: 0;
+      width: 100%;
+      overflow: hidden;
+      padding: 0;
+      transition:
+        padding 0.3s,
+        margin 0.3s,
+        height 0.3s,
+        opacity 0.3s,
+        transform 0.3s,
+        visibility 0.3s;
+      gap: 0.5rem;
+      transform-origin: top;
+    }
+    #cs-navigation .cs-drop-li {
+      width: 100%;
+    }
+    #cs-navigation .cs-drop-li.drop3-active .cs-drop3 {
+      visibility: visible;
+      opacity: 1;
+      transform: scale(1);
+      height: auto;
+      padding: 1.25rem 1rem 1.25rem 1.25rem;
+    }
+    #cs-navigation .cs-drop-li.drop3-active .cs-drop3-main {
+      margin-bottom: 0.75rem;
+    }
+    #cs-navigation .cs-drop3-main {
+      font-weight: bold;
+      transition: margin 0.3s;
+    }
+    #cs-navigation .cs-drop3-main .cs-drop-icon {
+      filter: grayscale(1) brightness(1000%);
+    }
+    #cs-navigation .cs-drop-li3 {
+      list-style: none;
+    }
+  }
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 1024px) {
+    #cs-navigation .cs-drop-ul {
+      overflow: visible;
+    }
+    #cs-navigation .cs-drop-li {
+      z-index: 1;
+      position: relative;
+    }
+    #cs-navigation .cs-drop-li:hover .cs-drop3 {
+      display: block;
+    }
+    #cs-navigation .cs-drop3 {
+      z-index: 10;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      display: none;
+      background-color: #fff;
+      min-width: 12.5rem;
+      padding: 0;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    #cs-navigation .cs-drop3-main:hover .cs-drop-icon {
+      transform: rotate(-90deg);
+    }
+    #cs-navigation .cs-drop-icon {
+      transition: transform 0.3s;
+    }
+    #cs-navigation .cs-drop-li3 {
+      list-style: none;
+    }
+  }
+</style>
+
+<script>
+  // tertiary nav toggle code
+  const tertiaryDrop = Array.from(
+    document.querySelectorAll("#cs-navigation .cs-drop3-main")
+  );
+
+  for (const item of tertiaryDrop) {
+    item.addEventListener("click", (e) => {
+      e.stopPropagation();
+      item.classList.toggle("drop3-active");
+    });
+  }
+</script>

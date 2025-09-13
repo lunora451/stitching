@@ -1,0 +1,197 @@
+---
+import Collection1 from "../ecommerce/collections/1.astro";
+import Collection2 from "../ecommerce/collections/2.astro";
+import Collection3 from "../ecommerce/collections/3.astro";
+import Collection4 from "../ecommerce/collections/4.astro";
+import Collection5 from "../ecommerce/collections/5.astro";
+import Collection6 from "../ecommerce/collections/6.astro";
+import Collection7 from "../ecommerce/collections/7.astro";
+import Collection8 from "../ecommerce/collections/8.astro";
+import Collection9 from "../ecommerce/collections/9.astro";
+import Collection10 from "../ecommerce/collections/10.astro";
+import Collection11 from "../ecommerce/collections/11.astro";
+import Products1 from "../ecommerce/featuredProducts/1.astro";
+import Products2 from "../ecommerce/featuredProducts/2.astro";
+import Products3 from "../ecommerce/featuredProducts/3.astro";
+import Products4 from "../ecommerce/featuredProducts/4.astro";
+import Hero1 from "../ecommerce/hero/1.astro";
+import Hero2 from "../ecommerce/hero/2.astro";
+import Popup1 from "../ecommerce/popup/1.astro";
+import PromoCTA1 from "../ecommerce/promoCTA/1.astro";
+import PromoCTA2 from "../ecommerce/promoCTA/2.astro";
+import PromoCTA3 from "../ecommerce/promoCTA/3.astro";
+import PromoCTA4 from "../ecommerce/promoCTA/4.astro";
+import PromoCTA5 from "../ecommerce/promoCTA/5.astro";
+---
+
+<div class="c-collection">
+  <div class="c-collec" data-value-commerce-collection="1">
+    <Collection1 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="2">
+    <Collection2 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="3">
+    <Collection3 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="4">
+    <Collection4 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="5">
+    <Collection5 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="6">
+    <Collection6 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="7">
+    <Collection7 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="8">
+    <Collection8 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="9">
+    <Collection9 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="10">
+    <Collection10 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="11">
+    <Collection11 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="12">
+    <Products1 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="13">
+    <Products2 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="14">
+    <Products3 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="15">
+    <Products4 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="16">
+    <Hero1 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="17">
+    <Hero2 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="18">
+    <Popup1 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="19">
+    <PromoCTA1 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="20">
+    <PromoCTA2 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="21">
+    <PromoCTA3 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="22">
+    <PromoCTA4 />
+  </div>
+  <div class="c-collec" data-value-commerce-collection="23">
+    <PromoCTA5 />
+  </div>
+</div>
+
+<style lang="scss">
+  .c-collection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .c-collec {
+    display: none;
+  }
+  .active {
+    width: 100%;
+    display: block;
+  }
+</style>
+
+<script>
+  function changeCollection(selectedValue) {
+    const collections = document.querySelectorAll(".c-collec");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none" est sélectionné, ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection sélectionnée
+    const targetCollection = document.querySelector(
+      `[data-value-commerce-collection="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  // Fonction pour le hover des options
+  function previewOnHover(selectedValue) {
+    const collections = document.querySelectorAll(".c-collec");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none", ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection en preview
+    const targetCollection = document.querySelector(
+      `[data-value-commerce-collection="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const select = document.getElementById(
+      "template-select-commerce-collection"
+    );
+    const collections = document.querySelectorAll(".c-collec");
+
+    if (!select) return;
+
+    select.addEventListener("change", function () {
+      const selectedValue = this.value;
+      changeCollection(selectedValue);
+    });
+
+    // Alternative pour navigateur qui ne supportent pas mouseover sur option
+    let isSelectOpen = false;
+
+    select.addEventListener("focus", function () {
+      isSelectOpen = true;
+    });
+
+    select.addEventListener("blur", function () {
+      isSelectOpen = false;
+      // Revenir à la valeur sélectionnée quand on ferme
+      changeCollection(this.value);
+    });
+
+    // Navigation avec les flèches
+    select.addEventListener("keydown", function (e) {
+      if (isSelectOpen && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
+        setTimeout(() => {
+          // Simuler le hover sur l'option "focusée"
+          const currentValue = this.value;
+          previewOnHover(currentValue);
+        }, 10);
+      }
+    });
+  });
+</script>

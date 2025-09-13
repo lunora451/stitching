@@ -1,0 +1,152 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Content                     --><!-- ============================================ -->
+<section id="content-1638">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex">
+        <span class="cs-topper">About Us</span>
+        <h2 class="cs-title">
+          Marketing strategies & campaigns that will prioritize & maximize
+          company profits.
+        </h2>
+      </div>
+      <div class="cs-flex">
+        <h3 class="cs-h3">
+          Revolutionize tour business, exceedyour goals Partner with
+          Smartaxdynamic consulting firm.
+        </h3>
+        <p class="cs-text">
+          Aqestic recusandae laudantium optio amet a quisquam saepe aliquid,
+          voluptate praesentium dicta fuga dolor error perspiciatis voluptatem
+          eum cupiditate totam reiciendis quam minus inventore sint rem impedit
+          esse quasi Tenetur sed reprehenderit earum a magni aliquid blanditiis
+          dolores, veritatis soluta autem beatae officia expedita ipsum rerum
+          doloribus sit provident delectus.
+        </p>
+        <a href="" class="cs-button-solid">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #content-1638 {
+      padding: var(--sectionPadding);
+      background-color: #f7f7f7;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 100px */
+        gap: clamp(3rem, 9vw, 6.25rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-flex {
+        max-width: calc(608 / 16 * 1rem);
+      }
+
+      .cs-h3 {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #content-1638 {
+      &:before {
+        height: 63%;
+      }
+      .cs-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: calc(40 / 16 * 1rem);
+      }
+
+      .cs-flex {
+        width: 50%;
+        text-align: left;
+      }
+
+      .cs-title {
+        margin: 0;
+      }
+    }
+  }
+</style>

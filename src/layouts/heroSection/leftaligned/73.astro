@@ -1,0 +1,290 @@
+---
+
+---
+
+<!-- ============================================ --><!--                     Hero                     --><!-- ============================================ -->
+<section id="hero-2153">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex">
+        <span class="cs-topper">Perfect Photography at Your Doorstep</span>
+        <h2 class="cs-title">Make Your Wedding Dream Come True</h2>
+      </div>
+      <p class="cs-text">
+        Authentic wedding photography emphasizes candid shots that capture real
+        emotions, reactions, and interactions among the couple, their families,
+        and guests. These moments are often spontaneous and heartfelt.
+      </p>
+    </div>
+    <div class="cs-video-group">
+      <div class="cs-video-wrapper">
+        <!--Compress your video and upload it to a CDN like Digital Oceans Spaces so the video file doesn't cause load time issues. You can also remove the video tag and uncomment the picture tag to use a picture instead of a video.-->
+        <video
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Videos/wedding.mp4"
+        ></video>
+        <!-- <picture class="cs-picture">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding6.jpeg">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding6.jpeg">
+                    <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding6.jpeg" alt="wedding" width="1720" height="547">
+                </picture> -->
+        <button class="cs-play" aria-label="click to play video">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/play-right.svg"
+            alt="play icon"
+            width="20"
+            height="22"
+            aria-hidden="true"
+            decoding="async"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---            Hero            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-2153 {
+      padding: var(--sectionPadding);
+      /* 150px - 200px - top leaving extra space for the navigation */
+      /* 40px - 90px bottom */
+      padding: clamp(9.375rem, 16.95vw, 12.5rem) calc(16 / 16 * 1rem)
+        clamp(2.5rem, 4.82vw, 5.625rem) calc(16 / 16 * 1rem);
+      background-color: #f7f7f7;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(704 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 5vw, 4rem);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-content {
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-flex {
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-title {
+        /* 39px - 61px */
+        font-size: clamp(2.438rem, 5vw, 3.813rem);
+        text-transform: uppercase;
+      }
+
+      .cs-text {
+        max-width: none;
+      }
+
+      .cs-video-group {
+        width: 100%;
+        /* 340px - 547px */
+        height: clamp(21.25rem, 42.5vw, 34.2rem);
+        display: block;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-video-wrapper {
+        width: 100%;
+        /* changes to 90% at tablet, then back to 100% at desktop */
+        height: 100%;
+        display: block;
+        position: relative;
+
+        &:hover {
+          cursor: pointer;
+          .cs-play {
+            transform: translate(-50%, -50%) scale(1.2);
+          }
+        }
+
+        video,
+        .cs-picture {
+          width: 100%;
+          height: 100%;
+          /* makes image act as a background image */
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          img {
+            width: 100%;
+            height: 100%;
+            /* makes image act as a background image */
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              0deg,
+              rgba(0, 0, 0, 0.2) 0%,
+              rgba(0, 0, 0, 0.2) 100%
+            );
+            /* prevents the cursor from interacting with it */
+            pointer-events: none;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+          }
+        }
+      }
+
+      .cs-play {
+        /* 80px - 120px */
+        width: clamp(5rem, 14vw, 7.5rem);
+        height: clamp(5rem, 14vw, 7.5rem);
+        background-color: rgba(255, 255, 255, 0.2);
+        pointer-events: none;
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%, -50%);
+        transition:
+          transform 0.3s,
+          opacity 0.3s;
+        backdrop-filter: blur(8px);
+
+        &.cs-hide {
+          opacity: 0;
+          transform: translate(-50%, -50%) scale(0) !important;
+        }
+      }
+
+      .cs-icon {
+        width: calc(20 / 16 * 1rem);
+        height: auto;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-2153 {
+      .cs-container {
+        max-width: calc(944 / 16 * 1rem);
+      }
+
+      .cs-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-flex {
+        width: 50%;
+      }
+
+      .cs-title {
+        margin: 0;
+      }
+
+      .cs-text {
+        max-width: calc(382 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #hero-2153 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Large Desktop 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #hero-2153 {
+      .cs-container {
+        max-width: calc(1720 / 16 * 1rem);
+      }
+
+      .cs-text {
+        max-width: calc(560 / 16 * 1rem);
+      }
+    }
+  }
+</style>
+
+<script>
+  function togglePlayButton3() {
+    // Select all elements with the .cs-video-wrapper class
+    const pictures = document.querySelectorAll("#hero-2153 .cs-video-wrapper");
+    // Select all elements with the .cs-play class
+    const buttons = document.querySelectorAll("#hero-2153 .cs-play");
+
+    // Add a click event listener to each .cs-video-wrapper element
+    pictures.forEach((picture) => {
+      picture.addEventListener("click", () => {
+        // Loop through each .cs-play element and toggle the cs-hide class
+        buttons.forEach((button) => {
+          button.classList.toggle("cs-hide");
+        });
+      });
+    });
+  }
+
+  // Call the function to activate the event listeners
+  togglePlayButton3();
+
+  function toggleVideoPlayback3() {
+    // Select the video element
+    const video = document.querySelector("#hero-2153 video");
+
+    // Add a click event listener to the video
+    video.addEventListener("click", () => {
+      // Check if the video is paused
+      if (video.paused) {
+        video.play(); // Play the video if it is paused
+      } else {
+        video.pause(); // Pause the video if it is playing
+      }
+    });
+  }
+
+  // Call the function to activate the event listener
+  toggleVideoPlayback3();
+</script>

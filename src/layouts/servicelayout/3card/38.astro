@@ -1,0 +1,375 @@
+---
+title: "Page 38";
+---
+
+<!-- ============================================ --><!--                  Projects                    --><!-- ============================================ -->
+<section id="projects-604">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex-group">
+        <span class="cs-topper">Our Services</span>
+        <h2 class="cs-title">Some of our residential painting projects</h2>
+      </div>
+      <p class="cs-text">
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat duis enim velit mollit. Amet minim mollit
+        non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+        consequat duis enim velit mollit.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <a class="cs-link" href="">
+          <div class="cs-info">
+            <picture class="cs-background">
+              <!--Mobile Image-->
+              <source
+                media="(max-width: 600px)"
+                srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/bathroom1.jpg"
+              />
+              <!--Tablet and above Image-->
+              <source
+                media="(min-width: 601px)"
+                srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/bathroom1.jpg"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/bathroom1.jpg"
+                alt="bathroom"
+                width="413"
+                height="450"
+              />
+            </picture>
+            <span class="cs-header">Project 1</span>
+            <p class="cs-item-text">
+              Lorem ipsum dolor sit ameet. Don nisi ligula eget dolor quam et.
+              Aenean massa. Cum sociis Theme natoque penatibus et magnis dis
+              parturient montes.
+            </p>
+            <span class="cs-number">01</span>
+          </div>
+          <h3 class="cs-h3">Granville Project</h3>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a class="cs-link" href="">
+          <div class="cs-info">
+            <picture class="cs-background">
+              <!--Mobile Image-->
+              <source
+                media="(max-width: 600px)"
+                srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/bathroom1.jpg"
+              />
+              <!--Tablet and above Image-->
+              <source
+                media="(min-width: 601px)"
+                srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/bathroom1.jpg"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/bathroom1.jpg"
+                alt="bathroom"
+                width="413"
+                height="450"
+              />
+            </picture>
+            <span class="cs-header">Project 1</span>
+            <p class="cs-item-text">
+              Lorem ipsum dolor sit ameet. Don nisi ligula eget dolor quam et.
+              Aenean massa. Cum sociis Theme natoque penatibus et magnis dis
+              parturient montes.
+            </p>
+            <span class="cs-number">02</span>
+          </div>
+          <h3 class="cs-h3">Granville Project</h3>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a class="cs-link" href="">
+          <div class="cs-info">
+            <picture class="cs-background">
+              <!--Mobile Image-->
+              <source
+                media="(max-width: 600px)"
+                srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/bathroom1.jpg"
+              />
+              <!--Tablet and above Image-->
+              <source
+                media="(min-width: 601px)"
+                srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/bathroom1.jpg"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/bathroom1.jpg"
+                alt="bathroom"
+                width="413"
+                height="450"
+              />
+            </picture>
+            <span class="cs-header">Project 1</span>
+            <p class="cs-item-text">
+              Lorem ipsum dolor sit ameet. Don nisi ligula eget dolor quam et.
+              Aenean massa. Cum sociis Theme natoque penatibus et magnis dis
+              parturient montes.
+            </p>
+            <span class="cs-number">03</span>
+          </div>
+          <h3 class="cs-h3">Granville Project</h3>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Projects          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #projects-604 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 16px - 20px */
+        gap: clamp(1rem, 1.8vw, 1.25rem);
+        row-gap: calc(40 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .cs-info {
+        width: 100%;
+        /* 350px - 450px */
+        min-height: clamp(21.875rem, 34vw, 28.125rem);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        /* 32px - 100px top */
+        /* 16px - 24px left & right */
+        padding: clamp(2rem, 8vw, 6.25rem) clamp(1rem, 1.8vw, 1.5rem)
+          calc(100 / 16 * 1rem);
+        border-radius: calc(8 / 16 * 1rem);
+        /* clips the img tag corners */
+        overflow: hidden;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        position: relative;
+      }
+
+      .cs-link {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        gap: calc(24 / 16 * 1rem);
+        &:hover,
+        &:focus {
+          .cs-header,
+          .cs-item-text {
+            visibility: visible;
+            transform: translateY(0);
+            opacity: 1;
+            height: 100%;
+            transition:
+              transform 0.6s,
+              visibility 0.3s,
+              opacity 0.6s;
+          }
+
+          .cs-number {
+            padding-bottom: calc(15 / 16 * 1rem);
+            &:before {
+              width: calc(800 / 16 * 1rem);
+              height: calc(500 / 16 * 1rem);
+              opacity: 0.9;
+            }
+          }
+
+          .cs-background {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+
+      .cs-header {
+        /* 28px - 40px */
+        font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        height: 0;
+        /* 16px - 24px bottom */
+        margin: 0 0 clamp(1rem, 1.8vw, 1.5rem);
+        color: var(--bodyTextColorWhite);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(calc(40 / 16 * 1rem));
+        transition:
+          transform 0.2s,
+          visibility 0.1s,
+          opacity 0.2s,
+          height 0.4s;
+        transition-delay: 0.1s;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-align: left;
+        width: 100%;
+        max-width: calc(400 / 16 * 1rem);
+        height: 0;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(calc(100 / 16 * 1rem));
+        transition:
+          transform 0.3s,
+          visibility 0.3s,
+          opacity 0.3s,
+          height 0.4s;
+        transition-delay: 0.2s;
+      }
+
+      .cs-number {
+        /* 24px - 32px */
+        font-size: clamp(1.5rem, 2vw, 2rem);
+        /* 60px - 80px */
+        line-height: clamp(3.75rem, 9vw, 5rem);
+        font-weight: 700;
+        width: clamp(3.75rem, 7vw, 5rem);
+        height: clamp(3.75rem, 7vw, 5rem);
+        margin: 0;
+        padding: 0;
+        color: var(--bodyTextColorWhite);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: padding-bottom 0.3s;
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: var(--primary);
+          opacity: 1;
+          position: absolute;
+          display: block;
+          bottom: 0;
+          left: 0;
+          transition:
+            width 0.6s,
+            height 0.6s,
+            opacity 0.3s;
+          z-index: -1;
+        }
+      }
+
+      .cs-h3 {
+        /* 20px - 24px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+        color: var(--headerColor);
+        display: block;
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        /* clips img tag when it scales on hover */
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: transform 0.8s;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #projects-604 {
+      .cs-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cs-flex-group {
+        width: 45%;
+      }
+
+      .cs-text {
+        width: 48vw;
+      }
+
+      .cs-card-group {
+        flex-direction: row;
+        align-items: stretch;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .cs-item {
+        width: clamp(31.86%, 30vw, 32.28%);
+      }
+    }
+  }
+</style>

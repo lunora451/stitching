@@ -1,0 +1,340 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Steps                     --><!-- ============================================ -->
+<section id="steps-1893">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dermatologist1.jpeg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dermatologist1.jpeg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dermatologist1.jpeg"
+          alt="dermatologist"
+          width="324"
+          height="467"
+        />
+      </picture>
+      <img
+        class="cs-graphic cs-brown"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/brown-lines2.svg"
+        alt="graphic"
+        width="100"
+        height="98"
+        aria-hidden="true"
+      />
+      <img
+        class="cs-graphic cs-peach"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/peach-blob.svg"
+        alt="graphic"
+        width="42"
+        height="31"
+        aria-hidden="true"
+      />
+      <img
+        class="cs-graphic cs-leaf"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/leaf-reverse.svg"
+        alt="graphic"
+        width="136"
+        height="171"
+        aria-hidden="true"
+      />
+      <img
+        class="cs-graphic cs-dots"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/beige-dots.svg"
+        alt="graphic"
+        width="159"
+        height="88"
+        aria-hidden="true"
+      />
+      <img
+        class="cs-graphic cs-lines"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/mesh-reverse.svg"
+        alt="graphic"
+        width="150"
+        height="165"
+        aria-hidden="true"
+      />
+    </div>
+    <div class="cs-wrapper">
+      <div class="cs-content">
+        <span class="cs-topper">How to get started</span>
+        <h2 class="cs-title">Simple Steps to Get Our Services</h2>
+      </div>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <span class="cs-number">01</span>
+          <div class="cs-flex">
+            <h3 class="cs-h3">Book an Appointment</h3>
+            <p class="cs-item-text">
+              Aside from seeing patients, Dr. Paul is dedicated to patient
+              advocacy and education on evidence-based medicine in dermatology,
+              especially for skin of color.
+            </p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <span class="cs-number">02</span>
+          <div class="cs-flex">
+            <h3 class="cs-h3">Attend your appointment</h3>
+            <p class="cs-item-text">
+              Aside from seeing patients, Dr. Paul is dedicated to patient
+              advocacy and education on evidence-based medicine in dermatology,
+              especially for skin of color.
+            </p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <span class="cs-number">03</span>
+          <div class="cs-flex">
+            <h3 class="cs-h3">Follow your treatment plan</h3>
+            <p class="cs-item-text">
+              Aside from seeing patients, Dr. Paul is dedicated to patient
+              advocacy and education on evidence-based medicine in dermatology,
+              especially for skin of color.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Steps             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #steps-1893 {
+      padding: var(--sectionPadding);
+      background-color: #f6eddf;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(704 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: calc(32 / 16 * 1rem);
+      }
+
+      .cs-image-group {
+        font-size: min(2.24vw, 0.9rem);
+        width: calc(482 / 16 * 1em);
+        height: calc(616 / 16 * 1em);
+        display: block;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-picture {
+        width: calc(413 / 16 * 1em);
+        height: calc(593 / 16 * 1em);
+        margin-top: calc(24 / 16 * 1em);
+        box-sizing: border-box;
+        background-color: #dab692;
+        overflow: hidden;
+        border: 8px solid #dab692;
+        border-radius: calc(260 / 16 * 1rem);
+        position: absolute;
+        right: 0;
+        z-index: -1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: transform 0.7s;
+        }
+      }
+
+      .cs-graphic {
+        height: auto;
+        position: absolute;
+      }
+
+      .cs-brown {
+        width: calc(165 / 16 * 1em);
+        height: auto;
+        top: calc(20 / 16 * 1em);
+        left: calc(24 / 16 * 1em);
+        z-index: -2;
+        transform: rotate(140deg);
+      }
+
+      .cs-peach {
+        width: calc(69 / 16 * 1em);
+        height: auto;
+        top: calc(16 / 16 * 1em);
+        left: calc(140 / 16 * 1em);
+        transform: rotate(-40deg);
+      }
+
+      .cs-leaf {
+        width: calc(224 / 16 * 1em);
+        height: auto;
+        bottom: calc(0 / 16 * 1em);
+        right: calc(16 / 16 * 1em);
+        z-index: 1;
+      }
+
+      .cs-dots {
+        width: calc(261 / 16 * 1em);
+        height: auto;
+        left: calc(16 / 16 * 1em);
+        bottom: calc(16 / 16 * 1em);
+        z-index: -2;
+      }
+
+      .cs-lines {
+        width: calc(246 / 16 * 1em);
+        right: 0;
+        bottom: calc(0 / 16 * 1em);
+      }
+
+      .cs-wrapper {
+        display: flex;
+        flex-direction: column;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-topper {
+        color: var(--secondary);
+      }
+
+      .cs-title {
+        margin: 0;
+      }
+
+      .cs-card-group {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        align-items: stretch;
+        grid-auto-flow: row;
+        /* 24px - 32px */
+        gap: clamp(1.5rem, 3vw, 2rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        padding-bottom: calc(32 / 16 * 1rem);
+        border-bottom: #ded1bd 1px solid;
+        display: flex;
+        align-items: flex-start;
+        /* 16px - 24px */
+        gap: clamp(1rem, 2vw, 1.5rem);
+        position: relative;
+
+        &:last-of-type {
+          border-bottom: none;
+        }
+      }
+
+      .cs-number {
+        /* 49px - 72px */
+        font-size: clamp(3.0625rem, 6vw, 4.5rem);
+        font-weight: 900;
+        line-height: calc(19 / 16 * 1em);
+        color: var(--primary);
+        opacity: 0.2;
+        display: block;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        font-weight: 700;
+        line-height: calc(18 / 16 * 1em);
+        margin: 0 0 calc(12 / 16 * 1rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-item-text {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: calc(24 / 16 * 1em);
+        text-align: left;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #steps-1893 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        align-items: stretch;
+        /* 48px - 60px */
+        gap: clamp(3rem, 6vw, 3.75rem);
+      }
+
+      .cs-card-group {
+        /* 16px - 32px */
+        gap: clamp(1rem, 3vw, 2rem);
+      }
+
+      .cs-item {
+        flex-direction: row;
+      }
+
+      .cs-image-group {
+        font-size: min(1.5vw, 1rem);
+        height: auto;
+        min-height: calc(616 / 16 * 1em);
+        flex: none;
+        /* sends it to the right in the 2nd position */
+        order: 2;
+      }
+
+      .cs-picture {
+        height: 96.266234%;
+      }
+    }
+  }
+</style>

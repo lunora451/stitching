@@ -1,0 +1,320 @@
+---
+
+---
+
+<!--
+    NOTE: This Stitch has overflow on the bottom of the section and will overlap the section below it in your site. To account for this overlap, add this padding top to the 1024px (64rem) media query for the seciton below it:
+
+    /* 150px - 200px */
+    padding-top: clamp(9.375rem, 16vw, 12.5rem);
+
+    If there is not 1024px media query, create one and add this padding top to the #ID of the section.  This will help it account for the overlap from this section and not look cluttered and cramped */
+--><!-- ============================================ --><!--                    CTA                       --><!-- ============================================ -->
+<section id="promotions-1583">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h2 class="cs-title">
+        Crafted with an unwavering dedication to quality and style
+      </h2>
+      <a href="" class="cs-button-solid">Shop Now</a>
+    </div>
+    <!-- Wrapper in a wrapper div so we can apply overlfow hidden to this div to cut off the overflow on the right edge at 1024px wide and not clip the overflow that hangs over the bottom -->
+    <div class="cs-wrapper">
+      <div class="cs-image-group">
+        <!--Product Image, to get transparent PNG's of your products with a background, we use https://www.remove.bg/ to remove the images. They will come with empty space around them, to remove this empty space, crop your image to only the edges of the actual image. Or open it in GIMP photo editing software, at the top nav click on "Image" then "Crop to content" and this will remove the empty space around the PNG. Then export as a PNG to your project folder and you're done!-->
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/lure3.png"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/lure3.png"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/lure3.png"
+            alt="lure"
+            width="771"
+            height="488"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-price-box">
+          <!--Price Star-->
+          <svg
+            class="cs-star"
+            width="183"
+            height="183"
+            viewBox="0 0 183 183"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M106.942 0.641784L111.509 31.9019L134.192 9.9126L128.875 41.054L157.243 27.1504L142.564 55.1248L173.84 50.6679L151.234 72.7369L182.357 78.1629L154.038 92.1663L181.961 106.944L150.7 111.511L172.69 134.194L141.548 128.878L155.452 157.246L127.478 142.566L131.934 173.842L109.865 151.237L104.439 182.359L90.4361 154.04L75.6582 181.963L71.0912 150.703L48.4081 172.692L53.7246 141.551L25.3566 155.454L40.0361 127.48L8.76008 131.937L31.3656 109.868L0.243131 104.442L28.562 90.4384L0.639466 75.6605L31.8996 71.0936L9.91029 48.4105L41.0517 53.7269L27.1481 25.3589L55.1225 40.0384L50.6655 8.7624L72.7345 31.3679L78.1606 0.245449L92.164 28.5643L106.942 0.641784Z"
+              fill="var(--starColor)"></path>
+          </svg>
+          <span class="cs-price">
+            20%
+            <span class="cs-desc">Off</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/waves.jpg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/waves.jpg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/waves.jpg"
+      alt="waves"
+      width="1920"
+      height="660"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #promotions-1583 {
+      padding: var(--sectionPadding);
+      padding-bottom: 0;
+      position: relative;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(48 / 16 * 1rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        max-width: calc(685 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title {
+        /* 28px - 40px */
+        margin: 0 0 clamp(1.75rem, 3vw, 2.5rem);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(48 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-image-group {
+        /* everything is in ems so we can scale the container down with a font size, resets at tablet */
+        font-size: min(2vw, 0.6em);
+        width: calc(771 / 16 * 1em);
+        height: calc(488 / 16 * 1em);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: -1;
+      }
+
+      .cs-picture {
+        width: calc(771 / 16 * 1em);
+        height: calc(488 / 16 * 1em);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: auto;
+          max-height: calc(488 / 16 * 1em);
+          object-fit: contain;
+        }
+      }
+
+      .cs-price-box {
+        position: absolute;
+        top: calc(80 / 16 * 1em);
+        right: calc(140 / 16 * 1em);
+        transform: rotate(10deg);
+        z-index: 1;
+      }
+
+      .cs-price {
+        /* 20px - 39px */
+        font-size: clamp(1.25rem, 3vw, 2.4375rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        padding: clamp(1.5rem, 3vw, 2rem) clamp(1.5rem, 3vw, 3rem);
+        box-sizing: border-box;
+        color: var(--bodyTextColorWhite);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cs-desc {
+        /* 14px - 25px */
+        font-size: clamp(0.875rem, 2vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        display: block;
+      }
+
+      .cs-star {
+        --starColor: var(--primary);
+
+        width: 125%;
+        height: 125%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        background-blend-mode: multiply;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: #eef9fa;
+          opacity: 0.8;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes img tag act as a background image */
+          object-fit: cover;
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #promotions-1583 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .cs-content {
+        text-align: left;
+        width: 60%;
+        align-items: flex-start;
+      }
+
+      .cs-image-group {
+        /* reset at desktop */
+        font-size: min(0.85vw, 1em);
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #promotions-1583 {
+      .cs-wrapper {
+        width: 100%;
+        /* same height as the image */
+        height: calc(771 / 16 * 1rem);
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* prevents the mouse from interacting with it */
+        pointer-events: none;
+      }
+      .cs-image-group {
+        font-size: min(1.1vw, 1em);
+        margin-left: calc(50 / 16 * 1rem);
+        position: absolute;
+        left: 50%;
+        top: calc(50 / 16 * 1rem);
+      }
+    }
+  }
+</style>

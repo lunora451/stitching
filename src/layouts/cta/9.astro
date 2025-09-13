@@ -1,0 +1,280 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Subscribe                   --><!-- ============================================ -->
+<section id="subscribe-1717">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Subscribe Us</span>
+      <h2 class="cs-title">Subscribe Your Email for Newsletter & Promotion</h2>
+      <p class="cs-text">
+        Nulla dig nissimmi quis neque interdum. An Ohio man allegedly punched
+        his lawyer in the face in court Tuesday upon finding out he was
+        sentenced.
+      </p>
+      <form class="cs-form" name="Contact Form" method="post">
+        <input
+          class="cs-input"
+          type="email"
+          id="cs-email-301-1717"
+          name="find-us"
+          placeholder="Email Address"
+          required
+        />
+        <button class="cs-button-solid cs-submit" type="submit"
+          >Subscribe</button
+        >
+      </form>
+      <!--Graphic-->
+      <img
+        class="cs-floater"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-spiral.svg"
+        alt="graphic"
+        width="1920"
+        height="486"
+        aria-hidden="true"
+      />
+    </div>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people1.jpg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people1.jpg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people1.jpg"
+      alt="people"
+      width="1920"
+      height="486"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Subscribe          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #subscribe-1717 {
+      background-color: #f7f7f7;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1312px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        padding: var(--sectionPadding);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-title {
+        max-width: 20ch;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-input {
+        font-size: calc(16 / 16 * 1rem);
+        width: 100%;
+        height: clamp(2.875rem, 5.5vw, 3.5rem);
+        margin: 0;
+        padding: 0;
+        padding-left: calc(20 / 16 * 1rem);
+        border: none;
+        /* prevents padding from adding to width and height */
+        box-sizing: border-box;
+        display: block;
+        &::placeholder {
+          color: #767676;
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-submit {
+        width: 100%;
+        border: none;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100vw;
+        max-height: calc(400 / 16 * 1rem);
+        display: block;
+        order: -1;
+        position: relative;
+        z-index: 2;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .cs-floater {
+        /* 296px - 450px */
+        width: clamp(18.5rem, 35vw, 28.125rem);
+        height: auto;
+        mix-blend-mode: soft-light;
+        position: absolute;
+        right: calc(-129 / 16 * 1rem);
+        top: calc(-150 / 16 * 1rem);
+        z-index: -1;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #subscribe-1717 {
+      flex-direction: row;
+      align-items: stretch;
+
+      .cs-container {
+        max-width: calc(1312 / 16 * 1rem);
+        align-items: flex-end;
+      }
+
+      .cs-content {
+        width: 45vw;
+        max-width: calc(630 / 16 * 1rem);
+      }
+
+      .cs-background {
+        width: 50%;
+        max-height: 100%;
+        height: 100%;
+        position: absolute;
+        right: 50%;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #subscribe-1717 {
+      .cs-content {
+        /* remove the positioning so the cs-floater is now absolutely positioned to the nearest parent that has a declared position relative, which is the section parent */
+        position: initial;
+      }
+
+      .cs-form {
+        flex-direction: row;
+      }
+
+      .cs-button-solid {
+        width: auto;
+      }
+
+      .cs-floater {
+        top: 50%;
+        right: calc(-200 / 16 * 1rem);
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #subscribe-1717 {
+      .cs-content {
+        width: 100%;
+      }
+
+      .cs-background {
+        margin-right: calc(118 / 16 * 1rem);
+      }
+    }
+  }
+</style>

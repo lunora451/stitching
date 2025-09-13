@@ -1,0 +1,352 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Meet The Team                 --><!-- ============================================ -->
+<section id="meet-2419">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Meet the Team</span>
+      <h2 class="cs-title">The Faces Behind the Work</h2>
+      <p class="cs-text">
+        Our friendly, hardworking team is passionate about keeping your property
+        clean and safe. We’re reliable, approachable, and treat every yard with
+        the same care we would our own.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <div class="cs-image-group">
+          <!--Noise Graphic Download from the CDN and change the background color of the svg to match your branding color-->
+          <img
+            class="cs-graphic"
+            aria-hidden="true"
+            decoding="async"
+            src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/dog-circle.svg"
+            width="413"
+            height="413"
+            alt="noise graphic"
+          />
+          <!--Member-->
+          <picture class="cs-picture">
+            <source
+              media="(max-width: 600px)"
+              srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/people5.png"
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/people5.png"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/people5.png"
+              alt="member"
+              width="413"
+              height="424"
+              aria-hidden="true"
+            />
+          </picture>
+        </div>
+        <div class="cs-flex">
+          <span class="cs-name">Selina Torres</span>
+          <span class="cs-job">Client Care Coordinator</span>
+        </div>
+      </li>
+      <li class="cs-item">
+        <div class="cs-image-group">
+          <!--Noise Graphic-->
+          <img
+            class="cs-graphic"
+            aria-hidden="true"
+            decoding="async"
+            src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/dog-circle.svg"
+            width="413"
+            height="413"
+            alt="noise graphic"
+          />
+          <!--Member-->
+          <picture class="cs-picture">
+            <source
+              media="(max-width: 600px)"
+              srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/people6.png"
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/people6.png"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/people6.png"
+              alt="member"
+              width="413"
+              height="424"
+              aria-hidden="true"
+            />
+          </picture>
+        </div>
+        <div class="cs-flex">
+          <span class="cs-name">Marcus Reid</span>
+          <span class="cs-job">Lead Field Technician</span>
+        </div>
+      </li>
+      <li class="cs-item">
+        <div class="cs-image-group">
+          <!--Noise Graphic-->
+          <img
+            class="cs-graphic"
+            aria-hidden="true"
+            decoding="async"
+            src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/dog-circle.svg"
+            width="413"
+            height="413"
+            alt="noise graphic"
+          />
+          <!--Member-->
+          <picture class="cs-picture">
+            <source
+              media="(max-width: 600px)"
+              srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/people7.png"
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/people7.png"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/people7.png"
+              alt="member"
+              width="413"
+              height="424"
+              aria-hidden="true"
+            />
+          </picture>
+        </div>
+        <div class="cs-flex">
+          <span class="cs-name">Jamal Brooks</span>
+          <span class="cs-job">Sanitation & Safety Specialist</span>
+        </div>
+      </li>
+    </ul>
+    <a href="" class="cs-button-solid">Meet Full Team</a>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---            Meet            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #meet-2419 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        /* background color */
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: var(--primary);
+        opacity: 0.05;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .cs-container {
+        text-align: center;
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(704 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title {
+        max-width: 25ch;
+      }
+
+      .cs-text {
+        max-width: calc(746 / 16 * 1rem);
+      }
+
+      .cs-button-solid {
+        //responsive gradient button color adapts to unique branding color changes
+        --gradientmix: color-mix(in lab, var(--primary), black 49%);
+
+        font-size: calc(16 / 16 * 1rem);
+        line-height: clamp(calc(46 / 16 * 1rem), 5.5vw, calc(56 / 16 * 1rem));
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        color: #fff;
+        white-space: nowrap;
+        margin: 0;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(28 / 16 * 1rem);
+        background-color: var(--primary);
+        background-image: -moz-linear-gradient(
+          top,
+          rgba(0, 0, 0, 0) 0%,
+          var(--gradientmix) 99%
+        );
+        background-image: -webkit-linear-gradient(
+          top,
+          rgba(0, 0, 0, 0) 0%,
+          var(--gradientmix) 99%
+        );
+        background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 0%,
+          var(--gradientmix) 99%
+        );
+        border-radius: calc(100 / 16 * 1rem);
+        overflow: hidden;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          border-radius: calc(4 / 16 * 1rem);
+          background: var(--secondary);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+          opacity: 1;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 1.5vw, 1.25rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        grid-column: span 12;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: calc(20 / 16 * 1rem);
+        position: relative;
+
+        &:hover {
+          .cs-name {
+            color: var(--primary);
+          }
+        }
+      }
+
+      .cs-image-group {
+        width: 100%;
+        /* switches to clamp at tablet */
+        height: 58vw;
+        overflow: hidden;
+        display: block;
+        position: relative;
+      }
+
+      .cs-graphic {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        /* 40px - 60px */
+        top: clamp(2.5rem, 4vw, 3.75rem);
+        left: 0;
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .cs-name {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 1.9vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 calc(4 / 16 * 1rem);
+        color: var(--headerColor);
+        display: block;
+        transition: color 0.3s;
+      }
+
+      .cs-job {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--bodyTextColor);
+        display: block;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #meet-2419 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        align-items: flex-start;
+      }
+
+      .cs-item {
+        grid-column: span 4;
+      }
+
+      .cs-image-group {
+        /* 142px - 263px */
+        height: clamp(8.875rem, 19vw, 16.4375rem);
+      }
+    }
+  }
+</style>

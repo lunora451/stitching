@@ -1,0 +1,323 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Side By Side                 --><!-- ============================================ -->
+<section id="RPsbs-252">
+  <div class="cs-container">
+    <!-- Left Image Section -->
+    <picture class="cs-picture">
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/mountains.jpg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/mountains.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/mountains.jpg"
+        alt="hiker"
+        width="522"
+        height="522"
+        aria-hidden="true"
+      />
+    </picture>
+    <!-- Right Content Section-->
+    <div class="cs-content">
+      <span class="cs-topper">What’s Next?</span>
+      <h2 class="cs-title">Explore the Mountain</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Nunc lobortis mattis
+        aliquam faucibus purus in. Diam ut venenatis tellus in metus vulputate
+        eu. Massa vitae tortor condimentum lacinia quis vel eros donec ac.
+      </p>
+      <a
+        class="cs-button-solid"
+        aria-label="learn more about our programs"
+        href="">Learn More</a
+      >
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="RPsbsr-252">
+  <div class="cs-container">
+    <!-- Left Image Section -->
+    <picture class="cs-picture">
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/mountains.jpg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/mountains.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/mountains.jpg"
+        alt="hiker"
+        width="522"
+        height="522"
+        aria-hidden="true"
+      />
+    </picture>
+    <!-- Right Content Section-->
+    <div class="cs-content">
+      <span class="cs-topper">What’s Next?</span>
+      <h2 class="cs-title">Explore the Mountain</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Nunc lobortis mattis
+        aliquam faucibus purus in. Diam ut venenatis tellus in metus vulputate
+        eu. Massa vitae tortor condimentum lacinia quis vel eros donec ac.
+      </p>
+      <a
+        class="cs-button-solid"
+        aria-label="learn more about our programs"
+        href="">Learn More</a
+      >
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #RPsbs-252,
+    #RPsbsr-252 {
+      /* set padding top to 0 if the section above it is another white background section, same for padding bottom. We added the padding here in case this section gets placed above or below sections with full background colors.  Without this padding, the top of this sections color portion will be touching the neighboring section edge and it looks bad */
+      padding: var(--sectionPadding);
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px on tablet */
+        max-width: calc(550 / 16 * 1rem);
+        padding: var(--sectionPadding);
+        margin: auto;
+        background: linear-gradient(
+          90deg,
+          rgba(241, 241, 244, 0) 0%,
+          #f1f1f4 100%
+        );
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+
+        &:before {
+          /* Bottom Line */
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: rgb(180, 178, 199);
+          background: linear-gradient(
+            270deg,
+            rgba(180, 178, 199, 1) 0%,
+            rgba(250, 251, 252, 0.005) 0%,
+            rgba(180, 178, 199, 1) 100%
+          );
+          opacity: 1;
+          position: absolute;
+          display: block;
+          bottom: 0;
+          right: 0;
+          /* flips it horizontally */
+          transform: scaleX(-1);
+        }
+
+        &:after {
+          /* Right Line */
+          content: "";
+          width: 1px;
+          height: 100%;
+          background: rgb(180, 178, 199);
+          background: linear-gradient(
+            180deg,
+            rgba(180, 178, 199, 1) 0%,
+            rgba(250, 251, 252, 0.005) 0%,
+            rgba(180, 178, 199, 1) 100%
+          );
+          opacity: 1;
+          position: absolute;
+          display: block;
+          bottom: 0;
+          right: 0;
+        }
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: calc(434 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-picture {
+        width: 100%;
+        max-width: calc(522 / 16 * 1rem);
+        margin: 0;
+        border: 1px solid var(--primary);
+        position: relative;
+        display: block;
+        /* width divided by height */
+        aspect-ratio: 1/1;
+        /* prevents border from adding to height and width */
+        box-sizing: border-box;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #RPsbs-252,
+    #RPsbsr-252 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cs-picture {
+        /* 415px - 522px */
+        height: clamp(25.9375rem, 40.5vw, 32.625rem);
+        width: 50%;
+        flex: none;
+      }
+
+      .cs-content {
+        max-width: calc(528 / 16 * 1rem);
+        margin: 0;
+        width: 45%;
+      }
+    }
+  }
+
+  /*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #RPsbsr-252 {
+      padding: var(--sectionPadding);
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
+      .cs-container {
+        background: linear-gradient(
+          90deg,
+          #f1f1f4 0%,
+          rgba(241, 241, 244, 0) 100%
+        );
+        &:before {
+          background: rgb(180, 178, 199);
+          background: linear-gradient(
+            270deg,
+            rgba(180, 178, 199, 1) 0%,
+            rgba(250, 251, 252, 0.005) 0%,
+            rgba(180, 178, 199, 1) 100%
+          );
+          transform: scaleX(1);
+        }
+
+        &:after {
+          left: 0;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #RPsbsr-252 {
+      .cs-picture {
+        margin: 0;
+        /* sends it to the right in the 2nd position */
+        order: 2;
+      }
+    }
+  }
+</style>

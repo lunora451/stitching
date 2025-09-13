@@ -1,0 +1,371 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Side By Side                 --><!-- ============================================ -->
+<section id="sbs-246">
+  <div class="cs-container">
+    <!-- Left Image Section -->
+    <picture class="cs-picture">
+      <source
+        media="(max-width: 600px)"
+        srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/hiking.jpg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/hiking.jpg"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/hiking.jpg"
+        alt="hiker"
+        width="434"
+        height="434"
+        aria-hidden="true"
+      />
+    </picture>
+    <!-- Right Content Section-->
+    <div class="cs-content">
+      <span class="cs-topper">Mountain Hiking Society</span>
+      <h2 class="cs-title">Explore the World with Exciting People</h2>
+      <p class="cs-text">
+        Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius.
+        Nibh tortor id aliquet lectus proin nibh condimentum.
+      </p>
+      <a
+        class="cs-button-solid"
+        aria-label="learn more about our programs"
+        href="">Learn More</a
+      >
+    </div>
+    <!-- Creates the faded lines on tablet -->
+    <span aria-hidden="true" class="cs-lines"></span>
+  </div>
+  <!-- Background Image -->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.digitaloceanspaces.com/Hero/Background-m.jpg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.digitaloceanspaces.com/Hero/Background.jpg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.digitaloceanspaces.com/Hero/Background.jpg"
+      alt="mountains"
+      width="2250"
+      height="1500"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-246 {
+      padding: 0 calc(16 / 16 * 1em);
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px on tablet */
+        max-width: calc(550 / 16 * 1rem);
+        padding: var(--sectionPadding);
+        padding-left: 0;
+        padding-right: 0;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 108px */
+        gap: clamp(3rem, 8vw, 6.75rem);
+        position: relative;
+
+        &:before {
+          /* Left Line */
+          content: "";
+          width: 1px;
+          height: 100%;
+          background: linear-gradient(
+            top,
+            rgba(250, 251, 252, 0.5) 0%,
+            rgba(250, 251, 252, 0) 100%
+          );
+          background: -webkit-linear-gradient(
+            top,
+            rgba(250, 251, 252, 0.5) 0%,
+            rgba(250, 251, 252, 0) 100%
+          ); /* Chrome10-25,Safari5.1-6 */
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+        }
+
+        &:after {
+          /* Right Line */
+          content: "";
+          width: 1px;
+          height: 100%;
+          background: -moz-linear-gradient(
+            top,
+            rgba(250, 251, 252, 0.5) 0%,
+            rgba(250, 251, 252, 0) 100%
+          ); /* FF3.6-15 */
+          background: -webkit-linear-gradient(
+            top,
+            rgba(250, 251, 252, 0.5) 0%,
+            rgba(250, 251, 252, 0) 100%
+          ); /* Chrome10-25,Safari5.1-6 */
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          right: 0;
+          /* flips vertically */
+          transform: scaleY(-1);
+        }
+      }
+
+      .cs-lines {
+        display: none;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        /* changes at tablet */
+        max-width: calc(434 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        max-width: 20ch;
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+        &:last-of-type {
+          margin-bottom: calc(32 / 16 * 1rem);
+        }
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-picture {
+        width: 100%;
+        max-width: calc(434 / 16 * 1rem);
+        margin: 0;
+        border: 1px solid #f1f1f4;
+        position: relative;
+        display: block;
+        /* width divided by height */
+        aspect-ratio: 1/1;
+        /* prevents border from adding to height and width */
+        box-sizing: border-box;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .cs-background {
+        /* Background Image */
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+
+        &:before {
+          /* Black Color Overlay */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: #000;
+          opacity: 0.6;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          /* prevents the cursor from interacting with it */
+          pointer-events: none;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes image act like a background-image */
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbs-246 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cs-lines {
+        height: 100%;
+        width: 35%;
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+
+        &:before {
+          /* Right Line */
+          content: "";
+          width: 1px;
+          height: 100%;
+          background: -moz-linear-gradient(
+            top,
+            rgba(250, 251, 252, 0.5) 0%,
+            rgba(250, 251, 252, 0) 100%
+          ); /* FF3.6-15 */
+          background: -webkit-linear-gradient(
+            top,
+            rgba(250, 251, 252, 0.5) 0%,
+            rgba(250, 251, 252, 0) 100%
+          ); /* Chrome10-25,Safari5.1-6 */
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          /* flips vertically */
+          transform: scaleY(-1);
+        }
+
+        &:after {
+          /* Right Line */
+          content: "";
+          width: 1px;
+          height: 100%;
+          background: -moz-linear-gradient(
+            top,
+            rgba(250, 251, 252, 0.5) 0%,
+            rgba(250, 251, 252, 0) 100%
+          ); /* FF3.6-15 */
+          background: -webkit-linear-gradient(
+            top,
+            rgba(250, 251, 252, 0.5) 0%,
+            rgba(250, 251, 252, 0) 100%
+          ); /* Chrome10-25,Safari5.1-6 */
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0;
+          right: 0;
+          /* flips vertically */
+          transform: scaleY(-1);
+        }
+      }
+
+      .cs-picture {
+        /* 344px - 434px */
+        width: clamp(21.5rem, 37.5vw, 27.125rem);
+        flex: none;
+      }
+
+      .cs-content {
+        max-width: calc(542 / 16 * 1rem);
+        margin: 0;
+        width: 45%;
+      }
+    }
+  }
+
+  /* Desktop - 1300px (Parallax Effect) */
+  @media only screen and (min-width: 81.25rem) {
+    #sbs-246 {
+      background: url("https://csimg.nyc3.digitaloceanspaces.com/Hero/Background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      /* creates the parallax effect */
+      background-attachment: fixed;
+
+      .cs-background {
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+</style>

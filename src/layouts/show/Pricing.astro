@@ -1,0 +1,239 @@
+---
+import Pricing1 from "../pricing/1.astro";
+import Pricing2 from "../pricing/2.astro";
+import Pricing3 from "../pricing/3.astro";
+import Pricing4 from "../pricing/4.astro";
+import Pricing5 from "../pricing/5.astro";
+import Pricing6 from "../pricing/6.astro";
+import Pricing7 from "../pricing/7.astro";
+import Pricing8 from "../pricing/8.astro";
+import Pricing9 from "../pricing/9.astro";
+import Pricing10 from "../pricing/10.astro";
+import Pricing11 from "../pricing/11.astro";
+import Pricing12 from "../pricing/12.astro";
+import Pricing13 from "../pricing/13.astro";
+import Pricing14 from "../pricing/14.astro";
+import Pricing15 from "../pricing/15.astro";
+import Pricing16 from "../pricing/16.astro";
+import Pricing17 from "../pricing/17.astro";
+import Pricing18 from "../pricing/18.astro";
+import Pricing19 from "../pricing/19.astro";
+import Pricing20 from "../pricing/20.astro";
+import Pricing21 from "../pricing/21.astro";
+import Pricing22 from "../pricing/22.astro";
+import Pricing23 from "../pricing/23.astro";
+import Pricing24 from "../pricing/24.astro";
+import Pricing25 from "../pricing/25.astro";
+import Pricing26 from "../pricing/26.astro";
+import Pricing27 from "../pricing/27.astro";
+import Pricing28 from "../pricing/28.astro";
+import Pricing29 from "../pricing/29.astro";
+import Pricing30 from "../pricing/30.astro";
+import Pricing31 from "../pricing/31.astro";
+import Pricing32 from "../pricing/32.astro";
+import Pricing33 from "../pricing/33.astro";
+import Pricing34 from "../pricing/34.astro";
+---
+
+<div class="c-collection">
+  <div class="c-pricing" data-value-pricing="1">
+    <Pricing1 />
+  </div>
+  <div class="c-pricing" data-value-pricing="2">
+    <Pricing2 />
+  </div>
+  <div class="c-pricing" data-value-pricing="3">
+    <Pricing3 />
+  </div>
+  <div class="c-pricing" data-value-pricing="4">
+    <Pricing4 />
+  </div>
+  <div class="c-pricing" data-value-pricing="5">
+    <Pricing5 />
+  </div>
+  <div class="c-pricing" data-value-pricing="6">
+    <Pricing6 />
+  </div>
+  <div class="c-pricing" data-value-pricing="7">
+    <Pricing7 />
+  </div>
+  <div class="c-pricing" data-value-pricing="8">
+    <Pricing8 />
+  </div>
+  <div class="c-pricing" data-value-pricing="9">
+    <Pricing9 />
+  </div>
+  <div class="c-pricing" data-value-pricing="10">
+    <Pricing10 />
+  </div>
+  <div class="c-pricing" data-value-pricing="11">
+    <Pricing11 />
+  </div>
+  <div class="c-pricing" data-value-pricing="12">
+    <Pricing12 />
+  </div>
+  <div class="c-pricing" data-value-pricing="13">
+    <Pricing13 />
+  </div>
+  <div class="c-pricing" data-value-pricing="14">
+    <Pricing14 />
+  </div>
+  <div class="c-pricing" data-value-pricing="15">
+    <Pricing15 />
+  </div>
+  <div class="c-pricing" data-value-pricing="16">
+    <Pricing16 />
+  </div>
+  <div class="c-pricing" data-value-pricing="17">
+    <Pricing17 />
+  </div>
+  <div class="c-pricing" data-value-pricing="18">
+    <Pricing18 />
+  </div>
+  <div class="c-pricing" data-value-pricing="19">
+    <Pricing19 />
+  </div>
+  <div class="c-pricing" data-value-pricing="20">
+    <Pricing20 />
+  </div>
+  <div class="c-pricing" data-value-pricing="21">
+    <Pricing21 />
+  </div>
+  <div class="c-pricing" data-value-pricing="22">
+    <Pricing22 />
+  </div>
+  <div class="c-pricing" data-value-pricing="23">
+    <Pricing23 />
+  </div>
+  <div class="c-pricing" data-value-pricing="24">
+    <Pricing24 />
+  </div>
+  <div class="c-pricing" data-value-pricing="25">
+    <Pricing25 />
+  </div>
+  <div class="c-pricing" data-value-pricing="26">
+    <Pricing26 />
+  </div>
+  <div class="c-pricing" data-value-pricing="27">
+    <Pricing27 />
+  </div>
+  <div class="c-pricing" data-value-pricing="28">
+    <Pricing28 />
+  </div>
+  <div class="c-pricing" data-value-pricing="29">
+    <Pricing29 />
+  </div>
+  <div class="c-pricing" data-value-pricing="30">
+    <Pricing30 />
+  </div>
+  <div class="c-pricing" data-value-pricing="31">
+    <Pricing31 />
+  </div>
+  <div class="c-pricing" data-value-pricing="32">
+    <Pricing32 />
+  </div>
+  <div class="c-pricing" data-value-pricing="33">
+    <Pricing33 />
+  </div>
+  <div class="c-pricing" data-value-pricing="34">
+    <Pricing34 />
+  </div>
+</div>
+
+<style lang="scss">
+  .c-collection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .c-pricing {
+    display: none;
+  }
+  .active {
+    width: 100%;
+    display: block;
+  }
+</style>
+
+<script>
+  function changeCollection(selectedValue) {
+    const collections = document.querySelectorAll(".c-pricing");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none" est sélectionné, ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection sélectionnée
+    const targetCollection = document.querySelector(
+      `[data-value-pricing="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  // Fonction pour le hover des options
+  function previewOnHover(selectedValue) {
+    const collections = document.querySelectorAll(".c-pricing");
+
+    // Retirer active de toutes les collections
+    collections.forEach((collection) => {
+      collection.classList.remove("active");
+    });
+
+    // Si "none", ne rien afficher
+    if (selectedValue === "none") {
+      return;
+    }
+
+    // Afficher la collection en preview
+    const targetCollection = document.querySelector(
+      `[data-value-pricing="${selectedValue}"]`
+    );
+    if (targetCollection) {
+      targetCollection.classList.add("active");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const select = document.getElementById("template-select-pricing");
+    const collections = document.querySelectorAll(".c-pricing");
+
+    if (!select) return;
+
+    select.addEventListener("change", function () {
+      const selectedValue = this.value;
+      changeCollection(selectedValue);
+    });
+
+    // Alternative pour navigateur qui ne supportent pas mouseover sur option
+    let isSelectOpen = false;
+
+    select.addEventListener("focus", function () {
+      isSelectOpen = true;
+    });
+
+    select.addEventListener("blur", function () {
+      isSelectOpen = false;
+      // Revenir à la valeur sélectionnée quand on ferme
+      changeCollection(this.value);
+    });
+
+    // Navigation avec les flèches
+    select.addEventListener("keydown", function (e) {
+      if (isSelectOpen && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
+        setTimeout(() => {
+          // Simuler le hover sur l'option "focusée"
+          const currentValue = this.value;
+          previewOnHover(currentValue);
+        }, 10);
+      }
+    });
+  });
+</script>

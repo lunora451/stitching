@@ -1,0 +1,330 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Gallery                     --><!-- ============================================ -->
+<section id="gallery-483">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Gallery</span>
+      <h2 class="cs-title">See Our Gallery Collections</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut.
+      </p>
+      <a href="" class="cs-cta">
+        <!--Arrow Right-->
+        <svg
+          class="cs-arrow"
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          ><path
+            fill="#FAFBFC"
+            d="M24.55 31.367c-.317 0-.633-.117-.883-.367a1.258 1.258 0 0 1 0-1.767L32.9 20l-9.233-9.233a1.258 1.258 0 0 1 0-1.767 1.258 1.258 0 0 1 1.766 0L35.55 19.117a1.258 1.258 0 0 1 0 1.766L25.433 31c-.25.25-.566.367-.883.367Z"
+          ></path><path
+            fill="#FAFBFC"
+            d="M34.383 21.25H6.333A1.26 1.26 0 0 1 5.083 20c0-.683.567-1.25 1.25-1.25h28.05c.684 0 1.25.567 1.25 1.25a1.26 1.26 0 0 1-1.25 1.25Z"
+          ></path></svg
+        >
+        <!--Wrapped in a span so it can be animated-->
+        <span class="cs-cta-text">Discover<br /> More</span>
+      </a>
+      <picture class="cs-content-picture">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves2.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves2.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves2.jpg"
+          alt="yard"
+          width="630"
+          height="532"
+        />
+      </picture>
+    </div>
+    <div class="cs-grid">
+      <picture class="cs-picture cs-picture1">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves2.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves2.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves2.jpg"
+          alt="yard"
+          width="305"
+          height="522"
+        />
+      </picture>
+      <picture class="cs-picture cs-picture2">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves2.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves2.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves2.jpg"
+          alt="yard"
+          width="305"
+          height="348"
+        />
+      </picture>
+      <picture class="cs-picture cs-picture3">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves2.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves2.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves2.jpg"
+          alt="yard"
+          width="305"
+          height="387"
+        />
+      </picture>
+      <picture class="cs-picture cs-picture4">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves2.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves2.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/leaves2.jpg"
+          alt="yard"
+          width="305"
+          height="483"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Gallery           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #gallery-483 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 8px - 20px */
+        gap: clamp(0.5rem, 2vw, 1.25rem);
+      }
+      .cs-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        /* 48px - 64px */
+        margin-bottom: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-cta {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1.25rem);
+        text-decoration: none;
+        /* 16px - 20px */
+        text-align: center;
+        /* 141px - 224px */
+        width: clamp(8.8125rem, 17vw, 14rem);
+        height: clamp(8.8125rem, 17vw, 14rem);
+        margin: 0 auto 0 0;
+        /* 141px - 224px */
+        /* copied the same height clamp and multiplied it by -.5 so the value is negtaive and half the vlaue of height so we cna make it overlap by 50% its height */
+        margin-bottom: calc(clamp(8.8125rem, 17vw, 14rem) * -0.5);
+        background-color: var(--primary);
+        color: var(--bodyTextColorWhite);
+        /* prevents border from affecting height and width */
+        box-sizing: border-box;
+        border: clamp(12px, 3vw, 20px) solid #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        align-self: flex-end;
+        position: relative;
+        z-index: 10;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #14142b;
+          .cs-arrow {
+            transform: translateX(3.75rem);
+            opacity: 0;
+          }
+          .cs-cta-text {
+            transform: translateY(-0.9375rem);
+          }
+        }
+      }
+
+      .cs-arrow {
+        width: calc(40 / 16 * 1rem);
+        height: auto;
+        transition:
+          transform 0.3s,
+          opacity 0.3s;
+      }
+
+      .cs-cta-text {
+        transition: transform 0.3s;
+      }
+
+      .cs-content-picture {
+        width: 100%;
+        height: calc(310 / 16 * 1rem);
+        border-radius: calc(12 / 16 * 1rem);
+        /* clips the img corners */
+        overflow: hidden;
+        display: block;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* makes it behave like a background image */
+          object-fit: cover;
+        }
+      }
+
+      .cs-grid {
+        width: 100%;
+        display: grid;
+        /* 12 so we can have rows of 3 and rows with 2 50/50 images */
+        grid-template-columns: repeat(12, 1fr);
+        /* 8px - 20px */
+        grid-gap: clamp(0.5rem, 2vw, 1.25rem);
+        grid-template-rows: repeat(20, 1fr);
+      }
+
+      .cs-picture {
+        border-radius: calc(8 / 16 * 1rem);
+        /* clips corners of img tags */
+        overflow: hidden;
+        position: relative;
+        display: block;
+
+        img {
+          width: 100%;
+          height: 100%;
+          /* makes image behave like a background image */
+          object-fit: cover;
+        }
+      }
+
+      .cs-picture1 {
+        grid-column: 1 / 7;
+        grid-row: 1 / 12;
+      }
+      .cs-picture2 {
+        grid-column: 7 / 13;
+        grid-row: 1 / 14;
+      }
+      .cs-picture3 {
+        grid-column: 1 / 7;
+        grid-row: 12 / 21;
+      }
+      .cs-picture4 {
+        grid-column: 7 / 13;
+        grid-row: 14 / 21;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #gallery-483 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+      }
+
+      .cs-content {
+        max-width: calc(630 / 16 * 1rem);
+        justify-content: flex-end;
+      }
+
+      .cs-text {
+        width: 85%;
+      }
+
+      .cs-grid {
+        width: 50%;
+        max-width: calc(630 / 16 * 1rem);
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-content-picture {
+        /* 229px - 532px */
+        height: clamp(14.3125rem, 38vw, 33.25rem);
+        aspect-ratio: 1.18;
+      }
+
+      .cs-picture1 {
+        grid-column: 1 / 7;
+        grid-row: 1 / 13;
+      }
+      .cs-picture2 {
+        grid-column: 7 / 13;
+        grid-row: 1 / 9;
+      }
+      .cs-picture3 {
+        grid-column: 1 / 7;
+        grid-row: 13 / 21;
+      }
+      .cs-picture4 {
+        grid-column: 7 / 13;
+        grid-row: 9 / 21;
+      }
+    }
+  }
+</style>

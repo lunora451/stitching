@@ -1,0 +1,423 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Footer                     --><!-- ============================================ -->
+<footer id="cs-footer-1762">
+  <div class="cs-container">
+    <!-- Logo Group -->
+    <div class="cs-logo-group">
+      <a aria-label="go back to home" class="cs-logo" href="">
+        <img
+          class="cs-logo-img"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-logo-horizontal.png"
+          alt="logo"
+          width="240"
+          height="32"
+        />
+      </a>
+      <p class="cs-text">
+        Welcome to Stitch Fitness! We believe that true wellness encompasses the
+        mind, body & soul. We are here to support and guide you every step of
+        the way.
+      </p>
+      <div class="cs-contact">
+        <div class="cs-contact-info">
+          <span class="cs-topper">Call us anytime</span>
+          <a href="" class="cs-contact-link">+123 458 789412</a>
+        </div>
+        <div class="cs-contact-info">
+          <span class="cs-topper">Visit our location</span>
+          <a href="" class="cs-contact-link"
+            >17110 116th Ave SE Unit Renton, WA 38058-5055</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- Links -->
+    <div class="cs-ul-wrapper">
+      <span class="cs-header">Our Services</span>
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <a class="cs-link" href="">Personal Training</a>
+        </li>
+        <li class="cs-li">
+          <a class="cs-link" href="">Group Workout</a>
+        </li>
+        <li class="cs-li">
+          <a class="cs-link" href="">Muscle Building</a>
+        </li>
+        <li class="cs-li">
+          <a class="cs-link" href="">Virtual Gym Training</a>
+        </li>
+        <li class="cs-li">
+          <a class="cs-link" href="">Weightloss Training</a>
+        </li>
+        <li class="cs-li">
+          <a class="cs-link" href="">Body Stretching</a>
+        </li>
+      </ul>
+    </div>
+    <div class="cs-ul-wrapper">
+      <span class="cs-header">Useful Links</span>
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <a class="cs-link" href="">About Stitch Gym</a>
+        </li>
+        <li class="cs-li">
+          <a class="cs-link" href="">Membership Details</a>
+        </li>
+        <li class="cs-li">
+          <a class="cs-link" href="">Class Timetable</a>
+        </li>
+        <li class="cs-li">
+          <a class="cs-link" href="">Our Expert Trainers</a>
+        </li>
+        <li class="cs-li">
+          <a class="cs-link" href="">Upcoming Events</a>
+        </li>
+        <li class="cs-li">
+          <a class="cs-link" href="">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <table class="cs-table">
+      <tbody>
+        <tr>
+          <th scope="row">Monday</th>
+          <td>9.00am - 11.00am</td>
+        </tr>
+        <tr>
+          <th scope="row">Tuesday</th>
+          <td>9.00am - 11.00am</td>
+        </tr>
+        <tr>
+          <th scope="row">Wednesday</th>
+          <td>9.00am - 11.00am</td>
+        </tr>
+        <tr>
+          <th scope="row">Thursday</th>
+          <td>9.00am - 11.00am</td>
+        </tr>
+        <tr>
+          <th scope="row">Friday</th>
+          <td>9.00am - 11.00am</td>
+        </tr>
+        <tr>
+          <th scope="row">Saturday</th>
+          <td>9.00am - 11.00am</td>
+        </tr>
+        <tr>
+          <th scope="row">Sunday</th>
+          <td>9.00am - 11.00am</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="cs-bottom">
+    <span class="cs-credit">
+      © Copyright 2024 - <a href="" class="cs-credit-link" target="_blank"
+        >Stitch Gym</a
+      >
+    </span>
+    <div class="cs-bottom-links">
+      <a href="" class="cs-bottom-link">Terms & Conditions</a>
+      <a href="" class="cs-bottom-link">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Footer            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #cs-footer-1762 {
+      padding: var(--sectionPadding);
+      /* 30px - 50px */
+      padding-bottom: clamp(1.875rem, 5vw, 3.125rem);
+
+      .cs-container {
+        width: 100%;
+        /* reset on tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        /* 32px - 48px */
+        gap: clamp(2rem, 7vw, 3rem);
+      }
+
+      .cs-logo-group {
+        /* takes up all the space, lets the other ul's wrap below it */
+        width: 100%;
+        position: relative;
+      }
+
+      .cs-logo {
+        width: calc(210 / 16 * 1rem);
+        height: auto;
+        margin: 0 0 calc(16 / 16 * 1rem) 0;
+        display: block;
+      }
+
+      .cs-text {
+        max-width: calc(704 / 16 * 1rem);
+        /* 24px - 40px */
+        margin: 0 0 clamp(1.5rem, 4vw, 2.5rem);
+        opacity: 0.8;
+      }
+
+      .cs-logo-img {
+        width: 100%;
+        height: auto;
+      }
+
+      .cs-contact {
+        display: flex;
+        flex-direction: column;
+        gap: calc(32 / 16 * 1rem);
+      }
+
+      .cs-topper {
+        font-size: calc(16 / 16 * 1rem);
+        margin-bottom: calc(4 / 16 * 1rem);
+      }
+
+      .cs-contact-link {
+        font-size: calc(20 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-decoration: none;
+        color: var(--headerColor);
+      }
+
+      .cs-header {
+        font-size: calc(25 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.5em;
+        /* 16px - 24px */
+        margin: 0 0 clamp(1rem, 4vw, 1.5rem) 0;
+        color: var(--headerColor);
+        display: block;
+        position: relative;
+      }
+
+      .cs-ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-li {
+        list-style: none;
+      }
+
+      .cs-link {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        text-align: left;
+        text-decoration: none;
+        color: var(--bodyTextColor);
+        display: inline-flex;
+        align-items: flex-start;
+        gap: calc(8 / 16 * 1rem);
+        transition: color 0.3s;
+
+        &:hover {
+          color: var(--primaryLight);
+        }
+      }
+
+      .cs-bottom {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        /* 60px - 80px */
+        margin: clamp(3.75rem, 7vw, 5rem) auto 0;
+        padding-top: calc(24 / 16 * 1rem);
+        border-top: 1px solid #e8e8e8;
+        display: flex;
+        flex-wrap: wrap;
+        gap: calc(12 / 16 * 1rem);
+      }
+
+      .cs-credit,
+      .cs-bottom-link,
+      .cs-credit-link {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        text-decoration: none;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-credit {
+        width: 100%;
+      }
+
+      .cs-credit-link {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        text-decoration: none;
+        width: auto;
+        margin: 0;
+        display: inline-block;
+        position: relative;
+
+        &:hover {
+          color: var(--primary);
+        }
+      }
+
+      .cs-bottom-links {
+        width: 100%;
+        display: flex;
+      }
+
+      .cs-bottom-link {
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          color: var(--primary);
+        }
+
+        &:last-of-type {
+          &:before {
+            /* separator */
+            content: "";
+            width: 1px;
+            height: calc(14 / 16 * 1rem);
+            margin: 0 calc(12 / 16 * 1rem);
+            background: currentColor;
+            opacity: 1;
+            display: block;
+          }
+        }
+      }
+
+      .cs-table {
+        width: 100%;
+        background-color: #f7f7f7;
+        border: 1px solid #dadada;
+        border-top: 4px solid var(--primary);
+
+        tr {
+          font-size: calc(16 / 16 * 1rem);
+          font-weight: 400;
+          line-height: 1.5em;
+          padding: calc(16 / 16 * 1rem) calc(24 / 16 * 1rem);
+          color: var(--bodyTextColor);
+          border-bottom: 1px solid #dadada;
+          display: flex;
+          justify-content: space-between;
+
+          /* last table row shouldn't have border - the outer table's border-bottom is used instead */
+          &:last-of-type {
+            border: none;
+          }
+        }
+
+        th,
+        td {
+          font-size: calc(16 / 16 * 1rem);
+          font-weight: 400;
+          line-height: 1.5em;
+          color: var(--bodyTextColor);
+        }
+
+        td {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #cs-footer-1762 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        grid-template-columns: repeat(12, 1fr);
+      }
+
+      .cs-logo-group {
+        grid-column: span 12;
+      }
+
+      .cs-ul-wrapper {
+        grid-column: span 3;
+      }
+
+      .cs-contact {
+        flex-direction: row;
+      }
+
+      .cs-table {
+        grid-column: span 12;
+      }
+
+      .cs-bottom {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+      }
+
+      .cs-credit {
+        text-align: left;
+      }
+
+      .cs-bottom-links {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #cs-footer-1762 {
+      .cs-logo-group {
+        grid-column: 1 / 6;
+      }
+
+      .cs-contact {
+        flex-direction: column;
+      }
+
+      .cs-ul-wrapper {
+        justify-self: end;
+
+        &:first-of-type {
+          grid-column: 8 / 10;
+        }
+
+        &:last-child {
+          grid-column: 11 / 13;
+        }
+      }
+    }
+  }
+
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #cs-footer-1762 {
+      .cs-logo-group {
+        grid-column: span 4;
+      }
+
+      .cs-ul-wrapper {
+        grid-column: span 2;
+        justify-self: start;
+      }
+
+      .cs-table {
+        grid-column: span 4;
+      }
+    }
+  }
+</style>

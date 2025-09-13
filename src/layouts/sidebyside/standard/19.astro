@@ -1,0 +1,262 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Side By Side                 --><!-- ============================================ -->
+<section id="sbs-2142">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <!--Main Image-->
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/bride.png"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/bride.png"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/bride.png"
+          alt="wedding bride"
+          width="565"
+          height="814"
+        />
+      </picture>
+      <!--Color Wheel-->
+      <img
+        class="cs-wheel"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/color-wheel.png"
+        alt="color wheel"
+        width="572"
+        height="572"
+        aria-hidden="true"
+      />
+    </div>
+    <div class="cs-content">
+      <span class="cs-topper">Why Choose Us</span>
+      <h2 class="cs-title">We Love High Quality Photo Products</h2>
+      <p class="cs-text">
+        Our expert instructors give you the skills and knowledge to manage
+        process risks and show you how to continuously make your facilities and
+        operations more safe and reliable. PSRG training courses are available
+        online. We have courses on-demand and live instructors for workshops and
+        support. We also provide LIVE instructor-led training courses and onsite
+        training.
+      </p>
+      <ul class="cs-stats">
+        <li class="cs-stat">
+          <span class="cs-stat-text">Years</span>
+          <span class="cs-stat-number">12+</span>
+        </li>
+        <li class="cs-stat">
+          <span class="cs-stat-text">People</span>
+          <span class="cs-stat-number">100+</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--Floating Flower-->
+  <img
+    class="cs-flower"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/flower-tilted.png"
+    alt="flower"
+    width="211"
+    height="161"
+    aria-hidden="true"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---        Side By Side        -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-2142 {
+      padding: var(--sectionPadding);
+      padding-bottom: 0;
+      background-color: #fbf5f1;
+      /* clips anything overflowing */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(704 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to center if content needs to be centered */
+        text-align: left;
+        width: 100%;
+        max-width: calc(539 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* left aligns content, set to center to align content horizontally */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        max-width: 20ch;
+      }
+
+      .cs-text {
+        margin-bottom: calc(16 / 16 * 1rem);
+
+        &:last-of-type {
+          /* 24px - 32px */
+          margin-bottom: clamp(1.5rem, 3vw, 2rem);
+        }
+      }
+
+      .cs-stats {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: calc(64 / 16 * 1rem);
+      }
+
+      .cs-stat-text {
+        font-size: calc(20 / 16 * 1rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        margin: 0 0 calc(4 / 16 * 1rem) 0;
+        color: var(--bodyTextColor);
+        display: block;
+      }
+
+      .cs-stat-number {
+        /* 39px - 49px */
+        font-size: clamp(2.4375rem, 5vw, 3.0625rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        margin: 0;
+        color: var(--primary);
+        display: block;
+      }
+
+      .cs-image-group {
+        /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
+        font-size: min(2.3vw, 0.75rem);
+        /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+        width: calc(636 / 16 * 1em);
+        height: calc(814 / 16 * 1em);
+        order: 2;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-picture {
+        width: calc(565 / 16 * 1em);
+        height: calc(814 / 16 * 1em);
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: rotateY(180deg);
+
+        img {
+          width: auto;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .cs-wheel {
+        width: calc(572 / 16 * 1em);
+        height: calc(572 / 16 * 1em);
+        object-fit: cover;
+        position: absolute;
+        top: calc(55 / 16 * 1em);
+        left: 0;
+        z-index: -2;
+      }
+
+      .cs-flower {
+        /* 136px - 211px */
+        width: clamp(8.5rem, 17vw, 13.2rem);
+        height: auto;
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbs-2142 {
+      padding: var(--sectionPadding);
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cs-image-group {
+        /* set to inherit at Large Desktop */
+        font-size: min(1.2vw, 1rem);
+        margin-top: auto;
+        order: -1;
+        position: relative;
+        bottom: calc(clamp(3.75rem, 7.82vw, 6.25rem) * -1);
+      }
+
+      .cs-content {
+        width: 50%;
+      }
+
+      .cs-flower {
+        display: block;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #sbs-2142 {
+      .cs-wheel {
+        top: calc(80 / 16 * 1em);
+      }
+
+      .cs-flower {
+        /* 224px to 309px */
+        width: clamp(14rem, 20vw, 19rem);
+      }
+    }
+  }
+
+  /* Large Desktop - 1440px */
+  @media only screen and (min-width: 90rem) {
+    #sbs-2142 {
+      .cs-flower {
+        right: 0;
+        bottom: 0;
+        left: auto;
+        z-index: -1;
+        transform: none;
+      }
+    }
+  }
+</style>

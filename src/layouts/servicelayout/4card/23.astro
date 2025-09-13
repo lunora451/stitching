@@ -1,0 +1,251 @@
+---
+
+---
+
+<!-- ============================================ --><!--                    Services                  --><!-- ============================================ -->
+<section id="services-1622">
+  <div class="cs-container">
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-circle-check.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="48"
+            height="48"
+            aria-hidden="true"
+          />
+          <h3 class="cs-h3">100% Success Rate</h3>
+          <p class="cs-item-text">
+            Highly experienced staff of more than 100 professionals averaging
+            29+ years in industry and hands-on knowledge.
+          </p>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-speedometer.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="48"
+            height="48"
+            aria-hidden="true"
+          />
+          <h3 class="cs-h3">Expert Legal Services</h3>
+          <p class="cs-item-text">
+            Highly experienced staff of more than 100 professionals averaging
+            29+ years in industry and hands-on knowledge.
+          </p>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-bouy.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="48"
+            height="48"
+            aria-hidden="true"
+          />
+          <h3 class="cs-h3">Business Strategy</h3>
+          <p class="cs-item-text">
+            Highly experienced staff of more than 100 professionals averaging
+            29+ years in industry and hands-on knowledge.
+          </p>
+        </a>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-thumb.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="48"
+            height="48"
+            aria-hidden="true"
+          />
+          <h3 class="cs-h3">Highly Recommend</h3>
+          <p class="cs-item-text">
+            Highly experienced staff of more than 100 professionals averaging
+            29+ years in industry and hands-on knowledge.
+          </p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-1622 {
+      padding: var(--sectionPadding);
+      padding-top: 0;
+      padding-left: 0;
+      padding-right: 0;
+      position: relative;
+      z-index: 10;
+
+      .cs-container {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        position: relative;
+        z-index: 15;
+      }
+
+      .cs-item {
+        text-align: left;
+        list-style: none;
+        width: 100%;
+        border-bottom: 1px solid #bababa;
+        background-color: #f7f7f7;
+        box-sizing: border-box;
+        grid-column: span 12;
+        transition:
+          background-color 0.3s,
+          border-color 0.3s;
+
+        &:last-of-type {
+          border-bottom: none;
+        }
+      }
+
+      .cs-link {
+        text-decoration: none;
+        /* 32px - 60px top & Bottom */
+        /* 16px - 60px left & right */
+        padding: clamp(2rem, 5.3vw, 3.75rem) clamp(1rem, 2.74vw, 2.5rem);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .cs-icon {
+        /* 32px - 40px */
+        height: clamp(2rem, 4vw, 2.5rem);
+        width: auto;
+        /* 20px - 40px */
+        margin: 0 0 clamp(1.25rem, 3vw, 2.5rem) 0;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2vw, 1.5625rem);
+        font-weight: 700;
+        text-align: inherit;
+        line-height: 1.2em;
+        /* 8px - 16px */
+        margin: 0 0 clamp(0.5rem, 2vw, 1rem) 0;
+        color: var(--headerColor);
+        transition: color 0.3s;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        text-align: inherit;
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+        transition:
+          color 0.3s,
+          opacity 0.3s;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-1622 {
+      .cs-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: calc(48 / 16 * 1rem);
+      }
+
+      .cs-title {
+        margin: 0;
+      }
+
+      .cs-flex-group {
+        width: 50%;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-item {
+        grid-column: span 6;
+
+        &:nth-of-type(3) {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #services-1622 {
+      .cs-card-group {
+        padding: 0;
+      }
+
+      .cs-item {
+        grid-column: span 3;
+        border-bottom: 0;
+        border-right: 1px solid #bababa;
+
+        &:hover {
+          background-color: #1a1a1a;
+          border-color: #1a1a1a;
+
+          .cs-h3,
+          .cs-item-text {
+            color: var(--bodyTextColorWhite);
+          }
+
+          .cs-item-text {
+            opacity: 0.8;
+          }
+        }
+
+        &:last-of-type {
+          border: none;
+        }
+      }
+    }
+  }
+</style>

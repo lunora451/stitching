@@ -1,0 +1,336 @@
+---
+
+---
+
+<!-- ============================================ --><!--                 Side By Side                --><!-- ============================================ -->
+<section id="sbs-1984">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Dental Care For Everyone</span>
+      <h2 class="cs-title">Smiles More Radiant and Healthy is Our Passion</h2>
+      <p class="cs-text">
+        Orci eu lobortis elementum nibh tellus. Vulputate eu scelerisque felis
+        imperdiet proin fermentum leo vel. Luctus accumsan tortor posuere ac ut
+        consequat semper. Et pharetra pharetra massa massa ultricies mi quis.
+      </p>
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/teal-check.svg"
+            alt="checkmark"
+            width="20"
+            height="20"
+          />
+          Our focus is on your overall well-being.
+        </li>
+        <li class="cs-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/teal-check.svg"
+            alt="checkmark"
+            width="20"
+            height="20"
+          />
+          We provide quality dental care.
+        </li>
+        <li class="cs-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/teal-check.svg"
+            alt="checkmark"
+            width="20"
+            height="20"
+          />
+          Innovative therapy & qualified dentists.
+        </li>
+      </ul>
+      <a href="" class="cs-button-solid">Get Started</a>
+    </div>
+    <div class="cs-image-group">
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/smile1.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/smile1.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/smile1.jpg"
+          alt="person"
+          width="547"
+          height="180"
+        />
+      </picture>
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/smile2.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/smile2.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/smile2.jpg"
+          alt="person"
+          width="547"
+          height="180"
+        />
+      </picture>
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/smile3.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/smile3.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/smile3.jpg"
+          alt="person"
+          width="547"
+          height="180"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---        Side By Side        -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbs-1984 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: var(--primary);
+        opacity: 0.05;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(704 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+      }
+
+      .cs-text {
+        margin-bottom: calc(24 / 16 * 1rem);
+      }
+
+      .cs-ul {
+        margin: 0 0 calc(32 / 16 * 1rem) 0;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .cs-li {
+        font-size: calc(16 / 16 * 1rem);
+        line-height: 1.5em;
+        list-style: none;
+        margin: 0;
+        color: var(--bodyTextColor);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.75rem;
+        position: relative;
+      }
+
+      .cs-icon {
+        width: calc(20 / 16 * 1rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        margin: 0;
+        /* 32px - 48px */
+        padding: 0 clamp(2rem, 4vw, 3rem);
+        background-color: var(--primary);
+        overflow: hidden;
+        color: #fff;
+        border-radius: calc(8 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #1a1a1a;
+          opacity: 1;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #fff;
+
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-image-group {
+        font-size: min(2.7vw, 1rem);
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        order: -1;
+        row-gap: calc(16 / 16 * 1em);
+      }
+
+      .cs-picture {
+        width: 90%;
+        height: calc(180 / 16 * 1em);
+        box-sizing: border-box;
+        background-color: #dab692;
+        /* clips img tag from overflowing it on hover */
+        overflow: hidden;
+        border-radius: calc(16 / 16 * 1rem);
+        grid-column: span 12;
+        display: block;
+        z-index: 2;
+
+        &:nth-of-type(even) {
+          margin-left: auto;
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          top: 0;
+          left: 0;
+          transition: transform 0.7s;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbs-1984 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: stretch;
+      }
+
+      .cs-content {
+        /* changes to 100% at 1300px */
+        width: 43vw;
+        max-width: calc(630 / 16 * 1rem);
+        padding: calc(64 / 16 * 1rem) 0;
+        align-self: center;
+      }
+
+      .cs-image-group {
+        width: 47vw;
+        height: 100%;
+        min-height: calc(572 / 16 * 1rem);
+        max-width: calc(562 / 16 * 1rem);
+        /* going absolute so we can make it responsive to the content inside the cs-content area. */
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+      }
+
+      .cs-picture {
+        height: auto;
+      }
+    }
+  }
+
+  /* Small Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #sbs-1984 {
+      .cs-content {
+        width: 100%;
+      }
+    }
+  }
+</style>

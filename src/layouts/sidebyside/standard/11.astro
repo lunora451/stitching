@@ -1,0 +1,297 @@
+---
+
+---
+
+<!-- ============================================ --><!--             Side By Side Reverse             --><!-- ============================================ -->
+<section id="sbsr-2272">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <!--Main Image-->
+      <picture class="cs-picture cs-picture1">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding19.png"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding19.png"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding19.png"
+          alt="wedding"
+          width="272"
+          height="337"
+        />
+      </picture>
+      <!--Small Image-->
+      <picture class="cs-picture cs-picture2">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/1.jpg"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/1.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/1.jpg"
+          alt="wedding"
+          width="243"
+          height="367"
+        />
+      </picture>
+    </div>
+    <div class="cs-content">
+      <span class="cs-topper">Welcome to Stitchography</span>
+      <h2 class="cs-title">
+        Capture the Perfect Moments that will Make Memories
+      </h2>
+      <p class="cs-text">
+        Our expert instructors give you the skills and knowledge to manage
+        process risks and show you how to continuously make your facilities and
+        operations more safe and reliable. PSRG training courses are available
+        online. We have courses on-demand and live instructors for workshops and
+        support. We also provide LIVE instructor-led training courses and onsite
+        training.
+      </p>
+      <a href="" class="cs-button-solid">Learn More</a>
+    </div>
+  </div>
+  <!--Floating Flower-->
+  <img
+    class="cs-flower"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/photo-flower-rotated.png"
+    alt="flower"
+    width="244"
+    height="186"
+    aria-hidden="true"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---    Side By Side Reverse    -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbsr-2272 {
+      padding: var(--sectionPadding);
+      background-color: #fdfaf8;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(704 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        max-width: calc(586 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title {
+        max-width: 30ch;
+      }
+
+      .cs-text {
+        margin-bottom: calc(32 / 16 * 1rem);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-align: center;
+        text-decoration: none;
+        min-width: calc(150 / 16 * 1rem);
+        margin: 0;
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        color: var(--headerColor);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #000;
+          opacity: 1;
+          border-radius: calc(4 / 16 * 1rem);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-image-group {
+        /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
+        font-size: min(2.17vw, 0.8rem);
+        /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+        width: calc(670 / 16 * 1em);
+        height: calc(428 / 16 * 1em);
+        order: -1;
+        position: relative;
+        z-index: 1;
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-picture {
+        display: block;
+        position: absolute;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-picture1 {
+        width: calc(265 / 16 * 1em);
+        height: calc(324 / 16 * 1em);
+        bottom: calc(20 / 16 * 1em);
+        left: calc(20 / 16 * 1em);
+
+        &::before {
+          content: "";
+          width: calc(226 / 16 * 1em);
+          height: 63.271605%;
+          border: calc(4 / 16 * 1em) solid var(--secondary);
+          position: absolute;
+          bottom: calc(-20 / 16 * 1em);
+          left: calc(-20 / 16 * 1em);
+          z-index: -1;
+        }
+      }
+
+      .cs-picture2 {
+        width: calc(345 / 16 * 1em);
+        height: calc(408 / 16 * 1em);
+        top: calc(20 / 16 * 1em);
+        right: calc(20 / 16 * 1em);
+
+        &::before {
+          content: "";
+          width: calc(197 / 16 * 1em);
+          height: 57.598039%;
+          border: calc(4 / 16 * 1em) solid var(--secondary);
+          position: absolute;
+          top: calc(-20 / 16 * 1em);
+          right: calc(-20 / 16 * 1em);
+          z-index: -1;
+        }
+      }
+
+      .cs-flower {
+        /* 84px - 309px */
+        width: clamp(5.25rem, 22vw, 19.3125rem);
+        height: auto;
+        display: block;
+        position: absolute;
+        /* 14px - 53px */
+        right: calc(clamp(0.875rem, 4vw, 3.3125rem) * -1);
+        /* 40px - 109px */
+        bottom: calc(clamp(2.5rem, 9vw, 6.8125rem) * -1);
+        z-index: -1;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbsr-2272 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-image-group {
+        order: initial;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #sbsr-2272 {
+      .cs-container {
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      .cs-content {
+        text-align: left;
+        align-items: flex-start;
+        align-self: center;
+      }
+
+      .cs-image-group {
+        font-size: min(1.3vw, 1rem);
+        height: auto;
+        min-height: calc(428 / 16 * 1em);
+      }
+
+      .cs-picture1 {
+        height: auto;
+        top: calc(62 / 16 * 1em);
+        bottom: calc(42 / 16 * 1em);
+      }
+
+      .cs-picture2 {
+        height: auto;
+        top: calc(20 / 16 * 1em);
+        bottom: calc(0 / 16 * 1em);
+      }
+    }
+  }
+
+  /* Large Desktop - 1400px */
+  @media only screen and (min-width: 87.5rem) {
+    #sbsr-2272 {
+      .cs-flower {
+        margin-right: calc(-755 / 16 * 1rem);
+        right: 50%;
+      }
+    }
+  }
+</style>

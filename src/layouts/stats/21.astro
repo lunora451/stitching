@@ -1,0 +1,255 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Stats                      --><!-- ============================================ -->
+<section id="stats-539">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Stats</span>
+      <h2 class="cs-title">
+        Building The Future on a <span class="cs-color"
+          >Foundation of Excellence</span>
+      </h2>
+      <p class="cs-text">
+        Risus commodo viverra maecenas accumsan lacus vel. Semper viverra nam
+        libero justo laoreet sit amet cursus. Commodo ullamcorper a lacus
+        vestibulum sed arcu.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <span class="cs-number">99%</span>
+        <span class="cs-desc">Lorem Ipsum Dolor Set Amet Consect</span>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">320+</span>
+        <span class="cs-desc">Lorem Ipsum Dolor Set Amet Consect</span>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">200+</span>
+        <span class="cs-desc">Lorem Ipsum Dolor Set Amet Consect</span>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">5/5</span>
+        <span class="cs-desc">Lorem Ipsum Dolor Set Amet Consect</span>
+      </li>
+    </ul>
+    <a href="" class="cs-big-link">
+      <!--Background Image-->
+      <picture class="cs-background">
+        <source
+          media="(min-width: 1024px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Stats/meet-d.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Stats/meeting-t.jpg"
+        />
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Stats/meeting-m.jpg"
+        />
+        <img
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Stats/meet-d.jpg"
+          alt="meeting"
+          width="1280"
+          height="580"
+        />
+      </picture>
+      <!--Play Icon-->
+      <img
+        class="cs-link-icon"
+        aria-hidden="true"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Stats/play-yellow.svg"
+        alt="play icon"
+        width="110"
+        height="110"
+      />
+    </a>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #stats-539 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        text-align: left;
+        /* changes to 41% at tablet */
+        width: 100%;
+        max-width: calc(522 / 16 * 1rem);
+      }
+
+      .cs-color {
+        color: var(--primaryLight);
+      }
+
+      .cs-title {
+        max-width: 17ch;
+      }
+
+      .cs-card-group {
+        /* changes to 43% at tablet */
+        width: 90%;
+        max-width: calc(522 / 16 * 1rem);
+        margin: 0 auto 0 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        /* 16px - 52px */
+        row-gap: clamp(1rem, 5vw, 3.25rem);
+      }
+
+      .cs-item {
+        width: 40%;
+        max-width: calc(200 / 16 * 1rem);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cs-number {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        margin: 0 0 calc(8 / 16 * 1rem) 0;
+        color: var(--headerColor);
+        display: block;
+      }
+
+      .cs-desc {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        line-height: 1.5em;
+        font-weight: 400;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-big-link {
+        width: 100%;
+        /* changes to a clamp at tablet */
+        height: calc(320 / 16 * 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &:hover {
+          .cs-background {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        /* clips the img from overflowing the container on hover */
+        overflow: hidden;
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        &:before {
+          /* color overlay */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: var(--primary);
+          opacity: 0.72;
+          background-blend-mode: multiply;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: 10;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          z-index: -1;
+          transition: transform 0.7s;
+        }
+      }
+
+      .cs-link-icon {
+        /* 80px - 110px */
+        width: clamp(5rem, 11vw, 6.875rem);
+        height: clamp(5rem, 11vw, 6.875rem);
+        border-radius: 50%;
+        position: absolute;
+        z-index: 10;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+
+        &:hover {
+          transform: scale(1.1);
+          box-shadow: rgba(0, 0, 0, 0.5) 0px 7px 29px 0px;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #stats-539 {
+      .cs-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+      }
+
+      .cs-content {
+        width: 41%;
+      }
+
+      .cs-card-group {
+        width: 43%;
+      }
+
+      .cs-big-link {
+        /* 280px - 580px */
+        height: clamp(20rem, 44vw, 36.25rem);
+      }
+    }
+  }
+</style>

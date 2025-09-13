@@ -1,0 +1,247 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Steps                      --><!-- ============================================ -->
+<section id="steps-277">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Best-In-Class</span>
+      <h2 class="cs-title">Our Simple Process from Start to Finish</h2>
+      <p class="cs-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. At tortor
+        facilisis non, rutrum sagittis, libero. Lorem ipsum dolor sit amet
+        consectetur, adipisicing elit.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <span class="cs-number">01</span>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet, coctetur adipiscing elit.
+        </p>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">02</span>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet, contetur adipiscing elit.
+        </p>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">03</span>
+        <p class="cs-item-text">
+          Lorem ipsum dolor sit amet, conetur adipiscing elit.
+        </p>
+      </li>
+    </ul>
+    <a href="" class="cs-button-solid">Read More</a>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Steps            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #steps-277 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title {
+        max-width: 20ch;
+      }
+
+      .cs-card-group {
+        padding: 0;
+        margin: 0;
+        max-width: calc(400 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(24 / 16 * 1rem);
+        position: relative;
+
+        &:before {
+          /* list line connector */
+          content: "";
+          width: 1px;
+          background: #1a1a1a;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          /* no height, set it as a top to bottom.  
+                It will grow with newly added text in the .cs-item-text */
+          top: calc(16 / 16 * 1rem);
+          bottom: calc(24 / 16 * 1rem);
+          left: calc(56 / 16 * 1rem);
+        }
+      }
+
+      .cs-item {
+        text-align: left;
+        list-style: none;
+        margin: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+
+      .cs-number {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        font-weight: 700;
+        margin-right: calc(44 / 16 * 1rem);
+        /* 40px - 52px */
+        width: clamp(2.5rem, 5.1vw, 3.25rem);
+        height: clamp(2.5rem, 5.1vw, 3.25rem);
+        border-radius: 50%;
+        color: var(--bodyTextColorWhite);
+        background-color: var(--primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* prevents flexbox from squishing it */
+        flex: none;
+        position: relative;
+
+        &:before {
+          /* list circle */
+          content: "";
+          width: calc(8 / 16 * 1rem);
+          height: calc(8 / 16 * 1rem);
+          background: #1a1a1a;
+          border-radius: 50%;
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 50%;
+          right: calc(-20 / 16 * 1rem);
+          transform: translateY(-50%);
+        }
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 2vw, 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #steps-277 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        max-width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        column-gap: calc(32 / 16 * 1em);
+
+        &:before {
+          /* reset width */
+          width: auto;
+          height: 1px;
+          /* 60px - 76px */
+          top: clamp(3.75rem, 7.5vw, 4.75rem);
+          left: calc(110 / 16 * 1rem);
+          right: calc(110 / 16 * 1rem);
+        }
+      }
+
+      .cs-item {
+        text-align: center;
+        width: calc(218 / 16 * 1rem);
+        /* remove margin from mobile */
+        margin: 0;
+        /* orient to vertical spacing */
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cs-number {
+        margin: 0;
+        /* 40px - 60px */
+        margin-bottom: clamp(2.5rem, 6vw, 3.75rem);
+
+        &:before {
+          top: auto;
+          left: 50%;
+          /* -24px to -28px */
+          /* use calc() to multiply clamp value by -1 to get a negative clamp value */
+          bottom: calc(clamp(1.5rem, 2.9vw, 1.75rem) * -1);
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+</style>

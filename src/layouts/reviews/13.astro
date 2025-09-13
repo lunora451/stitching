@@ -1,0 +1,318 @@
+---
+
+---
+
+<!-- ============================================ --><!--                  Reviews                     --><!-- ============================================ -->
+<section id="reviews-863">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Testimonials</span>
+      <h2 class="cs-title">Trusted by Thousand of People & Companies</h2>
+      <p class="cs-text">
+        Vitae ultricies leo integer malesuada nunc vel. Molestie ac feugiat sed
+        lectus vestibulum mattis ullamcorper velit. Viverra aliquet eget sit
+        amet tellus cras adipiscing. Molestie ac feugiat sed lectus vestibulum
+        mattis ullamcorper velit.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <div class="cs-flex-group">
+          <picture class="cs-picture" aria-hidden="true">
+            <img
+              class="cs-profile"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile2.jpg"
+              decoding="async"
+              alt="profile"
+              width="50"
+              height="50"
+            />
+          </picture>
+          <span class="cs-name">
+            George Thomas
+            <span class="cs-job">Psychologist</span>
+          </span>
+        </div>
+        <p class="cs-review">
+          Curabitur vitae nunc sed velit dignissim sodales ut. Maecenas
+          ultricies mi eget mauris pharetra et. Et ligula ullamcorper malesuada
+          proin pellentesque diam volutpat commodo. Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Est optio, cupiditate rem fugiat
+          consectetur libero harum expedita autem deserunt nisi. Aut ad itaque
+          excepturi quas consequatur velit atque sit in?
+        </p>
+        <!--Stars-->
+        <img
+          class="cs-stars"
+          aria-hidden="true"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fstars.svg"
+          decoding="async"
+          alt="quote icon"
+          width="108"
+          height="16"
+        />
+        <span class="cs-desc">Google</span>
+      </li>
+      <li class="cs-item">
+        <div class="cs-flex-group">
+          <picture class="cs-picture" aria-hidden="true">
+            <img
+              class="cs-profile"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile2.jpg"
+              decoding="async"
+              alt="profile"
+              width="50"
+              height="50"
+            />
+          </picture>
+          <span class="cs-name">
+            Barbara Titus
+            <span class="cs-job">Psychologist</span>
+          </span>
+        </div>
+        <p class="cs-review">
+          Curabitur vitae nunc sed velit dignissim sodales ut. Maecenas
+          ultricies mi eget mauris pharetra et. Et ligula ullamcorper malesuada
+          proin pellentesque diam volutpat commodo
+        </p>
+        <!--Stars-->
+        <img
+          class="cs-stars"
+          aria-hidden="true"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fstars.svg"
+          decoding="async"
+          alt="quote icon"
+          width="108"
+          height="16"
+        />
+        <span class="cs-desc">Google</span>
+      </li>
+    </ul>
+  </div>
+  <!--Top Left Quote-->
+  <img
+    class="cs-quote1"
+    aria-hidden="true"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2FQuote.svg"
+    decoding="async"
+    alt="quote icon"
+    width="194"
+    height="160"
+  />
+  <!--Top Right Quote-->
+  <img
+    class="cs-quote2"
+    aria-hidden="true"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2FQuote.svg"
+    decoding="async"
+    alt="quote icon"
+    width="194"
+    height="160"
+  />
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #reviews-863 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: var(--primary);
+        opacity: 0.03;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: calc(550 / 16 * 1em);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        max-width: calc(900 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title {
+        /* 20 characters including spaces */
+        max-width: 20ch;
+      }
+
+      .cs-text {
+        max-width: 100%;
+      }
+
+      .cs-card-group {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* 16px - 20px */
+        gap: clamp(1rem, 2.5vw, 1.15rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        max-width: calc(630 / 16 * 1rem);
+        /* 20px - 32px */
+        padding: clamp(1.25rem, 4vw, 2rem);
+        background-color: #fff;
+        border-radius: 0 calc(24 / 16 * 1rem) 0 calc(24 / 16 * 1rem);
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        position: relative;
+      }
+
+      .cs-flex-group {
+        width: 100%;
+        margin: 0 0 calc(20 / 16 * 1rem) 0;
+        padding-bottom: calc(20 / 16 * 1rem);
+        border-bottom: 1px solid #fbcebd;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: calc(20 / 16 * 1rem);
+      }
+
+      .cs-profile {
+        width: calc(64 / 16 * 1rem);
+        height: calc(64 / 16 * 1rem);
+        border-radius: 50%;
+        /* clips image corners to make circle */
+        overflow: hidden;
+        position: relative;
+        display: block;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* makes the image behave like a background image */
+          object-fit: cover;
+        }
+      }
+
+      .cs-name {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2vw, 1.5625rem);
+        line-height: 1.5em;
+        font-weight: 700;
+        margin: 0 0 calc(8 / 16 * 1rem) 0;
+        color: var(--headerColor);
+        display: block;
+      }
+
+      .cs-job {
+        font-size: calc(14 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 400;
+        margin: 0;
+        color: var(--bodyTextColor);
+        display: block;
+      }
+
+      .cs-review {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        margin-bottom: calc(20 / 16 * 1rem);
+        color: var(--bodyTextColor);
+      }
+
+      .cs-stars {
+        width: calc(108 / 16 * 1rem);
+        height: auto;
+        margin: 0 0 calc(8 / 16 * 1rem) 0;
+        display: block;
+      }
+
+      .cs-desc {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-quote1,
+      .cs-quote2 {
+        display: none;
+        width: calc(194 / 16 * 1rem);
+        height: auto;
+        display: block;
+        position: absolute;
+        z-index: -1;
+      }
+
+      .cs-quote1 {
+        top: 0;
+        left: 0;
+      }
+
+      .cs-quote2 {
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #reviews-863 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+      }
+      .cs-card-group {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+
+      .cs-stars {
+        margin-top: auto;
+      }
+
+      .cs-quote1,
+      .cs-quote2 {
+        display: block;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,361 @@
+---
+
+---
+
+<!-- ============================================ --><!--                     FAQ                      --><!-- ============================================ -->
+<section id="faq-2216">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Frequently Asked Questions</span>
+      <h2 class="cs-title">Frequently Asked Questions</h2>
+      <div class="cs-wrapper">
+        <ul class="cs-faq-group">
+          <!-- Active class added as default -->
+          <li class="cs-faq-item active">
+            <button class="cs-button">
+              <span class="cs-button-text">
+                What does a process safety and reliability consultation firm do?
+              </span>
+            </button>
+            <p class="cs-item-p">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+              convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+              diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+              enim, magna urna, quam.
+            </p>
+          </li>
+          <li class="cs-faq-item">
+            <button class="cs-button">
+              <span class="cs-button-text">
+                Why is process safety important for my organization?
+              </span>
+            </button>
+            <p class="cs-item-p">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+              convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+              diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+              enim, magna urna, quam.
+            </p>
+          </li>
+          <li class="cs-faq-item">
+            <button class="cs-button">
+              <span class="cs-button-text">
+                How can your firm help improve our process safety and
+                reliability?
+              </span>
+            </button>
+            <p class="cs-item-p">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+              convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+              diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+              enim, magna urna, quam.
+            </p>
+          </li>
+          <li class="cs-faq-item">
+            <button class="cs-button">
+              <span class="cs-button-text">
+                What industries does your firm serve?
+              </span>
+            </button>
+            <p class="cs-item-p">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+              convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+              diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+              enim, magna urna, quam.
+            </p>
+          </li>
+          <li class="cs-faq-item">
+            <button class="cs-button">
+              <span class="cs-button-text">
+                What qualifications and certifications do your consultants hold?
+              </span>
+            </button>
+            <p class="cs-item-p">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+              convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+              diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+              enim, magna urna, quam.
+            </p>
+          </li>
+        </ul>
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding1.jpg"
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding1.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding1.jpg"
+            alt="wedding photoshoot"
+            width="590"
+            height="801"
+            aria-hidden="true"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---            FAQ             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #faq-2216 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+      position: relative;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: calc(584 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cs-content {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cs-title {
+        /* 20 characters wide including spaces */
+        max-width: 20ch;
+        margin: 0 0 calc(48 / 16 * 1rem) 0;
+      }
+
+      .cs-faq-group {
+        margin: 0;
+        padding: calc(16 / 16 * 1rem) calc(16 / 16 * 1rem) calc(80 / 16 * 1rem)
+          calc(16 / 16 * 1rem);
+        background-color: #fbf5f1;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: calc(16 / 16 * 1rem);
+        position: relative;
+      }
+
+      .cs-faq-item {
+        list-style: none;
+        width: 100%;
+        box-sizing: border-box;
+        padding: calc(20 / 16 * 1rem);
+        background-color: #ffffff;
+
+        &.active {
+          .cs-button {
+            color: var(--primary);
+
+            &:before {
+              background-color: var(--primaryLight);
+              transform: rotate(315deg);
+            }
+
+            &:after {
+              background-color: var(--primaryLight);
+              transform: rotate(-315deg);
+            }
+          }
+
+          .cs-item-p {
+            height: auto;
+            padding-top: calc(16 / 16 * 1rem);
+            opacity: 1;
+          }
+        }
+      }
+
+      .cs-button {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        font-weight: bold;
+        line-height: 1.2em;
+        text-align: left;
+        width: 100%;
+        padding: 0;
+        background: transparent;
+        color: var(--headerColor);
+        border: none;
+        display: block;
+        position: relative;
+        transition:
+          background-color 0.3s,
+          color 0.3s;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:before {
+          /* left line */
+          content: "";
+          width: calc(8 / 16 * 1rem);
+          height: calc(2 / 16 * 1rem);
+          background-color: var(--headerColor);
+          opacity: 1;
+          border-radius: 50%;
+          display: block;
+          position: absolute;
+          top: 45%;
+          right: calc(4 / 16 * 1rem);
+          transform: rotate(45deg);
+          transition: transform 0.5s;
+          /* animate the transform from the left side of the x axis, and the center of the y */
+          transform-origin: left center;
+        }
+
+        &:after {
+          /* right line */
+          content: "";
+          width: calc(8 / 16 * 1rem);
+          height: calc(2 / 16 * 1rem);
+          background-color: var(--headerColor);
+          opacity: 1;
+          border-radius: 50%;
+          display: block;
+          position: absolute;
+          top: 45%;
+          right: calc(1 / 16 * 1rem);
+          transform: rotate(-45deg);
+          transition: transform 0.5s;
+          /* animate the transform from the right side of the x axis, and the center of the y */
+          transform-origin: right center;
+        }
+      }
+
+      .cs-button-text {
+        width: 90%;
+        display: block;
+      }
+
+      .cs-item-p {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-align: left;
+        width: 90%;
+        max-width: calc(541 / 16 * 1rem);
+        height: 0;
+        margin: 0;
+        padding: 0;
+        /* clips the text so it doesn't show up */
+        overflow: hidden;
+        color: var(--bodyTextColor);
+        opacity: 0;
+        transition:
+          opacity 0.3s,
+          padding-bottom 0.3s;
+      }
+
+      .cs-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cs-picture {
+        width: 90%;
+        min-height: calc(383 / 16 * 1rem);
+        aspect-ratio: 300/383;
+        margin-left: auto;
+        margin-top: calc(-48 / 16 * 1rem);
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #faq-2216 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+      }
+
+      .cs-content {
+        text-align: left;
+        align-items: flex-start;
+      }
+
+      .cs-faq-group {
+        width: 60%;
+        max-width: calc(630 / 16 * 1rem);
+        /* 32px - 80px top, bottom, left */
+        padding: clamp(2rem, 6vw, 5rem);
+        padding-right: 0;
+        background-color: transparent;
+        flex: none;
+      }
+
+      .cs-wrapper {
+        flex-direction: row;
+        /* 32px - 58px */
+        gap: clamp(2rem, 4vw, 3.625rem);
+        position: relative;
+        z-index: 1;
+
+        &::before {
+          content: "";
+          width: 90%;
+          max-width: calc(870 / 16 * 1rem);
+          height: 100%;
+          background-color: #fbf5f1;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+      }
+
+      .cs-picture {
+        width: 100%;
+        max-width: calc(592 / 16 * 1rem);
+        aspect-ratio: initial;
+        height: calc(739 / 16 * 1rem);
+        margin-top: 0;
+        position: relative;
+        /* 60px - 80px */
+        top: calc(clamp(3.75rem, 7vw, 5rem) * -1);
+      }
+    }
+  }
+</style><script>
+  const faqItems = Array.from(document.querySelectorAll(".cs-faq-item"));
+  for (const item of faqItems) {
+    const onClick = () => {
+      item.classList.toggle("active");
+    };
+    item.addEventListener("click", onClick);
+  }
+</script>

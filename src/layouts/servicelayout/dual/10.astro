@@ -1,0 +1,367 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Services                   --><!-- ============================================ -->
+<section id="services-1264">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our services</span>
+      <h2 class="cs-title">We offer project management services</h2>
+      <p class="cs-text">
+        We can help you design your project and develop a comprehensive plan to
+        ensure that it meets your specific needs and requirements. Our team of
+        architects and engineers will work closely with you to create a design
+        that is both functional and aesthetically pleasing.
+      </p>
+      <a href="" class="cs-button-solid" aria-label="learn more about us"
+        >Learn More</a
+      >
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <h2 class="cs-h2">Sustainable System</h2>
+        <p class="cs-item-text">
+          We’ve helped thousands of organizations transform to become relevant
+          of helped thousands.
+        </p>
+        <picture class="cs-picture" aria-hidden="true">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Services/building.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Services/building.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimages2.nyc3.digitaloceanspaces.com/Services/building.jpg"
+            alt="therapy"
+            width="305"
+            height="200"
+          />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <h2 class="cs-h2">Honest Services</h2>
+        <p class="cs-item-text">
+          We’ve helped thousands of organizations transform to become relevant
+          of helped thousands.
+        </p>
+        <picture class="cs-picture" aria-hidden="true">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Services/crane2.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Services/crane2.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimages2.nyc3.digitaloceanspaces.com/Services/crane2.jpg"
+            alt="therapy"
+            width="305"
+            height="200"
+          />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <h2 class="cs-h2">Remodeling Expert</h2>
+        <p class="cs-item-text">
+          We’ve helped thousands of organizations transform to become relevant
+          of helped thousands.
+        </p>
+        <picture class="cs-picture" aria-hidden="true">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Services/paint.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Services/paint.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimages2.nyc3.digitaloceanspaces.com/Services/paint.jpg"
+            alt="therapy"
+            width="305"
+            height="200"
+          />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <h2 class="cs-h2">Honest Services</h2>
+        <p class="cs-item-text">
+          We’ve helped thousands of organizations transform to become relevant
+          of helped thousands.
+        </p>
+        <picture class="cs-picture" aria-hidden="true">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Services/crane2.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Services/crane2.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimages2.nyc3.digitaloceanspaces.com/Services/crane2.jpg"
+            alt="therapy"
+            width="305"
+            height="200"
+          />
+        </picture>
+      </li>
+    </ul>
+  </div>
+  <picture class="cs-background">
+    <img
+      src="https://csimages2.nyc3.digitaloceanspaces.com/Services/orange-waves.jpg"
+      alt="waves"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-1264 {
+      padding: var(--sectionPadding);
+      position: relative;
+      /* stops background graphic from overflowing */
+      overflow: hidden;
+
+      .cs-container {
+        /* changes to 700px at desktop */
+        max-width: calc(550 / 16 * 1rem);
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+        gap: clamp(3rem, 4vw, 6rem);
+      }
+
+      .cs-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        /* set text align to center if content needs to be centrally aligned */
+        text-align: left;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        font-weight: 700;
+        min-width: calc(150 / 16 * 1rem);
+        margin: 0;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        padding: 0 calc(24 / 16 * 1rem);
+        color: #fff;
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+
+        &:before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: #000;
+          opacity: 1;
+          border-radius: calc(4 / 16 * 1rem);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: calc(16 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        /* 216px - 264px */
+        min-height: clamp(13.5rem, 35vw, 16.5rem);
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: calc(20 / 16 * 1rem);
+        border-radius: calc(10 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        z-index: 1;
+        /* clips the img tag corners */
+        overflow: hidden;
+        grid-column: span 12;
+        /* set text align to center if content needs to be centrally aligned */
+        text-align: left;
+
+        &:hover {
+          outline: 2px solid var(--primary);
+        }
+      }
+
+      .cs-h2 {
+        font-size: calc(20 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 calc(12 / 16 * 1rem);
+        color: #fff;
+        display: block;
+        text-align: inherit;
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        max-width: calc(300 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        color: #f1f1f4;
+        text-align: inherit;
+      }
+
+      .cs-picture {
+        width: 100%;
+        height: 100%;
+        margin-bottom: calc(20 / 16 * 1rem);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background:
+            linear-gradient(
+              0deg,
+              rgba(26, 26, 26, 0.24) 0%,
+              rgba(26, 26, 26, 0.24) 100%
+            ),
+            linear-gradient(
+              180deg,
+              rgba(0, 0, 0, 0) 0%,
+              rgba(0, 0, 0, 0.4) 100%
+            ),
+            rgba(211, 211, 211, 0) 50% / cover no-repeat;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition:
+            transform 0.6s,
+            opacity 0.3s;
+        }
+      }
+
+      .cs-background {
+        height: 50%;
+        position: absolute;
+        top: 0;
+        right: 50%;
+        z-index: -1;
+        overflow: hidden;
+
+        img {
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-1264 {
+      .cs-container {
+        max-width: calc(704 / 16 * 1rem);
+      }
+
+      .cs-item {
+        grid-column: span 6;
+
+        &:nth-of-type(3) {
+          order: 4;
+        }
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #services-1264 {
+      .cs-container {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        align-items: center;
+        gap: calc(40 / 16 * 1rem);
+      }
+
+      .cs-content {
+        max-width: calc(522 / 16 * 1rem);
+      }
+
+      .cs-card-group {
+        max-width: calc(650 / 16 * 1rem);
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cs-item {
+        grid-column: initial;
+      }
+
+      .cs-background {
+        margin-right: clamp(20rem, 32vw, 28rem);
+      }
+    }
+  }
+</style>

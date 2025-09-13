@@ -1,0 +1,291 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Stats                      --><!-- ============================================ -->
+<section id="stats-5">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Why Work with Us</span>
+      <h2 class="cs-title">Our Numbers Speak For Themselves</h2>
+      <p class="cs-text">
+        Facilisis condimentum viverra scelerisque ac morbi sit sed. Turpis
+        sagittis in blandit eleifend tortor ullamcorper eu placerat. Et orci
+        felis volutpat, etiam vitae egestas volutpat pulvinar.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <span class="cs-number">40+</span>
+        <span class="cs-header">Years Experience</span>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">4</span>
+        <span class="cs-header">Experienced Staff</span>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">100+</span>
+        <span class="cs-header">Happy Clients</span>
+      </li>
+      <li class="cs-item">
+        <span class="cs-number">1</span>
+        <span class="cs-header">Year Warranty</span>
+      </li>
+    </ul>
+    <a href="" class="cs-button-solid">Contact Us</a>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.digitaloceanspaces.com/Stats/bg-m.jpg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.digitaloceanspaces.com/Stats/bg.jpg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.digitaloceanspaces.com/Stats/bg.jpg"
+      alt="brick wall"
+      width="1920"
+      height="1282"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #stats-5 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-text {
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        max-width: calc(650 / 16 * 1rem);
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-title {
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-text {
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        max-width: calc(500 / 16 * 1rem);
+        padding: 0 calc(20 / 16 * 1rem);
+        /* 40px - 68px */
+        padding-top: clamp(2.5rem, 5.7vw, 4.25rem);
+        /* 48px - 80px */
+        padding-bottom: clamp(3rem, 6.5vw, 5rem);
+        margin: 0;
+        background: #fff;
+        border-top: 8px solid var(--primaryLight);
+        border-radius: calc(5 / 16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: calc(55 / 16 * 1em);
+        box-shadow: 0 calc(20 / 16 * 1em) calc(40 / 16 * 1em) 0
+          rgba(0, 0, 0, 0.05);
+        /* prevents padding from adding to the width of the container */
+        box-sizing: border-box;
+      }
+
+      .cs-item {
+        text-align: center;
+        list-style: none;
+        width: 100%;
+      }
+
+      .cs-number {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 4.7vw, 3.8125rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        /* 4px - 8px */
+        margin-bottom: clamp(0.25rem, 0.78vw, 0.5rem);
+        color: var(--primary);
+        display: block;
+      }
+
+      .cs-header {
+        /* 16px - 25px */
+        font-size: clamp(1rem, 2vw, 1.5625rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        color: var(--headerColor);
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-background {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 65%;
+        z-index: -1;
+
+        &:before {
+          /* Overlay */
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 100%;
+          background: #000;
+          opacity: 0.8;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* In-between - 500px */
+  @media only screen and (min-width: 31.25rem) {
+    #stats-5 {
+      .cs-card-group {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0;
+        row-gap: calc(55 / 16 * 1rem);
+        column-gap: calc(100 / 16 * 1rem);
+      }
+
+      .cs-item {
+        /* sets even spacing */
+        width: calc(125 / 16 * 1rem);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #stats-5 {
+      &:before {
+        height: 37.5%;
+      }
+
+      .cs-card-group {
+        max-width: 100%;
+        column-gap: 0;
+        row-gap: 0;
+        justify-content: space-around;
+      }
+
+      .cs-item {
+        /* reset width */
+        width: auto;
+      }
+    }
+  }
+
+  /* Big Desktop Parallax Effect - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #stats-5 {
+      .cs-background {
+        background: url("https://csimg.nyc3.digitaloceanspaces.com/Stats/bg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+</style>

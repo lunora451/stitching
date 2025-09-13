@@ -1,0 +1,331 @@
+---
+
+---
+
+<!-- ============================================ --><!--                   Gallery                    --><!-- ============================================ -->
+<section id="gallery-1648">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex">
+        <span class="cs-topper">Social</span>
+        <h2 class="cs-title">More from Stitch Store</h2>
+      </div>
+      <a href="" class="cs-button-solid">
+        <img
+          class="cs-button-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/insta-icon.svg"
+          alt="instagram"
+          width="20"
+          height="20"
+        />
+        @Stitch
+      </a>
+    </div>
+    <div class="cs-gallery">
+      <!--Picture 1-->
+      <a href="" class="cs-link">
+        <picture class="cs-image">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/fishing8.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/fishing8.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/fishing8.jpg"
+            alt="gallery"
+            width="305"
+            height="400"
+          />
+        </picture>
+        <img
+          class="cs-link-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/insta-icon.svg"
+          alt="instagram"
+          width="48"
+          height="48"
+        />
+      </a>
+      <!--Picture 2-->
+      <a href="" class="cs-link">
+        <picture class="cs-image">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/fishing9.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/fishing9.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/fishing9.jpg"
+            alt="gallery"
+            width="305"
+            height="400"
+          />
+        </picture>
+        <img
+          class="cs-link-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/insta-icon.svg"
+          alt="instagram"
+          width="48"
+          height="48"
+        />
+      </a>
+      <!--Picture 3-->
+      <a href="" class="cs-link">
+        <picture class="cs-image">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/fishing10.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/fishing10.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/fishing10.jpg"
+            alt="gallery"
+            width="305"
+            height="400"
+          />
+        </picture>
+        <img
+          class="cs-link-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/insta-icon.svg"
+          alt="instagram"
+          width="48"
+          height="48"
+        />
+      </a>
+      <!--Picture 4-->
+      <a href="" class="cs-link">
+        <picture class="cs-image">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/fishing11.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/fishing11.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/fishing11.jpg"
+            alt="gallery"
+            width="305"
+            height="400"
+          />
+        </picture>
+        <img
+          class="cs-link-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/insta-icon.svg"
+          alt="instagram"
+          width="48"
+          height="48"
+        />
+      </a>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---          Gallery           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #gallery-1648 {
+      padding: var(--sectionPadding);
+
+      .cs-container {
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        /* breaks up the contents so they are no longer considered children of the parent and can now be flexboxed and positioned relatrive to the cs-container so we can place the button at the bototm of the section */
+        display: contents;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-title {
+        max-width: 20ch;
+        margin: 0;
+      }
+
+      .cs-button-solid {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        white-space: nowrap;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
+        background-color: var(--primary);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: calc(8 / 16 * 1rem);
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-button-solid {
+        order: 3;
+      }
+
+      .cs-gallery {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+
+      .cs-link {
+        height: calc(280 / 16 * 1rem);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &:hover {
+          .cs-image {
+            &:before {
+              opacity: 0.5;
+            }
+          }
+
+          .cs-link-icon {
+            opacity: 1;
+            transform: translateY(0) rotateY(0);
+          }
+        }
+      }
+
+      .cs-image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: #000;
+          opacity: 0;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: 2;
+          transition: opacity 0.3s;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* makes it act like a background image */
+          object-fit: cover;
+        }
+      }
+
+      .cs-link-icon {
+        opacity: 0;
+        position: relative;
+        z-index: 10;
+        transform: translateY(1.5rem) rotateY(90deg);
+        transition:
+          opacity 0.3s,
+          transform 0.5s;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #gallery-1648 {
+      .cs-content {
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+
+      .cs-gallery {
+        grid-template-columns: repeat(12, 1fr);
+      }
+
+      .cs-link {
+        width: 100%;
+        /* 240px - 400px */
+        height: clamp(15rem, 30vw, 25rem);
+        aspect-ratio: auto;
+        grid-column: span 3;
+      }
+    }
+  }
+</style>

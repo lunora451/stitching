@@ -1,0 +1,239 @@
+---
+
+---
+
+<!-- ============================================ --><!--                Contact Strip                 --><!-- ============================================ --><!-- No headers, so no section tag -->
+<div id="contact-strip-1111">
+  <ul class="cs-stat-group">
+    <li class="cs-item">
+      <picture class="cs-picture">
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-phone.svg"
+          alt="icon"
+          width="35"
+          height="40"
+          loading="lazy"
+          decoding="async"
+          aria-hidden="true"
+        />
+      </picture>
+      <div class="cs-flex-group">
+        <span class="cs-header">Phone</span>
+        <a href="tel:555-456-7899" class="cs-link">+1 (555) 456 7899</a>
+      </div>
+    </li>
+    <li class="cs-item">
+      <picture class="cs-picture">
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-email.svg"
+          alt="icon"
+          width="40"
+          height="35"
+          loading="lazy"
+          decoding="async"
+          aria-hidden="true"
+        />
+      </picture>
+      <div class="cs-flex-group">
+        <span class="cs-header">Email</span>
+        <a href="mailto:Info@email.com" class="cs-link">Info@email.com</a>
+      </div>
+    </li>
+    <li class="cs-item">
+      <picture class="cs-picture">
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-pin.svg"
+          alt="icon"
+          width="40"
+          height="40"
+          loading="lazy"
+          decoding="async"
+          aria-hidden="true"
+        />
+      </picture>
+      <div class="cs-flex-group">
+        <span class="cs-header">Address</span>
+        <span class="cs-address">121 King St, Melbourne VIC 300, Australia</span
+        >
+      </div>
+    </li>
+  </ul>
+  <!--Background image-->
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic24.jpg"
+    />
+    <!--Tablet and above Image-->
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic24.jpg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic24.jpg"
+      alt="mechanic"
+      width="1280"
+      height="568"
+    />
+  </picture>
+</div>
+
+<style lang="scss">
+  /*-- -------------------------- -->
+<---      Contact Strip         -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #contact-strip-1111 {
+      padding: var(--sectionPadding);
+      background-color: var(--primary);
+      position: relative;
+      z-index: 1;
+
+      .cs-stat-group {
+        width: 100%;
+        margin: auto;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* reduced to 24px at tablet */
+        gap: calc(40 / 16 * 1rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: calc(290 / 16 * 1rem);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &:hover {
+          .cs-picture {
+            background-color: #fff;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      .cs-picture {
+        /* 48px - 80px */
+        width: clamp(3rem, 5.7vw, 5rem);
+        height: clamp(3rem, 5.7vw, 5rem);
+        /* 12px - 20px */
+        margin-right: clamp(0.75rem, 1.5vw, 1.25rem);
+        border-radius: 50%;
+        border: 1px solid var(--secondary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* prevents flexbox from squishing it */
+        flex: none;
+        transition:
+          background-color 0.3s,
+          box-shadow 0.3s,
+          transform 0.6s;
+      }
+
+      .cs-flex-group {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .cs-icon {
+        /* 20px - 40px */
+        width: clamp(1.25rem, 2.5vw, 2.5rem);
+        height: auto;
+      }
+
+      .cs-header {
+        font-size: calc(20 / 16 * 1rem);
+        color: var(--bodyTextColorWhite);
+        font-weight: 900;
+        line-height: 1.2em;
+        margin: 0;
+        margin-bottom: calc(12 / 16 * 1rem);
+        display: block;
+      }
+
+      .cs-address,
+      .cs-link {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-decoration: none;
+        color: var(--bodyTextColorWhite);
+        display: block;
+      }
+
+      .cs-link {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        &:before {
+          /* background color overlay */
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 100%;
+          background: #1a1a1a;
+          opacity: 0.84;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes img tag act as a background image */
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #contact-strip-1111 {
+      .cs-stat-group {
+        max-width: calc(1280 / 16 * 1rem);
+        flex-direction: row;
+        justify-content: space-between;
+        gap: calc(24 / 16 * 1rem);
+      }
+
+      .cs-item {
+        width: auto;
+      }
+    }
+  }
+</style>
