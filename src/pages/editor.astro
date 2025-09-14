@@ -25,53 +25,69 @@ import Nav20 from "../layouts/navigation/20.astro";
 import Nav21 from "../layouts/navigation/21.astro";
 import Nav22 from "../layouts/navigation/22.astro";
 
-// TODO: Import other component types as needed
-// For now, let's focus on getting navigation working
+// Dynamic component loading - more efficient than importing all components
 
-// Component mapping object
+// Component mapping object with dynamic loading support
 const componentMap = {
   navigation: {
-    "1": Nav1,
-    "2": Nav2,
-    "3": Nav3,
-    "4": Nav4,
-    "5": Nav5,
-    "6": Nav6,
-    "7": Nav7,
-    "8": Nav8,
-    "9": Nav9,
-    "10": Nav10,
-    "11": Nav11,
-    "12": Nav12,
-    "13": Nav13,
-    "14": Nav14,
-    "15": Nav15,
-    "16": Nav16,
-    "17": Nav17,
-    "18": Nav18,
-    "19": Nav19,
-    "20": Nav20,
-    "21": Nav21,
-    "22": Nav22,
-  }
-  // TODO: Add other component types
+    "1": Nav1, "2": Nav2, "3": Nav3, "4": Nav4, "5": Nav5, "6": Nav6, "7": Nav7, "8": Nav8, "9": Nav9, "10": Nav10,
+    "11": Nav11, "12": Nav12, "13": Nav13, "14": Nav14, "15": Nav15, "16": Nav16, "17": Nav17, "18": Nav18, "19": Nav19, "20": Nav20,
+    "21": Nav21, "22": Nav22
+  },
+  blog: { max: 13 },
+  buttons: { max: 11 },
+  contactform: { max: 33 },
+  cta: { max: 19 },
+  ecommerce: { max: 23 },
+  events: { max: 10 },
+  faq: { max: 28 },
+  footer: { max: 27 },
+  gallery: { max: 28 },
+  heroSection: { max: 123 },
+  interiorpage: { max: 28 },
+  pricing: { max: 34 },
+  quotes: { max: 9 },
+  reviews: { max: 21 },
+  servicelayout: { max: 170 },
+  sidebyside: { max: 185 },
+  stats: { max: 28 },
+  steps: { max: 31 },
+  team: { max: 23 },
+  whychooseus: { max: 27 }
 };
 
-// Function to get component from explicit imports
-function getComponent(type: string, value: string) {
+// Function to get component with dynamic loading support
+async function getComponent(type: string, value: string) {
   const typeComponents = componentMap[type];
   if (!typeComponents) {
     console.error(`Component type not supported yet: ${type}`);
     return null;
   }
 
-  const component = typeComponents[value];
-  if (!component) {
-    console.error(`Component not found: ${type}/${value}`);
-    return null;
+  // For navigation, use pre-imported components
+  if (type === "navigation" && typeComponents[value]) {
+    return typeComponents[value];
   }
 
-  return component;
+  // For other types, validate against max count and use dynamic import
+  if (typeComponents.max) {
+    const numValue = parseInt(value);
+    if (numValue < 1 || numValue > typeComponents.max) {
+      console.error(`Component ${type}/${value} is out of range (1-${typeComponents.max})`);
+      return null;
+    }
+
+    try {
+      const module = await import(`../layouts/${type}/${value}.astro`);
+      return module.default;
+    } catch (error) {
+      console.error(`Failed to load component ${type}/${value}:`, error);
+      return null;
+    }
+  }
+
+  console.error(`Component not found: ${type}/${value}`);
+  return null;
 }
 
 let selectedComponents = [];
@@ -99,14 +115,16 @@ if (Astro.request.method === "POST") {
 // Debug: Log what we have
 console.log("Final selectedComponents:", selectedComponents);
 
-// Resolve the selected components using explicit imports
-const resolvedComponents = selectedComponents.map((comp) => {
-  const Component = getComponent(comp.type, comp.value);
-  return {
-    ...comp,
-    Component: Component
-  };
-});
+// Resolve the selected components using dynamic imports
+const resolvedComponents = await Promise.all(
+  selectedComponents.map(async (comp) => {
+    const Component = await getComponent(comp.type, comp.value);
+    return {
+      ...comp,
+      Component: Component
+    };
+  })
+);
 console.log("Resolved components:", resolvedComponents);
 
 // If no POST data, redirect to template builder
