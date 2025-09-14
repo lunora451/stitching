@@ -1,0 +1,581 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+// Import navigation components
+import Nav1 from "../layouts/navigation/1.astro";
+import Nav2 from "../layouts/navigation/2.astro";
+import Nav3 from "../layouts/navigation/3.astro";
+import Nav4 from "../layouts/navigation/4.astro";
+import Nav5 from "../layouts/navigation/5.astro";
+import Nav6 from "../layouts/navigation/6.astro";
+import Nav7 from "../layouts/navigation/7.astro";
+import Nav8 from "../layouts/navigation/8.astro";
+import Nav9 from "../layouts/navigation/9.astro";
+import Nav10 from "../layouts/navigation/10.astro";
+import Nav11 from "../layouts/navigation/11.astro";
+import Nav12 from "../layouts/navigation/12.astro";
+import Nav13 from "../layouts/navigation/13.astro";
+import Nav14 from "../layouts/navigation/14.astro";
+import Nav15 from "../layouts/navigation/15.astro";
+import Nav16 from "../layouts/navigation/16.astro";
+import Nav17 from "../layouts/navigation/17.astro";
+import Nav18 from "../layouts/navigation/18.astro";
+import Nav19 from "../layouts/navigation/19.astro";
+import Nav20 from "../layouts/navigation/20.astro";
+import Nav21 from "../layouts/navigation/21.astro";
+import Nav22 from "../layouts/navigation/22.astro";
+
+// TODO: Import other component types as needed
+// For now, let's focus on getting navigation working
+
+// Component mapping object
+const componentMap = {
+  navigation: {
+    "1": Nav1,
+    "2": Nav2,
+    "3": Nav3,
+    "4": Nav4,
+    "5": Nav5,
+    "6": Nav6,
+    "7": Nav7,
+    "8": Nav8,
+    "9": Nav9,
+    "10": Nav10,
+    "11": Nav11,
+    "12": Nav12,
+    "13": Nav13,
+    "14": Nav14,
+    "15": Nav15,
+    "16": Nav16,
+    "17": Nav17,
+    "18": Nav18,
+    "19": Nav19,
+    "20": Nav20,
+    "21": Nav21,
+    "22": Nav22,
+  }
+  // TODO: Add other component types
+};
+
+// Function to get component from explicit imports
+function getComponent(type: string, value: string) {
+  const typeComponents = componentMap[type];
+  if (!typeComponents) {
+    console.error(`Component type not supported yet: ${type}`);
+    return null;
+  }
+
+  const component = typeComponents[value];
+  if (!component) {
+    console.error(`Component not found: ${type}/${value}`);
+    return null;
+  }
+
+  return component;
+}
+
+let selectedComponents = [];
+
+if (Astro.request.method === "POST") {
+  try {
+    const formData = await Astro.request.formData();
+    const componentsData = formData.get("componentsData");
+
+    console.log("Form data received:", componentsData);
+
+    if (componentsData) {
+      selectedComponents = JSON.parse(componentsData as string);
+      console.log("Parsed components:", selectedComponents);
+      // Sort by order
+      selectedComponents.sort((a, b) => a.order - b.order);
+      console.log("Sorted components:", selectedComponents);
+    }
+  } catch (error) {
+    console.error("Error parsing form data:", error);
+    console.error("Raw form data:", formData);
+  }
+}
+
+// Debug: Log what we have
+console.log("Final selectedComponents:", selectedComponents);
+
+// Resolve the selected components using explicit imports
+const resolvedComponents = selectedComponents.map((comp) => {
+  const Component = getComponent(comp.type, comp.value);
+  return {
+    ...comp,
+    Component: Component
+  };
+});
+console.log("Resolved components:", resolvedComponents);
+
+// If no POST data, redirect to template builder
+if (selectedComponents.length === 0) {
+  return Astro.redirect('/templateBuilder');
+}
+---
+
+<Layout>
+  <div class="editor-container">
+    <!-- Editor Toolbar -->
+    <div class="editor-toolbar">
+      <div class="toolbar-group">
+        <button id="toggle-image-edit" class="toolbar-btn">
+          <span class="btn-icon">🖼️</span>
+          Edit Images
+        </button>
+        <button id="toggle-text-edit" class="toolbar-btn">
+          <span class="btn-icon">✏️</span>
+          Edit Text
+        </button>
+        <button id="save-changes" class="toolbar-btn primary">
+          <span class="btn-icon">💾</span>
+          Save Changes
+        </button>
+      </div>
+      <div class="toolbar-group">
+        <button id="preview-mode" class="toolbar-btn">
+          <span class="btn-icon">👁️</span>
+          Preview
+        </button>
+        <a href="/templateBuilder" class="toolbar-btn">
+          <span class="btn-icon">⬅️</span>
+          Back to Builder
+        </a>
+      </div>
+    </div>
+
+    <!-- Editor Content -->
+    <div class="editor-content" id="editor-content">
+      {resolvedComponents.length > 0 ? (
+        resolvedComponents.map((comp) => {
+          const { Component } = comp;
+          console.log(`Rendering component: ${comp.type}/${comp.value}, Component exists: ${!!Component}`);
+
+          if (Component) {
+            return (
+              <div
+                class="editable-component"
+                data-component-type={comp.type}
+                data-component-value={comp.value}
+                style={`order: ${comp.order}; min-height: 200px; border: 2px solid red; margin: 10px 0;`}
+              >
+                <Component />
+              </div>
+            );
+          }
+          return (
+            <div style="padding: 20px; background: yellow; margin: 10px 0;">
+              Component not found: {comp.type}/{comp.value}
+            </div>
+          );
+        })
+      ) : (
+        <div style="padding: 50px; text-align: center; background: lightblue;">
+          <h2>No components selected</h2>
+          <p>Please go back to the template builder and select some components.</p>
+          <a href="/templateBuilder">Back to Template Builder</a>
+        </div>
+      )}
+    </div>
+  </div>
+</Layout>
+
+<style lang="scss">
+  .editor-container {
+    width: 100%;
+    min-height: 100vh;
+
+    .editor-toolbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--primary);
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+      .toolbar-group {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+      }
+
+      .toolbar-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: var(--backgroundColor);
+        border: 2px solid var(--bodyTextColor);
+        border-radius: 6px;
+        color: var(--headerColor);
+        font-family: var(--headerFont);
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: var(--grey);
+          border-color: var(--primary);
+          transform: translateY(-1px);
+        }
+
+        &.primary {
+          background: var(--primary);
+          border-color: var(--primary);
+          color: var(--headerColor);
+
+          &:hover {
+            background: var(--primaryLight);
+            border-color: var(--primaryLight);
+          }
+        }
+
+        &.active {
+          background: var(--secondary);
+          border-color: var(--secondary);
+          color: white;
+        }
+
+        .btn-icon {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .editor-content {
+      margin-top: 80px; // Space for fixed toolbar
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      min-height: calc(100vh - 80px);
+      background: rgba(0, 255, 0, 0.1); // Temporary debug background
+
+      .editable-component {
+        position: relative;
+        transition: all 0.3s ease;
+        width: 100%;
+        overflow-x: hidden;
+
+        // Fix for fixed/absolute positioned navigation components
+        :global(header),
+        :global(nav),
+        :global([id*="navigation"]),
+        :global([class*="navigation"]),
+        :global([class*="navbar"]),
+        :global([class*="header"]) {
+          &[style*="position: fixed"],
+          &[style*="position:fixed"] {
+            top: 80px !important;
+            transform: none !important;
+          }
+        }
+
+        // Alternative approach - target common navigation selectors
+        :global(#cs-navigation) {
+          position: relative !important;
+          top: auto !important;
+          margin-bottom: 20px;
+        }
+
+        // Image editing overlay
+        &.image-edit-mode {
+          img {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+              opacity: 1;
+              filter: grayscale(0%);
+            }
+          }
+
+          .image-upload-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+
+          &:hover .image-upload-overlay {
+            opacity: 1;
+          }
+        }
+
+        // Text editing mode
+        &.text-edit-mode {
+          [data-editable="true"] {
+            background: rgba(238, 203, 47, 0.1);
+            border: 2px dashed var(--primary);
+            padding: 0.25rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background: rgba(238, 203, 47, 0.2);
+              border-style: solid;
+            }
+
+            &:focus {
+              outline: none;
+              background: rgba(238, 203, 47, 0.3);
+              border-color: var(--primaryLight);
+              box-shadow: 0 0 0 3px rgba(238, 203, 47, 0.2);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Dark mode adjustments
+  [data-theme="dark"] .editor-toolbar {
+    background: rgba(3, 15, 24, 0.95);
+    border-bottom-color: var(--primaryDark);
+
+    .toolbar-btn {
+      background: var(--backgroundColorDark);
+      border-color: var(--bodyTextColorDark);
+      color: var(--headerColorDark);
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: var(--primaryDark);
+      }
+
+      &.primary {
+        background: var(--primaryDark);
+        border-color: var(--primaryDark);
+        color: var(--backgroundColorDark);
+      }
+    }
+  }
+</style>
+
+<script>
+  // Editor state
+  let imageEditMode = false;
+  let textEditMode = false;
+
+  // DOM elements
+  const imageEditBtn = document.getElementById('toggle-image-edit') as HTMLButtonElement;
+  const textEditBtn = document.getElementById('toggle-text-edit') as HTMLButtonElement;
+  const saveBtn = document.getElementById('save-changes') as HTMLButtonElement;
+  const previewBtn = document.getElementById('preview-mode') as HTMLButtonElement;
+  const editorContent = document.getElementById('editor-content') as HTMLElement;
+  const editableComponents = document.querySelectorAll('.editable-component');
+
+  // Initialize editor
+  initializeEditor();
+
+  function initializeEditor() {
+    // Add event listeners
+    imageEditBtn?.addEventListener('click', toggleImageEditMode);
+    textEditBtn?.addEventListener('click', toggleTextEditMode);
+    saveBtn?.addEventListener('click', saveChanges);
+    previewBtn?.addEventListener('click', togglePreviewMode);
+
+    // Make text elements editable
+    makeTextEditable();
+
+    // Add image click handlers
+    addImageClickHandlers();
+  }
+
+  function toggleImageEditMode() {
+    imageEditMode = !imageEditMode;
+    imageEditBtn.classList.toggle('active', imageEditMode);
+
+    editableComponents.forEach(component => {
+      component.classList.toggle('image-edit-mode', imageEditMode);
+    });
+
+    if (imageEditMode) {
+      // Disable text edit mode
+      if (textEditMode) toggleTextEditMode();
+    }
+  }
+
+  function toggleTextEditMode() {
+    textEditMode = !textEditMode;
+    textEditBtn.classList.toggle('active', textEditMode);
+
+    editableComponents.forEach(component => {
+      component.classList.toggle('text-edit-mode', textEditMode);
+
+      // Enable/disable text editing
+      const editableTexts = component.querySelectorAll('[data-editable="true"]');
+      editableTexts.forEach((text: HTMLElement) => {
+        text.contentEditable = textEditMode.toString();
+      });
+    });
+
+    if (textEditMode) {
+      // Disable image edit mode
+      if (imageEditMode) toggleImageEditMode();
+    }
+  }
+
+  function makeTextEditable() {
+    editableComponents.forEach(component => {
+      // Find text elements that should be editable
+      const textElements = component.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span, a, button');
+
+      textElements.forEach((element: HTMLElement) => {
+        // Skip elements that are already marked as non-editable
+        if (element.getAttribute('data-editable') === 'false') return;
+
+        // Skip empty elements or elements with only whitespace
+        if (!element.textContent?.trim()) return;
+
+        // Skip elements that contain only images or other non-text content
+        if (element.children.length > 0 && !element.textContent?.trim()) return;
+
+        element.setAttribute('data-editable', 'true');
+      });
+    });
+  }
+
+  function addImageClickHandlers() {
+    editableComponents.forEach(component => {
+      const images = component.querySelectorAll('img');
+
+      images.forEach(img => {
+        // Add upload overlay
+        const overlay = document.createElement('div');
+        overlay.className = 'image-upload-overlay';
+        overlay.innerHTML = `📁`;
+
+        // Make image container relative
+        const parent = img.parentElement;
+        if (parent) {
+          parent.style.position = 'relative';
+          parent.appendChild(overlay);
+        }
+
+        img.addEventListener('click', () => {
+          if (imageEditMode) {
+            handleImageUpload(img);
+          }
+        });
+      });
+    });
+  }
+
+  function handleImageUpload(img: HTMLImageElement) {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+
+    input.onchange = (e) => {
+      const file = (e.target as HTMLInputElement).files?.[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          img.src = e.target?.result as string;
+        };
+        reader.readAsDataURL(file);
+      }
+    };
+
+    input.click();
+  }
+
+  function togglePreviewMode() {
+    const isPreview = previewBtn.classList.contains('active');
+
+    if (!isPreview) {
+      // Entering preview mode - disable all edit modes
+      if (imageEditMode) toggleImageEditMode();
+      if (textEditMode) toggleTextEditMode();
+
+      // Hide all image upload overlays
+      const overlays = document.querySelectorAll('.image-upload-overlay');
+      overlays.forEach(overlay => {
+        overlay.style.display = 'none';
+      });
+
+      previewBtn.classList.add('active');
+    } else {
+      // Exiting preview mode - show image overlays again
+      const overlays = document.querySelectorAll('.image-upload-overlay');
+      overlays.forEach(overlay => {
+        overlay.style.display = 'block';
+      });
+
+      previewBtn.classList.remove('active');
+    }
+  }
+
+  function saveChanges() {
+    // Collect all changes
+    const changes = {
+      images: collectImageChanges(),
+      texts: collectTextChanges(),
+      timestamp: new Date().toISOString()
+    };
+
+    // For now, just log the changes
+    console.log('Saving changes:', changes);
+
+    // Here you could implement actual saving logic
+    // e.g., send to a server endpoint, save to localStorage, etc.
+
+    alert('Changes saved! (Currently logged to console)');
+  }
+
+  function collectImageChanges() {
+    const imageChanges: Array<{component: string, originalSrc: string, newSrc: string}> = [];
+
+    editableComponents.forEach((component, index) => {
+      const images = component.querySelectorAll('img');
+      images.forEach(img => {
+        // You could track original src vs current src here
+        imageChanges.push({
+          component: `${component.getAttribute('data-component-type')}-${index}`,
+          originalSrc: img.getAttribute('data-original-src') || '',
+          newSrc: img.src
+        });
+      });
+    });
+
+    return imageChanges;
+  }
+
+  function collectTextChanges() {
+    const textChanges: Array<{component: string, element: string, originalText: string, newText: string}> = [];
+
+    editableComponents.forEach((component, index) => {
+      const editableTexts = component.querySelectorAll('[data-editable="true"]');
+      editableTexts.forEach((element: HTMLElement, textIndex) => {
+        textChanges.push({
+          component: `${component.getAttribute('data-component-type')}-${index}`,
+          element: `text-${textIndex}`,
+          originalText: element.getAttribute('data-original-text') || '',
+          newText: element.textContent || ''
+        });
+      });
+    });
+
+    return textChanges;
+  }
+</script>

@@ -1259,6 +1259,20 @@ import InteriorPage from "../layouts/show/InteriorPage.astro";
           </optgroup>
         </select>
       </div>
+
+      <button id="generate-preview" class="preview-button">
+        Open Editor
+      </button>
+
+      <!-- Hidden form for SSR data submission -->
+      <form
+        id="editor-form"
+        action="/editor"
+        method="POST"
+        style="display: none;"
+      >
+        <input type="hidden" name="componentsData" id="components-data-input" />
+      </form>
     </div>
     <div class="c-content">
       <div id="ecommerce-component" class="component-wrapper" style="order: 1;">
@@ -1377,14 +1391,13 @@ import InteriorPage from "../layouts/show/InteriorPage.astro";
 
         .order-input {
           width: 50px;
-          padding: 0.3rem;
+          padding: 0;
           border: 1px solid #ccc;
           border-radius: 4px;
           text-align: center;
           font-size: 0.9rem;
         }
       }
-
 
       .hider {
         position: absolute;
@@ -1428,7 +1441,7 @@ import InteriorPage from "../layouts/show/InteriorPage.astro";
   }
 
   select {
-    padding: 0.3rem;
+    padding: 0;
   }
 </style>
 
@@ -1465,6 +1478,62 @@ import InteriorPage from "../layouts/show/InteriorPage.astro";
     });
   });
 
+  // Handle preview generation
+  const previewButton = document.getElementById("generate-preview");
 
+  previewButton.addEventListener("click", () => {
+    const selectedComponents = [];
 
+    // Get all select elements and their corresponding order inputs
+    const selectGroups = document.querySelectorAll(".select-group");
+
+    selectGroups.forEach((group) => {
+      const select = group.querySelector("select");
+      const orderInput = group.querySelector(".order-input");
+
+      if (select && orderInput) {
+        console.log(`Checking select: ${select.name}, value: ${select.value}`);
+
+        if (select.value && select.value !== "none") {
+          const componentType = select.name;
+          const componentValue = select.value;
+          const componentOrder = parseInt(orderInput.value);
+          const targetId = orderInput.getAttribute("data-target");
+
+          console.log(
+            `Adding component: ${componentType}, value: ${componentValue}, order: ${componentOrder}`
+          );
+
+          selectedComponents.push({
+            type: componentType,
+            value: componentValue,
+            order: componentOrder,
+            targetId: targetId,
+          });
+        }
+      }
+    });
+
+    console.log("Selected components:", selectedComponents);
+
+    // Check if any components are selected
+    if (selectedComponents.length === 0) {
+      alert(
+        "Veuillez sélectionner au moins un composant avant de générer la prévisualisation."
+      );
+      return;
+    }
+
+    // Sort components by order
+    selectedComponents.sort((a, b) => a.order - b.order);
+
+    // Submit data via POST form to editor page
+    const hiddenInput = document.getElementById(
+      "components-data-input"
+    ) as HTMLInputElement;
+    const form = document.getElementById("editor-form") as HTMLFormElement;
+
+    hiddenInput.value = JSON.stringify(selectedComponents);
+    form.submit();
+  });
 </script>
