@@ -290,14 +290,14 @@ if (selectedComponents.length === 0) {
         // Image editing overlay
         &.image-edit-mode {
           img {
-            filter: grayscale(100%);
-            opacity: 0.7;
+            border: 3px solid #22c55e;
             cursor: pointer;
             transition: all 0.3s ease;
+            border-radius: 4px;
 
             &:hover {
-              opacity: 1;
-              filter: grayscale(0%);
+              border-color: #16a34a;
+              box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
             }
           }
 
@@ -466,7 +466,7 @@ if (selectedComponents.length === 0) {
         // Add upload overlay
         const overlay = document.createElement('div');
         overlay.className = 'image-upload-overlay';
-        overlay.innerHTML = `<span style="font-size: 24px; color: #ff4444; font-weight: bold;">✕</span>`;
+        overlay.innerHTML = ``;
 
         // Make image container relative
         const parent = img.parentElement;
