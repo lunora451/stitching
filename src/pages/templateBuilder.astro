@@ -1261,8 +1261,13 @@ import InteriorPage from "../layouts/show/InteriorPage.astro";
       </div>
 
       <button id="generate-preview" class="preview-button">
-        Générer la prévisualisation
+        Open Editor
       </button>
+
+      <!-- Hidden form for SSR data submission -->
+      <form id="editor-form" action="/editor" method="POST" style="display: none;">
+        <input type="hidden" name="componentsData" id="components-data-input">
+      </form>
     </div>
     <div class="c-content">
       <div id="ecommerce-component" class="component-wrapper" style="order: 1;">
@@ -1540,8 +1545,11 @@ import InteriorPage from "../layouts/show/InteriorPage.astro";
     // Sort components by order
     selectedComponents.sort((a, b) => a.order - b.order);
 
-    // Encode data and navigate to preview page
-    const encodedData = encodeURIComponent(JSON.stringify(selectedComponents));
-    window.location.href = `/preview?data=${encodedData}`;
+    // Submit data via POST form to editor page
+    const hiddenInput = document.getElementById("components-data-input") as HTMLInputElement;
+    const form = document.getElementById("editor-form") as HTMLFormElement;
+
+    hiddenInput.value = JSON.stringify(selectedComponents);
+    form.submit();
   });
 </script>
