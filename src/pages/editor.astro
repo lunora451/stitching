@@ -386,7 +386,6 @@ if (selectedComponents.length === 0) {
     // Add event listeners
     imageEditBtn?.addEventListener('click', toggleImageEditMode);
     textEditBtn?.addEventListener('click', toggleTextEditMode);
-    saveBtn?.addEventListener('click', saveChanges);
     previewBtn?.addEventListener('click', togglePreviewMode);
 
     // Make text elements editable
@@ -524,58 +523,6 @@ if (selectedComponents.length === 0) {
     }
   }
 
-  function saveChanges() {
-    // Collect all changes
-    const changes = {
-      images: collectImageChanges(),
-      texts: collectTextChanges(),
-      timestamp: new Date().toISOString()
-    };
-
-    // For now, just log the changes
-    console.log('Saving changes:', changes);
-
-    // Here you could implement actual saving logic
-    // e.g., send to a server endpoint, save to localStorage, etc.
-
-    alert('Changes saved! (Currently logged to console)');
-  }
-
-  function collectImageChanges() {
-    const imageChanges: Array<{component: string, originalSrc: string, newSrc: string}> = [];
-
-    editableComponents.forEach((component, index) => {
-      const images = component.querySelectorAll('img');
-      images.forEach(img => {
-        // You could track original src vs current src here
-        imageChanges.push({
-          component: `${component.getAttribute('data-component-type')}-${index}`,
-          originalSrc: img.getAttribute('data-original-src') || '',
-          newSrc: img.src
-        });
-      });
-    });
-
-    return imageChanges;
-  }
-
-  function collectTextChanges() {
-    const textChanges: Array<{component: string, element: string, originalText: string, newText: string}> = [];
-
-    editableComponents.forEach((component, index) => {
-      const editableTexts = component.querySelectorAll('[data-editable="true"]');
-      editableTexts.forEach((element: HTMLElement, textIndex) => {
-        textChanges.push({
-          component: `${component.getAttribute('data-component-type')}-${index}`,
-          element: `text-${textIndex}`,
-          originalText: element.getAttribute('data-original-text') || '',
-          newText: element.textContent || ''
-        });
-      });
-    });
-
-    return textChanges;
-  }
 
   function preventNavigationInEditMode() {
     // Get all links in the editable components
