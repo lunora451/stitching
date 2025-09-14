@@ -473,17 +473,27 @@ if (selectedComponents.length === 0) {
 
         // Image editing overlay
         &.image-edit-mode {
-          img {
+          img, picture {
             border: 3px solid #22c55e;
             cursor: pointer;
             transition: all 0.3s ease;
             border-radius: 4px;
+            display: block;
 
             &:hover {
               border-color: #16a34a;
               box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
             }
           }
+
+          // Special handling for picture elements
+          picture {
+            img {
+              border: none; // Remove border from inner img to avoid double borders
+              border-radius: inherit;
+            }
+          }
+        }
 
           .image-upload-overlay {
             position: absolute;
@@ -654,24 +664,32 @@ if (selectedComponents.length === 0) {
 
   function addImageClickHandlers() {
     editableComponents.forEach((component) => {
-      const images = component.querySelectorAll("img");
+      // Handle both img and picture elements
+      const images = component.querySelectorAll("img, picture");
 
-      images.forEach((img) => {
+      images.forEach((element) => {
+        // For picture elements, we want to target the inner img for the actual upload
+        const targetImg = element.tagName === "PICTURE"
+          ? element.querySelector("img")
+          : element;
+
+        if (!targetImg) return;
+
         // Add upload overlay
         const overlay = document.createElement("div");
         overlay.className = "image-upload-overlay";
         overlay.innerHTML = ``;
 
-        // Make image container relative
-        const parent = img.parentElement;
-        if (parent) {
-          parent.style.position = "relative";
-          parent.appendChild(overlay);
+        // Make image container relative - use the picture element as container if available
+        const container = element.tagName === "PICTURE" ? element : element.parentElement;
+        if (container) {
+          container.style.position = "relative";
+          container.appendChild(overlay);
         }
 
-        img.addEventListener("click", () => {
+        element.addEventListener("click", () => {
           if (imageEditMode) {
-            handleImageUpload(img);
+            handleImageUpload(targetImg);
           }
         });
       });
