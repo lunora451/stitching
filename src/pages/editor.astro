@@ -158,7 +158,7 @@ if (selectedComponents.length === 0) {
                 class="editable-component"
                 data-component-type={comp.type}
                 data-component-value={comp.value}
-                style={`order: ${comp.order}; min-height: 200px; border: 2px solid red; margin: 10px 0;`}
+                style={`order: ${comp.order}; min-height: 200px; margin: 10px 0;`}
               >
                 <Component />
               </div>
@@ -258,7 +258,7 @@ if (selectedComponents.length === 0) {
       flex-direction: column;
       width: 100%;
       min-height: calc(100vh - 80px);
-      background: rgba(0, 255, 0, 0.1); // Temporary debug background
+      background: white;
 
       .editable-component {
         position: relative;
@@ -399,6 +399,9 @@ if (selectedComponents.length === 0) {
 
     // Add image click handlers
     addImageClickHandlers();
+
+    // Prevent navigation during edit mode
+    preventNavigationInEditMode();
   }
 
   function toggleImageEditMode() {
@@ -463,7 +466,7 @@ if (selectedComponents.length === 0) {
         // Add upload overlay
         const overlay = document.createElement('div');
         overlay.className = 'image-upload-overlay';
-        overlay.innerHTML = `📁`;
+        overlay.innerHTML = `<span style="font-size: 24px; color: #ff4444; font-weight: bold;">✕</span>`;
 
         // Make image container relative
         const parent = img.parentElement;
@@ -577,5 +580,22 @@ if (selectedComponents.length === 0) {
     });
 
     return textChanges;
+  }
+
+  function preventNavigationInEditMode() {
+    // Get all links in the editable components
+    editableComponents.forEach(component => {
+      const links = component.querySelectorAll('a');
+
+      links.forEach(link => {
+        link.addEventListener('click', (e) => {
+          if (imageEditMode || textEditMode) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Navigation prevented - editor is in edit mode');
+          }
+        });
+      });
+    });
   }
 </script>
