@@ -1259,10 +1259,6 @@ import InteriorPage from "../layouts/show/InteriorPage.astro";
           </optgroup>
         </select>
       </div>
-
-      <button id="generate-preview" class="preview-button">
-        Générer la prévisualisation
-      </button>
     </div>
     <div class="c-content">
       <div id="ecommerce-component" class="component-wrapper" style="order: 1;">
@@ -1389,30 +1385,6 @@ import InteriorPage from "../layouts/show/InteriorPage.astro";
         }
       }
 
-      .preview-button {
-        background: var(--primary);
-        color: var(--headerColor);
-        border: none;
-        padding: 0.6rem 1.5rem;
-        border-radius: 6px;
-        font-family: var(--headerFont);
-        font-size: 0.9rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        cursor: pointer;
-        margin-top: 0.5rem;
-        transition: all 0.3s ease;
-        width: 100%;
-
-        &:hover {
-          background: var(--primaryLight);
-          transform: translateY(-1px);
-        }
-
-        &:active {
-          transform: translateY(0);
-        }
-      }
 
       .hider {
         position: absolute;
@@ -1493,55 +1465,6 @@ import InteriorPage from "../layouts/show/InteriorPage.astro";
     });
   });
 
-  // Handle preview generation
-  const previewButton = document.getElementById("generate-preview");
 
-  previewButton.addEventListener("click", () => {
-    const selectedComponents = [];
 
-    // Get all select elements and their corresponding order inputs
-    const selectGroups = document.querySelectorAll(".select-group");
-
-    selectGroups.forEach((group) => {
-      const select = group.querySelector("select");
-      const orderInput = group.querySelector(".order-input");
-
-      if (select && orderInput) {
-        console.log(`Checking select: ${select.name}, value: ${select.value}`);
-
-        if (select.value && select.value !== "none") {
-          const componentType = select.name;
-          const componentValue = select.value;
-          const componentOrder = parseInt(orderInput.value);
-          const targetId = orderInput.getAttribute("data-target");
-
-          console.log(`Adding component: ${componentType}, value: ${componentValue}, order: ${componentOrder}`);
-
-          selectedComponents.push({
-            type: componentType,
-            value: componentValue,
-            order: componentOrder,
-            targetId: targetId,
-          });
-        }
-      }
-    });
-
-    console.log("Selected components:", selectedComponents);
-
-    // Check if any components are selected
-    if (selectedComponents.length === 0) {
-      alert(
-        "Veuillez sélectionner au moins un composant avant de générer la prévisualisation."
-      );
-      return;
-    }
-
-    // Sort components by order
-    selectedComponents.sort((a, b) => a.order - b.order);
-
-    // Encode data and navigate to preview page
-    const encodedData = encodeURIComponent(JSON.stringify(selectedComponents));
-    window.location.href = `/preview?data=${encodedData}`;
-  });
 </script>
