@@ -27,36 +27,71 @@ import Nav22 from "../layouts/navigation/22.astro";
 
 // Dynamic component loading - more efficient than importing all components
 
-// Component mapping object with dynamic loading support
+// Component mapping object with complex directory structure support
 const componentMap = {
   navigation: {
     "1": Nav1, "2": Nav2, "3": Nav3, "4": Nav4, "5": Nav5, "6": Nav6, "7": Nav7, "8": Nav8, "9": Nav9, "10": Nav10,
     "11": Nav11, "12": Nav12, "13": Nav13, "14": Nav14, "15": Nav15, "16": Nav16, "17": Nav17, "18": Nav18, "19": Nav19, "20": Nav20,
     "21": Nav21, "22": Nav22
   },
+  // Simple flat directories
   blog: { max: 13 },
   buttons: { max: 11 },
   contactform: { max: 33 },
   cta: { max: 19 },
-  ecommerce: { max: 23 },
+  darkmode: { max: 2 },
   events: { max: 10 },
   faq: { max: 28 },
   footer: { max: 27 },
   gallery: { max: 28 },
-  heroSection: { max: 123 },
-  interiorpage: { max: 28 },
   pricing: { max: 34 },
   quotes: { max: 9 },
   reviews: { max: 21 },
-  servicelayout: { max: 170 },
-  sidebyside: { max: 185 },
   stats: { max: 28 },
   steps: { max: 31 },
   team: { max: 23 },
-  whychooseus: { max: 27 }
+  whychooseus: { max: 27 },
+
+  // Complex nested directories
+  ecommerce: {
+    "collections": { max: 11 },
+    "featuredProducts": { max: 4 },
+    "hero": { max: 2 },
+    "popup": { max: 1 },
+    "promoCTA": { max: 5 }
+  },
+
+  heroSection: {
+    "centered": { max: 15 },
+    "landing&services": { min: 16, max: 63 },
+    "leftaligned": { min: 64, max: 109 },
+    "rightaligned": { min: 110, max: 123 }
+  },
+
+  interiorpage: {
+    "about": { max: 4 },
+    "banner": { max: 11 },
+    "contact": { max: 3 },
+    "content": { max: 7 },
+    "faq": { max: 1 },
+    "menu": { max: 2 }
+  },
+
+  servicelayout: {
+    "3card": { max: 54 },
+    "4card": { max: 66 },
+    "5card": { max: 9 },
+    "combo": { max: 10 },
+    "dual": { max: 31 }
+  },
+
+  sidebyside: {
+    "standard": { max: 109 },
+    "reversePair": { max: 76 }
+  }
 };
 
-// Function to get component with dynamic loading support
+// Function to get component with dynamic loading support for complex directory structures
 async function getComponent(type: string, value: string) {
   const typeComponents = componentMap[type];
   if (!typeComponents) {
@@ -69,9 +104,10 @@ async function getComponent(type: string, value: string) {
     return typeComponents[value];
   }
 
-  // For other types, validate against max count and use dynamic import
+  const numValue = parseInt(value);
+
+  // Handle simple flat directory structure
   if (typeComponents.max) {
-    const numValue = parseInt(value);
     if (numValue < 1 || numValue > typeComponents.max) {
       console.error(`Component ${type}/${value} is out of range (1-${typeComponents.max})`);
       return null;
@@ -83,6 +119,28 @@ async function getComponent(type: string, value: string) {
     } catch (error) {
       console.error(`Failed to load component ${type}/${value}:`, error);
       return null;
+    }
+  }
+
+  // Handle complex nested directory structure
+  // Find which subdirectory this value belongs to
+  for (const [subdir, config] of Object.entries(typeComponents)) {
+    if (typeof config === 'object' && config.max) {
+      const min = config.min || 1;
+      const max = config.max;
+
+      if (numValue >= min && numValue <= max) {
+        // Calculate the actual file number within the subdirectory
+        const actualFileNum = numValue - min + 1;
+
+        try {
+          const module = await import(`../layouts/${type}/${subdir}/${actualFileNum}.astro`);
+          return module.default;
+        } catch (error) {
+          console.error(`Failed to load component ${type}/${subdir}/${actualFileNum}:`, error);
+          return null;
+        }
+      }
     }
   }
 
