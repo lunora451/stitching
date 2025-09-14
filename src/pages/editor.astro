@@ -128,10 +128,6 @@ if (selectedComponents.length === 0) {
           <span class="btn-icon">✏️</span>
           Edit Text
         </button>
-        <button id="save-changes" class="toolbar-btn primary">
-          <span class="btn-icon">💾</span>
-          Save Changes
-        </button>
       </div>
       <div class="toolbar-group">
         <button id="preview-mode" class="toolbar-btn">
@@ -379,7 +375,6 @@ if (selectedComponents.length === 0) {
   // DOM elements
   const imageEditBtn = document.getElementById('toggle-image-edit') as HTMLButtonElement;
   const textEditBtn = document.getElementById('toggle-text-edit') as HTMLButtonElement;
-  const saveBtn = document.getElementById('save-changes') as HTMLButtonElement;
   const previewBtn = document.getElementById('preview-mode') as HTMLButtonElement;
   const editorContent = document.getElementById('editor-content') as HTMLElement;
   const editableComponents = document.querySelectorAll('.editable-component');
