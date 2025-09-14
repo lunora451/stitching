@@ -1,50 +1,51 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ECommerce from "../layouts/show/ECommerce.astro";
-import Navigation from "../layouts/show/Navigation.astro";
-import Hero from "../layouts/show/Hero.astro";
-import Service from "../layouts/show/Services.astro";
-import Sidebyside from "../layouts/show/Sidebyside.astro";
-import Team from "../layouts/show/Team.astro";
-import Gallery from "../layouts/show/Gallery.astro";
-import Steps from "../layouts/show/Steps.astro";
-import Stats from "../layouts/show/Stats.astro";
-import Pricing from "../layouts/show/Pricing.astro";
-import Faq from "../layouts/show/faq.astro";
-import Whychooseus from "../layouts/show/Whychooseus.astro";
-import Quotes from "../layouts/show/quotes.astro";
-import Component from "../layouts/show/component.astro";
-import Reviews from "../layouts/show/Reviews.astro";
-import Contactform from "../layouts/show/Contactform.astro";
-import Events from "../layouts/show/Events.astro";
-import Blog from "../layouts/show/blog.astro";
-import CTA from "../layouts/show/CTA.astro";
-import Footer from "../layouts/show/Footer.astro";
-import InteriorPage from "../layouts/show/InteriorPage.astro";
 
-const components = {
-  "commerceCollection": ECommerce,
-  "navigation": Navigation,
-  "hero": Hero,
-  "service": Service,
-  "sidebyside": Sidebyside,
-  "team": Team,
-  "gallery": Gallery,
-  "steps": Steps,
-  "stats": Stats,
-  "pricing": Pricing,
-  "faq": Faq,
-  "chooseus": Whychooseus,
-  "quotes": Quotes,
-  "component": Component,
-  "reviews": Reviews,
-  "contact": Contactform,
-  "events": Events,
-  "blog": Blog,
-  "cta": CTA,
-  "footer": Footer,
-  "interiorpage": InteriorPage
-};
+// Function to dynamically import components based on type and value
+async function getComponent(type: string, value: string) {
+  try {
+    // Map component types to their folder names
+    const folderMap = {
+      "commerceCollection": "ecommerce",
+      "navigation": "navigation",
+      "hero": "heroSection",
+      "service": "servicelayout",
+      "sidebyside": "sidebyside",
+      "team": "team",
+      "gallery": "gallery",
+      "steps": "steps",
+      "stats": "stats",
+      "pricing": "pricing",
+      "faq": "faq",
+      "chooseus": "whychooseus",
+      "quotes": "quotes",
+      "component": "component",
+      "reviews": "reviews",
+      "contact": "contactform",
+      "events": "events",
+      "blog": "blog",
+      "cta": "cta",
+      "footer": "footer",
+      "interiorpage": "interiorpage"
+    };
+
+    const folder = folderMap[type];
+    if (!folder) {
+      console.error(`Unknown component type: ${type}`);
+      return null;
+    }
+
+    // Import the specific numbered component
+    const componentPath = `../layouts/${folder}/${value}.astro`;
+    console.log(`Attempting to import: ${componentPath}`);
+
+    const module = await import(componentPath);
+    return module.default;
+  } catch (error) {
+    console.error(`Failed to import component ${type}/${value}:`, error);
+    return null;
+  }
+}
 
 let selectedComponents = [];
 
@@ -53,15 +54,35 @@ if (Astro.request.method === "POST") {
     const formData = await Astro.request.formData();
     const componentsData = formData.get("componentsData");
 
+    console.log("Form data received:", componentsData);
+
     if (componentsData) {
       selectedComponents = JSON.parse(componentsData as string);
+      console.log("Parsed components:", selectedComponents);
       // Sort by order
       selectedComponents.sort((a, b) => a.order - b.order);
+      console.log("Sorted components:", selectedComponents);
     }
   } catch (error) {
     console.error("Error parsing form data:", error);
+    console.error("Raw form data:", formData);
   }
 }
+
+// Debug: Log what we have
+console.log("Final selectedComponents:", selectedComponents);
+
+// Dynamically import the selected components
+const componentPromises = selectedComponents.map(async (comp) => {
+  const ComponentClass = await getComponent(comp.type, comp.value);
+  return {
+    ...comp,
+    Component: ComponentClass
+  };
+});
+
+const resolvedComponents = await Promise.all(componentPromises);
+console.log("Resolved components:", resolvedComponents);
 
 // If no POST data, redirect to template builder
 if (selectedComponents.length === 0) {
@@ -101,22 +122,36 @@ if (selectedComponents.length === 0) {
 
     <!-- Editor Content -->
     <div class="editor-content" id="editor-content">
-      {selectedComponents.map((comp) => {
-        const ComponentToRender = components[comp.type];
-        if (ComponentToRender) {
+      {resolvedComponents.length > 0 ? (
+        resolvedComponents.map((comp) => {
+          const { Component } = comp;
+          console.log(`Rendering component: ${comp.type}/${comp.value}, Component exists: ${!!Component}`);
+
+          if (Component) {
+            return (
+              <div
+                class="editable-component"
+                data-component-type={comp.type}
+                data-component-value={comp.value}
+                style={`order: ${comp.order}; min-height: 200px; border: 2px solid red; margin: 10px 0;`}
+              >
+                <Component />
+              </div>
+            );
+          }
           return (
-            <div
-              class="editable-component"
-              data-component-type={comp.type}
-              data-component-value={comp.value}
-              style={`order: ${comp.order}`}
-            >
-              <ComponentToRender />
+            <div style="padding: 20px; background: yellow; margin: 10px 0;">
+              Component not found: {comp.type}/{comp.value}
             </div>
           );
-        }
-        return null;
-      })}
+        })
+      ) : (
+        <div style="padding: 50px; text-align: center; background: lightblue;">
+          <h2>No components selected</h2>
+          <p>Please go back to the template builder and select some components.</p>
+          <a href="/templateBuilder">Back to Template Builder</a>
+        </div>
+      )}
     </div>
   </div>
 </Layout>
@@ -196,10 +231,15 @@ if (selectedComponents.length === 0) {
       margin-top: 80px; // Space for fixed toolbar
       display: flex;
       flex-direction: column;
+      width: 100%;
+      min-height: calc(100vh - 80px);
+      background: rgba(0, 255, 0, 0.1); // Temporary debug background
 
       .editable-component {
         position: relative;
         transition: all 0.3s ease;
+        width: 100%;
+        overflow-x: hidden;
 
         // Image editing overlay
         &.image-edit-mode {
