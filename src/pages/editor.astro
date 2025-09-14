@@ -266,6 +266,27 @@ if (selectedComponents.length === 0) {
         width: 100%;
         overflow-x: hidden;
 
+        // Fix for fixed/absolute positioned navigation components
+        :global(header),
+        :global(nav),
+        :global([id*="navigation"]),
+        :global([class*="navigation"]),
+        :global([class*="navbar"]),
+        :global([class*="header"]) {
+          &[style*="position: fixed"],
+          &[style*="position:fixed"] {
+            top: 80px !important;
+            transform: none !important;
+          }
+        }
+
+        // Alternative approach - target common navigation selectors
+        :global(#cs-navigation) {
+          position: relative !important;
+          top: auto !important;
+          margin-bottom: 20px;
+        }
+
         // Image editing overlay
         &.image-edit-mode {
           img {
@@ -442,10 +463,7 @@ if (selectedComponents.length === 0) {
         // Add upload overlay
         const overlay = document.createElement('div');
         overlay.className = 'image-upload-overlay';
-        overlay.innerHTML = `
-          <div>📁</div>
-          <div>Click to upload</div>
-        `;
+        overlay.innerHTML = `📁`;
 
         // Make image container relative
         const parent = img.parentElement;
@@ -483,11 +501,29 @@ if (selectedComponents.length === 0) {
   }
 
   function togglePreviewMode() {
-    // Toggle all edit modes off
-    if (imageEditMode) toggleImageEditMode();
-    if (textEditMode) toggleTextEditMode();
+    const isPreview = previewBtn.classList.contains('active');
 
-    previewBtn.classList.toggle('active');
+    if (!isPreview) {
+      // Entering preview mode - disable all edit modes
+      if (imageEditMode) toggleImageEditMode();
+      if (textEditMode) toggleTextEditMode();
+
+      // Hide all image upload overlays
+      const overlays = document.querySelectorAll('.image-upload-overlay');
+      overlays.forEach(overlay => {
+        overlay.style.display = 'none';
+      });
+
+      previewBtn.classList.add('active');
+    } else {
+      // Exiting preview mode - show image overlays again
+      const overlays = document.querySelectorAll('.image-upload-overlay');
+      overlays.forEach(overlay => {
+        overlay.style.display = 'block';
+      });
+
+      previewBtn.classList.remove('active');
+    }
   }
 
   function saveChanges() {
