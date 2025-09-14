@@ -1,50 +1,77 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-// Function to dynamically import components based on type and value
-async function getComponent(type: string, value: string) {
-  try {
-    // Map component types to their folder names
-    const folderMap = {
-      "commerceCollection": "ecommerce",
-      "navigation": "navigation",
-      "hero": "heroSection",
-      "service": "servicelayout",
-      "sidebyside": "sidebyside",
-      "team": "team",
-      "gallery": "gallery",
-      "steps": "steps",
-      "stats": "stats",
-      "pricing": "pricing",
-      "faq": "faq",
-      "chooseus": "whychooseus",
-      "quotes": "quotes",
-      "component": "component",
-      "reviews": "reviews",
-      "contact": "contactform",
-      "events": "events",
-      "blog": "blog",
-      "cta": "cta",
-      "footer": "footer",
-      "interiorpage": "interiorpage"
-    };
+// Import navigation components
+import Nav1 from "../layouts/navigation/1.astro";
+import Nav2 from "../layouts/navigation/2.astro";
+import Nav3 from "../layouts/navigation/3.astro";
+import Nav4 from "../layouts/navigation/4.astro";
+import Nav5 from "../layouts/navigation/5.astro";
+import Nav6 from "../layouts/navigation/6.astro";
+import Nav7 from "../layouts/navigation/7.astro";
+import Nav8 from "../layouts/navigation/8.astro";
+import Nav9 from "../layouts/navigation/9.astro";
+import Nav10 from "../layouts/navigation/10.astro";
+import Nav11 from "../layouts/navigation/11.astro";
+import Nav12 from "../layouts/navigation/12.astro";
+import Nav13 from "../layouts/navigation/13.astro";
+import Nav14 from "../layouts/navigation/14.astro";
+import Nav15 from "../layouts/navigation/15.astro";
+import Nav16 from "../layouts/navigation/16.astro";
+import Nav17 from "../layouts/navigation/17.astro";
+import Nav18 from "../layouts/navigation/18.astro";
+import Nav19 from "../layouts/navigation/19.astro";
+import Nav20 from "../layouts/navigation/20.astro";
+import Nav21 from "../layouts/navigation/21.astro";
+import Nav22 from "../layouts/navigation/22.astro";
 
-    const folder = folderMap[type];
-    if (!folder) {
-      console.error(`Unknown component type: ${type}`);
-      return null;
-    }
+// TODO: Import other component types as needed
+// For now, let's focus on getting navigation working
 
-    // Import the specific numbered component
-    const componentPath = `../layouts/${folder}/${value}.astro`;
-    console.log(`Attempting to import: ${componentPath}`);
+// Component mapping object
+const componentMap = {
+  navigation: {
+    "1": Nav1,
+    "2": Nav2,
+    "3": Nav3,
+    "4": Nav4,
+    "5": Nav5,
+    "6": Nav6,
+    "7": Nav7,
+    "8": Nav8,
+    "9": Nav9,
+    "10": Nav10,
+    "11": Nav11,
+    "12": Nav12,
+    "13": Nav13,
+    "14": Nav14,
+    "15": Nav15,
+    "16": Nav16,
+    "17": Nav17,
+    "18": Nav18,
+    "19": Nav19,
+    "20": Nav20,
+    "21": Nav21,
+    "22": Nav22,
+  }
+  // TODO: Add other component types
+};
 
-    const module = await import(componentPath);
-    return module.default;
-  } catch (error) {
-    console.error(`Failed to import component ${type}/${value}:`, error);
+// Function to get component from explicit imports
+function getComponent(type: string, value: string) {
+  const typeComponents = componentMap[type];
+  if (!typeComponents) {
+    console.error(`Component type not supported yet: ${type}`);
     return null;
   }
+
+  const component = typeComponents[value];
+  if (!component) {
+    console.error(`Component not found: ${type}/${value}`);
+    return null;
+  }
+
+  return component;
 }
 
 let selectedComponents = [];
@@ -72,16 +99,14 @@ if (Astro.request.method === "POST") {
 // Debug: Log what we have
 console.log("Final selectedComponents:", selectedComponents);
 
-// Dynamically import the selected components
-const componentPromises = selectedComponents.map(async (comp) => {
-  const ComponentClass = await getComponent(comp.type, comp.value);
+// Resolve the selected components using explicit imports
+const resolvedComponents = selectedComponents.map((comp) => {
+  const Component = getComponent(comp.type, comp.value);
   return {
     ...comp,
-    Component: ComponentClass
+    Component: Component
   };
 });
-
-const resolvedComponents = await Promise.all(componentPromises);
 console.log("Resolved components:", resolvedComponents);
 
 // If no POST data, redirect to template builder
