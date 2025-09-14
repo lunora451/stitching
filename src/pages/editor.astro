@@ -531,11 +531,9 @@ if (selectedComponents.length === 0) {
 
       links.forEach(link => {
         link.addEventListener('click', (e) => {
-          if (imageEditMode || textEditMode) {
-            e.preventDefault();
-            e.stopPropagation();
-            console.log('Navigation prevented - editor is in edit mode');
-          }
+          e.preventDefault();
+          e.stopPropagation();
+          console.log('Navigation prevented - editor mode');
         });
       });
     });
