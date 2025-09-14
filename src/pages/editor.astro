@@ -25,127 +25,235 @@ import Nav20 from "../layouts/navigation/20.astro";
 import Nav21 from "../layouts/navigation/21.astro";
 import Nav22 from "../layouts/navigation/22.astro";
 
-// Dynamic component loading - more efficient than importing all components
+// Import blog components
+import Blog1 from "../layouts/blog/1.astro";
+import Blog2 from "../layouts/blog/2.astro";
+import Blog3 from "../layouts/blog/3.astro";
+import Blog4 from "../layouts/blog/4.astro";
+import Blog5 from "../layouts/blog/5.astro";
+import Blog6 from "../layouts/blog/6.astro";
+import Blog7 from "../layouts/blog/7.astro";
+import Blog8 from "../layouts/blog/8.astro";
+import Blog9 from "../layouts/blog/9.astro";
+import Blog10 from "../layouts/blog/10.astro";
+import Blog11 from "../layouts/blog/11.astro";
+import Blog12 from "../layouts/blog/12.astro";
+import Blog13 from "../layouts/blog/13.astro";
 
-// Component mapping object with complex directory structure support
+// Import button components
+import Button1 from "../layouts/buttons/1.astro";
+import Button2 from "../layouts/buttons/2.astro";
+import Button3 from "../layouts/buttons/3.astro";
+import Button4 from "../layouts/buttons/4.astro";
+import Button5 from "../layouts/buttons/5.astro";
+import Button6 from "../layouts/buttons/6.astro";
+import Button7 from "../layouts/buttons/7.astro";
+import Button8 from "../layouts/buttons/8.astro";
+import Button9 from "../layouts/buttons/9.astro";
+import Button10 from "../layouts/buttons/10.astro";
+import Button11 from "../layouts/buttons/11.astro";
+
+// Import component components
+import Component1 from "../layouts/component/1.astro";
+import Component2 from "../layouts/component/2.astro";
+import Component3 from "../layouts/component/3.astro";
+import Component4 from "../layouts/component/4.astro";
+import Component5 from "../layouts/component/5.astro";
+import Component6 from "../layouts/component/6.astro";
+import Component7 from "../layouts/component/7.astro";
+import Component8 from "../layouts/component/8.astro";
+import Component9 from "../layouts/component/9.astro";
+import Component10 from "../layouts/component/10.astro";
+
+// Import heroSection components
+// centered (1-15)
+import HeroCentered1 from "../layouts/heroSection/centered/1.astro";
+import HeroCentered2 from "../layouts/heroSection/centered/2.astro";
+import HeroCentered3 from "../layouts/heroSection/centered/3.astro";
+import HeroCentered4 from "../layouts/heroSection/centered/4.astro";
+import HeroCentered5 from "../layouts/heroSection/centered/5.astro";
+import HeroCentered6 from "../layouts/heroSection/centered/6.astro";
+import HeroCentered7 from "../layouts/heroSection/centered/7.astro";
+import HeroCentered8 from "../layouts/heroSection/centered/8.astro";
+import HeroCentered9 from "../layouts/heroSection/centered/9.astro";
+import HeroCentered10 from "../layouts/heroSection/centered/10.astro";
+import HeroCentered11 from "../layouts/heroSection/centered/11.astro";
+import HeroCentered12 from "../layouts/heroSection/centered/12.astro";
+import HeroCentered13 from "../layouts/heroSection/centered/13.astro";
+import HeroCentered14 from "../layouts/heroSection/centered/14.astro";
+import HeroCentered15 from "../layouts/heroSection/centered/15.astro";
+
+// landing&services (16-63)
+import HeroLanding16 from "../layouts/heroSection/landing&services/16.astro";
+import HeroLanding17 from "../layouts/heroSection/landing&services/17.astro";
+import HeroLanding18 from "../layouts/heroSection/landing&services/18.astro";
+import HeroLanding19 from "../layouts/heroSection/landing&services/19.astro";
+import HeroLanding20 from "../layouts/heroSection/landing&services/20.astro";
+import HeroLanding21 from "../layouts/heroSection/landing&services/21.astro";
+import HeroLanding22 from "../layouts/heroSection/landing&services/22.astro";
+import HeroLanding23 from "../layouts/heroSection/landing&services/23.astro";
+import HeroLanding24 from "../layouts/heroSection/landing&services/24.astro";
+import HeroLanding25 from "../layouts/heroSection/landing&services/25.astro";
+import HeroLanding26 from "../layouts/heroSection/landing&services/26.astro";
+import HeroLanding27 from "../layouts/heroSection/landing&services/27.astro";
+import HeroLanding28 from "../layouts/heroSection/landing&services/28.astro";
+import HeroLanding29 from "../layouts/heroSection/landing&services/29.astro";
+import HeroLanding30 from "../layouts/heroSection/landing&services/30.astro";
+import HeroLanding31 from "../layouts/heroSection/landing&services/31.astro";
+import HeroLanding32 from "../layouts/heroSection/landing&services/32.astro";
+import HeroLanding33 from "../layouts/heroSection/landing&services/33.astro";
+import HeroLanding34 from "../layouts/heroSection/landing&services/34.astro";
+import HeroLanding35 from "../layouts/heroSection/landing&services/35.astro";
+import HeroLanding36 from "../layouts/heroSection/landing&services/36.astro";
+import HeroLanding37 from "../layouts/heroSection/landing&services/37.astro";
+import HeroLanding38 from "../layouts/heroSection/landing&services/38.astro";
+import HeroLanding39 from "../layouts/heroSection/landing&services/39.astro";
+import HeroLanding40 from "../layouts/heroSection/landing&services/40.astro";
+import HeroLanding41 from "../layouts/heroSection/landing&services/41.astro";
+import HeroLanding42 from "../layouts/heroSection/landing&services/42.astro";
+import HeroLanding43 from "../layouts/heroSection/landing&services/43.astro";
+import HeroLanding44 from "../layouts/heroSection/landing&services/44.astro";
+import HeroLanding45 from "../layouts/heroSection/landing&services/45.astro";
+import HeroLanding46 from "../layouts/heroSection/landing&services/46.astro";
+import HeroLanding47 from "../layouts/heroSection/landing&services/47.astro";
+import HeroLanding48 from "../layouts/heroSection/landing&services/48.astro";
+import HeroLanding49 from "../layouts/heroSection/landing&services/49.astro";
+import HeroLanding50 from "../layouts/heroSection/landing&services/50.astro";
+import HeroLanding51 from "../layouts/heroSection/landing&services/51.astro";
+import HeroLanding52 from "../layouts/heroSection/landing&services/52.astro";
+import HeroLanding53 from "../layouts/heroSection/landing&services/53.astro";
+import HeroLanding54 from "../layouts/heroSection/landing&services/54.astro";
+import HeroLanding55 from "../layouts/heroSection/landing&services/55.astro";
+import HeroLanding56 from "../layouts/heroSection/landing&services/56.astro";
+import HeroLanding57 from "../layouts/heroSection/landing&services/57.astro";
+import HeroLanding58 from "../layouts/heroSection/landing&services/58.astro";
+import HeroLanding59 from "../layouts/heroSection/landing&services/59.astro";
+import HeroLanding60 from "../layouts/heroSection/landing&services/60.astro";
+import HeroLanding61 from "../layouts/heroSection/landing&services/61.astro";
+import HeroLanding62 from "../layouts/heroSection/landing&services/62.astro";
+import HeroLanding63 from "../layouts/heroSection/landing&services/63.astro";
+
+// leftaligned (64-109)
+import HeroLeft64 from "../layouts/heroSection/leftaligned/64.astro";
+import HeroLeft65 from "../layouts/heroSection/leftaligned/65.astro";
+import HeroLeft66 from "../layouts/heroSection/leftaligned/66.astro";
+import HeroLeft67 from "../layouts/heroSection/leftaligned/67.astro";
+import HeroLeft68 from "../layouts/heroSection/leftaligned/68.astro";
+import HeroLeft69 from "../layouts/heroSection/leftaligned/69.astro";
+import HeroLeft70 from "../layouts/heroSection/leftaligned/70.astro";
+import HeroLeft71 from "../layouts/heroSection/leftaligned/71.astro";
+import HeroLeft72 from "../layouts/heroSection/leftaligned/72.astro";
+import HeroLeft73 from "../layouts/heroSection/leftaligned/73.astro";
+import HeroLeft74 from "../layouts/heroSection/leftaligned/74.astro";
+import HeroLeft75 from "../layouts/heroSection/leftaligned/75.astro";
+import HeroLeft76 from "../layouts/heroSection/leftaligned/76.astro";
+import HeroLeft77 from "../layouts/heroSection/leftaligned/77.astro";
+import HeroLeft78 from "../layouts/heroSection/leftaligned/78.astro";
+import HeroLeft79 from "../layouts/heroSection/leftaligned/79.astro";
+import HeroLeft80 from "../layouts/heroSection/leftaligned/80.astro";
+import HeroLeft81 from "../layouts/heroSection/leftaligned/81.astro";
+import HeroLeft82 from "../layouts/heroSection/leftaligned/82.astro";
+import HeroLeft83 from "../layouts/heroSection/leftaligned/83.astro";
+import HeroLeft84 from "../layouts/heroSection/leftaligned/84.astro";
+import HeroLeft85 from "../layouts/heroSection/leftaligned/85.astro";
+import HeroLeft86 from "../layouts/heroSection/leftaligned/86.astro";
+import HeroLeft87 from "../layouts/heroSection/leftaligned/87.astro";
+import HeroLeft88 from "../layouts/heroSection/leftaligned/88.astro";
+import HeroLeft89 from "../layouts/heroSection/leftaligned/89.astro";
+import HeroLeft90 from "../layouts/heroSection/leftaligned/90.astro";
+import HeroLeft91 from "../layouts/heroSection/leftaligned/91.astro";
+import HeroLeft92 from "../layouts/heroSection/leftaligned/92.astro";
+import HeroLeft93 from "../layouts/heroSection/leftaligned/93.astro";
+import HeroLeft94 from "../layouts/heroSection/leftaligned/94.astro";
+import HeroLeft95 from "../layouts/heroSection/leftaligned/95.astro";
+import HeroLeft96 from "../layouts/heroSection/leftaligned/96.astro";
+import HeroLeft97 from "../layouts/heroSection/leftaligned/97.astro";
+import HeroLeft98 from "../layouts/heroSection/leftaligned/98.astro";
+import HeroLeft99 from "../layouts/heroSection/leftaligned/99.astro";
+import HeroLeft100 from "../layouts/heroSection/leftaligned/100.astro";
+import HeroLeft101 from "../layouts/heroSection/leftaligned/101.astro";
+import HeroLeft102 from "../layouts/heroSection/leftaligned/102.astro";
+import HeroLeft103 from "../layouts/heroSection/leftaligned/103.astro";
+import HeroLeft104 from "../layouts/heroSection/leftaligned/104.astro";
+import HeroLeft105 from "../layouts/heroSection/leftaligned/105.astro";
+import HeroLeft106 from "../layouts/heroSection/leftaligned/106.astro";
+import HeroLeft107 from "../layouts/heroSection/leftaligned/107.astro";
+import HeroLeft108 from "../layouts/heroSection/leftaligned/108.astro";
+import HeroLeft109 from "../layouts/heroSection/leftaligned/109.astro";
+
+// rightaligned (110-123)
+import HeroRight110 from "../layouts/heroSection/rightaligned/110.astro";
+import HeroRight111 from "../layouts/heroSection/rightaligned/111.astro";
+import HeroRight112 from "../layouts/heroSection/rightaligned/112.astro";
+import HeroRight113 from "../layouts/heroSection/rightaligned/113.astro";
+import HeroRight114 from "../layouts/heroSection/rightaligned/114.astro";
+import HeroRight115 from "../layouts/heroSection/rightaligned/115.astro";
+import HeroRight116 from "../layouts/heroSection/rightaligned/116.astro";
+import HeroRight117 from "../layouts/heroSection/rightaligned/117.astro";
+import HeroRight118 from "../layouts/heroSection/rightaligned/118.astro";
+import HeroRight119 from "../layouts/heroSection/rightaligned/119.astro";
+import HeroRight120 from "../layouts/heroSection/rightaligned/120.astro";
+import HeroRight121 from "../layouts/heroSection/rightaligned/121.astro";
+import HeroRight122 from "../layouts/heroSection/rightaligned/122.astro";
+import HeroRight123 from "../layouts/heroSection/rightaligned/123.astro";
+
+// Static component mapping with all imports
+
+// Component mapping object with static imports
 const componentMap = {
   navigation: {
     "1": Nav1, "2": Nav2, "3": Nav3, "4": Nav4, "5": Nav5, "6": Nav6, "7": Nav7, "8": Nav8, "9": Nav9, "10": Nav10,
     "11": Nav11, "12": Nav12, "13": Nav13, "14": Nav14, "15": Nav15, "16": Nav16, "17": Nav17, "18": Nav18, "19": Nav19, "20": Nav20,
     "21": Nav21, "22": Nav22
   },
-  // Simple flat directories
-  blog: { max: 13 },
-  buttons: { max: 11 },
-  contactform: { max: 33 },
-  cta: { max: 19 },
-  darkmode: { max: 2 },
-  events: { max: 10 },
-  faq: { max: 28 },
-  footer: { max: 27 },
-  gallery: { max: 28 },
-  pricing: { max: 34 },
-  quotes: { max: 9 },
-  reviews: { max: 21 },
-  stats: { max: 28 },
-  steps: { max: 31 },
-  team: { max: 23 },
-  whychooseus: { max: 27 },
-
-  // Complex nested directories
-  ecommerce: {
-    "collections": { max: 11 },
-    "featuredProducts": { max: 4 },
-    "hero": { max: 2 },
-    "popup": { max: 1 },
-    "promoCTA": { max: 5 }
+  blog: {
+    "1": Blog1, "2": Blog2, "3": Blog3, "4": Blog4, "5": Blog5, "6": Blog6, "7": Blog7, "8": Blog8, "9": Blog9, "10": Blog10,
+    "11": Blog11, "12": Blog12, "13": Blog13
   },
-
+  buttons: {
+    "1": Button1, "2": Button2, "3": Button3, "4": Button4, "5": Button5, "6": Button6, "7": Button7, "8": Button8, "9": Button9, "10": Button10,
+    "11": Button11
+  },
+  component: {
+    "1": Component1, "2": Component2, "3": Component3, "4": Component4, "5": Component5, "6": Component6, "7": Component7, "8": Component8, "9": Component9, "10": Component10
+  },
   heroSection: {
-    "centered": { max: 15 },
-    "landing&services": { min: 16, max: 63 },
-    "leftaligned": { min: 64, max: 109 },
-    "rightaligned": { min: 110, max: 123 }
-  },
-
-  interiorpage: {
-    "about": { max: 4 },
-    "banner": { max: 11 },
-    "contact": { max: 3 },
-    "content": { max: 7 },
-    "faq": { max: 1 },
-    "menu": { max: 2 }
-  },
-
-  servicelayout: {
-    "3card": { max: 54 },
-    "4card": { max: 66 },
-    "5card": { max: 9 },
-    "combo": { max: 10 },
-    "dual": { max: 31 }
-  },
-
-  sidebyside: {
-    "standard": { max: 109 },
-    "reversePair": { max: 76 }
+    // centered (1-15)
+    "1": HeroCentered1, "2": HeroCentered2, "3": HeroCentered3, "4": HeroCentered4, "5": HeroCentered5, "6": HeroCentered6, "7": HeroCentered7, "8": HeroCentered8, "9": HeroCentered9, "10": HeroCentered10,
+    "11": HeroCentered11, "12": HeroCentered12, "13": HeroCentered13, "14": HeroCentered14, "15": HeroCentered15,
+    // landing&services (16-63)
+    "16": HeroLanding16, "17": HeroLanding17, "18": HeroLanding18, "19": HeroLanding19, "20": HeroLanding20, "21": HeroLanding21, "22": HeroLanding22, "23": HeroLanding23, "24": HeroLanding24, "25": HeroLanding25,
+    "26": HeroLanding26, "27": HeroLanding27, "28": HeroLanding28, "29": HeroLanding29, "30": HeroLanding30, "31": HeroLanding31, "32": HeroLanding32, "33": HeroLanding33, "34": HeroLanding34, "35": HeroLanding35,
+    "36": HeroLanding36, "37": HeroLanding37, "38": HeroLanding38, "39": HeroLanding39, "40": HeroLanding40, "41": HeroLanding41, "42": HeroLanding42, "43": HeroLanding43, "44": HeroLanding44, "45": HeroLanding45,
+    "46": HeroLanding46, "47": HeroLanding47, "48": HeroLanding48, "49": HeroLanding49, "50": HeroLanding50, "51": HeroLanding51, "52": HeroLanding52, "53": HeroLanding53, "54": HeroLanding54, "55": HeroLanding55,
+    "56": HeroLanding56, "57": HeroLanding57, "58": HeroLanding58, "59": HeroLanding59, "60": HeroLanding60, "61": HeroLanding61, "62": HeroLanding62, "63": HeroLanding63,
+    // leftaligned (64-109)
+    "64": HeroLeft64, "65": HeroLeft65, "66": HeroLeft66, "67": HeroLeft67, "68": HeroLeft68, "69": HeroLeft69, "70": HeroLeft70, "71": HeroLeft71, "72": HeroLeft72, "73": HeroLeft73,
+    "74": HeroLeft74, "75": HeroLeft75, "76": HeroLeft76, "77": HeroLeft77, "78": HeroLeft78, "79": HeroLeft79, "80": HeroLeft80, "81": HeroLeft81, "82": HeroLeft82, "83": HeroLeft83,
+    "84": HeroLeft84, "85": HeroLeft85, "86": HeroLeft86, "87": HeroLeft87, "88": HeroLeft88, "89": HeroLeft89, "90": HeroLeft90, "91": HeroLeft91, "92": HeroLeft92, "93": HeroLeft93,
+    "94": HeroLeft94, "95": HeroLeft95, "96": HeroLeft96, "97": HeroLeft97, "98": HeroLeft98, "99": HeroLeft99, "100": HeroLeft100, "101": HeroLeft101, "102": HeroLeft102, "103": HeroLeft103,
+    "104": HeroLeft104, "105": HeroLeft105, "106": HeroLeft106, "107": HeroLeft107, "108": HeroLeft108, "109": HeroLeft109,
+    // rightaligned (110-123)
+    "110": HeroRight110, "111": HeroRight111, "112": HeroRight112, "113": HeroRight113, "114": HeroRight114, "115": HeroRight115, "116": HeroRight116, "117": HeroRight117, "118": HeroRight118, "119": HeroRight119,
+    "120": HeroRight120, "121": HeroRight121, "122": HeroRight122, "123": HeroRight123
   }
 };
 
-// Function to get component with dynamic loading support for complex directory structures
-async function getComponent(type: string, value: string) {
+// Function to get component from static imports
+function getComponent(type: string, value: string) {
   const typeComponents = componentMap[type];
   if (!typeComponents) {
     console.error(`Component type not supported yet: ${type}`);
     return null;
   }
 
-  // For navigation, use pre-imported components
-  if (type === "navigation" && typeComponents[value]) {
-    return typeComponents[value];
+  const component = typeComponents[value];
+  if (!component) {
+    console.error(`Component not found: ${type}/${value}`);
+    return null;
   }
 
-  const numValue = parseInt(value);
-
-  // Handle simple flat directory structure
-  if (typeComponents.max) {
-    if (numValue < 1 || numValue > typeComponents.max) {
-      console.error(`Component ${type}/${value} is out of range (1-${typeComponents.max})`);
-      return null;
-    }
-
-    try {
-      const module = await import(`../layouts/${type}/${value}.astro`);
-      return module.default;
-    } catch (error) {
-      console.error(`Failed to load component ${type}/${value}:`, error);
-      return null;
-    }
-  }
-
-  // Handle complex nested directory structure
-  // Find which subdirectory this value belongs to
-  for (const [subdir, config] of Object.entries(typeComponents)) {
-    if (typeof config === 'object' && config.max) {
-      const min = config.min || 1;
-      const max = config.max;
-
-      if (numValue >= min && numValue <= max) {
-        // Calculate the actual file number within the subdirectory
-        const actualFileNum = numValue - min + 1;
-
-        try {
-          const module = await import(`../layouts/${type}/${subdir}/${actualFileNum}.astro`);
-          return module.default;
-        } catch (error) {
-          console.error(`Failed to load component ${type}/${subdir}/${actualFileNum}:`, error);
-          return null;
-        }
-      }
-    }
-  }
-
-  console.error(`Component not found: ${type}/${value}`);
-  return null;
+  return component;
 }
 
 let selectedComponents = [];
@@ -173,21 +281,19 @@ if (Astro.request.method === "POST") {
 // Debug: Log what we have
 console.log("Final selectedComponents:", selectedComponents);
 
-// Resolve the selected components using dynamic imports
-const resolvedComponents = await Promise.all(
-  selectedComponents.map(async (comp) => {
-    const Component = await getComponent(comp.type, comp.value);
-    return {
-      ...comp,
-      Component: Component
-    };
-  })
-);
+// Resolve the selected components using static imports
+const resolvedComponents = selectedComponents.map((comp) => {
+  const Component = getComponent(comp.type, comp.value);
+  return {
+    ...comp,
+    Component: Component,
+  };
+});
 console.log("Resolved components:", resolvedComponents);
 
 // If no POST data, redirect to template builder
 if (selectedComponents.length === 0) {
-  return Astro.redirect('/templateBuilder');
+  return Astro.redirect("/templateBuilder");
 }
 ---
 
@@ -219,36 +325,42 @@ if (selectedComponents.length === 0) {
 
     <!-- Editor Content -->
     <div class="editor-content" id="editor-content">
-      {resolvedComponents.length > 0 ? (
-        resolvedComponents.map((comp) => {
-          const { Component } = comp;
-          console.log(`Rendering component: ${comp.type}/${comp.value}, Component exists: ${!!Component}`);
+      {
+        resolvedComponents.length > 0 ? (
+          resolvedComponents.map((comp) => {
+            const { Component } = comp;
+            console.log(
+              `Rendering component: ${comp.type}/${comp.value}, Component exists: ${!!Component}`
+            );
 
-          if (Component) {
+            if (Component) {
+              return (
+                <div
+                  class="editable-component"
+                  data-component-type={comp.type}
+                  data-component-value={comp.value}
+                  style={`order: ${comp.order}; min-height: 200px; margin: 10px 0;`}
+                >
+                  <Component />
+                </div>
+              );
+            }
             return (
-              <div
-                class="editable-component"
-                data-component-type={comp.type}
-                data-component-value={comp.value}
-                style={`order: ${comp.order}; min-height: 200px; margin: 10px 0;`}
-              >
-                <Component />
+              <div style="padding: 20px; background: yellow; margin: 10px 0;">
+                Component not found: {comp.type}/{comp.value}
               </div>
             );
-          }
-          return (
-            <div style="padding: 20px; background: yellow; margin: 10px 0;">
-              Component not found: {comp.type}/{comp.value}
-            </div>
-          );
-        })
-      ) : (
-        <div style="padding: 50px; text-align: center; background: lightblue;">
-          <h2>No components selected</h2>
-          <p>Please go back to the template builder and select some components.</p>
-          <a href="/templateBuilder">Back to Template Builder</a>
-        </div>
-      )}
+          })
+        ) : (
+          <div style="padding: 50px; text-align: center; background: lightblue;">
+            <h2>No components selected</h2>
+            <p>
+              Please go back to the template builder and select some components.
+            </p>
+            <a href="/templateBuilder">Back to Template Builder</a>
+          </div>
+        )
+      }
     </div>
   </div>
 </Layout>
@@ -449,20 +561,28 @@ if (selectedComponents.length === 0) {
   let textEditMode = false;
 
   // DOM elements
-  const imageEditBtn = document.getElementById('toggle-image-edit') as HTMLButtonElement;
-  const textEditBtn = document.getElementById('toggle-text-edit') as HTMLButtonElement;
-  const previewBtn = document.getElementById('preview-mode') as HTMLButtonElement;
-  const editorContent = document.getElementById('editor-content') as HTMLElement;
-  const editableComponents = document.querySelectorAll('.editable-component');
+  const imageEditBtn = document.getElementById(
+    "toggle-image-edit"
+  ) as HTMLButtonElement;
+  const textEditBtn = document.getElementById(
+    "toggle-text-edit"
+  ) as HTMLButtonElement;
+  const previewBtn = document.getElementById(
+    "preview-mode"
+  ) as HTMLButtonElement;
+  const editorContent = document.getElementById(
+    "editor-content"
+  ) as HTMLElement;
+  const editableComponents = document.querySelectorAll(".editable-component");
 
   // Initialize editor
   initializeEditor();
 
   function initializeEditor() {
     // Add event listeners
-    imageEditBtn?.addEventListener('click', toggleImageEditMode);
-    textEditBtn?.addEventListener('click', toggleTextEditMode);
-    previewBtn?.addEventListener('click', togglePreviewMode);
+    imageEditBtn?.addEventListener("click", toggleImageEditMode);
+    textEditBtn?.addEventListener("click", toggleTextEditMode);
+    previewBtn?.addEventListener("click", togglePreviewMode);
 
     // Make text elements editable
     makeTextEditable();
@@ -476,10 +596,10 @@ if (selectedComponents.length === 0) {
 
   function toggleImageEditMode() {
     imageEditMode = !imageEditMode;
-    imageEditBtn.classList.toggle('active', imageEditMode);
+    imageEditBtn.classList.toggle("active", imageEditMode);
 
-    editableComponents.forEach(component => {
-      component.classList.toggle('image-edit-mode', imageEditMode);
+    editableComponents.forEach((component) => {
+      component.classList.toggle("image-edit-mode", imageEditMode);
     });
 
     if (imageEditMode) {
@@ -490,13 +610,15 @@ if (selectedComponents.length === 0) {
 
   function toggleTextEditMode() {
     textEditMode = !textEditMode;
-    textEditBtn.classList.toggle('active', textEditMode);
+    textEditBtn.classList.toggle("active", textEditMode);
 
-    editableComponents.forEach(component => {
-      component.classList.toggle('text-edit-mode', textEditMode);
+    editableComponents.forEach((component) => {
+      component.classList.toggle("text-edit-mode", textEditMode);
 
       // Enable/disable text editing
-      const editableTexts = component.querySelectorAll('[data-editable="true"]');
+      const editableTexts = component.querySelectorAll(
+        '[data-editable="true"]'
+      );
       editableTexts.forEach((text: HTMLElement) => {
         text.contentEditable = textEditMode.toString();
       });
@@ -509,13 +631,15 @@ if (selectedComponents.length === 0) {
   }
 
   function makeTextEditable() {
-    editableComponents.forEach(component => {
+    editableComponents.forEach((component) => {
       // Find text elements that should be editable
-      const textElements = component.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span, a, button');
+      const textElements = component.querySelectorAll(
+        "h1, h2, h3, h4, h5, h6, p, span, a, button"
+      );
 
       textElements.forEach((element: HTMLElement) => {
         // Skip elements that are already marked as non-editable
-        if (element.getAttribute('data-editable') === 'false') return;
+        if (element.getAttribute("data-editable") === "false") return;
 
         // Skip empty elements or elements with only whitespace
         if (!element.textContent?.trim()) return;
@@ -523,29 +647,29 @@ if (selectedComponents.length === 0) {
         // Skip elements that contain only images or other non-text content
         if (element.children.length > 0 && !element.textContent?.trim()) return;
 
-        element.setAttribute('data-editable', 'true');
+        element.setAttribute("data-editable", "true");
       });
     });
   }
 
   function addImageClickHandlers() {
-    editableComponents.forEach(component => {
-      const images = component.querySelectorAll('img');
+    editableComponents.forEach((component) => {
+      const images = component.querySelectorAll("img");
 
-      images.forEach(img => {
+      images.forEach((img) => {
         // Add upload overlay
-        const overlay = document.createElement('div');
-        overlay.className = 'image-upload-overlay';
+        const overlay = document.createElement("div");
+        overlay.className = "image-upload-overlay";
         overlay.innerHTML = ``;
 
         // Make image container relative
         const parent = img.parentElement;
         if (parent) {
-          parent.style.position = 'relative';
+          parent.style.position = "relative";
           parent.appendChild(overlay);
         }
 
-        img.addEventListener('click', () => {
+        img.addEventListener("click", () => {
           if (imageEditMode) {
             handleImageUpload(img);
           }
@@ -555,9 +679,9 @@ if (selectedComponents.length === 0) {
   }
 
   function handleImageUpload(img: HTMLImageElement) {
-    const input = document.createElement('input');
-    input.type = 'file';
-    input.accept = 'image/*';
+    const input = document.createElement("input");
+    input.type = "file";
+    input.accept = "image/*";
 
     input.onchange = (e) => {
       const file = (e.target as HTMLInputElement).files?.[0];
@@ -574,7 +698,7 @@ if (selectedComponents.length === 0) {
   }
 
   function togglePreviewMode() {
-    const isPreview = previewBtn.classList.contains('active');
+    const isPreview = previewBtn.classList.contains("active");
 
     if (!isPreview) {
       // Entering preview mode - disable all edit modes
@@ -582,34 +706,33 @@ if (selectedComponents.length === 0) {
       if (textEditMode) toggleTextEditMode();
 
       // Hide all image upload overlays
-      const overlays = document.querySelectorAll('.image-upload-overlay');
-      overlays.forEach(overlay => {
-        overlay.style.display = 'none';
+      const overlays = document.querySelectorAll(".image-upload-overlay");
+      overlays.forEach((overlay) => {
+        overlay.style.display = "none";
       });
 
-      previewBtn.classList.add('active');
+      previewBtn.classList.add("active");
     } else {
       // Exiting preview mode - show image overlays again
-      const overlays = document.querySelectorAll('.image-upload-overlay');
-      overlays.forEach(overlay => {
-        overlay.style.display = 'block';
+      const overlays = document.querySelectorAll(".image-upload-overlay");
+      overlays.forEach((overlay) => {
+        overlay.style.display = "block";
       });
 
-      previewBtn.classList.remove('active');
+      previewBtn.classList.remove("active");
     }
   }
 
-
   function preventNavigationInEditMode() {
     // Get all links in the editable components
-    editableComponents.forEach(component => {
-      const links = component.querySelectorAll('a');
+    editableComponents.forEach((component) => {
+      const links = component.querySelectorAll("a");
 
-      links.forEach(link => {
-        link.addEventListener('click', (e) => {
+      links.forEach((link) => {
+        link.addEventListener("click", (e) => {
           e.preventDefault();
           e.stopPropagation();
-          console.log('Navigation prevented - editor mode');
+          console.log("Navigation prevented - editor mode");
         });
       });
     });
