@@ -1,11 +1,7 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 
-import netlify from "@astrojs/netlify";
-
 export default defineConfig({
-  output: 'server',
-
   prefetch: {
     prefetchAll: true,
   },
@@ -13,6 +9,4 @@ export default defineConfig({
   image: {
     responsiveStyles: true,
   },
-
-  adapter: netlify(),
 });
