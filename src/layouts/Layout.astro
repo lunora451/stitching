@@ -2,6 +2,7 @@
 import "../components/styles/base/reset.css";
 import "../components/styles/base/base.css";
 import "../components/styles/base/button.css";
+import "../components/styles/base/buttonPresets.css";
 import "../components/styles/base/baseDark.css";
 import "../components/styles/burgerMenu.css";
 import "../components/styles/navbarLogo.css";
@@ -35,6 +36,7 @@ import ThemeScript from "../components/darkMode/ThemeScript.astro";
     --bodyTextColorWhite: #fafbfc;
     --backgroundColor: #fff;
     --errorColor: #c10e0a;
+
     --paddingNavClamp: clamp(0.75rem, 2vw, 1.5rem);
     --h5: 1.125rem;
     --h4: 1.25rem;
@@ -47,7 +49,6 @@ import ThemeScript from "../components/darkMode/ThemeScript.astro";
     --headerFontSize1024: clamp(0.875rem, 1.2vw, 1rem);
     --headerFont: "Oswald-700", Arial, sans-serif;
     --bodyFont: "Source Sans 3", Arial, sans-serif;
-    --navNeon: "Yellowtail", "Adjusted Verdana Fallback", "Verdana", sans-serif;
 
     //darkmode
     --primaryDark: #fff;
@@ -80,5 +81,21 @@ import ThemeScript from "../components/darkMode/ThemeScript.astro";
     font-weight: 700;
     font-display: swap;
     src: url("../assets/fonts/oswald_700.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-style: normal;
+    font-family: "Charter";
+    font-weight: 400;
+    font-display: swap;
+    src: url("../assets/fonts/charter_regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-style: normal;
+    font-family: "Charter";
+    font-weight: 700;
+    font-display: swap;
+    src: url("../assets/fonts/charter_bold.woff2") format("woff2");
   }
 </style>

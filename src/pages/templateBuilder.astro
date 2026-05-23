@@ -1260,19 +1260,9 @@ import InteriorPage from "../layouts/show/InteriorPage.astro";
         </select>
       </div>
 
-      <!-- <button id="generate-preview" class="preview-button">
+      <button id="generate-preview" class="preview-button">
         Open Editor
-      </button> -->
-
-      <!-- Hidden form for SSR data submission -->
-      <!-- <form
-        id="editor-form"
-        action="/editor"
-        method="POST"
-        style="display: none;"
-      >
-        <input type="hidden" name="componentsData" id="components-data-input" />
-      </form> -->
+      </button>
     </div>
     <div class="c-content">
       <div id="ecommerce-component" class="component-wrapper" style="order: 1;">
@@ -1527,13 +1517,33 @@ import InteriorPage from "../layouts/show/InteriorPage.astro";
     // Sort components by order
     selectedComponents.sort((a, b) => a.order - b.order);
 
-    // Submit data via POST form to editor page
-    const hiddenInput = document.getElementById(
-      "components-data-input"
-    ) as HTMLInputElement;
-    const form = document.getElementById("editor-form") as HTMLFormElement;
+    // MVP: editor only supports hero / service / footer
+    const SUPPORTED_TYPES = ["heroSection", "service", "footer"];
+    const supported = selectedComponents.filter((c) =>
+      SUPPORTED_TYPES.includes(c.type)
+    );
 
-    hiddenInput.value = JSON.stringify(selectedComponents);
-    form.submit();
+    if (supported.length === 0) {
+      alert(
+        "Sélectionnez au moins une section parmi Hero, Service ou Footer pour ouvrir l'éditeur."
+      );
+      return;
+    }
+
+    const TYPE_TO_KEY = {
+      heroSection: "hero",
+      service: "service",
+      footer: "footer",
+    };
+    const params = new URLSearchParams();
+    const order = [];
+    supported.forEach((item, idx) => {
+      const key = TYPE_TO_KEY[item.type];
+      if (!key) return;
+      params.set(key, item.value);
+      order[idx] = key;
+    });
+    params.set("order", order.filter(Boolean).join(","));
+    window.location.href = `/editor?${params.toString()}`;
   });
 </script>

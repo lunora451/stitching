@@ -1,366 +1,198 @@
 ---
+export const prerender = false;
+
 import Layout from "../layouts/Layout.astro";
+import EditorPreview, {
+  type SelectionItem,
+} from "../components/editor/EditorPreview.astro";
 
-// Import navigation components
-import Nav1 from "../layouts/navigation/1.astro";
-import Nav2 from "../layouts/navigation/2.astro";
-import Nav3 from "../layouts/navigation/3.astro";
-import Nav4 from "../layouts/navigation/4.astro";
-import Nav5 from "../layouts/navigation/5.astro";
-import Nav6 from "../layouts/navigation/6.astro";
-import Nav7 from "../layouts/navigation/7.astro";
-import Nav8 from "../layouts/navigation/8.astro";
-import Nav9 from "../layouts/navigation/9.astro";
-import Nav10 from "../layouts/navigation/10.astro";
-import Nav11 from "../layouts/navigation/11.astro";
-import Nav12 from "../layouts/navigation/12.astro";
-import Nav13 from "../layouts/navigation/13.astro";
-import Nav14 from "../layouts/navigation/14.astro";
-import Nav15 from "../layouts/navigation/15.astro";
-import Nav16 from "../layouts/navigation/16.astro";
-import Nav17 from "../layouts/navigation/17.astro";
-import Nav18 from "../layouts/navigation/18.astro";
-import Nav19 from "../layouts/navigation/19.astro";
-import Nav20 from "../layouts/navigation/20.astro";
-import Nav21 from "../layouts/navigation/21.astro";
-import Nav22 from "../layouts/navigation/22.astro";
+const params = Astro.url.searchParams;
+const orderStr = params.get("order") ?? "";
+const orderList = orderStr ? orderStr.split(",") : [];
 
-// Import blog components
-import Blog1 from "../layouts/blog/1.astro";
-import Blog2 from "../layouts/blog/2.astro";
-import Blog3 from "../layouts/blog/3.astro";
-import Blog4 from "../layouts/blog/4.astro";
-import Blog5 from "../layouts/blog/5.astro";
-import Blog6 from "../layouts/blog/6.astro";
-import Blog7 from "../layouts/blog/7.astro";
-import Blog8 from "../layouts/blog/8.astro";
-import Blog9 from "../layouts/blog/9.astro";
-import Blog10 from "../layouts/blog/10.astro";
-import Blog11 from "../layouts/blog/11.astro";
-import Blog12 from "../layouts/blog/12.astro";
-import Blog13 from "../layouts/blog/13.astro";
-
-// Import button components
-import Button1 from "../layouts/buttons/1.astro";
-import Button2 from "../layouts/buttons/2.astro";
-import Button3 from "../layouts/buttons/3.astro";
-import Button4 from "../layouts/buttons/4.astro";
-import Button5 from "../layouts/buttons/5.astro";
-import Button6 from "../layouts/buttons/6.astro";
-import Button7 from "../layouts/buttons/7.astro";
-import Button8 from "../layouts/buttons/8.astro";
-import Button9 from "../layouts/buttons/9.astro";
-import Button10 from "../layouts/buttons/10.astro";
-import Button11 from "../layouts/buttons/11.astro";
-
-// Import component components
-import Component1 from "../layouts/component/1.astro";
-import Component2 from "../layouts/component/2.astro";
-import Component3 from "../layouts/component/3.astro";
-import Component4 from "../layouts/component/4.astro";
-import Component5 from "../layouts/component/5.astro";
-import Component6 from "../layouts/component/6.astro";
-import Component7 from "../layouts/component/7.astro";
-import Component8 from "../layouts/component/8.astro";
-import Component9 from "../layouts/component/9.astro";
-import Component10 from "../layouts/component/10.astro";
-
-// Import heroSection components
-// centered (1-15)
-import HeroCentered1 from "../layouts/heroSection/centered/1.astro";
-import HeroCentered2 from "../layouts/heroSection/centered/2.astro";
-import HeroCentered3 from "../layouts/heroSection/centered/3.astro";
-import HeroCentered4 from "../layouts/heroSection/centered/4.astro";
-import HeroCentered5 from "../layouts/heroSection/centered/5.astro";
-import HeroCentered6 from "../layouts/heroSection/centered/6.astro";
-import HeroCentered7 from "../layouts/heroSection/centered/7.astro";
-import HeroCentered8 from "../layouts/heroSection/centered/8.astro";
-import HeroCentered9 from "../layouts/heroSection/centered/9.astro";
-import HeroCentered10 from "../layouts/heroSection/centered/10.astro";
-import HeroCentered11 from "../layouts/heroSection/centered/11.astro";
-import HeroCentered12 from "../layouts/heroSection/centered/12.astro";
-import HeroCentered13 from "../layouts/heroSection/centered/13.astro";
-import HeroCentered14 from "../layouts/heroSection/centered/14.astro";
-import HeroCentered15 from "../layouts/heroSection/centered/15.astro";
-
-// landing&services (16-63)
-import HeroLanding16 from "../layouts/heroSection/landing&services/16.astro";
-import HeroLanding17 from "../layouts/heroSection/landing&services/17.astro";
-import HeroLanding18 from "../layouts/heroSection/landing&services/18.astro";
-import HeroLanding19 from "../layouts/heroSection/landing&services/19.astro";
-import HeroLanding20 from "../layouts/heroSection/landing&services/20.astro";
-import HeroLanding21 from "../layouts/heroSection/landing&services/21.astro";
-import HeroLanding22 from "../layouts/heroSection/landing&services/22.astro";
-import HeroLanding23 from "../layouts/heroSection/landing&services/23.astro";
-import HeroLanding24 from "../layouts/heroSection/landing&services/24.astro";
-import HeroLanding25 from "../layouts/heroSection/landing&services/25.astro";
-import HeroLanding26 from "../layouts/heroSection/landing&services/26.astro";
-import HeroLanding27 from "../layouts/heroSection/landing&services/27.astro";
-import HeroLanding28 from "../layouts/heroSection/landing&services/28.astro";
-import HeroLanding29 from "../layouts/heroSection/landing&services/29.astro";
-import HeroLanding30 from "../layouts/heroSection/landing&services/30.astro";
-import HeroLanding31 from "../layouts/heroSection/landing&services/31.astro";
-import HeroLanding32 from "../layouts/heroSection/landing&services/32.astro";
-import HeroLanding33 from "../layouts/heroSection/landing&services/33.astro";
-import HeroLanding34 from "../layouts/heroSection/landing&services/34.astro";
-import HeroLanding35 from "../layouts/heroSection/landing&services/35.astro";
-import HeroLanding36 from "../layouts/heroSection/landing&services/36.astro";
-import HeroLanding37 from "../layouts/heroSection/landing&services/37.astro";
-import HeroLanding38 from "../layouts/heroSection/landing&services/38.astro";
-import HeroLanding39 from "../layouts/heroSection/landing&services/39.astro";
-import HeroLanding40 from "../layouts/heroSection/landing&services/40.astro";
-import HeroLanding41 from "../layouts/heroSection/landing&services/41.astro";
-import HeroLanding42 from "../layouts/heroSection/landing&services/42.astro";
-import HeroLanding43 from "../layouts/heroSection/landing&services/43.astro";
-import HeroLanding44 from "../layouts/heroSection/landing&services/44.astro";
-import HeroLanding45 from "../layouts/heroSection/landing&services/45.astro";
-import HeroLanding46 from "../layouts/heroSection/landing&services/46.astro";
-import HeroLanding47 from "../layouts/heroSection/landing&services/47.astro";
-import HeroLanding48 from "../layouts/heroSection/landing&services/48.astro";
-import HeroLanding49 from "../layouts/heroSection/landing&services/49.astro";
-import HeroLanding50 from "../layouts/heroSection/landing&services/50.astro";
-import HeroLanding51 from "../layouts/heroSection/landing&services/51.astro";
-import HeroLanding52 from "../layouts/heroSection/landing&services/52.astro";
-import HeroLanding53 from "../layouts/heroSection/landing&services/53.astro";
-import HeroLanding54 from "../layouts/heroSection/landing&services/54.astro";
-import HeroLanding55 from "../layouts/heroSection/landing&services/55.astro";
-import HeroLanding56 from "../layouts/heroSection/landing&services/56.astro";
-import HeroLanding57 from "../layouts/heroSection/landing&services/57.astro";
-import HeroLanding58 from "../layouts/heroSection/landing&services/58.astro";
-import HeroLanding59 from "../layouts/heroSection/landing&services/59.astro";
-import HeroLanding60 from "../layouts/heroSection/landing&services/60.astro";
-import HeroLanding61 from "../layouts/heroSection/landing&services/61.astro";
-import HeroLanding62 from "../layouts/heroSection/landing&services/62.astro";
-import HeroLanding63 from "../layouts/heroSection/landing&services/63.astro";
-
-// leftaligned (64-109)
-import HeroLeft64 from "../layouts/heroSection/leftaligned/64.astro";
-import HeroLeft65 from "../layouts/heroSection/leftaligned/65.astro";
-import HeroLeft66 from "../layouts/heroSection/leftaligned/66.astro";
-import HeroLeft67 from "../layouts/heroSection/leftaligned/67.astro";
-import HeroLeft68 from "../layouts/heroSection/leftaligned/68.astro";
-import HeroLeft69 from "../layouts/heroSection/leftaligned/69.astro";
-import HeroLeft70 from "../layouts/heroSection/leftaligned/70.astro";
-import HeroLeft71 from "../layouts/heroSection/leftaligned/71.astro";
-import HeroLeft72 from "../layouts/heroSection/leftaligned/72.astro";
-import HeroLeft73 from "../layouts/heroSection/leftaligned/73.astro";
-import HeroLeft74 from "../layouts/heroSection/leftaligned/74.astro";
-import HeroLeft75 from "../layouts/heroSection/leftaligned/75.astro";
-import HeroLeft76 from "../layouts/heroSection/leftaligned/76.astro";
-import HeroLeft77 from "../layouts/heroSection/leftaligned/77.astro";
-import HeroLeft78 from "../layouts/heroSection/leftaligned/78.astro";
-import HeroLeft79 from "../layouts/heroSection/leftaligned/79.astro";
-import HeroLeft80 from "../layouts/heroSection/leftaligned/80.astro";
-import HeroLeft81 from "../layouts/heroSection/leftaligned/81.astro";
-import HeroLeft82 from "../layouts/heroSection/leftaligned/82.astro";
-import HeroLeft83 from "../layouts/heroSection/leftaligned/83.astro";
-import HeroLeft84 from "../layouts/heroSection/leftaligned/84.astro";
-import HeroLeft85 from "../layouts/heroSection/leftaligned/85.astro";
-import HeroLeft86 from "../layouts/heroSection/leftaligned/86.astro";
-import HeroLeft87 from "../layouts/heroSection/leftaligned/87.astro";
-import HeroLeft88 from "../layouts/heroSection/leftaligned/88.astro";
-import HeroLeft89 from "../layouts/heroSection/leftaligned/89.astro";
-import HeroLeft90 from "../layouts/heroSection/leftaligned/90.astro";
-import HeroLeft91 from "../layouts/heroSection/leftaligned/91.astro";
-import HeroLeft92 from "../layouts/heroSection/leftaligned/92.astro";
-import HeroLeft93 from "../layouts/heroSection/leftaligned/93.astro";
-import HeroLeft94 from "../layouts/heroSection/leftaligned/94.astro";
-import HeroLeft95 from "../layouts/heroSection/leftaligned/95.astro";
-import HeroLeft96 from "../layouts/heroSection/leftaligned/96.astro";
-import HeroLeft97 from "../layouts/heroSection/leftaligned/97.astro";
-import HeroLeft98 from "../layouts/heroSection/leftaligned/98.astro";
-import HeroLeft99 from "../layouts/heroSection/leftaligned/99.astro";
-import HeroLeft100 from "../layouts/heroSection/leftaligned/100.astro";
-import HeroLeft101 from "../layouts/heroSection/leftaligned/101.astro";
-import HeroLeft102 from "../layouts/heroSection/leftaligned/102.astro";
-import HeroLeft103 from "../layouts/heroSection/leftaligned/103.astro";
-import HeroLeft104 from "../layouts/heroSection/leftaligned/104.astro";
-import HeroLeft105 from "../layouts/heroSection/leftaligned/105.astro";
-import HeroLeft106 from "../layouts/heroSection/leftaligned/106.astro";
-import HeroLeft107 from "../layouts/heroSection/leftaligned/107.astro";
-import HeroLeft108 from "../layouts/heroSection/leftaligned/108.astro";
-import HeroLeft109 from "../layouts/heroSection/leftaligned/109.astro";
-
-// rightaligned (110-123)
-import HeroRight110 from "../layouts/heroSection/rightaligned/110.astro";
-import HeroRight111 from "../layouts/heroSection/rightaligned/111.astro";
-import HeroRight112 from "../layouts/heroSection/rightaligned/112.astro";
-import HeroRight113 from "../layouts/heroSection/rightaligned/113.astro";
-import HeroRight114 from "../layouts/heroSection/rightaligned/114.astro";
-import HeroRight115 from "../layouts/heroSection/rightaligned/115.astro";
-import HeroRight116 from "../layouts/heroSection/rightaligned/116.astro";
-import HeroRight117 from "../layouts/heroSection/rightaligned/117.astro";
-import HeroRight118 from "../layouts/heroSection/rightaligned/118.astro";
-import HeroRight119 from "../layouts/heroSection/rightaligned/119.astro";
-import HeroRight120 from "../layouts/heroSection/rightaligned/120.astro";
-import HeroRight121 from "../layouts/heroSection/rightaligned/121.astro";
-import HeroRight122 from "../layouts/heroSection/rightaligned/122.astro";
-import HeroRight123 from "../layouts/heroSection/rightaligned/123.astro";
-
-// Static component mapping with all imports
-
-// Component mapping object with static imports
-const componentMap = {
-  navigation: {
-    "1": Nav1, "2": Nav2, "3": Nav3, "4": Nav4, "5": Nav5, "6": Nav6, "7": Nav7, "8": Nav8, "9": Nav9, "10": Nav10,
-    "11": Nav11, "12": Nav12, "13": Nav13, "14": Nav14, "15": Nav15, "16": Nav16, "17": Nav17, "18": Nav18, "19": Nav19, "20": Nav20,
-    "21": Nav21, "22": Nav22
-  },
-  blog: {
-    "1": Blog1, "2": Blog2, "3": Blog3, "4": Blog4, "5": Blog5, "6": Blog6, "7": Blog7, "8": Blog8, "9": Blog9, "10": Blog10,
-    "11": Blog11, "12": Blog12, "13": Blog13
-  },
-  buttons: {
-    "1": Button1, "2": Button2, "3": Button3, "4": Button4, "5": Button5, "6": Button6, "7": Button7, "8": Button8, "9": Button9, "10": Button10,
-    "11": Button11
-  },
-  component: {
-    "1": Component1, "2": Component2, "3": Component3, "4": Component4, "5": Component5, "6": Component6, "7": Component7, "8": Component8, "9": Component9, "10": Component10
-  },
-  heroSection: {
-    // centered (1-15)
-    "1": HeroCentered1, "2": HeroCentered2, "3": HeroCentered3, "4": HeroCentered4, "5": HeroCentered5, "6": HeroCentered6, "7": HeroCentered7, "8": HeroCentered8, "9": HeroCentered9, "10": HeroCentered10,
-    "11": HeroCentered11, "12": HeroCentered12, "13": HeroCentered13, "14": HeroCentered14, "15": HeroCentered15,
-    // landing&services (16-63)
-    "16": HeroLanding16, "17": HeroLanding17, "18": HeroLanding18, "19": HeroLanding19, "20": HeroLanding20, "21": HeroLanding21, "22": HeroLanding22, "23": HeroLanding23, "24": HeroLanding24, "25": HeroLanding25,
-    "26": HeroLanding26, "27": HeroLanding27, "28": HeroLanding28, "29": HeroLanding29, "30": HeroLanding30, "31": HeroLanding31, "32": HeroLanding32, "33": HeroLanding33, "34": HeroLanding34, "35": HeroLanding35,
-    "36": HeroLanding36, "37": HeroLanding37, "38": HeroLanding38, "39": HeroLanding39, "40": HeroLanding40, "41": HeroLanding41, "42": HeroLanding42, "43": HeroLanding43, "44": HeroLanding44, "45": HeroLanding45,
-    "46": HeroLanding46, "47": HeroLanding47, "48": HeroLanding48, "49": HeroLanding49, "50": HeroLanding50, "51": HeroLanding51, "52": HeroLanding52, "53": HeroLanding53, "54": HeroLanding54, "55": HeroLanding55,
-    "56": HeroLanding56, "57": HeroLanding57, "58": HeroLanding58, "59": HeroLanding59, "60": HeroLanding60, "61": HeroLanding61, "62": HeroLanding62, "63": HeroLanding63,
-    // leftaligned (64-109)
-    "64": HeroLeft64, "65": HeroLeft65, "66": HeroLeft66, "67": HeroLeft67, "68": HeroLeft68, "69": HeroLeft69, "70": HeroLeft70, "71": HeroLeft71, "72": HeroLeft72, "73": HeroLeft73,
-    "74": HeroLeft74, "75": HeroLeft75, "76": HeroLeft76, "77": HeroLeft77, "78": HeroLeft78, "79": HeroLeft79, "80": HeroLeft80, "81": HeroLeft81, "82": HeroLeft82, "83": HeroLeft83,
-    "84": HeroLeft84, "85": HeroLeft85, "86": HeroLeft86, "87": HeroLeft87, "88": HeroLeft88, "89": HeroLeft89, "90": HeroLeft90, "91": HeroLeft91, "92": HeroLeft92, "93": HeroLeft93,
-    "94": HeroLeft94, "95": HeroLeft95, "96": HeroLeft96, "97": HeroLeft97, "98": HeroLeft98, "99": HeroLeft99, "100": HeroLeft100, "101": HeroLeft101, "102": HeroLeft102, "103": HeroLeft103,
-    "104": HeroLeft104, "105": HeroLeft105, "106": HeroLeft106, "107": HeroLeft107, "108": HeroLeft108, "109": HeroLeft109,
-    // rightaligned (110-123)
-    "110": HeroRight110, "111": HeroRight111, "112": HeroRight112, "113": HeroRight113, "114": HeroRight114, "115": HeroRight115, "116": HeroRight116, "117": HeroRight117, "118": HeroRight118, "119": HeroRight119,
-    "120": HeroRight120, "121": HeroRight121, "122": HeroRight122, "123": HeroRight123
-  }
-};
-
-// Function to get component from static imports
-function getComponent(type: string, value: string) {
-  const typeComponents = componentMap[type];
-  if (!typeComponents) {
-    console.error(`Component type not supported yet: ${type}`);
-    return null;
-  }
-
-  const component = typeComponents[value];
-  if (!component) {
-    console.error(`Component not found: ${type}/${value}`);
-    return null;
-  }
-
-  return component;
+function pick(
+  type: SelectionItem["type"],
+  key: string
+): SelectionItem | null {
+  const v = params.get(key);
+  if (!v) return null;
+  const idx = orderList.indexOf(key);
+  return { type, value: v, order: idx === -1 ? 999 : idx };
 }
 
-let selectedComponents = [];
+const selection: SelectionItem[] = [
+  pick("heroSection", "hero"),
+  pick("service", "service"),
+  pick("footer", "footer"),
+].filter((s): s is SelectionItem => s !== null);
 
-if (Astro.request.method === "POST") {
-  try {
-    const formData = await Astro.request.formData();
-    const componentsData = formData.get("componentsData");
-
-    console.log("Form data received:", componentsData);
-
-    if (componentsData) {
-      selectedComponents = JSON.parse(componentsData as string);
-      console.log("Parsed components:", selectedComponents);
-      // Sort by order
-      selectedComponents.sort((a, b) => a.order - b.order);
-      console.log("Sorted components:", selectedComponents);
-    }
-  } catch (error) {
-    console.error("Error parsing form data:", error);
-    console.error("Raw form data:", formData);
-  }
-}
-
-// Debug: Log what we have
-console.log("Final selectedComponents:", selectedComponents);
-
-// Resolve the selected components using static imports
-const resolvedComponents = selectedComponents.map((comp) => {
-  const Component = getComponent(comp.type, comp.value);
-  return {
-    ...comp,
-    Component: Component,
-  };
-});
-console.log("Resolved components:", resolvedComponents);
-
-// If no POST data, redirect to template builder
-if (selectedComponents.length === 0) {
+if (selection.length === 0) {
   return Astro.redirect("/templateBuilder");
 }
 ---
 
 <Layout>
   <div class="editor-container">
-    <!-- Editor Toolbar -->
     <div class="editor-toolbar">
       <div class="toolbar-group">
-        <button id="toggle-image-edit" class="toolbar-btn">
-          <span class="btn-icon">🖼️</span>
-          Edit Images
+        <button id="toggle-text-edit" class="toolbar-btn" type="button">
+          <span class="btn-icon">T</span>Edit Text
         </button>
-        <button id="toggle-text-edit" class="toolbar-btn">
-          <span class="btn-icon">✏️</span>
-          Edit Text
+        <button id="toggle-image-edit" class="toolbar-btn" type="button">
+          <span class="btn-icon">IMG</span>Edit Images
+        </button>
+        <button id="toggle-color-edit" class="toolbar-btn" type="button">
+          <span class="btn-icon">C</span>Edit Colors
+        </button>
+        <button id="toggle-font-edit" class="toolbar-btn" type="button">
+          <span class="btn-icon">F</span>Edit Fonts
+        </button>
+        <button id="toggle-button-edit" class="toolbar-btn" type="button">
+          <span class="btn-icon">B</span>Edit Buttons
         </button>
       </div>
+
       <div class="toolbar-group">
-        <button id="preview-mode" class="toolbar-btn">
-          <span class="btn-icon">👁️</span>
-          Preview
+        <input
+          id="template-name"
+          type="text"
+          placeholder="Template name"
+          class="toolbar-input"
+        />
+        <button id="save-template" class="toolbar-btn primary" type="button">
+          Save
         </button>
-        <a href="/templateBuilder" class="toolbar-btn">
-          <span class="btn-icon">⬅️</span>
-          Back to Builder
-        </a>
+        <select id="load-template" class="toolbar-input">
+          <option value="">— Load template —</option>
+        </select>
+        <button id="delete-template" class="toolbar-btn danger" type="button">
+          Delete
+        </button>
+      </div>
+
+      <div class="toolbar-group">
+        <a href="/templateBuilder" class="toolbar-btn">← Builder</a>
       </div>
     </div>
 
-    <!-- Editor Content -->
-    <div class="editor-content" id="editor-content">
-      {
-        resolvedComponents.length > 0 ? (
-          resolvedComponents.map((comp) => {
-            const { Component } = comp;
-            console.log(
-              `Rendering component: ${comp.type}/${comp.value}, Component exists: ${!!Component}`
-            );
+    <div class="color-panel" id="color-panel" hidden>
+      <h4>Global colors (:root)</h4>
+      <div class="color-grid">
+        <label
+          ><span>--primary</span><input
+            type="color"
+            data-css-var="--primary"
+            value="#eecb2f"
+          /></label
+        >
+        <label
+          ><span>--secondary</span><input
+            type="color"
+            data-css-var="--secondary"
+            value="#1d11b9"
+          /></label
+        >
+        <label
+          ><span>--headerColor</span><input
+            type="color"
+            data-css-var="--headerColor"
+            value="#1a1a1a"
+          /></label
+        >
+        <label
+          ><span>--bodyTextColor</span><input
+            type="color"
+            data-css-var="--bodyTextColor"
+            value="#4e4b66"
+          /></label
+        >
+        <label
+          ><span>--backgroundColor</span><input
+            type="color"
+            data-css-var="--backgroundColor"
+            value="#ffffff"
+          /></label
+        >
+        <label
+          ><span>--grey</span><input
+            type="color"
+            data-css-var="--grey"
+            value="#f7f7f7"
+          /></label
+        >
+      </div>
+      <p class="hint">
+        In Edit Colors mode, click any element to override its <code>color</code>
+        and <code>background-color</code>.
+      </p>
+    </div>
 
-            if (Component) {
-              return (
-                <div
-                  class="editable-component"
-                  data-component-type={comp.type}
-                  data-component-value={comp.value}
-                  style={`order: ${comp.order}; min-height: 200px; margin: 10px 0;`}
-                >
-                  <Component />
-                </div>
-              );
-            }
-            return (
-              <div style="padding: 20px; background: yellow; margin: 10px 0;">
-                Component not found: {comp.type}/{comp.value}
-              </div>
-            );
-          })
-        ) : (
-          <div style="padding: 50px; text-align: center; background: lightblue;">
-            <h2>No components selected</h2>
-            <p>
-              Please go back to the template builder and select some components.
-            </p>
-            <a href="/templateBuilder">Back to Template Builder</a>
-          </div>
-        )
-      }
+    <div class="font-panel" id="font-panel" hidden>
+      <h4>Global fonts (:root)</h4>
+      <div class="font-grid">
+        <label>
+          <span>--headerFont</span>
+          <select data-font-var="--headerFont" class="font-select"></select>
+        </label>
+        <label>
+          <span>--bodyFont</span>
+          <select data-font-var="--bodyFont" class="font-select"></select>
+        </label>
+        <label>
+          <span>--navNeon</span>
+          <select data-font-var="--navNeon" class="font-select"></select>
+        </label>
+      </div>
+      <p class="hint">
+        Tous les composants utilisent <code>font-family: inherit</code> donc
+        changer ici propage partout.
+      </p>
+    </div>
+
+    <div class="local-color-popup" id="local-color-popup" hidden>
+      <div class="swatch-section">
+        <strong>Text color</strong>
+        <div class="color-dropdown" id="local-color-text-dropdown" data-axis="color"></div>
+        <input
+          type="color"
+          id="local-color-text"
+          value="#000000"
+          class="custom-picker"
+          data-axis="color"
+          hidden
+        />
+      </div>
+      <div class="swatch-section">
+        <strong>Background</strong>
+        <div class="color-dropdown" id="local-color-bg-dropdown" data-axis="backgroundColor"></div>
+        <input
+          type="color"
+          id="local-color-bg"
+          value="#ffffff"
+          class="custom-picker"
+          data-axis="backgroundColor"
+          hidden
+        />
+      </div>
+      <div class="popup-actions">
+        <button type="button" id="local-color-clear">Clear</button>
+        <button type="button" id="local-color-close">Close</button>
+      </div>
+    </div>
+
+    <div class="button-preset-popup" id="button-preset-popup" hidden>
+      <div class="preset-header">
+        <strong>Choose button style</strong>
+        <button type="button" id="button-preset-close">×</button>
+      </div>
+      <div class="preset-grid" id="button-preset-grid"></div>
+      <div class="popup-actions">
+        <button type="button" id="button-preset-reset">Reset to original</button>
+      </div>
+    </div>
+
+    <div class="editor-content" id="editor-content">
+      <EditorPreview selection={selection} />
     </div>
   </div>
 </Layout>
@@ -369,389 +201,1461 @@ if (selectedComponents.length === 0) {
   .editor-container {
     width: 100%;
     min-height: 100vh;
-
-    .editor-toolbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 2px solid var(--primary);
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-
-      .toolbar-group {
-        display: flex;
-        gap: 0.75rem;
-        align-items: center;
-      }
-
-      .toolbar-btn {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.5rem 1rem;
-        background: var(--backgroundColor);
-        border: 2px solid var(--bodyTextColor);
-        border-radius: 6px;
-        color: var(--headerColor);
-        font-family: var(--headerFont);
-        font-size: 0.9rem;
-        font-weight: 600;
-        text-decoration: none;
-        cursor: pointer;
-        transition: all 0.3s ease;
-
-        &:hover {
-          background: var(--grey);
-          border-color: var(--primary);
-          transform: translateY(-1px);
-        }
-
-        &.primary {
-          background: var(--primary);
-          border-color: var(--primary);
-          color: var(--headerColor);
-
-          &:hover {
-            background: var(--primaryLight);
-            border-color: var(--primaryLight);
-          }
-        }
-
-        &.active {
-          background: var(--secondary);
-          border-color: var(--secondary);
-          color: white;
-        }
-
-        .btn-icon {
-          font-size: 1.1rem;
-        }
-      }
-    }
-
-    .editor-content {
-      margin-top: 80px; // Space for fixed toolbar
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      min-height: calc(100vh - 80px);
-      background: white;
-
-      .editable-component {
-        position: relative;
-        transition: all 0.3s ease;
-        width: 100%;
-        overflow-x: hidden;
-
-        // Fix for fixed/absolute positioned navigation components
-        :global(header),
-        :global(nav),
-        :global([id*="navigation"]),
-        :global([class*="navigation"]),
-        :global([class*="navbar"]),
-        :global([class*="header"]) {
-          &[style*="position: fixed"],
-          &[style*="position:fixed"] {
-            top: 80px !important;
-            transform: none !important;
-          }
-        }
-
-        // Alternative approach - target common navigation selectors
-        :global(#cs-navigation) {
-          position: relative !important;
-          top: auto !important;
-          margin-bottom: 20px;
-        }
-
-        // Image editing overlay
-        &.image-edit-mode {
-          img, picture {
-            border: 3px solid #22c55e;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border-radius: 4px;
-            display: block;
-
-            &:hover {
-              border-color: #16a34a;
-              box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
-            }
-          }
-
-          // Special handling for picture elements
-          picture {
-            img {
-              border: none; // Remove border from inner img to avoid double borders
-              border-radius: inherit;
-            }
-          }
-
-          .image-upload-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-          }
-
-          &:hover .image-upload-overlay {
-            opacity: 1;
-          }
-        }
-
-        // Text editing mode
-        &.text-edit-mode {
-          [data-editable="true"] {
-            background: rgba(238, 203, 47, 0.1);
-            border: 2px dashed var(--primary);
-            padding: 0.25rem;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-
-            &:hover {
-              background: rgba(238, 203, 47, 0.2);
-              border-style: solid;
-            }
-
-            &:focus {
-              outline: none;
-              background: rgba(238, 203, 47, 0.3);
-              border-color: var(--primaryLight);
-              box-shadow: 0 0 0 3px rgba(238, 203, 47, 0.2);
-            }
-          }
-        }
-      }
-    }
   }
 
-  // Dark mode adjustments
-  [data-theme="dark"] .editor-toolbar {
-    background: rgba(3, 15, 24, 0.95);
-    border-bottom-color: var(--primaryDark);
+  .editor-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--primary);
+    padding: 0.6rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    .toolbar-group {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
 
     .toolbar-btn {
-      background: var(--backgroundColorDark);
-      border-color: var(--bodyTextColorDark);
-      color: var(--headerColorDark);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.9rem;
+      background: #fff;
+      border: 2px solid #4e4b66;
+      border-radius: 6px;
+      color: #1a1a1a;
+      font-family: var(--headerFont);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition:
+        background 0.2s,
+        border-color 0.2s;
 
       &:hover {
-        background: rgba(255, 255, 255, 0.1);
-        border-color: var(--primaryDark);
+        background: #f7f7f7;
+        border-color: var(--primary);
       }
 
       &.primary {
-        background: var(--primaryDark);
-        border-color: var(--primaryDark);
-        color: var(--backgroundColorDark);
+        background: var(--primary);
+        border-color: var(--primary);
+      }
+
+      &.danger {
+        background: #fff;
+        border-color: #c10e0a;
+        color: #c10e0a;
+      }
+
+      &.active {
+        background: var(--secondary);
+        border-color: var(--secondary);
+        color: #fff;
+      }
+
+      .btn-icon {
+        font-weight: 700;
       }
     }
+
+    .toolbar-input {
+      padding: 0.4rem 0.6rem;
+      border: 2px solid #4e4b66;
+      border-radius: 6px;
+      font-family: var(--bodyFont);
+      font-size: 0.85rem;
+      background: #fff;
+      color: #1a1a1a;
+    }
+  }
+
+  .color-panel {
+    position: fixed;
+    top: 70px;
+    right: 1rem;
+    z-index: 99999;
+    background: #fff;
+    border: 2px solid var(--primary);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 300px;
+
+    h4 {
+      margin: 0 0 0.6rem;
+      font-family: var(--headerFont);
+      font-size: 1rem;
+      color: #1a1a1a;
+    }
+
+    .color-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+
+      label {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.75rem;
+        color: #4e4b66;
+        gap: 0.2rem;
+      }
+
+      input[type="color"] {
+        width: 100%;
+        height: 30px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 0;
+      }
+    }
+
+    .hint {
+      margin: 0.6rem 0 0;
+      font-size: 0.75rem;
+      color: #4e4b66;
+      code {
+        background: #f7f7f7;
+        padding: 0 0.25rem;
+        border-radius: 3px;
+      }
+    }
+  }
+
+  .font-panel {
+    position: fixed;
+    top: 70px;
+    right: 1rem;
+    z-index: 99999;
+    background: #fff;
+    border: 2px solid var(--secondary);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 320px;
+
+    &[hidden] {
+      display: none;
+    }
+
+    h4 {
+      margin: 0 0 0.6rem;
+      font-family: var(--headerFont);
+      font-size: 1rem;
+      color: #1a1a1a;
+    }
+
+    .font-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+
+      label {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.75rem;
+        color: #4e4b66;
+        gap: 0.2rem;
+      }
+
+      .font-select {
+        padding: 0.4rem;
+        font-size: 0.85rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background: #fff;
+        color: #1a1a1a;
+      }
+    }
+
+    .hint {
+      margin: 0.6rem 0 0;
+      font-size: 0.7rem;
+      color: #4e4b66;
+      code {
+        background: #f7f7f7;
+        padding: 0 0.25rem;
+        border-radius: 3px;
+      }
+    }
+  }
+
+  .local-color-popup {
+    position: fixed;
+    z-index: 99999;
+    background: #fff;
+    border: 2px solid var(--primary);
+    border-radius: 8px;
+    padding: 0.8rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    min-width: 260px;
+
+    &[hidden] {
+      display: none;
+    }
+
+    .swatch-section {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+
+      strong {
+        font-size: 0.75rem;
+        color: #4e4b66;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+
+      .custom-picker {
+        width: 100%;
+        height: 30px;
+        padding: 0;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        margin-top: 0.2rem;
+
+        &[hidden] {
+          display: none;
+        }
+      }
+    }
+
+    .popup-actions {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.4rem;
+
+      button {
+        flex: 1;
+        padding: 0.3rem 0.5rem;
+        font-size: 0.75rem;
+        border: 1px solid #4e4b66;
+        background: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        &:hover {
+          background: #f7f7f7;
+        }
+      }
+    }
+  }
+
+  .button-preset-popup {
+    position: fixed;
+    z-index: 99999;
+    background: #fff;
+    border: 2px solid var(--secondary);
+    border-radius: 8px;
+    padding: 0.8rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 480px;
+    max-width: 90vw;
+    max-height: 80vh;
+    overflow-y: auto;
+
+    &[hidden] {
+      display: none;
+    }
+
+    .preset-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      strong {
+        font-size: 0.95rem;
+        color: #1a1a1a;
+      }
+      button {
+        background: transparent;
+        border: none;
+        font-size: 1.4rem;
+        cursor: pointer;
+        color: #4e4b66;
+        line-height: 1;
+        padding: 0 0.4rem;
+      }
+    }
+
+    .preset-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.6rem;
+
+      .preset-card {
+        padding: 0.6rem;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        background: #fafafa;
+        cursor: pointer;
+        text-align: center;
+        font-size: 0.7rem;
+        color: #4e4b66;
+
+        &:hover {
+          border-color: var(--secondary);
+          background: #fff;
+        }
+
+        .preset-label {
+          margin-top: 0.4rem;
+          display: block;
+        }
+      }
+    }
+
+    .popup-actions {
+      display: flex;
+      gap: 0.4rem;
+      button {
+        flex: 1;
+        padding: 0.4rem;
+        font-size: 0.8rem;
+        border: 1px solid #4e4b66;
+        background: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        &:hover {
+          background: #f7f7f7;
+        }
+      }
+    }
+  }
+
+  .editor-content {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
   }
 </style>
 
+<style is:global>
+  .editor-content .editable-component {
+    position: relative;
+  }
+
+  .editor-content .editable-component.text-edit-mode [data-editable="true"] {
+    outline: 2px dashed var(--primary);
+    outline-offset: 2px;
+    cursor: text;
+    background: rgba(238, 203, 47, 0.08);
+  }
+  .editor-content .editable-component.text-edit-mode [data-editable="true"]:focus {
+    outline-style: solid;
+    background: rgba(238, 203, 47, 0.18);
+  }
+
+  .editor-content .editable-component.image-edit-mode img {
+    outline: 2px dashed var(--secondary);
+    outline-offset: 2px;
+  }
+
+  .editor-content .editable-component.color-edit-mode,
+  .editor-content .editable-component.color-edit-mode * {
+    cursor: crosshair;
+  }
+
+  .color-dropdown { position: relative; }
+
+  .color-dropdown .cd-trigger {
+    width: 100%; display: flex; align-items: center; gap: 0.5rem;
+    padding: 0.4rem 0.55rem; border: 1px solid #ccc; border-radius: 4px;
+    background: #fff; cursor: pointer; font-size: 0.8rem; color: #1a1a1a;
+    text-align: left; font-family: inherit;
+  }
+  .color-dropdown .cd-trigger:hover { border-color: var(--primary); }
+
+  .color-dropdown .cd-list {
+    position: absolute; top: calc(100% + 2px); left: 0; right: 0;
+    background: #fff; border: 1px solid #ccc; border-radius: 4px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+    z-index: 200; max-height: 220px; overflow-y: auto;
+    padding: 0; margin: 0;
+  }
+  .color-dropdown .cd-list[hidden] { display: none; }
+
+  .color-dropdown .cd-option {
+    width: 100%; display: flex; align-items: center; gap: 0.5rem;
+    padding: 0.4rem 0.55rem; border: none; background: transparent;
+    cursor: pointer; font-size: 0.78rem; color: #1a1a1a; text-align: left;
+    font-family: inherit;
+  }
+  .color-dropdown .cd-option:hover    { background: #f7f7f7; }
+  .color-dropdown .cd-option.selected { background: #eef; font-weight: 600; }
+
+  .color-dropdown .cd-swatch {
+    width: 22px; height: 22px; border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.25); flex-shrink: 0;
+    background-clip: padding-box;
+  }
+  .color-dropdown .cd-label { flex: 1; }
+  .color-dropdown .cd-arrow { font-size: 0.65rem; color: #999; flex-shrink: 0; }
+</style>
+
 <script>
-  // Editor state
-  let imageEditMode = false;
-  let textEditMode = false;
+  type Selection = Array<{
+    type: string;
+    value: string;
+    order: number;
+    targetId: string;
+  }>;
 
-  // DOM elements
-  const imageEditBtn = document.getElementById(
-    "toggle-image-edit"
-  ) as HTMLButtonElement;
-  const textEditBtn = document.getElementById(
-    "toggle-text-edit"
-  ) as HTMLButtonElement;
-  const previewBtn = document.getElementById(
-    "preview-mode"
-  ) as HTMLButtonElement;
-  const editorContent = document.getElementById(
-    "editor-content"
-  ) as HTMLElement;
-  const editableComponents = document.querySelectorAll(".editable-component");
+  type TemplateData = {
+    createdAt: string;
+    selection: Selection;
+    textOverrides: Record<string, string>;
+    imageOverrides: Record<string, string>;
+    rootColors: Record<string, string>;
+    localColors: Record<string, { color?: string; backgroundColor?: string }>;
+    rootFonts?: Record<string, string>;
+    buttonOverrides?: Record<string, string>;
+  };
 
-  // Initialize editor
-  initializeEditor();
+  const STORAGE_TEMPLATES = "lunora.templates";
 
-  function initializeEditor() {
-    // Add event listeners
-    imageEditBtn?.addEventListener("click", toggleImageEditMode);
-    textEditBtn?.addEventListener("click", toggleTextEditMode);
-    previewBtn?.addEventListener("click", togglePreviewMode);
+  const TYPE_TO_KEY: Record<string, string> = {
+    heroSection: "hero",
+    service: "service",
+    footer: "footer",
+  };
 
-    // Make text elements editable
-    makeTextEditable();
 
-    // Add image click handlers
-    addImageClickHandlers();
+  const ROOT_COLOR_VARS: { name: string; defaultHex: string }[] = [
+    { name: "--primary", defaultHex: "#eecb2f" },
+    { name: "--primaryLight", defaultHex: "#ffe81a" },
+    { name: "--secondary", defaultHex: "#1d11b9" },
+    { name: "--secondaryLight", defaultHex: "#152ae7" },
+    { name: "--headerColor", defaultHex: "#1a1a1a" },
+    { name: "--grey", defaultHex: "#f7f7f7" },
+    { name: "--bodyTextColor", defaultHex: "#4e4b66" },
+    { name: "--bodyTextColorWhite", defaultHex: "#fafbfc" },
+    { name: "--backgroundColor", defaultHex: "#ffffff" },
+    { name: "--errorColor", defaultHex: "#c10e0a" },
+  ];
 
-    // Prevent navigation during edit mode
-    preventNavigationInEditMode();
+  const ROOT_FONT_VARS = ["--headerFont", "--bodyFont", "--navNeon"];
+
+  const FONT_OPTIONS: { label: string; stack: string }[] = [
+    { label: "Oswald", stack: 'Oswald, Arial, sans-serif' },
+    { label: "Source Sans 3", stack: '"Source Sans 3", Arial, sans-serif' },
+    { label: "Yellowtail (decorative)", stack: 'Yellowtail, cursive' },
+    { label: "Charter", stack: 'Charter, Georgia, serif' },
+    { label: "Georgia", stack: 'Georgia, serif' },
+    { label: "Times New Roman", stack: '"Times New Roman", Times, serif' },
+    { label: "Helvetica / Arial", stack: 'Helvetica, Arial, sans-serif' },
+    { label: "Courier (mono)", stack: '"Courier New", Courier, monospace' },
+    { label: "System UI", stack: 'system-ui, sans-serif' },
+  ];
+
+  const BUTTON_PRESETS: { key: string; label: string }[] = Array.from(
+    { length: 10 },
+    (_, i) => ({ key: `cs-preset-${i + 1}`, label: `Style ${i + 1}` })
+  );
+
+  function escapeHtml(s: string): string {
+    return s
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
   }
 
-  function toggleImageEditMode() {
-    imageEditMode = !imageEditMode;
-    imageEditBtn.classList.toggle("active", imageEditMode);
+  const ARROW_SVG_DARK = `<svg class="cs-icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.92 11.62C17.8724 11.4973 17.801 11.3851 17.71 11.29L12.71 6.29C12.6168 6.19676 12.5061 6.1228 12.3842 6.07234C12.2624 6.02188 12.1319 5.99591 12 5.99591C11.7337 5.99591 11.4783 6.1017 11.29 6.29C11.1968 6.38324 11.1228 6.49393 11.0723 6.61575C11.0219 6.73758 10.9959 6.86814 10.9959 7C10.9959 7.2663 11.1017 7.5217 11.29 7.71L14.59 11H7C6.73478 11 6.48043 11.1054 6.29289 11.2929C6.10536 11.4804 6 11.7348 6 12C6 12.2652 6.10536 12.5196 6.29289 12.7071C6.48043 12.8946 6.73478 13 7 13H14.59L11.29 16.29C11.1963 16.383 11.1219 16.4936 11.0711 16.6154C11.0203 16.7373 10.9942 16.868 10.9942 17C10.9942 17.132 11.0203 17.2627 11.0711 17.3846C11.1219 17.5064 11.1963 17.617 11.29 17.71C11.383 17.8037 11.4936 17.8781 11.6154 17.9289C11.7373 17.9797 11.868 18.0058 12 18.0058C12.132 18.0058 12.2627 17.9797 12.3846 17.9289C12.5064 17.8781 12.617 17.8037 12.71 17.71L17.71 12.71C17.801 12.6149 17.8724 12.5028 17.92 12.38C18.02 12.1365 18.02 11.8635 17.92 11.62Z" fill="#1a1a1a"/></svg>`;
 
-    editableComponents.forEach((component) => {
-      component.classList.toggle("image-edit-mode", imageEditMode);
-    });
+  const ARROW_SVG_LIGHT = `<svg class="cs-icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.92 11.62C17.8724 11.4973 17.801 11.3851 17.71 11.29L12.71 6.29C12.6168 6.19676 12.5061 6.1228 12.3842 6.07234C12.2624 6.02188 12.1319 5.99591 12 5.99591C11.7337 5.99591 11.4783 6.1017 11.29 6.29C11.1968 6.38324 11.1228 6.49393 11.0723 6.61575C11.0219 6.73758 10.9959 6.86814 10.9959 7C10.9959 7.2663 11.1017 7.5217 11.29 7.71L14.59 11H7C6.73478 11 6.48043 11.1054 6.29289 11.2929C6.10536 11.4804 6 11.7348 6 12C6 12.2652 6.10536 12.5196 6.29289 12.7071C6.48043 12.8946 6.73478 13 7 13H14.59L11.29 16.29C11.1963 16.383 11.1219 16.4936 11.0711 16.6154C11.0203 16.7373 10.9942 16.868 10.9942 17C10.9942 17.132 11.0203 17.2627 11.0711 17.3846C11.1219 17.5064 11.1963 17.617 11.29 17.71C11.383 17.8037 11.4936 17.8781 11.6154 17.9289C11.7373 17.9797 11.868 18.0058 12 18.0058C12.132 18.0058 12.2627 17.9797 12.3846 17.9289C12.5064 17.8781 12.617 17.8037 12.71 17.71L17.71 12.71C17.801 12.6149 17.8724 12.5028 17.92 12.38C18.02 12.1365 18.02 11.8635 17.92 11.62Z" fill="#fff"/></svg>`;
 
-    if (imageEditMode) {
-      // Disable text edit mode
-      if (textEditMode) toggleTextEditMode();
+  const DOUBLE_ARROW_SVG = `<svg class="cs-icon" aria-hidden="true" width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.83 11.29L10.59 7.05001C10.497 6.95628 10.3864 6.88189 10.2646 6.83112C10.1427 6.78035 10.012 6.75421 9.88 6.75421C9.74799 6.75421 9.61729 6.78035 9.49543 6.83112C9.37357 6.88189 9.26297 6.95628 9.17 7.05001C8.98375 7.23737 8.87921 7.49082 8.87921 7.75501C8.87921 8.0192 8.98375 8.27265 9.17 8.46001L12.71 12L9.17 15.54C8.98375 15.7274 8.87921 15.9808 8.87921 16.245C8.87921 16.5092 8.98375 16.7626 9.17 16.95C9.26344 17.0427 9.37426 17.116 9.4961 17.1658C9.61794 17.2155 9.7484 17.2408 9.88 17.24C10.0116 17.2408 10.1421 17.2155 10.2639 17.1658C10.3857 17.116 10.4966 17.0427 10.59 16.95L14.83 12.71C14.9237 12.617 14.9981 12.5064 15.0489 12.3846C15.0997 12.2627 15.1258 12.132 15.1258 12C15.1258 11.868 15.0997 11.7373 15.0489 11.6154C14.9981 11.4936 14.9237 11.383 14.83 11.29Z" fill="white"/><path d="M20.83 11.29L16.59 7.05001C16.497 6.95628 16.3864 6.88189 16.2646 6.83112C16.1427 6.78035 16.012 6.75421 15.88 6.75421C15.748 6.75421 15.6173 6.78035 15.4954 6.83112C15.3736 6.88189 15.263 6.95628 15.17 7.05001C14.9838 7.23737 14.8792 7.49082 14.8792 7.75501C14.8792 8.0192 14.9838 8.27265 15.17 8.46001L18.71 12L15.17 15.54C14.9838 15.7274 14.8792 15.9808 14.8792 16.245C14.8792 16.5092 14.9838 16.7626 15.17 16.95C15.2634 17.0427 15.3743 17.116 15.4961 17.1658C15.6179 17.2155 15.7484 17.2408 15.88 17.24C16.0116 17.2408 16.1421 17.2155 16.2639 17.1658C16.3857 17.116 16.4966 17.0427 16.59 16.95L20.83 12.71C20.9237 12.617 20.9981 12.5064 21.0489 12.3846C21.0997 12.2627 21.1258 12.132 21.1258 12C21.1258 11.868 21.0997 11.7373 21.0489 11.6154C20.9981 11.4936 20.9237 11.383 20.83 11.29Z" fill="white"/></svg>`;
+
+  const BUTTON_PRESET_TEMPLATES: Record<string, (text: string) => string> = {
+    "cs-preset-1": (t) => `<span class="cs-button-text">${escapeHtml(t)}</span>`,
+    "cs-preset-2": (t) => `${escapeHtml(t)}<div class="cs-wrapper">${ARROW_SVG_DARK}</div>`,
+    "cs-preset-3": (t) => `${escapeHtml(t)}${DOUBLE_ARROW_SVG}`,
+    "cs-preset-4": (t) => `${escapeHtml(t)}<div class="cs-wrapper">${ARROW_SVG_DARK}</div>`,
+    "cs-preset-5": (t) => `${escapeHtml(t)}<div class="cs-wrapper">${ARROW_SVG_LIGHT}</div>`,
+    "cs-preset-6": (t) => escapeHtml(t),
+    "cs-preset-7": (t) => `${escapeHtml(t)}${ARROW_SVG_DARK}`,
+    "cs-preset-8": (t) => escapeHtml(t),
+    "cs-preset-9": (t) => escapeHtml(t),
+    "cs-preset-10": (t) => escapeHtml(t),
+  };
+
+  let textMode = false;
+  let imageMode = false;
+  let colorMode = false;
+  let fontMode = false;
+  let buttonMode = false;
+
+  function $(id: string) {
+    return document.getElementById(id);
+  }
+
+  function rgbToHex(rgb: string): string {
+    if (!rgb) return "#000000";
+    if (rgb.startsWith("#")) return rgb;
+    const m = rgb.match(/\d+/g);
+    if (!m || m.length < 3) return "#000000";
+    const toHex = (n: string) => parseInt(n, 10).toString(16).padStart(2, "0");
+    return `#${toHex(m[0])}${toHex(m[1])}${toHex(m[2])}`;
+  }
+
+  function readSelection(): Selection {
+    return [...document.querySelectorAll<HTMLElement>(".editable-component")].map(
+      (w) => ({
+        type: w.dataset.componentType || "",
+        value: w.dataset.variantValue || "",
+        order: parseInt(w.style.order || "0", 10),
+        targetId: "",
+      })
+    );
+  }
+
+  function selectionToUrl(selection: Selection): string {
+    const params = new URLSearchParams();
+    const order: string[] = [];
+    [...selection]
+      .sort((a, b) => a.order - b.order)
+      .forEach((s, idx) => {
+        const key = TYPE_TO_KEY[s.type];
+        if (!key) return;
+        params.set(key, s.value);
+        order[idx] = key;
+      });
+    params.set("order", order.filter(Boolean).join(","));
+    return `/editor?${params.toString()}`;
+  }
+
+  function readTemplates(): Record<string, TemplateData> {
+    try {
+      const raw = localStorage.getItem(STORAGE_TEMPLATES);
+      return raw ? JSON.parse(raw) : {};
+    } catch {
+      return {};
     }
   }
 
-  function toggleTextEditMode() {
-    textEditMode = !textEditMode;
-    textEditBtn.classList.toggle("active", textEditMode);
-
-    editableComponents.forEach((component) => {
-      component.classList.toggle("text-edit-mode", textEditMode);
-
-      // Enable/disable text editing
-      const editableTexts = component.querySelectorAll(
-        '[data-editable="true"]'
-      );
-      editableTexts.forEach((text: HTMLElement) => {
-        text.contentEditable = textEditMode.toString();
-      });
-    });
-
-    if (textEditMode) {
-      // Disable image edit mode
-      if (imageEditMode) toggleImageEditMode();
-    }
+  function writeTemplates(t: Record<string, TemplateData>) {
+    localStorage.setItem(STORAGE_TEMPLATES, JSON.stringify(t));
   }
 
-  function makeTextEditable() {
-    editableComponents.forEach((component) => {
-      // Find text elements that should be editable
-      const textElements = component.querySelectorAll(
-        "h1, h2, h3, h4, h5, h6, p, span, a, button"
-      );
+  function markEditable() {
+    const wrappers = document.querySelectorAll<HTMLElement>(
+      ".editable-component"
+    );
+    wrappers.forEach((wrapper) => {
+      const type = wrapper.dataset.componentType || "";
+      const variant = wrapper.dataset.variantValue || "x";
+      const active = wrapper.querySelector<HTMLElement>(".active");
+      if (!active) return;
 
-      textElements.forEach((element: HTMLElement) => {
-        // Skip elements that are already marked as non-editable
-        if (element.getAttribute("data-editable") === "false") return;
-
-        // Skip empty elements or elements with only whitespace
-        if (!element.textContent?.trim()) return;
-
-        // Skip elements that contain only images or other non-text content
-        if (element.children.length > 0 && !element.textContent?.trim()) return;
-
-        element.setAttribute("data-editable", "true");
-      });
-    });
-  }
-
-  function addImageClickHandlers() {
-    editableComponents.forEach((component) => {
-      // Handle both img and picture elements
-      const images = component.querySelectorAll("img, picture");
-
-      images.forEach((element) => {
-        // For picture elements, we want to target the inner img for the actual upload
-        const targetImg = element.tagName === "PICTURE"
-          ? element.querySelector("img")
-          : element;
-
-        if (!targetImg) return;
-
-        // Add upload overlay
-        const overlay = document.createElement("div");
-        overlay.className = "image-upload-overlay";
-        overlay.innerHTML = ``;
-
-        // Make image container relative - use the picture element as container if available
-        const container = element.tagName === "PICTURE" ? element : element.parentElement;
-        if (container) {
-          container.style.position = "relative";
-          container.appendChild(overlay);
-        }
-
-        element.addEventListener("click", () => {
-          if (imageEditMode) {
-            handleImageUpload(targetImg);
+      let tIdx = 0;
+      active
+        .querySelectorAll<HTMLElement>("h1, h2, h3, h4, h5, h6, p, span, a, button, li")
+        .forEach((el) => {
+          if (el.getAttribute("data-editable") === "false") return;
+          const hasElementChildren = Array.from(el.children).some(
+            (c) => !["IMG", "BR", "SVG", "I"].includes(c.tagName)
+          );
+          if (hasElementChildren) return;
+          const hasDirectText = Array.from(el.childNodes).some(
+            (n) => n.nodeType === Node.TEXT_NODE && (n.textContent || "").trim() !== ""
+          );
+          if (!hasDirectText) return;
+          el.setAttribute("data-editable", "true");
+          if (!el.dataset.editId) {
+            el.dataset.editId = `${type}-${variant}-text-${tIdx}`;
+            if (!el.dataset.originalText) {
+              el.dataset.originalText = el.textContent || "";
+            }
           }
+          tIdx++;
+        });
+
+      let iIdx = 0;
+      active.querySelectorAll<HTMLImageElement>("img").forEach((img) => {
+        if (!img.dataset.editId) {
+          img.dataset.editId = `${type}-${variant}-img-${iIdx}`;
+          if (!img.dataset.originalSrc) {
+            img.dataset.originalSrc = img.src;
+          }
+        }
+        iIdx++;
+      });
+
+      let bIdx = 0;
+      active
+        .querySelectorAll<HTMLElement>("button, a")
+        .forEach((el) => {
+          const cls = el.className || "";
+          if (typeof cls !== "string") return;
+          if (!/\b(button|btn)\b/i.test(cls)) return;
+          if (!el.dataset.btnEditId) {
+            el.dataset.btnEditId = `${type}-${variant}-btn-${bIdx}`;
+            el.dataset.originalClass = cls;
+          }
+          bIdx++;
+        });
+    });
+  }
+
+  function setTextMode(on: boolean) {
+    textMode = on;
+    $("toggle-text-edit")?.classList.toggle("active", on);
+    document
+      .querySelectorAll<HTMLElement>(".editable-component")
+      .forEach((c) => c.classList.toggle("text-edit-mode", on));
+    document
+      .querySelectorAll<HTMLElement>('[data-editable="true"]')
+      .forEach((el) => {
+        el.contentEditable = on ? "true" : "false";
+      });
+    document
+      .querySelectorAll<HTMLAnchorElement>("#editor-content a")
+      .forEach((a) => {
+        if (on) {
+          if (a.dataset.origHref === undefined) {
+            a.dataset.origHref = a.getAttribute("href") ?? "";
+          }
+          a.removeAttribute("href");
+        } else if (a.dataset.origHref !== undefined) {
+          const orig = a.dataset.origHref;
+          if (orig) a.setAttribute("href", orig);
+          delete a.dataset.origHref;
+        }
+      });
+    if (on) {
+      setImageMode(false);
+      setColorMode(false);
+      setFontMode(false);
+      setButtonMode(false);
+    }
+  }
+
+  function setImageMode(on: boolean) {
+    imageMode = on;
+    $("toggle-image-edit")?.classList.toggle("active", on);
+    document
+      .querySelectorAll<HTMLElement>(".editable-component")
+      .forEach((c) => c.classList.toggle("image-edit-mode", on));
+    if (on) {
+      setTextMode(false);
+      setColorMode(false);
+      setFontMode(false);
+      setButtonMode(false);
+      mountImagePills();
+    } else {
+      unmountImagePills();
+    }
+  }
+
+  function applyImageSrc(img: HTMLImageElement, src: string) {
+    img.src = src;
+    img.removeAttribute("srcset");
+    const picture = img.closest("picture");
+    if (picture) {
+      picture
+        .querySelectorAll<HTMLSourceElement>("source")
+        .forEach((s) => {
+          s.srcset = src;
+        });
+    }
+  }
+
+  let pillResizeHandler: (() => void) | null = null;
+
+  function repositionPills() {
+    document
+      .querySelectorAll<HTMLElement>(".image-edit-pill")
+      .forEach((pill) => {
+        const editId = pill.dataset.forImg;
+        if (!editId) return;
+        const img = document.querySelector<HTMLImageElement>(
+          `img[data-edit-id="${editId}"]`
+        );
+        if (!img) {
+          pill.remove();
+          return;
+        }
+        const r = img.getBoundingClientRect();
+        pill.style.position = "fixed";
+        pill.style.left = `${r.left + r.width / 2}px`;
+        pill.style.top = `${r.top + r.height / 2}px`;
+      });
+  }
+
+  function mountImagePills() {
+    unmountImagePills();
+    document
+      .querySelectorAll<HTMLImageElement>("img[data-edit-id]")
+      .forEach((img) => {
+        const wrapper = img.closest<HTMLElement>(".editable-component");
+        if (!wrapper || wrapper.style.display === "none") return;
+        const pill = document.createElement("button");
+        pill.type = "button";
+        pill.className = "image-edit-pill";
+        pill.dataset.forImg = img.dataset.editId!;
+        pill.textContent = "📷 Change image";
+        pill.style.cssText = [
+          "position:fixed",
+          "z-index:2147483647",
+          "display:inline-flex",
+          "align-items:center",
+          "gap:0.3rem",
+          "padding:0.45rem 0.85rem",
+          "background:#1d11b9",
+          "color:#fff",
+          "font-family:Arial,sans-serif",
+          "font-size:0.8rem",
+          "font-weight:700",
+          "border:2px solid #fff",
+          "border-radius:999px",
+          "cursor:pointer",
+          "box-shadow:0 4px 14px rgba(0,0,0,0.5)",
+          "pointer-events:auto",
+          "transform:translate(-50%,-50%)",
+          "white-space:nowrap",
+          "line-height:1",
+        ].join(";");
+        pill.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          openFilePickerFor(img);
+        });
+        document.body.appendChild(pill);
+      });
+    repositionPills();
+    pillResizeHandler = () => repositionPills();
+    window.addEventListener("scroll", pillResizeHandler, true);
+    window.addEventListener("resize", pillResizeHandler);
+  }
+
+  function unmountImagePills() {
+    document
+      .querySelectorAll<HTMLElement>(".image-edit-pill")
+      .forEach((p) => p.remove());
+    if (pillResizeHandler) {
+      window.removeEventListener("scroll", pillResizeHandler, true);
+      window.removeEventListener("resize", pillResizeHandler);
+      pillResizeHandler = null;
+    }
+  }
+
+  let buttonPillResizeHandler: (() => void) | null = null;
+
+  function repositionButtonPills() {
+    document
+      .querySelectorAll<HTMLElement>(".button-edit-pill")
+      .forEach((pill) => {
+        const editId = pill.dataset.forBtn;
+        if (!editId) return;
+        const btn = document.querySelector<HTMLElement>(
+          `[data-btn-edit-id="${editId}"]`
+        );
+        if (!btn) {
+          pill.remove();
+          return;
+        }
+        const r = btn.getBoundingClientRect();
+        pill.style.left = `${r.left + r.width / 2}px`;
+        pill.style.top = `${r.top + r.height / 2}px`;
+      });
+  }
+
+  function mountButtonPills() {
+    unmountButtonPills();
+    document
+      .querySelectorAll<HTMLElement>("[data-btn-edit-id]")
+      .forEach((btn) => {
+        const wrapper = btn.closest<HTMLElement>(".editable-component");
+        if (!wrapper || wrapper.style.display === "none") return;
+        const pill = document.createElement("button");
+        pill.type = "button";
+        pill.className = "button-edit-pill";
+        pill.dataset.forBtn = btn.dataset.btnEditId!;
+        pill.textContent = "🎨 Style";
+        pill.style.cssText = [
+          "position:fixed",
+          "z-index:2147483647",
+          "display:inline-flex",
+          "align-items:center",
+          "gap:0.3rem",
+          "padding:0.4rem 0.8rem",
+          "background:#c10e0a",
+          "color:#fff",
+          "font-family:Arial,sans-serif",
+          "font-size:0.75rem",
+          "font-weight:700",
+          "border:2px solid #fff",
+          "border-radius:999px",
+          "cursor:pointer",
+          "box-shadow:0 4px 14px rgba(0,0,0,0.5)",
+          "pointer-events:auto",
+          "transform:translate(-50%,-50%)",
+          "white-space:nowrap",
+          "line-height:1",
+        ].join(";");
+        pill.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const live = document.querySelector<HTMLElement>(
+            `[data-btn-edit-id="${pill.dataset.forBtn}"]`
+          );
+          if (!live) return;
+          showButtonPresetPopup(live, e.clientX, e.clientY);
+        });
+        document.body.appendChild(pill);
+      });
+    repositionButtonPills();
+    buttonPillResizeHandler = () => repositionButtonPills();
+    window.addEventListener("scroll", buttonPillResizeHandler, true);
+    window.addEventListener("resize", buttonPillResizeHandler);
+  }
+
+  function unmountButtonPills() {
+    document
+      .querySelectorAll<HTMLElement>(".button-edit-pill")
+      .forEach((p) => p.remove());
+    if (buttonPillResizeHandler) {
+      window.removeEventListener("scroll", buttonPillResizeHandler, true);
+      window.removeEventListener("resize", buttonPillResizeHandler);
+      buttonPillResizeHandler = null;
+    }
+  }
+
+  let buttonPresetTarget: HTMLElement | null = null;
+
+  function showButtonPresetPopup(btn: HTMLElement, x: number, y: number) {
+    const popup = $("button-preset-popup");
+    if (!popup) return;
+    buttonPresetTarget = btn;
+    popup.hidden = false;
+    const pw = popup.offsetWidth || 400;
+    const ph = popup.offsetHeight || 300;
+    popup.style.left = `${Math.min(x, window.innerWidth - pw - 10)}px`;
+    popup.style.top = `${Math.min(y, window.innerHeight - ph - 10)}px`;
+  }
+
+  function hideButtonPresetPopup() {
+    const popup = $("button-preset-popup");
+    if (popup) popup.hidden = true;
+    buttonPresetTarget = null;
+  }
+
+  function applyButtonPreset(btn: HTMLElement, presetKey: string | null) {
+    if (!presetKey || !BUTTON_PRESET_TEMPLATES[presetKey]) return;
+    const editId = btn.dataset.btnEditId;
+    const text = (btn.textContent || "").trim() || "Button";
+    const inner = BUTTON_PRESET_TEMPLATES[presetKey](text);
+
+    const replacement = document.createElement("button");
+    replacement.type = "button";
+    replacement.className = presetKey;
+    if (editId) replacement.dataset.btnEditId = editId;
+    replacement.innerHTML = inner;
+
+    btn.replaceWith(replacement);
+
+    if (buttonMode) {
+      setTimeout(repositionButtonPills, 0);
+    }
+  }
+
+  function populateButtonPresetGrid() {
+    const grid = $("button-preset-grid");
+    if (!grid) return;
+    grid.innerHTML = "";
+    BUTTON_PRESETS.forEach((p) => {
+      const card = document.createElement("div");
+      card.className = "preset-card";
+      card.innerHTML = `
+        <a href="javascript:void(0)" class="${p.key}" style="pointer-events:none;">Sample</a>
+        <span class="preset-label">${p.label}</span>
+      `;
+      card.addEventListener("click", () => {
+        if (buttonPresetTarget) {
+          applyButtonPreset(buttonPresetTarget, p.key);
+        }
+        hideButtonPresetPopup();
+      });
+      grid.appendChild(card);
+    });
+  }
+
+  function populateFontPanel() {
+    document
+      .querySelectorAll<HTMLSelectElement>(".font-select")
+      .forEach((select) => {
+        select.innerHTML = FONT_OPTIONS.map(
+          (f) => `<option value='${f.stack}'>${f.label}</option>`
+        ).join("");
+        const varName = select.dataset.fontVar;
+        if (!varName) return;
+        select.addEventListener("change", () => {
+          document.documentElement.style.setProperty(varName, select.value);
         });
       });
+  }
+
+  const CHECKERBOARD = "repeating-linear-gradient(45deg,#ddd 0,#ddd 4px,#fff 4px,#fff 8px)";
+
+  function updateDropdownTrigger(
+    axis: "color" | "backgroundColor",
+    value: string,
+    pickerColor?: string
+  ) {
+    const id = axis === "color" ? "local-color-text-dropdown" : "local-color-bg-dropdown";
+    const container = $(id);
+    if (!container) return;
+    const swatch = container.querySelector<HTMLElement>(".cd-trigger .cd-swatch");
+    const label  = container.querySelector<HTMLElement>(".cd-trigger .cd-label");
+    if (!swatch || !label) return;
+    if (!value) {
+      swatch.style.background = CHECKERBOARD;
+      label.textContent = "— inherit —";
+    } else if (value === "custom") {
+      swatch.style.background = pickerColor ?? CHECKERBOARD;
+      label.textContent = "Custom…";
+    } else {
+      swatch.style.background = value;
+      const optLabel = container.querySelector<HTMLElement>(`.cd-option[data-value="${CSS.escape(value.slice(4, -1))}"] .cd-label, .cd-option[data-value="${value}"] .cd-label`);
+      label.textContent = optLabel?.textContent ?? value;
+    }
+  }
+
+  function selectDropdownOption(
+    containerId: string,
+    value: string,
+    axis: "color" | "backgroundColor",
+    pickerColor?: string
+  ) {
+    const container = $(containerId);
+    const picker = document.querySelector<HTMLInputElement>(`.custom-picker[data-axis="${axis}"]`);
+    if (!container) return;
+
+    container.querySelectorAll<HTMLButtonElement>(".cd-option").forEach((btn) => {
+      btn.classList.toggle("selected", btn.dataset.value === value);
+    });
+
+    if (picker) {
+      picker.hidden = value !== "custom";
+      if (value === "custom" && pickerColor) picker.value = pickerColor;
+    }
+
+    updateDropdownTrigger(axis, value, pickerColor ?? picker?.value);
+
+    if (value === "custom") return;
+    if (!localColorTarget) return;
+    localColorTarget.style[axis] = value;
+  }
+
+  function populateColorDropdowns() {
+    const defs: Array<{ id: string; axis: "color" | "backgroundColor" }> = [
+      { id: "local-color-text-dropdown", axis: "color" },
+      { id: "local-color-bg-dropdown",   axis: "backgroundColor" },
+    ];
+
+    defs.forEach(({ id, axis }) => {
+      const container = $(id);
+      if (!container) return;
+      container.innerHTML = "";
+
+      const trigger = document.createElement("button");
+      trigger.type = "button";
+      trigger.className = "cd-trigger";
+      trigger.innerHTML = `<span class="cd-label">— inherit —</span><span class="cd-swatch" style="background:${CHECKERBOARD}"></span><span class="cd-arrow">▾</span>`;
+
+      const list = document.createElement("div");
+      list.className = "cd-list";
+      list.hidden = true;
+
+      const options: Array<{ value: string; label: string; bg: string }> = [
+        { value: "", label: "— inherit —", bg: CHECKERBOARD },
+        ...ROOT_COLOR_VARS.map((cv) => ({
+          value: `var(${cv.name})`,
+          label: `${cv.name}  ${cv.defaultHex}`,
+          bg: `var(${cv.name})`,
+        })),
+        { value: "custom", label: "Custom…", bg: CHECKERBOARD },
+      ];
+
+      options.forEach((opt) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "cd-option";
+        btn.dataset.value = opt.value;
+        btn.innerHTML = `<span class="cd-label">${opt.label}</span><span class="cd-swatch" style="background:${opt.bg}"></span>`;
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          selectDropdownOption(id, opt.value, axis);
+          list.hidden = true;
+        });
+        list.appendChild(btn);
+      });
+
+      trigger.addEventListener("click", (e) => {
+        e.stopPropagation();
+        list.hidden = !list.hidden;
+      });
+
+      container.appendChild(trigger);
+      container.appendChild(list);
     });
   }
 
-  function handleImageUpload(img: HTMLImageElement) {
+  function openFilePickerFor(img: HTMLImageElement) {
     const input = document.createElement("input");
     input.type = "file";
     input.accept = "image/*";
-
-    input.onchange = (e) => {
-      const file = (e.target as HTMLInputElement).files?.[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = (e) => {
-          img.src = e.target?.result as string;
-        };
-        reader.readAsDataURL(file);
-      }
+    input.onchange = () => {
+      const file = input.files?.[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        const result = ev.target?.result;
+        if (typeof result === "string") {
+          applyImageSrc(img, result);
+          repositionPills();
+        }
+      };
+      reader.readAsDataURL(file);
     };
-
     input.click();
   }
 
-  function togglePreviewMode() {
-    const isPreview = previewBtn.classList.contains("active");
-
-    if (!isPreview) {
-      // Entering preview mode - disable all edit modes
-      if (imageEditMode) toggleImageEditMode();
-      if (textEditMode) toggleTextEditMode();
-
-      // Hide all image upload overlays
-      const overlays = document.querySelectorAll(".image-upload-overlay");
-      overlays.forEach((overlay) => {
-        overlay.style.display = "none";
-      });
-
-      previewBtn.classList.add("active");
-    } else {
-      // Exiting preview mode - show image overlays again
-      const overlays = document.querySelectorAll(".image-upload-overlay");
-      overlays.forEach((overlay) => {
-        overlay.style.display = "block";
-      });
-
-      previewBtn.classList.remove("active");
+  function setColorMode(on: boolean) {
+    colorMode = on;
+    $("toggle-color-edit")?.classList.toggle("active", on);
+    const panel = $("color-panel");
+    if (panel) panel.hidden = !on;
+    document
+      .querySelectorAll<HTMLElement>(".editable-component")
+      .forEach((c) => c.classList.toggle("color-edit-mode", on));
+    if (!on) {
+      hideLocalColorPopup();
+    }
+    if (on) {
+      setTextMode(false);
+      setImageMode(false);
+      setFontMode(false);
+      setButtonMode(false);
     }
   }
 
-  function preventNavigationInEditMode() {
-    // Get all links in the editable components
-    editableComponents.forEach((component) => {
-      const links = component.querySelectorAll("a");
+  function setFontMode(on: boolean) {
+    fontMode = on;
+    $("toggle-font-edit")?.classList.toggle("active", on);
+    const panel = $("font-panel");
+    if (panel) panel.hidden = !on;
+    if (on) {
+      setTextMode(false);
+      setImageMode(false);
+      setColorMode(false);
+      setButtonMode(false);
+    }
+  }
 
-      links.forEach((link) => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          console.log("Navigation prevented - editor mode");
+  function setButtonMode(on: boolean) {
+    buttonMode = on;
+    $("toggle-button-edit")?.classList.toggle("active", on);
+    if (on) {
+      setTextMode(false);
+      setImageMode(false);
+      setColorMode(false);
+      setFontMode(false);
+      mountButtonPills();
+    } else {
+      unmountButtonPills();
+      hideButtonPresetPopup();
+    }
+  }
+
+  let localColorTarget: HTMLElement | null = null;
+
+  function syncColorDropdown(containerId: string, axis: "color" | "backgroundColor", target: HTMLElement) {
+    const container = $(containerId);
+    if (!container) return;
+    const val = target.style[axis];
+    let matchValue = "";
+    let pickerColor: string | undefined;
+
+    if (!val) {
+      matchValue = "";
+    } else if (val.startsWith("var(")) {
+      const btn = container.querySelector<HTMLButtonElement>(`.cd-option[data-value="${val}"]`);
+      matchValue = btn ? val : "custom";
+      if (!btn) pickerColor = rgbToHex(getComputedStyle(target)[axis]);
+    } else {
+      matchValue = "custom";
+      pickerColor = rgbToHex(val);
+    }
+
+    selectDropdownOption(containerId, matchValue, axis, pickerColor);
+  }
+
+  function showLocalColorPopup(target: HTMLElement, x: number, y: number) {
+    const popup = $("local-color-popup");
+    if (!popup) return;
+    localColorTarget = target;
+
+    if (!target.dataset.colorOverrideId) {
+      const wrapper = target.closest<HTMLElement>(".editable-component");
+      const type = wrapper?.dataset.componentType || "x";
+      const variant = wrapper?.dataset.variantValue || "x";
+      target.dataset.colorOverrideId = `${type}-${variant}-color-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
+    }
+
+    syncColorDropdown("local-color-text-dropdown", "color", target);
+    syncColorDropdown("local-color-bg-dropdown", "backgroundColor", target);
+
+    popup.hidden = false;
+    const pw = popup.offsetWidth || 200;
+    popup.style.left = `${Math.min(x, window.innerWidth - pw - 10)}px`;
+    popup.style.top = `${y}px`;
+  }
+
+  function hideLocalColorPopup() {
+    const popup = $("local-color-popup");
+    if (popup) popup.hidden = true;
+    localColorTarget = null;
+  }
+
+  function handleColorClick(e: MouseEvent) {
+    if (!colorMode) return;
+    const t = e.target as HTMLElement;
+    if (!t || t.closest(".editor-toolbar") || t.closest(".color-panel") || t.closest(".local-color-popup")) {
+      return;
+    }
+    e.preventDefault();
+    e.stopPropagation();
+    showLocalColorPopup(t, e.clientX + 8, e.clientY + 8);
+  }
+
+  function wireColorPickers() {
+    document
+      .querySelectorAll<HTMLInputElement>(".color-panel input[type='color']")
+      .forEach((input) => {
+        input.addEventListener("input", () => {
+          const cssVar = input.dataset.cssVar;
+          if (!cssVar) return;
+          document.documentElement.style.setProperty(cssVar, input.value);
         });
       });
+
+    const textInput = $("local-color-text") as HTMLInputElement | null;
+    const bgInput = $("local-color-bg") as HTMLInputElement | null;
+    textInput?.addEventListener("input", () => {
+      if (localColorTarget) localColorTarget.style.color = textInput.value;
+      updateDropdownTrigger("color", "custom", textInput.value);
+    });
+    bgInput?.addEventListener("input", () => {
+      if (localColorTarget)
+        localColorTarget.style.backgroundColor = bgInput.value;
+      updateDropdownTrigger("backgroundColor", "custom", bgInput.value);
+    });
+
+    $("local-color-clear")?.addEventListener("click", () => {
+      if (!localColorTarget) return;
+      localColorTarget.style.color = "";
+      localColorTarget.style.backgroundColor = "";
+      delete localColorTarget.dataset.colorOverrideId;
+      hideLocalColorPopup();
+    });
+    $("local-color-close")?.addEventListener("click", hideLocalColorPopup);
+  }
+
+  function collectTextOverrides(): Record<string, string> {
+    const out: Record<string, string> = {};
+    document
+      .querySelectorAll<HTMLElement>("[data-edit-id]")
+      .forEach((el) => {
+        if (el.tagName === "IMG") return;
+        const id = el.dataset.editId!;
+        const cur = el.textContent || "";
+        const orig = el.dataset.originalText || "";
+        if (cur !== orig) out[id] = cur;
+      });
+    return out;
+  }
+
+  function collectImageOverrides(): Record<string, string> {
+    const out: Record<string, string> = {};
+    document
+      .querySelectorAll<HTMLImageElement>("img[data-edit-id]")
+      .forEach((img) => {
+        const id = img.dataset.editId!;
+        const cur = img.src;
+        const orig = img.dataset.originalSrc || "";
+        if (cur !== orig) out[id] = cur;
+      });
+    return out;
+  }
+
+  function collectRootColors(): Record<string, string> {
+    const out: Record<string, string> = {};
+    const inline = document.documentElement.style;
+    ROOT_COLOR_VARS.forEach(({ name }) => {
+      const val = inline.getPropertyValue(name).trim();
+      if (val) out[name] = val;
+    });
+    return out;
+  }
+
+  function collectRootFonts(): Record<string, string> {
+    const out: Record<string, string> = {};
+    const inline = document.documentElement.style;
+    ROOT_FONT_VARS.forEach((v) => {
+      const val = inline.getPropertyValue(v).trim();
+      if (val) out[v] = val;
+    });
+    return out;
+  }
+
+  function collectButtonOverrides(): Record<string, string> {
+    const out: Record<string, string> = {};
+    document
+      .querySelectorAll<HTMLElement>("[data-btn-edit-id]")
+      .forEach((btn) => {
+        const id = btn.dataset.btnEditId!;
+        const preset = (btn.className || "")
+          .split(/\s+/)
+          .find((c) => c.startsWith("cs-preset-"));
+        if (preset) out[id] = preset;
+      });
+    return out;
+  }
+
+  function collectLocalColors(): Record<
+    string,
+    { color?: string; backgroundColor?: string }
+  > {
+    const out: Record<string, { color?: string; backgroundColor?: string }> =
+      {};
+    document
+      .querySelectorAll<HTMLElement>("[data-color-override-id]")
+      .forEach((el) => {
+        const id = el.dataset.colorOverrideId!;
+        const entry: { color?: string; backgroundColor?: string } = {};
+        if (el.style.color) entry.color = el.style.color;
+        if (el.style.backgroundColor)
+          entry.backgroundColor = el.style.backgroundColor;
+        if (Object.keys(entry).length > 0) out[id] = entry;
+      });
+    return out;
+  }
+
+  function refreshLoadList() {
+    const select = $("load-template") as HTMLSelectElement | null;
+    if (!select) return;
+    const templates = readTemplates();
+    const names = Object.keys(templates).sort();
+    select.innerHTML =
+      '<option value="">— Load template —</option>' +
+      names
+        .map((n) => `<option value="${n}">${n}</option>`)
+        .join("");
+  }
+
+  function saveTemplate() {
+    const nameInput = $("template-name") as HTMLInputElement | null;
+    const name = nameInput?.value.trim() || "";
+    if (!name) {
+      alert("Donnez un nom au template avant de sauvegarder.");
+      nameInput?.focus();
+      return;
+    }
+    const selection = readSelection();
+    if (selection.length === 0) {
+      alert("Aucune sélection courante.");
+      return;
+    }
+    const templates = readTemplates();
+    templates[name] = {
+      createdAt: new Date().toISOString(),
+      selection,
+      textOverrides: collectTextOverrides(),
+      imageOverrides: collectImageOverrides(),
+      rootColors: collectRootColors(),
+      localColors: collectLocalColors(),
+      rootFonts: collectRootFonts(),
+      buttonOverrides: collectButtonOverrides(),
+    };
+    writeTemplates(templates);
+    refreshLoadList();
+    alert(`Template "${name}" enregistré.`);
+  }
+
+  function applyOverrides(t: TemplateData) {
+    Object.entries(t.rootColors).forEach(([k, v]) => {
+      document.documentElement.style.setProperty(k, v);
+    });
+    document
+      .querySelectorAll<HTMLInputElement>(".color-panel input[type='color']")
+      .forEach((input) => {
+        const v = input.dataset.cssVar;
+        if (v && t.rootColors[v]) input.value = t.rootColors[v];
+      });
+
+    Object.entries(t.textOverrides).forEach(([id, text]) => {
+      const el = document.querySelector<HTMLElement>(
+        `[data-edit-id="${id}"]`
+      );
+      if (el) el.textContent = text;
+    });
+
+    Object.entries(t.imageOverrides).forEach(([id, src]) => {
+      const el = document.querySelector<HTMLImageElement>(
+        `img[data-edit-id="${id}"]`
+      );
+      if (el) applyImageSrc(el, src);
+    });
+
+    Object.entries(t.localColors).forEach(([id, styles]) => {
+      const el = document.querySelector<HTMLElement>(
+        `[data-color-override-id="${id}"]`
+      );
+      if (el) {
+        if (styles.color) el.style.color = styles.color;
+        if (styles.backgroundColor) el.style.backgroundColor = styles.backgroundColor;
+      }
+    });
+
+    const fonts = t.rootFonts || {};
+    Object.entries(fonts).forEach(([k, v]) => {
+      document.documentElement.style.setProperty(k, v);
+    });
+    document
+      .querySelectorAll<HTMLSelectElement>(".font-select")
+      .forEach((select) => {
+        const v = select.dataset.fontVar;
+        if (v && fonts[v]) select.value = fonts[v];
+      });
+
+    const buttonOv = t.buttonOverrides || {};
+    Object.entries(buttonOv).forEach(([id, presetKey]) => {
+      const el = document.querySelector<HTMLElement>(
+        `[data-btn-edit-id="${id}"]`
+      );
+      if (el) applyButtonPreset(el, presetKey);
     });
   }
+
+  function loadTemplate(name: string) {
+    const templates = readTemplates();
+    const t = templates[name];
+    if (!t) {
+      alert(`Template "${name}" introuvable.`);
+      return;
+    }
+    sessionStorage.setItem("lunora.pendingTemplate", name);
+    window.location.href = selectionToUrl(t.selection);
+  }
+
+  function deleteTemplate() {
+    const select = $("load-template") as HTMLSelectElement | null;
+    const name = select?.value;
+    if (!name) {
+      alert("Choisissez un template dans la liste.");
+      return;
+    }
+    if (!confirm(`Supprimer le template "${name}" ?`)) return;
+    const templates = readTemplates();
+    delete templates[name];
+    writeTemplates(templates);
+    refreshLoadList();
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    markEditable();
+    wireColorPickers();
+    populateColorDropdowns();
+    populateFontPanel();
+    populateButtonPresetGrid();
+    refreshLoadList();
+
+    const pending = sessionStorage.getItem("lunora.pendingTemplate");
+    if (pending) {
+      sessionStorage.removeItem("lunora.pendingTemplate");
+      const templates = readTemplates();
+      const t = templates[pending];
+      if (t) {
+        applyOverrides(t);
+        const nameInput = $("template-name") as HTMLInputElement | null;
+        if (nameInput) nameInput.value = pending;
+      }
+    }
+
+    $("toggle-text-edit")?.addEventListener("click", () =>
+      setTextMode(!textMode)
+    );
+    $("toggle-image-edit")?.addEventListener("click", () =>
+      setImageMode(!imageMode)
+    );
+    $("toggle-color-edit")?.addEventListener("click", () =>
+      setColorMode(!colorMode)
+    );
+    $("toggle-font-edit")?.addEventListener("click", () =>
+      setFontMode(!fontMode)
+    );
+    $("toggle-button-edit")?.addEventListener("click", () =>
+      setButtonMode(!buttonMode)
+    );
+
+    $("button-preset-close")?.addEventListener("click", hideButtonPresetPopup);
+    $("button-preset-reset")?.addEventListener("click", () => {
+      if (buttonPresetTarget) applyButtonPreset(buttonPresetTarget, null);
+      hideButtonPresetPopup();
+    });
+
+    $("save-template")?.addEventListener("click", saveTemplate);
+    $("delete-template")?.addEventListener("click", deleteTemplate);
+
+    $("load-template")?.addEventListener("change", (e) => {
+      const sel = e.target as HTMLSelectElement;
+      if (sel.value) loadTemplate(sel.value);
+    });
+
+    document
+      .getElementById("editor-content")
+      ?.addEventListener("click", handleColorClick, true);
+
+    document.addEventListener("click", () => {
+      document.querySelectorAll<HTMLElement>(".cd-list").forEach((l) => (l.hidden = true));
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        if (!$("local-color-popup")?.hidden) hideLocalColorPopup();
+        if (!$("button-preset-popup")?.hidden) hideButtonPresetPopup();
+      }
+    });
+
+    const editorContent = document.getElementById("editor-content");
+    if (editorContent) {
+      editorContent.addEventListener("click", (e) => {
+        if (textMode) return;
+        const link = (e.target as HTMLElement).closest("a");
+        if (link) e.preventDefault();
+      }, true);
+    }
+  });
 </script>

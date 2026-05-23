@@ -1,0 +1,519 @@
+/* ============================================================
+   Button presets — globally available editor swatches.
+   Extracted from src/layouts/buttons/{1..11}.astro (scoped SCSS
+   flattened to plain CSS so the classes work anywhere).
+   Usage: add `cs-preset-N` to any <a>/<button>; class wins via
+   higher specificity than scoped `.cs-button-solid` defaults.
+   ============================================================ */
+
+/* -------- Preset 1 (was buttons/1.astro .cs-button-5) -------- */
+.cs-preset-1 {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 3.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  min-width: 10.875rem;
+  margin: 0;
+  color: #1a1a1a;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 2px solid #1a1a1a;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s;
+}
+.cs-preset-1 .cs-button-text {
+  display: block;
+  transform: translateY(-0.125rem);
+  transition: transform 0.3s, color 0.3s, letter-spacing 0.3s;
+}
+.cs-preset-1::before {
+  content: "";
+  width: 100%;
+  height: 0.375rem;
+  background: #1a1a1a;
+  opacity: 1;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  transition: height 0.3s;
+  z-index: -1;
+}
+.cs-preset-1:hover .cs-button-text {
+  color: #fff;
+  letter-spacing: 0.15em;
+  transform: translateY(0);
+}
+.cs-preset-1:hover::before {
+  height: 100%;
+}
+
+
+.cs-preset-2 {
+    text-align: center;
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 8vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    min-width: 10.875rem;
+    margin: auto;
+    color: #1a1a1a;
+    padding: 0 0 0 1.5rem;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    background-color: #fff;
+    display: inline-flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+    transition:
+        color 0.3s,
+        border 0.3s;
+}
+.cs-preset-2:before {
+    /* background color */
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: #1a1a1a;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+    z-index: -1;
+}
+.cs-preset-2:after {
+    /* button border */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid #1a1a1a;
+    /* prevents border from affecting height and width */
+    box-sizing: border-box;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+    pointer-events: none;
+}
+.cs-preset-2 .cs-wrapper {
+    width: 2.75rem;
+    height: auto;
+    background-color: #fff;
+    border-left: 2px solid #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    transition: border 0.3s;
+}
+.cs-preset-2 .cs-wrapper:before {
+    /* background color */
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: #f15a24;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+    transition-delay: 0.1s;
+    z-index: -1;
+}
+.cs-preset-2 .cs-icon {
+    width: 1.5rem;
+    height: auto;
+}
+.cs-preset-2 .cs-icon path {
+    transition: fill 0.3s;
+}
+.cs-preset-2:hover {
+    color: #fff;
+}
+.cs-preset-2:hover:before {
+    width: 100%;
+}
+.cs-preset-2:hover:after {
+    opacity: 0;
+}
+.cs-preset-2:hover .cs-wrapper {
+    border-color: #1a1a1a;
+}
+.cs-preset-2:hover .cs-wrapper:before {
+    width: 100%;
+}
+.cs-preset-2:hover .cs-icon path {
+    fill: #fff;
+}
+
+                                
+
+
+/* -------- Preset 3 (was buttons/3.astro .cs-button-10) -------- */
+.cs-preset-3 {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 3.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  min-width: 10.875rem;
+  margin: auto;
+  color: #fff;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  background-color: #f15a24;
+  box-shadow: 4px 4px 0px 0px #1a1a1a;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.25rem;
+  position: relative;
+  z-index: 1;
+  transform: skew(-10deg);
+  transition: trasnform 0.3s,background-color 0.3s, box-shadow 0.3s;
+}
+.cs-preset-3 .cs-icon {
+  transition: transform 0.3s;
+}
+.cs-preset-3:hover {
+  background-color: #1a1a1a;
+  box-shadow: 0px 0px 0px 0px #1a1a1a;
+}
+.cs-preset-3:hover .cs-icon {
+  transform: translateX(0.25rem);
+}
+
+/* -------- Preset 4 (was buttons/4.astro .cs-preset-2 white) -------- */
+.cs-preset-4 {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 3.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  min-width: 10.875rem;
+  margin: auto;
+  color: #1a1a1a;
+  padding: 0 0 0 1.5rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  display: inline-flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s, border 0.3s;
+}
+.cs-preset-4::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background-color: #1a1a1a;
+  opacity: 1;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s;
+  z-index: -1;
+}
+.cs-preset-4::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 2px solid #1a1a1a;
+  box-sizing: border-box;
+  opacity: 1;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  right: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+  pointer-events: none;
+}
+.cs-preset-4 .cs-wrapper {
+  width: 2.75rem;
+  height: auto;
+  background-color: #fff;
+  border-left: 2px solid #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+  transition: border 0.3s;
+}
+.cs-preset-4 .cs-wrapper::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background-color: #f15a24;
+  opacity: 1;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s;
+  transition-delay: 0.1s;
+  z-index: -1;
+}
+.cs-preset-4 .cs-icon {
+  width: 1.5rem;
+  height: auto;
+}
+.cs-preset-4 .cs-icon path {
+  transition: fill 0.3s;
+}
+.cs-preset-4:hover {
+  color: #fff;
+}
+.cs-preset-4:hover::before {
+  width: 100%;
+}
+.cs-preset-4:hover::after {
+  opacity: 0;
+}
+.cs-preset-4:hover .cs-wrapper {
+  border-color: #1a1a1a;
+}
+.cs-preset-4:hover .cs-wrapper::before {
+  width: 100%;
+}
+.cs-preset-4:hover .cs-icon path {
+  fill: #fff;
+}
+
+/* -------- Preset 5 (was buttons/6.astro .cs-preset-2 black) -------- */
+.cs-preset-5 {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 3.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  min-width: 10.875rem;
+  margin: auto;
+  color: #fff;
+  padding: 0 0 0 1.5rem;
+  box-sizing: border-box;
+  background-color: #1a1a1a;
+  display: inline-flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s;
+}
+.cs-preset-5 .cs-wrapper {
+  width: 2.75rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+}
+.cs-preset-5 .cs-wrapper::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #f15a24;
+  opacity: 1;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  right: 0;
+  transition: width 0.3s;
+  z-index: -1;
+}
+.cs-preset-5 .cs-icon {
+  width: 1.5rem;
+  height: auto;
+}
+.cs-preset-5:hover {
+  color: #fff;
+}
+.cs-preset-5:hover .cs-wrapper::before {
+  width: 0%;
+}
+
+/* -------- Preset 6 (was buttons/7.astro .cs-button-4 skew) -------- */
+.cs-preset-6 {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 3.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  min-width: 10.875rem;
+  margin: 0;
+  overflow: hidden;
+  color: #fff;
+  padding: 0 3rem;
+  box-sizing: border-box;
+  background-color: #1a1a1a;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+.cs-preset-6::before {
+  content: "";
+  width: 150%;
+  height: 110%;
+  background: var(--primary);
+  opacity: 1;
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: -130%;
+  z-index: -2;
+  transform: skew(45deg) translateY(-50%);
+  transition: left 0.3s;
+}
+.cs-preset-6:hover::before {
+  left: -20%;
+}
+
+/* -------- Preset 7 (was buttons/8.astro .cs-preset-2 bordered) -------- */
+.cs-preset-7 {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 3.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  min-width: 10.875rem;
+  margin: auto;
+  color: #1a1a1a;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 2px solid #1a1a1a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s;
+}
+.cs-preset-7::before {
+  content: "";
+  width: 0.375rem;
+  height: 100%;
+  background: #1a1a1a;
+  opacity: 1;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s;
+  z-index: -1;
+}
+.cs-preset-7 .cs-icon {
+  width: 1.5rem;
+  height: auto;
+}
+.cs-preset-7 .cs-icon path {
+  transition: fill 0.3s;
+}
+.cs-preset-7:hover {
+  color: #fff;
+}
+.cs-preset-7:hover::before {
+  width: 100%;
+}
+.cs-preset-7:hover .cs-icon path {
+  fill: #fff;
+}
+
+/* -------- Preset 8 (was buttons/9.astro .cs-button-4 red shadow) -------- */
+.cs-preset-8 {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 3.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  min-width: 10.875rem;
+  margin: auto;
+  color: #fff;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  background-color: #f15a24;
+  box-shadow: 4px 4px 0px 0px #1a1a1a;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.cs-preset-8:hover {
+  background-color: #1a1a1a;
+  box-shadow: 0px 0px 0px 0px var(--primary);
+}
+
+/* -------- Preset 9 (was buttons/10.astro .cs-button-1 yellow) -------- */
+.cs-preset-9 {
+  font-size: 1rem;
+  line-height: 3.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  margin: auto;
+  color: #fff;
+  padding: 0 1.5rem;
+  background-color: var(--primary);
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+.cs-preset-9::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: #000;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: width 0.3s;
+}
+.cs-preset-9:hover::before {
+  width: 100%;
+}
+
+/* -------- Preset 10 (was buttons/11.astro .cs-preset-2 brown) -------- */
+.cs-preset-10 {
+  font-size: 1rem;
+  line-height: 3.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  margin: auto;
+  color: #fff;
+  padding: 0 1.5rem;
+  background-color: #9a6509;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.3s;
+}
+.cs-preset-10:hover {
+  background-color: #000;
+}

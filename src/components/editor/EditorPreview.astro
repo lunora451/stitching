@@ -1,0 +1,77 @@
+---
+import { HERO_VARIANTS } from "./heroRegistry";
+import { SERVICE_VARIANTS } from "./serviceRegistry";
+import { FOOTER_VARIANTS } from "./footerRegistry";
+
+export interface SelectionItem {
+  type: "heroSection" | "service" | "footer";
+  value: string;
+  order: number;
+}
+
+interface Props {
+  selection: SelectionItem[];
+}
+
+const { selection } = Astro.props;
+
+const REGISTRIES: Record<string, Record<string, any>> = {
+  heroSection: HERO_VARIANTS,
+  service: SERVICE_VARIANTS,
+  footer: FOOTER_VARIANTS,
+};
+
+const WRAPPER_META: Record<string, { attr: string; cls: string }> = {
+  heroSection: { attr: "data-value-hero", cls: "c-hero" },
+  service: { attr: "data-value-service", cls: "c-service" },
+  footer: { attr: "data-value-footer", cls: "c-footer" },
+};
+
+type Resolved = {
+  Comp: any;
+  type: string;
+  value: string;
+  order: number;
+  attr: string;
+  cls: string;
+  variantAttrs: Record<string, string>;
+};
+
+const items: Resolved[] = [];
+for (const sel of [...selection].sort((a, b) => a.order - b.order)) {
+  const reg = REGISTRIES[sel.type];
+  const meta = WRAPPER_META[sel.type];
+  if (!reg || !meta) continue;
+  const Comp = reg[sel.value];
+  if (!Comp) continue;
+  items.push({
+    Comp,
+    type: sel.type,
+    value: sel.value,
+    order: sel.order,
+    attr: meta.attr,
+    cls: meta.cls,
+    variantAttrs: { [meta.attr]: sel.value },
+  });
+}
+---
+
+{items.map((item) => {
+  const Comp = item.Comp;
+  const styleAttr = "order: " + item.order;
+  const innerCls = item.cls + " active";
+  return (
+    <div
+      class="editable-component"
+      data-component-type={item.type}
+      data-variant-attr={item.attr}
+      data-variant-class={item.cls}
+      data-variant-value={item.value}
+      style={styleAttr}
+    >
+      <div class={innerCls} {...item.variantAttrs}>
+        <Comp />
+      </div>
+    </div>
+  );
+})}

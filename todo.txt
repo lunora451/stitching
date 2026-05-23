@@ -1,6 +1,0 @@
-fonctionnalités a implémenté:
-
--Ajout d'un bouton de validation dans templateBuilder
-- au clik:
- on prends les information des select qui ont été sélectionnées ainsi que leur order
- on ouvre une autre page ou on affiche uniquement les UI correspondante dans le bon ordre dans le but de faire une page propre d'exemple pour montrer un futur design
