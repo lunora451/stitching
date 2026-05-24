@@ -1,50 +1,96 @@
 ---
-// TODO(Task 7): Full rewrite — this component will be replaced with the ThemeEditor
-// that works with the new ProjectTheme shape (rootColors, rootFonts, customVars).
 import type { ProjectTheme } from '../../lib/types';
-
-interface Props {
-  project: { id: string; theme: ProjectTheme };
-}
+interface Props { project: { id: string; theme: ProjectTheme } }
 const { project } = Astro.props;
-const FONTS = ['Oswald', 'Source Sans 3', 'Yellowtail', 'Charter', 'Poppins', 'system-ui'];
-const primary = project.theme.rootColors['--primary'] ?? '#ff6a3e';
-const secondary = project.theme.rootColors['--secondary'] ?? '#ffba43';
-const headerFont = project.theme.rootFonts['--headerFont'] ?? "'Oswald', sans-serif";
-const bodyFont = project.theme.rootFonts['--bodyFont'] ?? "'Source Sans 3', sans-serif";
+
+const ROOT_COLOR_KEYS: Array<keyof ProjectTheme['rootColors']> = [
+  '--primary', '--secondary', '--headerColor', '--grey', '--bodyTextColor',
+  '--backgroundColor', '--primaryLight', '--secondaryLight', '--bodyTextColorWhite', '--errorColor',
+];
+const ROOT_FONT_KEYS: Array<keyof ProjectTheme['rootFonts']> = ['--headerFont', '--bodyFont', '--navNeon'];
+const FONT_STACKS = [
+  "'Oswald', sans-serif", "'Source Sans 3', sans-serif", "'Yellowtail', cursive",
+  "'Charter', serif", "Georgia, serif", "'Times New Roman', serif",
+  "Helvetica, Arial, sans-serif", "'Courier New', monospace", "system-ui, sans-serif",
+];
 ---
-<form id="theme-form" data-project-id={project.id} style="display:grid; grid-template-columns: repeat(4, 1fr); gap:1rem; padding:1rem; border:1px solid #ddd;">
-  <label>Primaire <input type="color" name="primary" value={primary} /></label>
-  <label>Secondaire <input type="color" name="secondary" value={secondary} /></label>
-  <label>Police header
-    <select name="headerFont">{FONTS.map(f => <option value={f} selected={`'${f}', sans-serif` === headerFont || f === headerFont}>{f}</option>)}</select>
-  </label>
-  <label>Police body
-    <select name="bodyFont">{FONTS.map(f => <option value={f} selected={`'${f}', sans-serif` === bodyFont || f === bodyFont}>{f}</option>)}</select>
-  </label>
+<form id="theme-form" data-project-id={project.id} style="display:grid; gap:1rem; padding:1rem; border:1px solid #ddd; background:#fafafa;">
+  <fieldset>
+    <legend>Couleurs racine</legend>
+    <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap:0.5rem;">
+      {ROOT_COLOR_KEYS.map((k) => (
+        <label style="display:flex; flex-direction:column; font-size:0.85rem;">
+          <span>{k}</span>
+          <input type="color" data-key={k} value={project.theme.rootColors[k]} />
+        </label>
+      ))}
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Variables personnalisées</legend>
+    <ul id="custom-vars" style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.25rem;">
+      {project.theme.customVars.map((cv) => (
+        <li style="display:flex; gap:0.5rem; align-items:center;">
+          <input class="custom-name" value={cv.name} placeholder="--mon-token" style="flex:1;" />
+          <input class="custom-hex" type="color" value={cv.hex} />
+          <button type="button" class="custom-remove">×</button>
+        </li>
+      ))}
+    </ul>
+    <button id="add-custom-var" type="button" style="margin-top:0.5rem;">+ Ajouter une variable</button>
+  </fieldset>
+
+  <fieldset>
+    <legend>Polices racine</legend>
+    <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:0.5rem;">
+      {ROOT_FONT_KEYS.map((k) => (
+        <label style="display:flex; flex-direction:column; font-size:0.85rem;">
+          <span>{k}</span>
+          <select data-key={k}>
+            {FONT_STACKS.map((f) => <option value={f} selected={f === project.theme.rootFonts[k]}>{f}</option>)}
+          </select>
+        </label>
+      ))}
+    </div>
+  </fieldset>
 </form>
 
-<script>
-  // TODO(Task 7): Replace with full ThemeEditor that patches rootColors/rootFonts/customVars.
-  const form = document.getElementById('theme-form') as HTMLFormElement;
-  const projectId = form.dataset.projectId!;
-  let saveTimer: number;
-  form.addEventListener('change', () => {
-    clearTimeout(saveTimer);
-    saveTimer = window.setTimeout(async () => {
-      const primaryVal = (form.elements.namedItem('primary') as HTMLInputElement).value;
-      const secondaryVal = (form.elements.namedItem('secondary') as HTMLInputElement).value;
-      const headerFontVal = (form.elements.namedItem('headerFont') as HTMLSelectElement).value;
-      const bodyFontVal = (form.elements.namedItem('bodyFont') as HTMLSelectElement).value;
-      // Fetch current theme then merge changes
-      const res = await fetch(`/api/projects/${projectId}`);
-      const project = await res.json() as { theme: any };
-      const theme = {
-        ...project.theme,
-        rootColors: { ...project.theme.rootColors, '--primary': primaryVal, '--secondary': secondaryVal },
-        rootFonts: { ...project.theme.rootFonts, '--headerFont': `'${headerFontVal}', sans-serif`, '--bodyFont': `'${bodyFontVal}', sans-serif` },
-      };
-      await fetch(`/api/projects/${projectId}`, { method: 'PATCH', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ theme }) });
+<script define:vars={{ initialTheme: project.theme, projectIdStr: project.id }}>
+  const form = document.getElementById('theme-form');
+  let theme = JSON.parse(JSON.stringify(initialTheme));
+  let timer;
+
+  function scheduleSave() {
+    clearTimeout(timer);
+    timer = window.setTimeout(async () => {
+      await fetch(`/api/projects/${projectIdStr}`, { method: 'PATCH', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ theme }) });
     }, 300);
+  }
+
+  function syncCustomVars() {
+    theme.customVars = [...form.querySelectorAll('#custom-vars li')].map((li) => ({
+      name: li.querySelector('.custom-name').value.trim(),
+      hex:  li.querySelector('.custom-hex').value,
+    })).filter((cv) => cv.name.startsWith('--'));
+  }
+
+  form.addEventListener('input', (e) => {
+    const t = e.target;
+    if (t.dataset.key && t.type === 'color')   { theme.rootColors[t.dataset.key] = t.value; scheduleSave(); }
+    else if (t.dataset.key && t.tagName === 'SELECT') { theme.rootFonts[t.dataset.key] = t.value; scheduleSave(); }
+    else if (t.classList.contains('custom-name') || t.classList.contains('custom-hex')) { syncCustomVars(); scheduleSave(); }
+  });
+
+  document.getElementById('add-custom-var').addEventListener('click', () => {
+    const ul = document.getElementById('custom-vars');
+    const li = document.createElement('li');
+    li.style.cssText = 'display:flex; gap:0.5rem; align-items:center;';
+    li.innerHTML = `<input class="custom-name" placeholder="--mon-token" style="flex:1;" /><input class="custom-hex" type="color" value="#000000" /><button type="button" class="custom-remove">×</button>`;
+    ul.appendChild(li);
+  });
+
+  form.addEventListener('click', (e) => {
+    if (e.target.classList.contains('custom-remove')) { e.target.closest('li').remove(); syncCustomVars(); scheduleSave(); }
   });
 </script>
