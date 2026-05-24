@@ -23,7 +23,19 @@
       "Bash(curl -s -o nul -w \"%{http_code}\" \"http://localhost:4321/editor?hero=1&service=76&footer=3&order=hero,service,footer\")",
       "Bash(curl -s \"http://localhost:4321/editor?hero=1&service=76&footer=3&order=hero,service,footer\")",
       "Bash(curl -s -o nul -w \"%{http_code} -> %{redirect_url}\" \"http://localhost:4321/editor\")",
-      "Bash(grep -oE \"editor-content[^>]*>.{0,200}\")"
+      "Bash(grep -oE \"editor-content[^>]*>.{0,200}\")",
+      "Bash(npx wrangler *)",
+      "Bash(node --test tests/lib/slugify.test.ts)",
+      "Bash(node --experimental-strip-types --test tests/lib/slugify.test.ts)",
+      "Bash(curl -s http://localhost:4321/ -I)",
+      "Bash(curl -s -X POST http://localhost:4321/api/projects -H 'content-type: application/json' -d '{\"name\":\"Test Project\"}')",
+      "Bash(curl -s http://localhost:4321/api/projects)",
+      "Bash(npm test *)",
+      "Bash(git -C \"c:\\\\Users\\\\trous\\\\Desktop\\\\1.0\\\\templateMaking\\\\stitching\" status)",
+      "Bash(git -C \"c:\\\\Users\\\\trous\\\\Desktop\\\\1.0\\\\templateMaking\\\\stitching\" log --oneline -n 20)",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
     ]
   }
 }

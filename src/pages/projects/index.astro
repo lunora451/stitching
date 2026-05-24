@@ -1,0 +1,64 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { env } from 'cloudflare:workers';
+import { DB } from '../../lib/db';
+
+export const prerender = false;
+
+const db = new DB(env.DB);
+const projects = await db.listProjects();
+---
+<Layout>
+  <main style="max-width: 900px; margin: 2rem auto; padding: 1rem;">
+    <h1>Lunora Stitch — Projets</h1>
+
+    <form id="new-project-form" style="display: flex; gap: 0.5rem; margin: 1rem 0;">
+      <input name="name" placeholder="Nom du projet" required style="flex:1; padding:0.5rem;" />
+      <button type="submit">Nouveau projet</button>
+    </form>
+
+    {projects.length === 0 && <p>Aucun projet. Créez-en un ci-dessus.</p>}
+
+    <ul style="list-style:none; padding:0;">
+      {projects.map((p) => (
+        <li style="border:1px solid #ddd; padding:1rem; margin:0.5rem 0; display:flex; justify-content:space-between; align-items:center;">
+          <a href={`/projects/${p.id}`} style="font-weight:bold; text-decoration:none;">{p.name}</a>
+          <span style="opacity:0.6;">{new Date(p.updatedAt).toLocaleString()}</span>
+          <span>
+            <button data-action="rename" data-id={p.id}>Renommer</button>
+            <button data-action="delete" data-id={p.id}>Supprimer</button>
+          </span>
+        </li>
+      ))}
+    </ul>
+  </main>
+
+  <script>
+    const form = document.getElementById('new-project-form') as HTMLFormElement;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = (form.elements.namedItem('name') as HTMLInputElement).value.trim();
+      if (!name) return;
+      const res = await fetch('/api/projects', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name }) });
+      const project = await res.json();
+      location.href = `/projects/${project.id}`;
+    });
+    document.querySelectorAll('button[data-action="delete"]').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const id = (btn as HTMLElement).dataset.id;
+        if (!confirm('Supprimer ce projet et toutes ses pages ?')) return;
+        await fetch(`/api/projects/${id}`, { method: 'DELETE' });
+        location.reload();
+      });
+    });
+    document.querySelectorAll('button[data-action="rename"]').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const id = (btn as HTMLElement).dataset.id;
+        const name = prompt('Nouveau nom ?');
+        if (!name) return;
+        await fetch(`/api/projects/${id}`, { method: 'PATCH', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name }) });
+        location.reload();
+      });
+    });
+  </script>
+</Layout>

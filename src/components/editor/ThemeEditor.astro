@@ -1,0 +1,35 @@
+---
+interface Props {
+  project: { id: string; theme: { primary: string; secondary: string; headerFont: string; bodyFont: string } };
+}
+const { project } = Astro.props;
+const FONTS = ['Oswald', 'Source Sans 3', 'Yellowtail', 'Charter', 'Poppins', 'system-ui'];
+---
+<form id="theme-form" data-project-id={project.id} style="display:grid; grid-template-columns: repeat(4, 1fr); gap:1rem; padding:1rem; border:1px solid #ddd;">
+  <label>Primaire <input type="color" name="primary" value={project.theme.primary} /></label>
+  <label>Secondaire <input type="color" name="secondary" value={project.theme.secondary} /></label>
+  <label>Police header
+    <select name="headerFont">{FONTS.map(f => <option value={f} selected={f === project.theme.headerFont}>{f}</option>)}</select>
+  </label>
+  <label>Police body
+    <select name="bodyFont">{FONTS.map(f => <option value={f} selected={f === project.theme.bodyFont}>{f}</option>)}</select>
+  </label>
+</form>
+
+<script>
+  const form = document.getElementById('theme-form') as HTMLFormElement;
+  const projectId = form.dataset.projectId!;
+  let saveTimer: number;
+  form.addEventListener('change', () => {
+    clearTimeout(saveTimer);
+    saveTimer = window.setTimeout(async () => {
+      const theme = {
+        primary: (form.elements.namedItem('primary') as HTMLInputElement).value,
+        secondary: (form.elements.namedItem('secondary') as HTMLInputElement).value,
+        headerFont: (form.elements.namedItem('headerFont') as HTMLSelectElement).value,
+        bodyFont: (form.elements.namedItem('bodyFont') as HTMLSelectElement).value,
+      };
+      await fetch(`/api/projects/${projectId}`, { method: 'PATCH', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ theme }) });
+    }, 300);
+  });
+</script>

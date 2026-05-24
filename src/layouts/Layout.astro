@@ -7,10 +7,19 @@ import "../components/styles/base/baseDark.css";
 import "../components/styles/burgerMenu.css";
 import "../components/styles/navbarLogo.css";
 import ThemeScript from "../components/darkMode/ThemeScript.astro";
+
+interface Props {
+  title?: string;
+  theme?: { primary: string; secondary: string; headerFont: string; bodyFont: string };
+}
+const { theme } = Astro.props;
+const themeStyle = theme
+  ? `--primary:${theme.primary};--secondary:${theme.secondary};--headerFont:'${theme.headerFont}';--bodyFont:'${theme.bodyFont}';`
+  : '';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" style={themeStyle}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />

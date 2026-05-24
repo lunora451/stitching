@@ -1,0 +1,61 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import ThemeEditor from '../../../components/editor/ThemeEditor.astro';
+import { env } from 'cloudflare:workers';
+import { DB } from '../../../lib/db';
+
+export const prerender = false;
+
+const { projectId } = Astro.params;
+const db = new DB(env.DB);
+const project = await db.getProject(projectId!);
+if (!project) return Astro.redirect('/projects');
+const pages = await db.listPages(project.id);
+---
+<Layout>
+  <main style="max-width: 1100px; margin: 2rem auto; padding: 1rem;">
+    <p><a href="/projects">← Tous les projets</a></p>
+    <h1>{project.name}</h1>
+
+    <h2>Thème</h2>
+    <ThemeEditor project={project} />
+
+    <h2 style="margin-top:2rem;">Pages</h2>
+    <p><a href={`/projects/${project.id}/pages/new`}><button>+ Nouvelle page</button></a></p>
+
+    {pages.length === 0 && <p>Aucune page.</p>}
+    <ul style="list-style:none; padding:0;">
+      {pages.map((p) => (
+        <li style="border:1px solid #ddd; padding:1rem; margin:0.5rem 0; display:flex; justify-content:space-between; align-items:center;">
+          <span><strong>{p.name}</strong> <code>/{p.slug}</code></span>
+          <span>
+            <a href={`/projects/${project.id}/pages/${p.id}/edit`}><button>Éditer</button></a>
+            <button data-action="rename" data-id={p.id}>Renommer</button>
+            <button data-action="delete" data-id={p.id}>Supprimer</button>
+          </span>
+        </li>
+      ))}
+    </ul>
+  </main>
+
+  <script>
+    const projectId = location.pathname.split('/')[2];
+    document.querySelectorAll('button[data-action="delete"]').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        if (!confirm('Supprimer cette page ?')) return;
+        const id = (btn as HTMLElement).dataset.id;
+        await fetch(`/api/projects/${projectId}/pages/${id}`, { method: 'DELETE' });
+        location.reload();
+      });
+    });
+    document.querySelectorAll('button[data-action="rename"]').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const id = (btn as HTMLElement).dataset.id;
+        const name = prompt('Nouveau nom ?');
+        if (!name) return;
+        await fetch(`/api/projects/${projectId}/pages/${id}`, { method: 'PATCH', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name }) });
+        location.reload();
+      });
+    });
+  </script>
+</Layout>

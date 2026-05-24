@@ -6,11 +6,17 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "db:migrate:local": "wrangler d1 migrations apply lunora-stitch-dev --local",
+    "db:migrate:remote": "wrangler d1 migrations apply lunora-stitch-dev --remote",
+    "test": "node --experimental-strip-types --test tests/**/*.test.ts"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^13.5.4",
     "astro": "^6.3.7",
     "sass": "^1.86.3"
+  },
+  "devDependencies": {
+    "wrangler": "^4.94.0"
   }
 }

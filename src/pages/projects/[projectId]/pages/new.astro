@@ -1,0 +1,74 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import { env } from 'cloudflare:workers';
+import { DB } from '../../../../lib/db';
+
+export const prerender = false;
+
+const { projectId } = Astro.params;
+const db = new DB(env.DB);
+const project = await db.getProject(projectId!);
+if (!project) return Astro.redirect('/projects');
+---
+<Layout>
+  <main style="max-width: 900px; margin: 2rem auto; padding: 1rem;">
+    <p><a href={`/projects/${projectId}`}>← Retour au projet</a></p>
+    <h1>Nouvelle page — {project.name}</h1>
+
+    <form id="builder-form">
+      <label>Nom de la page <input name="name" required style="padding:0.5rem;" /></label>
+
+      <h2 style="margin-top: 1.5rem;">Sections (cliquez pour ajouter dans l'ordre)</h2>
+      <ul id="picker" style="list-style:none; padding:0;">
+        {/* TODO: Populate from available layouts */}
+      </ul>
+
+      <h2>Sections sélectionnées</h2>
+      <ol id="selected" style="border:1px dashed #aaa; min-height: 4rem; padding:1rem;"></ol>
+
+      <button type="submit" style="margin-top:1rem; padding:0.75rem 1.5rem;">Ouvrir l'éditeur</button>
+    </form>
+  </main>
+
+  <script>
+    const selected: string[] = [];
+    const selectedEl = document.getElementById('selected')!;
+
+    function render() {
+      selectedEl.innerHTML = '';
+      selected.forEach((id, i) => {
+        const li = document.createElement('li');
+        li.textContent = id;
+        const rm = document.createElement('button');
+        rm.type = 'button';
+        rm.textContent = '×';
+        rm.style.marginLeft = '0.5rem';
+        rm.onclick = () => { selected.splice(i, 1); render(); };
+        li.appendChild(rm);
+        selectedEl.appendChild(li);
+      });
+    }
+
+    document.querySelectorAll<HTMLButtonElement>('#picker button[data-layout]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        selected.push(btn.dataset.layout!);
+        render();
+      });
+    });
+
+    const form = document.getElementById('builder-form') as HTMLFormElement;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = (form.elements.namedItem('name') as HTMLInputElement).value.trim();
+      if (!name || selected.length === 0) { alert('Nom et au moins 1 section requis.'); return; }
+      const projectId = location.pathname.split('/')[2];
+      const res = await fetch(`/api/projects/${projectId}/pages`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ name, layoutIds: selected }),
+      });
+      const page = await res.json();
+      location.href = `/projects/${projectId}/pages/${page.id}/edit`;
+    });
+  </script>
+</Layout>
