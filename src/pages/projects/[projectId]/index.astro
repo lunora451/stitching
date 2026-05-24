@@ -22,6 +22,7 @@ const pages = await db.listPages(project.id);
 
     <div style="margin-top:1rem; display:flex; gap:0.5rem;">
       <a href={`/api/projects/${project.id}/export-md`}><button>Exporter (Markdown)</button></a>
+      <button id="export-zip-btn">Exporter (ZIP HTML)</button>
     </div>
 
     <h2 style="margin-top:2rem;">Pages</h2>
@@ -41,6 +42,74 @@ const pages = await db.listPages(project.id);
       ))}
     </ul>
   </main>
+
+  <script>
+    document.getElementById('export-zip-btn')?.addEventListener('click', async () => {
+      const { default: JSZip } = await import('jszip');
+      const projectId = location.pathname.split('/')[2];
+      const projectRes = await fetch(`/api/projects/${projectId}`).then((r) => r.json()) as { name: string };
+      const pagesRes = await fetch(`/api/projects/${projectId}/pages`).then((r) => r.json()) as Array<{ id: string; slug: string }>;
+      const zip = new JSZip();
+      const slugIndex = new Map(pagesRes.map((p) => [p.id, p.slug]));
+
+      async function renderPageOffline(projId: string, pgId: string): Promise<string> {
+        return new Promise((resolve, reject) => {
+          const iframe = document.createElement('iframe');
+          iframe.style.cssText = 'position:fixed; left:-9999px; width:1280px; height:800px; visibility:hidden;';
+          iframe.src = `/projects/${projId}/pages/${pgId}/render`;
+          iframe.addEventListener('load', () => {
+            const wait = setInterval(() => {
+              if ((iframe.contentDocument?.documentElement as any)?.dataset?.ready === '1') {
+                clearInterval(wait);
+                const html = '<!doctype html>\n' + iframe.contentDocument!.documentElement.outerHTML;
+                document.body.removeChild(iframe);
+                resolve(html);
+              }
+            }, 100);
+            setTimeout(() => { clearInterval(wait); reject(new Error('render timeout: ' + pgId)); }, 10000);
+          });
+          document.body.appendChild(iframe);
+        });
+      }
+
+      for (const p of pagesRes) {
+        let html: string;
+        try { html = await renderPageOffline(projectId, p.id); } catch (e) { console.error(e); continue; }
+        const filename = p.slug === pagesRes[0].slug ? 'index.html' : `${p.slug}.html`;
+        const rewritten = html.replace(/\/projects\/[a-f0-9-]+\/pages\/([a-f0-9-]+)\/edit/g, (_, id) => `${slugIndex.get(id) ?? id}.html`);
+        zip.file(filename, rewritten);
+      }
+
+      const imageUrls = new Set<string>();
+      for (const p of pagesRes) {
+        try {
+          const fullPage = await fetch(`/api/projects/${projectId}/pages/${p.id}`).then((r) => r.json()) as { page: any; sections: Array<{ content: { imageOverrides?: Record<string,string> } }> };
+          for (const s of fullPage.sections) {
+            for (const url of Object.values(s.content.imageOverrides ?? {})) imageUrls.add(url);
+          }
+        } catch {}
+      }
+
+      for (const url of imageUrls) {
+        try {
+          const blob = await fetch(url).then((r) => r.blob());
+          const localPath = `assets/images/${url.split('/').pop()}`;
+          zip.file(localPath, blob);
+          const names = Object.keys(zip.files).filter((n) => n.endsWith('.html'));
+          for (const name of names) {
+            const f = await zip.file(name)!.async('string');
+            zip.file(name, f.replaceAll(url, localPath));
+          }
+        } catch {}
+      }
+
+      const blob = await zip.generateAsync({ type: 'blob' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `${projectRes.name.replace(/[^a-z0-9-]+/gi, '_')}.zip`;
+      a.click();
+    });
+  </script>
 
   <script>
     const projectId = location.pathname.split('/')[2];

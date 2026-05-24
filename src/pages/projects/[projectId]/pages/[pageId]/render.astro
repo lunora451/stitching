@@ -1,0 +1,55 @@
+---
+import Layout from '../../../../../layouts/Layout.astro';
+import EditorPreview from '../../../../../components/editor/EditorPreview.astro';
+import { env } from 'cloudflare:workers';
+import { DB } from '../../../../../lib/db';
+
+export const prerender = false;
+
+const { projectId, pageId } = Astro.params;
+const db = new DB(env.DB);
+const project = await db.getProject(projectId!);
+const page = await db.getPage(pageId!);
+if (!project || !page) return new Response('not found', { status: 404 });
+const sections = await db.listSections(page.id);
+
+const previewSelection = sections.map((s) => {
+  const i = s.layoutId.lastIndexOf('-');
+  return {
+    componentType: s.layoutId.slice(0, i),
+    variantValue: s.layoutId.slice(i + 1),
+    sectionId: s.id,
+    content: s.content,
+  };
+});
+---
+<Layout theme={project.theme}>
+  <div id="export-root" data-project-id={project.id} data-page-id={page.id}>
+    <EditorPreview selection={previewSelection} />
+  </div>
+  <script define:vars={{ theme: project.theme, sectionsJson: previewSelection }}>
+    window.__renderBoot = { theme, sectionsJson };
+  </script>
+  <script>
+    import { applyOverridesToDOM, annotateSection } from '../../../../../lib/overrides';
+    const { theme, sectionsJson } = (window as any).__renderBoot;
+    const root = document.getElementById('export-root')!;
+    root.querySelectorAll<HTMLElement>('.editable-component').forEach((el) => {
+      annotateSection(el, el.dataset.componentType!, el.dataset.variantValue!);
+    });
+    const merged = {
+      textOverrides: {} as Record<string,string>,
+      imageOverrides: {} as Record<string,string>,
+      localColors: {} as Record<string,any>,
+      buttonOverrides: {} as Record<string,string>,
+    };
+    for (const s of sectionsJson) {
+      Object.assign(merged.textOverrides, s.content?.textOverrides ?? {});
+      Object.assign(merged.imageOverrides, s.content?.imageOverrides ?? {});
+      Object.assign(merged.localColors, s.content?.localColors ?? {});
+      Object.assign(merged.buttonOverrides, s.content?.buttonOverrides ?? {});
+    }
+    applyOverridesToDOM(root, merged, theme);
+    document.documentElement.dataset.ready = '1';
+  </script>
+</Layout>
