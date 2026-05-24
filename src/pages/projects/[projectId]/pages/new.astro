@@ -1,5 +1,8 @@
 ---
 import Layout from '../../../../layouts/Layout.astro';
+import Hero from '../../../../layouts/show/Hero.astro';
+import Services from '../../../../layouts/show/Services.astro';
+import Footer from '../../../../layouts/show/Footer.astro';
 import { env } from 'cloudflare:workers';
 import { DB } from '../../../../lib/db';
 
@@ -10,65 +13,520 @@ const db = new DB(env.DB);
 const project = await db.getProject(projectId!);
 if (!project) return Astro.redirect('/projects');
 ---
+
 <Layout>
-  <main style="max-width: 900px; margin: 2rem auto; padding: 1rem;">
-    <p><a href={`/projects/${projectId}`}>← Retour au projet</a></p>
-    <h1>Nouvelle page — {project.name}</h1>
+  <div class="c-dunno">
+    <div class="c-menu">
+      <div class="hider">&squf;</div>
 
-    <form id="builder-form">
-      <label>Nom de la page <input name="name" required style="padding:0.5rem;" /></label>
+      <p style="margin: 0 0 0.5rem 0; font-weight: bold;">
+        <a href={`/projects/${projectId}`} style="color: inherit;">← {project.name}</a>
+      </p>
 
-      <h2 style="margin-top: 1.5rem;">Sections (cliquez pour ajouter dans l'ordre)</h2>
-      <ul id="picker" style="list-style:none; padding:0;">
-        {/* TODO: Populate from available layouts */}
-      </ul>
+      <input id="page-name-input" placeholder="Nom de la page" required
+             style="padding: 0.4rem; margin-bottom: 0.5rem; width: 100%;" />
 
-      <h2>Sections sélectionnées</h2>
-      <ol id="selected" style="border:1px dashed #aaa; min-height: 4rem; padding:1rem;"></ol>
+      <div class="select-group">
+        <input type="number" class="order-input" data-target="hero-component" value="1" min="1" max="3" />
+        <select name="heroSection" id="template-select-hero">
+          <option value="none">Hero</option>
+          <optgroup label="centered">
+            <option value="1">hero 1</option>
+            <option value="2">hero 2</option>
+            <option value="3">hero 3</option>
+            <option value="4">hero 4</option>
+            <option value="5">hero 5</option>
+            <option value="6">hero 6</option>
+            <option value="7">hero 7</option>
+            <option value="8">hero 8</option>
+            <option value="9">hero 9</option>
+            <option value="10">hero 10</option>
+            <option value="11">hero 11</option>
+            <option value="12">hero 12</option>
+            <option value="13">hero 13</option>
+            <option value="14">hero 14</option>
+            <option value="15">hero 15</option>
+          </optgroup>
+          <optgroup label="landing&services">
+            <option value="16">hero 16</option>
+            <option value="17">hero 17</option>
+            <option value="18">hero 18</option>
+            <option value="19">hero 19</option>
+            <option value="20">hero 20</option>
+            <option value="21">hero 21</option>
+            <option value="22">hero 22</option>
+            <option value="23">hero 23</option>
+            <option value="24">hero 24</option>
+            <option value="25">hero 25</option>
+            <option value="26">hero 26</option>
+            <option value="27">hero 27</option>
+            <option value="28">hero 28</option>
+            <option value="29">hero 29</option>
+            <option value="30">hero 30</option>
+            <option value="31">hero 31</option>
+            <option value="32">hero 32</option>
+            <option value="33">hero 33</option>
+            <option value="34">hero 34</option>
+            <option value="35">hero 35</option>
+            <option value="36">hero 36</option>
+            <option value="37">hero 37</option>
+            <option value="38">hero 38</option>
+            <option value="39">hero 39</option>
+            <option value="40">hero 40</option>
+            <option value="41">hero 41</option>
+            <option value="42">hero 42</option>
+            <option value="43">hero 43</option>
+            <option value="44">hero 44</option>
+            <option value="45">hero 45</option>
+            <option value="46">hero 46</option>
+            <option value="47">hero 47</option>
+            <option value="48">hero 48</option>
+            <option value="49">hero 49</option>
+            <option value="50">hero 50</option>
+            <option value="51">hero 51</option>
+            <option value="52">hero 52</option>
+            <option value="53">hero 53</option>
+            <option value="54">hero 54</option>
+            <option value="55">hero 55</option>
+            <option value="56">hero 56</option>
+            <option value="57">hero 57</option>
+            <option value="58">hero 58</option>
+            <option value="59">hero 59</option>
+            <option value="60">hero 60</option>
+            <option value="61">hero 61</option>
+            <option value="62">hero 62</option>
+            <option value="63">hero 63</option>
+          </optgroup>
+          <optgroup label="leftaligned">
+            <option value="64">hero 64</option>
+            <option value="65">hero 65</option>
+            <option value="66">hero 66</option>
+            <option value="67">hero 67</option>
+            <option value="68">hero 68</option>
+            <option value="69">hero 69</option>
+            <option value="70">hero 70</option>
+            <option value="71">hero 71</option>
+            <option value="72">hero 72</option>
+            <option value="73">hero 73</option>
+            <option value="74">hero 74</option>
+            <option value="75">hero 75</option>
+            <option value="76">hero 76</option>
+            <option value="77">hero 77</option>
+            <option value="78">hero 78</option>
+            <option value="79">hero 79</option>
+            <option value="80">hero 80</option>
+            <option value="81">hero 81</option>
+            <option value="82">hero 82</option>
+            <option value="83">hero 83</option>
+            <option value="84">hero 84</option>
+            <option value="85">hero 85</option>
+            <option value="86">hero 86</option>
+            <option value="87">hero 87</option>
+            <option value="88">hero 88</option>
+            <option value="89">hero 89</option>
+            <option value="90">hero 90</option>
+            <option value="91">hero 91</option>
+            <option value="92">hero 92</option>
+            <option value="93">hero 93</option>
+            <option value="94">hero 94</option>
+            <option value="95">hero 95</option>
+            <option value="96">hero 96</option>
+            <option value="97">hero 97</option>
+            <option value="98">hero 98</option>
+            <option value="99">hero 99</option>
+          </optgroup>
+          <optgroup label="rightaligned">
+            <option value="100">hero 100</option>
+            <option value="101">hero 101</option>
+            <option value="102">hero 102</option>
+            <option value="103">hero 103</option>
+            <option value="104">hero 104</option>
+            <option value="105">hero 105</option>
+            <option value="106">hero 106</option>
+            <option value="107">hero 107</option>
+            <option value="108">hero 108</option>
+            <option value="109">hero 109</option>
+            <option value="110">hero 110</option>
+            <option value="111">hero 111</option>
+            <option value="112">hero 112</option>
+            <option value="113">hero 113</option>
+            <option value="114">hero 114</option>
+            <option value="115">hero 115</option>
+            <option value="116">hero 116</option>
+            <option value="117">hero 117</option>
+            <option value="118">hero 118</option>
+            <option value="119">hero 119</option>
+            <option value="120">hero 120</option>
+            <option value="121">hero 121</option>
+            <option value="122">hero 122</option>
+            <option value="123">hero 123</option>
+          </optgroup>
+        </select>
+      </div>
 
-      <button type="submit" style="margin-top:1rem; padding:0.75rem 1.5rem;">Ouvrir l'éditeur</button>
-    </form>
-  </main>
+      <div class="select-group">
+        <input type="number" class="order-input" data-target="service-component" value="2" min="1" max="3" />
+        <select name="service" id="template-select-service">
+          <option value="none">Service</option>
+          <optgroup label="3card">
+            <option value="1">Service 1</option>
+            <option value="2">Service 2</option>
+            <option value="3">Service 3</option>
+            <option value="4">Service 4</option>
+            <option value="5">Service 5</option>
+            <option value="6">Service 6</option>
+            <option value="7">Service 7</option>
+            <option value="8">Service 8</option>
+            <option value="9">Service 9</option>
+            <option value="10">Service 10</option>
+            <option value="11">Service 11</option>
+            <option value="12">Service 12</option>
+            <option value="13">Service 13</option>
+            <option value="14">Service 14</option>
+            <option value="15">Service 15</option>
+            <option value="16">Service 16</option>
+            <option value="17">Service 17</option>
+            <option value="18">Service 18</option>
+            <option value="19">Service 19</option>
+            <option value="20">Service 20</option>
+            <option value="21">Service 21</option>
+            <option value="22">Service 22</option>
+            <option value="23">Service 23</option>
+            <option value="24">Service 24</option>
+            <option value="25">Service 25</option>
+            <option value="26">Service 26</option>
+            <option value="27">Service 27</option>
+            <option value="28">Service 28</option>
+            <option value="29">Service 29</option>
+            <option value="30">Service 30</option>
+            <option value="31">Service 31</option>
+            <option value="32">Service 32</option>
+            <option value="33">Service 33</option>
+            <option value="34">Service 34</option>
+            <option value="35">Service 35</option>
+            <option value="36">Service 36</option>
+            <option value="37">Service 37</option>
+            <option value="38">Service 38</option>
+            <option value="39">Service 39</option>
+            <option value="40">Service 40</option>
+            <option value="41">Service 41</option>
+            <option value="42">Service 42</option>
+            <option value="43">Service 43</option>
+            <option value="44">Service 44</option>
+            <option value="45">Service 45</option>
+            <option value="46">Service 46</option>
+            <option value="47">Service 47</option>
+            <option value="48">Service 48</option>
+            <option value="49">Service 49</option>
+            <option value="50">Service 50</option>
+            <option value="51">Service 51</option>
+            <option value="52">Service 52</option>
+            <option value="53">Service 53</option>
+            <option value="54">Service 54</option>
+          </optgroup>
+          <optgroup label="4card">
+            <option value="55">Service 55</option>
+            <option value="56">Service 56</option>
+            <option value="57">Service 57</option>
+            <option value="58">Service 58</option>
+            <option value="59">Service 59</option>
+            <option value="60">Service 60</option>
+            <option value="61">Service 61</option>
+            <option value="62">Service 62</option>
+            <option value="63">Service 63</option>
+            <option value="64">Service 64</option>
+            <option value="65">Service 65</option>
+            <option value="66">Service 66</option>
+            <option value="67">Service 67</option>
+            <option value="68">Service 68</option>
+            <option value="69">Service 69</option>
+            <option value="70">Service 70</option>
+            <option value="71">Service 71</option>
+            <option value="72">Service 72</option>
+            <option value="73">Service 73</option>
+            <option value="74">Service 74</option>
+            <option value="75">Service 75</option>
+            <option value="76">Service 76</option>
+            <option value="77">Service 77</option>
+            <option value="78">Service 78</option>
+            <option value="79">Service 79</option>
+            <option value="80">Service 80</option>
+            <option value="81">Service 81</option>
+            <option value="82">Service 82</option>
+            <option value="83">Service 83</option>
+            <option value="84">Service 84</option>
+            <option value="85">Service 85</option>
+            <option value="86">Service 86</option>
+            <option value="87">Service 87</option>
+            <option value="88">Service 88</option>
+            <option value="89">Service 89</option>
+            <option value="90">Service 90</option>
+            <option value="91">Service 91</option>
+            <option value="92">Service 92</option>
+            <option value="93">Service 93</option>
+            <option value="94">Service 94</option>
+            <option value="95">Service 95</option>
+            <option value="96">Service 96</option>
+            <option value="97">Service 97</option>
+            <option value="98">Service 98</option>
+            <option value="99">Service 99</option>
+            <option value="100">Service 100</option>
+            <option value="101">Service 101</option>
+            <option value="102">Service 102</option>
+            <option value="103">Service 103</option>
+            <option value="104">Service 104</option>
+            <option value="105">Service 105</option>
+            <option value="106">Service 106</option>
+            <option value="107">Service 107</option>
+            <option value="108">Service 108</option>
+            <option value="109">Service 109</option>
+            <option value="110">Service 110</option>
+            <option value="111">Service 111</option>
+            <option value="112">Service 112</option>
+            <option value="113">Service 113</option>
+            <option value="114">Service 114</option>
+            <option value="115">Service 115</option>
+            <option value="116">Service 116</option>
+            <option value="117">Service 117</option>
+            <option value="118">Service 118</option>
+            <option value="119">Service 119</option>
+            <option value="170">Service 170</option>
+          </optgroup>
+          <optgroup label="5card">
+            <option value="120">Service 120</option>
+            <option value="121">Service 121</option>
+            <option value="122">Service 122</option>
+            <option value="123">Service 123</option>
+            <option value="124">Service 124</option>
+            <option value="125">Service 125</option>
+            <option value="126">Service 126</option>
+            <option value="127">Service 127</option>
+            <option value="128">Service 128</option>
+          </optgroup>
+          <optgroup label="combo">
+            <option value="129">Service 129</option>
+            <option value="130">Service 130</option>
+            <option value="131">Service 131</option>
+            <option value="132">Service 132</option>
+            <option value="133">Service 133</option>
+            <option value="134">Service 134</option>
+            <option value="135">Service 135</option>
+            <option value="136">Service 136</option>
+            <option value="137">Service 137</option>
+            <option value="138">Service 138</option>
+          </optgroup>
+          <optgroup label="dual">
+            <option value="139">Service 139</option>
+            <option value="140">Service 140</option>
+            <option value="141">Service 141</option>
+            <option value="142">Service 142</option>
+            <option value="143">Service 143</option>
+            <option value="144">Service 144</option>
+            <option value="145">Service 145</option>
+            <option value="146">Service 146</option>
+            <option value="147">Service 147</option>
+            <option value="148">Service 148</option>
+            <option value="149">Service 149</option>
+            <option value="150">Service 150</option>
+            <option value="151">Service 151</option>
+            <option value="152">Service 152</option>
+            <option value="153">Service 153</option>
+            <option value="154">Service 154</option>
+            <option value="155">Service 155</option>
+            <option value="156">Service 156</option>
+            <option value="157">Service 157</option>
+            <option value="158">Service 158</option>
+            <option value="159">Service 159</option>
+            <option value="160">Service 160</option>
+            <option value="161">Service 161</option>
+            <option value="162">Service 162</option>
+            <option value="163">Service 163</option>
+            <option value="164">Service 164</option>
+            <option value="165">Service 165</option>
+            <option value="166">Service 166</option>
+            <option value="167">Service 167</option>
+            <option value="168">Service 168</option>
+            <option value="169">Service 169</option>
+          </optgroup>
+        </select>
+      </div>
 
-  <script>
-    const selected: string[] = [];
-    const selectedEl = document.getElementById('selected')!;
+      <div class="select-group">
+        <input type="number" class="order-input" data-target="footer-component" value="3" min="1" max="3" />
+        <select name="footer" id="template-select-footer">
+          <option value="none">Footer</option>
+          <option value="1">footer 1</option>
+          <option value="2">footer 2</option>
+          <option value="3">footer 3</option>
+          <option value="4">footer 4</option>
+          <option value="5">footer 5</option>
+          <option value="6">footer 6</option>
+          <option value="7">footer 7</option>
+          <option value="8">footer 8</option>
+          <option value="9">footer 9</option>
+          <option value="10">footer 10</option>
+          <option value="11">footer 11</option>
+          <option value="12">footer 12</option>
+          <option value="13">footer 13</option>
+          <option value="14">footer 14</option>
+          <option value="15">footer 15</option>
+          <option value="16">footer 16</option>
+          <option value="17">footer 17</option>
+          <option value="18">footer 18</option>
+          <option value="19">footer 19</option>
+          <option value="20">footer 20</option>
+          <option value="21">footer 21</option>
+          <option value="22">footer 22</option>
+          <option value="23">footer 23</option>
+          <option value="24">footer 24</option>
+          <option value="25">footer 25</option>
+          <option value="26">footer 26</option>
+          <option value="27">footer 27</option>
+        </select>
+      </div>
 
-    function render() {
-      selectedEl.innerHTML = '';
-      selected.forEach((id, i) => {
-        const li = document.createElement('li');
-        li.textContent = id;
-        const rm = document.createElement('button');
-        rm.type = 'button';
-        rm.textContent = '×';
-        rm.style.marginLeft = '0.5rem';
-        rm.onclick = () => { selected.splice(i, 1); render(); };
-        li.appendChild(rm);
-        selectedEl.appendChild(li);
-      });
+      <button id="generate-preview" class="preview-button" style="margin-top: 0.5rem; padding: 0.5rem 1rem;">Ouvrir l'éditeur</button>
+    </div>
+
+    <div class="c-content">
+      <div id="hero-component" class="component-wrapper" style="order: 1;"><Hero /></div>
+      <div id="service-component" class="component-wrapper" style="order: 2;"><Services /></div>
+      <div id="footer-component" class="component-wrapper" style="order: 3;"><Footer /></div>
+    </div>
+  </div>
+</Layout>
+
+<style lang="scss">
+  .c-dunno {
+    width: 100%;
+    overflow-x: hidden;
+
+    .c-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #d6a99d;
+      padding: 0.9rem;
+      display: flex;
+      gap: 0.3rem;
+      z-index: 999999;
+      flex-direction: column;
+      transform: translateX(0);
+      transition: transform 0.4s;
+
+      &.hide {
+        transform: translateX(-100%);
+      }
+
+      .select-group {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .order-input {
+          width: 50px;
+          padding: 0;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          text-align: center;
+          font-size: 0.9rem;
+        }
+      }
+
+      .hider {
+        position: absolute;
+        transform: translate(0, -50%);
+        top: 50%;
+        left: 100%;
+        font-size: 1.5rem;
+        padding-inline: 0.3rem;
+        border-top-right-radius: 0.3rem;
+        border-bottom-right-radius: 0.3rem;
+        background: #d6a99d;
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
 
-    document.querySelectorAll<HTMLButtonElement>('#picker button[data-layout]').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        selected.push(btn.dataset.layout!);
-        render();
-      });
-    });
+    .c-content {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0;
+      width: 100%;
+      overflow-x: hidden;
 
-    const form = document.getElementById('builder-form') as HTMLFormElement;
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const name = (form.elements.namedItem('name') as HTMLInputElement).value.trim();
-      if (!name || selected.length === 0) { alert('Nom et au moins 1 section requis.'); return; }
-      const projectId = location.pathname.split('/')[2];
-      const res = await fetch(`/api/projects/${projectId}/pages`, {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ name, layoutIds: selected }),
-      });
-      const page = await res.json();
-      location.href = `/projects/${projectId}/pages/${page.id}/edit`;
+      .component-wrapper {
+        width: 100%;
+        overflow-x: hidden;
+
+        > * {
+          max-width: 100%;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  select {
+    padding: 0;
+  }
+</style>
+
+<script>
+  const tickerMenu = document.querySelector('.hider')!;
+  const menu = document.querySelector('.c-menu')!;
+  tickerMenu.addEventListener('click', () => menu.classList.toggle('hide'));
+
+  const orderInputs = document.querySelectorAll<HTMLInputElement>('.order-input');
+  orderInputs.forEach((input) => {
+    const apply = () => {
+      const targetId = input.dataset.target!;
+      const t = document.getElementById(targetId);
+      if (t) t.style.order = input.value;
+    };
+    input.addEventListener('change', apply);
+    input.addEventListener('input', apply);
+  });
+
+  const submitBtn = document.getElementById('generate-preview')!;
+  submitBtn.addEventListener('click', async () => {
+    const pageNameEl = document.getElementById('page-name-input') as HTMLInputElement;
+    const name = pageNameEl.value.trim();
+    if (!name) { alert('Nom de la page requis.'); pageNameEl.focus(); return; }
+
+    const TYPE_TO_PREFIX: Record<string, string> = {
+      heroSection: 'heroSection',
+      service: 'service',
+      footer: 'footer',
+    };
+
+    const selected: Array<{ layoutId: string; order: number }> = [];
+    document.querySelectorAll<HTMLDivElement>('.select-group').forEach((group) => {
+      const select = group.querySelector('select')!;
+      const orderInput = group.querySelector<HTMLInputElement>('.order-input')!;
+      if (select.value !== 'none' && TYPE_TO_PREFIX[select.name]) {
+        selected.push({
+          layoutId: `${TYPE_TO_PREFIX[select.name]}-${select.value}`,
+          order: parseInt(orderInput.value, 10),
+        });
+      }
     });
-  </script>
-</Layout>
+    if (selected.length === 0) { alert('Sélectionnez au moins une section.'); return; }
+    selected.sort((a, b) => a.order - b.order);
+
+    const projectId = location.pathname.split('/')[2];
+    const res = await fetch(`/api/projects/${projectId}/pages`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ name, layoutIds: selected.map((s) => s.layoutId) }),
+    });
+    if (!res.ok) { alert('Création de page échouée'); return; }
+    const page = await res.json();
+    location.href = `/projects/${projectId}/pages/${page.id}/edit`;
+  });
+</script>
