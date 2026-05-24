@@ -1,16 +1,18 @@
 ---
-import { HERO_VARIANTS } from "./heroRegistry";
-import { SERVICE_VARIANTS } from "./serviceRegistry";
-import { FOOTER_VARIANTS } from "./footerRegistry";
+import { HERO_VARIANTS } from './heroRegistry';
+import { SERVICE_VARIANTS } from './serviceRegistry';
+import { FOOTER_VARIANTS } from './footerRegistry';
+import type { OverridesPayload } from '../../lib/types';
 
-export interface SelectionItem {
-  type: "heroSection" | "service" | "footer";
-  value: string;
-  order: number;
+export interface PreviewSection {
+  componentType: string;
+  variantValue: string;
+  sectionId: string;
+  content: OverridesPayload;
 }
 
 interface Props {
-  selection: SelectionItem[];
+  selection: PreviewSection[];
 }
 
 const { selection } = Astro.props;
@@ -22,52 +24,51 @@ const REGISTRIES: Record<string, Record<string, any>> = {
 };
 
 const WRAPPER_META: Record<string, { attr: string; cls: string }> = {
-  heroSection: { attr: "data-value-hero", cls: "c-hero" },
-  service: { attr: "data-value-service", cls: "c-service" },
-  footer: { attr: "data-value-footer", cls: "c-footer" },
+  heroSection: { attr: 'data-value-hero', cls: 'c-hero' },
+  service: { attr: 'data-value-service', cls: 'c-service' },
+  footer: { attr: 'data-value-footer', cls: 'c-footer' },
 };
 
 type Resolved = {
   Comp: any;
-  type: string;
-  value: string;
-  order: number;
+  componentType: string;
+  variantValue: string;
+  sectionId: string;
   attr: string;
   cls: string;
   variantAttrs: Record<string, string>;
 };
 
 const items: Resolved[] = [];
-for (const sel of [...selection].sort((a, b) => a.order - b.order)) {
-  const reg = REGISTRIES[sel.type];
-  const meta = WRAPPER_META[sel.type];
+for (const s of selection) {
+  const reg = REGISTRIES[s.componentType];
+  const meta = WRAPPER_META[s.componentType];
   if (!reg || !meta) continue;
-  const Comp = reg[sel.value];
+  const Comp = reg[s.variantValue];
   if (!Comp) continue;
   items.push({
     Comp,
-    type: sel.type,
-    value: sel.value,
-    order: sel.order,
+    componentType: s.componentType,
+    variantValue: s.variantValue,
+    sectionId: s.sectionId,
     attr: meta.attr,
     cls: meta.cls,
-    variantAttrs: { [meta.attr]: sel.value },
+    variantAttrs: { [meta.attr]: s.variantValue },
   });
 }
 ---
 
 {items.map((item) => {
   const Comp = item.Comp;
-  const styleAttr = "order: " + item.order;
-  const innerCls = item.cls + " active";
+  const innerCls = item.cls + ' active';
   return (
     <div
       class="editable-component"
-      data-component-type={item.type}
+      data-section-id={item.sectionId}
+      data-component-type={item.componentType}
       data-variant-attr={item.attr}
       data-variant-class={item.cls}
-      data-variant-value={item.value}
-      style={styleAttr}
+      data-variant-value={item.variantValue}
     >
       <div class={innerCls} {...item.variantAttrs}>
         <Comp />

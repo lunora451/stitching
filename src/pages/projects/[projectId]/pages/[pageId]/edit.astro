@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../../../layouts/Layout.astro';
+import EditorPreview from '../../../../../components/editor/EditorPreview.astro';
 import { env } from 'cloudflare:workers';
 import { DB } from '../../../../../lib/db';
 
@@ -12,74 +13,147 @@ const page = await db.getPage(pageId!);
 if (!project || !page) return Astro.redirect('/projects');
 const sections = await db.listSections(page.id);
 
-const renderable = sections.map((s) => ({
-  section: s,
-}));
+function splitLayoutId(id: string): [string, string] {
+  const i = id.lastIndexOf('-');
+  return [id.slice(0, i), id.slice(i + 1)];
+}
+
+const previewSelection = sections.map((s) => {
+  const [componentType, variantValue] = splitLayoutId(s.layoutId);
+  return { componentType, variantValue, sectionId: s.id, content: s.content };
+});
 ---
+
 <Layout theme={project.theme}>
-  <div style="display:grid; grid-template-columns: 1fr 360px; min-height:100vh;">
-    <main id="preview">
-      {/* TODO: Implement dynamic component rendering */}
+  <div id="editor-root" data-project-id={project.id} data-page-id={page.id}>
+    <header style="position:fixed; top:0; left:0; right:0; background:#222; color:#fff; padding:0.5rem 1rem; display:flex; gap:0.5rem; align-items:center; z-index:99999; flex-wrap:wrap;">
+      <a href={`/projects/${project.id}`} style="color:inherit;">← Retour</a>
+      <strong style="margin-right:auto;">{page.name}</strong>
+      <button id="toggle-text-edit" data-mode="text" style="padding:0.3rem 0.7rem;">Texte</button>
+      <button id="toggle-image-edit" data-mode="image" style="padding:0.3rem 0.7rem;">Image</button>
+      <button id="toggle-color-edit" data-mode="color" style="padding:0.3rem 0.7rem;">Couleurs</button>
+      <button id="toggle-font-edit" data-mode="font" style="padding:0.3rem 0.7rem;">Polices</button>
+      <button id="toggle-button-edit" data-mode="button" style="padding:0.3rem 0.7rem;">Boutons</button>
+      <button id="save-btn" style="background:#27ae60; color:#fff; padding:0.3rem 0.8rem;">Sauvegarder</button>
+      <span id="dirty-indicator" hidden style="color:#f1c40f;">● non sauvegardé</span>
+    </header>
+
+    <main id="editor-preview" style="padding-top: 3.5rem;">
+      <EditorPreview selection={previewSelection} />
     </main>
-    <aside id="editor" style="border-left:1px solid #ddd; padding:1rem; position:sticky; top:0; height:100vh; overflow:auto;">
-      <p><a href={`/projects/${project.id}`}>← Retour au projet</a></p>
-      <h2>{page.name}</h2>
-      <button id="save-btn" style="padding:0.75rem 1.5rem;">Sauvegarder</button>
-      <span id="dirty-indicator" hidden style="color:#c00; margin-left:0.5rem;">● modifications non sauvegardées</span>
-      <hr />
-      {/* TODO: Implement section editor UI */}
-    </aside>
   </div>
 
+  <script define:vars={{ initialTheme: project.theme, initialSelection: previewSelection, projectIdStr: project.id, pageIdStr: page.id }}>
+    window.__editorBoot = { initialTheme, initialSelection, projectIdStr, pageIdStr };
+  </script>
   <script>
-    const projectId = location.pathname.split('/')[2];
-    const pageId = location.pathname.split('/')[4];
+    import { applyOverridesToDOM, extractOverridesFromDOM, annotateSection } from '../../../../../lib/overrides';
+    import { mountTextEditMode, mountImageEditMode, mountColorEditMode, mountFontEditMode, mountButtonEditMode } from '../../../../../components/editor/EditMode';
+    import type { ProjectTheme } from '../../../../../lib/types';
+
+    const { initialTheme, initialSelection, projectIdStr, pageIdStr } = (window as any).__editorBoot;
+
+    const root = document.getElementById('editor-preview')!;
+    let theme: ProjectTheme = initialTheme;
     let dirty = false;
     const dirtyEl = document.getElementById('dirty-indicator')!;
     const setDirty = (v: boolean) => { dirty = v; dirtyEl.hidden = !v; };
 
-    function collect() {
-      const updates: Array<{ id: string; content: Record<string, string> }> = [];
-      document.querySelectorAll<HTMLElement>('.lunora-edit-panel').forEach((panel) => {
-        const id = panel.dataset.sectionId!;
-        const content: Record<string, string> = {};
-        panel.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('[data-field]').forEach((el) => {
-          content[el.dataset.field!] = el.value;
-        });
-        updates.push({ id, content });
-      });
-      return updates;
-    }
-
-    function applyToPreview(sectionId: string, field: string, value: string) {
-      const sec = document.querySelector(`.lunora-section[data-section-id="${sectionId}"]`);
-      if (!sec) return;
-      const map: Record<string, string> = { title: '.cs-title', subtitle: '.cs-text', ctaText: '.cs-button-solid', topper: '.cs-topper' };
-      const sel = map[field];
-      if (sel) { const el = sec.querySelector(sel); if (el) el.textContent = value; }
-    }
-
-    document.querySelectorAll<HTMLElement>('.lunora-edit-panel').forEach((panel) => {
-      const id = panel.dataset.sectionId!;
-      panel.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('[data-field]').forEach((el) => {
-        el.addEventListener('input', () => {
-          setDirty(true);
-          applyToPreview(id, el.dataset.field!, el.value);
-        });
-      });
+    // Annotate each section with edit-ids, then replay saved overrides
+    document.querySelectorAll<HTMLElement>('#editor-preview .editable-component').forEach((section) => {
+      const type = section.dataset.componentType!;
+      const value = section.dataset.variantValue!;
+      annotateSection(section, type, value);
     });
 
-    document.getElementById('save-btn')!.addEventListener('click', async () => {
-      const res = await fetch(`/api/projects/${projectId}/pages/${pageId}`, {
-        method: 'PATCH',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ sections: collect() }),
+    const merged = { textOverrides: {} as Record<string,string>, imageOverrides: {} as Record<string,string>, localColors: {} as Record<string,any>, buttonOverrides: {} as Record<string,string> };
+    for (const s of initialSelection) {
+      Object.assign(merged.textOverrides, s.content?.textOverrides ?? {});
+      Object.assign(merged.imageOverrides, s.content?.imageOverrides ?? {});
+      Object.assign(merged.localColors, s.content?.localColors ?? {});
+      Object.assign(merged.buttonOverrides, s.content?.buttonOverrides ?? {});
+    }
+    applyOverridesToDOM(root, merged, theme);
+
+    // Wire mode toggles
+    const cleanups = new Map<string, () => void>();
+    const onChange = () => setDirty(true);
+    const onThemeChange = (next: ProjectTheme) => { theme = next; setDirty(true); };
+
+    const MODES: Record<string, () => () => void> = {
+      text:   () => mountTextEditMode({ scope: root, onChange }),
+      image:  () => mountImageEditMode({ scope: root, onChange }),
+      color:  () => mountColorEditMode({ scope: root, onChange, theme, onThemeChange }),
+      font:   () => mountFontEditMode({ scope: root, onChange, theme, onThemeChange }),
+      button: () => mountButtonEditMode({ scope: root, onChange }),
+    };
+
+    for (const mode of Object.keys(MODES)) {
+      const btn = document.querySelector<HTMLButtonElement>(`[data-mode="${mode}"]`)!;
+      btn.addEventListener('click', () => {
+        if (cleanups.has(mode)) {
+          cleanups.get(mode)!();
+          cleanups.delete(mode);
+          btn.classList.remove('active');
+          return;
+        }
+        // Turn off other modes
+        for (const [m, c] of cleanups.entries()) {
+          c();
+          cleanups.delete(m);
+          document.querySelector<HTMLButtonElement>(`[data-mode="${m}"]`)?.classList.remove('active');
+        }
+        cleanups.set(mode, MODES[mode]());
+        btn.classList.add('active');
       });
-      if (res.ok) setDirty(false); else alert('Erreur de sauvegarde');
+    }
+
+    // Save handler
+    document.getElementById('save-btn')!.addEventListener('click', async () => {
+      // Flush active modes
+      for (const c of cleanups.values()) c();
+      cleanups.clear();
+      document.querySelectorAll<HTMLButtonElement>('[data-mode]').forEach((b) => b.classList.remove('active'));
+
+      const all = extractOverridesFromDOM(root);
+
+      // Split overrides per section by edit-id prefix
+      const perSection = new Map<string, typeof all>();
+      for (const s of initialSelection) {
+        const prefix = `${s.componentType}-${s.variantValue}-`;
+        const payload = { textOverrides: {} as Record<string,string>, imageOverrides: {} as Record<string,string>, localColors: {} as Record<string,any>, buttonOverrides: {} as Record<string,string> };
+        for (const [id, v] of Object.entries(all.textOverrides)) if (id.startsWith(prefix)) payload.textOverrides[id] = v;
+        for (const [id, v] of Object.entries(all.imageOverrides)) if (id.startsWith(prefix)) payload.imageOverrides[id] = v;
+        for (const [id, v] of Object.entries(all.localColors)) if (id.startsWith(prefix)) (payload.localColors as any)[id] = v;
+        for (const [id, v] of Object.entries(all.buttonOverrides)) if (id.startsWith(prefix)) payload.buttonOverrides[id] = v;
+        perSection.set(s.sectionId, payload);
+      }
+
+      const sectionsBody = [...perSection.entries()].map(([id, content]) => ({ id, content }));
+
+      const [themeRes, sectRes] = await Promise.all([
+        fetch(`/api/projects/${projectIdStr}`, {
+          method: 'PATCH',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ theme }),
+        }),
+        fetch(`/api/projects/${projectIdStr}/pages/${pageIdStr}`, {
+          method: 'PATCH',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ sections: sectionsBody }),
+        }),
+      ]);
+
+      if (themeRes.ok && sectRes.ok) setDirty(false);
+      else alert('Erreur de sauvegarde');
     });
 
     window.addEventListener('beforeunload', (e) => {
       if (dirty) { e.preventDefault(); e.returnValue = ''; }
     });
   </script>
+
+  <style>
+    [data-mode].active { background: #f1c40f !important; color: #000 !important; }
+  </style>
 </Layout>
