@@ -1,0 +1,181 @@
+Brief V1 — lunora-stitch
+Contexte
+Refonte du projet existant pour passer d'un outil expérimental (templateBuilder + éditeur contentEditable éphémère) à une vraie app de prototypage permettant de créer, sauvegarder et présenter des designs à un client.
+L'app est privée mono-utilisateur (pas d'auth user à coder, protection via Cloudflare Access côté infra).
+Stack technique
+
+Astro en mode SSR avec adapter @astrojs/cloudflare
+Cloudflare Workers pour l'hébergement
+Cloudflare D1 pour la persistance (binding via wrangler.toml)
+Cloudflare R2 pour le stockage des images uploadées
+Pas de framework UI front imposé (vanilla JS / Astro islands au besoin)
+
+Modèle de données
+Projet
+├── id (uuid)
+├── name (string)
+├── theme (JSON : { primary, secondary, headerColor, headerFont, bodyFont, ... })
+├── createdAt, updatedAt
+└── pages[]
+
+Page
+├── id (uuid)
+├── projectId (FK)
+├── name (string, ex: "Home", "About")
+├── slug (string, généré depuis name, unique par projet)
+├── order (int)
+├── createdAt, updatedAt
+└── sections[]
+
+Section (= instance d'un layout sur une page)
+├── id (uuid)
+├── pageId (FK)
+├── layoutId (string, ex: "hero-15", slug stable matchant le composant)
+├── order (int)
+└── content (JSON, conforme au schema du layout)
+Schéma D1 : 3 tables projects, pages, sections. Le content et theme stockés en TEXT (JSON sérialisé).
+Architecture fichiers
+src/
+├── pages/
+│   ├── index.astro                          → Home (liste projets)
+│   ├── projects/[projectId]/index.astro     → vue projet (liste pages)
+│   ├── projects/[projectId]/pages/new.astro → templateBuilder
+│   ├── projects/[projectId]/pages/[pageId]/edit.astro → éditeur
+│   ├── api/projects.ts                      → CRUD projets
+│   ├── api/projects/[id].ts
+│   ├── api/projects/[id]/pages.ts           → CRUD pages
+│   ├── api/projects/[id]/pages/[pageId].ts
+│   ├── api/projects/[id]/export-md.ts       → export markdown
+│   ├── api/projects/[id]/export-html.ts     → export ZIP
+│   └── api/uploads.ts                       → upload images vers R2
+├── components/
+│   ├── library/                             → layouts refactorés (5 pour V1)
+│   ├── editor/                              → panneau d'édition, toolbar
+│   └── ui/
+├── schemas/                                 → 1 schema par layout migré
+├── lib/
+│   ├── db.ts                                → wrapper D1
+│   ├── exporter-md.ts
+│   ├── exporter-html.ts                     → ZIP via jszip
+│   └── r2.ts
+└── layouts/design.css                       → existant, OK
+Système de schemas (point critique)
+Chaque layout migré déclare ses champs éditables dans src/schemas/[layoutId].ts :
+tsexport const heroSchema = {
+  id: "hero-15",
+  category: "hero",
+  fields: {
+    title: { type: "text", default: "Titre par défaut", multiline: false },
+    subtitle: { type: "text", default: "...", multiline: true },
+    ctaText: { type: "text", default: "En savoir plus" },
+    ctaLink: { type: "internal-link", default: null }, // dropdown des pages du projet
+    image: { type: "image", default: null }, // upload R2
+  }
+}
+Le composant Astro correspondant accepte ces props et les utilise dans son template (au lieu du contenu en dur actuel).
+5 layouts à migrer pour la V1 (à choisir par Claude Code en couvrant au moins : 1 nav, 1 hero, 1 services, 1 about, 1 footer). Les autres layouts de la bibliothèque restent disponibles dans le templateBuilder mais marqués "non éditables" et désactivés à la sélection.
+Types de champs supportés en V1
+
+text : input ou textarea selon multiline
+image : upload local → R2, stockage de l'URL
+internal-link : dropdown des pages du projet courant
+list : tableau de sous-objets (ex: liste de services), avec add/remove
+
+Pas de rich-text en V1 (pas de bold/italic dans les textes). Texte brut uniquement.
+Flux utilisateur V1
+Home (/)
+
+Liste simple des projets (nom + date de dernière modif)
+Bouton "Nouveau projet" → modal nom → crée en D1 → redirige vers /projects/[id]
+Sur chaque projet : renommer, supprimer
+
+Vue projet (/projects/[id])
+
+Header : nom du projet, éditeur de thème (color pickers pour primary/secondary, sélecteurs de fonts header/body), bouton "Exporter (MD)", bouton "Exporter (ZIP HTML)"
+Liste des pages du projet (nom + slug + date)
+Bouton "Nouvelle page" → modal nom → redirige vers /projects/[id]/pages/new
+Sur chaque page : renommer, supprimer, ouvrir l'éditeur
+
+TemplateBuilder (/projects/[id]/pages/new)
+
+UI existante conservée
+Sélection des layouts dans l'ordre voulu
+Seuls les layouts avec schema sont activables (les autres grisés avec tooltip "Non disponible en V1")
+Bouton "Ouvrir l'éditeur" → crée la page en D1 avec les sections vides (contenu = defaults du schema) → redirige vers l'éditeur
+
+Éditeur (/projects/[id]/pages/[pageId]/edit)
+
+Rendu de la page (sections les unes après les autres)
+Au clic sur une section → panneau latéral généré depuis son schema avec les champs éditables
+Modifications mises à jour en mémoire et reflétées en live dans le rendu
+Bouton "Save" → POST vers l'API, persiste en D1
+Indicateur visuel "modifications non sauvegardées" + warning beforeunload si on quitte
+Bouton "Ajouter un layout à la fin" (ouvre un mini-templateBuilder, ajoute la section à la fin de la page)
+Bouton "Retour au projet"
+
+Exports
+Export Markdown (/api/projects/[id]/export-md)
+Génère un fichier .md téléchargeable contenant :
+md# Projet : [nom]
+
+## Thème
+- Couleur primaire : #ff6a3e
+- Couleur secondaire : #ffba43
+- Police header : Poppins
+- Police body : Charter
+
+## Pages
+
+### Home (slug: home)
+1. nav-3
+2. hero-15
+3. services-22
+4. footer-11
+
+### About (slug: about)
+1. nav-3
+2. about-7
+3. footer-11
+
+---
+
+## Annexe JSON
+```json
+{ ...dump complet du projet... }
+```
+Export HTML (/api/projects/[id]/export-html)
+Génère un ZIP contenant :
+
+index.html (correspond à la première page du projet, ou à la page nommée "Home")
+[slug].html pour chaque autre page
+assets/css/design.css (avec les CSS variables du thème projet injectées)
+assets/images/ (toutes les images uploadées du projet)
+Liens internes entre pages : <a href="about.html"> etc.
+
+Le ZIP doit être ouvrable directement en local (double-clic sur index.html).
+Hors scope V1 (à noter en commentaires dans le code pour V2)
+
+Réordonner / supprimer / remplacer des sections existantes (V1 = ajout à la fin uniquement)
+Auto-save
+Undo / redo
+Duplication de projet ou de page
+Rich text editing
+Migration des layouts restants (au-delà des 5 de la V1) -> ne fais pas ça ça va cramer les tokens je ferai la migrations par d'autre moyen il faut seulement des exemple de comment faire
+Auth multi-user
+Déploiement direct vers domaine
+
+Plan de livraison suggéré
+
+Setup Astro SSR + adapter Cloudflare + D1 binding + migrations SQL
+CRUD projets + Home
+CRUD pages + vue projet + éditeur de thème
+Refactor de 1 layout en schema + composant Astro à props → POC complet
+Système générique d'éditeur (panneau depuis schema)
+Refactor des 4 layouts restants
+TemplateBuilder branché sur le système de schemas
+Export Markdown
+Export ZIP HTML
+Protection Cloudflare Access (config externe, hors code)
+
+
+Tu peux coller ça tel quel à Claude Code. Tu veux que j'ajoute des précisions sur une partie en particulier, ou je l'ai laissé trop ouvert quelque part ?

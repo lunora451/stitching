@@ -1,0 +1,35 @@
+J'aimerais apporter des modifications de confort a ce projet pour la création de template plus professionnel.
+
+Je veux que quand on arrive dans la Home on ai un menu qui permette de créer et gèrer un projet
+
+- possibilité de add nouveau projet
+- reprise d'un projet sauvegarder
+
+- un projet est caractériser par l'ensemble de ces pages d'édition
+  
+Pour créer une page d'édition depuis la home on:
+
+1) clique "nouvelle page", on arrive sur le templateBuilder
+2) on choisis les différents layouts qu'on veut pour la page on clique sur ouvrir l'éditor
+3) sur l'éditor on peut sauvegarder notre page d'édition et l'associé a un projet .
+Cette page doit par la suite pouvoir être consultable a nouveau en mode édition en ayant garder toute les modifications qu'on lui apporte.
+
+Par la suite je voudrais apporter des fonctionnalités a une page d'édition:
+1) possibilité d'exporter les informations suivante:
+  - layout utilisé
+  - font utilisé
+  - couleurs
+
+dans le but de reproduire le design par la suite.
+
+ex:
+hero: layout 35
+service: layout 22
+
+pour cela on pourra donner un id unique numéroté a chaque layouts existant pour ne pas se tromper mais je te laisse me dire ce qui serais plus pratique pour ça.
+
+2) 2e fonctionnalité complexe je pense mais pas prioritaire si elle pose des problèmes:
+
+pouvoir rechoisir des autre layouts sur une page d'édition
+
+  
