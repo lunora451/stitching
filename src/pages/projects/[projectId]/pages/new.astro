@@ -526,7 +526,8 @@ if (!project) return Astro.redirect('/projects');
       body: JSON.stringify({ name, layoutIds: selected.map((s) => s.layoutId) }),
     });
     if (!res.ok) { alert('Création de page échouée'); return; }
-    const page = await res.json();
+    let page: { id: string };
+    try { page = await res.json(); } catch { alert('Réponse invalide du serveur'); return; }
     location.href = `/projects/${projectId}/pages/${page.id}/edit`;
   });
 </script>
