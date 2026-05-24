@@ -20,6 +20,10 @@ const pages = await db.listPages(project.id);
     <h2>Thème</h2>
     <ThemeEditor project={project} />
 
+    <div style="margin-top:1rem; display:flex; gap:0.5rem;">
+      <a href={`/api/projects/${project.id}/export-md`}><button>Exporter (Markdown)</button></a>
+    </div>
+
     <h2 style="margin-top:2rem;">Pages</h2>
     <p><a href={`/projects/${project.id}/pages/new`}><button>+ Nouvelle page</button></a></p>
 
