@@ -1,5 +1,8 @@
 import { uuid } from './ids';
 import { slugify } from './slugify';
+import { ProjectTheme, OverridesPayload, EMPTY_OVERRIDES, DEFAULT_THEME } from './types';
+export type { ProjectTheme, OverridesPayload } from './types';
+export { EMPTY_OVERRIDES, DEFAULT_THEME } from './types';
 
 export interface Project {
   id: string;
@@ -7,12 +10,6 @@ export interface Project {
   theme: ProjectTheme;
   createdAt: number;
   updatedAt: number;
-}
-export interface ProjectTheme {
-  primary: string;
-  secondary: string;
-  headerFont: string;
-  bodyFont: string;
 }
 export interface Page {
   id: string;
@@ -28,15 +25,9 @@ export interface Section {
   pageId: string;
   layoutId: string;
   order: number;
-  content: Record<string, unknown>;
+  content: OverridesPayload;
 }
 
-const DEFAULT_THEME: ProjectTheme = {
-  primary: '#ff6a3e',
-  secondary: '#ffba43',
-  headerFont: 'Oswald',
-  bodyFont: 'Source Sans 3',
-};
 
 export class DB {
   constructor(private d1: D1Database) {}
@@ -99,7 +90,7 @@ export class DB {
     return row ? rowToPage(row) : null;
   }
 
-  async createPage(projectId: string, name: string, layoutIds: string[], defaults: (id: string) => Record<string, unknown>): Promise<Page> {
+  async createPage(projectId: string, name: string, layoutIds: string[], defaults: (layoutId: string) => OverridesPayload = () => EMPTY_OVERRIDES): Promise<Page> {
     const now = Date.now();
     const existing = await this.listPages(projectId);
     const order = existing.length;
@@ -139,7 +130,7 @@ export class DB {
     return results.map(rowToSection);
   }
 
-  async replaceSectionsContent(pageId: string, updates: Array<{ id: string; content: Record<string, unknown> }>): Promise<void> {
+  async replaceSectionsContent(pageId: string, updates: Array<{ id: string; content: OverridesPayload }>): Promise<void> {
     const stmts = updates.map(u =>
       this.d1.prepare('UPDATE sections SET content = ? WHERE id = ? AND page_id = ?')
         .bind(JSON.stringify(u.content), u.id, pageId)

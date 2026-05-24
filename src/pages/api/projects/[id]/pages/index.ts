@@ -14,7 +14,6 @@ export const POST: APIRoute = async ({ params, request }) => {
   const { name, layoutIds } = await request.json() as { name?: string; layoutIds?: string[] };
   if (!name?.trim()) return new Response(JSON.stringify({ error: 'name required' }), { status: 400 });
   const db = new DB(env.DB);
-  // TODO: Use appropriate default content when creating pages
-  const page = await db.createPage(params.id!, name.trim(), layoutIds ?? [], {});
+  const page = await db.createPage(params.id!, name.trim(), layoutIds ?? []);
   return new Response(JSON.stringify(page), { status: 201, headers: { 'content-type': 'application/json' } });
 };

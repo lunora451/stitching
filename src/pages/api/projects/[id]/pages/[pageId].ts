@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { env } from 'cloudflare:workers';
-import { DB } from '../../../../../lib/db';
+import { DB, type OverridesPayload } from '../../../../../lib/db';
 
 export const prerender = false;
 
@@ -13,7 +13,7 @@ export const GET: APIRoute = async ({ params }) => {
 };
 
 export const PATCH: APIRoute = async ({ params, request }) => {
-  const body = await request.json() as { name?: string; sections?: Array<{ id: string; content: Record<string, unknown> }> };
+  const body = await request.json() as { name?: string; sections?: Array<{ id: string; content: OverridesPayload }> };
   const db = new DB(env.DB);
   if (body.name !== undefined) await db.updatePage(params.pageId!, { name: body.name });
   if (body.sections) await db.replaceSectionsContent(params.pageId!, body.sections);

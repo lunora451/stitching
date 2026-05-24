@@ -1,33 +1,48 @@
 ---
+// TODO(Task 7): Full rewrite — this component will be replaced with the ThemeEditor
+// that works with the new ProjectTheme shape (rootColors, rootFonts, customVars).
+import type { ProjectTheme } from '../../lib/types';
+
 interface Props {
-  project: { id: string; theme: { primary: string; secondary: string; headerFont: string; bodyFont: string } };
+  project: { id: string; theme: ProjectTheme };
 }
 const { project } = Astro.props;
 const FONTS = ['Oswald', 'Source Sans 3', 'Yellowtail', 'Charter', 'Poppins', 'system-ui'];
+const primary = project.theme.rootColors['--primary'] ?? '#ff6a3e';
+const secondary = project.theme.rootColors['--secondary'] ?? '#ffba43';
+const headerFont = project.theme.rootFonts['--headerFont'] ?? "'Oswald', sans-serif";
+const bodyFont = project.theme.rootFonts['--bodyFont'] ?? "'Source Sans 3', sans-serif";
 ---
 <form id="theme-form" data-project-id={project.id} style="display:grid; grid-template-columns: repeat(4, 1fr); gap:1rem; padding:1rem; border:1px solid #ddd;">
-  <label>Primaire <input type="color" name="primary" value={project.theme.primary} /></label>
-  <label>Secondaire <input type="color" name="secondary" value={project.theme.secondary} /></label>
+  <label>Primaire <input type="color" name="primary" value={primary} /></label>
+  <label>Secondaire <input type="color" name="secondary" value={secondary} /></label>
   <label>Police header
-    <select name="headerFont">{FONTS.map(f => <option value={f} selected={f === project.theme.headerFont}>{f}</option>)}</select>
+    <select name="headerFont">{FONTS.map(f => <option value={f} selected={`'${f}', sans-serif` === headerFont || f === headerFont}>{f}</option>)}</select>
   </label>
   <label>Police body
-    <select name="bodyFont">{FONTS.map(f => <option value={f} selected={f === project.theme.bodyFont}>{f}</option>)}</select>
+    <select name="bodyFont">{FONTS.map(f => <option value={f} selected={`'${f}', sans-serif` === bodyFont || f === bodyFont}>{f}</option>)}</select>
   </label>
 </form>
 
 <script>
+  // TODO(Task 7): Replace with full ThemeEditor that patches rootColors/rootFonts/customVars.
   const form = document.getElementById('theme-form') as HTMLFormElement;
   const projectId = form.dataset.projectId!;
   let saveTimer: number;
   form.addEventListener('change', () => {
     clearTimeout(saveTimer);
     saveTimer = window.setTimeout(async () => {
+      const primaryVal = (form.elements.namedItem('primary') as HTMLInputElement).value;
+      const secondaryVal = (form.elements.namedItem('secondary') as HTMLInputElement).value;
+      const headerFontVal = (form.elements.namedItem('headerFont') as HTMLSelectElement).value;
+      const bodyFontVal = (form.elements.namedItem('bodyFont') as HTMLSelectElement).value;
+      // Fetch current theme then merge changes
+      const res = await fetch(`/api/projects/${projectId}`);
+      const project = await res.json() as { theme: any };
       const theme = {
-        primary: (form.elements.namedItem('primary') as HTMLInputElement).value,
-        secondary: (form.elements.namedItem('secondary') as HTMLInputElement).value,
-        headerFont: (form.elements.namedItem('headerFont') as HTMLSelectElement).value,
-        bodyFont: (form.elements.namedItem('bodyFont') as HTMLSelectElement).value,
+        ...project.theme,
+        rootColors: { ...project.theme.rootColors, '--primary': primaryVal, '--secondary': secondaryVal },
+        rootFonts: { ...project.theme.rootFonts, '--headerFont': `'${headerFontVal}', sans-serif`, '--bodyFont': `'${bodyFontVal}', sans-serif` },
       };
       await fetch(`/api/projects/${projectId}`, { method: 'PATCH', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ theme }) });
     }, 300);

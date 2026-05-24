@@ -8,13 +8,19 @@ import "../components/styles/burgerMenu.css";
 import "../components/styles/navbarLogo.css";
 import ThemeScript from "../components/darkMode/ThemeScript.astro";
 
+import type { ProjectTheme } from '../lib/types';
+
 interface Props {
   title?: string;
-  theme?: { primary: string; secondary: string; headerFont: string; bodyFont: string };
+  theme?: ProjectTheme;
 }
 const { theme } = Astro.props;
 const themeStyle = theme
-  ? `--primary:${theme.primary};--secondary:${theme.secondary};--headerFont:'${theme.headerFont}';--bodyFont:'${theme.bodyFont}';`
+  ? [
+      ...Object.entries(theme.rootColors).map(([k, v]) => `${k}:${v}`),
+      ...Object.entries(theme.rootFonts).map(([k, v]) => `${k}:${v}`),
+      ...theme.customVars.map(({ name, hex }) => `${name}:${hex}`),
+    ].join(';')
   : '';
 ---
 
