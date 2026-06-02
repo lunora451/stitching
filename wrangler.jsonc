@@ -6,21 +6,21 @@
   "compatibility_flags": ["nodejs_compat"],
   "assets": {
     "binding": "ASSETS",
-    "directory": "./dist"
+    "directory": "./dist",
   },
   "observability": { "enabled": true },
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "lunora-stitch-dev",
-      "database_id": "00000000-0000-0000-0000-000000000000",
-      "migrations_dir": "migrations"
-    }
+      "database_name": "d1_stitching",
+      "database_id": "aff8f3fe-34f0-4f56-98fe-85ea5e63b4f0",
+      "migrations_dir": "migrations",
+    },
   ],
   "r2_buckets": [
     {
       "binding": "IMAGES",
-      "bucket_name": "lunora-stitch-images"
-    }
-  ]
+      "bucket_name": "lunora-stitch-images",
+    },
+  ],
 }
