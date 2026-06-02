@@ -103,6 +103,45 @@ const pages = await db.listPages(project.id);
         } catch {}
       }
 
+      // --- bundle Astro build assets (CSS/JS/fonts) referenced via absolute /_astro/ paths ---
+      const ASTRO_RE = /\/_astro\/[A-Za-z0-9_.\-]+/g;
+      const astroAssets = new Map<string, { text?: string; blob?: Blob }>();
+      async function fetchAstro(path: string): Promise<void> {
+        if (astroAssets.has(path)) return;
+        astroAssets.set(path, {}); // reserve to break cycles
+        try {
+          const r = await fetch(path);
+          const isText = path.endsWith('.css') || path.endsWith('.js');
+          if (isText) {
+            const text = await r.text();
+            astroAssets.set(path, { text });
+            for (const m of text.matchAll(ASTRO_RE)) await fetchAstro(m[0]);
+          } else {
+            astroAssets.set(path, { blob: await r.blob() });
+          }
+        } catch (e) { console.error('asset fetch failed', path, e); }
+      }
+
+      const htmlNames = Object.keys(zip.files).filter((n) => n.endsWith('.html'));
+      const seedPaths = new Set<string>();
+      for (const name of htmlNames) {
+        const f = await zip.file(name)!.async('string');
+        for (const m of f.matchAll(ASTRO_RE)) seedPaths.add(m[0]);
+      }
+      for (const p of seedPaths) await fetchAstro(p);
+
+      // write assets; css/js live inside _astro/, so their internal /_astro/ refs become sibling-relative
+      for (const [path, val] of astroAssets) {
+        const zipPath = path.slice(1); // "/_astro/x" -> "_astro/x"
+        if (val.text !== undefined) zip.file(zipPath, val.text.replaceAll('/_astro/', ''));
+        else if (val.blob) zip.file(zipPath, val.blob);
+      }
+      // html lives at zip root, so /_astro/ -> _astro/
+      for (const name of htmlNames) {
+        const f = await zip.file(name)!.async('string');
+        zip.file(name, f.replaceAll('/_astro/', '_astro/'));
+      }
+
       const blob = await zip.generateAsync({ type: 'blob' });
       const a = document.createElement('a');
       a.href = URL.createObjectURL(blob);

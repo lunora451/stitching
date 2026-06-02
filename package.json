@@ -7,8 +7,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "db:migrate:local": "wrangler d1 migrations apply lunora-stitch-dev --local",
-    "db:migrate:remote": "wrangler d1 migrations apply lunora-stitch-dev --remote",
+    "db:migrate:local": "wrangler d1 migrations apply d1_stitching --local",
+    "db:migrate:remote": "wrangler d1 migrations apply d1_stitching --remote",
     "test": "node --experimental-strip-types --test tests/**/*.test.ts"
   },
   "dependencies": {
