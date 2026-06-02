@@ -35,7 +35,11 @@
       "Bash(git -C \"c:\\\\Users\\\\trous\\\\Desktop\\\\1.0\\\\templateMaking\\\\stitching\" log --oneline -n 20)",
       "Bash(git checkout *)",
       "Bash(git add *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(awk '{print $3}')",
+      "Bash(git diff-tree *)",
+      "Bash(git ls-tree *)",
+      "Bash(git rm *)"
     ]
   }
 }
