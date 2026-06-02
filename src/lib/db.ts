@@ -1,6 +1,7 @@
 import { uuid } from './ids';
 import { slugify } from './slugify';
-import { ProjectTheme, OverridesPayload, EMPTY_OVERRIDES, DEFAULT_THEME } from './types';
+import type { ProjectTheme, OverridesPayload } from './types';
+import { EMPTY_OVERRIDES, DEFAULT_THEME } from './types';
 export type { ProjectTheme, OverridesPayload } from './types';
 export { EMPTY_OVERRIDES, DEFAULT_THEME } from './types';
 
