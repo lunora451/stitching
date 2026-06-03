@@ -19,7 +19,7 @@
   ],
   "r2_buckets": [
     {
-      "binding": "IMAGES",
+      "binding": "IMAGES_BUCKET",
       "bucket_name": "lunora-stitch-images",
     },
   ],

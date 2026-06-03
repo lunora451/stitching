@@ -6,7 +6,7 @@ export const prerender = false;
 export const GET: APIRoute = async ({ params }) => {
   const key = (params.key as string) ?? '';
   if (!key.startsWith('images/')) return new Response('not found', { status: 404 });
-  const obj = await env.IMAGES.get(key);
+  const obj = await env.IMAGES_BUCKET.get(key);
   if (!obj) return new Response('not found', { status: 404 });
   const headers = new Headers();
   obj.writeHttpMetadata(headers);

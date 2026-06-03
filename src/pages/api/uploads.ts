@@ -18,6 +18,6 @@ export const POST: APIRoute = async ({ request }) => {
   if (file.size > MAX_SIZE) {
     return new Response(JSON.stringify({ error: 'file exceeds 10 MB limit' }), { status: 413 });
   }
-  const url = await putImage(env.IMAGES, file);
+  const url = await putImage(env.IMAGES_BUCKET, file);
   return new Response(JSON.stringify({ url }), { headers: { 'content-type': 'application/json' } });
 };

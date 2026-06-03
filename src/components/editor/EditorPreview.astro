@@ -2,6 +2,22 @@
 import { HERO_VARIANTS } from './heroRegistry';
 import { SERVICE_VARIANTS } from './serviceRegistry';
 import { FOOTER_VARIANTS } from './footerRegistry';
+import { NAVIGATION_VARIANTS } from './navigationRegistry';
+import { BLOG_VARIANTS } from './blogRegistry';
+import { CONTACTFORM_VARIANTS } from './contactformRegistry';
+import { CTA_VARIANTS } from './ctaRegistry';
+import { EVENTS_VARIANTS } from './eventsRegistry';
+import { FAQ_VARIANTS } from './faqRegistry';
+import { GALLERY_VARIANTS } from './galleryRegistry';
+import { PRICING_VARIANTS } from './pricingRegistry';
+import { QUOTES_VARIANTS } from './quotesRegistry';
+import { REVIEWS_VARIANTS } from './reviewsRegistry';
+import { STATS_VARIANTS } from './statsRegistry';
+import { STEPS_VARIANTS } from './stepsRegistry';
+import { TEAM_VARIANTS } from './teamRegistry';
+import { WHYCHOOSEUS_VARIANTS } from './whychooseusRegistry';
+import { SIDEBYSIDE_VARIANTS } from './sidebysideRegistry';
+import { INTERIORPAGE_VARIANTS } from './interiorpageRegistry';
 import type { OverridesPayload } from '../../lib/types';
 
 export interface PreviewSection {
@@ -18,15 +34,47 @@ interface Props {
 const { selection } = Astro.props;
 
 const REGISTRIES: Record<string, Record<string, any>> = {
-  heroSection: HERO_VARIANTS,
-  service: SERVICE_VARIANTS,
-  footer: FOOTER_VARIANTS,
+  heroSection:  HERO_VARIANTS,
+  service:      SERVICE_VARIANTS,
+  footer:       FOOTER_VARIANTS,
+  navigation:   NAVIGATION_VARIANTS,
+  blog:         BLOG_VARIANTS,
+  contactform:  CONTACTFORM_VARIANTS,
+  cta:          CTA_VARIANTS,
+  events:       EVENTS_VARIANTS,
+  faq:          FAQ_VARIANTS,
+  gallery:      GALLERY_VARIANTS,
+  pricing:      PRICING_VARIANTS,
+  quotes:       QUOTES_VARIANTS,
+  reviews:      REVIEWS_VARIANTS,
+  stats:        STATS_VARIANTS,
+  steps:        STEPS_VARIANTS,
+  team:         TEAM_VARIANTS,
+  whychooseus:  WHYCHOOSEUS_VARIANTS,
+  sidebyside:   SIDEBYSIDE_VARIANTS,
+  interiorpage: INTERIORPAGE_VARIANTS,
 };
 
 const WRAPPER_META: Record<string, { attr: string; cls: string }> = {
-  heroSection: { attr: 'data-value-hero', cls: 'c-hero' },
-  service: { attr: 'data-value-service', cls: 'c-service' },
-  footer: { attr: 'data-value-footer', cls: 'c-footer' },
+  heroSection:  { attr: 'data-value-hero',        cls: 'c-hero' },
+  service:      { attr: 'data-value-service',     cls: 'c-service' },
+  footer:       { attr: 'data-value-footer',      cls: 'c-footer' },
+  navigation:   { attr: 'data-value-navigation',  cls: 'c-navigation' },
+  blog:         { attr: 'data-value-blog',        cls: 'c-blog' },
+  contactform:  { attr: 'data-value-contactform', cls: 'c-contactform' },
+  cta:          { attr: 'data-value-cta',         cls: 'c-cta' },
+  events:       { attr: 'data-value-events',      cls: 'c-events' },
+  faq:          { attr: 'data-value-faq',         cls: 'c-faq' },
+  gallery:      { attr: 'data-value-gallery',     cls: 'c-gallery' },
+  pricing:      { attr: 'data-value-pricing',     cls: 'c-pricing' },
+  quotes:       { attr: 'data-value-quotes',      cls: 'c-quotes' },
+  reviews:      { attr: 'data-value-reviews',     cls: 'c-reviews' },
+  stats:        { attr: 'data-value-stats',       cls: 'c-stats' },
+  steps:        { attr: 'data-value-steps',       cls: 'c-steps' },
+  team:         { attr: 'data-value-team',        cls: 'c-team' },
+  whychooseus:  { attr: 'data-value-whychooseus', cls: 'c-whychooseus' },
+  sidebyside:   { attr: 'data-value-sidebyside',  cls: 'c-sidebyside' },
+  interiorpage: { attr: 'data-value-interiorpage',cls: 'c-interiorpage' },
 };
 
 type Resolved = {

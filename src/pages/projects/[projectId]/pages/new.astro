@@ -1,8 +1,5 @@
 ---
 import Layout from '../../../../layouts/Layout.astro';
-import Hero from '../../../../layouts/show/Hero.astro';
-import Services from '../../../../layouts/show/Services.astro';
-import Footer from '../../../../layouts/show/Footer.astro';
 import { env } from 'cloudflare:workers';
 import { DB } from '../../../../lib/db';
 import { LAYOUT_CATALOG } from '../../../../lib/layoutCatalog';
@@ -13,84 +10,62 @@ const { projectId } = Astro.params;
 const db = new DB(env.DB);
 const project = await db.getProject(projectId!);
 if (!project) return Astro.redirect('/projects');
-
-const hero = LAYOUT_CATALOG.heroSection;
-const service = LAYOUT_CATALOG.service;
-const footer = LAYOUT_CATALOG.footer;
 ---
 
 <Layout>
   <div class="c-dunno">
     <div class="c-menu">
-      <div class="hider">&squf;</div>
-
       <p style="margin: 0 0 0.5rem 0; font-weight: bold;">
         <a href={`/projects/${projectId}`} style="color: inherit;">← {project.name}</a>
       </p>
+      <p style="margin: 0 0 0.5rem 0; font-size: 0.85rem; color:#5a3d35;">Nouvelle page</p>
 
       <input id="page-name-input" placeholder="Nom de la page" required
              style="padding: 0.4rem; margin-bottom: 0.5rem; width: 100%;" />
 
-      <div class="select-group">
-        <input type="number" class="order-input" data-target="hero-component" value="1" min="1" max="3" />
-        <select name="heroSection" id="template-select-hero">
-          <option value="none">{hero.placeholder}</option>
-          {hero.groups.map((g) => (
-            g.label
-              ? <optgroup label={g.label}>{g.values.map((v) => <option value={v}>{hero.optionLabel} {v}</option>)}</optgroup>
-              : g.values.map((v) => <option value={v}>{hero.optionLabel} {v}</option>)
-          ))}
-        </select>
-      </div>
+      <div id="rows"></div>
 
-      <div class="select-group">
-        <input type="number" class="order-input" data-target="service-component" value="2" min="1" max="3" />
-        <select name="service" id="template-select-service">
-          <option value="none">{service.placeholder}</option>
-          {service.groups.map((g) => (
-            g.label
-              ? <optgroup label={g.label}>{g.values.map((v) => <option value={v}>{service.optionLabel} {v}</option>)}</optgroup>
-              : g.values.map((v) => <option value={v}>{service.optionLabel} {v}</option>)
-          ))}
-        </select>
+      <div class="actions">
+        <button id="add-row" type="button">+ Ajouter une section</button>
+        <button id="create-btn" type="button" class="save">Créer la page</button>
       </div>
-
-      <div class="select-group">
-        <input type="number" class="order-input" data-target="footer-component" value="3" min="1" max="3" />
-        <select name="footer" id="template-select-footer">
-          <option value="none">{footer.placeholder}</option>
-          {footer.groups.map((g) => (
-            g.label
-              ? <optgroup label={g.label}>{g.values.map((v) => <option value={v}>{footer.optionLabel} {v}</option>)}</optgroup>
-              : g.values.map((v) => <option value={v}>{footer.optionLabel} {v}</option>)
-          ))}
-        </select>
-      </div>
-
-      <button id="generate-preview" class="preview-button" style="margin-top: 0.5rem; padding: 0.5rem 1rem;">Ouvrir l'éditeur</button>
     </div>
 
+    <div class="splitter" id="splitter" title="Glisser pour redimensionner · double-clic pour masquer"></div>
+
+    <button id="show-menu" type="button" class="show-menu" title="Afficher le menu">☰</button>
+
     <div class="c-content">
-      <div id="hero-component" class="component-wrapper" style="order: 1;"><Hero /></div>
-      <div id="service-component" class="component-wrapper" style="order: 2;"><Services /></div>
-      <div id="footer-component" class="component-wrapper" style="order: 3;"><Footer /></div>
+      <iframe id="preview" title="Aperçu"></iframe>
     </div>
   </div>
 </Layout>
 
 <style lang="scss">
   .c-dunno {
+    --menu-w: 320px;
     width: 100%;
-    overflow-x: hidden;
+    height: 100vh;
+    overflow: hidden;
+
+    &.menu-hidden {
+      .c-content { margin-left: 0; }
+      .splitter { display: none; }
+      .show-menu { display: block; }
+    }
 
     .c-menu {
       position: fixed;
       top: 0;
       left: 0;
+      max-height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      width: var(--menu-w);
       background-color: #d6a99d;
       padding: 0.9rem;
       display: flex;
-      gap: 0.3rem;
+      gap: 0.4rem;
       z-index: 999999;
       flex-direction: column;
       transform: translateX(0);
@@ -100,115 +75,245 @@ const footer = LAYOUT_CATALOG.footer;
         transform: translateX(-100%);
       }
 
-      .select-group {
+      #rows {
         display: flex;
-        align-items: center;
-        gap: 0.5rem;
-
-        .order-input {
-          width: 50px;
-          padding: 0;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          text-align: center;
-          font-size: 0.9rem;
-        }
+        flex-direction: column;
+        gap: 0.4rem;
       }
 
-      .hider {
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 0.5rem;
+
+        button { padding: 0.4rem 0.7rem; }
+        .save { background: #27ae60; color: #fff; }
+      }
+    }
+
+    .show-menu {
+      display: none;
+      position: fixed;
+      top: 0.5rem;
+      left: 0.5rem;
+      z-index: 1000000;
+      padding: 0.4rem 0.6rem;
+      font-size: 1.1rem;
+      line-height: 1;
+      background: #d6a99d;
+      border: 1px solid #b07c6d;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .splitter {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: var(--menu-w);
+      width: 8px;
+      transform: translateX(-4px);
+      z-index: 999999;
+      cursor: col-resize;
+      background: transparent;
+
+      &::after {
+        content: '';
         position: absolute;
-        transform: translate(0, -50%);
         top: 50%;
-        left: 100%;
-        font-size: 1.5rem;
-        padding-inline: 0.3rem;
-        border-top-right-radius: 0.3rem;
-        border-bottom-right-radius: 0.3rem;
-        background: #d6a99d;
-        &:hover {
-          cursor: pointer;
-        }
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 4px;
+        height: 42px;
+        border-radius: 2px;
+        background: #b07c6d;
       }
+      &:hover::after { background: #8a5a4c; }
     }
 
     .c-content {
-      display: flex;
-      flex-direction: column;
-      padding-left: 0;
-      width: 100%;
-      overflow-x: hidden;
+      margin-left: var(--menu-w);
+      height: 100vh;
 
-      .component-wrapper {
+      iframe {
         width: 100%;
-        overflow-x: hidden;
-
-        > * {
-          max-width: 100%;
-          box-sizing: border-box;
-        }
+        height: 100%;
+        border: 0;
+        display: block;
       }
     }
   }
 
-  * {
-    box-sizing: border-box;
+  :global(.section-row) {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 0.35rem;
+    border-radius: 4px;
   }
+  :global(.section-row .order-input) {
+    width: 44px;
+    text-align: center;
+    padding: 0.25rem;
+  }
+  :global(.section-row select) { padding: 0.25rem; }
+  :global(.section-row .variant-select) { flex: 1; min-width: 0; }
 
-  select {
-    padding: 0;
-  }
+  * { box-sizing: border-box; }
 </style>
 
-<script>
-  const tickerMenu = document.querySelector('.hider')!;
-  const menu = document.querySelector('.c-menu')!;
-  tickerMenu.addEventListener('click', () => menu.classList.toggle('hide'));
+<script define:vars={{ catalog: LAYOUT_CATALOG, projectId: project.id }}>
+  const TYPES = Object.keys(catalog);
+  const rowsEl = document.getElementById('rows');
+  const iframe = document.getElementById('preview');
+  const dunno = document.querySelector('.c-dunno');
+  const splitter = document.getElementById('splitter');
 
-  const orderInputs = document.querySelectorAll<HTMLInputElement>('.order-input');
-  orderInputs.forEach((input) => {
-    const apply = () => {
-      const targetId = input.dataset.target!;
-      const t = document.getElementById(targetId);
-      if (t) t.style.order = input.value;
-    };
-    input.addEventListener('change', apply);
-    input.addEventListener('input', apply);
+  function buildTypeOptions(selected) {
+    const opts = ['<option value="">— type —</option>'];
+    for (const t of TYPES) {
+      const sel = t === selected ? ' selected' : '';
+      opts.push(`<option value="${t}"${sel}>${catalog[t].placeholder}</option>`);
+    }
+    return opts.join('');
+  }
+
+  function buildVariantOptions(type, selectedValue) {
+    if (!type || !catalog[type]) return '<option value="">—</option>';
+    const def = catalog[type];
+    const out = ['<option value="">— variante —</option>'];
+    for (const g of def.groups) {
+      const inner = g.values
+        .map((v) => {
+          const sel = v === selectedValue ? ' selected' : '';
+          return `<option value="${v}"${sel}>${def.optionLabel} ${v}</option>`;
+        })
+        .join('');
+      out.push(g.label ? `<optgroup label="${g.label}">${inner}</optgroup>` : inner);
+    }
+    return out.join('');
+  }
+
+  function renderRow(order) {
+    const el = document.createElement('div');
+    el.className = 'section-row';
+    el.innerHTML = `
+      <input type="number" class="order-input" value="${order}" min="1" />
+      <select class="type-select">${buildTypeOptions('')}</select>
+      <select class="variant-select">${buildVariantOptions('', '')}</select>
+      <button type="button" class="remove-row" title="Retirer">✕</button>
+    `;
+    const typeSel = el.querySelector('.type-select');
+    const variantSel = el.querySelector('.variant-select');
+    const orderInput = el.querySelector('.order-input');
+    typeSel.addEventListener('change', () => {
+      variantSel.innerHTML = buildVariantOptions(typeSel.value, '');
+      schedulePreview();
+    });
+    variantSel.addEventListener('change', schedulePreview);
+    orderInput.addEventListener('input', schedulePreview);
+    el.querySelector('.remove-row').addEventListener('click', () => {
+      el.remove();
+      schedulePreview();
+    });
+    return el;
+  }
+
+  function currentLayoutIds() {
+    const rows = [...rowsEl.querySelectorAll('.section-row')].map((el) => ({
+      type: el.querySelector('.type-select').value,
+      value: el.querySelector('.variant-select').value,
+      order: parseInt(el.querySelector('.order-input').value, 10) || 0,
+    }));
+    rows.sort((a, b) => a.order - b.order);
+    return rows.filter((r) => r.type && r.value).map((r) => `${r.type}-${r.value}`);
+  }
+
+  function updatePreview() {
+    const ids = currentLayoutIds();
+    if (ids.length === 0) { iframe.src = 'about:blank'; return; }
+    iframe.src = `/projects/${projectId}/structure-preview?layouts=${encodeURIComponent(ids.join(','))}`;
+  }
+
+  let previewTimer;
+  function schedulePreview() {
+    clearTimeout(previewTimer);
+    previewTimer = setTimeout(updatePreview, 150);
+  }
+
+  rowsEl.appendChild(renderRow(1));
+
+  document.getElementById('add-row').addEventListener('click', () => {
+    const order = rowsEl.querySelectorAll('.section-row').length + 1;
+    rowsEl.appendChild(renderRow(order));
   });
 
-  const submitBtn = document.getElementById('generate-preview')!;
-  submitBtn.addEventListener('click', async () => {
-    const pageNameEl = document.getElementById('page-name-input') as HTMLInputElement;
+  document.getElementById('show-menu').addEventListener('click', () => {
+    document.querySelector('.c-menu').classList.remove('hide');
+    dunno.classList.remove('menu-hidden');
+  });
+
+  // resizable splitter
+  const MENU_MIN = 220;
+  const storedW = parseInt(localStorage.getItem('new-menu-w') || '', 10);
+  if (storedW) dunno.style.setProperty('--menu-w', storedW + 'px');
+
+  let dragging = false;
+  splitter.addEventListener('pointerdown', (e) => {
+    dragging = true;
+    splitter.setPointerCapture(e.pointerId);
+    iframe.style.pointerEvents = 'none';
+    document.body.style.userSelect = 'none';
+  });
+  splitter.addEventListener('pointermove', (e) => {
+    if (!dragging) return;
+    const max = window.innerWidth - 200;
+    const w = Math.max(MENU_MIN, Math.min(e.clientX, max));
+    dunno.style.setProperty('--menu-w', w + 'px');
+  });
+  function endDrag(e) {
+    if (!dragging) return;
+    dragging = false;
+    try { splitter.releasePointerCapture(e.pointerId); } catch {}
+    iframe.style.pointerEvents = '';
+    document.body.style.userSelect = '';
+    const w = parseInt(getComputedStyle(dunno).getPropertyValue('--menu-w'), 10);
+    if (w) localStorage.setItem('new-menu-w', String(w));
+  }
+  splitter.addEventListener('pointerup', endDrag);
+  splitter.addEventListener('pointercancel', endDrag);
+  splitter.addEventListener('dblclick', () => {
+    document.querySelector('.c-menu').classList.add('hide');
+    dunno.classList.add('menu-hidden');
+  });
+
+  document.getElementById('create-btn').addEventListener('click', async () => {
+    const pageNameEl = document.getElementById('page-name-input');
     const name = pageNameEl.value.trim();
     if (!name) { alert('Nom de la page requis.'); pageNameEl.focus(); return; }
 
-    const TYPE_TO_PREFIX: Record<string, string> = {
-      heroSection: 'heroSection',
-      service: 'service',
-      footer: 'footer',
-    };
-
-    const selected: Array<{ layoutId: string; order: number }> = [];
-    document.querySelectorAll<HTMLDivElement>('.select-group').forEach((group) => {
-      const select = group.querySelector('select')!;
-      const orderInput = group.querySelector<HTMLInputElement>('.order-input')!;
-      if (select.value !== 'none' && TYPE_TO_PREFIX[select.name]) {
-        selected.push({
-          layoutId: `${TYPE_TO_PREFIX[select.name]}-${select.value}`,
-          order: parseInt(orderInput.value, 10),
-        });
-      }
+    const structure = [];
+    let invalid = false;
+    rowsEl.querySelectorAll('.section-row').forEach((el) => {
+      const type = el.querySelector('.type-select').value;
+      const value = el.querySelector('.variant-select').value;
+      const order = parseInt(el.querySelector('.order-input').value, 10) || 0;
+      if (!type) return;
+      if (!value) { invalid = true; return; }
+      structure.push({ layoutId: `${type}-${value}`, order });
     });
-    if (selected.length === 0) { alert('Sélectionnez au moins une section.'); return; }
-    selected.sort((a, b) => a.order - b.order);
+    if (invalid) { alert('Chaque section doit avoir une variante sélectionnée.'); return; }
+    structure.sort((a, b) => a.order - b.order);
 
-    const projectId = location.pathname.split('/')[2];
     const res = await fetch(`/api/projects/${projectId}/pages`, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ name, layoutIds: selected.map((s) => s.layoutId) }),
+      body: JSON.stringify({ name, layoutIds: structure.map((s) => s.layoutId) }),
     });
     if (!res.ok) { alert('Création de page échouée'); return; }
-    let page: { id: string };
+    let page;
     try { page = await res.json(); } catch { alert('Réponse invalide du serveur'); return; }
     location.href = `/projects/${projectId}/pages/${page.id}/edit`;
   });
