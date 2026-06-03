@@ -1,0 +1,350 @@
+---
+import Layout from '../../../../../layouts/Layout.astro';
+import { env } from 'cloudflare:workers';
+import { DB } from '../../../../../lib/db';
+import { LAYOUT_CATALOG } from '../../../../../lib/layoutCatalog';
+
+export const prerender = false;
+
+const { projectId, pageId } = Astro.params;
+const db = new DB(env.DB);
+const project = await db.getProject(projectId!);
+const page = await db.getPage(pageId!);
+if (!project || !page) return Astro.redirect('/projects');
+const sections = await db.listSections(page.id);
+
+function splitLayoutId(id: string): [string, string] {
+  const i = id.lastIndexOf('-');
+  return [id.slice(0, i), id.slice(i + 1)];
+}
+
+const initialRows = sections.map((s, i) => {
+  const [type, value] = splitLayoutId(s.layoutId);
+  return { sectionId: s.id, type, value, order: i + 1 };
+});
+---
+
+<Layout>
+  <div class="c-dunno">
+    <div class="c-menu">
+      <p style="margin: 0 0 0.5rem 0; font-weight: bold;">
+        <a href={`/projects/${projectId}`} style="color: inherit;">← {project.name}</a>
+      </p>
+      <p style="margin: 0 0 0.5rem 0; font-size: 0.85rem; color:#5a3d35;">Structure — {page.name}</p>
+
+      <div id="rows"></div>
+
+      <div class="actions">
+        <button id="add-row" type="button">+ Ajouter une section</button>
+        <button id="save-btn" type="button" class="save">Sauvegarder</button>
+        <a href={`/projects/${projectId}/pages/${pageId}/edit`}><button type="button">Éditeur</button></a>
+      </div>
+      <button id="hide-menu" type="button" class="hide-menu">⟨ Masquer le menu</button>
+    </div>
+
+    <div class="splitter" id="splitter" title="Glisser pour redimensionner · double-clic pour masquer"></div>
+
+    <button id="show-menu" type="button" class="show-menu" title="Afficher le menu">☰</button>
+
+    <div class="c-content">
+      <iframe id="preview" title="Aperçu"></iframe>
+    </div>
+  </div>
+</Layout>
+
+<style lang="scss">
+  .c-dunno {
+    --menu-w: 320px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    &.menu-hidden {
+      .c-content { margin-left: 0; }
+      .splitter { display: none; }
+      .show-menu { display: block; }
+    }
+
+    .c-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      max-height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      width: var(--menu-w);
+      background-color: #d6a99d;
+      padding: 0.9rem;
+      display: flex;
+      gap: 0.4rem;
+      z-index: 999999;
+      flex-direction: column;
+      transform: translateX(0);
+      transition: transform 0.4s;
+
+      &.hide {
+        transform: translateX(-100%);
+      }
+
+      #rows {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 0.5rem;
+
+        button {
+          padding: 0.4rem 0.7rem;
+        }
+        .save {
+          background: #27ae60;
+          color: #fff;
+        }
+      }
+
+      .hide-menu {
+        margin-top: 0.5rem;
+        padding: 0.35rem 0.7rem;
+        background: rgba(255, 255, 255, 0.35);
+        border: 1px solid #b07c6d;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.85rem;
+      }
+    }
+
+    .show-menu {
+      display: none;
+      position: fixed;
+      top: 0.5rem;
+      left: 0.5rem;
+      z-index: 1000000;
+      padding: 0.4rem 0.6rem;
+      font-size: 1.1rem;
+      line-height: 1;
+      background: #d6a99d;
+      border: 1px solid #b07c6d;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .splitter {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: var(--menu-w);
+      width: 8px;
+      transform: translateX(-4px);
+      z-index: 999999;
+      cursor: col-resize;
+      background: transparent;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 4px;
+        height: 42px;
+        border-radius: 2px;
+        background: #b07c6d;
+      }
+      &:hover::after { background: #8a5a4c; }
+    }
+
+    .c-content {
+      margin-left: var(--menu-w);
+      height: 100vh;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+      }
+    }
+  }
+
+  :global(.section-row) {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 0.35rem;
+    border-radius: 4px;
+  }
+  :global(.section-row .order-input) {
+    width: 44px;
+    text-align: center;
+    padding: 0.25rem;
+  }
+  :global(.section-row select) {
+    padding: 0.25rem;
+  }
+  :global(.section-row .variant-select) {
+    flex: 1;
+    min-width: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+</style>
+
+<script define:vars={{ catalog: LAYOUT_CATALOG, initialRows, projectId: project.id, pageId: page.id }}>
+  const TYPES = Object.keys(catalog);
+  const rowsEl = document.getElementById('rows');
+  const iframe = document.getElementById('preview');
+  const dunno = document.querySelector('.c-dunno');
+  const splitter = document.getElementById('splitter');
+
+  function buildTypeOptions(selected) {
+    const opts = ['<option value="">— type —</option>'];
+    for (const t of TYPES) {
+      const sel = t === selected ? ' selected' : '';
+      opts.push(`<option value="${t}"${sel}>${catalog[t].placeholder}</option>`);
+    }
+    return opts.join('');
+  }
+
+  function buildVariantOptions(type, selectedValue) {
+    if (!type || !catalog[type]) return '<option value="">—</option>';
+    const def = catalog[type];
+    const out = ['<option value="">— variante —</option>'];
+    for (const g of def.groups) {
+      const inner = g.values
+        .map((v) => {
+          const sel = v === selectedValue ? ' selected' : '';
+          return `<option value="${v}"${sel}>${def.optionLabel} ${v}</option>`;
+        })
+        .join('');
+      out.push(g.label ? `<optgroup label="${g.label}">${inner}</optgroup>` : inner);
+    }
+    return out.join('');
+  }
+
+  function renderRow(row) {
+    const el = document.createElement('div');
+    el.className = 'section-row';
+    if (row.sectionId) el.dataset.sectionId = row.sectionId;
+    el.innerHTML = `
+      <input type="number" class="order-input" value="${row.order}" min="1" />
+      <select class="type-select">${buildTypeOptions(row.type)}</select>
+      <select class="variant-select">${buildVariantOptions(row.type, row.value)}</select>
+      <button type="button" class="remove-row" title="Retirer">✕</button>
+    `;
+
+    const typeSel = el.querySelector('.type-select');
+    const variantSel = el.querySelector('.variant-select');
+    const orderInput = el.querySelector('.order-input');
+    typeSel.addEventListener('change', () => {
+      variantSel.innerHTML = buildVariantOptions(typeSel.value, '');
+      schedulePreview();
+    });
+    variantSel.addEventListener('change', schedulePreview);
+    orderInput.addEventListener('input', schedulePreview);
+    el.querySelector('.remove-row').addEventListener('click', () => {
+      el.remove();
+      schedulePreview();
+    });
+    return el;
+  }
+
+  function currentLayoutIds() {
+    const rows = [...rowsEl.querySelectorAll('.section-row')].map((el) => ({
+      type: el.querySelector('.type-select').value,
+      value: el.querySelector('.variant-select').value,
+      order: parseInt(el.querySelector('.order-input').value, 10) || 0,
+    }));
+    rows.sort((a, b) => a.order - b.order);
+    return rows.filter((r) => r.type && r.value).map((r) => `${r.type}-${r.value}`);
+  }
+
+  function updatePreview() {
+    const ids = currentLayoutIds();
+    iframe.src = `/projects/${projectId}/structure-preview?layouts=${encodeURIComponent(ids.join(','))}`;
+  }
+
+  let previewTimer;
+  function schedulePreview() {
+    clearTimeout(previewTimer);
+    previewTimer = setTimeout(updatePreview, 150);
+  }
+
+  for (const row of initialRows) rowsEl.appendChild(renderRow(row));
+  updatePreview();
+
+  document.getElementById('add-row').addEventListener('click', () => {
+    const order = rowsEl.querySelectorAll('.section-row').length + 1;
+    rowsEl.appendChild(renderRow({ type: '', value: '', order }));
+  });
+
+  const menuEl = document.querySelector('.c-menu');
+  function collapseMenu() { menuEl.classList.add('hide'); dunno.classList.add('menu-hidden'); }
+  function expandMenu() { menuEl.classList.remove('hide'); dunno.classList.remove('menu-hidden'); }
+  document.getElementById('hide-menu').addEventListener('click', collapseMenu);
+  document.getElementById('show-menu').addEventListener('click', expandMenu);
+
+  // --- resizable splitter ---
+  const MENU_MIN = 220;
+  const storedW = parseInt(localStorage.getItem('structure-menu-w') || '', 10);
+  if (storedW) dunno.style.setProperty('--menu-w', storedW + 'px');
+
+  let dragging = false;
+  splitter.addEventListener('pointerdown', (e) => {
+    dragging = true;
+    splitter.setPointerCapture(e.pointerId);
+    iframe.style.pointerEvents = 'none';
+    document.body.style.userSelect = 'none';
+  });
+  splitter.addEventListener('pointermove', (e) => {
+    if (!dragging) return;
+    const max = window.innerWidth - 200;
+    const w = Math.max(MENU_MIN, Math.min(e.clientX, max));
+    dunno.style.setProperty('--menu-w', w + 'px');
+  });
+  function endDrag(e) {
+    if (!dragging) return;
+    dragging = false;
+    try { splitter.releasePointerCapture(e.pointerId); } catch {}
+    iframe.style.pointerEvents = '';
+    document.body.style.userSelect = '';
+    const w = parseInt(getComputedStyle(dunno).getPropertyValue('--menu-w'), 10);
+    if (w) localStorage.setItem('structure-menu-w', String(w));
+  }
+  splitter.addEventListener('pointerup', endDrag);
+  splitter.addEventListener('pointercancel', endDrag);
+  // double-clic = masquer le menu (aperçu pleine largeur)
+  splitter.addEventListener('dblclick', collapseMenu);
+
+  document.getElementById('save-btn').addEventListener('click', async () => {
+    const structure = [];
+    let invalid = false;
+    rowsEl.querySelectorAll('.section-row').forEach((el) => {
+      const type = el.querySelector('.type-select').value;
+      const value = el.querySelector('.variant-select').value;
+      const order = parseInt(el.querySelector('.order-input').value, 10) || 0;
+      if (!type) return;
+      if (!value) { invalid = true; return; }
+      const entry = { layoutId: `${type}-${value}`, order };
+      if (el.dataset.sectionId) entry.sectionId = el.dataset.sectionId;
+      structure.push(entry);
+    });
+    if (invalid) { alert('Chaque section doit avoir une variante sélectionnée.'); return; }
+    structure.sort((a, b) => a.order - b.order);
+
+    const res = await fetch(`/api/projects/${projectId}/pages/${pageId}`, {
+      method: 'PATCH',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ structure }),
+    });
+    if (!res.ok) { alert('Sauvegarde échouée'); return; }
+    location.href = `/projects/${projectId}/pages/${pageId}/edit`;
+  });
+</script>

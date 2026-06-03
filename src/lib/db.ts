@@ -131,6 +131,47 @@ export class DB {
     return results.map(rowToSection);
   }
 
+  async reconcileSections(pageId: string, structure: Array<{ sectionId?: string; layoutId: string; order: number }>): Promise<void> {
+    const existing = await this.listSections(pageId);
+    const existingById = new Map(existing.map((s) => [s.id, s]));
+    const keptIds = new Set<string>();
+    const stmts: D1PreparedStatement[] = [];
+    const emptyContent = JSON.stringify(EMPTY_OVERRIDES);
+
+    for (const row of structure) {
+      const current = row.sectionId ? existingById.get(row.sectionId) : undefined;
+      if (current) {
+        keptIds.add(current.id);
+        if (current.layoutId === row.layoutId) {
+          stmts.push(
+            this.d1.prepare('UPDATE sections SET "order" = ? WHERE id = ? AND page_id = ?')
+              .bind(row.order, current.id, pageId)
+          );
+        } else {
+          // variant/type swap: old overrides are keyed to the old variant DOM, so reset content
+          stmts.push(
+            this.d1.prepare('UPDATE sections SET layout_id = ?, "order" = ?, content = ? WHERE id = ? AND page_id = ?')
+              .bind(row.layoutId, row.order, emptyContent, current.id, pageId)
+          );
+        }
+      } else {
+        stmts.push(
+          this.d1.prepare('INSERT INTO sections (id, page_id, layout_id, "order", content) VALUES (?, ?, ?, ?, ?)')
+            .bind(uuid(), pageId, row.layoutId, row.order, emptyContent)
+        );
+      }
+    }
+
+    for (const s of existing) {
+      if (!keptIds.has(s.id)) {
+        stmts.push(this.d1.prepare('DELETE FROM sections WHERE id = ? AND page_id = ?').bind(s.id, pageId));
+      }
+    }
+
+    if (stmts.length) await this.d1.batch(stmts);
+    await this.d1.prepare('UPDATE pages SET updated_at = ? WHERE id = ?').bind(Date.now(), pageId).run();
+  }
+
   async replaceSectionsContent(pageId: string, updates: Array<{ id: string; content: OverridesPayload }>): Promise<void> {
     const stmts = updates.map(u =>
       this.d1.prepare('UPDATE sections SET content = ? WHERE id = ? AND page_id = ?')

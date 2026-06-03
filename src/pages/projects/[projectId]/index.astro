@@ -35,6 +35,7 @@ const pages = await db.listPages(project.id);
           <span><strong>{p.name}</strong> <code>/{p.slug}</code></span>
           <span>
             <a href={`/projects/${project.id}/pages/${p.id}/edit`}><button>Éditer</button></a>
+            <a href={`/projects/${project.id}/pages/${p.id}/structure`}><button>Structure</button></a>
             <button data-action="rename" data-id={p.id}>Renommer</button>
             <button data-action="delete" data-id={p.id}>Supprimer</button>
           </span>

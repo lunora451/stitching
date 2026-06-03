@@ -28,7 +28,8 @@ const previewSelection = sections.map((s) => {
   <div id="editor-root" data-project-id={project.id} data-page-id={page.id}>
     <header style="position:fixed; top:0; left:0; right:0; background:#222; color:#fff; padding:0.5rem 1rem; display:flex; gap:0.5rem; align-items:center; z-index:99999; flex-wrap:wrap;">
       <a href={`/projects/${project.id}`} style="color:inherit;">← Retour</a>
-      <strong style="margin-right:auto;">{page.name}</strong>
+      <strong>{page.name}</strong>
+      <a href={`/projects/${project.id}/pages/${page.id}/structure`} style="color:inherit; margin-right:auto; text-decoration:underline;">Structure</a>
       <button id="toggle-text-edit" data-mode="text" style="padding:0.3rem 0.7rem;">Texte</button>
       <button id="toggle-image-edit" data-mode="image" style="padding:0.3rem 0.7rem;">Image</button>
       <button id="toggle-color-edit" data-mode="color" style="padding:0.3rem 0.7rem;">Couleurs</button>

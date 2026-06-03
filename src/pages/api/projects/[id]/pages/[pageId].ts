@@ -13,9 +13,14 @@ export const GET: APIRoute = async ({ params }) => {
 };
 
 export const PATCH: APIRoute = async ({ params, request }) => {
-  const body = await request.json() as { name?: string; sections?: Array<{ id: string; content: OverridesPayload }> };
+  const body = await request.json() as {
+    name?: string;
+    sections?: Array<{ id: string; content: OverridesPayload }>;
+    structure?: Array<{ sectionId?: string; layoutId: string; order: number }>;
+  };
   const db = new DB(env.DB);
   if (body.name !== undefined) await db.updatePage(params.pageId!, { name: body.name });
+  if (body.structure) await db.reconcileSections(params.pageId!, body.structure);
   if (body.sections) await db.replaceSectionsContent(params.pageId!, body.sections);
   return new Response(null, { status: 204 });
 };

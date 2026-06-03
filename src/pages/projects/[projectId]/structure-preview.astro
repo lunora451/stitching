@@ -1,0 +1,31 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import EditorPreview from '../../../components/editor/EditorPreview.astro';
+import { env } from 'cloudflare:workers';
+import { DB } from '../../../lib/db';
+import { EMPTY_OVERRIDES } from '../../../lib/types';
+
+export const prerender = false;
+
+const { projectId } = Astro.params;
+const db = new DB(env.DB);
+const project = await db.getProject(projectId!);
+if (!project) return new Response('not found', { status: 404 });
+
+const layoutsParam = Astro.url.searchParams.get('layouts') ?? '';
+const layoutIds = layoutsParam.split(',').map((s) => s.trim()).filter(Boolean);
+
+const selection = layoutIds.map((id, idx) => {
+  const i = id.lastIndexOf('-');
+  return {
+    componentType: id.slice(0, i),
+    variantValue: id.slice(i + 1),
+    sectionId: `preview-${idx}`,
+    content: EMPTY_OVERRIDES,
+  };
+});
+---
+<Layout theme={project.theme}>
+  <EditorPreview selection={selection} />
+  <script>document.documentElement.dataset.ready = '1';</script>
+</Layout>
