@@ -24,6 +24,18 @@ export const EMPTY_OVERRIDES: OverridesPayload = {
   buttonOverrides: {},
 };
 
+export const FONT_STACKS: ReadonlyArray<{ label: string; stack: string }> = [
+  { label: 'Oswald',            stack: "'Oswald', sans-serif" },
+  { label: 'Source Sans 3',     stack: "'Source Sans 3', sans-serif" },
+  { label: 'Yellowtail',        stack: "'Yellowtail', cursive" },
+  { label: 'Charter',           stack: "'Charter', serif" },
+  { label: 'Georgia',           stack: "Georgia, serif" },
+  { label: 'Times New Roman',   stack: "'Times New Roman', serif" },
+  { label: 'Helvetica / Arial', stack: "Helvetica, Arial, sans-serif" },
+  { label: 'Courier',           stack: "'Courier New', monospace" },
+  { label: 'System UI',         stack: "system-ui, sans-serif" },
+];
+
 export const DEFAULT_THEME: ProjectTheme = {
   rootColors: {
     '--primary': '#ff6a3e',

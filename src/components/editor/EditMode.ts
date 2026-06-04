@@ -1,4 +1,5 @@
-import type { ProjectTheme } from '../../lib/types';
+import type { ProjectTheme, RootFontKey } from '../../lib/types';
+import { FONT_STACKS } from '../../lib/types';
 
 // ---------------------------------------------------------------------------
 // Context interfaces
@@ -45,18 +46,6 @@ const BUTTON_PRESETS = Array.from({ length: 10 }, (_, i) => ({
   key: `cs-preset-${i + 1}`,
   label: `Style ${i + 1}`,
 }));
-
-const FONT_OPTIONS: { label: string; stack: string }[] = [
-  { label: 'Oswald', stack: 'Oswald, Arial, sans-serif' },
-  { label: 'Source Sans 3', stack: '"Source Sans 3", Arial, sans-serif' },
-  { label: 'Yellowtail (decorative)', stack: 'Yellowtail, cursive' },
-  { label: 'Charter', stack: 'Charter, Georgia, serif' },
-  { label: 'Georgia', stack: 'Georgia, serif' },
-  { label: 'Times New Roman', stack: '"Times New Roman", Times, serif' },
-  { label: 'Helvetica / Arial', stack: 'Helvetica, Arial, sans-serif' },
-  { label: 'Courier (mono)', stack: '"Courier New", Courier, monospace' },
-  { label: 'System UI', stack: 'system-ui, sans-serif' },
-];
 
 const ROOT_COLOR_VARS: { name: string; defaultHex: string }[] = [
   { name: '--primary', defaultHex: '#ff6a3e' },
@@ -571,17 +560,22 @@ export function mountFontEditMode(ctx: ColorEditModeContext): () => void {
 
     const select = document.createElement('select');
     select.style.cssText = 'padding:0.4rem;font-size:0.85rem;border:1px solid #ccc;border-radius:4px;background:#fff;color:#1a1a1a;';
-    FONT_OPTIONS.forEach((f) => {
+    FONT_STACKS.forEach((f) => {
       const opt = document.createElement('option');
       opt.value = f.stack;
       opt.textContent = f.label;
       select.appendChild(opt);
     });
 
-    // Set current value
-    const currentVal = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
-    const match = FONT_OPTIONS.find((f) => f.stack === currentVal);
-    if (match) select.value = match.stack;
+    // Preselect from the stored project theme (same vocabulary as ThemeEditor)
+    const currentVal = theme.rootFonts[varName as RootFontKey];
+    if (currentVal && !FONT_STACKS.some((f) => f.stack === currentVal)) {
+      const opt = document.createElement('option'); // legacy/custom value fallback
+      opt.value = currentVal;
+      opt.textContent = currentVal;
+      select.appendChild(opt);
+    }
+    select.value = currentVal;
 
     select.addEventListener('change', () => {
       document.documentElement.style.setProperty(varName, select.value);

@@ -1,5 +1,6 @@
 ---
 import type { ProjectTheme } from '../../lib/types';
+import { FONT_STACKS } from '../../lib/types';
 interface Props { project: { id: string; theme: ProjectTheme } }
 const { project } = Astro.props;
 
@@ -8,11 +9,6 @@ const ROOT_COLOR_KEYS: Array<keyof ProjectTheme['rootColors']> = [
   '--backgroundColor', '--primaryLight', '--secondaryLight', '--bodyTextColorWhite', '--errorColor',
 ];
 const ROOT_FONT_KEYS: Array<keyof ProjectTheme['rootFonts']> = ['--headerFont', '--bodyFont', '--navNeon'];
-const FONT_STACKS = [
-  "'Oswald', sans-serif", "'Source Sans 3', sans-serif", "'Yellowtail', cursive",
-  "'Charter', serif", "Georgia, serif", "'Times New Roman', serif",
-  "Helvetica, Arial, sans-serif", "'Courier New', monospace", "system-ui, sans-serif",
-];
 ---
 <form id="theme-form" data-project-id={project.id} style="display:grid; gap:1rem; padding:1rem; border:1px solid #ddd; background:#fafafa;">
   <fieldset>
@@ -48,7 +44,10 @@ const FONT_STACKS = [
         <label style="display:flex; flex-direction:column; font-size:0.85rem;">
           <span>{k}</span>
           <select data-key={k}>
-            {FONT_STACKS.map((f) => <option value={f} selected={f === project.theme.rootFonts[k]}>{f}</option>)}
+            {!FONT_STACKS.some((f) => f.stack === project.theme.rootFonts[k]) && (
+              <option value={project.theme.rootFonts[k]} selected>{project.theme.rootFonts[k]}</option>
+            )}
+            {FONT_STACKS.map((f) => <option value={f.stack} selected={f.stack === project.theme.rootFonts[k]}>{f.label}</option>)}
           </select>
         </label>
       ))}
