@@ -1,6 +1,6 @@
 ---
 import type { ProjectTheme } from '../../lib/types';
-import { FONT_STACKS } from '../../lib/types';
+import { FONT_STACKS, FONT_CATEGORY_LABELS, FONT_CATEGORY_ORDER } from '../../lib/types';
 interface Props { project: { id: string; theme: ProjectTheme } }
 const { project } = Astro.props;
 
@@ -47,7 +47,13 @@ const ROOT_FONT_KEYS: Array<keyof ProjectTheme['rootFonts']> = ['--headerFont', 
             {!FONT_STACKS.some((f) => f.stack === project.theme.rootFonts[k]) && (
               <option value={project.theme.rootFonts[k]} selected>{project.theme.rootFonts[k]}</option>
             )}
-            {FONT_STACKS.map((f) => <option value={f.stack} selected={f.stack === project.theme.rootFonts[k]}>{f.label}</option>)}
+            {FONT_CATEGORY_ORDER.map((cat) => (
+              <optgroup label={FONT_CATEGORY_LABELS[cat]}>
+                {FONT_STACKS.filter((f) => f.category === cat).map((f) => (
+                  <option value={f.stack} selected={f.stack === project.theme.rootFonts[k]} style={`font-family:${f.stack}`}>{f.label}</option>
+                ))}
+              </optgroup>
+            ))}
           </select>
         </label>
       ))}

@@ -1,5 +1,5 @@
 import type { ProjectTheme, RootFontKey } from '../../lib/types';
-import { FONT_STACKS } from '../../lib/types';
+import { FONT_STACKS, FONT_CATEGORY_LABELS, FONT_CATEGORY_ORDER } from '../../lib/types';
 
 // ---------------------------------------------------------------------------
 // Context interfaces
@@ -560,11 +560,19 @@ export function mountFontEditMode(ctx: ColorEditModeContext): () => void {
 
     const select = document.createElement('select');
     select.style.cssText = 'padding:0.4rem;font-size:0.85rem;border:1px solid #ccc;border-radius:4px;background:#fff;color:#1a1a1a;';
-    FONT_STACKS.forEach((f) => {
-      const opt = document.createElement('option');
-      opt.value = f.stack;
-      opt.textContent = f.label;
-      select.appendChild(opt);
+    FONT_CATEGORY_ORDER.forEach((cat) => {
+      const fonts = FONT_STACKS.filter((f) => f.category === cat);
+      if (fonts.length === 0) return;
+      const group = document.createElement('optgroup');
+      group.label = FONT_CATEGORY_LABELS[cat];
+      fonts.forEach((f) => {
+        const opt = document.createElement('option');
+        opt.value = f.stack;
+        opt.textContent = f.label;
+        opt.style.fontFamily = f.stack;
+        group.appendChild(opt);
+      });
+      select.appendChild(group);
     });
 
     // Preselect from the stored project theme (same vocabulary as ThemeEditor)
