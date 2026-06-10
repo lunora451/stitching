@@ -1,26 +1,30 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "lunora-stitch",
-  "main": "@astrojs/cloudflare/entrypoints/server",
-  "compatibility_date": "2026-05-23",
-  "compatibility_flags": ["nodejs_compat"],
-  "assets": {
-    "binding": "ASSETS",
-    "directory": "./dist",
-  },
-  "observability": { "enabled": true },
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "d1_stitching",
-      "database_id": "aff8f3fe-34f0-4f56-98fe-85ea5e63b4f0",
-      "migrations_dir": "migrations",
-    },
-  ],
-  "r2_buckets": [
-    {
-      "binding": "IMAGES_BUCKET",
-      "bucket_name": "lunora-stitch-images",
-    },
-  ],
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "lunora-stitch",
+	"main": "@astrojs/cloudflare/entrypoints/server",
+	"compatibility_date": "2026-05-23",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"assets": {
+		"binding": "ASSETS",
+		"directory": "./dist",
+	},
+	"observability": {
+		"enabled": true
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "d1_stitching",
+			"database_id": "aff8f3fe-34f0-4f56-98fe-85ea5e63b4f0",
+			"migrations_dir": "migrations",
+		},
+	],
+	"r2_buckets": [
+		{
+			"binding": "IMAGES_BUCKET",
+			"bucket_name": "lunora-stitch-images",
+		},
+	],
 }
